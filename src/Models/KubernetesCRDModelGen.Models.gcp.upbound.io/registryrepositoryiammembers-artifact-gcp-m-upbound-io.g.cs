@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.artifact.gcp.m.upbound.io;
+#nullable enable
 /// <summary>RegistryRepositoryIAMMember is the Schema for the RegistryRepositoryIAMMembers API. &lt;no value&gt;</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RegistryRepositoryIAMMemberList : IKubernetesObject<
     [JsonPropertyName("items")]
     public IList<V1beta1RegistryRepositoryIAMMember> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryIAMMemberSpecForProviderCondition
@@ -50,7 +53,9 @@ public partial class V1beta1RegistryRepositoryIAMMemberSpecForProviderCondition
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryIAMMemberSpecForProvider
@@ -79,7 +84,9 @@ public partial class V1beta1RegistryRepositoryIAMMemberSpecForProvider
     [JsonPropertyName("role")]
     public string? Role { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryIAMMemberSpecInitProviderCondition
@@ -96,7 +103,9 @@ public partial class V1beta1RegistryRepositoryIAMMemberSpecInitProviderCondition
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryIAMMemberSpecInitProvider
@@ -125,7 +134,9 @@ public partial class V1beta1RegistryRepositoryIAMMemberSpecInitProvider
     [JsonPropertyName("role")]
     public string? Role { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryIAMMemberSpecProviderConfigRef
@@ -138,7 +149,9 @@ public partial class V1beta1RegistryRepositoryIAMMemberSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryIAMMemberSpecWriteConnectionSecretToRef
@@ -147,7 +160,9 @@ public partial class V1beta1RegistryRepositoryIAMMemberSpecWriteConnectionSecret
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegistryRepositoryIAMMemberSpec defines the desired state of RegistryRepositoryIAMMember</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryIAMMemberSpec
@@ -172,7 +187,9 @@ public partial class V1beta1RegistryRepositoryIAMMemberSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RegistryRepositoryIAMMemberSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryIAMMemberStatusAtProviderCondition
@@ -189,7 +206,9 @@ public partial class V1beta1RegistryRepositoryIAMMemberStatusAtProviderCondition
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryIAMMemberStatusAtProvider
@@ -226,7 +245,9 @@ public partial class V1beta1RegistryRepositoryIAMMemberStatusAtProvider
     [JsonPropertyName("role")]
     public string? Role { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryIAMMemberStatusConditions
@@ -255,7 +276,9 @@ public partial class V1beta1RegistryRepositoryIAMMemberStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegistryRepositoryIAMMemberStatus defines the observed state of RegistryRepositoryIAMMember.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryIAMMemberStatus
@@ -272,7 +295,9 @@ public partial class V1beta1RegistryRepositoryIAMMemberStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegistryRepositoryIAMMember is the Schema for the RegistryRepositoryIAMMembers API. &lt;no value&gt;</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -302,3 +327,4 @@ public partial class V1beta1RegistryRepositoryIAMMember : IKubernetesObject<V1Ob
     [JsonPropertyName("status")]
     public V1beta1RegistryRepositoryIAMMemberStatus? Status { get; set; }
 }
+#nullable disable

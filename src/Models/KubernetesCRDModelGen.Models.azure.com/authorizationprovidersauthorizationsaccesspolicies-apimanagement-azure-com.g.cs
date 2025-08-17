@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20220801.AuthorizationProvidersAuthorizationsAccessPolicy Generator information: - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/stable/2022-08-01/apimauthorizationproviders.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/authorizationProviders/{authorizationProviderId}/authorizations/{authorizationId}/accessPolicies/{authorizationAccessPolicyId}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAcc
     [JsonPropertyName("items")]
     public IList<V1api20220801storageAuthorizationProvidersAuthorizationsAccessPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAccessPolicySpecObjectIdFromConfig
@@ -46,7 +49,9 @@ public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAcc
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAccessPolicySpecOperatorSpecConfigMapExpressions
@@ -63,7 +68,9 @@ public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAcc
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAccessPolicySpecOperatorSpecSecretExpressions
@@ -80,7 +87,9 @@ public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAcc
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.AuthorizationProvidersAuthorizationsAccessPolicyOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAccessPolicySpecOperatorSpec
@@ -97,7 +106,9 @@ public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAcc
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20220801storageAuthorizationProvidersAuthorizationsAccessPolicySpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a apimanagement.azure.com/AuthorizationProvidersAuthorization resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAccessPolicySpecOwner
@@ -110,7 +121,9 @@ public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAcc
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAccessPolicySpecTenantIdFromConfig
@@ -123,7 +136,9 @@ public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAcc
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.AuthorizationProvidersAuthorizationsAccessPolicy_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAccessPolicySpec
@@ -164,7 +179,9 @@ public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAcc
     [JsonPropertyName("tenantIdFromConfig")]
     public V1api20220801storageAuthorizationProvidersAuthorizationsAccessPolicySpecTenantIdFromConfig? TenantIdFromConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAccessPolicyStatusConditions
@@ -197,7 +214,9 @@ public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAcc
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.AuthorizationProvidersAuthorizationsAccessPolicy_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAccessPolicyStatus
@@ -230,7 +249,9 @@ public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAcc
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.AuthorizationProvidersAuthorizationsAccessPolicy Generator information: - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/stable/2022-08-01/apimauthorizationproviders.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/authorizationProviders/{authorizationProviderId}/authorizations/{authorizationId}/accessPolicies/{authorizationAccessPolicyId}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -260,3 +281,4 @@ public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAcc
     [JsonPropertyName("status")]
     public V1api20220801storageAuthorizationProvidersAuthorizationsAccessPolicyStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.guardduty.aws.upbound.io;
+#nullable enable
 /// <summary>Filter is the Schema for the Filters API. Provides a resource to manage a GuardDuty filter</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FilterList : IKubernetesObject<V1ListMeta>, IItems<V
     [JsonPropertyName("items")]
     public IList<V1beta1Filter> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilterSpecForProviderDetectorIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1FilterSpecForProviderDetectorIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Detector in guardduty to populate detectorId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilterSpecForProviderDetectorIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1FilterSpecForProviderDetectorIdRef
     [JsonPropertyName("policy")]
     public V1beta1FilterSpecForProviderDetectorIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilterSpecForProviderDetectorIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1FilterSpecForProviderDetectorIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Detector in guardduty to populate detectorId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilterSpecForProviderDetectorIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1FilterSpecForProviderDetectorIdSelector
     [JsonPropertyName("policy")]
     public V1beta1FilterSpecForProviderDetectorIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilterSpecForProviderFindingCriteriaCriterion
@@ -122,7 +133,9 @@ public partial class V1beta1FilterSpecForProviderFindingCriteriaCriterion
     [JsonPropertyName("notEquals")]
     public IList<string>? NotEquals { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilterSpecForProviderFindingCriteria
@@ -131,7 +144,9 @@ public partial class V1beta1FilterSpecForProviderFindingCriteria
     [JsonPropertyName("criterion")]
     public IList<V1beta1FilterSpecForProviderFindingCriteriaCriterion>? Criterion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilterSpecForProvider
@@ -172,7 +187,9 @@ public partial class V1beta1FilterSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilterSpecInitProviderFindingCriteriaCriterion
@@ -205,7 +222,9 @@ public partial class V1beta1FilterSpecInitProviderFindingCriteriaCriterion
     [JsonPropertyName("notEquals")]
     public IList<string>? NotEquals { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilterSpecInitProviderFindingCriteria
@@ -214,7 +233,9 @@ public partial class V1beta1FilterSpecInitProviderFindingCriteria
     [JsonPropertyName("criterion")]
     public IList<V1beta1FilterSpecInitProviderFindingCriteriaCriterion>? Criterion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilterSpecInitProvider
@@ -239,7 +260,9 @@ public partial class V1beta1FilterSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilterSpecProviderConfigRefPolicy
@@ -252,7 +275,9 @@ public partial class V1beta1FilterSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilterSpecProviderConfigRef
@@ -265,7 +290,9 @@ public partial class V1beta1FilterSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1FilterSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilterSpecWriteConnectionSecretToRef
@@ -278,7 +305,9 @@ public partial class V1beta1FilterSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FilterSpec defines the desired state of Filter</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilterSpec
@@ -307,7 +336,9 @@ public partial class V1beta1FilterSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1FilterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilterStatusAtProviderFindingCriteriaCriterion
@@ -340,7 +371,9 @@ public partial class V1beta1FilterStatusAtProviderFindingCriteriaCriterion
     [JsonPropertyName("notEquals")]
     public IList<string>? NotEquals { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilterStatusAtProviderFindingCriteria
@@ -349,7 +382,9 @@ public partial class V1beta1FilterStatusAtProviderFindingCriteria
     [JsonPropertyName("criterion")]
     public IList<V1beta1FilterStatusAtProviderFindingCriteriaCriterion>? Criterion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilterStatusAtProvider
@@ -394,7 +429,9 @@ public partial class V1beta1FilterStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilterStatusConditions
@@ -423,7 +460,9 @@ public partial class V1beta1FilterStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FilterStatus defines the observed state of Filter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilterStatus
@@ -440,7 +479,9 @@ public partial class V1beta1FilterStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Filter is the Schema for the Filters API. Provides a resource to manage a GuardDuty filter</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -470,3 +511,4 @@ public partial class V1beta1Filter : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     [JsonPropertyName("status")]
     public V1beta1FilterStatus? Status { get; set; }
 }
+#nullable disable

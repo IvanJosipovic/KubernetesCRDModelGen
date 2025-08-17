@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.source.toolkit.fluxcd.io;
+#nullable enable
 /// <summary>OCIRepository is the Schema for the ocirepositories API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1OCIRepositoryList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1OCIRepository> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CertSecretRef can be given the name of a Secret containing either or both of  - a PEM-encoded client certificate (`tls.crt`) and private key (`tls.key`); - a PEM-encoded CA certificate (`ca.crt`)  and whichever are supplied, will be used for connecting to the registry. The client cert and key are useful if you are authenticating with a certificate; the CA cert is useful if you are using a self-signed server certificate. The Secret must be of type `Opaque` or `kubernetes.io/tls`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1OCIRepositorySpecCertSecretRef
@@ -42,7 +45,9 @@ public partial class V1OCIRepositorySpecCertSecretRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LayerSelector specifies which layer should be extracted from the OCI artifact. When not specified, the first layer found in the artifact is selected.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1OCIRepositorySpecLayerSelector
@@ -55,7 +60,9 @@ public partial class V1OCIRepositorySpecLayerSelector
     [JsonPropertyName("operation")]
     public string? Operation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProxySecretRef specifies the Secret containing the proxy configuration to use while communicating with the container registry.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1OCIRepositorySpecProxySecretRef
@@ -64,7 +71,9 @@ public partial class V1OCIRepositorySpecProxySecretRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The OCI reference to pull and monitor for changes, defaults to the latest tag.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1OCIRepositorySpecRef
@@ -85,7 +94,9 @@ public partial class V1OCIRepositorySpecRef
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretRef contains the secret name containing the registry login credentials to resolve image metadata. The secret must be of type kubernetes.io/dockerconfigjson.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1OCIRepositorySpecSecretRef
@@ -94,7 +105,9 @@ public partial class V1OCIRepositorySpecSecretRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OIDCIdentityMatch specifies options for verifying the certificate identity, i.e. the issuer and the subject of the certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1OCIRepositorySpecVerifyMatchOIDCIdentity
@@ -107,7 +120,9 @@ public partial class V1OCIRepositorySpecVerifyMatchOIDCIdentity
     [JsonPropertyName("subject")]
     public string Subject { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretRef specifies the Kubernetes Secret containing the trusted public keys.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1OCIRepositorySpecVerifySecretRef
@@ -116,7 +131,9 @@ public partial class V1OCIRepositorySpecVerifySecretRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Verify contains the secret name containing the trusted public keys used to verify the signature and specifies which provider to use to check whether OCI image is authentic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1OCIRepositorySpecVerify
@@ -133,7 +150,9 @@ public partial class V1OCIRepositorySpecVerify
     [JsonPropertyName("secretRef")]
     public V1OCIRepositorySpecVerifySecretRef? SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OCIRepositorySpec defines the desired state of OCIRepository</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1OCIRepositorySpec
@@ -194,7 +213,9 @@ public partial class V1OCIRepositorySpec
     [JsonPropertyName("verify")]
     public V1OCIRepositorySpecVerify? Verify { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Artifact represents the output of the last successful OCI Repository sync.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1OCIRepositoryStatusArtifact
@@ -227,7 +248,9 @@ public partial class V1OCIRepositoryStatusArtifact
     [JsonPropertyName("url")]
     public string Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition contains details for one aspect of the current state of this API Resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1OCIRepositoryStatusConditions
@@ -256,7 +279,9 @@ public partial class V1OCIRepositoryStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedLayerSelector is the observed layer selector used for constructing the source artifact.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1OCIRepositoryStatusObservedLayerSelector
@@ -269,7 +294,9 @@ public partial class V1OCIRepositoryStatusObservedLayerSelector
     [JsonPropertyName("operation")]
     public string? Operation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OCIRepositoryStatus defines the observed state of OCIRepository</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1OCIRepositoryStatus
@@ -302,7 +329,9 @@ public partial class V1OCIRepositoryStatus
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OCIRepository is the Schema for the ocirepositories API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -332,3 +361,4 @@ public partial class V1OCIRepository : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1OCIRepositoryStatus? Status { get; set; }
 }
+#nullable disable

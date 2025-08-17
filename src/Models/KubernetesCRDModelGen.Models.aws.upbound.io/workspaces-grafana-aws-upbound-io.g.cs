@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.grafana.aws.upbound.io;
+#nullable enable
 /// <summary>Workspace is the Schema for the Workspaces API. Provides an Amazon Managed Grafana workspace resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1WorkspaceList : IKubernetesObject<V1ListMeta>, IItem
     [JsonPropertyName("items")]
     public IList<V1beta1Workspace> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecForProviderNetworkAccessControl
@@ -46,7 +49,9 @@ public partial class V1beta1WorkspaceSpecForProviderNetworkAccessControl
     [JsonPropertyName("vpceIds")]
     public IList<string>? VpceIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecForProviderRoleArnRefPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1WorkspaceSpecForProviderRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecForProviderRoleArnRef
@@ -72,7 +79,9 @@ public partial class V1beta1WorkspaceSpecForProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1WorkspaceSpecForProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecForProviderRoleArnSelectorPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1WorkspaceSpecForProviderRoleArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecForProviderRoleArnSelector
@@ -102,7 +113,9 @@ public partial class V1beta1WorkspaceSpecForProviderRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1WorkspaceSpecForProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecForProviderVpcConfiguration
@@ -115,7 +128,9 @@ public partial class V1beta1WorkspaceSpecForProviderVpcConfiguration
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecForProvider
@@ -196,7 +211,9 @@ public partial class V1beta1WorkspaceSpecForProvider
     [JsonPropertyName("vpcConfiguration")]
     public IList<V1beta1WorkspaceSpecForProviderVpcConfiguration>? VpcConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecInitProviderNetworkAccessControl
@@ -209,7 +226,9 @@ public partial class V1beta1WorkspaceSpecInitProviderNetworkAccessControl
     [JsonPropertyName("vpceIds")]
     public IList<string>? VpceIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecInitProviderRoleArnRefPolicy
@@ -222,7 +241,9 @@ public partial class V1beta1WorkspaceSpecInitProviderRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecInitProviderRoleArnRef
@@ -235,7 +256,9 @@ public partial class V1beta1WorkspaceSpecInitProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1WorkspaceSpecInitProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecInitProviderRoleArnSelectorPolicy
@@ -248,7 +271,9 @@ public partial class V1beta1WorkspaceSpecInitProviderRoleArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecInitProviderRoleArnSelector
@@ -265,7 +290,9 @@ public partial class V1beta1WorkspaceSpecInitProviderRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1WorkspaceSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecInitProviderVpcConfiguration
@@ -278,7 +305,9 @@ public partial class V1beta1WorkspaceSpecInitProviderVpcConfiguration
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecInitProvider
@@ -355,7 +384,9 @@ public partial class V1beta1WorkspaceSpecInitProvider
     [JsonPropertyName("vpcConfiguration")]
     public IList<V1beta1WorkspaceSpecInitProviderVpcConfiguration>? VpcConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecProviderConfigRefPolicy
@@ -368,7 +399,9 @@ public partial class V1beta1WorkspaceSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecProviderConfigRef
@@ -381,7 +414,9 @@ public partial class V1beta1WorkspaceSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1WorkspaceSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecWriteConnectionSecretToRef
@@ -394,7 +429,9 @@ public partial class V1beta1WorkspaceSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkspaceSpec defines the desired state of Workspace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpec
@@ -423,7 +460,9 @@ public partial class V1beta1WorkspaceSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1WorkspaceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceStatusAtProviderNetworkAccessControl
@@ -436,7 +475,9 @@ public partial class V1beta1WorkspaceStatusAtProviderNetworkAccessControl
     [JsonPropertyName("vpceIds")]
     public IList<string>? VpceIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceStatusAtProviderVpcConfiguration
@@ -449,7 +490,9 @@ public partial class V1beta1WorkspaceStatusAtProviderVpcConfiguration
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceStatusAtProvider
@@ -542,7 +585,9 @@ public partial class V1beta1WorkspaceStatusAtProvider
     [JsonPropertyName("vpcConfiguration")]
     public IList<V1beta1WorkspaceStatusAtProviderVpcConfiguration>? VpcConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceStatusConditions
@@ -571,7 +616,9 @@ public partial class V1beta1WorkspaceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkspaceStatus defines the observed state of Workspace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceStatus
@@ -588,7 +635,9 @@ public partial class V1beta1WorkspaceStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Workspace is the Schema for the Workspaces API. Provides an Amazon Managed Grafana workspace resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -618,3 +667,4 @@ public partial class V1beta1Workspace : IKubernetesObject<V1ObjectMeta>, ISpec<V
     [JsonPropertyName("status")]
     public V1beta1WorkspaceStatus? Status { get; set; }
 }
+#nullable disable

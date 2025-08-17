@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cosmosdb.azure.upbound.io;
+#nullable enable
 /// <summary>CassandraDatacenter is the Schema for the CassandraDatacenters API. Manages a Cassandra Datacenter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1CassandraDatacenterList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1CassandraDatacenter> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CassandraDatacenterSpecForProviderCassandraClusterIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1CassandraDatacenterSpecForProviderCassandraClusterId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CassandraCluster in cosmosdb to populate cassandraClusterId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CassandraDatacenterSpecForProviderCassandraClusterIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1CassandraDatacenterSpecForProviderCassandraClusterId
     [JsonPropertyName("policy")]
     public V1beta1CassandraDatacenterSpecForProviderCassandraClusterIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CassandraDatacenterSpecForProviderCassandraClusterIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1CassandraDatacenterSpecForProviderCassandraClusterId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CassandraCluster in cosmosdb to populate cassandraClusterId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CassandraDatacenterSpecForProviderCassandraClusterIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1CassandraDatacenterSpecForProviderCassandraClusterId
     [JsonPropertyName("policy")]
     public V1beta1CassandraDatacenterSpecForProviderCassandraClusterIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CassandraDatacenterSpecForProviderDelegatedManagementSubnetIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1CassandraDatacenterSpecForProviderDelegatedManagemen
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate delegatedManagementSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CassandraDatacenterSpecForProviderDelegatedManagementSubnetIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1CassandraDatacenterSpecForProviderDelegatedManagemen
     [JsonPropertyName("policy")]
     public V1beta1CassandraDatacenterSpecForProviderDelegatedManagementSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CassandraDatacenterSpecForProviderDelegatedManagementSubnetIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1CassandraDatacenterSpecForProviderDelegatedManagemen
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate delegatedManagementSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CassandraDatacenterSpecForProviderDelegatedManagementSubnetIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1CassandraDatacenterSpecForProviderDelegatedManagemen
     [JsonPropertyName("policy")]
     public V1beta1CassandraDatacenterSpecForProviderDelegatedManagementSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CassandraDatacenterSpecForProvider
@@ -210,7 +229,9 @@ public partial class V1beta1CassandraDatacenterSpecForProvider
     [JsonPropertyName("skuName")]
     public string? SkuName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CassandraDatacenterSpecInitProviderDelegatedManagementSubnetIdRefPolicy
@@ -223,7 +244,9 @@ public partial class V1beta1CassandraDatacenterSpecInitProviderDelegatedManageme
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate delegatedManagementSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CassandraDatacenterSpecInitProviderDelegatedManagementSubnetIdRef
@@ -236,7 +259,9 @@ public partial class V1beta1CassandraDatacenterSpecInitProviderDelegatedManageme
     [JsonPropertyName("policy")]
     public V1beta1CassandraDatacenterSpecInitProviderDelegatedManagementSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CassandraDatacenterSpecInitProviderDelegatedManagementSubnetIdSelectorPolicy
@@ -249,7 +274,9 @@ public partial class V1beta1CassandraDatacenterSpecInitProviderDelegatedManageme
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate delegatedManagementSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CassandraDatacenterSpecInitProviderDelegatedManagementSubnetIdSelector
@@ -266,7 +293,9 @@ public partial class V1beta1CassandraDatacenterSpecInitProviderDelegatedManageme
     [JsonPropertyName("policy")]
     public V1beta1CassandraDatacenterSpecInitProviderDelegatedManagementSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CassandraDatacenterSpecInitProvider
@@ -319,7 +348,9 @@ public partial class V1beta1CassandraDatacenterSpecInitProvider
     [JsonPropertyName("skuName")]
     public string? SkuName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CassandraDatacenterSpecProviderConfigRefPolicy
@@ -332,7 +363,9 @@ public partial class V1beta1CassandraDatacenterSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CassandraDatacenterSpecProviderConfigRef
@@ -345,7 +378,9 @@ public partial class V1beta1CassandraDatacenterSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1CassandraDatacenterSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CassandraDatacenterSpecWriteConnectionSecretToRef
@@ -358,7 +393,9 @@ public partial class V1beta1CassandraDatacenterSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CassandraDatacenterSpec defines the desired state of CassandraDatacenter</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CassandraDatacenterSpec
@@ -387,7 +424,9 @@ public partial class V1beta1CassandraDatacenterSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1CassandraDatacenterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CassandraDatacenterStatusAtProvider
@@ -444,7 +483,9 @@ public partial class V1beta1CassandraDatacenterStatusAtProvider
     [JsonPropertyName("skuName")]
     public string? SkuName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CassandraDatacenterStatusConditions
@@ -473,7 +514,9 @@ public partial class V1beta1CassandraDatacenterStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CassandraDatacenterStatus defines the observed state of CassandraDatacenter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CassandraDatacenterStatus
@@ -490,7 +533,9 @@ public partial class V1beta1CassandraDatacenterStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CassandraDatacenter is the Schema for the CassandraDatacenters API. Manages a Cassandra Datacenter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -520,3 +565,4 @@ public partial class V1beta1CassandraDatacenter : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1CassandraDatacenterStatus? Status { get; set; }
 }
+#nullable disable

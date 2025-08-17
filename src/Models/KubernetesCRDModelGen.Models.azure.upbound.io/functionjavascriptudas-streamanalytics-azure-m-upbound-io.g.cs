@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.streamanalytics.azure.m.upbound.io;
+#nullable enable
 /// <summary>FunctionJavascriptUda is the Schema for the FunctionJavascriptUdas API. Manages a JavaScript UDA Function within a Stream Analytics Streaming Job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FunctionJavascriptUdaList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1FunctionJavascriptUda> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionJavascriptUdaSpecForProviderInput
@@ -46,7 +49,9 @@ public partial class V1beta1FunctionJavascriptUdaSpecForProviderInput
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An output block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionJavascriptUdaSpecForProviderOutput
@@ -55,7 +60,9 @@ public partial class V1beta1FunctionJavascriptUdaSpecForProviderOutput
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJobIdRefPolicy
@@ -68,7 +75,9 @@ public partial class V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJ
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Job in streamanalytics to populate streamAnalyticsJobId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJobIdRef
@@ -85,7 +94,9 @@ public partial class V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJ
     [JsonPropertyName("policy")]
     public V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJobIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJobIdSelectorPolicy
@@ -98,7 +109,9 @@ public partial class V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJ
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Job in streamanalytics to populate streamAnalyticsJobId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJobIdSelector
@@ -119,7 +132,9 @@ public partial class V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJ
     [JsonPropertyName("policy")]
     public V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJobIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionJavascriptUdaSpecForProvider
@@ -148,7 +163,9 @@ public partial class V1beta1FunctionJavascriptUdaSpecForProvider
     [JsonPropertyName("streamAnalyticsJobIdSelector")]
     public V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJobIdSelector? StreamAnalyticsJobIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionJavascriptUdaSpecInitProviderInput
@@ -161,7 +178,9 @@ public partial class V1beta1FunctionJavascriptUdaSpecInitProviderInput
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An output block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionJavascriptUdaSpecInitProviderOutput
@@ -170,7 +189,9 @@ public partial class V1beta1FunctionJavascriptUdaSpecInitProviderOutput
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalyticsJobIdRefPolicy
@@ -183,7 +204,9 @@ public partial class V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalytics
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Job in streamanalytics to populate streamAnalyticsJobId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalyticsJobIdRef
@@ -200,7 +223,9 @@ public partial class V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalytics
     [JsonPropertyName("policy")]
     public V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalyticsJobIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalyticsJobIdSelectorPolicy
@@ -213,7 +238,9 @@ public partial class V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalytics
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Job in streamanalytics to populate streamAnalyticsJobId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalyticsJobIdSelector
@@ -234,7 +261,9 @@ public partial class V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalytics
     [JsonPropertyName("policy")]
     public V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalyticsJobIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionJavascriptUdaSpecInitProvider
@@ -263,7 +292,9 @@ public partial class V1beta1FunctionJavascriptUdaSpecInitProvider
     [JsonPropertyName("streamAnalyticsJobIdSelector")]
     public V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalyticsJobIdSelector? StreamAnalyticsJobIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionJavascriptUdaSpecProviderConfigRef
@@ -276,7 +307,9 @@ public partial class V1beta1FunctionJavascriptUdaSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionJavascriptUdaSpecWriteConnectionSecretToRef
@@ -285,7 +318,9 @@ public partial class V1beta1FunctionJavascriptUdaSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FunctionJavascriptUdaSpec defines the desired state of FunctionJavascriptUda</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionJavascriptUdaSpec
@@ -310,7 +345,9 @@ public partial class V1beta1FunctionJavascriptUdaSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1FunctionJavascriptUdaSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionJavascriptUdaStatusAtProviderInput
@@ -323,7 +360,9 @@ public partial class V1beta1FunctionJavascriptUdaStatusAtProviderInput
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An output block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionJavascriptUdaStatusAtProviderOutput
@@ -332,7 +371,9 @@ public partial class V1beta1FunctionJavascriptUdaStatusAtProviderOutput
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionJavascriptUdaStatusAtProvider
@@ -357,7 +398,9 @@ public partial class V1beta1FunctionJavascriptUdaStatusAtProvider
     [JsonPropertyName("streamAnalyticsJobId")]
     public string? StreamAnalyticsJobId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionJavascriptUdaStatusConditions
@@ -386,7 +429,9 @@ public partial class V1beta1FunctionJavascriptUdaStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FunctionJavascriptUdaStatus defines the observed state of FunctionJavascriptUda.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionJavascriptUdaStatus
@@ -403,7 +448,9 @@ public partial class V1beta1FunctionJavascriptUdaStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FunctionJavascriptUda is the Schema for the FunctionJavascriptUdas API. Manages a JavaScript UDA Function within a Stream Analytics Streaming Job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -433,3 +480,4 @@ public partial class V1beta1FunctionJavascriptUda : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1FunctionJavascriptUdaStatus? Status { get; set; }
 }
+#nullable disable

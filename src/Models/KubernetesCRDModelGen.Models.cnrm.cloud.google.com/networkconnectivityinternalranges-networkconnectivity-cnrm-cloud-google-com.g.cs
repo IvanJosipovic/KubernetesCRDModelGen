@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkconnectivity.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>NetworkConnectivityInternalRange is the Schema for the NetworkConnectivityInternalRange API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1NetworkConnectivityInternalRangeList : IKubernetesO
     [JsonPropertyName("items")]
     public IList<V1alpha1NetworkConnectivityInternalRange> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Must be present if usage is set to FOR_MIGRATION. This field is for internal use.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkConnectivityInternalRangeSpecMigration
@@ -46,7 +49,9 @@ public partial class V1alpha1NetworkConnectivityInternalRangeSpecMigration
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The network in which to reserve the internal range. The network cannot be deleted if there are any reserved internal ranges referring to it. Legacy networks are not supported. For example: https://www.googleapis.com/compute/v1/projects/{project}/locations/global/networks/{network} projects/{project}/locations/global/networks/{network} {network}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkConnectivityInternalRangeSpecNetworkRef
@@ -63,7 +68,9 @@ public partial class V1alpha1NetworkConnectivityInternalRangeSpecNetworkRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The host project of the application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkConnectivityInternalRangeSpecProjectRef
@@ -84,7 +91,9 @@ public partial class V1alpha1NetworkConnectivityInternalRangeSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkConnectivityInternalRangeSpec defines the desired state of NetworkConnectivityInternalRange</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkConnectivityInternalRangeSpec
@@ -141,7 +150,9 @@ public partial class V1alpha1NetworkConnectivityInternalRangeSpec
     [JsonPropertyName("usage")]
     public string? Usage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkConnectivityInternalRangeStatusConditions
@@ -166,7 +177,9 @@ public partial class V1alpha1NetworkConnectivityInternalRangeStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkConnectivityInternalRangeStatusObservedState
@@ -183,7 +196,9 @@ public partial class V1alpha1NetworkConnectivityInternalRangeStatusObservedState
     [JsonPropertyName("users")]
     public IList<string>? Users { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkConnectivityInternalRangeStatus defines the config connector machine state of NetworkConnectivityInternalRange</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkConnectivityInternalRangeStatus
@@ -204,7 +219,9 @@ public partial class V1alpha1NetworkConnectivityInternalRangeStatus
     [JsonPropertyName("observedState")]
     public V1alpha1NetworkConnectivityInternalRangeStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkConnectivityInternalRange is the Schema for the NetworkConnectivityInternalRange API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -234,3 +251,4 @@ public partial class V1alpha1NetworkConnectivityInternalRange : IKubernetesObjec
     [JsonPropertyName("status")]
     public V1alpha1NetworkConnectivityInternalRangeStatus? Status { get; set; }
 }
+#nullable disable

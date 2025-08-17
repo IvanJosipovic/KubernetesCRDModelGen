@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+#nullable enable
 /// <summary>RegionAutoscaler is the Schema for the RegionAutoscalers API. Represents an Autoscaler resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RegionAutoscalerList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1RegionAutoscaler> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerSpecForProviderAutoscalingPolicyCpuUtilization
@@ -46,7 +49,9 @@ public partial class V1beta1RegionAutoscalerSpecForProviderAutoscalingPolicyCpuU
     [JsonPropertyName("target")]
     public double? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerSpecForProviderAutoscalingPolicyLoadBalancingUtilization
@@ -55,7 +60,9 @@ public partial class V1beta1RegionAutoscalerSpecForProviderAutoscalingPolicyLoad
     [JsonPropertyName("target")]
     public double? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerSpecForProviderAutoscalingPolicyMetric
@@ -80,7 +87,9 @@ public partial class V1beta1RegionAutoscalerSpecForProviderAutoscalingPolicyMetr
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerSpecForProviderAutoscalingPolicyScaleInControlMaxScaledInReplicas
@@ -93,7 +102,9 @@ public partial class V1beta1RegionAutoscalerSpecForProviderAutoscalingPolicyScal
     [JsonPropertyName("percent")]
     public double? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerSpecForProviderAutoscalingPolicyScaleInControl
@@ -106,7 +117,9 @@ public partial class V1beta1RegionAutoscalerSpecForProviderAutoscalingPolicyScal
     [JsonPropertyName("timeWindowSec")]
     public double? TimeWindowSec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerSpecForProviderAutoscalingPolicyScalingSchedules
@@ -139,7 +152,9 @@ public partial class V1beta1RegionAutoscalerSpecForProviderAutoscalingPolicyScal
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerSpecForProviderAutoscalingPolicy
@@ -180,7 +195,9 @@ public partial class V1beta1RegionAutoscalerSpecForProviderAutoscalingPolicy
     [JsonPropertyName("scalingSchedules")]
     public IList<V1beta1RegionAutoscalerSpecForProviderAutoscalingPolicyScalingSchedules>? ScalingSchedules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerSpecForProviderTargetRefPolicy
@@ -193,7 +210,9 @@ public partial class V1beta1RegionAutoscalerSpecForProviderTargetRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegionInstanceGroupManager in compute to populate target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerSpecForProviderTargetRef
@@ -206,7 +225,9 @@ public partial class V1beta1RegionAutoscalerSpecForProviderTargetRef
     [JsonPropertyName("policy")]
     public V1beta1RegionAutoscalerSpecForProviderTargetRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerSpecForProviderTargetSelectorPolicy
@@ -219,7 +240,9 @@ public partial class V1beta1RegionAutoscalerSpecForProviderTargetSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegionInstanceGroupManager in compute to populate target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerSpecForProviderTargetSelector
@@ -236,7 +259,9 @@ public partial class V1beta1RegionAutoscalerSpecForProviderTargetSelector
     [JsonPropertyName("policy")]
     public V1beta1RegionAutoscalerSpecForProviderTargetSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerSpecForProvider
@@ -269,7 +294,9 @@ public partial class V1beta1RegionAutoscalerSpecForProvider
     [JsonPropertyName("targetSelector")]
     public V1beta1RegionAutoscalerSpecForProviderTargetSelector? TargetSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerSpecInitProviderAutoscalingPolicyCpuUtilization
@@ -282,7 +309,9 @@ public partial class V1beta1RegionAutoscalerSpecInitProviderAutoscalingPolicyCpu
     [JsonPropertyName("target")]
     public double? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerSpecInitProviderAutoscalingPolicyLoadBalancingUtilization
@@ -291,7 +320,9 @@ public partial class V1beta1RegionAutoscalerSpecInitProviderAutoscalingPolicyLoa
     [JsonPropertyName("target")]
     public double? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerSpecInitProviderAutoscalingPolicyMetric
@@ -316,7 +347,9 @@ public partial class V1beta1RegionAutoscalerSpecInitProviderAutoscalingPolicyMet
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerSpecInitProviderAutoscalingPolicyScaleInControlMaxScaledInReplicas
@@ -329,7 +362,9 @@ public partial class V1beta1RegionAutoscalerSpecInitProviderAutoscalingPolicySca
     [JsonPropertyName("percent")]
     public double? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerSpecInitProviderAutoscalingPolicyScaleInControl
@@ -342,7 +377,9 @@ public partial class V1beta1RegionAutoscalerSpecInitProviderAutoscalingPolicySca
     [JsonPropertyName("timeWindowSec")]
     public double? TimeWindowSec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerSpecInitProviderAutoscalingPolicyScalingSchedules
@@ -375,7 +412,9 @@ public partial class V1beta1RegionAutoscalerSpecInitProviderAutoscalingPolicySca
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerSpecInitProviderAutoscalingPolicy
@@ -416,7 +455,9 @@ public partial class V1beta1RegionAutoscalerSpecInitProviderAutoscalingPolicy
     [JsonPropertyName("scalingSchedules")]
     public IList<V1beta1RegionAutoscalerSpecInitProviderAutoscalingPolicyScalingSchedules>? ScalingSchedules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerSpecInitProviderTargetRefPolicy
@@ -429,7 +470,9 @@ public partial class V1beta1RegionAutoscalerSpecInitProviderTargetRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegionInstanceGroupManager in compute to populate target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerSpecInitProviderTargetRef
@@ -442,7 +485,9 @@ public partial class V1beta1RegionAutoscalerSpecInitProviderTargetRef
     [JsonPropertyName("policy")]
     public V1beta1RegionAutoscalerSpecInitProviderTargetRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerSpecInitProviderTargetSelectorPolicy
@@ -455,7 +500,9 @@ public partial class V1beta1RegionAutoscalerSpecInitProviderTargetSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegionInstanceGroupManager in compute to populate target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerSpecInitProviderTargetSelector
@@ -472,7 +519,9 @@ public partial class V1beta1RegionAutoscalerSpecInitProviderTargetSelector
     [JsonPropertyName("policy")]
     public V1beta1RegionAutoscalerSpecInitProviderTargetSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerSpecInitProvider
@@ -501,7 +550,9 @@ public partial class V1beta1RegionAutoscalerSpecInitProvider
     [JsonPropertyName("targetSelector")]
     public V1beta1RegionAutoscalerSpecInitProviderTargetSelector? TargetSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerSpecProviderConfigRefPolicy
@@ -514,7 +565,9 @@ public partial class V1beta1RegionAutoscalerSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerSpecProviderConfigRef
@@ -527,7 +580,9 @@ public partial class V1beta1RegionAutoscalerSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1RegionAutoscalerSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerSpecWriteConnectionSecretToRef
@@ -540,7 +595,9 @@ public partial class V1beta1RegionAutoscalerSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegionAutoscalerSpec defines the desired state of RegionAutoscaler</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerSpec
@@ -569,7 +626,9 @@ public partial class V1beta1RegionAutoscalerSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RegionAutoscalerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerStatusAtProviderAutoscalingPolicyCpuUtilization
@@ -582,7 +641,9 @@ public partial class V1beta1RegionAutoscalerStatusAtProviderAutoscalingPolicyCpu
     [JsonPropertyName("target")]
     public double? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerStatusAtProviderAutoscalingPolicyLoadBalancingUtilization
@@ -591,7 +652,9 @@ public partial class V1beta1RegionAutoscalerStatusAtProviderAutoscalingPolicyLoa
     [JsonPropertyName("target")]
     public double? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerStatusAtProviderAutoscalingPolicyMetric
@@ -616,7 +679,9 @@ public partial class V1beta1RegionAutoscalerStatusAtProviderAutoscalingPolicyMet
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerStatusAtProviderAutoscalingPolicyScaleInControlMaxScaledInReplicas
@@ -629,7 +694,9 @@ public partial class V1beta1RegionAutoscalerStatusAtProviderAutoscalingPolicySca
     [JsonPropertyName("percent")]
     public double? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerStatusAtProviderAutoscalingPolicyScaleInControl
@@ -642,7 +709,9 @@ public partial class V1beta1RegionAutoscalerStatusAtProviderAutoscalingPolicySca
     [JsonPropertyName("timeWindowSec")]
     public double? TimeWindowSec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerStatusAtProviderAutoscalingPolicyScalingSchedules
@@ -675,7 +744,9 @@ public partial class V1beta1RegionAutoscalerStatusAtProviderAutoscalingPolicySca
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerStatusAtProviderAutoscalingPolicy
@@ -716,7 +787,9 @@ public partial class V1beta1RegionAutoscalerStatusAtProviderAutoscalingPolicy
     [JsonPropertyName("scalingSchedules")]
     public IList<V1beta1RegionAutoscalerStatusAtProviderAutoscalingPolicyScalingSchedules>? ScalingSchedules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerStatusAtProvider
@@ -753,7 +826,9 @@ public partial class V1beta1RegionAutoscalerStatusAtProvider
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerStatusConditions
@@ -782,7 +857,9 @@ public partial class V1beta1RegionAutoscalerStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegionAutoscalerStatus defines the observed state of RegionAutoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionAutoscalerStatus
@@ -799,7 +876,9 @@ public partial class V1beta1RegionAutoscalerStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegionAutoscaler is the Schema for the RegionAutoscalers API. Represents an Autoscaler resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -829,3 +908,4 @@ public partial class V1beta1RegionAutoscaler : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1RegionAutoscalerStatus? Status { get; set; }
 }
+#nullable disable

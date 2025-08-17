@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+#nullable enable
 /// <summary>DiskResourcePolicyAttachment is the Schema for the DiskResourcePolicyAttachments API. Adds existing resource policies to a disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DiskResourcePolicyAttachmentList : IKubernetesObject
     [JsonPropertyName("items")]
     public IList<V1beta1DiskResourcePolicyAttachment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskResourcePolicyAttachmentSpecForProviderDiskRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1DiskResourcePolicyAttachmentSpecForProviderDiskRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Disk in compute to populate disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskResourcePolicyAttachmentSpecForProviderDiskRef
@@ -59,7 +64,9 @@ public partial class V1beta1DiskResourcePolicyAttachmentSpecForProviderDiskRef
     [JsonPropertyName("policy")]
     public V1beta1DiskResourcePolicyAttachmentSpecForProviderDiskRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskResourcePolicyAttachmentSpecForProviderDiskSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1DiskResourcePolicyAttachmentSpecForProviderDiskSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Disk in compute to populate disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskResourcePolicyAttachmentSpecForProviderDiskSelector
@@ -89,7 +98,9 @@ public partial class V1beta1DiskResourcePolicyAttachmentSpecForProviderDiskSelec
     [JsonPropertyName("policy")]
     public V1beta1DiskResourcePolicyAttachmentSpecForProviderDiskSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskResourcePolicyAttachmentSpecForProviderNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1DiskResourcePolicyAttachmentSpecForProviderNameRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourcePolicy in compute to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskResourcePolicyAttachmentSpecForProviderNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1DiskResourcePolicyAttachmentSpecForProviderNameRef
     [JsonPropertyName("policy")]
     public V1beta1DiskResourcePolicyAttachmentSpecForProviderNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskResourcePolicyAttachmentSpecForProviderNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1DiskResourcePolicyAttachmentSpecForProviderNameSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourcePolicy in compute to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskResourcePolicyAttachmentSpecForProviderNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1DiskResourcePolicyAttachmentSpecForProviderNameSelec
     [JsonPropertyName("policy")]
     public V1beta1DiskResourcePolicyAttachmentSpecForProviderNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskResourcePolicyAttachmentSpecForProvider
@@ -182,7 +201,9 @@ public partial class V1beta1DiskResourcePolicyAttachmentSpecForProvider
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskResourcePolicyAttachmentSpecInitProviderDiskRefPolicy
@@ -195,7 +216,9 @@ public partial class V1beta1DiskResourcePolicyAttachmentSpecInitProviderDiskRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Disk in compute to populate disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskResourcePolicyAttachmentSpecInitProviderDiskRef
@@ -208,7 +231,9 @@ public partial class V1beta1DiskResourcePolicyAttachmentSpecInitProviderDiskRef
     [JsonPropertyName("policy")]
     public V1beta1DiskResourcePolicyAttachmentSpecInitProviderDiskRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskResourcePolicyAttachmentSpecInitProviderDiskSelectorPolicy
@@ -221,7 +246,9 @@ public partial class V1beta1DiskResourcePolicyAttachmentSpecInitProviderDiskSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Disk in compute to populate disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskResourcePolicyAttachmentSpecInitProviderDiskSelector
@@ -238,7 +265,9 @@ public partial class V1beta1DiskResourcePolicyAttachmentSpecInitProviderDiskSele
     [JsonPropertyName("policy")]
     public V1beta1DiskResourcePolicyAttachmentSpecInitProviderDiskSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskResourcePolicyAttachmentSpecInitProviderNameRefPolicy
@@ -251,7 +280,9 @@ public partial class V1beta1DiskResourcePolicyAttachmentSpecInitProviderNameRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourcePolicy in compute to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskResourcePolicyAttachmentSpecInitProviderNameRef
@@ -264,7 +295,9 @@ public partial class V1beta1DiskResourcePolicyAttachmentSpecInitProviderNameRef
     [JsonPropertyName("policy")]
     public V1beta1DiskResourcePolicyAttachmentSpecInitProviderNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskResourcePolicyAttachmentSpecInitProviderNameSelectorPolicy
@@ -277,7 +310,9 @@ public partial class V1beta1DiskResourcePolicyAttachmentSpecInitProviderNameSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourcePolicy in compute to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskResourcePolicyAttachmentSpecInitProviderNameSelector
@@ -294,7 +329,9 @@ public partial class V1beta1DiskResourcePolicyAttachmentSpecInitProviderNameSele
     [JsonPropertyName("policy")]
     public V1beta1DiskResourcePolicyAttachmentSpecInitProviderNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskResourcePolicyAttachmentSpecInitProvider
@@ -331,7 +368,9 @@ public partial class V1beta1DiskResourcePolicyAttachmentSpecInitProvider
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskResourcePolicyAttachmentSpecProviderConfigRefPolicy
@@ -344,7 +383,9 @@ public partial class V1beta1DiskResourcePolicyAttachmentSpecProviderConfigRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskResourcePolicyAttachmentSpecProviderConfigRef
@@ -357,7 +398,9 @@ public partial class V1beta1DiskResourcePolicyAttachmentSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1DiskResourcePolicyAttachmentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskResourcePolicyAttachmentSpecWriteConnectionSecretToRef
@@ -370,7 +413,9 @@ public partial class V1beta1DiskResourcePolicyAttachmentSpecWriteConnectionSecre
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DiskResourcePolicyAttachmentSpec defines the desired state of DiskResourcePolicyAttachment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskResourcePolicyAttachmentSpec
@@ -399,7 +444,9 @@ public partial class V1beta1DiskResourcePolicyAttachmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DiskResourcePolicyAttachmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskResourcePolicyAttachmentStatusAtProvider
@@ -424,7 +471,9 @@ public partial class V1beta1DiskResourcePolicyAttachmentStatusAtProvider
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskResourcePolicyAttachmentStatusConditions
@@ -453,7 +502,9 @@ public partial class V1beta1DiskResourcePolicyAttachmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DiskResourcePolicyAttachmentStatus defines the observed state of DiskResourcePolicyAttachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskResourcePolicyAttachmentStatus
@@ -470,7 +521,9 @@ public partial class V1beta1DiskResourcePolicyAttachmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DiskResourcePolicyAttachment is the Schema for the DiskResourcePolicyAttachments API. Adds existing resource policies to a disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -500,3 +553,4 @@ public partial class V1beta1DiskResourcePolicyAttachment : IKubernetesObject<V1O
     [JsonPropertyName("status")]
     public V1beta1DiskResourcePolicyAttachmentStatus? Status { get; set; }
 }
+#nullable disable

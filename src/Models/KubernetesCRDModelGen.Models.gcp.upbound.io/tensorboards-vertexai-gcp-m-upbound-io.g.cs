@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.vertexai.gcp.m.upbound.io;
+#nullable enable
 /// <summary>Tensorboard is the Schema for the Tensorboards API. Tensorboard is a physical database that stores users' training metrics.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TensorboardList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1Tensorboard> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Customer-managed encryption key spec for a Tensorboard. If set, this Tensorboard and all sub-resources of this Tensorboard will be secured by this key. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TensorboardSpecForProviderEncryptionSpec
@@ -42,7 +45,9 @@ public partial class V1beta1TensorboardSpecForProviderEncryptionSpec
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TensorboardSpecForProvider
@@ -67,7 +72,9 @@ public partial class V1beta1TensorboardSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Customer-managed encryption key spec for a Tensorboard. If set, this Tensorboard and all sub-resources of this Tensorboard will be secured by this key. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TensorboardSpecInitProviderEncryptionSpec
@@ -76,7 +83,9 @@ public partial class V1beta1TensorboardSpecInitProviderEncryptionSpec
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TensorboardSpecInitProvider
@@ -97,7 +106,9 @@ public partial class V1beta1TensorboardSpecInitProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TensorboardSpecProviderConfigRef
@@ -110,7 +121,9 @@ public partial class V1beta1TensorboardSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TensorboardSpecWriteConnectionSecretToRef
@@ -119,7 +132,9 @@ public partial class V1beta1TensorboardSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TensorboardSpec defines the desired state of Tensorboard</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TensorboardSpec
@@ -144,7 +159,9 @@ public partial class V1beta1TensorboardSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TensorboardSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Customer-managed encryption key spec for a Tensorboard. If set, this Tensorboard and all sub-resources of this Tensorboard will be secured by this key. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TensorboardStatusAtProviderEncryptionSpec
@@ -153,7 +170,9 @@ public partial class V1beta1TensorboardStatusAtProviderEncryptionSpec
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TensorboardStatusAtProvider
@@ -210,7 +229,9 @@ public partial class V1beta1TensorboardStatusAtProvider
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TensorboardStatusConditions
@@ -239,7 +260,9 @@ public partial class V1beta1TensorboardStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TensorboardStatus defines the observed state of Tensorboard.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TensorboardStatus
@@ -256,7 +279,9 @@ public partial class V1beta1TensorboardStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Tensorboard is the Schema for the Tensorboards API. Tensorboard is a physical database that stores users' training metrics.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -286,3 +311,4 @@ public partial class V1beta1Tensorboard : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1TensorboardStatus? Status { get; set; }
 }
+#nullable disable

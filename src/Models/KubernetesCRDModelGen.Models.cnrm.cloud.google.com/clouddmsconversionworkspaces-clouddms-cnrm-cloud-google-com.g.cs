@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.clouddms.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>CloudDMSConversionWorkspace is the Schema for the CloudDMSConversionWorkspace API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1CloudDMSConversionWorkspaceList : IKubernetesObject
     [JsonPropertyName("items")]
     public IList<V1alpha1CloudDMSConversionWorkspace> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The destination engine details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDMSConversionWorkspaceSpecDestination
@@ -46,7 +49,9 @@ public partial class V1alpha1CloudDMSConversionWorkspaceSpecDestination
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDMSConversionWorkspaceSpecProjectRef
@@ -67,7 +72,9 @@ public partial class V1alpha1CloudDMSConversionWorkspaceSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The source engine details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDMSConversionWorkspaceSpecSource
@@ -80,7 +87,9 @@ public partial class V1alpha1CloudDMSConversionWorkspaceSpecSource
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CloudDMSConversionWorkspaceSpec defines the desired state of CloudDMSConversionWorkspace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDMSConversionWorkspaceSpec
@@ -113,7 +122,9 @@ public partial class V1alpha1CloudDMSConversionWorkspaceSpec
     [JsonPropertyName("source")]
     public V1alpha1CloudDMSConversionWorkspaceSpecSource? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDMSConversionWorkspaceStatusConditions
@@ -138,7 +149,9 @@ public partial class V1alpha1CloudDMSConversionWorkspaceStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDMSConversionWorkspaceStatusObservedState
@@ -163,7 +176,9 @@ public partial class V1alpha1CloudDMSConversionWorkspaceStatusObservedState
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CloudDMSConversionWorkspaceStatus defines the config connector machine state of CloudDMSConversionWorkspace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudDMSConversionWorkspaceStatus
@@ -184,7 +199,9 @@ public partial class V1alpha1CloudDMSConversionWorkspaceStatus
     [JsonPropertyName("observedState")]
     public V1alpha1CloudDMSConversionWorkspaceStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CloudDMSConversionWorkspace is the Schema for the CloudDMSConversionWorkspace API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -214,3 +231,4 @@ public partial class V1alpha1CloudDMSConversionWorkspace : IKubernetesObject<V1O
     [JsonPropertyName("status")]
     public V1alpha1CloudDMSConversionWorkspaceStatus? Status { get; set; }
 }
+#nullable disable

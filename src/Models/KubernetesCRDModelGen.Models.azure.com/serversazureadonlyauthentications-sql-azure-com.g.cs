@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20211101.ServersAzureADOnlyAuthentication Generator information: - Generated from: /sql/resource-manager/Microsoft.Sql/stable/2021-11-01/ServerAzureADOnlyAuthentications.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/azureADOnlyAuthentications/Default</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20211101storageServersAzureADOnlyAuthenticationList : 
     [JsonPropertyName("items")]
     public IList<V1api20211101storageServersAzureADOnlyAuthentication> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersAzureADOnlyAuthenticationSpecOperatorSpecConfigMapExpressions
@@ -50,7 +53,9 @@ public partial class V1api20211101storageServersAzureADOnlyAuthenticationSpecOpe
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersAzureADOnlyAuthenticationSpecOperatorSpecSecretExpressions
@@ -67,7 +72,9 @@ public partial class V1api20211101storageServersAzureADOnlyAuthenticationSpecOpe
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211101.ServersAzureADOnlyAuthenticationOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersAzureADOnlyAuthenticationSpecOperatorSpec
@@ -84,7 +91,9 @@ public partial class V1api20211101storageServersAzureADOnlyAuthenticationSpecOpe
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20211101storageServersAzureADOnlyAuthenticationSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a sql.azure.com/Server resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersAzureADOnlyAuthenticationSpecOwner
@@ -97,7 +106,9 @@ public partial class V1api20211101storageServersAzureADOnlyAuthenticationSpecOwn
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211101.ServersAzureADOnlyAuthentication_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersAzureADOnlyAuthenticationSpec
@@ -122,7 +133,9 @@ public partial class V1api20211101storageServersAzureADOnlyAuthenticationSpec
     [JsonPropertyName("owner")]
     public V1api20211101storageServersAzureADOnlyAuthenticationSpecOwner Owner { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersAzureADOnlyAuthenticationStatusConditions
@@ -155,7 +168,9 @@ public partial class V1api20211101storageServersAzureADOnlyAuthenticationStatusC
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211101.ServersAzureADOnlyAuthentication_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersAzureADOnlyAuthenticationStatus
@@ -184,7 +199,9 @@ public partial class V1api20211101storageServersAzureADOnlyAuthenticationStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211101.ServersAzureADOnlyAuthentication Generator information: - Generated from: /sql/resource-manager/Microsoft.Sql/stable/2021-11-01/ServerAzureADOnlyAuthentications.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/azureADOnlyAuthentications/Default</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -214,3 +231,4 @@ public partial class V1api20211101storageServersAzureADOnlyAuthentication : IKub
     [JsonPropertyName("status")]
     public V1api20211101storageServersAzureADOnlyAuthenticationStatus? Status { get; set; }
 }
+#nullable disable

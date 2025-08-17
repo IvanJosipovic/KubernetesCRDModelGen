@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dbforpostgresql.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20240801.FlexibleServersDatabase Generator information: - Generated from: /postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2024-08-01/Databases.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/flexibleServers/{serverName}/databases/{databaseName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20240801storageFlexibleServersDatabaseList : IKubernet
     [JsonPropertyName("items")]
     public IList<V1api20240801storageFlexibleServersDatabase> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServersDatabaseSpecOperatorSpecConfigMapExpressions
@@ -50,7 +53,9 @@ public partial class V1api20240801storageFlexibleServersDatabaseSpecOperatorSpec
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServersDatabaseSpecOperatorSpecSecretExpressions
@@ -67,7 +72,9 @@ public partial class V1api20240801storageFlexibleServersDatabaseSpecOperatorSpec
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240801.FlexibleServersDatabaseOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServersDatabaseSpecOperatorSpec
@@ -84,7 +91,9 @@ public partial class V1api20240801storageFlexibleServersDatabaseSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20240801storageFlexibleServersDatabaseSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a dbforpostgresql.azure.com/FlexibleServer resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServersDatabaseSpecOwner
@@ -97,7 +106,9 @@ public partial class V1api20240801storageFlexibleServersDatabaseSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240801.FlexibleServersDatabase_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServersDatabaseSpec
@@ -130,7 +141,9 @@ public partial class V1api20240801storageFlexibleServersDatabaseSpec
     [JsonPropertyName("owner")]
     public V1api20240801storageFlexibleServersDatabaseSpecOwner Owner { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServersDatabaseStatusConditions
@@ -163,7 +176,9 @@ public partial class V1api20240801storageFlexibleServersDatabaseStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240801.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServersDatabaseStatusSystemData
@@ -196,7 +211,9 @@ public partial class V1api20240801storageFlexibleServersDatabaseStatusSystemData
     [JsonPropertyName("lastModifiedByType")]
     public string? LastModifiedByType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240801.FlexibleServersDatabase_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServersDatabaseStatus
@@ -233,7 +250,9 @@ public partial class V1api20240801storageFlexibleServersDatabaseStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240801.FlexibleServersDatabase Generator information: - Generated from: /postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2024-08-01/Databases.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/flexibleServers/{serverName}/databases/{databaseName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -263,3 +282,4 @@ public partial class V1api20240801storageFlexibleServersDatabase : IKubernetesOb
     [JsonPropertyName("status")]
     public V1api20240801storageFlexibleServersDatabaseStatus? Status { get; set; }
 }
+#nullable disable

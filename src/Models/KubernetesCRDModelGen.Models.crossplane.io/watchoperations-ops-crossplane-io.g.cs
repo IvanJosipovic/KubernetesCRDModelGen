@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ops.crossplane.io;
+#nullable enable
 /// <summary>A WatchOperation creates Operations when watched resources change.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,13 +34,17 @@ public partial class V1alpha1WatchOperationList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1alpha1WatchOperation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Standard object metadata.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WatchOperationSpecOperationTemplateMetadata
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SecretRef is a reference to a secret containing credentials that should be supplied to the function.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WatchOperationSpecOperationTemplateSpecPipelineCredentialsSecretRef
@@ -52,7 +57,9 @@ public partial class V1alpha1WatchOperationSpecOperationTemplateSpecPipelineCred
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FunctionCredentials are optional credentials that a function needs to run.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WatchOperationSpecOperationTemplateSpecPipelineCredentials
@@ -69,7 +76,9 @@ public partial class V1alpha1WatchOperationSpecOperationTemplateSpecPipelineCred
     [JsonPropertyName("source")]
     public string Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FunctionRef is a reference to the function this step should execute.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WatchOperationSpecOperationTemplateSpecPipelineFunctionRef
@@ -78,7 +87,9 @@ public partial class V1alpha1WatchOperationSpecOperationTemplateSpecPipelineFunc
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RequiredResourceSelector selects resources that should be fetched before a pipeline step runs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WatchOperationSpecOperationTemplateSpecPipelineRequirementsRequiredResources
@@ -107,7 +118,9 @@ public partial class V1alpha1WatchOperationSpecOperationTemplateSpecPipelineRequ
     [JsonPropertyName("requirementName")]
     public string RequirementName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Requirements are resource requirements that will be satisfied before this pipeline step is called for the first time. This allows pre-populating required resources without requiring a function to request them first.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WatchOperationSpecOperationTemplateSpecPipelineRequirements
@@ -116,7 +129,9 @@ public partial class V1alpha1WatchOperationSpecOperationTemplateSpecPipelineRequ
     [JsonPropertyName("requiredResources")]
     public IList<V1alpha1WatchOperationSpecOperationTemplateSpecPipelineRequirementsRequiredResources>? RequiredResources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A PipelineStep in an operation function pipeline.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WatchOperationSpecOperationTemplateSpecPipeline
@@ -141,7 +156,9 @@ public partial class V1alpha1WatchOperationSpecOperationTemplateSpecPipeline
     [JsonPropertyName("step")]
     public string Step { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Spec is the specification of the Operation to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WatchOperationSpecOperationTemplateSpec
@@ -158,7 +175,9 @@ public partial class V1alpha1WatchOperationSpecOperationTemplateSpec
     [JsonPropertyName("retryLimit")]
     public long? RetryLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OperationTemplate is the template for the Operation to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WatchOperationSpecOperationTemplate
@@ -171,7 +190,9 @@ public partial class V1alpha1WatchOperationSpecOperationTemplate
     [JsonPropertyName("spec")]
     public V1alpha1WatchOperationSpecOperationTemplateSpec Spec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Watch specifies the resource to watch.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WatchOperationSpecWatch
@@ -192,7 +213,9 @@ public partial class V1alpha1WatchOperationSpecWatch
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WatchOperationSpec specifies the desired state of a WatchOperation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WatchOperationSpec
@@ -217,7 +240,9 @@ public partial class V1alpha1WatchOperationSpec
     [JsonPropertyName("watch")]
     public V1alpha1WatchOperationSpecWatch Watch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WatchOperationStatusConditions
@@ -246,7 +271,9 @@ public partial class V1alpha1WatchOperationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A RunningOperationRef is a reference to a running operation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WatchOperationStatusRunningOperationRefs
@@ -255,7 +282,9 @@ public partial class V1alpha1WatchOperationStatusRunningOperationRefs
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WatchOperationStatus represents the observed state of a WatchOperation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WatchOperationStatus
@@ -280,7 +309,9 @@ public partial class V1alpha1WatchOperationStatus
     [JsonPropertyName("watchingResources")]
     public long? WatchingResources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A WatchOperation creates Operations when watched resources change.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -310,3 +341,4 @@ public partial class V1alpha1WatchOperation : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1alpha1WatchOperationStatus? Status { get; set; }
 }
+#nullable disable

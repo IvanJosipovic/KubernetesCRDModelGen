@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafactory.azure.upbound.io;
+#nullable enable
 /// <summary>LinkedServiceOdbc is the Schema for the LinkedServiceOdbcs API. Manages a Linked Service (connection) between a Database and Azure Data Factory through ODBC protocol.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LinkedServiceOdbcList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1LinkedServiceOdbc> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password associated with the username, which can be used to authenticate to the ODBC endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceOdbcSpecForProviderBasicAuthenticationPasswordSecretRef
@@ -50,7 +53,9 @@ public partial class V1beta1LinkedServiceOdbcSpecForProviderBasicAuthenticationP
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceOdbcSpecForProviderBasicAuthentication
@@ -63,7 +68,9 @@ public partial class V1beta1LinkedServiceOdbcSpecForProviderBasicAuthentication
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceOdbcSpecForProviderDataFactoryIdRefPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1LinkedServiceOdbcSpecForProviderDataFactoryIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Factory in datafactory to populate dataFactoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceOdbcSpecForProviderDataFactoryIdRef
@@ -89,7 +98,9 @@ public partial class V1beta1LinkedServiceOdbcSpecForProviderDataFactoryIdRef
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceOdbcSpecForProviderDataFactoryIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceOdbcSpecForProviderDataFactoryIdSelectorPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1LinkedServiceOdbcSpecForProviderDataFactoryIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Factory in datafactory to populate dataFactoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceOdbcSpecForProviderDataFactoryIdSelector
@@ -119,7 +132,9 @@ public partial class V1beta1LinkedServiceOdbcSpecForProviderDataFactoryIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceOdbcSpecForProviderDataFactoryIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceOdbcSpecForProvider
@@ -164,7 +179,9 @@ public partial class V1beta1LinkedServiceOdbcSpecForProvider
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceOdbcSpecInitProviderBasicAuthentication
@@ -173,7 +190,9 @@ public partial class V1beta1LinkedServiceOdbcSpecInitProviderBasicAuthentication
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceOdbcSpecInitProvider
@@ -206,7 +225,9 @@ public partial class V1beta1LinkedServiceOdbcSpecInitProvider
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceOdbcSpecProviderConfigRefPolicy
@@ -219,7 +240,9 @@ public partial class V1beta1LinkedServiceOdbcSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceOdbcSpecProviderConfigRef
@@ -232,7 +255,9 @@ public partial class V1beta1LinkedServiceOdbcSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceOdbcSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceOdbcSpecWriteConnectionSecretToRef
@@ -245,7 +270,9 @@ public partial class V1beta1LinkedServiceOdbcSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LinkedServiceOdbcSpec defines the desired state of LinkedServiceOdbc</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceOdbcSpec
@@ -274,7 +301,9 @@ public partial class V1beta1LinkedServiceOdbcSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LinkedServiceOdbcSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceOdbcStatusAtProviderBasicAuthentication
@@ -283,7 +312,9 @@ public partial class V1beta1LinkedServiceOdbcStatusAtProviderBasicAuthentication
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceOdbcStatusAtProvider
@@ -324,7 +355,9 @@ public partial class V1beta1LinkedServiceOdbcStatusAtProvider
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceOdbcStatusConditions
@@ -353,7 +386,9 @@ public partial class V1beta1LinkedServiceOdbcStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LinkedServiceOdbcStatus defines the observed state of LinkedServiceOdbc.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceOdbcStatus
@@ -370,7 +405,9 @@ public partial class V1beta1LinkedServiceOdbcStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LinkedServiceOdbc is the Schema for the LinkedServiceOdbcs API. Manages a Linked Service (connection) between a Database and Azure Data Factory through ODBC protocol.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -400,3 +437,4 @@ public partial class V1beta1LinkedServiceOdbc : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1LinkedServiceOdbcStatus? Status { get; set; }
 }
+#nullable disable

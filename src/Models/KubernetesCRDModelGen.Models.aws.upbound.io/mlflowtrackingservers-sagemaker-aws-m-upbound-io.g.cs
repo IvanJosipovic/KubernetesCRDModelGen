@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sagemaker.aws.m.upbound.io;
+#nullable enable
 /// <summary>MlflowTrackingServer is the Schema for the MlflowTrackingServers API. Provides a SageMaker AI MLFlow Tracking Server resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MlflowTrackingServerList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1MlflowTrackingServer> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MlflowTrackingServerSpecForProviderRoleArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1MlflowTrackingServerSpecForProviderRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MlflowTrackingServerSpecForProviderRoleArnRef
@@ -63,7 +68,9 @@ public partial class V1beta1MlflowTrackingServerSpecForProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1MlflowTrackingServerSpecForProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MlflowTrackingServerSpecForProviderRoleArnSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1MlflowTrackingServerSpecForProviderRoleArnSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MlflowTrackingServerSpecForProviderRoleArnSelector
@@ -97,7 +106,9 @@ public partial class V1beta1MlflowTrackingServerSpecForProviderRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1MlflowTrackingServerSpecForProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MlflowTrackingServerSpecForProvider
@@ -142,7 +153,9 @@ public partial class V1beta1MlflowTrackingServerSpecForProvider
     [JsonPropertyName("weeklyMaintenanceWindowStart")]
     public string? WeeklyMaintenanceWindowStart { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MlflowTrackingServerSpecInitProviderRoleArnRefPolicy
@@ -155,7 +168,9 @@ public partial class V1beta1MlflowTrackingServerSpecInitProviderRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MlflowTrackingServerSpecInitProviderRoleArnRef
@@ -172,7 +187,9 @@ public partial class V1beta1MlflowTrackingServerSpecInitProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1MlflowTrackingServerSpecInitProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MlflowTrackingServerSpecInitProviderRoleArnSelectorPolicy
@@ -185,7 +202,9 @@ public partial class V1beta1MlflowTrackingServerSpecInitProviderRoleArnSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MlflowTrackingServerSpecInitProviderRoleArnSelector
@@ -206,7 +225,9 @@ public partial class V1beta1MlflowTrackingServerSpecInitProviderRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1MlflowTrackingServerSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MlflowTrackingServerSpecInitProvider
@@ -247,7 +268,9 @@ public partial class V1beta1MlflowTrackingServerSpecInitProvider
     [JsonPropertyName("weeklyMaintenanceWindowStart")]
     public string? WeeklyMaintenanceWindowStart { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MlflowTrackingServerSpecProviderConfigRef
@@ -260,7 +283,9 @@ public partial class V1beta1MlflowTrackingServerSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MlflowTrackingServerSpecWriteConnectionSecretToRef
@@ -269,7 +294,9 @@ public partial class V1beta1MlflowTrackingServerSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MlflowTrackingServerSpec defines the desired state of MlflowTrackingServer</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MlflowTrackingServerSpec
@@ -294,7 +321,9 @@ public partial class V1beta1MlflowTrackingServerSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MlflowTrackingServerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MlflowTrackingServerStatusAtProvider
@@ -347,7 +376,9 @@ public partial class V1beta1MlflowTrackingServerStatusAtProvider
     [JsonPropertyName("weeklyMaintenanceWindowStart")]
     public string? WeeklyMaintenanceWindowStart { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MlflowTrackingServerStatusConditions
@@ -376,7 +407,9 @@ public partial class V1beta1MlflowTrackingServerStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MlflowTrackingServerStatus defines the observed state of MlflowTrackingServer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MlflowTrackingServerStatus
@@ -393,7 +426,9 @@ public partial class V1beta1MlflowTrackingServerStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MlflowTrackingServer is the Schema for the MlflowTrackingServers API. Provides a SageMaker AI MLFlow Tracking Server resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -423,3 +458,4 @@ public partial class V1beta1MlflowTrackingServer : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1MlflowTrackingServerStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.recoveryservices.azure.m.upbound.io;
+#nullable enable
 /// <summary>BackupPolicyFileShare is the Schema for the BackupPolicyFileShares API. Manages an Azure File Share Backup Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BackupPolicyFileShareList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1BackupPolicyFileShare> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A hourly block defined as below. This is required when frequency is set to Hourly.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareSpecForProviderBackupHourly
@@ -50,7 +53,9 @@ public partial class V1beta1BackupPolicyFileShareSpecForProviderBackupHourly
     [JsonPropertyName("windowDuration")]
     public double? WindowDuration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures the Policy backup frequency and times as documented in the backup block below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareSpecForProviderBackup
@@ -67,7 +72,9 @@ public partial class V1beta1BackupPolicyFileShareSpecForProviderBackup
     [JsonPropertyName("time")]
     public string? Time { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareSpecForProviderRecoveryVaultNameRefPolicy
@@ -80,7 +87,9 @@ public partial class V1beta1BackupPolicyFileShareSpecForProviderRecoveryVaultNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Vault in recoveryservices to populate recoveryVaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareSpecForProviderRecoveryVaultNameRef
@@ -97,7 +106,9 @@ public partial class V1beta1BackupPolicyFileShareSpecForProviderRecoveryVaultNam
     [JsonPropertyName("policy")]
     public V1beta1BackupPolicyFileShareSpecForProviderRecoveryVaultNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareSpecForProviderRecoveryVaultNameSelectorPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1BackupPolicyFileShareSpecForProviderRecoveryVaultNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Vault in recoveryservices to populate recoveryVaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareSpecForProviderRecoveryVaultNameSelector
@@ -131,7 +144,9 @@ public partial class V1beta1BackupPolicyFileShareSpecForProviderRecoveryVaultNam
     [JsonPropertyName("policy")]
     public V1beta1BackupPolicyFileShareSpecForProviderRecoveryVaultNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareSpecForProviderResourceGroupNameRefPolicy
@@ -144,7 +159,9 @@ public partial class V1beta1BackupPolicyFileShareSpecForProviderResourceGroupNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareSpecForProviderResourceGroupNameRef
@@ -161,7 +178,9 @@ public partial class V1beta1BackupPolicyFileShareSpecForProviderResourceGroupNam
     [JsonPropertyName("policy")]
     public V1beta1BackupPolicyFileShareSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareSpecForProviderResourceGroupNameSelectorPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1BackupPolicyFileShareSpecForProviderResourceGroupNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareSpecForProviderResourceGroupNameSelector
@@ -195,7 +216,9 @@ public partial class V1beta1BackupPolicyFileShareSpecForProviderResourceGroupNam
     [JsonPropertyName("policy")]
     public V1beta1BackupPolicyFileShareSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures the policy daily retention as documented in the retention_daily block below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareSpecForProviderRetentionDaily
@@ -204,7 +227,9 @@ public partial class V1beta1BackupPolicyFileShareSpecForProviderRetentionDaily
     [JsonPropertyName("count")]
     public double? Count { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures the policy monthly retention as documented in the retention_monthly block below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareSpecForProviderRetentionMonthly
@@ -229,7 +254,9 @@ public partial class V1beta1BackupPolicyFileShareSpecForProviderRetentionMonthly
     [JsonPropertyName("weeks")]
     public IList<string>? Weeks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures the policy weekly retention as documented in the retention_weekly block below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareSpecForProviderRetentionWeekly
@@ -242,7 +269,9 @@ public partial class V1beta1BackupPolicyFileShareSpecForProviderRetentionWeekly
     [JsonPropertyName("weekdays")]
     public IList<string>? Weekdays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures the policy yearly retention as documented in the retention_yearly block below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareSpecForProviderRetentionYearly
@@ -271,7 +300,9 @@ public partial class V1beta1BackupPolicyFileShareSpecForProviderRetentionYearly
     [JsonPropertyName("weeks")]
     public IList<string>? Weeks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareSpecForProvider
@@ -324,7 +355,9 @@ public partial class V1beta1BackupPolicyFileShareSpecForProvider
     [JsonPropertyName("timezone")]
     public string? Timezone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A hourly block defined as below. This is required when frequency is set to Hourly.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareSpecInitProviderBackupHourly
@@ -341,7 +374,9 @@ public partial class V1beta1BackupPolicyFileShareSpecInitProviderBackupHourly
     [JsonPropertyName("windowDuration")]
     public double? WindowDuration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures the Policy backup frequency and times as documented in the backup block below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareSpecInitProviderBackup
@@ -358,7 +393,9 @@ public partial class V1beta1BackupPolicyFileShareSpecInitProviderBackup
     [JsonPropertyName("time")]
     public string? Time { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures the policy daily retention as documented in the retention_daily block below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareSpecInitProviderRetentionDaily
@@ -367,7 +404,9 @@ public partial class V1beta1BackupPolicyFileShareSpecInitProviderRetentionDaily
     [JsonPropertyName("count")]
     public double? Count { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures the policy monthly retention as documented in the retention_monthly block below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareSpecInitProviderRetentionMonthly
@@ -392,7 +431,9 @@ public partial class V1beta1BackupPolicyFileShareSpecInitProviderRetentionMonthl
     [JsonPropertyName("weeks")]
     public IList<string>? Weeks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures the policy weekly retention as documented in the retention_weekly block below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareSpecInitProviderRetentionWeekly
@@ -405,7 +446,9 @@ public partial class V1beta1BackupPolicyFileShareSpecInitProviderRetentionWeekly
     [JsonPropertyName("weekdays")]
     public IList<string>? Weekdays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures the policy yearly retention as documented in the retention_yearly block below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareSpecInitProviderRetentionYearly
@@ -434,7 +477,9 @@ public partial class V1beta1BackupPolicyFileShareSpecInitProviderRetentionYearly
     [JsonPropertyName("weeks")]
     public IList<string>? Weeks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareSpecInitProvider
@@ -463,7 +508,9 @@ public partial class V1beta1BackupPolicyFileShareSpecInitProvider
     [JsonPropertyName("timezone")]
     public string? Timezone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareSpecProviderConfigRef
@@ -476,7 +523,9 @@ public partial class V1beta1BackupPolicyFileShareSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareSpecWriteConnectionSecretToRef
@@ -485,7 +534,9 @@ public partial class V1beta1BackupPolicyFileShareSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupPolicyFileShareSpec defines the desired state of BackupPolicyFileShare</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareSpec
@@ -510,7 +561,9 @@ public partial class V1beta1BackupPolicyFileShareSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BackupPolicyFileShareSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A hourly block defined as below. This is required when frequency is set to Hourly.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareStatusAtProviderBackupHourly
@@ -527,7 +580,9 @@ public partial class V1beta1BackupPolicyFileShareStatusAtProviderBackupHourly
     [JsonPropertyName("windowDuration")]
     public double? WindowDuration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures the Policy backup frequency and times as documented in the backup block below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareStatusAtProviderBackup
@@ -544,7 +599,9 @@ public partial class V1beta1BackupPolicyFileShareStatusAtProviderBackup
     [JsonPropertyName("time")]
     public string? Time { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures the policy daily retention as documented in the retention_daily block below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareStatusAtProviderRetentionDaily
@@ -553,7 +610,9 @@ public partial class V1beta1BackupPolicyFileShareStatusAtProviderRetentionDaily
     [JsonPropertyName("count")]
     public double? Count { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures the policy monthly retention as documented in the retention_monthly block below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareStatusAtProviderRetentionMonthly
@@ -578,7 +637,9 @@ public partial class V1beta1BackupPolicyFileShareStatusAtProviderRetentionMonthl
     [JsonPropertyName("weeks")]
     public IList<string>? Weeks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures the policy weekly retention as documented in the retention_weekly block below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareStatusAtProviderRetentionWeekly
@@ -591,7 +652,9 @@ public partial class V1beta1BackupPolicyFileShareStatusAtProviderRetentionWeekly
     [JsonPropertyName("weekdays")]
     public IList<string>? Weekdays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures the policy yearly retention as documented in the retention_yearly block below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareStatusAtProviderRetentionYearly
@@ -620,7 +683,9 @@ public partial class V1beta1BackupPolicyFileShareStatusAtProviderRetentionYearly
     [JsonPropertyName("weeks")]
     public IList<string>? Weeks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareStatusAtProvider
@@ -661,7 +726,9 @@ public partial class V1beta1BackupPolicyFileShareStatusAtProvider
     [JsonPropertyName("timezone")]
     public string? Timezone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareStatusConditions
@@ -690,7 +757,9 @@ public partial class V1beta1BackupPolicyFileShareStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupPolicyFileShareStatus defines the observed state of BackupPolicyFileShare.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyFileShareStatus
@@ -707,7 +776,9 @@ public partial class V1beta1BackupPolicyFileShareStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupPolicyFileShare is the Schema for the BackupPolicyFileShares API. Manages an Azure File Share Backup Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -737,3 +808,4 @@ public partial class V1beta1BackupPolicyFileShare : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1BackupPolicyFileShareStatus? Status { get; set; }
 }
+#nullable disable

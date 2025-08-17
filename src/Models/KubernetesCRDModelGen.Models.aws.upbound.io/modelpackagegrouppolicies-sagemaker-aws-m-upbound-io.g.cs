@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sagemaker.aws.m.upbound.io;
+#nullable enable
 /// <summary>ModelPackageGroupPolicy is the Schema for the ModelPackageGroupPolicys API. Provides a SageMaker AI Model Package Group Policy resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ModelPackageGroupPolicyList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1ModelPackageGroupPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelPackageGroupPolicySpecForProviderModelPackageGroupNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ModelPackageGroupPolicySpecForProviderModelPackageGr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ModelPackageGroup in sagemaker to populate modelPackageGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelPackageGroupPolicySpecForProviderModelPackageGroupNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1ModelPackageGroupPolicySpecForProviderModelPackageGr
     [JsonPropertyName("policy")]
     public V1beta1ModelPackageGroupPolicySpecForProviderModelPackageGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelPackageGroupPolicySpecForProviderModelPackageGroupNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1ModelPackageGroupPolicySpecForProviderModelPackageGr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ModelPackageGroup in sagemaker to populate modelPackageGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelPackageGroupPolicySpecForProviderModelPackageGroupNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1ModelPackageGroupPolicySpecForProviderModelPackageGr
     [JsonPropertyName("policy")]
     public V1beta1ModelPackageGroupPolicySpecForProviderModelPackageGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelPackageGroupPolicySpecForProvider
@@ -122,7 +133,9 @@ public partial class V1beta1ModelPackageGroupPolicySpecForProvider
     [JsonPropertyName("resourcePolicy")]
     public string? ResourcePolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelPackageGroupPolicySpecInitProviderModelPackageGroupNameRefPolicy
@@ -135,7 +148,9 @@ public partial class V1beta1ModelPackageGroupPolicySpecInitProviderModelPackageG
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ModelPackageGroup in sagemaker to populate modelPackageGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelPackageGroupPolicySpecInitProviderModelPackageGroupNameRef
@@ -152,7 +167,9 @@ public partial class V1beta1ModelPackageGroupPolicySpecInitProviderModelPackageG
     [JsonPropertyName("policy")]
     public V1beta1ModelPackageGroupPolicySpecInitProviderModelPackageGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelPackageGroupPolicySpecInitProviderModelPackageGroupNameSelectorPolicy
@@ -165,7 +182,9 @@ public partial class V1beta1ModelPackageGroupPolicySpecInitProviderModelPackageG
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ModelPackageGroup in sagemaker to populate modelPackageGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelPackageGroupPolicySpecInitProviderModelPackageGroupNameSelector
@@ -186,7 +205,9 @@ public partial class V1beta1ModelPackageGroupPolicySpecInitProviderModelPackageG
     [JsonPropertyName("policy")]
     public V1beta1ModelPackageGroupPolicySpecInitProviderModelPackageGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelPackageGroupPolicySpecInitProvider
@@ -207,7 +228,9 @@ public partial class V1beta1ModelPackageGroupPolicySpecInitProvider
     [JsonPropertyName("resourcePolicy")]
     public string? ResourcePolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelPackageGroupPolicySpecProviderConfigRef
@@ -220,7 +243,9 @@ public partial class V1beta1ModelPackageGroupPolicySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelPackageGroupPolicySpecWriteConnectionSecretToRef
@@ -229,7 +254,9 @@ public partial class V1beta1ModelPackageGroupPolicySpecWriteConnectionSecretToRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ModelPackageGroupPolicySpec defines the desired state of ModelPackageGroupPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelPackageGroupPolicySpec
@@ -254,7 +281,9 @@ public partial class V1beta1ModelPackageGroupPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ModelPackageGroupPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelPackageGroupPolicyStatusAtProvider
@@ -275,7 +304,9 @@ public partial class V1beta1ModelPackageGroupPolicyStatusAtProvider
     [JsonPropertyName("resourcePolicy")]
     public string? ResourcePolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelPackageGroupPolicyStatusConditions
@@ -304,7 +335,9 @@ public partial class V1beta1ModelPackageGroupPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ModelPackageGroupPolicyStatus defines the observed state of ModelPackageGroupPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelPackageGroupPolicyStatus
@@ -321,7 +354,9 @@ public partial class V1beta1ModelPackageGroupPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ModelPackageGroupPolicy is the Schema for the ModelPackageGroupPolicys API. Provides a SageMaker AI Model Package Group Policy resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -351,3 +386,4 @@ public partial class V1beta1ModelPackageGroupPolicy : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1ModelPackageGroupPolicyStatus? Status { get; set; }
 }
+#nullable disable

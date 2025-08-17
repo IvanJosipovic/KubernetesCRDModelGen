@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cdn.azure.m.upbound.io;
+#nullable enable
 /// <summary>FrontdoorRule is the Schema for the FrontdoorRules API. Manages a Front Door (standard/premium) Rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FrontdoorRuleList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1beta1FrontdoorRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderActionsRequestHeaderAction
@@ -50,7 +53,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderActionsRequestHeaderActi
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderActionsResponseHeaderAction
@@ -67,7 +72,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderActionsResponseHeaderAct
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderActionsRouteConfigurationOverrideActionCdnFrontdoorOriginGroupIdRefPolicy
@@ -80,7 +87,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderActionsRouteConfiguratio
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a FrontdoorOriginGroup in cdn to populate cdnFrontdoorOriginGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderActionsRouteConfigurationOverrideActionCdnFrontdoorOriginGroupIdRef
@@ -97,7 +106,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderActionsRouteConfiguratio
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorRuleSpecForProviderActionsRouteConfigurationOverrideActionCdnFrontdoorOriginGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderActionsRouteConfigurationOverrideActionCdnFrontdoorOriginGroupIdSelectorPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderActionsRouteConfiguratio
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a FrontdoorOriginGroup in cdn to populate cdnFrontdoorOriginGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderActionsRouteConfigurationOverrideActionCdnFrontdoorOriginGroupIdSelector
@@ -131,7 +144,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderActionsRouteConfiguratio
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorRuleSpecForProviderActionsRouteConfigurationOverrideActionCdnFrontdoorOriginGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A route_configuration_override_action block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderActionsRouteConfigurationOverrideAction
@@ -172,7 +187,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderActionsRouteConfiguratio
     [JsonPropertyName("queryStringParameters")]
     public IList<string>? QueryStringParameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A url_redirect_action block as defined below. You may not have a url_redirect_action and a url_rewrite_action defined in the same actions block.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderActionsUrlRedirectAction
@@ -201,7 +218,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderActionsUrlRedirectAction
     [JsonPropertyName("redirectType")]
     public string? RedirectType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A url_rewrite_action block as defined below. You may not have a url_rewrite_action and a url_redirect_action defined in the same actions block.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderActionsUrlRewriteAction
@@ -218,7 +237,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderActionsUrlRewriteAction
     [JsonPropertyName("sourcePattern")]
     public string? SourcePattern { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An actions block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderActions
@@ -243,7 +264,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderActions
     [JsonPropertyName("urlRewriteAction")]
     public V1beta1FrontdoorRuleSpecForProviderActionsUrlRewriteAction? UrlRewriteAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderCdnFrontdoorRuleSetIdRefPolicy
@@ -256,7 +279,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderCdnFrontdoorRuleSetIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a FrontdoorRuleSet in cdn to populate cdnFrontdoorRuleSetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderCdnFrontdoorRuleSetIdRef
@@ -273,7 +298,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderCdnFrontdoorRuleSetIdRef
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorRuleSpecForProviderCdnFrontdoorRuleSetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderCdnFrontdoorRuleSetIdSelectorPolicy
@@ -286,7 +313,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderCdnFrontdoorRuleSetIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a FrontdoorRuleSet in cdn to populate cdnFrontdoorRuleSetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderCdnFrontdoorRuleSetIdSelector
@@ -307,7 +336,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderCdnFrontdoorRuleSetIdSel
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorRuleSpecForProviderCdnFrontdoorRuleSetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsClientPortCondition
@@ -324,7 +355,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsClientPortCond
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsCookiesCondition
@@ -349,7 +382,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsCookiesConditi
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsHostNameCondition
@@ -370,7 +405,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsHostNameCondit
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsHttpVersionCondition
@@ -387,7 +424,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsHttpVersionCon
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsIsDeviceCondition
@@ -404,7 +443,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsIsDeviceCondit
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsPostArgsCondition
@@ -429,7 +470,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsPostArgsCondit
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsQueryStringCondition
@@ -450,7 +493,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsQueryStringCon
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsRemoteAddressCondition
@@ -467,7 +512,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsRemoteAddressC
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsRequestBodyCondition
@@ -488,7 +535,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsRequestBodyCon
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsRequestHeaderCondition
@@ -513,7 +562,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsRequestHeaderC
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsRequestMethodCondition
@@ -530,7 +581,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsRequestMethodC
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsRequestSchemeCondition
@@ -547,7 +600,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsRequestSchemeC
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsRequestUriCondition
@@ -568,7 +623,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsRequestUriCond
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsServerPortCondition
@@ -585,7 +642,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsServerPortCond
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsSocketAddressCondition
@@ -602,7 +661,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsSocketAddressC
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsSslProtocolCondition
@@ -619,7 +680,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsSslProtocolCon
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsUrlFileExtensionCondition
@@ -640,7 +703,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsUrlFileExtensi
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsUrlFilenameCondition
@@ -661,7 +726,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsUrlFilenameCon
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditionsUrlPathCondition
@@ -682,7 +749,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditionsUrlPathConditi
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A conditions block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderConditions
@@ -763,7 +832,9 @@ public partial class V1beta1FrontdoorRuleSpecForProviderConditions
     [JsonPropertyName("urlPathCondition")]
     public IList<V1beta1FrontdoorRuleSpecForProviderConditionsUrlPathCondition>? UrlPathCondition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProvider
@@ -796,7 +867,9 @@ public partial class V1beta1FrontdoorRuleSpecForProvider
     [JsonPropertyName("order")]
     public double? Order { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderActionsRequestHeaderAction
@@ -813,7 +886,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderActionsRequestHeaderAct
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderActionsResponseHeaderAction
@@ -830,7 +905,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderActionsResponseHeaderAc
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurationOverrideActionCdnFrontdoorOriginGroupIdRefPolicy
@@ -843,7 +920,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurati
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a FrontdoorOriginGroup in cdn to populate cdnFrontdoorOriginGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurationOverrideActionCdnFrontdoorOriginGroupIdRef
@@ -860,7 +939,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurati
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurationOverrideActionCdnFrontdoorOriginGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurationOverrideActionCdnFrontdoorOriginGroupIdSelectorPolicy
@@ -873,7 +954,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurati
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a FrontdoorOriginGroup in cdn to populate cdnFrontdoorOriginGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurationOverrideActionCdnFrontdoorOriginGroupIdSelector
@@ -894,7 +977,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurati
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurationOverrideActionCdnFrontdoorOriginGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A route_configuration_override_action block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurationOverrideAction
@@ -935,7 +1020,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderActionsRouteConfigurati
     [JsonPropertyName("queryStringParameters")]
     public IList<string>? QueryStringParameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A url_redirect_action block as defined below. You may not have a url_redirect_action and a url_rewrite_action defined in the same actions block.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderActionsUrlRedirectAction
@@ -964,7 +1051,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderActionsUrlRedirectActio
     [JsonPropertyName("redirectType")]
     public string? RedirectType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A url_rewrite_action block as defined below. You may not have a url_rewrite_action and a url_redirect_action defined in the same actions block.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderActionsUrlRewriteAction
@@ -981,7 +1070,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderActionsUrlRewriteAction
     [JsonPropertyName("sourcePattern")]
     public string? SourcePattern { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An actions block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderActions
@@ -1006,7 +1097,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderActions
     [JsonPropertyName("urlRewriteAction")]
     public V1beta1FrontdoorRuleSpecInitProviderActionsUrlRewriteAction? UrlRewriteAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsClientPortCondition
@@ -1023,7 +1116,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsClientPortCon
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsCookiesCondition
@@ -1048,7 +1143,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsCookiesCondit
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsHostNameCondition
@@ -1069,7 +1166,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsHostNameCondi
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsHttpVersionCondition
@@ -1086,7 +1185,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsHttpVersionCo
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsIsDeviceCondition
@@ -1103,7 +1204,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsIsDeviceCondi
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsPostArgsCondition
@@ -1128,7 +1231,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsPostArgsCondi
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsQueryStringCondition
@@ -1149,7 +1254,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsQueryStringCo
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsRemoteAddressCondition
@@ -1166,7 +1273,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsRemoteAddress
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsRequestBodyCondition
@@ -1187,7 +1296,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsRequestBodyCo
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsRequestHeaderCondition
@@ -1212,7 +1323,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsRequestHeader
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsRequestMethodCondition
@@ -1229,7 +1342,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsRequestMethod
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsRequestSchemeCondition
@@ -1246,7 +1361,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsRequestScheme
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsRequestUriCondition
@@ -1267,7 +1384,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsRequestUriCon
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsServerPortCondition
@@ -1284,7 +1403,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsServerPortCon
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsSocketAddressCondition
@@ -1301,7 +1422,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsSocketAddress
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsSslProtocolCondition
@@ -1318,7 +1441,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsSslProtocolCo
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsUrlFileExtensionCondition
@@ -1339,7 +1464,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsUrlFileExtens
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsUrlFilenameCondition
@@ -1360,7 +1487,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsUrlFilenameCo
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsUrlPathCondition
@@ -1381,7 +1510,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditionsUrlPathCondit
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A conditions block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProviderConditions
@@ -1462,7 +1593,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProviderConditions
     [JsonPropertyName("urlPathCondition")]
     public IList<V1beta1FrontdoorRuleSpecInitProviderConditionsUrlPathCondition>? UrlPathCondition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecInitProvider
@@ -1483,7 +1616,9 @@ public partial class V1beta1FrontdoorRuleSpecInitProvider
     [JsonPropertyName("order")]
     public double? Order { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecProviderConfigRef
@@ -1496,7 +1631,9 @@ public partial class V1beta1FrontdoorRuleSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecWriteConnectionSecretToRef
@@ -1505,7 +1642,9 @@ public partial class V1beta1FrontdoorRuleSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FrontdoorRuleSpec defines the desired state of FrontdoorRule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpec
@@ -1530,7 +1669,9 @@ public partial class V1beta1FrontdoorRuleSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1FrontdoorRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderActionsRequestHeaderAction
@@ -1547,7 +1688,9 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderActionsRequestHeaderAct
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderActionsResponseHeaderAction
@@ -1564,7 +1707,9 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderActionsResponseHeaderAc
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A route_configuration_override_action block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderActionsRouteConfigurationOverrideAction
@@ -1597,7 +1742,9 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderActionsRouteConfigurati
     [JsonPropertyName("queryStringParameters")]
     public IList<string>? QueryStringParameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A url_redirect_action block as defined below. You may not have a url_redirect_action and a url_rewrite_action defined in the same actions block.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderActionsUrlRedirectAction
@@ -1626,7 +1773,9 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderActionsUrlRedirectActio
     [JsonPropertyName("redirectType")]
     public string? RedirectType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A url_rewrite_action block as defined below. You may not have a url_rewrite_action and a url_redirect_action defined in the same actions block.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderActionsUrlRewriteAction
@@ -1643,7 +1792,9 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderActionsUrlRewriteAction
     [JsonPropertyName("sourcePattern")]
     public string? SourcePattern { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An actions block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderActions
@@ -1668,7 +1819,9 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderActions
     [JsonPropertyName("urlRewriteAction")]
     public V1beta1FrontdoorRuleStatusAtProviderActionsUrlRewriteAction? UrlRewriteAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsClientPortCondition
@@ -1685,7 +1838,9 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsClientPortCon
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsCookiesCondition
@@ -1710,7 +1865,9 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsCookiesCondit
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsHostNameCondition
@@ -1731,7 +1888,9 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsHostNameCondi
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsHttpVersionCondition
@@ -1748,7 +1907,9 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsHttpVersionCo
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsIsDeviceCondition
@@ -1765,7 +1926,9 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsIsDeviceCondi
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsPostArgsCondition
@@ -1790,7 +1953,9 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsPostArgsCondi
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsQueryStringCondition
@@ -1811,7 +1976,9 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsQueryStringCo
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsRemoteAddressCondition
@@ -1828,7 +1995,9 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsRemoteAddress
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsRequestBodyCondition
@@ -1849,7 +2018,9 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsRequestBodyCo
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsRequestHeaderCondition
@@ -1874,7 +2045,9 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsRequestHeader
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsRequestMethodCondition
@@ -1891,7 +2064,9 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsRequestMethod
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsRequestSchemeCondition
@@ -1908,7 +2083,9 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsRequestScheme
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsRequestUriCondition
@@ -1929,7 +2106,9 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsRequestUriCon
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsServerPortCondition
@@ -1946,7 +2125,9 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsServerPortCon
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsSocketAddressCondition
@@ -1963,7 +2144,9 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsSocketAddress
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsSslProtocolCondition
@@ -1980,7 +2163,9 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsSslProtocolCo
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsUrlFileExtensionCondition
@@ -2001,7 +2186,9 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsUrlFileExtens
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsUrlFilenameCondition
@@ -2022,7 +2209,9 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsUrlFilenameCo
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsUrlPathCondition
@@ -2043,7 +2232,9 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditionsUrlPathCondit
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A conditions block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProviderConditions
@@ -2124,7 +2315,9 @@ public partial class V1beta1FrontdoorRuleStatusAtProviderConditions
     [JsonPropertyName("urlPathCondition")]
     public IList<V1beta1FrontdoorRuleStatusAtProviderConditionsUrlPathCondition>? UrlPathCondition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusAtProvider
@@ -2157,7 +2350,9 @@ public partial class V1beta1FrontdoorRuleStatusAtProvider
     [JsonPropertyName("order")]
     public double? Order { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatusConditions
@@ -2186,7 +2381,9 @@ public partial class V1beta1FrontdoorRuleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FrontdoorRuleStatus defines the observed state of FrontdoorRule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleStatus
@@ -2203,7 +2400,9 @@ public partial class V1beta1FrontdoorRuleStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FrontdoorRule is the Schema for the FrontdoorRules API. Manages a Front Door (standard/premium) Rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -2233,3 +2432,4 @@ public partial class V1beta1FrontdoorRule : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1FrontdoorRuleStatus? Status { get; set; }
 }
+#nullable disable

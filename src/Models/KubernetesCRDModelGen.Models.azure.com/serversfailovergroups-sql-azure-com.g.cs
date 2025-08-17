@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20211101.ServersFailoverGroup Generator information: - Generated from: /sql/resource-manager/Microsoft.Sql/stable/2021-11-01/FailoverGroups.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/failoverGroups/{failoverGroupName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20211101storageServersFailoverGroupList : IKubernetesO
     [JsonPropertyName("items")]
     public IList<V1api20211101storageServersFailoverGroup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersFailoverGroupSpecDatabasesReferences
@@ -54,7 +57,9 @@ public partial class V1api20211101storageServersFailoverGroupSpecDatabasesRefere
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersFailoverGroupSpecOperatorSpecConfigMapExpressions
@@ -71,7 +76,9 @@ public partial class V1api20211101storageServersFailoverGroupSpecOperatorSpecCon
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersFailoverGroupSpecOperatorSpecSecretExpressions
@@ -88,7 +95,9 @@ public partial class V1api20211101storageServersFailoverGroupSpecOperatorSpecSec
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211101.ServersFailoverGroupOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersFailoverGroupSpecOperatorSpec
@@ -105,7 +114,9 @@ public partial class V1api20211101storageServersFailoverGroupSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20211101storageServersFailoverGroupSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a sql.azure.com/Server resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersFailoverGroupSpecOwner
@@ -118,7 +129,9 @@ public partial class V1api20211101storageServersFailoverGroupSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource identifier of the partner server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersFailoverGroupSpecPartnerServersReference
@@ -139,7 +152,9 @@ public partial class V1api20211101storageServersFailoverGroupSpecPartnerServersR
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211101.PartnerInfo Partner server information for the failover group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersFailoverGroupSpecPartnerServers
@@ -152,7 +167,9 @@ public partial class V1api20211101storageServersFailoverGroupSpecPartnerServers
     [JsonPropertyName("reference")]
     public V1api20211101storageServersFailoverGroupSpecPartnerServersReference Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211101.FailoverGroupReadOnlyEndpoint Read-only endpoint of the failover group instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersFailoverGroupSpecReadOnlyEndpoint
@@ -165,7 +182,9 @@ public partial class V1api20211101storageServersFailoverGroupSpecReadOnlyEndpoin
     [JsonPropertyName("failoverPolicy")]
     public string? FailoverPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211101.FailoverGroupReadWriteEndpoint Read-write endpoint of the failover group instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersFailoverGroupSpecReadWriteEndpoint
@@ -182,7 +201,9 @@ public partial class V1api20211101storageServersFailoverGroupSpecReadWriteEndpoi
     [JsonPropertyName("failoverWithDataLossGracePeriodMinutes")]
     public int? FailoverWithDataLossGracePeriodMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211101.ServersFailoverGroup_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersFailoverGroupSpec
@@ -227,7 +248,9 @@ public partial class V1api20211101storageServersFailoverGroupSpec
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersFailoverGroupStatusConditions
@@ -260,7 +283,9 @@ public partial class V1api20211101storageServersFailoverGroupStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211101.PartnerInfo_STATUS Partner server information for the failover group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersFailoverGroupStatusPartnerServers
@@ -281,7 +306,9 @@ public partial class V1api20211101storageServersFailoverGroupStatusPartnerServer
     [JsonPropertyName("replicationRole")]
     public string? ReplicationRole { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211101.FailoverGroupReadOnlyEndpoint_STATUS Read-only endpoint of the failover group instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersFailoverGroupStatusReadOnlyEndpoint
@@ -294,7 +321,9 @@ public partial class V1api20211101storageServersFailoverGroupStatusReadOnlyEndpo
     [JsonPropertyName("failoverPolicy")]
     public string? FailoverPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211101.FailoverGroupReadWriteEndpoint_STATUS Read-write endpoint of the failover group instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersFailoverGroupStatusReadWriteEndpoint
@@ -311,7 +340,9 @@ public partial class V1api20211101storageServersFailoverGroupStatusReadWriteEndp
     [JsonPropertyName("failoverWithDataLossGracePeriodMinutes")]
     public int? FailoverWithDataLossGracePeriodMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211101.ServersFailoverGroup_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersFailoverGroupStatus
@@ -368,7 +399,9 @@ public partial class V1api20211101storageServersFailoverGroupStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211101.ServersFailoverGroup Generator information: - Generated from: /sql/resource-manager/Microsoft.Sql/stable/2021-11-01/FailoverGroups.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/failoverGroups/{failoverGroupName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -398,3 +431,4 @@ public partial class V1api20211101storageServersFailoverGroup : IKubernetesObjec
     [JsonPropertyName("status")]
     public V1api20211101storageServersFailoverGroupStatus? Status { get; set; }
 }
+#nullable disable

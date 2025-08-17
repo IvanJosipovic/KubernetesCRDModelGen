@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+#nullable enable
 /// <summary>NetworkInterfaceNatRuleAssociation is the Schema for the NetworkInterfaceNatRuleAssociations API. Manages the association between a Network Interface and a Load Balancer's NAT Rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1NetworkInterfaceNatRuleAssociationList : IKubernetes
     [JsonPropertyName("items")]
     public IList<V1beta1NetworkInterfaceNatRuleAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecForProviderNatRuleIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecForProviderNat
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LoadBalancerNatRule in network to populate natRuleId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecForProviderNatRuleIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecForProviderNat
     [JsonPropertyName("policy")]
     public V1beta1NetworkInterfaceNatRuleAssociationSpecForProviderNatRuleIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecForProviderNatRuleIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecForProviderNat
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LoadBalancerNatRule in network to populate natRuleId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecForProviderNatRuleIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecForProviderNat
     [JsonPropertyName("policy")]
     public V1beta1NetworkInterfaceNatRuleAssociationSpecForProviderNatRuleIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecForProviderNetworkInterfaceIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecForProviderNet
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a NetworkInterface in network to populate networkInterfaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecForProviderNetworkInterfaceIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecForProviderNet
     [JsonPropertyName("policy")]
     public V1beta1NetworkInterfaceNatRuleAssociationSpecForProviderNetworkInterfaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecForProviderNetworkInterfaceIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecForProviderNet
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a NetworkInterface in network to populate networkInterfaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecForProviderNetworkInterfaceIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecForProviderNet
     [JsonPropertyName("policy")]
     public V1beta1NetworkInterfaceNatRuleAssociationSpecForProviderNetworkInterfaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecForProvider
@@ -178,7 +197,9 @@ public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecForProvider
     [JsonPropertyName("networkInterfaceIdSelector")]
     public V1beta1NetworkInterfaceNatRuleAssociationSpecForProviderNetworkInterfaceIdSelector? NetworkInterfaceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecInitProviderNatRuleIdRefPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecInitProviderNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LoadBalancerNatRule in network to populate natRuleId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecInitProviderNatRuleIdRef
@@ -204,7 +227,9 @@ public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecInitProviderNa
     [JsonPropertyName("policy")]
     public V1beta1NetworkInterfaceNatRuleAssociationSpecInitProviderNatRuleIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecInitProviderNatRuleIdSelectorPolicy
@@ -217,7 +242,9 @@ public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecInitProviderNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LoadBalancerNatRule in network to populate natRuleId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecInitProviderNatRuleIdSelector
@@ -234,7 +261,9 @@ public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecInitProviderNa
     [JsonPropertyName("policy")]
     public V1beta1NetworkInterfaceNatRuleAssociationSpecInitProviderNatRuleIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecInitProviderNetworkInterfaceIdRefPolicy
@@ -247,7 +276,9 @@ public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecInitProviderNe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a NetworkInterface in network to populate networkInterfaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecInitProviderNetworkInterfaceIdRef
@@ -260,7 +291,9 @@ public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecInitProviderNe
     [JsonPropertyName("policy")]
     public V1beta1NetworkInterfaceNatRuleAssociationSpecInitProviderNetworkInterfaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecInitProviderNetworkInterfaceIdSelectorPolicy
@@ -273,7 +306,9 @@ public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecInitProviderNe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a NetworkInterface in network to populate networkInterfaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecInitProviderNetworkInterfaceIdSelector
@@ -290,7 +325,9 @@ public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecInitProviderNe
     [JsonPropertyName("policy")]
     public V1beta1NetworkInterfaceNatRuleAssociationSpecInitProviderNetworkInterfaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecInitProvider
@@ -323,7 +360,9 @@ public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecInitProvider
     [JsonPropertyName("networkInterfaceIdSelector")]
     public V1beta1NetworkInterfaceNatRuleAssociationSpecInitProviderNetworkInterfaceIdSelector? NetworkInterfaceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecProviderConfigRefPolicy
@@ -336,7 +375,9 @@ public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecProviderConfig
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecProviderConfigRef
@@ -349,7 +390,9 @@ public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecProviderConfig
     [JsonPropertyName("policy")]
     public V1beta1NetworkInterfaceNatRuleAssociationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecWriteConnectionSecretToRef
@@ -362,7 +405,9 @@ public partial class V1beta1NetworkInterfaceNatRuleAssociationSpecWriteConnectio
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkInterfaceNatRuleAssociationSpec defines the desired state of NetworkInterfaceNatRuleAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceNatRuleAssociationSpec
@@ -391,7 +436,9 @@ public partial class V1beta1NetworkInterfaceNatRuleAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1NetworkInterfaceNatRuleAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceNatRuleAssociationStatusAtProvider
@@ -412,7 +459,9 @@ public partial class V1beta1NetworkInterfaceNatRuleAssociationStatusAtProvider
     [JsonPropertyName("networkInterfaceId")]
     public string? NetworkInterfaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceNatRuleAssociationStatusConditions
@@ -441,7 +490,9 @@ public partial class V1beta1NetworkInterfaceNatRuleAssociationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkInterfaceNatRuleAssociationStatus defines the observed state of NetworkInterfaceNatRuleAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceNatRuleAssociationStatus
@@ -458,7 +509,9 @@ public partial class V1beta1NetworkInterfaceNatRuleAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkInterfaceNatRuleAssociation is the Schema for the NetworkInterfaceNatRuleAssociations API. Manages the association between a Network Interface and a Load Balancer's NAT Rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -488,3 +541,4 @@ public partial class V1beta1NetworkInterfaceNatRuleAssociation : IKubernetesObje
     [JsonPropertyName("status")]
     public V1beta1NetworkInterfaceNatRuleAssociationStatus? Status { get; set; }
 }
+#nullable disable

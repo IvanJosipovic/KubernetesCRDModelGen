@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+#nullable enable
 /// <summary>RegionSSLCertificate is the Schema for the RegionSSLCertificates API. A RegionSslCertificate resource, used for HTTPS load balancing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RegionSSLCertificateList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1RegionSSLCertificate> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The certificate in PEM format. The certificate chain must be no greater than 5 certs long. The chain must include at least one intermediate cert. Note: This property is sensitive and will not be displayed in the plan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionSSLCertificateSpecForProviderCertificateSecretRef
@@ -50,7 +53,9 @@ public partial class V1beta1RegionSSLCertificateSpecForProviderCertificateSecret
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The write-only private key in PEM format. Note: This property is sensitive and will not be displayed in the plan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionSSLCertificateSpecForProviderPrivateKeySecretRef
@@ -67,7 +72,9 @@ public partial class V1beta1RegionSSLCertificateSpecForProviderPrivateKeySecretR
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionSSLCertificateSpecForProvider
@@ -92,7 +99,9 @@ public partial class V1beta1RegionSSLCertificateSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The certificate in PEM format. The certificate chain must be no greater than 5 certs long. The chain must include at least one intermediate cert. Note: This property is sensitive and will not be displayed in the plan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionSSLCertificateSpecInitProviderCertificateSecretRef
@@ -109,7 +118,9 @@ public partial class V1beta1RegionSSLCertificateSpecInitProviderCertificateSecre
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The write-only private key in PEM format. Note: This property is sensitive and will not be displayed in the plan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionSSLCertificateSpecInitProviderPrivateKeySecretRef
@@ -126,7 +137,9 @@ public partial class V1beta1RegionSSLCertificateSpecInitProviderPrivateKeySecret
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionSSLCertificateSpecInitProvider
@@ -147,7 +160,9 @@ public partial class V1beta1RegionSSLCertificateSpecInitProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionSSLCertificateSpecProviderConfigRefPolicy
@@ -160,7 +175,9 @@ public partial class V1beta1RegionSSLCertificateSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionSSLCertificateSpecProviderConfigRef
@@ -173,7 +190,9 @@ public partial class V1beta1RegionSSLCertificateSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1RegionSSLCertificateSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionSSLCertificateSpecWriteConnectionSecretToRef
@@ -186,7 +205,9 @@ public partial class V1beta1RegionSSLCertificateSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegionSSLCertificateSpec defines the desired state of RegionSSLCertificate</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionSSLCertificateSpec
@@ -215,7 +236,9 @@ public partial class V1beta1RegionSSLCertificateSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RegionSSLCertificateSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionSSLCertificateStatusAtProvider
@@ -252,7 +275,9 @@ public partial class V1beta1RegionSSLCertificateStatusAtProvider
     [JsonPropertyName("selfLink")]
     public string? SelfLink { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionSSLCertificateStatusConditions
@@ -281,7 +306,9 @@ public partial class V1beta1RegionSSLCertificateStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegionSSLCertificateStatus defines the observed state of RegionSSLCertificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionSSLCertificateStatus
@@ -298,7 +325,9 @@ public partial class V1beta1RegionSSLCertificateStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegionSSLCertificate is the Schema for the RegionSSLCertificates API. A RegionSslCertificate resource, used for HTTPS load balancing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -328,3 +357,4 @@ public partial class V1beta1RegionSSLCertificate : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1RegionSSLCertificateStatus? Status { get; set; }
 }
+#nullable disable

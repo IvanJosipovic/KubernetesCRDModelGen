@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.mediastore.aws.m.upbound.io;
+#nullable enable
 /// <summary>ContainerPolicy is the Schema for the ContainerPolicys API. Provides a MediaStore Container Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ContainerPolicyList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1ContainerPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerPolicySpecForProviderContainerNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ContainerPolicySpecForProviderContainerNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Container in mediastore to populate containerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerPolicySpecForProviderContainerNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1ContainerPolicySpecForProviderContainerNameRef
     [JsonPropertyName("policy")]
     public V1beta1ContainerPolicySpecForProviderContainerNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerPolicySpecForProviderContainerNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1ContainerPolicySpecForProviderContainerNameSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Container in mediastore to populate containerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerPolicySpecForProviderContainerNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1ContainerPolicySpecForProviderContainerNameSelector
     [JsonPropertyName("policy")]
     public V1beta1ContainerPolicySpecForProviderContainerNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerPolicySpecForProvider
@@ -122,7 +133,9 @@ public partial class V1beta1ContainerPolicySpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerPolicySpecInitProviderContainerNameRefPolicy
@@ -135,7 +148,9 @@ public partial class V1beta1ContainerPolicySpecInitProviderContainerNameRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Container in mediastore to populate containerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerPolicySpecInitProviderContainerNameRef
@@ -152,7 +167,9 @@ public partial class V1beta1ContainerPolicySpecInitProviderContainerNameRef
     [JsonPropertyName("policy")]
     public V1beta1ContainerPolicySpecInitProviderContainerNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerPolicySpecInitProviderContainerNameSelectorPolicy
@@ -165,7 +182,9 @@ public partial class V1beta1ContainerPolicySpecInitProviderContainerNameSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Container in mediastore to populate containerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerPolicySpecInitProviderContainerNameSelector
@@ -186,7 +205,9 @@ public partial class V1beta1ContainerPolicySpecInitProviderContainerNameSelector
     [JsonPropertyName("policy")]
     public V1beta1ContainerPolicySpecInitProviderContainerNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerPolicySpecInitProvider
@@ -207,7 +228,9 @@ public partial class V1beta1ContainerPolicySpecInitProvider
     [JsonPropertyName("policy")]
     public string? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerPolicySpecProviderConfigRef
@@ -220,7 +243,9 @@ public partial class V1beta1ContainerPolicySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerPolicySpecWriteConnectionSecretToRef
@@ -229,7 +254,9 @@ public partial class V1beta1ContainerPolicySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerPolicySpec defines the desired state of ContainerPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerPolicySpec
@@ -254,7 +281,9 @@ public partial class V1beta1ContainerPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ContainerPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerPolicyStatusAtProvider
@@ -275,7 +304,9 @@ public partial class V1beta1ContainerPolicyStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerPolicyStatusConditions
@@ -304,7 +335,9 @@ public partial class V1beta1ContainerPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerPolicyStatus defines the observed state of ContainerPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerPolicyStatus
@@ -321,7 +354,9 @@ public partial class V1beta1ContainerPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerPolicy is the Schema for the ContainerPolicys API. Provides a MediaStore Container Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -351,3 +386,4 @@ public partial class V1beta1ContainerPolicy : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1ContainerPolicyStatus? Status { get; set; }
 }
+#nullable disable

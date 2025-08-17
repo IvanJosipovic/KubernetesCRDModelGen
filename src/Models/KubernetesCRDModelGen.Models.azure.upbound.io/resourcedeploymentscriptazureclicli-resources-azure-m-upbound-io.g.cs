@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.resources.azure.m.upbound.io;
+#nullable enable
 /// <summary>ResourceDeploymentScriptAzureCli is the Schema for the ResourceDeploymentScriptAzureClis API. Manages a Resource Deployment Script of Azure Cli.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliList : IKubernetesOb
     [JsonPropertyName("items")]
     public IList<V1beta1ResourceDeploymentScriptAzureCli> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A container block as defined below. Changing this forces a new Resource Deployment Script to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecForProviderContainer
@@ -42,7 +45,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecForProviderConta
     [JsonPropertyName("containerGroupName")]
     public string? ContainerGroupName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the value of the secure environment variable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecForProviderEnvironmentVariableSecureValueSecretRef
@@ -55,7 +60,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecForProviderEnvir
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecForProviderEnvironmentVariable
@@ -72,7 +79,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecForProviderEnvir
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecForProviderIdentityIdentityIdsRefsPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecForProviderIdent
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecForProviderIdentityIdentityIdsRefs
@@ -102,7 +113,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecForProviderIdent
     [JsonPropertyName("policy")]
     public V1beta1ResourceDeploymentScriptAzureCliSpecForProviderIdentityIdentityIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecForProviderIdentityIdentityIdsSelectorPolicy
@@ -115,7 +128,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecForProviderIdent
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of UserAssignedIdentity in managedidentity to populate identityIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecForProviderIdentityIdentityIdsSelector
@@ -136,7 +151,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecForProviderIdent
     [JsonPropertyName("policy")]
     public V1beta1ResourceDeploymentScriptAzureCliSpecForProviderIdentityIdentityIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below. Changing this forces a new Resource Deployment Script to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecForProviderIdentity
@@ -157,7 +174,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecForProviderIdent
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecForProviderResourceGroupNameRefPolicy
@@ -170,7 +189,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecForProviderResou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecForProviderResourceGroupNameRef
@@ -187,7 +208,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecForProviderResou
     [JsonPropertyName("policy")]
     public V1beta1ResourceDeploymentScriptAzureCliSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecForProviderResourceGroupNameSelectorPolicy
@@ -200,7 +223,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecForProviderResou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecForProviderResourceGroupNameSelector
@@ -221,7 +246,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecForProviderResou
     [JsonPropertyName("policy")]
     public V1beta1ResourceDeploymentScriptAzureCliSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the storage account access key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecForProviderStorageAccountKeySecretRef
@@ -234,7 +261,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecForProviderStora
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A storage_account block as defined below. Changing this forces a new Resource Deployment Script to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecForProviderStorageAccount
@@ -247,7 +276,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecForProviderStora
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecForProvider
@@ -328,7 +359,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecForProvider
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A container block as defined below. Changing this forces a new Resource Deployment Script to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderContainer
@@ -337,7 +370,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderCont
     [JsonPropertyName("containerGroupName")]
     public string? ContainerGroupName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the value of the secure environment variable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderEnvironmentVariableSecureValueSecretRef
@@ -350,7 +385,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderEnvi
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderEnvironmentVariable
@@ -367,7 +404,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderEnvi
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderIdentityIdentityIdsRefsPolicy
@@ -380,7 +419,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderIden
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderIdentityIdentityIdsRefs
@@ -397,7 +438,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderIden
     [JsonPropertyName("policy")]
     public V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderIdentityIdentityIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderIdentityIdentityIdsSelectorPolicy
@@ -410,7 +453,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderIden
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of UserAssignedIdentity in managedidentity to populate identityIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderIdentityIdentityIdsSelector
@@ -431,7 +476,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderIden
     [JsonPropertyName("policy")]
     public V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderIdentityIdentityIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below. Changing this forces a new Resource Deployment Script to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderIdentity
@@ -452,7 +499,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderIden
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderResourceGroupNameRefPolicy
@@ -465,7 +514,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderReso
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderResourceGroupNameRef
@@ -482,7 +533,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderReso
     [JsonPropertyName("policy")]
     public V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderResourceGroupNameSelectorPolicy
@@ -495,7 +548,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderReso
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderResourceGroupNameSelector
@@ -516,7 +571,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderReso
     [JsonPropertyName("policy")]
     public V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the storage account access key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderStorageAccountKeySecretRef
@@ -529,7 +586,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderStor
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A storage_account block as defined below. Changing this forces a new Resource Deployment Script to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderStorageAccount
@@ -542,7 +601,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecInitProviderStor
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecInitProvider
@@ -623,7 +684,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecInitProvider
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecProviderConfigRef
@@ -636,7 +699,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecProviderConfigRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpecWriteConnectionSecretToRef
@@ -645,7 +710,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpecWriteConnectionS
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceDeploymentScriptAzureCliSpec defines the desired state of ResourceDeploymentScriptAzureCli</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliSpec
@@ -670,7 +737,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ResourceDeploymentScriptAzureCliSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A container block as defined below. Changing this forces a new Resource Deployment Script to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliStatusAtProviderContainer
@@ -679,7 +748,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliStatusAtProviderCont
     [JsonPropertyName("containerGroupName")]
     public string? ContainerGroupName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliStatusAtProviderEnvironmentVariable
@@ -692,7 +763,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliStatusAtProviderEnvi
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below. Changing this forces a new Resource Deployment Script to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliStatusAtProviderIdentity
@@ -705,7 +778,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliStatusAtProviderIden
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A storage_account block as defined below. Changing this forces a new Resource Deployment Script to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliStatusAtProviderStorageAccount
@@ -714,7 +789,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliStatusAtProviderStor
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliStatusAtProvider
@@ -795,7 +872,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliStatusAtProvider
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliStatusConditions
@@ -824,7 +903,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceDeploymentScriptAzureCliStatus defines the observed state of ResourceDeploymentScriptAzureCli.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDeploymentScriptAzureCliStatus
@@ -841,7 +922,9 @@ public partial class V1beta1ResourceDeploymentScriptAzureCliStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceDeploymentScriptAzureCli is the Schema for the ResourceDeploymentScriptAzureClis API. Manages a Resource Deployment Script of Azure Cli.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -871,3 +954,4 @@ public partial class V1beta1ResourceDeploymentScriptAzureCli : IKubernetesObject
     [JsonPropertyName("status")]
     public V1beta1ResourceDeploymentScriptAzureCliStatus? Status { get; set; }
 }
+#nullable disable

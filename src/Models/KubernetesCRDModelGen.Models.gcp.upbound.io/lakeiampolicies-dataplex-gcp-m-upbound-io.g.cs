@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataplex.gcp.m.upbound.io;
+#nullable enable
 /// <summary>LakeIAMPolicy is the Schema for the LakeIAMPolicys API. Collection of resources to manage IAM policy for Dataplex Lake</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LakeIAMPolicyList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1beta1LakeIAMPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LakeIAMPolicySpecForProviderLakeRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1LakeIAMPolicySpecForProviderLakeRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Lake in dataplex to populate lake.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LakeIAMPolicySpecForProviderLakeRef
@@ -63,7 +68,9 @@ public partial class V1beta1LakeIAMPolicySpecForProviderLakeRef
     [JsonPropertyName("policy")]
     public V1beta1LakeIAMPolicySpecForProviderLakeRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LakeIAMPolicySpecForProviderLakeSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1LakeIAMPolicySpecForProviderLakeSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Lake in dataplex to populate lake.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LakeIAMPolicySpecForProviderLakeSelector
@@ -97,7 +106,9 @@ public partial class V1beta1LakeIAMPolicySpecForProviderLakeSelector
     [JsonPropertyName("policy")]
     public V1beta1LakeIAMPolicySpecForProviderLakeSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LakeIAMPolicySpecForProviderLocationRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1LakeIAMPolicySpecForProviderLocationRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Lake in dataplex to populate location.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LakeIAMPolicySpecForProviderLocationRef
@@ -127,7 +140,9 @@ public partial class V1beta1LakeIAMPolicySpecForProviderLocationRef
     [JsonPropertyName("policy")]
     public V1beta1LakeIAMPolicySpecForProviderLocationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LakeIAMPolicySpecForProviderLocationSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1LakeIAMPolicySpecForProviderLocationSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Lake in dataplex to populate location.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LakeIAMPolicySpecForProviderLocationSelector
@@ -161,7 +178,9 @@ public partial class V1beta1LakeIAMPolicySpecForProviderLocationSelector
     [JsonPropertyName("policy")]
     public V1beta1LakeIAMPolicySpecForProviderLocationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LakeIAMPolicySpecForProviderProjectRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1LakeIAMPolicySpecForProviderProjectRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Lake in dataplex to populate project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LakeIAMPolicySpecForProviderProjectRef
@@ -191,7 +212,9 @@ public partial class V1beta1LakeIAMPolicySpecForProviderProjectRef
     [JsonPropertyName("policy")]
     public V1beta1LakeIAMPolicySpecForProviderProjectRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LakeIAMPolicySpecForProviderProjectSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1LakeIAMPolicySpecForProviderProjectSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Lake in dataplex to populate project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LakeIAMPolicySpecForProviderProjectSelector
@@ -225,7 +250,9 @@ public partial class V1beta1LakeIAMPolicySpecForProviderProjectSelector
     [JsonPropertyName("policy")]
     public V1beta1LakeIAMPolicySpecForProviderProjectSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LakeIAMPolicySpecForProvider
@@ -270,7 +297,9 @@ public partial class V1beta1LakeIAMPolicySpecForProvider
     [JsonPropertyName("projectSelector")]
     public V1beta1LakeIAMPolicySpecForProviderProjectSelector? ProjectSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LakeIAMPolicySpecInitProviderProjectRefPolicy
@@ -283,7 +312,9 @@ public partial class V1beta1LakeIAMPolicySpecInitProviderProjectRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Lake in dataplex to populate project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LakeIAMPolicySpecInitProviderProjectRef
@@ -300,7 +331,9 @@ public partial class V1beta1LakeIAMPolicySpecInitProviderProjectRef
     [JsonPropertyName("policy")]
     public V1beta1LakeIAMPolicySpecInitProviderProjectRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LakeIAMPolicySpecInitProviderProjectSelectorPolicy
@@ -313,7 +346,9 @@ public partial class V1beta1LakeIAMPolicySpecInitProviderProjectSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Lake in dataplex to populate project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LakeIAMPolicySpecInitProviderProjectSelector
@@ -334,7 +369,9 @@ public partial class V1beta1LakeIAMPolicySpecInitProviderProjectSelector
     [JsonPropertyName("policy")]
     public V1beta1LakeIAMPolicySpecInitProviderProjectSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LakeIAMPolicySpecInitProvider
@@ -355,7 +392,9 @@ public partial class V1beta1LakeIAMPolicySpecInitProvider
     [JsonPropertyName("projectSelector")]
     public V1beta1LakeIAMPolicySpecInitProviderProjectSelector? ProjectSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LakeIAMPolicySpecProviderConfigRef
@@ -368,7 +407,9 @@ public partial class V1beta1LakeIAMPolicySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LakeIAMPolicySpecWriteConnectionSecretToRef
@@ -377,7 +418,9 @@ public partial class V1beta1LakeIAMPolicySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LakeIAMPolicySpec defines the desired state of LakeIAMPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LakeIAMPolicySpec
@@ -402,7 +445,9 @@ public partial class V1beta1LakeIAMPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LakeIAMPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LakeIAMPolicyStatusAtProvider
@@ -431,7 +476,9 @@ public partial class V1beta1LakeIAMPolicyStatusAtProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LakeIAMPolicyStatusConditions
@@ -460,7 +507,9 @@ public partial class V1beta1LakeIAMPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LakeIAMPolicyStatus defines the observed state of LakeIAMPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LakeIAMPolicyStatus
@@ -477,7 +526,9 @@ public partial class V1beta1LakeIAMPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LakeIAMPolicy is the Schema for the LakeIAMPolicys API. Collection of resources to manage IAM policy for Dataplex Lake</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -507,3 +558,4 @@ public partial class V1beta1LakeIAMPolicy : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1LakeIAMPolicyStatus? Status { get; set; }
 }
+#nullable disable

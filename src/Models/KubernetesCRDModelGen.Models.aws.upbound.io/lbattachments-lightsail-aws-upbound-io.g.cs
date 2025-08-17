@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.lightsail.aws.upbound.io;
+#nullable enable
 /// <summary>LBAttachment is the Schema for the LBAttachments API. Manages a Lightsail Load Balancer Attachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LBAttachmentList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1LBAttachment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBAttachmentSpecForProviderInstanceNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1LBAttachmentSpecForProviderInstanceNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in lightsail to populate instanceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBAttachmentSpecForProviderInstanceNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1LBAttachmentSpecForProviderInstanceNameRef
     [JsonPropertyName("policy")]
     public V1beta1LBAttachmentSpecForProviderInstanceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBAttachmentSpecForProviderInstanceNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1LBAttachmentSpecForProviderInstanceNameSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in lightsail to populate instanceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBAttachmentSpecForProviderInstanceNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1LBAttachmentSpecForProviderInstanceNameSelector
     [JsonPropertyName("policy")]
     public V1beta1LBAttachmentSpecForProviderInstanceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBAttachmentSpecForProviderLbNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1LBAttachmentSpecForProviderLbNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LB in lightsail to populate lbName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBAttachmentSpecForProviderLbNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1LBAttachmentSpecForProviderLbNameRef
     [JsonPropertyName("policy")]
     public V1beta1LBAttachmentSpecForProviderLbNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBAttachmentSpecForProviderLbNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1LBAttachmentSpecForProviderLbNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LB in lightsail to populate lbName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBAttachmentSpecForProviderLbNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1LBAttachmentSpecForProviderLbNameSelector
     [JsonPropertyName("policy")]
     public V1beta1LBAttachmentSpecForProviderLbNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBAttachmentSpecForProvider
@@ -178,7 +197,9 @@ public partial class V1beta1LBAttachmentSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBAttachmentSpecInitProviderInstanceNameRefPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1LBAttachmentSpecInitProviderInstanceNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in lightsail to populate instanceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBAttachmentSpecInitProviderInstanceNameRef
@@ -204,7 +227,9 @@ public partial class V1beta1LBAttachmentSpecInitProviderInstanceNameRef
     [JsonPropertyName("policy")]
     public V1beta1LBAttachmentSpecInitProviderInstanceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBAttachmentSpecInitProviderInstanceNameSelectorPolicy
@@ -217,7 +242,9 @@ public partial class V1beta1LBAttachmentSpecInitProviderInstanceNameSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in lightsail to populate instanceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBAttachmentSpecInitProviderInstanceNameSelector
@@ -234,7 +261,9 @@ public partial class V1beta1LBAttachmentSpecInitProviderInstanceNameSelector
     [JsonPropertyName("policy")]
     public V1beta1LBAttachmentSpecInitProviderInstanceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBAttachmentSpecInitProviderLbNameRefPolicy
@@ -247,7 +276,9 @@ public partial class V1beta1LBAttachmentSpecInitProviderLbNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LB in lightsail to populate lbName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBAttachmentSpecInitProviderLbNameRef
@@ -260,7 +291,9 @@ public partial class V1beta1LBAttachmentSpecInitProviderLbNameRef
     [JsonPropertyName("policy")]
     public V1beta1LBAttachmentSpecInitProviderLbNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBAttachmentSpecInitProviderLbNameSelectorPolicy
@@ -273,7 +306,9 @@ public partial class V1beta1LBAttachmentSpecInitProviderLbNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LB in lightsail to populate lbName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBAttachmentSpecInitProviderLbNameSelector
@@ -290,7 +325,9 @@ public partial class V1beta1LBAttachmentSpecInitProviderLbNameSelector
     [JsonPropertyName("policy")]
     public V1beta1LBAttachmentSpecInitProviderLbNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBAttachmentSpecInitProvider
@@ -319,7 +356,9 @@ public partial class V1beta1LBAttachmentSpecInitProvider
     [JsonPropertyName("lbNameSelector")]
     public V1beta1LBAttachmentSpecInitProviderLbNameSelector? LbNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBAttachmentSpecProviderConfigRefPolicy
@@ -332,7 +371,9 @@ public partial class V1beta1LBAttachmentSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBAttachmentSpecProviderConfigRef
@@ -345,7 +386,9 @@ public partial class V1beta1LBAttachmentSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1LBAttachmentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBAttachmentSpecWriteConnectionSecretToRef
@@ -358,7 +401,9 @@ public partial class V1beta1LBAttachmentSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LBAttachmentSpec defines the desired state of LBAttachment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBAttachmentSpec
@@ -387,7 +432,9 @@ public partial class V1beta1LBAttachmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LBAttachmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBAttachmentStatusAtProvider
@@ -408,7 +455,9 @@ public partial class V1beta1LBAttachmentStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBAttachmentStatusConditions
@@ -437,7 +486,9 @@ public partial class V1beta1LBAttachmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LBAttachmentStatus defines the observed state of LBAttachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBAttachmentStatus
@@ -454,7 +505,9 @@ public partial class V1beta1LBAttachmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LBAttachment is the Schema for the LBAttachments API. Manages a Lightsail Load Balancer Attachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -484,3 +537,4 @@ public partial class V1beta1LBAttachment : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1LBAttachmentStatus? Status { get; set; }
 }
+#nullable disable

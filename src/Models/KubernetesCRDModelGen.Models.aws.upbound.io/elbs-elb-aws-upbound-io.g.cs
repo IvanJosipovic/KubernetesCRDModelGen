@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.elb.aws.upbound.io;
+#nullable enable
 /// <summary>ELB is the Schema for the ELBs API. Provides an Elastic Load Balancer resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ELBList : IKubernetesObject<V1ListMeta>, IItems<V1be
     [JsonPropertyName("items")]
     public IList<V1beta1ELB> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBSpecForProviderAccessLogs
@@ -54,7 +57,9 @@ public partial class V1beta1ELBSpecForProviderAccessLogs
     [JsonPropertyName("interval")]
     public double? Interval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBSpecForProviderHealthCheck
@@ -79,7 +84,9 @@ public partial class V1beta1ELBSpecForProviderHealthCheck
     [JsonPropertyName("unhealthyThreshold")]
     public double? UnhealthyThreshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBSpecForProviderInstancesRefsPolicy
@@ -92,7 +99,9 @@ public partial class V1beta1ELBSpecForProviderInstancesRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBSpecForProviderInstancesRefs
@@ -105,7 +114,9 @@ public partial class V1beta1ELBSpecForProviderInstancesRefs
     [JsonPropertyName("policy")]
     public V1beta1ELBSpecForProviderInstancesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBSpecForProviderInstancesSelectorPolicy
@@ -118,7 +129,9 @@ public partial class V1beta1ELBSpecForProviderInstancesSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Instance in ec2 to populate instances.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBSpecForProviderInstancesSelector
@@ -135,7 +148,9 @@ public partial class V1beta1ELBSpecForProviderInstancesSelector
     [JsonPropertyName("policy")]
     public V1beta1ELBSpecForProviderInstancesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBSpecForProviderListener
@@ -160,7 +175,9 @@ public partial class V1beta1ELBSpecForProviderListener
     [JsonPropertyName("sslCertificateId")]
     public string? SslCertificateId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBSpecForProviderSubnetsRefsPolicy
@@ -173,7 +190,9 @@ public partial class V1beta1ELBSpecForProviderSubnetsRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBSpecForProviderSubnetsRefs
@@ -186,7 +205,9 @@ public partial class V1beta1ELBSpecForProviderSubnetsRefs
     [JsonPropertyName("policy")]
     public V1beta1ELBSpecForProviderSubnetsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBSpecForProviderSubnetsSelectorPolicy
@@ -199,7 +220,9 @@ public partial class V1beta1ELBSpecForProviderSubnetsSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnets.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBSpecForProviderSubnetsSelector
@@ -216,7 +239,9 @@ public partial class V1beta1ELBSpecForProviderSubnetsSelector
     [JsonPropertyName("policy")]
     public V1beta1ELBSpecForProviderSubnetsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBSpecForProvider
@@ -301,7 +326,9 @@ public partial class V1beta1ELBSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBSpecInitProviderAccessLogs
@@ -322,7 +349,9 @@ public partial class V1beta1ELBSpecInitProviderAccessLogs
     [JsonPropertyName("interval")]
     public double? Interval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBSpecInitProviderHealthCheck
@@ -347,7 +376,9 @@ public partial class V1beta1ELBSpecInitProviderHealthCheck
     [JsonPropertyName("unhealthyThreshold")]
     public double? UnhealthyThreshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBSpecInitProviderInstancesRefsPolicy
@@ -360,7 +391,9 @@ public partial class V1beta1ELBSpecInitProviderInstancesRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBSpecInitProviderInstancesRefs
@@ -373,7 +406,9 @@ public partial class V1beta1ELBSpecInitProviderInstancesRefs
     [JsonPropertyName("policy")]
     public V1beta1ELBSpecInitProviderInstancesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBSpecInitProviderInstancesSelectorPolicy
@@ -386,7 +421,9 @@ public partial class V1beta1ELBSpecInitProviderInstancesSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Instance in ec2 to populate instances.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBSpecInitProviderInstancesSelector
@@ -403,7 +440,9 @@ public partial class V1beta1ELBSpecInitProviderInstancesSelector
     [JsonPropertyName("policy")]
     public V1beta1ELBSpecInitProviderInstancesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBSpecInitProviderListener
@@ -428,7 +467,9 @@ public partial class V1beta1ELBSpecInitProviderListener
     [JsonPropertyName("sslCertificateId")]
     public string? SslCertificateId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBSpecInitProviderSubnetsRefsPolicy
@@ -441,7 +482,9 @@ public partial class V1beta1ELBSpecInitProviderSubnetsRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBSpecInitProviderSubnetsRefs
@@ -454,7 +497,9 @@ public partial class V1beta1ELBSpecInitProviderSubnetsRefs
     [JsonPropertyName("policy")]
     public V1beta1ELBSpecInitProviderSubnetsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBSpecInitProviderSubnetsSelectorPolicy
@@ -467,7 +512,9 @@ public partial class V1beta1ELBSpecInitProviderSubnetsSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnets.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBSpecInitProviderSubnetsSelector
@@ -484,7 +531,9 @@ public partial class V1beta1ELBSpecInitProviderSubnetsSelector
     [JsonPropertyName("policy")]
     public V1beta1ELBSpecInitProviderSubnetsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBSpecInitProvider
@@ -565,7 +614,9 @@ public partial class V1beta1ELBSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBSpecProviderConfigRefPolicy
@@ -578,7 +629,9 @@ public partial class V1beta1ELBSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBSpecProviderConfigRef
@@ -591,7 +644,9 @@ public partial class V1beta1ELBSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ELBSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBSpecWriteConnectionSecretToRef
@@ -604,7 +659,9 @@ public partial class V1beta1ELBSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ELBSpec defines the desired state of ELB</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBSpec
@@ -633,7 +690,9 @@ public partial class V1beta1ELBSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ELBSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBStatusAtProviderAccessLogs
@@ -654,7 +713,9 @@ public partial class V1beta1ELBStatusAtProviderAccessLogs
     [JsonPropertyName("interval")]
     public double? Interval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBStatusAtProviderHealthCheck
@@ -679,7 +740,9 @@ public partial class V1beta1ELBStatusAtProviderHealthCheck
     [JsonPropertyName("unhealthyThreshold")]
     public double? UnhealthyThreshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBStatusAtProviderListener
@@ -704,7 +767,9 @@ public partial class V1beta1ELBStatusAtProviderListener
     [JsonPropertyName("sslCertificateId")]
     public string? SslCertificateId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBStatusAtProvider
@@ -797,7 +862,9 @@ public partial class V1beta1ELBStatusAtProvider
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBStatusConditions
@@ -826,7 +893,9 @@ public partial class V1beta1ELBStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ELBStatus defines the observed state of ELB.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBStatus
@@ -843,7 +912,9 @@ public partial class V1beta1ELBStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ELB is the Schema for the ELBs API. Provides an Elastic Load Balancer resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -873,3 +944,4 @@ public partial class V1beta1ELB : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1
     [JsonPropertyName("status")]
     public V1beta1ELBStatus? Status { get; set; }
 }
+#nullable disable

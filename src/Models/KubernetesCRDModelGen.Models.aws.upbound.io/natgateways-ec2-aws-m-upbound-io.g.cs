@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.m.upbound.io;
+#nullable enable
 /// <summary>NATGateway is the Schema for the NATGateways API. Provides a resource to create a VPC NAT Gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1NATGatewayList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1beta1NATGateway> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewaySpecForProviderAllocationIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1NATGatewaySpecForProviderAllocationIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EIP in ec2 to populate allocationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewaySpecForProviderAllocationIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1NATGatewaySpecForProviderAllocationIdRef
     [JsonPropertyName("policy")]
     public V1beta1NATGatewaySpecForProviderAllocationIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewaySpecForProviderAllocationIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1NATGatewaySpecForProviderAllocationIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EIP in ec2 to populate allocationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewaySpecForProviderAllocationIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1NATGatewaySpecForProviderAllocationIdSelector
     [JsonPropertyName("policy")]
     public V1beta1NATGatewaySpecForProviderAllocationIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewaySpecForProviderSecondaryAllocationIdsRefsPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1NATGatewaySpecForProviderSecondaryAllocationIdsRefsP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewaySpecForProviderSecondaryAllocationIdsRefs
@@ -127,7 +140,9 @@ public partial class V1beta1NATGatewaySpecForProviderSecondaryAllocationIdsRefs
     [JsonPropertyName("policy")]
     public V1beta1NATGatewaySpecForProviderSecondaryAllocationIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewaySpecForProviderSecondaryAllocationIdsSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1NATGatewaySpecForProviderSecondaryAllocationIdsSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of EIP in ec2 to populate secondaryAllocationIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewaySpecForProviderSecondaryAllocationIdsSelector
@@ -161,7 +178,9 @@ public partial class V1beta1NATGatewaySpecForProviderSecondaryAllocationIdsSelec
     [JsonPropertyName("policy")]
     public V1beta1NATGatewaySpecForProviderSecondaryAllocationIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewaySpecForProviderSubnetIdRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1NATGatewaySpecForProviderSubnetIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewaySpecForProviderSubnetIdRef
@@ -191,7 +212,9 @@ public partial class V1beta1NATGatewaySpecForProviderSubnetIdRef
     [JsonPropertyName("policy")]
     public V1beta1NATGatewaySpecForProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewaySpecForProviderSubnetIdSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1NATGatewaySpecForProviderSubnetIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewaySpecForProviderSubnetIdSelector
@@ -225,7 +250,9 @@ public partial class V1beta1NATGatewaySpecForProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1NATGatewaySpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewaySpecForProvider
@@ -290,7 +317,9 @@ public partial class V1beta1NATGatewaySpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewaySpecInitProviderAllocationIdRefPolicy
@@ -303,7 +332,9 @@ public partial class V1beta1NATGatewaySpecInitProviderAllocationIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EIP in ec2 to populate allocationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewaySpecInitProviderAllocationIdRef
@@ -320,7 +351,9 @@ public partial class V1beta1NATGatewaySpecInitProviderAllocationIdRef
     [JsonPropertyName("policy")]
     public V1beta1NATGatewaySpecInitProviderAllocationIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewaySpecInitProviderAllocationIdSelectorPolicy
@@ -333,7 +366,9 @@ public partial class V1beta1NATGatewaySpecInitProviderAllocationIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EIP in ec2 to populate allocationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewaySpecInitProviderAllocationIdSelector
@@ -354,7 +389,9 @@ public partial class V1beta1NATGatewaySpecInitProviderAllocationIdSelector
     [JsonPropertyName("policy")]
     public V1beta1NATGatewaySpecInitProviderAllocationIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewaySpecInitProviderSecondaryAllocationIdsRefsPolicy
@@ -367,7 +404,9 @@ public partial class V1beta1NATGatewaySpecInitProviderSecondaryAllocationIdsRefs
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewaySpecInitProviderSecondaryAllocationIdsRefs
@@ -384,7 +423,9 @@ public partial class V1beta1NATGatewaySpecInitProviderSecondaryAllocationIdsRefs
     [JsonPropertyName("policy")]
     public V1beta1NATGatewaySpecInitProviderSecondaryAllocationIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewaySpecInitProviderSecondaryAllocationIdsSelectorPolicy
@@ -397,7 +438,9 @@ public partial class V1beta1NATGatewaySpecInitProviderSecondaryAllocationIdsSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of EIP in ec2 to populate secondaryAllocationIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewaySpecInitProviderSecondaryAllocationIdsSelector
@@ -418,7 +461,9 @@ public partial class V1beta1NATGatewaySpecInitProviderSecondaryAllocationIdsSele
     [JsonPropertyName("policy")]
     public V1beta1NATGatewaySpecInitProviderSecondaryAllocationIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewaySpecInitProviderSubnetIdRefPolicy
@@ -431,7 +476,9 @@ public partial class V1beta1NATGatewaySpecInitProviderSubnetIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewaySpecInitProviderSubnetIdRef
@@ -448,7 +495,9 @@ public partial class V1beta1NATGatewaySpecInitProviderSubnetIdRef
     [JsonPropertyName("policy")]
     public V1beta1NATGatewaySpecInitProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewaySpecInitProviderSubnetIdSelectorPolicy
@@ -461,7 +510,9 @@ public partial class V1beta1NATGatewaySpecInitProviderSubnetIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewaySpecInitProviderSubnetIdSelector
@@ -482,7 +533,9 @@ public partial class V1beta1NATGatewaySpecInitProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1NATGatewaySpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewaySpecInitProvider
@@ -543,7 +596,9 @@ public partial class V1beta1NATGatewaySpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewaySpecProviderConfigRef
@@ -556,7 +611,9 @@ public partial class V1beta1NATGatewaySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewaySpecWriteConnectionSecretToRef
@@ -565,7 +622,9 @@ public partial class V1beta1NATGatewaySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NATGatewaySpec defines the desired state of NATGateway</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewaySpec
@@ -590,7 +649,9 @@ public partial class V1beta1NATGatewaySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1NATGatewaySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewayStatusAtProvider
@@ -651,7 +712,9 @@ public partial class V1beta1NATGatewayStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewayStatusConditions
@@ -680,7 +743,9 @@ public partial class V1beta1NATGatewayStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NATGatewayStatus defines the observed state of NATGateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewayStatus
@@ -697,7 +762,9 @@ public partial class V1beta1NATGatewayStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NATGateway is the Schema for the NATGateways API. Provides a resource to create a VPC NAT Gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -727,3 +794,4 @@ public partial class V1beta1NATGateway : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1NATGatewayStatus? Status { get; set; }
 }
+#nullable disable

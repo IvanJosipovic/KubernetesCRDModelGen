@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.vmwareengine.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>VMwareEngineNetworkPolicy is the Schema for the VMwareEngineNetworkPolicy API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1VMwareEngineNetworkPolicyList : IKubernetesObject<V
     [JsonPropertyName("items")]
     public IList<V1alpha1VMwareEngineNetworkPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Network service that allows External IP addresses to be assigned to VMware workloads. This service can only be enabled when `internet_access` is also enabled.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEngineNetworkPolicySpecExternalIP
@@ -42,7 +45,9 @@ public partial class V1alpha1VMwareEngineNetworkPolicySpecExternalIP
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Network service that allows VMware workloads to access the internet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEngineNetworkPolicySpecInternetAccess
@@ -51,7 +56,9 @@ public partial class V1alpha1VMwareEngineNetworkPolicySpecInternetAccess
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEngineNetworkPolicySpecProjectRef
@@ -72,7 +79,9 @@ public partial class V1alpha1VMwareEngineNetworkPolicySpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The relative resource name of the VMware Engine network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEngineNetworkPolicySpecVmwareEngineNetworkRef
@@ -89,7 +98,9 @@ public partial class V1alpha1VMwareEngineNetworkPolicySpecVmwareEngineNetworkRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VMwareEngineNetworkPolicySpec defines the desired state of VMwareEngineNetworkPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEngineNetworkPolicySpec
@@ -126,7 +137,9 @@ public partial class V1alpha1VMwareEngineNetworkPolicySpec
     [JsonPropertyName("vmwareEngineNetworkRef")]
     public V1alpha1VMwareEngineNetworkPolicySpecVmwareEngineNetworkRef? VmwareEngineNetworkRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEngineNetworkPolicyStatusConditions
@@ -151,7 +164,9 @@ public partial class V1alpha1VMwareEngineNetworkPolicyStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Network service that allows External IP addresses to be assigned to VMware workloads. This service can only be enabled when `internet_access` is also enabled.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEngineNetworkPolicyStatusObservedStateExternalIP
@@ -160,7 +175,9 @@ public partial class V1alpha1VMwareEngineNetworkPolicyStatusObservedStateExterna
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Network service that allows VMware workloads to access the internet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEngineNetworkPolicyStatusObservedStateInternetAccess
@@ -169,7 +186,9 @@ public partial class V1alpha1VMwareEngineNetworkPolicyStatusObservedStateInterne
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEngineNetworkPolicyStatusObservedState
@@ -198,7 +217,9 @@ public partial class V1alpha1VMwareEngineNetworkPolicyStatusObservedState
     [JsonPropertyName("vmwareEngineNetworkCanonical")]
     public string? VmwareEngineNetworkCanonical { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VMwareEngineNetworkPolicyStatus defines the config connector machine state of VMwareEngineNetworkPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEngineNetworkPolicyStatus
@@ -219,7 +240,9 @@ public partial class V1alpha1VMwareEngineNetworkPolicyStatus
     [JsonPropertyName("observedState")]
     public V1alpha1VMwareEngineNetworkPolicyStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VMwareEngineNetworkPolicy is the Schema for the VMwareEngineNetworkPolicy API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -249,3 +272,4 @@ public partial class V1alpha1VMwareEngineNetworkPolicy : IKubernetesObject<V1Obj
     [JsonPropertyName("status")]
     public V1alpha1VMwareEngineNetworkPolicyStatus? Status { get; set; }
 }
+#nullable disable

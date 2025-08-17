@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.eventing.knative.dev;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1RequestReplyList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1alpha1RequestReply> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A KReference referring to the broker this RequestReply forwards events to. CrossNamespace references are not allowed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RequestReplySpecBrokerRef
@@ -50,7 +53,9 @@ public partial class V1alpha1RequestReplySpecBrokerRef
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Spec defines the desired state of the RequestReply.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RequestReplySpec
@@ -79,7 +84,9 @@ public partial class V1alpha1RequestReplySpec
     [JsonPropertyName("delivery")]
     public JsonNode? Delivery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RequestReplyStatusConditions
@@ -108,7 +115,9 @@ public partial class V1alpha1RequestReplyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RequestReply is Addressable. It exposes the endpoint as an URI to get events delivered.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RequestReplyStatusAddress
@@ -129,7 +138,9 @@ public partial class V1alpha1RequestReplyStatusAddress
     [JsonPropertyName("audience")]
     public string? Audience { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RequestReplyStatusAddresses
@@ -150,7 +161,9 @@ public partial class V1alpha1RequestReplyStatusAddresses
     [JsonPropertyName("audience")]
     public string? Audience { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RequestReplyStatusPolicies
@@ -163,7 +176,9 @@ public partial class V1alpha1RequestReplyStatusPolicies
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Status represents the current state of the RequestReply. This data may be out of date.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RequestReplyStatus
@@ -192,7 +207,9 @@ public partial class V1alpha1RequestReplyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -222,3 +239,4 @@ public partial class V1alpha1RequestReply : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1alpha1RequestReplyStatus? Status { get; set; }
 }
+#nullable disable

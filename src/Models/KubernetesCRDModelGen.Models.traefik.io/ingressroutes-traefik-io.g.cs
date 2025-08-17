@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.traefik.io;
+#nullable enable
 /// <summary>IngressRoute is the CRD implementation of a Traefik HTTP Router.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1IngressRouteList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1alpha1IngressRoute> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MiddlewareRef is a reference to a Middleware resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpecRoutesMiddlewares
@@ -46,7 +49,9 @@ public partial class V1alpha1IngressRouteSpecRoutesMiddlewares
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Observability defines the observability configuration for a router. More info: https://doc.traefik.io/traefik/v3.5/routing/routers/#observability</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpecRoutesObservability
@@ -67,7 +72,9 @@ public partial class V1alpha1IngressRouteSpecRoutesObservability
     [JsonPropertyName("tracing")]
     public bool? Tracing { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Healthcheck defines health checks for ExternalName services.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpecRoutesServicesHealthCheck
@@ -120,7 +127,9 @@ public partial class V1alpha1IngressRouteSpecRoutesServicesHealthCheck
     [JsonPropertyName("unhealthyInterval")]
     public IntstrIntOrString? UnhealthyInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResponseForwarding defines how Traefik forwards the response from the upstream Kubernetes Service to the client.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpecRoutesServicesResponseForwarding
@@ -129,7 +138,9 @@ public partial class V1alpha1IngressRouteSpecRoutesServicesResponseForwarding
     [JsonPropertyName("flushInterval")]
     public string? FlushInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cookie defines the sticky cookie configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpecRoutesServicesStickyCookie
@@ -162,7 +173,9 @@ public partial class V1alpha1IngressRouteSpecRoutesServicesStickyCookie
     [JsonPropertyName("secure")]
     public bool? Secure { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.5/routing/services/#sticky-sessions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpecRoutesServicesSticky
@@ -171,7 +184,9 @@ public partial class V1alpha1IngressRouteSpecRoutesServicesSticky
     [JsonPropertyName("cookie")]
     public V1alpha1IngressRouteSpecRoutesServicesStickyCookie? Cookie { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Service defines an upstream HTTP service to proxy traffic to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpecRoutesServices
@@ -232,7 +247,9 @@ public partial class V1alpha1IngressRouteSpecRoutesServices
     [JsonPropertyName("weight")]
     public int? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Route holds the HTTP route configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpecRoutes
@@ -265,7 +282,9 @@ public partial class V1alpha1IngressRouteSpecRoutes
     [JsonPropertyName("syntax")]
     public string? Syntax { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Domain holds a domain name with SANs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpecTlsDomains
@@ -278,7 +297,9 @@ public partial class V1alpha1IngressRouteSpecTlsDomains
     [JsonPropertyName("sans")]
     public IList<string>? Sans { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options defines the reference to a TLSOption, that specifies the parameters of the TLS connection. If not defined, the `default` TLSOption is used. More info: https://doc.traefik.io/traefik/v3.5/https/tls/#tls-options</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpecTlsOptions
@@ -291,7 +312,9 @@ public partial class V1alpha1IngressRouteSpecTlsOptions
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Store defines the reference to the TLSStore, that will be used to store certificates. Please note that only `default` TLSStore can be used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpecTlsStore
@@ -304,7 +327,9 @@ public partial class V1alpha1IngressRouteSpecTlsStore
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TLS defines the TLS configuration. More info: https://doc.traefik.io/traefik/v3.5/routing/routers/#tls</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpecTls
@@ -329,7 +354,9 @@ public partial class V1alpha1IngressRouteSpecTls
     [JsonPropertyName("store")]
     public V1alpha1IngressRouteSpecTlsStore? Store { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IngressRouteSpec defines the desired state of IngressRoute.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpec
@@ -346,7 +373,9 @@ public partial class V1alpha1IngressRouteSpec
     [JsonPropertyName("tls")]
     public V1alpha1IngressRouteSpecTls? Tls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IngressRoute is the CRD implementation of a Traefik HTTP Router.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -372,3 +401,4 @@ public partial class V1alpha1IngressRoute : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("spec")]
     public V1alpha1IngressRouteSpec Spec { get; set; }
 }
+#nullable disable

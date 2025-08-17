@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.managedidentity.azure.m.upbound.io;
+#nullable enable
 /// <summary>UserAssignedIdentity is the Schema for the UserAssignedIdentitys API. Manages a User Assigned Identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1UserAssignedIdentityList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1UserAssignedIdentity> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserAssignedIdentitySpecForProviderResourceGroupNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1UserAssignedIdentitySpecForProviderResourceGroupName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserAssignedIdentitySpecForProviderResourceGroupNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1UserAssignedIdentitySpecForProviderResourceGroupName
     [JsonPropertyName("policy")]
     public V1beta1UserAssignedIdentitySpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserAssignedIdentitySpecForProviderResourceGroupNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1UserAssignedIdentitySpecForProviderResourceGroupName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserAssignedIdentitySpecForProviderResourceGroupNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1UserAssignedIdentitySpecForProviderResourceGroupName
     [JsonPropertyName("policy")]
     public V1beta1UserAssignedIdentitySpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserAssignedIdentitySpecForProvider
@@ -126,7 +137,9 @@ public partial class V1beta1UserAssignedIdentitySpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserAssignedIdentitySpecInitProviderResourceGroupNameRefPolicy
@@ -139,7 +152,9 @@ public partial class V1beta1UserAssignedIdentitySpecInitProviderResourceGroupNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserAssignedIdentitySpecInitProviderResourceGroupNameRef
@@ -156,7 +171,9 @@ public partial class V1beta1UserAssignedIdentitySpecInitProviderResourceGroupNam
     [JsonPropertyName("policy")]
     public V1beta1UserAssignedIdentitySpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserAssignedIdentitySpecInitProviderResourceGroupNameSelectorPolicy
@@ -169,7 +186,9 @@ public partial class V1beta1UserAssignedIdentitySpecInitProviderResourceGroupNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserAssignedIdentitySpecInitProviderResourceGroupNameSelector
@@ -190,7 +209,9 @@ public partial class V1beta1UserAssignedIdentitySpecInitProviderResourceGroupNam
     [JsonPropertyName("policy")]
     public V1beta1UserAssignedIdentitySpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserAssignedIdentitySpecInitProvider
@@ -219,7 +240,9 @@ public partial class V1beta1UserAssignedIdentitySpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserAssignedIdentitySpecProviderConfigRef
@@ -232,7 +255,9 @@ public partial class V1beta1UserAssignedIdentitySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserAssignedIdentitySpecWriteConnectionSecretToRef
@@ -241,7 +266,9 @@ public partial class V1beta1UserAssignedIdentitySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UserAssignedIdentitySpec defines the desired state of UserAssignedIdentity</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserAssignedIdentitySpec
@@ -266,7 +293,9 @@ public partial class V1beta1UserAssignedIdentitySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1UserAssignedIdentitySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserAssignedIdentityStatusAtProvider
@@ -303,7 +332,9 @@ public partial class V1beta1UserAssignedIdentityStatusAtProvider
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserAssignedIdentityStatusConditions
@@ -332,7 +363,9 @@ public partial class V1beta1UserAssignedIdentityStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UserAssignedIdentityStatus defines the observed state of UserAssignedIdentity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserAssignedIdentityStatus
@@ -349,7 +382,9 @@ public partial class V1beta1UserAssignedIdentityStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UserAssignedIdentity is the Schema for the UserAssignedIdentitys API. Manages a User Assigned Identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -379,3 +414,4 @@ public partial class V1beta1UserAssignedIdentity : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1UserAssignedIdentityStatus? Status { get; set; }
 }
+#nullable disable

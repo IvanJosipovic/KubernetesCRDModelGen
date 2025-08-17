@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>ComputeForwardingRule is the Schema for the compute API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ComputeForwardingRuleList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1ComputeForwardingRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ComputeBackendService to receive the matched traffic. This is used only for internal load balancing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeForwardingRuleSpecBackendServiceRef
@@ -50,7 +53,9 @@ public partial class V1beta1ComputeForwardingRuleSpecBackendServiceRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeForwardingRuleSpecIpAddressAddressRef
@@ -67,7 +72,9 @@ public partial class V1beta1ComputeForwardingRuleSpecIpAddressAddressRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The IP address that this forwarding rule is serving on behalf of.  Addresses are restricted based on the forwarding rule's load balancing scheme (EXTERNAL or INTERNAL) and scope (global or regional).  When the load balancing scheme is EXTERNAL, for global forwarding rules, the address must be a global IP, and for regional forwarding rules, the address must live in the same region as the forwarding rule. If this field is empty, an ephemeral IPv4 address from the same scope (global or regional) will be assigned. A regional forwarding rule supports IPv4 only. A global forwarding rule supports either IPv4 or IPv6.  When the load balancing scheme is INTERNAL, this can only be an RFC 1918 IP address belonging to the network/subnet configured for the forwarding rule. By default, if this field is empty, an ephemeral internal IP address will be automatically allocated from the IP range of the subnet or network configured for this forwarding rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeForwardingRuleSpecIpAddress
@@ -80,7 +87,9 @@ public partial class V1beta1ComputeForwardingRuleSpecIpAddress
     [JsonPropertyName("ip")]
     public string? Ip { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeForwardingRuleSpecMetadataFiltersFilterLabels
@@ -93,7 +102,9 @@ public partial class V1beta1ComputeForwardingRuleSpecMetadataFiltersFilterLabels
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeForwardingRuleSpecMetadataFilters
@@ -106,7 +117,9 @@ public partial class V1beta1ComputeForwardingRuleSpecMetadataFilters
     [JsonPropertyName("filterMatchCriteria")]
     public string FilterMatchCriteria { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>This field is not used for external load balancing. For internal load balancing, this field identifies the network that the load balanced IP should belong to for this forwarding rule. If this field is not specified, the default network will be used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeForwardingRuleSpecNetworkRef
@@ -123,7 +136,9 @@ public partial class V1beta1ComputeForwardingRuleSpecNetworkRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeForwardingRuleSpecServiceDirectoryRegistrations
@@ -136,7 +151,9 @@ public partial class V1beta1ComputeForwardingRuleSpecServiceDirectoryRegistratio
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The subnetwork that the load balanced IP should belong to for this forwarding rule. This field is only used for internal load balancing.  If the network specified is in auto subnet mode, this field is optional. However, if the network is in custom subnet mode, a subnetwork must be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeForwardingRuleSpecSubnetworkRef
@@ -153,7 +170,9 @@ public partial class V1beta1ComputeForwardingRuleSpecSubnetworkRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeForwardingRuleSpecTargetServiceAttachmentRef
@@ -170,7 +189,9 @@ public partial class V1beta1ComputeForwardingRuleSpecTargetServiceAttachmentRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeForwardingRuleSpecTargetTargetGRPCProxyRef
@@ -187,7 +208,9 @@ public partial class V1beta1ComputeForwardingRuleSpecTargetTargetGRPCProxyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeForwardingRuleSpecTargetTargetHTTPProxyRef
@@ -204,7 +227,9 @@ public partial class V1beta1ComputeForwardingRuleSpecTargetTargetHTTPProxyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeForwardingRuleSpecTargetTargetHTTPSProxyRef
@@ -221,7 +246,9 @@ public partial class V1beta1ComputeForwardingRuleSpecTargetTargetHTTPSProxyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeForwardingRuleSpecTargetTargetSSLProxyRef
@@ -238,7 +265,9 @@ public partial class V1beta1ComputeForwardingRuleSpecTargetTargetSSLProxyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeForwardingRuleSpecTargetTargetTCPProxyRef
@@ -255,7 +284,9 @@ public partial class V1beta1ComputeForwardingRuleSpecTargetTargetTCPProxyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeForwardingRuleSpecTargetTargetVPNGatewayRef
@@ -272,7 +303,9 @@ public partial class V1beta1ComputeForwardingRuleSpecTargetTargetVPNGatewayRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The target resource to receive the matched traffic. The forwarded traffic must be of a type appropriate to the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets are valid.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeForwardingRuleSpecTarget
@@ -309,7 +342,9 @@ public partial class V1beta1ComputeForwardingRuleSpecTarget
     [JsonPropertyName("targetVPNGatewayRef")]
     public V1beta1ComputeForwardingRuleSpecTargetTargetVPNGatewayRef? TargetVPNGatewayRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeForwardingRuleSpec
@@ -406,7 +441,9 @@ public partial class V1beta1ComputeForwardingRuleSpec
     [JsonPropertyName("target")]
     public V1beta1ComputeForwardingRuleSpecTarget? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeForwardingRuleStatusConditions
@@ -431,7 +468,9 @@ public partial class V1beta1ComputeForwardingRuleStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeForwardingRuleStatus
@@ -476,7 +515,9 @@ public partial class V1beta1ComputeForwardingRuleStatus
     [JsonPropertyName("serviceName")]
     public string? ServiceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ComputeForwardingRule is the Schema for the compute API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -506,3 +547,4 @@ public partial class V1beta1ComputeForwardingRule : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1ComputeForwardingRuleStatus? Status { get; set; }
 }
+#nullable disable

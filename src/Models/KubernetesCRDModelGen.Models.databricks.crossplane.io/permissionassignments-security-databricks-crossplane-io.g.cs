@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.security.databricks.crossplane.io;
+#nullable enable
 /// <summary>PermissionAssignment is the Schema for the PermissionAssignments API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1PermissionAssignmentList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1alpha1PermissionAssignment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionAssignmentSpecForProvider
@@ -46,7 +49,9 @@ public partial class V1alpha1PermissionAssignmentSpecForProvider
     [JsonPropertyName("principalId")]
     public double? PrincipalId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionAssignmentSpecInitProvider
@@ -59,7 +64,9 @@ public partial class V1alpha1PermissionAssignmentSpecInitProvider
     [JsonPropertyName("principalId")]
     public double? PrincipalId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionAssignmentSpecProviderConfigRefPolicy
@@ -72,7 +79,9 @@ public partial class V1alpha1PermissionAssignmentSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionAssignmentSpecProviderConfigRef
@@ -85,7 +94,9 @@ public partial class V1alpha1PermissionAssignmentSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1PermissionAssignmentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionAssignmentSpecPublishConnectionDetailsToConfigRefPolicy
@@ -98,7 +109,9 @@ public partial class V1alpha1PermissionAssignmentSpecPublishConnectionDetailsToC
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionAssignmentSpecPublishConnectionDetailsToConfigRef
@@ -111,7 +124,9 @@ public partial class V1alpha1PermissionAssignmentSpecPublishConnectionDetailsToC
     [JsonPropertyName("policy")]
     public V1alpha1PermissionAssignmentSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Metadata is the metadata for connection secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionAssignmentSpecPublishConnectionDetailsToMetadata
@@ -128,7 +143,9 @@ public partial class V1alpha1PermissionAssignmentSpecPublishConnectionDetailsToM
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionAssignmentSpecPublishConnectionDetailsTo
@@ -145,7 +162,9 @@ public partial class V1alpha1PermissionAssignmentSpecPublishConnectionDetailsTo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionAssignmentSpecWriteConnectionSecretToRef
@@ -158,7 +177,9 @@ public partial class V1alpha1PermissionAssignmentSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PermissionAssignmentSpec defines the desired state of PermissionAssignment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionAssignmentSpec
@@ -191,7 +212,9 @@ public partial class V1alpha1PermissionAssignmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1alpha1PermissionAssignmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionAssignmentStatusAtProvider
@@ -208,7 +231,9 @@ public partial class V1alpha1PermissionAssignmentStatusAtProvider
     [JsonPropertyName("principalId")]
     public double? PrincipalId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionAssignmentStatusConditions
@@ -237,7 +262,9 @@ public partial class V1alpha1PermissionAssignmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PermissionAssignmentStatus defines the observed state of PermissionAssignment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PermissionAssignmentStatus
@@ -254,7 +281,9 @@ public partial class V1alpha1PermissionAssignmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PermissionAssignment is the Schema for the PermissionAssignments API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -284,3 +313,4 @@ public partial class V1alpha1PermissionAssignment : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1alpha1PermissionAssignmentStatus? Status { get; set; }
 }
+#nullable disable

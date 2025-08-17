@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cognitoidentity.aws.m.upbound.io;
+#nullable enable
 /// <summary>CognitoIdentityPoolProviderPrincipalTag is the Schema for the CognitoIdentityPoolProviderPrincipalTags API. Provides an AWS Cognito Identity Principal Mapping.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagList : IKuber
     [JsonPropertyName("items")]
     public IList<V1beta1CognitoIdentityPoolProviderPrincipalTag> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProviderIdentityPoolIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProvid
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Pool in cognitoidentity to populate identityPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProviderIdentityPoolIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProvid
     [JsonPropertyName("policy")]
     public V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProviderIdentityPoolIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProviderIdentityPoolIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProvid
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Pool in cognitoidentity to populate identityPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProviderIdentityPoolIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProvid
     [JsonPropertyName("policy")]
     public V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProviderIdentityPoolIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProviderIdentityProviderNameRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProvid
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UserPool in cognitoidp to populate identityProviderName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProviderIdentityProviderNameRef
@@ -127,7 +140,9 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProvid
     [JsonPropertyName("policy")]
     public V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProviderIdentityProviderNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProviderIdentityProviderNameSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProvid
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UserPool in cognitoidp to populate identityProviderName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProviderIdentityProviderNameSelector
@@ -161,7 +178,9 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProvid
     [JsonPropertyName("policy")]
     public V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProviderIdentityProviderNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProvider
@@ -202,7 +221,9 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProvid
     [JsonPropertyName("useDefaults")]
     public bool? UseDefaults { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProviderIdentityPoolIdRefPolicy
@@ -215,7 +236,9 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProvi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Pool in cognitoidentity to populate identityPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProviderIdentityPoolIdRef
@@ -232,7 +255,9 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProvi
     [JsonPropertyName("policy")]
     public V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProviderIdentityPoolIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProviderIdentityPoolIdSelectorPolicy
@@ -245,7 +270,9 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProvi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Pool in cognitoidentity to populate identityPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProviderIdentityPoolIdSelector
@@ -266,7 +293,9 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProvi
     [JsonPropertyName("policy")]
     public V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProviderIdentityPoolIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProviderIdentityProviderNameRefPolicy
@@ -279,7 +308,9 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProvi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UserPool in cognitoidp to populate identityProviderName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProviderIdentityProviderNameRef
@@ -296,7 +327,9 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProvi
     [JsonPropertyName("policy")]
     public V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProviderIdentityProviderNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProviderIdentityProviderNameSelectorPolicy
@@ -309,7 +342,9 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProvi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UserPool in cognitoidp to populate identityProviderName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProviderIdentityProviderNameSelector
@@ -330,7 +365,9 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProvi
     [JsonPropertyName("policy")]
     public V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProviderIdentityProviderNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProvider
@@ -367,7 +404,9 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProvi
     [JsonPropertyName("useDefaults")]
     public bool? UseDefaults { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecProviderConfigRef
@@ -380,7 +419,9 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecProviderC
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecWriteConnectionSecretToRef
@@ -389,7 +430,9 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecWriteConn
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CognitoIdentityPoolProviderPrincipalTagSpec defines the desired state of CognitoIdentityPoolProviderPrincipalTag</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpec
@@ -414,7 +457,9 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1CognitoIdentityPoolProviderPrincipalTagSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagStatusAtProvider
@@ -443,7 +488,9 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagStatusAtProvi
     [JsonPropertyName("useDefaults")]
     public bool? UseDefaults { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagStatusConditions
@@ -472,7 +519,9 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagStatusConditi
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CognitoIdentityPoolProviderPrincipalTagStatus defines the observed state of CognitoIdentityPoolProviderPrincipalTag.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagStatus
@@ -489,7 +538,9 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CognitoIdentityPoolProviderPrincipalTag is the Schema for the CognitoIdentityPoolProviderPrincipalTags API. Provides an AWS Cognito Identity Principal Mapping.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -519,3 +570,4 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTag : IKubernete
     [JsonPropertyName("status")]
     public V1beta1CognitoIdentityPoolProviderPrincipalTagStatus? Status { get; set; }
 }
+#nullable disable

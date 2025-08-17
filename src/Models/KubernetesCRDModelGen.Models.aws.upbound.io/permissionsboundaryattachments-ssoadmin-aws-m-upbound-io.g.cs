@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ssoadmin.aws.m.upbound.io;
+#nullable enable
 /// <summary>PermissionsBoundaryAttachment is the Schema for the PermissionsBoundaryAttachments API. Attaches a permissions boundary policy to a Single Sign-On (SSO) Permission Set resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PermissionsBoundaryAttachmentList : IKubernetesObjec
     [JsonPropertyName("items")]
     public IList<V1beta1PermissionsBoundaryAttachment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsBoundaryAttachmentSpecForProviderPermissionSetArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1PermissionsBoundaryAttachmentSpecForProviderPermissi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PermissionSet in ssoadmin to populate permissionSetArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsBoundaryAttachmentSpecForProviderPermissionSetArnRef
@@ -63,7 +68,9 @@ public partial class V1beta1PermissionsBoundaryAttachmentSpecForProviderPermissi
     [JsonPropertyName("policy")]
     public V1beta1PermissionsBoundaryAttachmentSpecForProviderPermissionSetArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsBoundaryAttachmentSpecForProviderPermissionSetArnSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1PermissionsBoundaryAttachmentSpecForProviderPermissi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PermissionSet in ssoadmin to populate permissionSetArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsBoundaryAttachmentSpecForProviderPermissionSetArnSelector
@@ -97,7 +106,9 @@ public partial class V1beta1PermissionsBoundaryAttachmentSpecForProviderPermissi
     [JsonPropertyName("policy")]
     public V1beta1PermissionsBoundaryAttachmentSpecForProviderPermissionSetArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsBoundaryAttachmentSpecForProviderPermissionsBoundaryCustomerManagedPolicyReferenceNameRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1PermissionsBoundaryAttachmentSpecForProviderPermissi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Policy in iam to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsBoundaryAttachmentSpecForProviderPermissionsBoundaryCustomerManagedPolicyReferenceNameRef
@@ -127,7 +140,9 @@ public partial class V1beta1PermissionsBoundaryAttachmentSpecForProviderPermissi
     [JsonPropertyName("policy")]
     public V1beta1PermissionsBoundaryAttachmentSpecForProviderPermissionsBoundaryCustomerManagedPolicyReferenceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsBoundaryAttachmentSpecForProviderPermissionsBoundaryCustomerManagedPolicyReferenceNameSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1PermissionsBoundaryAttachmentSpecForProviderPermissi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Policy in iam to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsBoundaryAttachmentSpecForProviderPermissionsBoundaryCustomerManagedPolicyReferenceNameSelector
@@ -161,7 +178,9 @@ public partial class V1beta1PermissionsBoundaryAttachmentSpecForProviderPermissi
     [JsonPropertyName("policy")]
     public V1beta1PermissionsBoundaryAttachmentSpecForProviderPermissionsBoundaryCustomerManagedPolicyReferenceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the name and path of a customer managed policy. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsBoundaryAttachmentSpecForProviderPermissionsBoundaryCustomerManagedPolicyReference
@@ -182,7 +201,9 @@ public partial class V1beta1PermissionsBoundaryAttachmentSpecForProviderPermissi
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The permissions boundary policy. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsBoundaryAttachmentSpecForProviderPermissionsBoundary
@@ -195,7 +216,9 @@ public partial class V1beta1PermissionsBoundaryAttachmentSpecForProviderPermissi
     [JsonPropertyName("managedPolicyArn")]
     public string? ManagedPolicyArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsBoundaryAttachmentSpecForProvider
@@ -224,7 +247,9 @@ public partial class V1beta1PermissionsBoundaryAttachmentSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsBoundaryAttachmentSpecInitProviderPermissionsBoundaryCustomerManagedPolicyReferenceNameRefPolicy
@@ -237,7 +262,9 @@ public partial class V1beta1PermissionsBoundaryAttachmentSpecInitProviderPermiss
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Policy in iam to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsBoundaryAttachmentSpecInitProviderPermissionsBoundaryCustomerManagedPolicyReferenceNameRef
@@ -254,7 +281,9 @@ public partial class V1beta1PermissionsBoundaryAttachmentSpecInitProviderPermiss
     [JsonPropertyName("policy")]
     public V1beta1PermissionsBoundaryAttachmentSpecInitProviderPermissionsBoundaryCustomerManagedPolicyReferenceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsBoundaryAttachmentSpecInitProviderPermissionsBoundaryCustomerManagedPolicyReferenceNameSelectorPolicy
@@ -267,7 +296,9 @@ public partial class V1beta1PermissionsBoundaryAttachmentSpecInitProviderPermiss
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Policy in iam to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsBoundaryAttachmentSpecInitProviderPermissionsBoundaryCustomerManagedPolicyReferenceNameSelector
@@ -288,7 +319,9 @@ public partial class V1beta1PermissionsBoundaryAttachmentSpecInitProviderPermiss
     [JsonPropertyName("policy")]
     public V1beta1PermissionsBoundaryAttachmentSpecInitProviderPermissionsBoundaryCustomerManagedPolicyReferenceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the name and path of a customer managed policy. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsBoundaryAttachmentSpecInitProviderPermissionsBoundaryCustomerManagedPolicyReference
@@ -309,7 +342,9 @@ public partial class V1beta1PermissionsBoundaryAttachmentSpecInitProviderPermiss
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The permissions boundary policy. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsBoundaryAttachmentSpecInitProviderPermissionsBoundary
@@ -322,7 +357,9 @@ public partial class V1beta1PermissionsBoundaryAttachmentSpecInitProviderPermiss
     [JsonPropertyName("managedPolicyArn")]
     public string? ManagedPolicyArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsBoundaryAttachmentSpecInitProvider
@@ -331,7 +368,9 @@ public partial class V1beta1PermissionsBoundaryAttachmentSpecInitProvider
     [JsonPropertyName("permissionsBoundary")]
     public V1beta1PermissionsBoundaryAttachmentSpecInitProviderPermissionsBoundary? PermissionsBoundary { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsBoundaryAttachmentSpecProviderConfigRef
@@ -344,7 +383,9 @@ public partial class V1beta1PermissionsBoundaryAttachmentSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsBoundaryAttachmentSpecWriteConnectionSecretToRef
@@ -353,7 +394,9 @@ public partial class V1beta1PermissionsBoundaryAttachmentSpecWriteConnectionSecr
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PermissionsBoundaryAttachmentSpec defines the desired state of PermissionsBoundaryAttachment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsBoundaryAttachmentSpec
@@ -378,7 +421,9 @@ public partial class V1beta1PermissionsBoundaryAttachmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1PermissionsBoundaryAttachmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the name and path of a customer managed policy. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsBoundaryAttachmentStatusAtProviderPermissionsBoundaryCustomerManagedPolicyReference
@@ -391,7 +436,9 @@ public partial class V1beta1PermissionsBoundaryAttachmentStatusAtProviderPermiss
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The permissions boundary policy. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsBoundaryAttachmentStatusAtProviderPermissionsBoundary
@@ -404,7 +451,9 @@ public partial class V1beta1PermissionsBoundaryAttachmentStatusAtProviderPermiss
     [JsonPropertyName("managedPolicyArn")]
     public string? ManagedPolicyArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsBoundaryAttachmentStatusAtProvider
@@ -429,7 +478,9 @@ public partial class V1beta1PermissionsBoundaryAttachmentStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsBoundaryAttachmentStatusConditions
@@ -458,7 +509,9 @@ public partial class V1beta1PermissionsBoundaryAttachmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PermissionsBoundaryAttachmentStatus defines the observed state of PermissionsBoundaryAttachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsBoundaryAttachmentStatus
@@ -475,7 +528,9 @@ public partial class V1beta1PermissionsBoundaryAttachmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PermissionsBoundaryAttachment is the Schema for the PermissionsBoundaryAttachments API. Attaches a permissions boundary policy to a Single Sign-On (SSO) Permission Set resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -505,3 +560,4 @@ public partial class V1beta1PermissionsBoundaryAttachment : IKubernetesObject<V1
     [JsonPropertyName("status")]
     public V1beta1PermissionsBoundaryAttachmentStatus? Status { get; set; }
 }
+#nullable disable

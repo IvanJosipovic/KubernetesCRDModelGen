@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.azure.upbound.io;
+#nullable enable
 /// <summary>MSSQLServerMicrosoftSupportAuditingPolicy is the Schema for the MSSQLServerMicrosoftSupportAuditingPolicys API. Manages a MS SQL Server Microsoft Support Auditing Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicyList : IKub
     [JsonPropertyName("items")]
     public IList<V1beta1MSSQLServerMicrosoftSupportAuditingPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderBlobStorageEndpointRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProv
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate blobStorageEndpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderBlobStorageEndpointRef
@@ -59,7 +64,9 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProv
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderBlobStorageEndpointRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderBlobStorageEndpointSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProv
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate blobStorageEndpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderBlobStorageEndpointSelector
@@ -89,7 +98,9 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProv
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderBlobStorageEndpointSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderServerIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProv
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MSSQLServer in sql to populate serverId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderServerIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProv
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderServerIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderServerIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProv
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MSSQLServer in sql to populate serverId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderServerIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProv
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderServerIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The access key to use for the auditing storage account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderStorageAccountAccessKeySecretRef
@@ -162,7 +181,9 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProv
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ID of the Subscription containing the Storage Account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderStorageAccountSubscriptionIdSecretRef
@@ -179,7 +200,9 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProv
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProvider
@@ -224,7 +247,9 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProv
     [JsonPropertyName("storageAccountSubscriptionIdSecretRef")]
     public V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderStorageAccountSubscriptionIdSecretRef? StorageAccountSubscriptionIdSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecInitProviderBlobStorageEndpointRefPolicy
@@ -237,7 +262,9 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecInitPro
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate blobStorageEndpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecInitProviderBlobStorageEndpointRef
@@ -250,7 +277,9 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecInitPro
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecInitProviderBlobStorageEndpointRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecInitProviderBlobStorageEndpointSelectorPolicy
@@ -263,7 +292,9 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecInitPro
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate blobStorageEndpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecInitProviderBlobStorageEndpointSelector
@@ -280,7 +311,9 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecInitPro
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecInitProviderBlobStorageEndpointSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The access key to use for the auditing storage account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecInitProviderStorageAccountAccessKeySecretRef
@@ -297,7 +330,9 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecInitPro
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ID of the Subscription containing the Storage Account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecInitProviderStorageAccountSubscriptionIdSecretRef
@@ -314,7 +349,9 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecInitPro
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecInitProvider
@@ -347,7 +384,9 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecInitPro
     [JsonPropertyName("storageAccountSubscriptionIdSecretRef")]
     public V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecInitProviderStorageAccountSubscriptionIdSecretRef? StorageAccountSubscriptionIdSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecProviderConfigRefPolicy
@@ -360,7 +399,9 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecProvide
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecProviderConfigRef
@@ -373,7 +414,9 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecProvide
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecWriteConnectionSecretToRef
@@ -386,7 +429,9 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecWriteCo
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MSSQLServerMicrosoftSupportAuditingPolicySpec defines the desired state of MSSQLServerMicrosoftSupportAuditingPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpec
@@ -415,7 +460,9 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicyStatusAtProvider
@@ -440,7 +487,9 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicyStatusAtPro
     [JsonPropertyName("serverId")]
     public string? ServerId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicyStatusConditions
@@ -469,7 +518,9 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicyStatusCondi
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MSSQLServerMicrosoftSupportAuditingPolicyStatus defines the observed state of MSSQLServerMicrosoftSupportAuditingPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicyStatus
@@ -486,7 +537,9 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MSSQLServerMicrosoftSupportAuditingPolicy is the Schema for the MSSQLServerMicrosoftSupportAuditingPolicys API. Manages a MS SQL Server Microsoft Support Auditing Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -516,3 +569,4 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicy : IKuberne
     [JsonPropertyName("status")]
     public V1beta1MSSQLServerMicrosoftSupportAuditingPolicyStatus? Status { get; set; }
 }
+#nullable disable

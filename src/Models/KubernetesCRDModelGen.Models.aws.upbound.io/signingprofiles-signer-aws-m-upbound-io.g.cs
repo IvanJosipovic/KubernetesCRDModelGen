@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.signer.aws.m.upbound.io;
+#nullable enable
 /// <summary>SigningProfile is the Schema for the SigningProfiles API. Creates a Signer Signing Profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SigningProfileList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1SigningProfile> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The validity period for a signing job. See signature_validity_period Block below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfileSpecForProviderSignatureValidityPeriod
@@ -46,7 +49,9 @@ public partial class V1beta1SigningProfileSpecForProviderSignatureValidityPeriod
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The AWS Certificate Manager certificate that will be used to sign code with the new signing profile. See signing_material Block below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfileSpecForProviderSigningMaterial
@@ -55,7 +60,9 @@ public partial class V1beta1SigningProfileSpecForProviderSigningMaterial
     [JsonPropertyName("certificateArn")]
     public string? CertificateArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfileSpecForProvider
@@ -80,7 +87,9 @@ public partial class V1beta1SigningProfileSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The validity period for a signing job. See signature_validity_period Block below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfileSpecInitProviderSignatureValidityPeriod
@@ -93,7 +102,9 @@ public partial class V1beta1SigningProfileSpecInitProviderSignatureValidityPerio
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The AWS Certificate Manager certificate that will be used to sign code with the new signing profile. See signing_material Block below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfileSpecInitProviderSigningMaterial
@@ -102,7 +113,9 @@ public partial class V1beta1SigningProfileSpecInitProviderSigningMaterial
     [JsonPropertyName("certificateArn")]
     public string? CertificateArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfileSpecInitProvider
@@ -123,7 +136,9 @@ public partial class V1beta1SigningProfileSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfileSpecProviderConfigRef
@@ -136,7 +151,9 @@ public partial class V1beta1SigningProfileSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfileSpecWriteConnectionSecretToRef
@@ -145,7 +162,9 @@ public partial class V1beta1SigningProfileSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SigningProfileSpec defines the desired state of SigningProfile</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfileSpec
@@ -170,7 +189,9 @@ public partial class V1beta1SigningProfileSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SigningProfileSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfileStatusAtProviderRevocationRecord
@@ -187,7 +208,9 @@ public partial class V1beta1SigningProfileStatusAtProviderRevocationRecord
     [JsonPropertyName("revokedBy")]
     public string? RevokedBy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The validity period for a signing job. See signature_validity_period Block below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfileStatusAtProviderSignatureValidityPeriod
@@ -200,7 +223,9 @@ public partial class V1beta1SigningProfileStatusAtProviderSignatureValidityPerio
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The AWS Certificate Manager certificate that will be used to sign code with the new signing profile. See signing_material Block below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfileStatusAtProviderSigningMaterial
@@ -209,7 +234,9 @@ public partial class V1beta1SigningProfileStatusAtProviderSigningMaterial
     [JsonPropertyName("certificateArn")]
     public string? CertificateArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfileStatusAtProvider
@@ -266,7 +293,9 @@ public partial class V1beta1SigningProfileStatusAtProvider
     [JsonPropertyName("versionArn")]
     public string? VersionArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfileStatusConditions
@@ -295,7 +324,9 @@ public partial class V1beta1SigningProfileStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SigningProfileStatus defines the observed state of SigningProfile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningProfileStatus
@@ -312,7 +343,9 @@ public partial class V1beta1SigningProfileStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SigningProfile is the Schema for the SigningProfiles API. Creates a Signer Signing Profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -342,3 +375,4 @@ public partial class V1beta1SigningProfile : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1SigningProfileStatus? Status { get; set; }
 }
+#nullable disable

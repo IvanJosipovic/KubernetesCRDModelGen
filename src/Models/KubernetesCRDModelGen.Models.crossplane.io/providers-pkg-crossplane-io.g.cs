@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pkg.crossplane.io;
+#nullable enable
 /// <summary>A Provider installs an OCI compatible Crossplane package, extending Crossplane with support for new kinds of managed resources.  Read the Crossplane documentation for [more information about Providers](https://docs.crossplane.io/latest/concepts/providers).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1ProviderList : IKubernetesObject<V1ListMeta>, IItems<V1Pr
     [JsonPropertyName("items")]
     public IList<V1Provider> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ProviderSpecPackagePullSecrets
@@ -42,7 +45,9 @@ public partial class V1ProviderSpecPackagePullSecrets
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RuntimeConfigRef references a RuntimeConfig resource that will be used to configure the package runtime.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ProviderSpecRuntimeConfigRef
@@ -59,7 +64,9 @@ public partial class V1ProviderSpecRuntimeConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderSpec specifies details about a request to install a provider to Crossplane.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ProviderSpec
@@ -100,7 +107,9 @@ public partial class V1ProviderSpec
     [JsonPropertyName("skipDependencyResolution")]
     public bool? SkipDependencyResolution { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ImageConfigRef is a reference to an image config that indicates how the referenced image config was used by the package manager.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ProviderStatusAppliedImageConfigRefs
@@ -113,7 +122,9 @@ public partial class V1ProviderStatusAppliedImageConfigRefs
     [JsonPropertyName("reason")]
     public string Reason { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ProviderStatusConditions
@@ -142,7 +153,9 @@ public partial class V1ProviderStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderStatus represents the observed state of a Provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ProviderStatus
@@ -167,7 +180,9 @@ public partial class V1ProviderStatus
     [JsonPropertyName("resolvedPackage")]
     public string? ResolvedPackage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Provider installs an OCI compatible Crossplane package, extending Crossplane with support for new kinds of managed resources.  Read the Crossplane documentation for [more information about Providers](https://docs.crossplane.io/latest/concepts/providers).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -197,3 +212,4 @@ public partial class V1Provider : IKubernetesObject<V1ObjectMeta>, ISpec<V1Provi
     [JsonPropertyName("status")]
     public V1ProviderStatus? Status { get; set; }
 }
+#nullable disable

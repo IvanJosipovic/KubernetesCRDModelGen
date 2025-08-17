@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kusto.azure.m.upbound.io;
+#nullable enable
 /// <summary>ClusterManagedPrivateEndpoint is the Schema for the ClusterManagedPrivateEndpoints API. Manages a Managed Private Endpoint for a Kusto Cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointList : IKubernetesObjec
     [JsonPropertyName("items")]
     public IList<V1beta1ClusterManagedPrivateEndpoint> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderClusterNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderClusterN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in kusto to populate clusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderClusterNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderClusterN
     [JsonPropertyName("policy")]
     public V1beta1ClusterManagedPrivateEndpointSpecForProviderClusterNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderClusterNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderClusterN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in kusto to populate clusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderClusterNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderClusterN
     [JsonPropertyName("policy")]
     public V1beta1ClusterManagedPrivateEndpointSpecForProviderClusterNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderPrivateLinkResourceIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderPrivateL
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate privateLinkResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderPrivateLinkResourceIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderPrivateL
     [JsonPropertyName("policy")]
     public V1beta1ClusterManagedPrivateEndpointSpecForProviderPrivateLinkResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderPrivateLinkResourceIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderPrivateL
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate privateLinkResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderPrivateLinkResourceIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderPrivateL
     [JsonPropertyName("policy")]
     public V1beta1ClusterManagedPrivateEndpointSpecForProviderPrivateLinkResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderPrivateLinkResourceRegionRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderPrivateL
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate privateLinkResourceRegion.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderPrivateLinkResourceRegionRef
@@ -191,7 +212,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderPrivateL
     [JsonPropertyName("policy")]
     public V1beta1ClusterManagedPrivateEndpointSpecForProviderPrivateLinkResourceRegionRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderPrivateLinkResourceRegionSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderPrivateL
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate privateLinkResourceRegion.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderPrivateLinkResourceRegionSelector
@@ -225,7 +250,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderPrivateL
     [JsonPropertyName("policy")]
     public V1beta1ClusterManagedPrivateEndpointSpecForProviderPrivateLinkResourceRegionSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderResourceGroupNameRefPolicy
@@ -238,7 +265,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderResource
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderResourceGroupNameRef
@@ -255,7 +284,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderResource
     [JsonPropertyName("policy")]
     public V1beta1ClusterManagedPrivateEndpointSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderResourceGroupNameSelectorPolicy
@@ -268,7 +299,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderResource
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderResourceGroupNameSelector
@@ -289,7 +322,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointSpecForProviderResource
     [JsonPropertyName("policy")]
     public V1beta1ClusterManagedPrivateEndpointSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointSpecForProvider
@@ -350,7 +385,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointSpecForProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1ClusterManagedPrivateEndpointSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointSpecInitProviderPrivateLinkResourceIdRefPolicy
@@ -363,7 +400,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointSpecInitProviderPrivate
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate privateLinkResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointSpecInitProviderPrivateLinkResourceIdRef
@@ -380,7 +419,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointSpecInitProviderPrivate
     [JsonPropertyName("policy")]
     public V1beta1ClusterManagedPrivateEndpointSpecInitProviderPrivateLinkResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointSpecInitProviderPrivateLinkResourceIdSelectorPolicy
@@ -393,7 +434,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointSpecInitProviderPrivate
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate privateLinkResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointSpecInitProviderPrivateLinkResourceIdSelector
@@ -414,7 +457,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointSpecInitProviderPrivate
     [JsonPropertyName("policy")]
     public V1beta1ClusterManagedPrivateEndpointSpecInitProviderPrivateLinkResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointSpecInitProviderPrivateLinkResourceRegionRefPolicy
@@ -427,7 +472,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointSpecInitProviderPrivate
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate privateLinkResourceRegion.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointSpecInitProviderPrivateLinkResourceRegionRef
@@ -444,7 +491,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointSpecInitProviderPrivate
     [JsonPropertyName("policy")]
     public V1beta1ClusterManagedPrivateEndpointSpecInitProviderPrivateLinkResourceRegionRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointSpecInitProviderPrivateLinkResourceRegionSelectorPolicy
@@ -457,7 +506,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointSpecInitProviderPrivate
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate privateLinkResourceRegion.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointSpecInitProviderPrivateLinkResourceRegionSelector
@@ -478,7 +529,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointSpecInitProviderPrivate
     [JsonPropertyName("policy")]
     public V1beta1ClusterManagedPrivateEndpointSpecInitProviderPrivateLinkResourceRegionSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointSpecInitProvider
@@ -515,7 +568,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointSpecInitProvider
     [JsonPropertyName("requestMessage")]
     public string? RequestMessage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointSpecProviderConfigRef
@@ -528,7 +583,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointSpecWriteConnectionSecretToRef
@@ -537,7 +594,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointSpecWriteConnectionSecr
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClusterManagedPrivateEndpointSpec defines the desired state of ClusterManagedPrivateEndpoint</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointSpec
@@ -562,7 +621,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ClusterManagedPrivateEndpointSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointStatusAtProvider
@@ -595,7 +656,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointStatusAtProvider
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointStatusConditions
@@ -624,7 +687,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClusterManagedPrivateEndpointStatus defines the observed state of ClusterManagedPrivateEndpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterManagedPrivateEndpointStatus
@@ -641,7 +706,9 @@ public partial class V1beta1ClusterManagedPrivateEndpointStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClusterManagedPrivateEndpoint is the Schema for the ClusterManagedPrivateEndpoints API. Manages a Managed Private Endpoint for a Kusto Cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -671,3 +738,4 @@ public partial class V1beta1ClusterManagedPrivateEndpoint : IKubernetesObject<V1
     [JsonPropertyName("status")]
     public V1beta1ClusterManagedPrivateEndpointStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.firebase.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1FirebaseAndroidAppList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1alpha1FirebaseAndroidApp> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1FirebaseAndroidAppSpecProjectRef
@@ -50,7 +53,9 @@ public partial class V1alpha1FirebaseAndroidAppSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1FirebaseAndroidAppSpec
@@ -87,7 +92,9 @@ public partial class V1alpha1FirebaseAndroidAppSpec
     [JsonPropertyName("sha256Hashes")]
     public IList<string>? Sha256Hashes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1FirebaseAndroidAppStatusConditions
@@ -112,7 +119,9 @@ public partial class V1alpha1FirebaseAndroidAppStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1FirebaseAndroidAppStatus
@@ -137,7 +146,9 @@ public partial class V1alpha1FirebaseAndroidAppStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -167,3 +178,4 @@ public partial class V1alpha1FirebaseAndroidApp : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1alpha1FirebaseAndroidAppStatus? Status { get; set; }
 }
+#nullable disable

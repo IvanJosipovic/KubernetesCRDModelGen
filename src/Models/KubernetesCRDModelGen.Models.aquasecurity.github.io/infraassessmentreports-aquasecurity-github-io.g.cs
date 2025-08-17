@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.aquasecurity.github.io;
+#nullable enable
 /// <summary>InfraAssessmentReport is a specification for the InfraAssessmentReport resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1InfraAssessmentReportList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1alpha1InfraAssessmentReport> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Scope indicates the section of config that was audited.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InfraAssessmentReportReportChecksScope
@@ -46,7 +49,9 @@ public partial class V1alpha1InfraAssessmentReportReportChecksScope
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Check provides the result of conducting a single audit step.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InfraAssessmentReportReportChecks
@@ -87,7 +92,9 @@ public partial class V1alpha1InfraAssessmentReportReportChecks
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Scanner is the spec for a scanner generating a security assessment report.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InfraAssessmentReportReportScanner
@@ -104,7 +111,9 @@ public partial class V1alpha1InfraAssessmentReportReportScanner
     [JsonPropertyName("version")]
     public string Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InfraAssessmentSummary counts failed checks by severity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InfraAssessmentReportReportSummary
@@ -125,7 +134,9 @@ public partial class V1alpha1InfraAssessmentReportReportSummary
     [JsonPropertyName("mediumCount")]
     public int MediumCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InfraAssessmentReportReport
@@ -142,7 +153,9 @@ public partial class V1alpha1InfraAssessmentReportReport
     [JsonPropertyName("summary")]
     public V1alpha1InfraAssessmentReportReportSummary Summary { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InfraAssessmentReport is a specification for the InfraAssessmentReport resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -168,3 +181,4 @@ public partial class V1alpha1InfraAssessmentReport : IKubernetesObject<V1ObjectM
     [JsonPropertyName("report")]
     public V1alpha1InfraAssessmentReportReport Report { get; set; }
 }
+#nullable disable

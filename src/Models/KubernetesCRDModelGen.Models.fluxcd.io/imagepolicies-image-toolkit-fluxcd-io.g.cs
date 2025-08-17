@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.image.toolkit.fluxcd.io;
+#nullable enable
 /// <summary>ImagePolicy is the Schema for the imagepolicies API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta2ImagePolicyList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta2ImagePolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FilterTags enables filtering for only a subset of tags based on a set of rules. If no rules are provided, all the tags from the repository will be ordered and compared.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImagePolicySpecFilterTags
@@ -46,7 +49,9 @@ public partial class V1beta2ImagePolicySpecFilterTags
     [JsonPropertyName("pattern")]
     public string? Pattern { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ImageRepositoryRef points at the object specifying the image being scanned</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImagePolicySpecImageRepositoryRef
@@ -59,7 +64,9 @@ public partial class V1beta2ImagePolicySpecImageRepositoryRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Alphabetical set of rules to use for alphabetical ordering of the tags.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImagePolicySpecPolicyAlphabetical
@@ -68,7 +75,9 @@ public partial class V1beta2ImagePolicySpecPolicyAlphabetical
     [JsonPropertyName("order")]
     public string? Order { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Numerical set of rules to use for numerical ordering of the tags.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImagePolicySpecPolicyNumerical
@@ -77,7 +86,9 @@ public partial class V1beta2ImagePolicySpecPolicyNumerical
     [JsonPropertyName("order")]
     public string? Order { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SemVer gives a semantic version range to check against the tags available.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImagePolicySpecPolicySemver
@@ -86,7 +97,9 @@ public partial class V1beta2ImagePolicySpecPolicySemver
     [JsonPropertyName("range")]
     public string Range { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policy gives the particulars of the policy to be followed in selecting the most recent image</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImagePolicySpecPolicy
@@ -103,7 +116,9 @@ public partial class V1beta2ImagePolicySpecPolicy
     [JsonPropertyName("semver")]
     public V1beta2ImagePolicySpecPolicySemver? Semver { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ImagePolicySpec defines the parameters for calculating the ImagePolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImagePolicySpec
@@ -128,7 +143,9 @@ public partial class V1beta2ImagePolicySpec
     [JsonPropertyName("policy")]
     public V1beta2ImagePolicySpecPolicy Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition contains details for one aspect of the current state of this API Resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImagePolicyStatusConditions
@@ -157,7 +174,9 @@ public partial class V1beta2ImagePolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LatestRef gives the first in the list of images scanned by the image repository, when filtered and ordered according to the policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImagePolicyStatusLatestRef
@@ -174,7 +193,9 @@ public partial class V1beta2ImagePolicyStatusLatestRef
     [JsonPropertyName("tag")]
     public string Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedPreviousRef is the observed previous LatestRef. It is used to keep track of the previous and current images.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImagePolicyStatusObservedPreviousRef
@@ -191,7 +212,9 @@ public partial class V1beta2ImagePolicyStatusObservedPreviousRef
     [JsonPropertyName("tag")]
     public string Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ImagePolicyStatus defines the observed state of ImagePolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImagePolicyStatus
@@ -220,7 +243,9 @@ public partial class V1beta2ImagePolicyStatus
     [JsonPropertyName("observedPreviousRef")]
     public V1beta2ImagePolicyStatusObservedPreviousRef? ObservedPreviousRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ImagePolicy is the Schema for the imagepolicies API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -250,3 +275,4 @@ public partial class V1beta2ImagePolicy : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta2ImagePolicyStatus? Status { get; set; }
 }
+#nullable disable

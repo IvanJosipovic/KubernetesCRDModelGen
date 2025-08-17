@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+#nullable enable
 /// <summary>VirtualHubRouteTableRoute is the Schema for the VirtualHubRouteTableRoutes API. Manages a Route in a Virtual Hub Route Table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VirtualHubRouteTableRouteList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1beta1VirtualHubRouteTableRoute> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubRouteTableRouteSpecForProviderNextHopRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecForProviderNextHopRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualHubConnection in network to populate nextHop.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubRouteTableRouteSpecForProviderNextHopRef
@@ -59,7 +64,9 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecForProviderNextHopRef
     [JsonPropertyName("policy")]
     public V1beta1VirtualHubRouteTableRouteSpecForProviderNextHopRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubRouteTableRouteSpecForProviderNextHopSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecForProviderNextHopSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualHubConnection in network to populate nextHop.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubRouteTableRouteSpecForProviderNextHopSelector
@@ -89,7 +98,9 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecForProviderNextHopSelec
     [JsonPropertyName("policy")]
     public V1beta1VirtualHubRouteTableRouteSpecForProviderNextHopSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubRouteTableRouteSpecForProviderRouteTableIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecForProviderRouteTableId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualHubRouteTable in network to populate routeTableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubRouteTableRouteSpecForProviderRouteTableIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecForProviderRouteTableId
     [JsonPropertyName("policy")]
     public V1beta1VirtualHubRouteTableRouteSpecForProviderRouteTableIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubRouteTableRouteSpecForProviderRouteTableIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecForProviderRouteTableId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualHubRouteTable in network to populate routeTableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubRouteTableRouteSpecForProviderRouteTableIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecForProviderRouteTableId
     [JsonPropertyName("policy")]
     public V1beta1VirtualHubRouteTableRouteSpecForProviderRouteTableIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubRouteTableRouteSpecForProvider
@@ -186,7 +205,9 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecForProvider
     [JsonPropertyName("routeTableIdSelector")]
     public V1beta1VirtualHubRouteTableRouteSpecForProviderRouteTableIdSelector? RouteTableIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubRouteTableRouteSpecInitProviderNextHopRefPolicy
@@ -199,7 +220,9 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecInitProviderNextHopRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualHubConnection in network to populate nextHop.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubRouteTableRouteSpecInitProviderNextHopRef
@@ -212,7 +235,9 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecInitProviderNextHopRef
     [JsonPropertyName("policy")]
     public V1beta1VirtualHubRouteTableRouteSpecInitProviderNextHopRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubRouteTableRouteSpecInitProviderNextHopSelectorPolicy
@@ -225,7 +250,9 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecInitProviderNextHopSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualHubConnection in network to populate nextHop.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubRouteTableRouteSpecInitProviderNextHopSelector
@@ -242,7 +269,9 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecInitProviderNextHopSele
     [JsonPropertyName("policy")]
     public V1beta1VirtualHubRouteTableRouteSpecInitProviderNextHopSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubRouteTableRouteSpecInitProvider
@@ -271,7 +300,9 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecInitProvider
     [JsonPropertyName("nextHopType")]
     public string? NextHopType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubRouteTableRouteSpecProviderConfigRefPolicy
@@ -284,7 +315,9 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubRouteTableRouteSpecProviderConfigRef
@@ -297,7 +330,9 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1VirtualHubRouteTableRouteSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubRouteTableRouteSpecWriteConnectionSecretToRef
@@ -310,7 +345,9 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecWriteConnectionSecretTo
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualHubRouteTableRouteSpec defines the desired state of VirtualHubRouteTableRoute</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubRouteTableRouteSpec
@@ -339,7 +376,9 @@ public partial class V1beta1VirtualHubRouteTableRouteSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VirtualHubRouteTableRouteSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubRouteTableRouteStatusAtProvider
@@ -368,7 +407,9 @@ public partial class V1beta1VirtualHubRouteTableRouteStatusAtProvider
     [JsonPropertyName("routeTableId")]
     public string? RouteTableId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubRouteTableRouteStatusConditions
@@ -397,7 +438,9 @@ public partial class V1beta1VirtualHubRouteTableRouteStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualHubRouteTableRouteStatus defines the observed state of VirtualHubRouteTableRoute.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubRouteTableRouteStatus
@@ -414,7 +457,9 @@ public partial class V1beta1VirtualHubRouteTableRouteStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualHubRouteTableRoute is the Schema for the VirtualHubRouteTableRoutes API. Manages a Route in a Virtual Hub Route Table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -444,3 +489,4 @@ public partial class V1beta1VirtualHubRouteTableRoute : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1beta1VirtualHubRouteTableRouteStatus? Status { get; set; }
 }
+#nullable disable

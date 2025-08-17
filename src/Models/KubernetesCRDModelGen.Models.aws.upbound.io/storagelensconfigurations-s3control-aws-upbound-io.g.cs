@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.s3control.aws.upbound.io;
+#nullable enable
 /// <summary>StorageLensConfiguration is the Schema for the StorageLensConfigurations API. Provides a resource to manage an S3 Storage Lens configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1StorageLensConfigurationList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1StorageLensConfiguration> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationAccountLevelActivityMetrics
@@ -42,7 +45,9 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationAccountLevelAdvancedCostOptimizationMetrics
@@ -51,7 +56,9 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationAccountLevelAdvancedDataProtectionMetrics
@@ -60,7 +67,9 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationAccountLevelBucketLevelActivityMetrics
@@ -69,7 +78,9 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationAccountLevelBucketLevelAdvancedCostOptimizationMetrics
@@ -78,7 +89,9 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationAccountLevelBucketLevelAdvancedDataProtectionMetrics
@@ -87,7 +100,9 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationAccountLevelBucketLevelDetailedStatusCodeMetrics
@@ -96,7 +111,9 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetricsSelectionCriteria
@@ -113,7 +130,9 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     [JsonPropertyName("minStorageBytesPercentage")]
     public double? MinStorageBytesPercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetrics
@@ -126,7 +145,9 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     [JsonPropertyName("selectionCriteria")]
     public IList<V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetricsSelectionCriteria>? SelectionCriteria { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationAccountLevelBucketLevelPrefixLevel
@@ -135,7 +156,9 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     [JsonPropertyName("storageMetrics")]
     public IList<V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetrics>? StorageMetrics { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationAccountLevelBucketLevel
@@ -160,7 +183,9 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     [JsonPropertyName("prefixLevel")]
     public IList<V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationAccountLevelBucketLevelPrefixLevel>? PrefixLevel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationAccountLevelDetailedStatusCodeMetrics
@@ -169,7 +194,9 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationAccountLevel
@@ -194,7 +221,9 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     [JsonPropertyName("detailedStatusCodeMetrics")]
     public IList<V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationAccountLevelDetailedStatusCodeMetrics>? DetailedStatusCodeMetrics { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationAwsOrg
@@ -203,7 +232,9 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationDataExportCloudWatchMetrics
@@ -212,7 +243,9 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationDataExportS3BucketDestinationArnRefPolicy
@@ -225,7 +258,9 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate arn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationDataExportS3BucketDestinationArnRef
@@ -238,7 +273,9 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     [JsonPropertyName("policy")]
     public V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationDataExportS3BucketDestinationArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationDataExportS3BucketDestinationArnSelectorPolicy
@@ -251,7 +288,9 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate arn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationDataExportS3BucketDestinationArnSelector
@@ -268,7 +307,9 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     [JsonPropertyName("policy")]
     public V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationDataExportS3BucketDestinationArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationDataExportS3BucketDestinationEncryptionSseKms
@@ -277,13 +318,17 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     [JsonPropertyName("keyId")]
     public string? KeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationDataExportS3BucketDestinationEncryptionSseS3
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationDataExportS3BucketDestinationEncryption
@@ -296,7 +341,9 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     [JsonPropertyName("sseS3")]
     public IList<V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationDataExportS3BucketDestinationEncryptionSseS3>? SseS3 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationDataExportS3BucketDestination
@@ -333,7 +380,9 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationDataExport
@@ -346,7 +395,9 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     [JsonPropertyName("s3BucketDestination")]
     public IList<V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationDataExportS3BucketDestination>? S3BucketDestination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationExcludeBucketsRefsPolicy
@@ -359,7 +410,9 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationExcludeBucketsRefs
@@ -372,7 +425,9 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     [JsonPropertyName("policy")]
     public V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationExcludeBucketsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationExcludeBucketsSelectorPolicy
@@ -385,7 +440,9 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Bucket in s3 to populate buckets.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationExcludeBucketsSelector
@@ -402,7 +459,9 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     [JsonPropertyName("policy")]
     public V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationExcludeBucketsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationExclude
@@ -423,7 +482,9 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     [JsonPropertyName("regions")]
     public IList<string>? Regions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationInclude
@@ -436,7 +497,9 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     [JsonPropertyName("regions")]
     public IList<string>? Regions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfiguration
@@ -465,7 +528,9 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     [JsonPropertyName("include")]
     public IList<V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationInclude>? Include { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProvider
@@ -490,7 +555,9 @@ public partial class V1beta1StorageLensConfigurationSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationAccountLevelActivityMetrics
@@ -499,7 +566,9 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationAccountLevelAdvancedCostOptimizationMetrics
@@ -508,7 +577,9 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationAccountLevelAdvancedDataProtectionMetrics
@@ -517,7 +588,9 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationAccountLevelBucketLevelActivityMetrics
@@ -526,7 +599,9 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationAccountLevelBucketLevelAdvancedCostOptimizationMetrics
@@ -535,7 +610,9 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationAccountLevelBucketLevelAdvancedDataProtectionMetrics
@@ -544,7 +621,9 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationAccountLevelBucketLevelDetailedStatusCodeMetrics
@@ -553,7 +632,9 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetricsSelectionCriteria
@@ -570,7 +651,9 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     [JsonPropertyName("minStorageBytesPercentage")]
     public double? MinStorageBytesPercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetrics
@@ -583,7 +666,9 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     [JsonPropertyName("selectionCriteria")]
     public IList<V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetricsSelectionCriteria>? SelectionCriteria { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationAccountLevelBucketLevelPrefixLevel
@@ -592,7 +677,9 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     [JsonPropertyName("storageMetrics")]
     public IList<V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetrics>? StorageMetrics { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationAccountLevelBucketLevel
@@ -617,7 +704,9 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     [JsonPropertyName("prefixLevel")]
     public IList<V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationAccountLevelBucketLevelPrefixLevel>? PrefixLevel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationAccountLevelDetailedStatusCodeMetrics
@@ -626,7 +715,9 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationAccountLevel
@@ -651,7 +742,9 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     [JsonPropertyName("detailedStatusCodeMetrics")]
     public IList<V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationAccountLevelDetailedStatusCodeMetrics>? DetailedStatusCodeMetrics { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationAwsOrg
@@ -660,7 +753,9 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationDataExportCloudWatchMetrics
@@ -669,7 +764,9 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationDataExportS3BucketDestinationArnRefPolicy
@@ -682,7 +779,9 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate arn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationDataExportS3BucketDestinationArnRef
@@ -695,7 +794,9 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     [JsonPropertyName("policy")]
     public V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationDataExportS3BucketDestinationArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationDataExportS3BucketDestinationArnSelectorPolicy
@@ -708,7 +809,9 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate arn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationDataExportS3BucketDestinationArnSelector
@@ -725,7 +828,9 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     [JsonPropertyName("policy")]
     public V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationDataExportS3BucketDestinationArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationDataExportS3BucketDestinationEncryptionSseKms
@@ -734,13 +839,17 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     [JsonPropertyName("keyId")]
     public string? KeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationDataExportS3BucketDestinationEncryptionSseS3
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationDataExportS3BucketDestinationEncryption
@@ -753,7 +862,9 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     [JsonPropertyName("sseS3")]
     public IList<V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationDataExportS3BucketDestinationEncryptionSseS3>? SseS3 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationDataExportS3BucketDestination
@@ -790,7 +901,9 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationDataExport
@@ -803,7 +916,9 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     [JsonPropertyName("s3BucketDestination")]
     public IList<V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationDataExportS3BucketDestination>? S3BucketDestination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationExcludeBucketsRefsPolicy
@@ -816,7 +931,9 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationExcludeBucketsRefs
@@ -829,7 +946,9 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     [JsonPropertyName("policy")]
     public V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationExcludeBucketsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationExcludeBucketsSelectorPolicy
@@ -842,7 +961,9 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Bucket in s3 to populate buckets.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationExcludeBucketsSelector
@@ -859,7 +980,9 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     [JsonPropertyName("policy")]
     public V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationExcludeBucketsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationExclude
@@ -880,7 +1003,9 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     [JsonPropertyName("regions")]
     public IList<string>? Regions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationInclude
@@ -893,7 +1018,9 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     [JsonPropertyName("regions")]
     public IList<string>? Regions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfiguration
@@ -922,7 +1049,9 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     [JsonPropertyName("include")]
     public IList<V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationInclude>? Include { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProvider
@@ -943,7 +1072,9 @@ public partial class V1beta1StorageLensConfigurationSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecProviderConfigRefPolicy
@@ -956,7 +1087,9 @@ public partial class V1beta1StorageLensConfigurationSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecProviderConfigRef
@@ -969,7 +1102,9 @@ public partial class V1beta1StorageLensConfigurationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1StorageLensConfigurationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecWriteConnectionSecretToRef
@@ -982,7 +1117,9 @@ public partial class V1beta1StorageLensConfigurationSpecWriteConnectionSecretToR
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StorageLensConfigurationSpec defines the desired state of StorageLensConfiguration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpec
@@ -1011,7 +1148,9 @@ public partial class V1beta1StorageLensConfigurationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1StorageLensConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensConfigurationAccountLevelActivityMetrics
@@ -1020,7 +1159,9 @@ public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensC
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensConfigurationAccountLevelAdvancedCostOptimizationMetrics
@@ -1029,7 +1170,9 @@ public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensC
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensConfigurationAccountLevelAdvancedDataProtectionMetrics
@@ -1038,7 +1181,9 @@ public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensC
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensConfigurationAccountLevelBucketLevelActivityMetrics
@@ -1047,7 +1192,9 @@ public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensC
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensConfigurationAccountLevelBucketLevelAdvancedCostOptimizationMetrics
@@ -1056,7 +1203,9 @@ public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensC
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensConfigurationAccountLevelBucketLevelAdvancedDataProtectionMetrics
@@ -1065,7 +1214,9 @@ public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensC
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensConfigurationAccountLevelBucketLevelDetailedStatusCodeMetrics
@@ -1074,7 +1225,9 @@ public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensC
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetricsSelectionCriteria
@@ -1091,7 +1244,9 @@ public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensC
     [JsonPropertyName("minStorageBytesPercentage")]
     public double? MinStorageBytesPercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetrics
@@ -1104,7 +1259,9 @@ public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensC
     [JsonPropertyName("selectionCriteria")]
     public IList<V1beta1StorageLensConfigurationStatusAtProviderStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetricsSelectionCriteria>? SelectionCriteria { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensConfigurationAccountLevelBucketLevelPrefixLevel
@@ -1113,7 +1270,9 @@ public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensC
     [JsonPropertyName("storageMetrics")]
     public IList<V1beta1StorageLensConfigurationStatusAtProviderStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetrics>? StorageMetrics { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensConfigurationAccountLevelBucketLevel
@@ -1138,7 +1297,9 @@ public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensC
     [JsonPropertyName("prefixLevel")]
     public IList<V1beta1StorageLensConfigurationStatusAtProviderStorageLensConfigurationAccountLevelBucketLevelPrefixLevel>? PrefixLevel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensConfigurationAccountLevelDetailedStatusCodeMetrics
@@ -1147,7 +1308,9 @@ public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensC
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensConfigurationAccountLevel
@@ -1172,7 +1335,9 @@ public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensC
     [JsonPropertyName("detailedStatusCodeMetrics")]
     public IList<V1beta1StorageLensConfigurationStatusAtProviderStorageLensConfigurationAccountLevelDetailedStatusCodeMetrics>? DetailedStatusCodeMetrics { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensConfigurationAwsOrg
@@ -1181,7 +1346,9 @@ public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensC
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensConfigurationDataExportCloudWatchMetrics
@@ -1190,7 +1357,9 @@ public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensC
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensConfigurationDataExportS3BucketDestinationEncryptionSseKms
@@ -1199,13 +1368,17 @@ public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensC
     [JsonPropertyName("keyId")]
     public string? KeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensConfigurationDataExportS3BucketDestinationEncryptionSseS3
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensConfigurationDataExportS3BucketDestinationEncryption
@@ -1218,7 +1391,9 @@ public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensC
     [JsonPropertyName("sseS3")]
     public IList<V1beta1StorageLensConfigurationStatusAtProviderStorageLensConfigurationDataExportS3BucketDestinationEncryptionSseS3>? SseS3 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensConfigurationDataExportS3BucketDestination
@@ -1247,7 +1422,9 @@ public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensC
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensConfigurationDataExport
@@ -1260,7 +1437,9 @@ public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensC
     [JsonPropertyName("s3BucketDestination")]
     public IList<V1beta1StorageLensConfigurationStatusAtProviderStorageLensConfigurationDataExportS3BucketDestination>? S3BucketDestination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensConfigurationExclude
@@ -1273,7 +1452,9 @@ public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensC
     [JsonPropertyName("regions")]
     public IList<string>? Regions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensConfigurationInclude
@@ -1286,7 +1467,9 @@ public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensC
     [JsonPropertyName("regions")]
     public IList<string>? Regions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensConfiguration
@@ -1315,7 +1498,9 @@ public partial class V1beta1StorageLensConfigurationStatusAtProviderStorageLensC
     [JsonPropertyName("include")]
     public IList<V1beta1StorageLensConfigurationStatusAtProviderStorageLensConfigurationInclude>? Include { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationStatusAtProvider
@@ -1352,7 +1537,9 @@ public partial class V1beta1StorageLensConfigurationStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationStatusConditions
@@ -1381,7 +1568,9 @@ public partial class V1beta1StorageLensConfigurationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StorageLensConfigurationStatus defines the observed state of StorageLensConfiguration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationStatus
@@ -1398,7 +1587,9 @@ public partial class V1beta1StorageLensConfigurationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StorageLensConfiguration is the Schema for the StorageLensConfigurations API. Provides a resource to manage an S3 Storage Lens configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1428,3 +1619,4 @@ public partial class V1beta1StorageLensConfiguration : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1StorageLensConfigurationStatus? Status { get; set; }
 }
+#nullable disable

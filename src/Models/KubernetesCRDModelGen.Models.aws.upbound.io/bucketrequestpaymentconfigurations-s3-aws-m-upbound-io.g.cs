@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.s3.aws.m.upbound.io;
+#nullable enable
 /// <summary>BucketRequestPaymentConfiguration is the Schema for the BucketRequestPaymentConfigurations API. Provides an S3 bucket request payment configuration resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BucketRequestPaymentConfigurationList : IKubernetesO
     [JsonPropertyName("items")]
     public IList<V1beta1BucketRequestPaymentConfiguration> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketRequestPaymentConfigurationSpecForProviderBucketRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1BucketRequestPaymentConfigurationSpecForProviderBuck
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketRequestPaymentConfigurationSpecForProviderBucketRef
@@ -63,7 +68,9 @@ public partial class V1beta1BucketRequestPaymentConfigurationSpecForProviderBuck
     [JsonPropertyName("policy")]
     public V1beta1BucketRequestPaymentConfigurationSpecForProviderBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketRequestPaymentConfigurationSpecForProviderBucketSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1BucketRequestPaymentConfigurationSpecForProviderBuck
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketRequestPaymentConfigurationSpecForProviderBucketSelector
@@ -97,7 +106,9 @@ public partial class V1beta1BucketRequestPaymentConfigurationSpecForProviderBuck
     [JsonPropertyName("policy")]
     public V1beta1BucketRequestPaymentConfigurationSpecForProviderBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketRequestPaymentConfigurationSpecForProvider
@@ -126,7 +137,9 @@ public partial class V1beta1BucketRequestPaymentConfigurationSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketRequestPaymentConfigurationSpecInitProviderBucketRefPolicy
@@ -139,7 +152,9 @@ public partial class V1beta1BucketRequestPaymentConfigurationSpecInitProviderBuc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketRequestPaymentConfigurationSpecInitProviderBucketRef
@@ -156,7 +171,9 @@ public partial class V1beta1BucketRequestPaymentConfigurationSpecInitProviderBuc
     [JsonPropertyName("policy")]
     public V1beta1BucketRequestPaymentConfigurationSpecInitProviderBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketRequestPaymentConfigurationSpecInitProviderBucketSelectorPolicy
@@ -169,7 +186,9 @@ public partial class V1beta1BucketRequestPaymentConfigurationSpecInitProviderBuc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketRequestPaymentConfigurationSpecInitProviderBucketSelector
@@ -190,7 +209,9 @@ public partial class V1beta1BucketRequestPaymentConfigurationSpecInitProviderBuc
     [JsonPropertyName("policy")]
     public V1beta1BucketRequestPaymentConfigurationSpecInitProviderBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketRequestPaymentConfigurationSpecInitProvider
@@ -215,7 +236,9 @@ public partial class V1beta1BucketRequestPaymentConfigurationSpecInitProvider
     [JsonPropertyName("payer")]
     public string? Payer { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketRequestPaymentConfigurationSpecProviderConfigRef
@@ -228,7 +251,9 @@ public partial class V1beta1BucketRequestPaymentConfigurationSpecProviderConfigR
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketRequestPaymentConfigurationSpecWriteConnectionSecretToRef
@@ -237,7 +262,9 @@ public partial class V1beta1BucketRequestPaymentConfigurationSpecWriteConnection
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BucketRequestPaymentConfigurationSpec defines the desired state of BucketRequestPaymentConfiguration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketRequestPaymentConfigurationSpec
@@ -262,7 +289,9 @@ public partial class V1beta1BucketRequestPaymentConfigurationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BucketRequestPaymentConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketRequestPaymentConfigurationStatusAtProvider
@@ -287,7 +316,9 @@ public partial class V1beta1BucketRequestPaymentConfigurationStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketRequestPaymentConfigurationStatusConditions
@@ -316,7 +347,9 @@ public partial class V1beta1BucketRequestPaymentConfigurationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BucketRequestPaymentConfigurationStatus defines the observed state of BucketRequestPaymentConfiguration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketRequestPaymentConfigurationStatus
@@ -333,7 +366,9 @@ public partial class V1beta1BucketRequestPaymentConfigurationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BucketRequestPaymentConfiguration is the Schema for the BucketRequestPaymentConfigurations API. Provides an S3 bucket request payment configuration resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -363,3 +398,4 @@ public partial class V1beta1BucketRequestPaymentConfiguration : IKubernetesObjec
     [JsonPropertyName("status")]
     public V1beta1BucketRequestPaymentConfigurationStatus? Status { get; set; }
 }
+#nullable disable

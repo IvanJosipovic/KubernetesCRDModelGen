@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.vpc.aws.m.upbound.io;
+#nullable enable
 /// <summary>NetworkPerformanceMetricSubscription is the Schema for the NetworkPerformanceMetricSubscriptions API. Provides a resource to manage an Infrastructure Performance subscription.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1NetworkPerformanceMetricSubscriptionList : IKubernet
     [JsonPropertyName("items")]
     public IList<V1beta1NetworkPerformanceMetricSubscription> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPerformanceMetricSubscriptionSpecForProvider
@@ -58,7 +61,9 @@ public partial class V1beta1NetworkPerformanceMetricSubscriptionSpecForProvider
     [JsonPropertyName("statistic")]
     public string? Statistic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPerformanceMetricSubscriptionSpecInitProvider
@@ -79,7 +84,9 @@ public partial class V1beta1NetworkPerformanceMetricSubscriptionSpecInitProvider
     [JsonPropertyName("statistic")]
     public string? Statistic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPerformanceMetricSubscriptionSpecProviderConfigRef
@@ -92,7 +99,9 @@ public partial class V1beta1NetworkPerformanceMetricSubscriptionSpecProviderConf
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPerformanceMetricSubscriptionSpecWriteConnectionSecretToRef
@@ -101,7 +110,9 @@ public partial class V1beta1NetworkPerformanceMetricSubscriptionSpecWriteConnect
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkPerformanceMetricSubscriptionSpec defines the desired state of NetworkPerformanceMetricSubscription</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPerformanceMetricSubscriptionSpec
@@ -126,7 +137,9 @@ public partial class V1beta1NetworkPerformanceMetricSubscriptionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1NetworkPerformanceMetricSubscriptionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPerformanceMetricSubscriptionStatusAtProvider
@@ -159,7 +172,9 @@ public partial class V1beta1NetworkPerformanceMetricSubscriptionStatusAtProvider
     [JsonPropertyName("statistic")]
     public string? Statistic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPerformanceMetricSubscriptionStatusConditions
@@ -188,7 +203,9 @@ public partial class V1beta1NetworkPerformanceMetricSubscriptionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkPerformanceMetricSubscriptionStatus defines the observed state of NetworkPerformanceMetricSubscription.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPerformanceMetricSubscriptionStatus
@@ -205,7 +222,9 @@ public partial class V1beta1NetworkPerformanceMetricSubscriptionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkPerformanceMetricSubscription is the Schema for the NetworkPerformanceMetricSubscriptions API. Provides a resource to manage an Infrastructure Performance subscription.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -235,3 +254,4 @@ public partial class V1beta1NetworkPerformanceMetricSubscription : IKubernetesOb
     [JsonPropertyName("status")]
     public V1beta1NetworkPerformanceMetricSubscriptionStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigquery.gcp.upbound.io;
+#nullable enable
 /// <summary>Table is the Schema for the Tables API. Creates a table resource in a dataset for Google BigQuery.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TableList : IKubernetesObject<V1ListMeta>, IItems<V1
     [JsonPropertyName("items")]
     public IList<V1beta1Table> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderBiglakeConfiguration
@@ -54,7 +57,9 @@ public partial class V1beta1TableSpecForProviderBiglakeConfiguration
     [JsonPropertyName("tableFormat")]
     public string? TableFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderDatasetIdRefPolicy
@@ -67,7 +72,9 @@ public partial class V1beta1TableSpecForProviderDatasetIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderDatasetIdRef
@@ -80,7 +87,9 @@ public partial class V1beta1TableSpecForProviderDatasetIdRef
     [JsonPropertyName("policy")]
     public V1beta1TableSpecForProviderDatasetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderDatasetIdSelectorPolicy
@@ -93,7 +102,9 @@ public partial class V1beta1TableSpecForProviderDatasetIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderDatasetIdSelector
@@ -110,7 +121,9 @@ public partial class V1beta1TableSpecForProviderDatasetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1TableSpecForProviderDatasetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderEncryptionConfiguration
@@ -119,7 +132,9 @@ public partial class V1beta1TableSpecForProviderEncryptionConfiguration
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderExternalCatalogTableOptionsStorageDescriptorSerdeInfo
@@ -136,7 +151,9 @@ public partial class V1beta1TableSpecForProviderExternalCatalogTableOptionsStora
     [JsonPropertyName("serializationLibrary")]
     public string? SerializationLibrary { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderExternalCatalogTableOptionsStorageDescriptor
@@ -157,7 +174,9 @@ public partial class V1beta1TableSpecForProviderExternalCatalogTableOptionsStora
     [JsonPropertyName("serdeInfo")]
     public IList<V1beta1TableSpecForProviderExternalCatalogTableOptionsStorageDescriptorSerdeInfo>? SerdeInfo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderExternalCatalogTableOptions
@@ -174,7 +193,9 @@ public partial class V1beta1TableSpecForProviderExternalCatalogTableOptions
     [JsonPropertyName("storageDescriptor")]
     public IList<V1beta1TableSpecForProviderExternalCatalogTableOptionsStorageDescriptor>? StorageDescriptor { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderExternalDataConfigurationAvroOptions
@@ -183,7 +204,9 @@ public partial class V1beta1TableSpecForProviderExternalDataConfigurationAvroOpt
     [JsonPropertyName("useAvroLogicalTypes")]
     public bool? UseAvroLogicalTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderExternalDataConfigurationBigtableOptionsColumnFamilyColumn
@@ -212,7 +235,9 @@ public partial class V1beta1TableSpecForProviderExternalDataConfigurationBigtabl
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderExternalDataConfigurationBigtableOptionsColumnFamily
@@ -237,7 +262,9 @@ public partial class V1beta1TableSpecForProviderExternalDataConfigurationBigtabl
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderExternalDataConfigurationBigtableOptions
@@ -258,7 +285,9 @@ public partial class V1beta1TableSpecForProviderExternalDataConfigurationBigtabl
     [JsonPropertyName("readRowkeyAsString")]
     public bool? ReadRowkeyAsString { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderExternalDataConfigurationCsvOptions
@@ -287,7 +316,9 @@ public partial class V1beta1TableSpecForProviderExternalDataConfigurationCsvOpti
     [JsonPropertyName("skipLeadingRows")]
     public double? SkipLeadingRows { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderExternalDataConfigurationGoogleSheetsOptions
@@ -300,7 +331,9 @@ public partial class V1beta1TableSpecForProviderExternalDataConfigurationGoogleS
     [JsonPropertyName("skipLeadingRows")]
     public double? SkipLeadingRows { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderExternalDataConfigurationHivePartitioningOptions
@@ -317,7 +350,9 @@ public partial class V1beta1TableSpecForProviderExternalDataConfigurationHivePar
     [JsonPropertyName("sourceUriPrefix")]
     public string? SourceUriPrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderExternalDataConfigurationJsonOptions
@@ -326,7 +361,9 @@ public partial class V1beta1TableSpecForProviderExternalDataConfigurationJsonOpt
     [JsonPropertyName("encoding")]
     public string? Encoding { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderExternalDataConfigurationParquetOptions
@@ -339,7 +376,9 @@ public partial class V1beta1TableSpecForProviderExternalDataConfigurationParquet
     [JsonPropertyName("enumAsString")]
     public bool? EnumAsString { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderExternalDataConfiguration
@@ -424,7 +463,9 @@ public partial class V1beta1TableSpecForProviderExternalDataConfiguration
     [JsonPropertyName("sourceUris")]
     public IList<string>? SourceUris { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderMaterializedView
@@ -445,7 +486,9 @@ public partial class V1beta1TableSpecForProviderMaterializedView
     [JsonPropertyName("refreshIntervalMs")]
     public double? RefreshIntervalMs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderRangePartitioningRange
@@ -462,7 +505,9 @@ public partial class V1beta1TableSpecForProviderRangePartitioningRange
     [JsonPropertyName("start")]
     public double? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderRangePartitioning
@@ -475,7 +520,9 @@ public partial class V1beta1TableSpecForProviderRangePartitioning
     [JsonPropertyName("range")]
     public IList<V1beta1TableSpecForProviderRangePartitioningRange>? Range { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderSchemaForeignTypeInfo
@@ -484,7 +531,9 @@ public partial class V1beta1TableSpecForProviderSchemaForeignTypeInfo
     [JsonPropertyName("typeSystem")]
     public string? TypeSystem { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderTableConstraintsForeignKeysColumnReferences
@@ -497,7 +546,9 @@ public partial class V1beta1TableSpecForProviderTableConstraintsForeignKeysColum
     [JsonPropertyName("referencingColumn")]
     public string? ReferencingColumn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderTableConstraintsForeignKeysReferencedTable
@@ -514,7 +565,9 @@ public partial class V1beta1TableSpecForProviderTableConstraintsForeignKeysRefer
     [JsonPropertyName("tableId")]
     public string? TableId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderTableConstraintsForeignKeys
@@ -531,7 +584,9 @@ public partial class V1beta1TableSpecForProviderTableConstraintsForeignKeys
     [JsonPropertyName("referencedTable")]
     public IList<V1beta1TableSpecForProviderTableConstraintsForeignKeysReferencedTable>? ReferencedTable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderTableConstraintsPrimaryKey
@@ -540,7 +595,9 @@ public partial class V1beta1TableSpecForProviderTableConstraintsPrimaryKey
     [JsonPropertyName("columns")]
     public IList<string>? Columns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderTableConstraints
@@ -553,7 +610,9 @@ public partial class V1beta1TableSpecForProviderTableConstraints
     [JsonPropertyName("primaryKey")]
     public IList<V1beta1TableSpecForProviderTableConstraintsPrimaryKey>? PrimaryKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderTableReplicationInfo
@@ -574,7 +633,9 @@ public partial class V1beta1TableSpecForProviderTableReplicationInfo
     [JsonPropertyName("sourceTableId")]
     public string? SourceTableId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderTimePartitioning
@@ -595,7 +656,9 @@ public partial class V1beta1TableSpecForProviderTimePartitioning
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderView
@@ -608,7 +671,9 @@ public partial class V1beta1TableSpecForProviderView
     [JsonPropertyName("useLegacySql")]
     public bool? UseLegacySql { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProvider
@@ -721,7 +786,9 @@ public partial class V1beta1TableSpecForProvider
     [JsonPropertyName("view")]
     public IList<V1beta1TableSpecForProviderView>? View { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderBiglakeConfiguration
@@ -742,7 +809,9 @@ public partial class V1beta1TableSpecInitProviderBiglakeConfiguration
     [JsonPropertyName("tableFormat")]
     public string? TableFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderEncryptionConfiguration
@@ -751,7 +820,9 @@ public partial class V1beta1TableSpecInitProviderEncryptionConfiguration
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderExternalCatalogTableOptionsStorageDescriptorSerdeInfo
@@ -768,7 +839,9 @@ public partial class V1beta1TableSpecInitProviderExternalCatalogTableOptionsStor
     [JsonPropertyName("serializationLibrary")]
     public string? SerializationLibrary { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderExternalCatalogTableOptionsStorageDescriptor
@@ -789,7 +862,9 @@ public partial class V1beta1TableSpecInitProviderExternalCatalogTableOptionsStor
     [JsonPropertyName("serdeInfo")]
     public IList<V1beta1TableSpecInitProviderExternalCatalogTableOptionsStorageDescriptorSerdeInfo>? SerdeInfo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderExternalCatalogTableOptions
@@ -806,7 +881,9 @@ public partial class V1beta1TableSpecInitProviderExternalCatalogTableOptions
     [JsonPropertyName("storageDescriptor")]
     public IList<V1beta1TableSpecInitProviderExternalCatalogTableOptionsStorageDescriptor>? StorageDescriptor { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderExternalDataConfigurationAvroOptions
@@ -815,7 +892,9 @@ public partial class V1beta1TableSpecInitProviderExternalDataConfigurationAvroOp
     [JsonPropertyName("useAvroLogicalTypes")]
     public bool? UseAvroLogicalTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderExternalDataConfigurationBigtableOptionsColumnFamilyColumn
@@ -844,7 +923,9 @@ public partial class V1beta1TableSpecInitProviderExternalDataConfigurationBigtab
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderExternalDataConfigurationBigtableOptionsColumnFamily
@@ -869,7 +950,9 @@ public partial class V1beta1TableSpecInitProviderExternalDataConfigurationBigtab
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderExternalDataConfigurationBigtableOptions
@@ -890,7 +973,9 @@ public partial class V1beta1TableSpecInitProviderExternalDataConfigurationBigtab
     [JsonPropertyName("readRowkeyAsString")]
     public bool? ReadRowkeyAsString { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderExternalDataConfigurationCsvOptions
@@ -919,7 +1004,9 @@ public partial class V1beta1TableSpecInitProviderExternalDataConfigurationCsvOpt
     [JsonPropertyName("skipLeadingRows")]
     public double? SkipLeadingRows { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderExternalDataConfigurationGoogleSheetsOptions
@@ -932,7 +1019,9 @@ public partial class V1beta1TableSpecInitProviderExternalDataConfigurationGoogle
     [JsonPropertyName("skipLeadingRows")]
     public double? SkipLeadingRows { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderExternalDataConfigurationHivePartitioningOptions
@@ -949,7 +1038,9 @@ public partial class V1beta1TableSpecInitProviderExternalDataConfigurationHivePa
     [JsonPropertyName("sourceUriPrefix")]
     public string? SourceUriPrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderExternalDataConfigurationJsonOptions
@@ -958,7 +1049,9 @@ public partial class V1beta1TableSpecInitProviderExternalDataConfigurationJsonOp
     [JsonPropertyName("encoding")]
     public string? Encoding { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderExternalDataConfigurationParquetOptions
@@ -971,7 +1064,9 @@ public partial class V1beta1TableSpecInitProviderExternalDataConfigurationParque
     [JsonPropertyName("enumAsString")]
     public bool? EnumAsString { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderExternalDataConfiguration
@@ -1056,7 +1151,9 @@ public partial class V1beta1TableSpecInitProviderExternalDataConfiguration
     [JsonPropertyName("sourceUris")]
     public IList<string>? SourceUris { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderMaterializedView
@@ -1077,7 +1174,9 @@ public partial class V1beta1TableSpecInitProviderMaterializedView
     [JsonPropertyName("refreshIntervalMs")]
     public double? RefreshIntervalMs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderRangePartitioningRange
@@ -1094,7 +1193,9 @@ public partial class V1beta1TableSpecInitProviderRangePartitioningRange
     [JsonPropertyName("start")]
     public double? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderRangePartitioning
@@ -1107,7 +1208,9 @@ public partial class V1beta1TableSpecInitProviderRangePartitioning
     [JsonPropertyName("range")]
     public IList<V1beta1TableSpecInitProviderRangePartitioningRange>? Range { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderSchemaForeignTypeInfo
@@ -1116,7 +1219,9 @@ public partial class V1beta1TableSpecInitProviderSchemaForeignTypeInfo
     [JsonPropertyName("typeSystem")]
     public string? TypeSystem { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderTableConstraintsForeignKeysColumnReferences
@@ -1129,7 +1234,9 @@ public partial class V1beta1TableSpecInitProviderTableConstraintsForeignKeysColu
     [JsonPropertyName("referencingColumn")]
     public string? ReferencingColumn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderTableConstraintsForeignKeysReferencedTable
@@ -1142,7 +1249,9 @@ public partial class V1beta1TableSpecInitProviderTableConstraintsForeignKeysRefe
     [JsonPropertyName("tableId")]
     public string? TableId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderTableConstraintsForeignKeys
@@ -1159,7 +1268,9 @@ public partial class V1beta1TableSpecInitProviderTableConstraintsForeignKeys
     [JsonPropertyName("referencedTable")]
     public IList<V1beta1TableSpecInitProviderTableConstraintsForeignKeysReferencedTable>? ReferencedTable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderTableConstraintsPrimaryKey
@@ -1168,7 +1279,9 @@ public partial class V1beta1TableSpecInitProviderTableConstraintsPrimaryKey
     [JsonPropertyName("columns")]
     public IList<string>? Columns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderTableConstraints
@@ -1181,7 +1294,9 @@ public partial class V1beta1TableSpecInitProviderTableConstraints
     [JsonPropertyName("primaryKey")]
     public IList<V1beta1TableSpecInitProviderTableConstraintsPrimaryKey>? PrimaryKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderTableReplicationInfo
@@ -1202,7 +1317,9 @@ public partial class V1beta1TableSpecInitProviderTableReplicationInfo
     [JsonPropertyName("sourceTableId")]
     public string? SourceTableId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderTimePartitioning
@@ -1223,7 +1340,9 @@ public partial class V1beta1TableSpecInitProviderTimePartitioning
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderView
@@ -1236,7 +1355,9 @@ public partial class V1beta1TableSpecInitProviderView
     [JsonPropertyName("useLegacySql")]
     public bool? UseLegacySql { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProvider
@@ -1333,7 +1454,9 @@ public partial class V1beta1TableSpecInitProvider
     [JsonPropertyName("view")]
     public IList<V1beta1TableSpecInitProviderView>? View { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecProviderConfigRefPolicy
@@ -1346,7 +1469,9 @@ public partial class V1beta1TableSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecProviderConfigRef
@@ -1359,7 +1484,9 @@ public partial class V1beta1TableSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1TableSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecWriteConnectionSecretToRef
@@ -1372,7 +1499,9 @@ public partial class V1beta1TableSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TableSpec defines the desired state of Table</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpec
@@ -1401,7 +1530,9 @@ public partial class V1beta1TableSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TableSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderBiglakeConfiguration
@@ -1422,7 +1553,9 @@ public partial class V1beta1TableStatusAtProviderBiglakeConfiguration
     [JsonPropertyName("tableFormat")]
     public string? TableFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderEncryptionConfiguration
@@ -1435,7 +1568,9 @@ public partial class V1beta1TableStatusAtProviderEncryptionConfiguration
     [JsonPropertyName("kmsKeyVersion")]
     public string? KmsKeyVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderExternalCatalogTableOptionsStorageDescriptorSerdeInfo
@@ -1452,7 +1587,9 @@ public partial class V1beta1TableStatusAtProviderExternalCatalogTableOptionsStor
     [JsonPropertyName("serializationLibrary")]
     public string? SerializationLibrary { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderExternalCatalogTableOptionsStorageDescriptor
@@ -1473,7 +1610,9 @@ public partial class V1beta1TableStatusAtProviderExternalCatalogTableOptionsStor
     [JsonPropertyName("serdeInfo")]
     public IList<V1beta1TableStatusAtProviderExternalCatalogTableOptionsStorageDescriptorSerdeInfo>? SerdeInfo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderExternalCatalogTableOptions
@@ -1490,7 +1629,9 @@ public partial class V1beta1TableStatusAtProviderExternalCatalogTableOptions
     [JsonPropertyName("storageDescriptor")]
     public IList<V1beta1TableStatusAtProviderExternalCatalogTableOptionsStorageDescriptor>? StorageDescriptor { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderExternalDataConfigurationAvroOptions
@@ -1499,7 +1640,9 @@ public partial class V1beta1TableStatusAtProviderExternalDataConfigurationAvroOp
     [JsonPropertyName("useAvroLogicalTypes")]
     public bool? UseAvroLogicalTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderExternalDataConfigurationBigtableOptionsColumnFamilyColumn
@@ -1528,7 +1671,9 @@ public partial class V1beta1TableStatusAtProviderExternalDataConfigurationBigtab
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderExternalDataConfigurationBigtableOptionsColumnFamily
@@ -1553,7 +1698,9 @@ public partial class V1beta1TableStatusAtProviderExternalDataConfigurationBigtab
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderExternalDataConfigurationBigtableOptions
@@ -1574,7 +1721,9 @@ public partial class V1beta1TableStatusAtProviderExternalDataConfigurationBigtab
     [JsonPropertyName("readRowkeyAsString")]
     public bool? ReadRowkeyAsString { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderExternalDataConfigurationCsvOptions
@@ -1603,7 +1752,9 @@ public partial class V1beta1TableStatusAtProviderExternalDataConfigurationCsvOpt
     [JsonPropertyName("skipLeadingRows")]
     public double? SkipLeadingRows { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderExternalDataConfigurationGoogleSheetsOptions
@@ -1616,7 +1767,9 @@ public partial class V1beta1TableStatusAtProviderExternalDataConfigurationGoogle
     [JsonPropertyName("skipLeadingRows")]
     public double? SkipLeadingRows { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderExternalDataConfigurationHivePartitioningOptions
@@ -1633,7 +1786,9 @@ public partial class V1beta1TableStatusAtProviderExternalDataConfigurationHivePa
     [JsonPropertyName("sourceUriPrefix")]
     public string? SourceUriPrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderExternalDataConfigurationJsonOptions
@@ -1642,7 +1797,9 @@ public partial class V1beta1TableStatusAtProviderExternalDataConfigurationJsonOp
     [JsonPropertyName("encoding")]
     public string? Encoding { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderExternalDataConfigurationParquetOptions
@@ -1655,7 +1812,9 @@ public partial class V1beta1TableStatusAtProviderExternalDataConfigurationParque
     [JsonPropertyName("enumAsString")]
     public bool? EnumAsString { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderExternalDataConfiguration
@@ -1740,7 +1899,9 @@ public partial class V1beta1TableStatusAtProviderExternalDataConfiguration
     [JsonPropertyName("sourceUris")]
     public IList<string>? SourceUris { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderMaterializedView
@@ -1761,7 +1922,9 @@ public partial class V1beta1TableStatusAtProviderMaterializedView
     [JsonPropertyName("refreshIntervalMs")]
     public double? RefreshIntervalMs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderRangePartitioningRange
@@ -1778,7 +1941,9 @@ public partial class V1beta1TableStatusAtProviderRangePartitioningRange
     [JsonPropertyName("start")]
     public double? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderRangePartitioning
@@ -1791,7 +1956,9 @@ public partial class V1beta1TableStatusAtProviderRangePartitioning
     [JsonPropertyName("range")]
     public IList<V1beta1TableStatusAtProviderRangePartitioningRange>? Range { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderSchemaForeignTypeInfo
@@ -1800,7 +1967,9 @@ public partial class V1beta1TableStatusAtProviderSchemaForeignTypeInfo
     [JsonPropertyName("typeSystem")]
     public string? TypeSystem { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderTableConstraintsForeignKeysColumnReferences
@@ -1813,7 +1982,9 @@ public partial class V1beta1TableStatusAtProviderTableConstraintsForeignKeysColu
     [JsonPropertyName("referencingColumn")]
     public string? ReferencingColumn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderTableConstraintsForeignKeysReferencedTable
@@ -1830,7 +2001,9 @@ public partial class V1beta1TableStatusAtProviderTableConstraintsForeignKeysRefe
     [JsonPropertyName("tableId")]
     public string? TableId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderTableConstraintsForeignKeys
@@ -1847,7 +2020,9 @@ public partial class V1beta1TableStatusAtProviderTableConstraintsForeignKeys
     [JsonPropertyName("referencedTable")]
     public IList<V1beta1TableStatusAtProviderTableConstraintsForeignKeysReferencedTable>? ReferencedTable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderTableConstraintsPrimaryKey
@@ -1856,7 +2031,9 @@ public partial class V1beta1TableStatusAtProviderTableConstraintsPrimaryKey
     [JsonPropertyName("columns")]
     public IList<string>? Columns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderTableConstraints
@@ -1869,7 +2046,9 @@ public partial class V1beta1TableStatusAtProviderTableConstraints
     [JsonPropertyName("primaryKey")]
     public IList<V1beta1TableStatusAtProviderTableConstraintsPrimaryKey>? PrimaryKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderTableReplicationInfo
@@ -1890,7 +2069,9 @@ public partial class V1beta1TableStatusAtProviderTableReplicationInfo
     [JsonPropertyName("sourceTableId")]
     public string? SourceTableId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderTimePartitioning
@@ -1911,7 +2092,9 @@ public partial class V1beta1TableStatusAtProviderTimePartitioning
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderView
@@ -1924,7 +2107,9 @@ public partial class V1beta1TableStatusAtProviderView
     [JsonPropertyName("useLegacySql")]
     public bool? UseLegacySql { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProvider
@@ -2077,7 +2262,9 @@ public partial class V1beta1TableStatusAtProvider
     [JsonPropertyName("view")]
     public IList<V1beta1TableStatusAtProviderView>? View { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusConditions
@@ -2106,7 +2293,9 @@ public partial class V1beta1TableStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TableStatus defines the observed state of Table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatus
@@ -2123,7 +2312,9 @@ public partial class V1beta1TableStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Table is the Schema for the Tables API. Creates a table resource in a dataset for Google BigQuery.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -2153,3 +2344,4 @@ public partial class V1beta1Table : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     [JsonPropertyName("status")]
     public V1beta1TableStatus? Status { get; set; }
 }
+#nullable disable

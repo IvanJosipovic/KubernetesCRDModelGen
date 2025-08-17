@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleList : IKubernetesO
     [JsonPropertyName("items")]
     public IList<V1alpha1ComputeNetworkFirewallPolicyRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The firewall policy of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecFirewallPolicyRef
@@ -50,7 +53,9 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecFirewallPolicyR
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecMatchLayer4Configs
@@ -63,7 +68,9 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecMatchLayer4Conf
     [JsonPropertyName("ports")]
     public IList<string>? Ports { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecMatchSrcSecureTags
@@ -76,7 +83,9 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecMatchSrcSecureT
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecMatch
@@ -129,7 +138,9 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecMatch
     [JsonPropertyName("srcThreatIntelligences")]
     public IList<string>? SrcThreatIntelligences { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecProjectRef
@@ -146,7 +157,9 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecTargetSecureTags
@@ -159,7 +172,9 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecTargetSecureTag
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A list of service accounts indicating the sets of instances that are applied with this rule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecTargetServiceAccountRefs
@@ -176,7 +191,9 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecTargetServiceAc
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpec
@@ -229,7 +246,9 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpec
     [JsonPropertyName("targetServiceAccountRefs")]
     public IList<V1alpha1ComputeNetworkFirewallPolicyRuleSpecTargetServiceAccountRefs>? TargetServiceAccountRefs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkFirewallPolicyRuleStatusConditions
@@ -254,7 +273,9 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkFirewallPolicyRuleStatus
@@ -275,7 +296,9 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleStatus
     [JsonPropertyName("ruleTupleCount")]
     public int? RuleTupleCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -305,3 +328,4 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRule : IKubernetesObjec
     [JsonPropertyName("status")]
     public V1alpha1ComputeNetworkFirewallPolicyRuleStatus? Status { get; set; }
 }
+#nullable disable

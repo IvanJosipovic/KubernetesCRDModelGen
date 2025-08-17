@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appplatform.azure.upbound.io;
+#nullable enable
 /// <summary>SpringCloudAppCosmosDBAssociation is the Schema for the SpringCloudAppCosmosDBAssociations API. Associates a</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationList : IKubernetesO
     [JsonPropertyName("items")]
     public IList<V1beta1SpringCloudAppCosmosDBAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosmosdbAccessKeyRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosm
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in cosmosdb to populate cosmosdbAccessKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosmosdbAccessKeyRef
@@ -59,7 +64,9 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosm
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosmosdbAccessKeyRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosmosdbAccessKeySelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosm
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in cosmosdb to populate cosmosdbAccessKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosmosdbAccessKeySelector
@@ -89,7 +98,9 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosm
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosmosdbAccessKeySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosmosdbAccountIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosm
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in cosmosdb to populate cosmosdbAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosmosdbAccountIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosm
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosmosdbAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosmosdbAccountIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosm
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in cosmosdb to populate cosmosdbAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosmosdbAccountIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosm
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosmosdbAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderSpringCloudAppIdRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderSpri
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SpringCloudApp in appplatform to populate springCloudAppId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderSpringCloudAppIdRef
@@ -171,7 +192,9 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderSpri
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderSpringCloudAppIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderSpringCloudAppIdSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderSpri
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SpringCloudApp in appplatform to populate springCloudAppId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderSpringCloudAppIdSelector
@@ -201,7 +226,9 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderSpri
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderSpringCloudAppIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProvider
@@ -266,7 +293,9 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProvider
     [JsonPropertyName("springCloudAppIdSelector")]
     public V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderSpringCloudAppIdSelector? SpringCloudAppIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCosmosdbAccessKeyRefPolicy
@@ -279,7 +308,9 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCos
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in cosmosdb to populate cosmosdbAccessKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCosmosdbAccessKeyRef
@@ -292,7 +323,9 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCos
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCosmosdbAccessKeyRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCosmosdbAccessKeySelectorPolicy
@@ -305,7 +338,9 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCos
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in cosmosdb to populate cosmosdbAccessKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCosmosdbAccessKeySelector
@@ -322,7 +357,9 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCos
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCosmosdbAccessKeySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCosmosdbAccountIdRefPolicy
@@ -335,7 +372,9 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCos
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in cosmosdb to populate cosmosdbAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCosmosdbAccountIdRef
@@ -348,7 +387,9 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCos
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCosmosdbAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCosmosdbAccountIdSelectorPolicy
@@ -361,7 +402,9 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCos
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in cosmosdb to populate cosmosdbAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCosmosdbAccountIdSelector
@@ -378,7 +421,9 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCos
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCosmosdbAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecInitProvider
@@ -431,7 +476,9 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecInitProvider
     [JsonPropertyName("cosmosdbSqlDatabaseName")]
     public string? CosmosdbSqlDatabaseName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecProviderConfigRefPolicy
@@ -444,7 +491,9 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecProviderConfigR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecProviderConfigRef
@@ -457,7 +506,9 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecProviderConfigR
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppCosmosDBAssociationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecWriteConnectionSecretToRef
@@ -470,7 +521,9 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecWriteConnection
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudAppCosmosDBAssociationSpec defines the desired state of SpringCloudAppCosmosDBAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppCosmosDBAssociationSpec
@@ -499,7 +552,9 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SpringCloudAppCosmosDBAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppCosmosDBAssociationStatusAtProvider
@@ -544,7 +599,9 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationStatusAtProvider
     [JsonPropertyName("springCloudAppId")]
     public string? SpringCloudAppId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppCosmosDBAssociationStatusConditions
@@ -573,7 +630,9 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudAppCosmosDBAssociationStatus defines the observed state of SpringCloudAppCosmosDBAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppCosmosDBAssociationStatus
@@ -590,7 +649,9 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudAppCosmosDBAssociation is the Schema for the SpringCloudAppCosmosDBAssociations API. Associates a</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -620,3 +681,4 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociation : IKubernetesObjec
     [JsonPropertyName("status")]
     public V1beta1SpringCloudAppCosmosDBAssociationStatus? Status { get; set; }
 }
+#nullable disable

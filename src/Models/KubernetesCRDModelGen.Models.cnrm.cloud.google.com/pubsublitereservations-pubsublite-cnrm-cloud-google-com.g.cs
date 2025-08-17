@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pubsublite.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PubSubLiteReservationList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1PubSubLiteReservation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PubSubLiteReservationSpecProjectRef
@@ -50,7 +53,9 @@ public partial class V1beta1PubSubLiteReservationSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PubSubLiteReservationSpec
@@ -71,7 +76,9 @@ public partial class V1beta1PubSubLiteReservationSpec
     [JsonPropertyName("throughputCapacity")]
     public int ThroughputCapacity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PubSubLiteReservationStatusConditions
@@ -96,7 +103,9 @@ public partial class V1beta1PubSubLiteReservationStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PubSubLiteReservationStatus
@@ -109,7 +118,9 @@ public partial class V1beta1PubSubLiteReservationStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -139,3 +150,4 @@ public partial class V1beta1PubSubLiteReservation : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1PubSubLiteReservationStatus? Status { get; set; }
 }
+#nullable disable

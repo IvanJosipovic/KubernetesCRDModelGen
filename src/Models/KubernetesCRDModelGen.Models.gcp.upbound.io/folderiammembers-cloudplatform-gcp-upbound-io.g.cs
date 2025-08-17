@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudplatform.gcp.upbound.io;
+#nullable enable
 /// <summary>FolderIAMMember is the Schema for the FolderIAMMembers API. &lt;no value&gt;</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FolderIAMMemberList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1FolderIAMMember> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderIAMMemberSpecForProviderCondition
@@ -50,7 +53,9 @@ public partial class V1beta1FolderIAMMemberSpecForProviderCondition
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderIAMMemberSpecForProviderFolderRefPolicy
@@ -63,7 +68,9 @@ public partial class V1beta1FolderIAMMemberSpecForProviderFolderRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Folder in cloudplatform to populate folder.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderIAMMemberSpecForProviderFolderRef
@@ -76,7 +83,9 @@ public partial class V1beta1FolderIAMMemberSpecForProviderFolderRef
     [JsonPropertyName("policy")]
     public V1beta1FolderIAMMemberSpecForProviderFolderRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderIAMMemberSpecForProviderFolderSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1FolderIAMMemberSpecForProviderFolderSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Folder in cloudplatform to populate folder.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderIAMMemberSpecForProviderFolderSelector
@@ -106,7 +117,9 @@ public partial class V1beta1FolderIAMMemberSpecForProviderFolderSelector
     [JsonPropertyName("policy")]
     public V1beta1FolderIAMMemberSpecForProviderFolderSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderIAMMemberSpecForProvider
@@ -135,7 +148,9 @@ public partial class V1beta1FolderIAMMemberSpecForProvider
     [JsonPropertyName("role")]
     public string? Role { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderIAMMemberSpecInitProviderCondition
@@ -152,7 +167,9 @@ public partial class V1beta1FolderIAMMemberSpecInitProviderCondition
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderIAMMemberSpecInitProviderFolderRefPolicy
@@ -165,7 +182,9 @@ public partial class V1beta1FolderIAMMemberSpecInitProviderFolderRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Folder in cloudplatform to populate folder.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderIAMMemberSpecInitProviderFolderRef
@@ -178,7 +197,9 @@ public partial class V1beta1FolderIAMMemberSpecInitProviderFolderRef
     [JsonPropertyName("policy")]
     public V1beta1FolderIAMMemberSpecInitProviderFolderRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderIAMMemberSpecInitProviderFolderSelectorPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1FolderIAMMemberSpecInitProviderFolderSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Folder in cloudplatform to populate folder.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderIAMMemberSpecInitProviderFolderSelector
@@ -208,7 +231,9 @@ public partial class V1beta1FolderIAMMemberSpecInitProviderFolderSelector
     [JsonPropertyName("policy")]
     public V1beta1FolderIAMMemberSpecInitProviderFolderSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderIAMMemberSpecInitProvider
@@ -237,7 +262,9 @@ public partial class V1beta1FolderIAMMemberSpecInitProvider
     [JsonPropertyName("role")]
     public string? Role { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderIAMMemberSpecProviderConfigRefPolicy
@@ -250,7 +277,9 @@ public partial class V1beta1FolderIAMMemberSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderIAMMemberSpecProviderConfigRef
@@ -263,7 +292,9 @@ public partial class V1beta1FolderIAMMemberSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1FolderIAMMemberSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderIAMMemberSpecWriteConnectionSecretToRef
@@ -276,7 +307,9 @@ public partial class V1beta1FolderIAMMemberSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FolderIAMMemberSpec defines the desired state of FolderIAMMember</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderIAMMemberSpec
@@ -305,7 +338,9 @@ public partial class V1beta1FolderIAMMemberSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1FolderIAMMemberSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderIAMMemberStatusAtProviderCondition
@@ -322,7 +357,9 @@ public partial class V1beta1FolderIAMMemberStatusAtProviderCondition
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderIAMMemberStatusAtProvider
@@ -351,7 +388,9 @@ public partial class V1beta1FolderIAMMemberStatusAtProvider
     [JsonPropertyName("role")]
     public string? Role { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderIAMMemberStatusConditions
@@ -380,7 +419,9 @@ public partial class V1beta1FolderIAMMemberStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FolderIAMMemberStatus defines the observed state of FolderIAMMember.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderIAMMemberStatus
@@ -397,7 +438,9 @@ public partial class V1beta1FolderIAMMemberStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FolderIAMMember is the Schema for the FolderIAMMembers API. &lt;no value&gt;</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -427,3 +470,4 @@ public partial class V1beta1FolderIAMMember : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1FolderIAMMemberStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20240301.VirtualNetworksVirtualNetworkPeering Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/virtualNetwork.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings/{virtualNetworkPeeringName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringLis
     [JsonPropertyName("items")]
     public IList<V1api20240301storageVirtualNetworksVirtualNetworkPeering> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AddressSpace AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSpecLocalAddressSpace
@@ -46,7 +49,9 @@ public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSpe
     [JsonPropertyName("addressPrefixes")]
     public IList<string>? AddressPrefixes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AddressSpace AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSpecLocalVirtualNetworkAddressSpace
@@ -59,7 +64,9 @@ public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSpe
     [JsonPropertyName("addressPrefixes")]
     public IList<string>? AddressPrefixes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSpecOperatorSpecConfigMapExpressions
@@ -76,7 +83,9 @@ public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSpe
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSpecOperatorSpecSecretExpressions
@@ -93,7 +102,9 @@ public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSpe
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VirtualNetworksVirtualNetworkPeeringOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSpecOperatorSpec
@@ -110,7 +121,9 @@ public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSpe
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20240301storageVirtualNetworksVirtualNetworkPeeringSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a network.azure.com/VirtualNetwork resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSpecOwner
@@ -123,7 +136,9 @@ public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSpe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AddressSpace AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSpecRemoteAddressSpace
@@ -136,7 +151,9 @@ public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSpe
     [JsonPropertyName("addressPrefixes")]
     public IList<string>? AddressPrefixes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VirtualNetworkBgpCommunities Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSpecRemoteBgpCommunities
@@ -149,7 +166,9 @@ public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSpe
     [JsonPropertyName("virtualNetworkCommunity")]
     public string? VirtualNetworkCommunity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSpecRemoteVirtualNetworkReference
@@ -170,7 +189,9 @@ public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSpe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSpecRemoteVirtualNetwork
@@ -183,7 +204,9 @@ public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSpe
     [JsonPropertyName("reference")]
     public V1api20240301storageVirtualNetworksVirtualNetworkPeeringSpecRemoteVirtualNetworkReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AddressSpace AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSpecRemoteVirtualNetworkAddressSpace
@@ -196,7 +219,9 @@ public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSpe
     [JsonPropertyName("addressPrefixes")]
     public IList<string>? AddressPrefixes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VirtualNetworksVirtualNetworkPeering_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSpec
@@ -289,7 +314,9 @@ public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSpe
     [JsonPropertyName("useRemoteGateways")]
     public bool? UseRemoteGateways { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringStatusConditions
@@ -322,7 +349,9 @@ public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSta
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AddressSpace_STATUS AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringStatusLocalAddressSpace
@@ -335,7 +364,9 @@ public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSta
     [JsonPropertyName("addressPrefixes")]
     public IList<string>? AddressPrefixes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AddressSpace_STATUS AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringStatusLocalVirtualNetworkAddressSpace
@@ -348,7 +379,9 @@ public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSta
     [JsonPropertyName("addressPrefixes")]
     public IList<string>? AddressPrefixes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AddressSpace_STATUS AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringStatusRemoteAddressSpace
@@ -361,7 +394,9 @@ public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSta
     [JsonPropertyName("addressPrefixes")]
     public IList<string>? AddressPrefixes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VirtualNetworkBgpCommunities_STATUS Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringStatusRemoteBgpCommunities
@@ -378,7 +413,9 @@ public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSta
     [JsonPropertyName("virtualNetworkCommunity")]
     public string? VirtualNetworkCommunity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringStatusRemoteVirtualNetwork
@@ -391,7 +428,9 @@ public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSta
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AddressSpace_STATUS AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringStatusRemoteVirtualNetworkAddressSpace
@@ -404,7 +443,9 @@ public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSta
     [JsonPropertyName("addressPrefixes")]
     public IList<string>? AddressPrefixes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VirtualNetworkEncryption_STATUS Indicates if encryption is enabled on virtual network and if VM without encryption is allowed in encrypted VNet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringStatusRemoteVirtualNetworkEncryption
@@ -421,7 +462,9 @@ public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSta
     [JsonPropertyName("enforcement")]
     public string? Enforcement { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VirtualNetworksVirtualNetworkPeering_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringStatus
@@ -530,7 +573,9 @@ public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeeringSta
     [JsonPropertyName("useRemoteGateways")]
     public bool? UseRemoteGateways { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VirtualNetworksVirtualNetworkPeering Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/virtualNetwork.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings/{virtualNetworkPeeringName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -560,3 +605,4 @@ public partial class V1api20240301storageVirtualNetworksVirtualNetworkPeering : 
     [JsonPropertyName("status")]
     public V1api20240301storageVirtualNetworksVirtualNetworkPeeringStatus? Status { get; set; }
 }
+#nullable disable

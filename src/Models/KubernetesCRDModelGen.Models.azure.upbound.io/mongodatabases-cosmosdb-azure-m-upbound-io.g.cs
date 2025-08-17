@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cosmosdb.azure.m.upbound.io;
+#nullable enable
 /// <summary>MongoDatabase is the Schema for the MongoDatabases API. Manages a Mongo Database within a Cosmos DB Account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MongoDatabaseList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1beta1MongoDatabase> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoDatabaseSpecForProviderAccountNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1MongoDatabaseSpecForProviderAccountNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in cosmosdb to populate accountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoDatabaseSpecForProviderAccountNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1MongoDatabaseSpecForProviderAccountNameRef
     [JsonPropertyName("policy")]
     public V1beta1MongoDatabaseSpecForProviderAccountNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoDatabaseSpecForProviderAccountNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1MongoDatabaseSpecForProviderAccountNameSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in cosmosdb to populate accountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoDatabaseSpecForProviderAccountNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1MongoDatabaseSpecForProviderAccountNameSelector
     [JsonPropertyName("policy")]
     public V1beta1MongoDatabaseSpecForProviderAccountNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An autoscale_settings block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoDatabaseSpecForProviderAutoscaleSettings
@@ -106,7 +117,9 @@ public partial class V1beta1MongoDatabaseSpecForProviderAutoscaleSettings
     [JsonPropertyName("maxThroughput")]
     public double? MaxThroughput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoDatabaseSpecForProviderResourceGroupNameRefPolicy
@@ -119,7 +132,9 @@ public partial class V1beta1MongoDatabaseSpecForProviderResourceGroupNameRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoDatabaseSpecForProviderResourceGroupNameRef
@@ -136,7 +151,9 @@ public partial class V1beta1MongoDatabaseSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1MongoDatabaseSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoDatabaseSpecForProviderResourceGroupNameSelectorPolicy
@@ -149,7 +166,9 @@ public partial class V1beta1MongoDatabaseSpecForProviderResourceGroupNameSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoDatabaseSpecForProviderResourceGroupNameSelector
@@ -170,7 +189,9 @@ public partial class V1beta1MongoDatabaseSpecForProviderResourceGroupNameSelecto
     [JsonPropertyName("policy")]
     public V1beta1MongoDatabaseSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoDatabaseSpecForProvider
@@ -207,7 +228,9 @@ public partial class V1beta1MongoDatabaseSpecForProvider
     [JsonPropertyName("throughput")]
     public double? Throughput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An autoscale_settings block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoDatabaseSpecInitProviderAutoscaleSettings
@@ -216,7 +239,9 @@ public partial class V1beta1MongoDatabaseSpecInitProviderAutoscaleSettings
     [JsonPropertyName("maxThroughput")]
     public double? MaxThroughput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoDatabaseSpecInitProvider
@@ -229,7 +254,9 @@ public partial class V1beta1MongoDatabaseSpecInitProvider
     [JsonPropertyName("throughput")]
     public double? Throughput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoDatabaseSpecProviderConfigRef
@@ -242,7 +269,9 @@ public partial class V1beta1MongoDatabaseSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoDatabaseSpecWriteConnectionSecretToRef
@@ -251,7 +280,9 @@ public partial class V1beta1MongoDatabaseSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MongoDatabaseSpec defines the desired state of MongoDatabase</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoDatabaseSpec
@@ -276,7 +307,9 @@ public partial class V1beta1MongoDatabaseSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MongoDatabaseSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An autoscale_settings block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoDatabaseStatusAtProviderAutoscaleSettings
@@ -285,7 +318,9 @@ public partial class V1beta1MongoDatabaseStatusAtProviderAutoscaleSettings
     [JsonPropertyName("maxThroughput")]
     public double? MaxThroughput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoDatabaseStatusAtProvider
@@ -310,7 +345,9 @@ public partial class V1beta1MongoDatabaseStatusAtProvider
     [JsonPropertyName("throughput")]
     public double? Throughput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoDatabaseStatusConditions
@@ -339,7 +376,9 @@ public partial class V1beta1MongoDatabaseStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MongoDatabaseStatus defines the observed state of MongoDatabase.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoDatabaseStatus
@@ -356,7 +395,9 @@ public partial class V1beta1MongoDatabaseStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MongoDatabase is the Schema for the MongoDatabases API. Manages a Mongo Database within a Cosmos DB Account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -386,3 +427,4 @@ public partial class V1beta1MongoDatabase : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1MongoDatabaseStatus? Status { get; set; }
 }
+#nullable disable

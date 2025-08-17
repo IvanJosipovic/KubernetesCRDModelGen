@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudidentity.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>CloudIdentityMembership is the Schema for the CloudIdentityMembership API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1CloudIdentityMembershipList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1CloudIdentityMembership> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityMembershipSpecGroupRef
@@ -50,7 +53,9 @@ public partial class V1beta1CloudIdentityMembershipSpecGroupRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The `EntityKey` of the member. Either `member_key` or `preferred_member_key` must be set when calling MembershipsService.CreateMembership but not both; both shall be set when returned.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityMembershipSpecMemberKey
@@ -63,7 +68,9 @@ public partial class V1beta1CloudIdentityMembershipSpecMemberKey
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Immutable. The `EntityKey` of the member. Either `member_key` or `preferred_member_key` must be set when calling MembershipsService.CreateMembership but not both; both shall be set when returned.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityMembershipSpecPreferredMemberKey
@@ -76,7 +83,9 @@ public partial class V1beta1CloudIdentityMembershipSpecPreferredMemberKey
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The expiry details of the `MembershipRole`. Expiry details are only supported for `MEMBER` `MembershipRoles`. May be set if `name` is `MEMBER`. Must not be set if `name` is any other value.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityMembershipSpecRolesExpiryDetail
@@ -85,7 +94,9 @@ public partial class V1beta1CloudIdentityMembershipSpecRolesExpiryDetail
     [JsonPropertyName("expireTime")]
     public string? ExpireTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Evaluation of the member restriction applied to this membership. Empty if the user lacks permission to view the restriction evaluation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityMembershipSpecRolesRestrictionEvaluationsMemberRestrictionEvaluation
@@ -94,7 +105,9 @@ public partial class V1beta1CloudIdentityMembershipSpecRolesRestrictionEvaluatio
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Evaluations of restrictions applied to parent group on this membership.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityMembershipSpecRolesRestrictionEvaluations
@@ -103,7 +116,9 @@ public partial class V1beta1CloudIdentityMembershipSpecRolesRestrictionEvaluatio
     [JsonPropertyName("memberRestrictionEvaluation")]
     public V1beta1CloudIdentityMembershipSpecRolesRestrictionEvaluationsMemberRestrictionEvaluation? MemberRestrictionEvaluation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityMembershipSpecRoles
@@ -120,7 +135,9 @@ public partial class V1beta1CloudIdentityMembershipSpecRoles
     [JsonPropertyName("restrictionEvaluations")]
     public V1beta1CloudIdentityMembershipSpecRolesRestrictionEvaluations? RestrictionEvaluations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CloudIdentityMembershipSpec defines the desired state of CloudIdentityMembership</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityMembershipSpec
@@ -145,7 +162,9 @@ public partial class V1beta1CloudIdentityMembershipSpec
     [JsonPropertyName("roles")]
     public IList<V1beta1CloudIdentityMembershipSpecRoles> Roles { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityMembershipStatusConditions
@@ -170,7 +189,9 @@ public partial class V1beta1CloudIdentityMembershipStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. The display name of this member, if available</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityMembershipStatusDisplayName
@@ -187,7 +208,9 @@ public partial class V1beta1CloudIdentityMembershipStatusDisplayName
     [JsonPropertyName("givenName")]
     public string? GivenName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CloudIdentityMembershipStatus defines the config connector machine state of CloudIdentityMembership</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityMembershipStatus
@@ -224,7 +247,9 @@ public partial class V1beta1CloudIdentityMembershipStatus
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CloudIdentityMembership is the Schema for the CloudIdentityMembership API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -254,3 +279,4 @@ public partial class V1beta1CloudIdentityMembership : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1CloudIdentityMembershipStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.security.istio.io;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AuthorizationPolicyList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1AuthorizationPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies detailed configuration of the CUSTOM action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizationPolicySpecProvider
@@ -42,7 +45,9 @@ public partial class V1beta1AuthorizationPolicySpecProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source specifies the source of a request.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizationPolicySpecRulesFromSource
@@ -95,7 +100,9 @@ public partial class V1beta1AuthorizationPolicySpecRulesFromSource
     [JsonPropertyName("serviceAccounts")]
     public IList<string>? ServiceAccounts { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizationPolicySpecRulesFrom
@@ -104,7 +111,9 @@ public partial class V1beta1AuthorizationPolicySpecRulesFrom
     [JsonPropertyName("source")]
     public V1beta1AuthorizationPolicySpecRulesFromSource? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Operation specifies the operation of a request.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizationPolicySpecRulesToOperation
@@ -141,7 +150,9 @@ public partial class V1beta1AuthorizationPolicySpecRulesToOperation
     [JsonPropertyName("ports")]
     public IList<string>? Ports { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizationPolicySpecRulesTo
@@ -150,7 +161,9 @@ public partial class V1beta1AuthorizationPolicySpecRulesTo
     [JsonPropertyName("operation")]
     public V1beta1AuthorizationPolicySpecRulesToOperation? Operation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizationPolicySpecRulesWhen
@@ -167,7 +180,9 @@ public partial class V1beta1AuthorizationPolicySpecRulesWhen
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizationPolicySpecRules
@@ -184,7 +199,9 @@ public partial class V1beta1AuthorizationPolicySpecRules
     [JsonPropertyName("when")]
     public IList<V1beta1AuthorizationPolicySpecRulesWhen>? When { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizationPolicySpecSelector
@@ -193,7 +210,9 @@ public partial class V1beta1AuthorizationPolicySpecSelector
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizationPolicySpecTargetRef
@@ -214,7 +233,9 @@ public partial class V1beta1AuthorizationPolicySpecTargetRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizationPolicySpecTargetRefs
@@ -235,7 +256,9 @@ public partial class V1beta1AuthorizationPolicySpecTargetRefs
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for access control on workloads. See more details at: https://istio.io/docs/reference/config/security/authorization-policy.html</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizationPolicySpec
@@ -264,7 +287,9 @@ public partial class V1beta1AuthorizationPolicySpec
     [JsonPropertyName("targetRefs")]
     public IList<V1beta1AuthorizationPolicySpecTargetRefs>? TargetRefs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -294,3 +319,4 @@ public partial class V1beta1AuthorizationPolicy : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public JsonNode? Status { get; set; }
 }
+#nullable disable

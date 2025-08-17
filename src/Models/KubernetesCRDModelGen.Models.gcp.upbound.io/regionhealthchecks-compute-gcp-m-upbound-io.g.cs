@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.m.upbound.io;
+#nullable enable
 /// <summary>RegionHealthCheck is the Schema for the RegionHealthChecks API. Health Checks determine whether instances are responsive and able to do work.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RegionHealthCheckList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1RegionHealthCheck> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionHealthCheckSpecForProviderGrpcHealthCheck
@@ -54,7 +57,9 @@ public partial class V1beta1RegionHealthCheckSpecForProviderGrpcHealthCheck
     [JsonPropertyName("portSpecification")]
     public string? PortSpecification { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionHealthCheckSpecForProviderHttp2HealthCheck
@@ -87,7 +92,9 @@ public partial class V1beta1RegionHealthCheckSpecForProviderHttp2HealthCheck
     [JsonPropertyName("response")]
     public string? Response { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionHealthCheckSpecForProviderHttpHealthCheck
@@ -120,7 +127,9 @@ public partial class V1beta1RegionHealthCheckSpecForProviderHttpHealthCheck
     [JsonPropertyName("response")]
     public string? Response { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionHealthCheckSpecForProviderHttpsHealthCheck
@@ -153,7 +162,9 @@ public partial class V1beta1RegionHealthCheckSpecForProviderHttpsHealthCheck
     [JsonPropertyName("response")]
     public string? Response { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configure logging on this health check. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionHealthCheckSpecForProviderLogConfig
@@ -162,7 +173,9 @@ public partial class V1beta1RegionHealthCheckSpecForProviderLogConfig
     [JsonPropertyName("enable")]
     public bool? Enable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionHealthCheckSpecForProviderSslHealthCheck
@@ -191,7 +204,9 @@ public partial class V1beta1RegionHealthCheckSpecForProviderSslHealthCheck
     [JsonPropertyName("response")]
     public string? Response { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionHealthCheckSpecForProviderTcpHealthCheck
@@ -220,7 +235,9 @@ public partial class V1beta1RegionHealthCheckSpecForProviderTcpHealthCheck
     [JsonPropertyName("response")]
     public string? Response { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionHealthCheckSpecForProvider
@@ -281,7 +298,9 @@ public partial class V1beta1RegionHealthCheckSpecForProvider
     [JsonPropertyName("unhealthyThreshold")]
     public double? UnhealthyThreshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionHealthCheckSpecInitProviderGrpcHealthCheck
@@ -302,7 +321,9 @@ public partial class V1beta1RegionHealthCheckSpecInitProviderGrpcHealthCheck
     [JsonPropertyName("portSpecification")]
     public string? PortSpecification { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionHealthCheckSpecInitProviderHttp2HealthCheck
@@ -335,7 +356,9 @@ public partial class V1beta1RegionHealthCheckSpecInitProviderHttp2HealthCheck
     [JsonPropertyName("response")]
     public string? Response { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionHealthCheckSpecInitProviderHttpHealthCheck
@@ -368,7 +391,9 @@ public partial class V1beta1RegionHealthCheckSpecInitProviderHttpHealthCheck
     [JsonPropertyName("response")]
     public string? Response { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionHealthCheckSpecInitProviderHttpsHealthCheck
@@ -401,7 +426,9 @@ public partial class V1beta1RegionHealthCheckSpecInitProviderHttpsHealthCheck
     [JsonPropertyName("response")]
     public string? Response { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configure logging on this health check. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionHealthCheckSpecInitProviderLogConfig
@@ -410,7 +437,9 @@ public partial class V1beta1RegionHealthCheckSpecInitProviderLogConfig
     [JsonPropertyName("enable")]
     public bool? Enable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionHealthCheckSpecInitProviderSslHealthCheck
@@ -439,7 +468,9 @@ public partial class V1beta1RegionHealthCheckSpecInitProviderSslHealthCheck
     [JsonPropertyName("response")]
     public string? Response { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionHealthCheckSpecInitProviderTcpHealthCheck
@@ -468,7 +499,9 @@ public partial class V1beta1RegionHealthCheckSpecInitProviderTcpHealthCheck
     [JsonPropertyName("response")]
     public string? Response { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionHealthCheckSpecInitProvider
@@ -525,7 +558,9 @@ public partial class V1beta1RegionHealthCheckSpecInitProvider
     [JsonPropertyName("unhealthyThreshold")]
     public double? UnhealthyThreshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionHealthCheckSpecProviderConfigRef
@@ -538,7 +573,9 @@ public partial class V1beta1RegionHealthCheckSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionHealthCheckSpecWriteConnectionSecretToRef
@@ -547,7 +584,9 @@ public partial class V1beta1RegionHealthCheckSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegionHealthCheckSpec defines the desired state of RegionHealthCheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionHealthCheckSpec
@@ -572,7 +611,9 @@ public partial class V1beta1RegionHealthCheckSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RegionHealthCheckSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionHealthCheckStatusAtProviderGrpcHealthCheck
@@ -593,7 +634,9 @@ public partial class V1beta1RegionHealthCheckStatusAtProviderGrpcHealthCheck
     [JsonPropertyName("portSpecification")]
     public string? PortSpecification { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionHealthCheckStatusAtProviderHttp2HealthCheck
@@ -626,7 +669,9 @@ public partial class V1beta1RegionHealthCheckStatusAtProviderHttp2HealthCheck
     [JsonPropertyName("response")]
     public string? Response { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionHealthCheckStatusAtProviderHttpHealthCheck
@@ -659,7 +704,9 @@ public partial class V1beta1RegionHealthCheckStatusAtProviderHttpHealthCheck
     [JsonPropertyName("response")]
     public string? Response { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionHealthCheckStatusAtProviderHttpsHealthCheck
@@ -692,7 +739,9 @@ public partial class V1beta1RegionHealthCheckStatusAtProviderHttpsHealthCheck
     [JsonPropertyName("response")]
     public string? Response { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configure logging on this health check. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionHealthCheckStatusAtProviderLogConfig
@@ -701,7 +750,9 @@ public partial class V1beta1RegionHealthCheckStatusAtProviderLogConfig
     [JsonPropertyName("enable")]
     public bool? Enable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionHealthCheckStatusAtProviderSslHealthCheck
@@ -730,7 +781,9 @@ public partial class V1beta1RegionHealthCheckStatusAtProviderSslHealthCheck
     [JsonPropertyName("response")]
     public string? Response { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionHealthCheckStatusAtProviderTcpHealthCheck
@@ -759,7 +812,9 @@ public partial class V1beta1RegionHealthCheckStatusAtProviderTcpHealthCheck
     [JsonPropertyName("response")]
     public string? Response { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionHealthCheckStatusAtProvider
@@ -840,7 +895,9 @@ public partial class V1beta1RegionHealthCheckStatusAtProvider
     [JsonPropertyName("unhealthyThreshold")]
     public double? UnhealthyThreshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionHealthCheckStatusConditions
@@ -869,7 +926,9 @@ public partial class V1beta1RegionHealthCheckStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegionHealthCheckStatus defines the observed state of RegionHealthCheck.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionHealthCheckStatus
@@ -886,7 +945,9 @@ public partial class V1beta1RegionHealthCheckStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegionHealthCheck is the Schema for the RegionHealthChecks API. Health Checks determine whether instances are responsive and able to do work.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -916,3 +977,4 @@ public partial class V1beta1RegionHealthCheck : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1RegionHealthCheckStatus? Status { get; set; }
 }
+#nullable disable

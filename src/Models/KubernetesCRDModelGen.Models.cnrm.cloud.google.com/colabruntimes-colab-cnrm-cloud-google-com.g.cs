@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.colab.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>ColabRuntime is the Schema for the ColabRuntime API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1ColabRuntimeList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1alpha1ColabRuntime> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The pointer to NotebookRuntimeTemplate this NotebookRuntime is created from.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ColabRuntimeSpecColabRuntimeTemplateRef
@@ -50,7 +53,9 @@ public partial class V1alpha1ColabRuntimeSpecColabRuntimeTemplateRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ColabRuntimeSpecProjectRef
@@ -71,7 +76,9 @@ public partial class V1alpha1ColabRuntimeSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ColabRuntimeSpec defines the desired state of ColabRuntime</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ColabRuntimeSpec
@@ -112,7 +119,9 @@ public partial class V1alpha1ColabRuntimeSpec
     [JsonPropertyName("runtimeUser")]
     public string RuntimeUser { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ColabRuntimeStatusConditions
@@ -137,7 +146,9 @@ public partial class V1alpha1ColabRuntimeStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Customer-managed encryption key spec for the notebook runtime.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ColabRuntimeStatusObservedStateEncryptionSpec
@@ -146,7 +157,9 @@ public partial class V1alpha1ColabRuntimeStatusObservedStateEncryptionSpec
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. The idle shutdown configuration of the notebook runtime.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ColabRuntimeStatusObservedStateIdleShutdownConfig
@@ -159,7 +172,9 @@ public partial class V1alpha1ColabRuntimeStatusObservedStateIdleShutdownConfig
     [JsonPropertyName("idleTimeout")]
     public string? IdleTimeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ColabRuntimeStatusObservedState
@@ -212,7 +227,9 @@ public partial class V1alpha1ColabRuntimeStatusObservedState
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ColabRuntimeStatus defines the config connector machine state of ColabRuntime</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ColabRuntimeStatus
@@ -233,7 +250,9 @@ public partial class V1alpha1ColabRuntimeStatus
     [JsonPropertyName("observedState")]
     public V1alpha1ColabRuntimeStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ColabRuntime is the Schema for the ColabRuntime API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -263,3 +282,4 @@ public partial class V1alpha1ColabRuntime : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1alpha1ColabRuntimeStatus? Status { get; set; }
 }
+#nullable disable

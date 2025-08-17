@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kms.aws.upbound.io;
+#nullable enable
 /// <summary>Grant is the Schema for the Grants API. Provides a resource-based access control mechanism for KMS Customer Master Keys.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1GrantList : IKubernetesObject<V1ListMeta>, IItems<V1
     [JsonPropertyName("items")]
     public IList<V1beta1Grant> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GrantSpecForProviderConstraints
@@ -46,7 +49,9 @@ public partial class V1beta1GrantSpecForProviderConstraints
     [JsonPropertyName("encryptionContextSubset")]
     public IDictionary<string, string>? EncryptionContextSubset { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GrantSpecForProviderGranteePrincipalRefPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1GrantSpecForProviderGranteePrincipalRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate granteePrincipal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GrantSpecForProviderGranteePrincipalRef
@@ -72,7 +79,9 @@ public partial class V1beta1GrantSpecForProviderGranteePrincipalRef
     [JsonPropertyName("policy")]
     public V1beta1GrantSpecForProviderGranteePrincipalRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GrantSpecForProviderGranteePrincipalSelectorPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1GrantSpecForProviderGranteePrincipalSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate granteePrincipal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GrantSpecForProviderGranteePrincipalSelector
@@ -102,7 +113,9 @@ public partial class V1beta1GrantSpecForProviderGranteePrincipalSelector
     [JsonPropertyName("policy")]
     public V1beta1GrantSpecForProviderGranteePrincipalSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GrantSpecForProviderKeyIdRefPolicy
@@ -115,7 +128,9 @@ public partial class V1beta1GrantSpecForProviderKeyIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate keyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GrantSpecForProviderKeyIdRef
@@ -128,7 +143,9 @@ public partial class V1beta1GrantSpecForProviderKeyIdRef
     [JsonPropertyName("policy")]
     public V1beta1GrantSpecForProviderKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GrantSpecForProviderKeyIdSelectorPolicy
@@ -141,7 +158,9 @@ public partial class V1beta1GrantSpecForProviderKeyIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate keyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GrantSpecForProviderKeyIdSelector
@@ -158,7 +177,9 @@ public partial class V1beta1GrantSpecForProviderKeyIdSelector
     [JsonPropertyName("policy")]
     public V1beta1GrantSpecForProviderKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GrantSpecForProvider
@@ -215,7 +236,9 @@ public partial class V1beta1GrantSpecForProvider
     [JsonPropertyName("retiringPrincipal")]
     public string? RetiringPrincipal { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GrantSpecInitProviderConstraints
@@ -228,7 +251,9 @@ public partial class V1beta1GrantSpecInitProviderConstraints
     [JsonPropertyName("encryptionContextSubset")]
     public IDictionary<string, string>? EncryptionContextSubset { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GrantSpecInitProviderGranteePrincipalRefPolicy
@@ -241,7 +266,9 @@ public partial class V1beta1GrantSpecInitProviderGranteePrincipalRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate granteePrincipal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GrantSpecInitProviderGranteePrincipalRef
@@ -254,7 +281,9 @@ public partial class V1beta1GrantSpecInitProviderGranteePrincipalRef
     [JsonPropertyName("policy")]
     public V1beta1GrantSpecInitProviderGranteePrincipalRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GrantSpecInitProviderGranteePrincipalSelectorPolicy
@@ -267,7 +296,9 @@ public partial class V1beta1GrantSpecInitProviderGranteePrincipalSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate granteePrincipal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GrantSpecInitProviderGranteePrincipalSelector
@@ -284,7 +315,9 @@ public partial class V1beta1GrantSpecInitProviderGranteePrincipalSelector
     [JsonPropertyName("policy")]
     public V1beta1GrantSpecInitProviderGranteePrincipalSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GrantSpecInitProviderKeyIdRefPolicy
@@ -297,7 +330,9 @@ public partial class V1beta1GrantSpecInitProviderKeyIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate keyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GrantSpecInitProviderKeyIdRef
@@ -310,7 +345,9 @@ public partial class V1beta1GrantSpecInitProviderKeyIdRef
     [JsonPropertyName("policy")]
     public V1beta1GrantSpecInitProviderKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GrantSpecInitProviderKeyIdSelectorPolicy
@@ -323,7 +360,9 @@ public partial class V1beta1GrantSpecInitProviderKeyIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate keyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GrantSpecInitProviderKeyIdSelector
@@ -340,7 +379,9 @@ public partial class V1beta1GrantSpecInitProviderKeyIdSelector
     [JsonPropertyName("policy")]
     public V1beta1GrantSpecInitProviderKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GrantSpecInitProvider
@@ -393,7 +434,9 @@ public partial class V1beta1GrantSpecInitProvider
     [JsonPropertyName("retiringPrincipal")]
     public string? RetiringPrincipal { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GrantSpecProviderConfigRefPolicy
@@ -406,7 +449,9 @@ public partial class V1beta1GrantSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GrantSpecProviderConfigRef
@@ -419,7 +464,9 @@ public partial class V1beta1GrantSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1GrantSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GrantSpecWriteConnectionSecretToRef
@@ -432,7 +479,9 @@ public partial class V1beta1GrantSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GrantSpec defines the desired state of Grant</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GrantSpec
@@ -461,7 +510,9 @@ public partial class V1beta1GrantSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1GrantSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GrantStatusAtProviderConstraints
@@ -474,7 +525,9 @@ public partial class V1beta1GrantStatusAtProviderConstraints
     [JsonPropertyName("encryptionContextSubset")]
     public IDictionary<string, string>? EncryptionContextSubset { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GrantStatusAtProvider
@@ -523,7 +576,9 @@ public partial class V1beta1GrantStatusAtProvider
     [JsonPropertyName("retiringPrincipal")]
     public string? RetiringPrincipal { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GrantStatusConditions
@@ -552,7 +607,9 @@ public partial class V1beta1GrantStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GrantStatus defines the observed state of Grant.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GrantStatus
@@ -569,7 +626,9 @@ public partial class V1beta1GrantStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Grant is the Schema for the Grants API. Provides a resource-based access control mechanism for KMS Customer Master Keys.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -599,3 +658,4 @@ public partial class V1beta1Grant : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     [JsonPropertyName("status")]
     public V1beta1GrantStatus? Status { get; set; }
 }
+#nullable disable

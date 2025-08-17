@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.databricks.crossplane.io;
+#nullable enable
 /// <summary>InstancePool is the Schema for the InstancePools API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1InstancePoolList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1alpha1InstancePool> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecForProviderAwsAttributes
@@ -50,7 +53,9 @@ public partial class V1alpha1InstancePoolSpecForProviderAwsAttributes
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecForProviderAzureAttributes
@@ -63,7 +68,9 @@ public partial class V1alpha1InstancePoolSpecForProviderAzureAttributes
     [JsonPropertyName("spotBidMaxPrice")]
     public double? SpotBidMaxPrice { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecForProviderDiskSpecDiskType
@@ -76,7 +83,9 @@ public partial class V1alpha1InstancePoolSpecForProviderDiskSpecDiskType
     [JsonPropertyName("ebsVolumeType")]
     public string? EbsVolumeType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecForProviderDiskSpec
@@ -93,7 +102,9 @@ public partial class V1alpha1InstancePoolSpecForProviderDiskSpec
     [JsonPropertyName("diskType")]
     public IList<V1alpha1InstancePoolSpecForProviderDiskSpecDiskType>? DiskType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecForProviderGcpAttributes
@@ -110,7 +121,9 @@ public partial class V1alpha1InstancePoolSpecForProviderGcpAttributes
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecForProviderInstancePoolFleetAttributesFleetOnDemandOption
@@ -123,7 +136,9 @@ public partial class V1alpha1InstancePoolSpecForProviderInstancePoolFleetAttribu
     [JsonPropertyName("instancePoolsToUseCount")]
     public double? InstancePoolsToUseCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecForProviderInstancePoolFleetAttributesFleetSpotOption
@@ -136,7 +151,9 @@ public partial class V1alpha1InstancePoolSpecForProviderInstancePoolFleetAttribu
     [JsonPropertyName("instancePoolsToUseCount")]
     public double? InstancePoolsToUseCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecForProviderInstancePoolFleetAttributesLaunchTemplateOverride
@@ -149,7 +166,9 @@ public partial class V1alpha1InstancePoolSpecForProviderInstancePoolFleetAttribu
     [JsonPropertyName("instanceType")]
     public string? InstanceType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecForProviderInstancePoolFleetAttributes
@@ -166,7 +185,9 @@ public partial class V1alpha1InstancePoolSpecForProviderInstancePoolFleetAttribu
     [JsonPropertyName("launchTemplateOverride")]
     public IList<V1alpha1InstancePoolSpecForProviderInstancePoolFleetAttributesLaunchTemplateOverride>? LaunchTemplateOverride { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecForProviderPreloadedDockerImageBasicAuthPasswordSecretRef
@@ -183,7 +204,9 @@ public partial class V1alpha1InstancePoolSpecForProviderPreloadedDockerImageBasi
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecForProviderPreloadedDockerImageBasicAuth
@@ -196,7 +219,9 @@ public partial class V1alpha1InstancePoolSpecForProviderPreloadedDockerImageBasi
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecForProviderPreloadedDockerImage
@@ -209,7 +234,9 @@ public partial class V1alpha1InstancePoolSpecForProviderPreloadedDockerImage
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecForProvider
@@ -274,7 +301,9 @@ public partial class V1alpha1InstancePoolSpecForProvider
     [JsonPropertyName("preloadedSparkVersions")]
     public IList<string>? PreloadedSparkVersions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecInitProviderAwsAttributes
@@ -291,7 +320,9 @@ public partial class V1alpha1InstancePoolSpecInitProviderAwsAttributes
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecInitProviderAzureAttributes
@@ -304,7 +335,9 @@ public partial class V1alpha1InstancePoolSpecInitProviderAzureAttributes
     [JsonPropertyName("spotBidMaxPrice")]
     public double? SpotBidMaxPrice { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecInitProviderDiskSpecDiskType
@@ -317,7 +350,9 @@ public partial class V1alpha1InstancePoolSpecInitProviderDiskSpecDiskType
     [JsonPropertyName("ebsVolumeType")]
     public string? EbsVolumeType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecInitProviderDiskSpec
@@ -334,7 +369,9 @@ public partial class V1alpha1InstancePoolSpecInitProviderDiskSpec
     [JsonPropertyName("diskType")]
     public IList<V1alpha1InstancePoolSpecInitProviderDiskSpecDiskType>? DiskType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecInitProviderGcpAttributes
@@ -351,7 +388,9 @@ public partial class V1alpha1InstancePoolSpecInitProviderGcpAttributes
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecInitProviderInstancePoolFleetAttributesFleetOnDemandOption
@@ -364,7 +403,9 @@ public partial class V1alpha1InstancePoolSpecInitProviderInstancePoolFleetAttrib
     [JsonPropertyName("instancePoolsToUseCount")]
     public double? InstancePoolsToUseCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecInitProviderInstancePoolFleetAttributesFleetSpotOption
@@ -377,7 +418,9 @@ public partial class V1alpha1InstancePoolSpecInitProviderInstancePoolFleetAttrib
     [JsonPropertyName("instancePoolsToUseCount")]
     public double? InstancePoolsToUseCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecInitProviderInstancePoolFleetAttributesLaunchTemplateOverride
@@ -390,7 +433,9 @@ public partial class V1alpha1InstancePoolSpecInitProviderInstancePoolFleetAttrib
     [JsonPropertyName("instanceType")]
     public string? InstanceType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecInitProviderInstancePoolFleetAttributes
@@ -407,7 +452,9 @@ public partial class V1alpha1InstancePoolSpecInitProviderInstancePoolFleetAttrib
     [JsonPropertyName("launchTemplateOverride")]
     public IList<V1alpha1InstancePoolSpecInitProviderInstancePoolFleetAttributesLaunchTemplateOverride>? LaunchTemplateOverride { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecInitProviderPreloadedDockerImageBasicAuthPasswordSecretRef
@@ -424,7 +471,9 @@ public partial class V1alpha1InstancePoolSpecInitProviderPreloadedDockerImageBas
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecInitProviderPreloadedDockerImageBasicAuth
@@ -437,7 +486,9 @@ public partial class V1alpha1InstancePoolSpecInitProviderPreloadedDockerImageBas
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecInitProviderPreloadedDockerImage
@@ -450,7 +501,9 @@ public partial class V1alpha1InstancePoolSpecInitProviderPreloadedDockerImage
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecInitProvider
@@ -515,7 +568,9 @@ public partial class V1alpha1InstancePoolSpecInitProvider
     [JsonPropertyName("preloadedSparkVersions")]
     public IList<string>? PreloadedSparkVersions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecProviderConfigRefPolicy
@@ -528,7 +583,9 @@ public partial class V1alpha1InstancePoolSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecProviderConfigRef
@@ -541,7 +598,9 @@ public partial class V1alpha1InstancePoolSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1InstancePoolSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecPublishConnectionDetailsToConfigRefPolicy
@@ -554,7 +613,9 @@ public partial class V1alpha1InstancePoolSpecPublishConnectionDetailsToConfigRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecPublishConnectionDetailsToConfigRef
@@ -567,7 +628,9 @@ public partial class V1alpha1InstancePoolSpecPublishConnectionDetailsToConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1InstancePoolSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Metadata is the metadata for connection secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecPublishConnectionDetailsToMetadata
@@ -584,7 +647,9 @@ public partial class V1alpha1InstancePoolSpecPublishConnectionDetailsToMetadata
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecPublishConnectionDetailsTo
@@ -601,7 +666,9 @@ public partial class V1alpha1InstancePoolSpecPublishConnectionDetailsTo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpecWriteConnectionSecretToRef
@@ -614,7 +681,9 @@ public partial class V1alpha1InstancePoolSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InstancePoolSpec defines the desired state of InstancePool</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolSpec
@@ -647,7 +716,9 @@ public partial class V1alpha1InstancePoolSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1alpha1InstancePoolSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolStatusAtProviderAwsAttributes
@@ -664,7 +735,9 @@ public partial class V1alpha1InstancePoolStatusAtProviderAwsAttributes
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolStatusAtProviderAzureAttributes
@@ -677,7 +750,9 @@ public partial class V1alpha1InstancePoolStatusAtProviderAzureAttributes
     [JsonPropertyName("spotBidMaxPrice")]
     public double? SpotBidMaxPrice { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolStatusAtProviderDiskSpecDiskType
@@ -690,7 +765,9 @@ public partial class V1alpha1InstancePoolStatusAtProviderDiskSpecDiskType
     [JsonPropertyName("ebsVolumeType")]
     public string? EbsVolumeType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolStatusAtProviderDiskSpec
@@ -707,7 +784,9 @@ public partial class V1alpha1InstancePoolStatusAtProviderDiskSpec
     [JsonPropertyName("diskType")]
     public IList<V1alpha1InstancePoolStatusAtProviderDiskSpecDiskType>? DiskType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolStatusAtProviderGcpAttributes
@@ -724,7 +803,9 @@ public partial class V1alpha1InstancePoolStatusAtProviderGcpAttributes
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolStatusAtProviderInstancePoolFleetAttributesFleetOnDemandOption
@@ -737,7 +818,9 @@ public partial class V1alpha1InstancePoolStatusAtProviderInstancePoolFleetAttrib
     [JsonPropertyName("instancePoolsToUseCount")]
     public double? InstancePoolsToUseCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolStatusAtProviderInstancePoolFleetAttributesFleetSpotOption
@@ -750,7 +833,9 @@ public partial class V1alpha1InstancePoolStatusAtProviderInstancePoolFleetAttrib
     [JsonPropertyName("instancePoolsToUseCount")]
     public double? InstancePoolsToUseCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolStatusAtProviderInstancePoolFleetAttributesLaunchTemplateOverride
@@ -763,7 +848,9 @@ public partial class V1alpha1InstancePoolStatusAtProviderInstancePoolFleetAttrib
     [JsonPropertyName("instanceType")]
     public string? InstanceType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolStatusAtProviderInstancePoolFleetAttributes
@@ -780,7 +867,9 @@ public partial class V1alpha1InstancePoolStatusAtProviderInstancePoolFleetAttrib
     [JsonPropertyName("launchTemplateOverride")]
     public IList<V1alpha1InstancePoolStatusAtProviderInstancePoolFleetAttributesLaunchTemplateOverride>? LaunchTemplateOverride { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolStatusAtProviderPreloadedDockerImageBasicAuth
@@ -789,7 +878,9 @@ public partial class V1alpha1InstancePoolStatusAtProviderPreloadedDockerImageBas
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolStatusAtProviderPreloadedDockerImage
@@ -802,7 +893,9 @@ public partial class V1alpha1InstancePoolStatusAtProviderPreloadedDockerImage
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolStatusAtProvider
@@ -871,7 +964,9 @@ public partial class V1alpha1InstancePoolStatusAtProvider
     [JsonPropertyName("preloadedSparkVersions")]
     public IList<string>? PreloadedSparkVersions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolStatusConditions
@@ -900,7 +995,9 @@ public partial class V1alpha1InstancePoolStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InstancePoolStatus defines the observed state of InstancePool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1InstancePoolStatus
@@ -917,7 +1014,9 @@ public partial class V1alpha1InstancePoolStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InstancePool is the Schema for the InstancePools API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -947,3 +1046,4 @@ public partial class V1alpha1InstancePool : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1alpha1InstancePoolStatus? Status { get; set; }
 }
+#nullable disable

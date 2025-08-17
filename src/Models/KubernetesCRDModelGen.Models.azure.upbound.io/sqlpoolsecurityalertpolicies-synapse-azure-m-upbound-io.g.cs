@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.synapse.azure.m.upbound.io;
+#nullable enable
 /// <summary>SQLPoolSecurityAlertPolicy is the Schema for the SQLPoolSecurityAlertPolicys API. Manages a Security Alert Policy for a Synapse SQL Pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SQLPoolSecurityAlertPolicyList : IKubernetesObject<V
     [JsonPropertyName("items")]
     public IList<V1beta1SQLPoolSecurityAlertPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolSecurityAlertPolicySpecForProviderSqlPoolIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SQLPoolSecurityAlertPolicySpecForProviderSqlPoolIdRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SQLPool in synapse to populate sqlPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolSecurityAlertPolicySpecForProviderSqlPoolIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1SQLPoolSecurityAlertPolicySpecForProviderSqlPoolIdRe
     [JsonPropertyName("policy")]
     public V1beta1SQLPoolSecurityAlertPolicySpecForProviderSqlPoolIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolSecurityAlertPolicySpecForProviderSqlPoolIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1SQLPoolSecurityAlertPolicySpecForProviderSqlPoolIdSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SQLPool in synapse to populate sqlPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolSecurityAlertPolicySpecForProviderSqlPoolIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1SQLPoolSecurityAlertPolicySpecForProviderSqlPoolIdSe
     [JsonPropertyName("policy")]
     public V1beta1SQLPoolSecurityAlertPolicySpecForProviderSqlPoolIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the identifier key of the Threat Detection audit storage account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolSecurityAlertPolicySpecForProviderStorageAccountAccessKeySecretRef
@@ -110,7 +121,9 @@ public partial class V1beta1SQLPoolSecurityAlertPolicySpecForProviderStorageAcco
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolSecurityAlertPolicySpecForProviderStorageEndpointRefPolicy
@@ -123,7 +136,9 @@ public partial class V1beta1SQLPoolSecurityAlertPolicySpecForProviderStorageEndp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageEndpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolSecurityAlertPolicySpecForProviderStorageEndpointRef
@@ -140,7 +155,9 @@ public partial class V1beta1SQLPoolSecurityAlertPolicySpecForProviderStorageEndp
     [JsonPropertyName("policy")]
     public V1beta1SQLPoolSecurityAlertPolicySpecForProviderStorageEndpointRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolSecurityAlertPolicySpecForProviderStorageEndpointSelectorPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1SQLPoolSecurityAlertPolicySpecForProviderStorageEndp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageEndpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolSecurityAlertPolicySpecForProviderStorageEndpointSelector
@@ -174,7 +193,9 @@ public partial class V1beta1SQLPoolSecurityAlertPolicySpecForProviderStorageEndp
     [JsonPropertyName("policy")]
     public V1beta1SQLPoolSecurityAlertPolicySpecForProviderStorageEndpointSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolSecurityAlertPolicySpecForProvider
@@ -227,7 +248,9 @@ public partial class V1beta1SQLPoolSecurityAlertPolicySpecForProvider
     [JsonPropertyName("storageEndpointSelector")]
     public V1beta1SQLPoolSecurityAlertPolicySpecForProviderStorageEndpointSelector? StorageEndpointSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the identifier key of the Threat Detection audit storage account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolSecurityAlertPolicySpecInitProviderStorageAccountAccessKeySecretRef
@@ -240,7 +263,9 @@ public partial class V1beta1SQLPoolSecurityAlertPolicySpecInitProviderStorageAcc
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolSecurityAlertPolicySpecInitProviderStorageEndpointRefPolicy
@@ -253,7 +278,9 @@ public partial class V1beta1SQLPoolSecurityAlertPolicySpecInitProviderStorageEnd
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageEndpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolSecurityAlertPolicySpecInitProviderStorageEndpointRef
@@ -270,7 +297,9 @@ public partial class V1beta1SQLPoolSecurityAlertPolicySpecInitProviderStorageEnd
     [JsonPropertyName("policy")]
     public V1beta1SQLPoolSecurityAlertPolicySpecInitProviderStorageEndpointRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolSecurityAlertPolicySpecInitProviderStorageEndpointSelectorPolicy
@@ -283,7 +312,9 @@ public partial class V1beta1SQLPoolSecurityAlertPolicySpecInitProviderStorageEnd
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageEndpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolSecurityAlertPolicySpecInitProviderStorageEndpointSelector
@@ -304,7 +335,9 @@ public partial class V1beta1SQLPoolSecurityAlertPolicySpecInitProviderStorageEnd
     [JsonPropertyName("policy")]
     public V1beta1SQLPoolSecurityAlertPolicySpecInitProviderStorageEndpointSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolSecurityAlertPolicySpecInitProvider
@@ -345,7 +378,9 @@ public partial class V1beta1SQLPoolSecurityAlertPolicySpecInitProvider
     [JsonPropertyName("storageEndpointSelector")]
     public V1beta1SQLPoolSecurityAlertPolicySpecInitProviderStorageEndpointSelector? StorageEndpointSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolSecurityAlertPolicySpecProviderConfigRef
@@ -358,7 +393,9 @@ public partial class V1beta1SQLPoolSecurityAlertPolicySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolSecurityAlertPolicySpecWriteConnectionSecretToRef
@@ -367,7 +404,9 @@ public partial class V1beta1SQLPoolSecurityAlertPolicySpecWriteConnectionSecretT
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SQLPoolSecurityAlertPolicySpec defines the desired state of SQLPoolSecurityAlertPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolSecurityAlertPolicySpec
@@ -392,7 +431,9 @@ public partial class V1beta1SQLPoolSecurityAlertPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SQLPoolSecurityAlertPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolSecurityAlertPolicyStatusAtProvider
@@ -429,7 +470,9 @@ public partial class V1beta1SQLPoolSecurityAlertPolicyStatusAtProvider
     [JsonPropertyName("storageEndpoint")]
     public string? StorageEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolSecurityAlertPolicyStatusConditions
@@ -458,7 +501,9 @@ public partial class V1beta1SQLPoolSecurityAlertPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SQLPoolSecurityAlertPolicyStatus defines the observed state of SQLPoolSecurityAlertPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolSecurityAlertPolicyStatus
@@ -475,7 +520,9 @@ public partial class V1beta1SQLPoolSecurityAlertPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SQLPoolSecurityAlertPolicy is the Schema for the SQLPoolSecurityAlertPolicys API. Manages a Security Alert Policy for a Synapse SQL Pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -505,3 +552,4 @@ public partial class V1beta1SQLPoolSecurityAlertPolicy : IKubernetesObject<V1Obj
     [JsonPropertyName("status")]
     public V1beta1SQLPoolSecurityAlertPolicyStatus? Status { get; set; }
 }
+#nullable disable

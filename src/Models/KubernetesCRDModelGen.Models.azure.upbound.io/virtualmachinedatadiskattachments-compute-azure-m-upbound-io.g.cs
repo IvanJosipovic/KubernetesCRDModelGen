@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.azure.m.upbound.io;
+#nullable enable
 /// <summary>VirtualMachineDataDiskAttachment is the Schema for the VirtualMachineDataDiskAttachments API. Manages attaching a Disk to a Virtual Machine.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VirtualMachineDataDiskAttachmentList : IKubernetesOb
     [JsonPropertyName("items")]
     public IList<V1beta1VirtualMachineDataDiskAttachment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineDataDiskAttachmentSpecForProviderManagedDiskIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1VirtualMachineDataDiskAttachmentSpecForProviderManag
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ManagedDisk in compute to populate managedDiskId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineDataDiskAttachmentSpecForProviderManagedDiskIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1VirtualMachineDataDiskAttachmentSpecForProviderManag
     [JsonPropertyName("policy")]
     public V1beta1VirtualMachineDataDiskAttachmentSpecForProviderManagedDiskIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineDataDiskAttachmentSpecForProviderManagedDiskIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1VirtualMachineDataDiskAttachmentSpecForProviderManag
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ManagedDisk in compute to populate managedDiskId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineDataDiskAttachmentSpecForProviderManagedDiskIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1VirtualMachineDataDiskAttachmentSpecForProviderManag
     [JsonPropertyName("policy")]
     public V1beta1VirtualMachineDataDiskAttachmentSpecForProviderManagedDiskIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineDataDiskAttachmentSpecForProviderVirtualMachineIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1VirtualMachineDataDiskAttachmentSpecForProviderVirtu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LinuxVirtualMachine in compute to populate virtualMachineId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineDataDiskAttachmentSpecForProviderVirtualMachineIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1VirtualMachineDataDiskAttachmentSpecForProviderVirtu
     [JsonPropertyName("policy")]
     public V1beta1VirtualMachineDataDiskAttachmentSpecForProviderVirtualMachineIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineDataDiskAttachmentSpecForProviderVirtualMachineIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1VirtualMachineDataDiskAttachmentSpecForProviderVirtu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LinuxVirtualMachine in compute to populate virtualMachineId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineDataDiskAttachmentSpecForProviderVirtualMachineIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1VirtualMachineDataDiskAttachmentSpecForProviderVirtu
     [JsonPropertyName("policy")]
     public V1beta1VirtualMachineDataDiskAttachmentSpecForProviderVirtualMachineIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineDataDiskAttachmentSpecForProvider
@@ -206,7 +225,9 @@ public partial class V1beta1VirtualMachineDataDiskAttachmentSpecForProvider
     [JsonPropertyName("writeAcceleratorEnabled")]
     public bool? WriteAcceleratorEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineDataDiskAttachmentSpecInitProviderManagedDiskIdRefPolicy
@@ -219,7 +240,9 @@ public partial class V1beta1VirtualMachineDataDiskAttachmentSpecInitProviderMana
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ManagedDisk in compute to populate managedDiskId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineDataDiskAttachmentSpecInitProviderManagedDiskIdRef
@@ -236,7 +259,9 @@ public partial class V1beta1VirtualMachineDataDiskAttachmentSpecInitProviderMana
     [JsonPropertyName("policy")]
     public V1beta1VirtualMachineDataDiskAttachmentSpecInitProviderManagedDiskIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineDataDiskAttachmentSpecInitProviderManagedDiskIdSelectorPolicy
@@ -249,7 +274,9 @@ public partial class V1beta1VirtualMachineDataDiskAttachmentSpecInitProviderMana
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ManagedDisk in compute to populate managedDiskId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineDataDiskAttachmentSpecInitProviderManagedDiskIdSelector
@@ -270,7 +297,9 @@ public partial class V1beta1VirtualMachineDataDiskAttachmentSpecInitProviderMana
     [JsonPropertyName("policy")]
     public V1beta1VirtualMachineDataDiskAttachmentSpecInitProviderManagedDiskIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineDataDiskAttachmentSpecInitProviderVirtualMachineIdRefPolicy
@@ -283,7 +312,9 @@ public partial class V1beta1VirtualMachineDataDiskAttachmentSpecInitProviderVirt
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LinuxVirtualMachine in compute to populate virtualMachineId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineDataDiskAttachmentSpecInitProviderVirtualMachineIdRef
@@ -300,7 +331,9 @@ public partial class V1beta1VirtualMachineDataDiskAttachmentSpecInitProviderVirt
     [JsonPropertyName("policy")]
     public V1beta1VirtualMachineDataDiskAttachmentSpecInitProviderVirtualMachineIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineDataDiskAttachmentSpecInitProviderVirtualMachineIdSelectorPolicy
@@ -313,7 +346,9 @@ public partial class V1beta1VirtualMachineDataDiskAttachmentSpecInitProviderVirt
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LinuxVirtualMachine in compute to populate virtualMachineId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineDataDiskAttachmentSpecInitProviderVirtualMachineIdSelector
@@ -334,7 +369,9 @@ public partial class V1beta1VirtualMachineDataDiskAttachmentSpecInitProviderVirt
     [JsonPropertyName("policy")]
     public V1beta1VirtualMachineDataDiskAttachmentSpecInitProviderVirtualMachineIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineDataDiskAttachmentSpecInitProvider
@@ -379,7 +416,9 @@ public partial class V1beta1VirtualMachineDataDiskAttachmentSpecInitProvider
     [JsonPropertyName("writeAcceleratorEnabled")]
     public bool? WriteAcceleratorEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineDataDiskAttachmentSpecProviderConfigRef
@@ -392,7 +431,9 @@ public partial class V1beta1VirtualMachineDataDiskAttachmentSpecProviderConfigRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineDataDiskAttachmentSpecWriteConnectionSecretToRef
@@ -401,7 +442,9 @@ public partial class V1beta1VirtualMachineDataDiskAttachmentSpecWriteConnectionS
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualMachineDataDiskAttachmentSpec defines the desired state of VirtualMachineDataDiskAttachment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineDataDiskAttachmentSpec
@@ -426,7 +469,9 @@ public partial class V1beta1VirtualMachineDataDiskAttachmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VirtualMachineDataDiskAttachmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineDataDiskAttachmentStatusAtProvider
@@ -459,7 +504,9 @@ public partial class V1beta1VirtualMachineDataDiskAttachmentStatusAtProvider
     [JsonPropertyName("writeAcceleratorEnabled")]
     public bool? WriteAcceleratorEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineDataDiskAttachmentStatusConditions
@@ -488,7 +535,9 @@ public partial class V1beta1VirtualMachineDataDiskAttachmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualMachineDataDiskAttachmentStatus defines the observed state of VirtualMachineDataDiskAttachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineDataDiskAttachmentStatus
@@ -505,7 +554,9 @@ public partial class V1beta1VirtualMachineDataDiskAttachmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualMachineDataDiskAttachment is the Schema for the VirtualMachineDataDiskAttachments API. Manages attaching a Disk to a Virtual Machine.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -535,3 +586,4 @@ public partial class V1beta1VirtualMachineDataDiskAttachment : IKubernetesObject
     [JsonPropertyName("status")]
     public V1beta1VirtualMachineDataDiskAttachmentStatus? Status { get; set; }
 }
+#nullable disable

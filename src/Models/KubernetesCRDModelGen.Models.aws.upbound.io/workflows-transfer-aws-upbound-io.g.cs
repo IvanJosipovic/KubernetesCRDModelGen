@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.transfer.aws.upbound.io;
+#nullable enable
 /// <summary>Workflow is the Schema for the Workflows API. Provides a AWS Transfer Workflow resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1WorkflowList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1beta1Workflow> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsCopyStepDetailsDestinationFileLocationEfsFileLocation
@@ -46,7 +49,9 @@ public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsCopyStepDetai
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocation
@@ -59,7 +64,9 @@ public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsCopyStepDetai
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsCopyStepDetailsDestinationFileLocation
@@ -72,7 +79,9 @@ public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsCopyStepDetai
     [JsonPropertyName("s3FileLocation")]
     public IList<V1beta1WorkflowSpecForProviderOnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocation>? S3FileLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsCopyStepDetails
@@ -93,7 +102,9 @@ public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsCopyStepDetai
     [JsonPropertyName("sourceFileLocation")]
     public string? SourceFileLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsCustomStepDetails
@@ -114,7 +125,9 @@ public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsCustomStepDet
     [JsonPropertyName("timeoutSeconds")]
     public double? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsDecryptStepDetailsDestinationFileLocationEfsFileLocation
@@ -127,7 +140,9 @@ public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsDecryptStepDe
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocation
@@ -140,7 +155,9 @@ public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsDecryptStepDe
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsDecryptStepDetailsDestinationFileLocation
@@ -153,7 +170,9 @@ public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsDecryptStepDe
     [JsonPropertyName("s3FileLocation")]
     public IList<V1beta1WorkflowSpecForProviderOnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocation>? S3FileLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsDecryptStepDetails
@@ -178,7 +197,9 @@ public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsDecryptStepDe
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsDeleteStepDetails
@@ -191,7 +212,9 @@ public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsDeleteStepDet
     [JsonPropertyName("sourceFileLocation")]
     public string? SourceFileLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsTagStepDetailsTags
@@ -204,7 +227,9 @@ public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsTagStepDetail
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsTagStepDetails
@@ -221,7 +246,9 @@ public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsTagStepDetail
     [JsonPropertyName("tags")]
     public IList<V1beta1WorkflowSpecForProviderOnExceptionStepsTagStepDetailsTags>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProviderOnExceptionSteps
@@ -250,7 +277,9 @@ public partial class V1beta1WorkflowSpecForProviderOnExceptionSteps
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProviderStepsCopyStepDetailsDestinationFileLocationEfsFileLocation
@@ -263,7 +292,9 @@ public partial class V1beta1WorkflowSpecForProviderStepsCopyStepDetailsDestinati
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProviderStepsCopyStepDetailsDestinationFileLocationS3FileLocation
@@ -276,7 +307,9 @@ public partial class V1beta1WorkflowSpecForProviderStepsCopyStepDetailsDestinati
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProviderStepsCopyStepDetailsDestinationFileLocation
@@ -289,7 +322,9 @@ public partial class V1beta1WorkflowSpecForProviderStepsCopyStepDetailsDestinati
     [JsonPropertyName("s3FileLocation")]
     public IList<V1beta1WorkflowSpecForProviderStepsCopyStepDetailsDestinationFileLocationS3FileLocation>? S3FileLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProviderStepsCopyStepDetails
@@ -310,7 +345,9 @@ public partial class V1beta1WorkflowSpecForProviderStepsCopyStepDetails
     [JsonPropertyName("sourceFileLocation")]
     public string? SourceFileLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProviderStepsCustomStepDetailsTargetRefPolicy
@@ -323,7 +360,9 @@ public partial class V1beta1WorkflowSpecForProviderStepsCustomStepDetailsTargetR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProviderStepsCustomStepDetailsTargetRef
@@ -336,7 +375,9 @@ public partial class V1beta1WorkflowSpecForProviderStepsCustomStepDetailsTargetR
     [JsonPropertyName("policy")]
     public V1beta1WorkflowSpecForProviderStepsCustomStepDetailsTargetRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProviderStepsCustomStepDetailsTargetSelectorPolicy
@@ -349,7 +390,9 @@ public partial class V1beta1WorkflowSpecForProviderStepsCustomStepDetailsTargetS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProviderStepsCustomStepDetailsTargetSelector
@@ -366,7 +409,9 @@ public partial class V1beta1WorkflowSpecForProviderStepsCustomStepDetailsTargetS
     [JsonPropertyName("policy")]
     public V1beta1WorkflowSpecForProviderStepsCustomStepDetailsTargetSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProviderStepsCustomStepDetails
@@ -395,7 +440,9 @@ public partial class V1beta1WorkflowSpecForProviderStepsCustomStepDetails
     [JsonPropertyName("timeoutSeconds")]
     public double? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProviderStepsDecryptStepDetailsDestinationFileLocationEfsFileLocation
@@ -408,7 +455,9 @@ public partial class V1beta1WorkflowSpecForProviderStepsDecryptStepDetailsDestin
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProviderStepsDecryptStepDetailsDestinationFileLocationS3FileLocation
@@ -421,7 +470,9 @@ public partial class V1beta1WorkflowSpecForProviderStepsDecryptStepDetailsDestin
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProviderStepsDecryptStepDetailsDestinationFileLocation
@@ -434,7 +485,9 @@ public partial class V1beta1WorkflowSpecForProviderStepsDecryptStepDetailsDestin
     [JsonPropertyName("s3FileLocation")]
     public IList<V1beta1WorkflowSpecForProviderStepsDecryptStepDetailsDestinationFileLocationS3FileLocation>? S3FileLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProviderStepsDecryptStepDetails
@@ -459,7 +512,9 @@ public partial class V1beta1WorkflowSpecForProviderStepsDecryptStepDetails
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProviderStepsDeleteStepDetails
@@ -472,7 +527,9 @@ public partial class V1beta1WorkflowSpecForProviderStepsDeleteStepDetails
     [JsonPropertyName("sourceFileLocation")]
     public string? SourceFileLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProviderStepsTagStepDetailsTags
@@ -485,7 +542,9 @@ public partial class V1beta1WorkflowSpecForProviderStepsTagStepDetailsTags
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProviderStepsTagStepDetails
@@ -502,7 +561,9 @@ public partial class V1beta1WorkflowSpecForProviderStepsTagStepDetails
     [JsonPropertyName("tags")]
     public IList<V1beta1WorkflowSpecForProviderStepsTagStepDetailsTags>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProviderSteps
@@ -531,7 +592,9 @@ public partial class V1beta1WorkflowSpecForProviderSteps
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProvider
@@ -556,7 +619,9 @@ public partial class V1beta1WorkflowSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsCopyStepDetailsDestinationFileLocationEfsFileLocation
@@ -569,7 +634,9 @@ public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsCopyStepDeta
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocation
@@ -582,7 +649,9 @@ public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsCopyStepDeta
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsCopyStepDetailsDestinationFileLocation
@@ -595,7 +664,9 @@ public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsCopyStepDeta
     [JsonPropertyName("s3FileLocation")]
     public IList<V1beta1WorkflowSpecInitProviderOnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocation>? S3FileLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsCopyStepDetails
@@ -616,7 +687,9 @@ public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsCopyStepDeta
     [JsonPropertyName("sourceFileLocation")]
     public string? SourceFileLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsCustomStepDetails
@@ -637,7 +710,9 @@ public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsCustomStepDe
     [JsonPropertyName("timeoutSeconds")]
     public double? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsDecryptStepDetailsDestinationFileLocationEfsFileLocation
@@ -650,7 +725,9 @@ public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsDecryptStepD
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocation
@@ -663,7 +740,9 @@ public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsDecryptStepD
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsDecryptStepDetailsDestinationFileLocation
@@ -676,7 +755,9 @@ public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsDecryptStepD
     [JsonPropertyName("s3FileLocation")]
     public IList<V1beta1WorkflowSpecInitProviderOnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocation>? S3FileLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsDecryptStepDetails
@@ -701,7 +782,9 @@ public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsDecryptStepD
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsDeleteStepDetails
@@ -714,7 +797,9 @@ public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsDeleteStepDe
     [JsonPropertyName("sourceFileLocation")]
     public string? SourceFileLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsTagStepDetailsTags
@@ -727,7 +812,9 @@ public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsTagStepDetai
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsTagStepDetails
@@ -744,7 +831,9 @@ public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsTagStepDetai
     [JsonPropertyName("tags")]
     public IList<V1beta1WorkflowSpecInitProviderOnExceptionStepsTagStepDetailsTags>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProviderOnExceptionSteps
@@ -773,7 +862,9 @@ public partial class V1beta1WorkflowSpecInitProviderOnExceptionSteps
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProviderStepsCopyStepDetailsDestinationFileLocationEfsFileLocation
@@ -786,7 +877,9 @@ public partial class V1beta1WorkflowSpecInitProviderStepsCopyStepDetailsDestinat
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProviderStepsCopyStepDetailsDestinationFileLocationS3FileLocation
@@ -799,7 +892,9 @@ public partial class V1beta1WorkflowSpecInitProviderStepsCopyStepDetailsDestinat
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProviderStepsCopyStepDetailsDestinationFileLocation
@@ -812,7 +907,9 @@ public partial class V1beta1WorkflowSpecInitProviderStepsCopyStepDetailsDestinat
     [JsonPropertyName("s3FileLocation")]
     public IList<V1beta1WorkflowSpecInitProviderStepsCopyStepDetailsDestinationFileLocationS3FileLocation>? S3FileLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProviderStepsCopyStepDetails
@@ -833,7 +930,9 @@ public partial class V1beta1WorkflowSpecInitProviderStepsCopyStepDetails
     [JsonPropertyName("sourceFileLocation")]
     public string? SourceFileLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProviderStepsCustomStepDetailsTargetRefPolicy
@@ -846,7 +945,9 @@ public partial class V1beta1WorkflowSpecInitProviderStepsCustomStepDetailsTarget
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProviderStepsCustomStepDetailsTargetRef
@@ -859,7 +960,9 @@ public partial class V1beta1WorkflowSpecInitProviderStepsCustomStepDetailsTarget
     [JsonPropertyName("policy")]
     public V1beta1WorkflowSpecInitProviderStepsCustomStepDetailsTargetRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProviderStepsCustomStepDetailsTargetSelectorPolicy
@@ -872,7 +975,9 @@ public partial class V1beta1WorkflowSpecInitProviderStepsCustomStepDetailsTarget
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProviderStepsCustomStepDetailsTargetSelector
@@ -889,7 +994,9 @@ public partial class V1beta1WorkflowSpecInitProviderStepsCustomStepDetailsTarget
     [JsonPropertyName("policy")]
     public V1beta1WorkflowSpecInitProviderStepsCustomStepDetailsTargetSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProviderStepsCustomStepDetails
@@ -918,7 +1025,9 @@ public partial class V1beta1WorkflowSpecInitProviderStepsCustomStepDetails
     [JsonPropertyName("timeoutSeconds")]
     public double? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProviderStepsDecryptStepDetailsDestinationFileLocationEfsFileLocation
@@ -931,7 +1040,9 @@ public partial class V1beta1WorkflowSpecInitProviderStepsDecryptStepDetailsDesti
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProviderStepsDecryptStepDetailsDestinationFileLocationS3FileLocation
@@ -944,7 +1055,9 @@ public partial class V1beta1WorkflowSpecInitProviderStepsDecryptStepDetailsDesti
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProviderStepsDecryptStepDetailsDestinationFileLocation
@@ -957,7 +1070,9 @@ public partial class V1beta1WorkflowSpecInitProviderStepsDecryptStepDetailsDesti
     [JsonPropertyName("s3FileLocation")]
     public IList<V1beta1WorkflowSpecInitProviderStepsDecryptStepDetailsDestinationFileLocationS3FileLocation>? S3FileLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProviderStepsDecryptStepDetails
@@ -982,7 +1097,9 @@ public partial class V1beta1WorkflowSpecInitProviderStepsDecryptStepDetails
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProviderStepsDeleteStepDetails
@@ -995,7 +1112,9 @@ public partial class V1beta1WorkflowSpecInitProviderStepsDeleteStepDetails
     [JsonPropertyName("sourceFileLocation")]
     public string? SourceFileLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProviderStepsTagStepDetailsTags
@@ -1008,7 +1127,9 @@ public partial class V1beta1WorkflowSpecInitProviderStepsTagStepDetailsTags
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProviderStepsTagStepDetails
@@ -1025,7 +1146,9 @@ public partial class V1beta1WorkflowSpecInitProviderStepsTagStepDetails
     [JsonPropertyName("tags")]
     public IList<V1beta1WorkflowSpecInitProviderStepsTagStepDetailsTags>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProviderSteps
@@ -1054,7 +1177,9 @@ public partial class V1beta1WorkflowSpecInitProviderSteps
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProvider
@@ -1075,7 +1200,9 @@ public partial class V1beta1WorkflowSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecProviderConfigRefPolicy
@@ -1088,7 +1215,9 @@ public partial class V1beta1WorkflowSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecProviderConfigRef
@@ -1101,7 +1230,9 @@ public partial class V1beta1WorkflowSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1WorkflowSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecWriteConnectionSecretToRef
@@ -1114,7 +1245,9 @@ public partial class V1beta1WorkflowSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkflowSpec defines the desired state of Workflow</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpec
@@ -1143,7 +1276,9 @@ public partial class V1beta1WorkflowSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1WorkflowSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsCopyStepDetailsDestinationFileLocationEfsFileLocation
@@ -1156,7 +1291,9 @@ public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsCopyStepDeta
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocation
@@ -1169,7 +1306,9 @@ public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsCopyStepDeta
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsCopyStepDetailsDestinationFileLocation
@@ -1182,7 +1321,9 @@ public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsCopyStepDeta
     [JsonPropertyName("s3FileLocation")]
     public IList<V1beta1WorkflowStatusAtProviderOnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocation>? S3FileLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsCopyStepDetails
@@ -1203,7 +1344,9 @@ public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsCopyStepDeta
     [JsonPropertyName("sourceFileLocation")]
     public string? SourceFileLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsCustomStepDetails
@@ -1224,7 +1367,9 @@ public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsCustomStepDe
     [JsonPropertyName("timeoutSeconds")]
     public double? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsDecryptStepDetailsDestinationFileLocationEfsFileLocation
@@ -1237,7 +1382,9 @@ public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsDecryptStepD
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocation
@@ -1250,7 +1397,9 @@ public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsDecryptStepD
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsDecryptStepDetailsDestinationFileLocation
@@ -1263,7 +1412,9 @@ public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsDecryptStepD
     [JsonPropertyName("s3FileLocation")]
     public IList<V1beta1WorkflowStatusAtProviderOnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocation>? S3FileLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsDecryptStepDetails
@@ -1288,7 +1439,9 @@ public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsDecryptStepD
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsDeleteStepDetails
@@ -1301,7 +1454,9 @@ public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsDeleteStepDe
     [JsonPropertyName("sourceFileLocation")]
     public string? SourceFileLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsTagStepDetailsTags
@@ -1314,7 +1469,9 @@ public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsTagStepDetai
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsTagStepDetails
@@ -1331,7 +1488,9 @@ public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsTagStepDetai
     [JsonPropertyName("tags")]
     public IList<V1beta1WorkflowStatusAtProviderOnExceptionStepsTagStepDetailsTags>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowStatusAtProviderOnExceptionSteps
@@ -1360,7 +1519,9 @@ public partial class V1beta1WorkflowStatusAtProviderOnExceptionSteps
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowStatusAtProviderStepsCopyStepDetailsDestinationFileLocationEfsFileLocation
@@ -1373,7 +1534,9 @@ public partial class V1beta1WorkflowStatusAtProviderStepsCopyStepDetailsDestinat
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowStatusAtProviderStepsCopyStepDetailsDestinationFileLocationS3FileLocation
@@ -1386,7 +1549,9 @@ public partial class V1beta1WorkflowStatusAtProviderStepsCopyStepDetailsDestinat
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowStatusAtProviderStepsCopyStepDetailsDestinationFileLocation
@@ -1399,7 +1564,9 @@ public partial class V1beta1WorkflowStatusAtProviderStepsCopyStepDetailsDestinat
     [JsonPropertyName("s3FileLocation")]
     public IList<V1beta1WorkflowStatusAtProviderStepsCopyStepDetailsDestinationFileLocationS3FileLocation>? S3FileLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowStatusAtProviderStepsCopyStepDetails
@@ -1420,7 +1587,9 @@ public partial class V1beta1WorkflowStatusAtProviderStepsCopyStepDetails
     [JsonPropertyName("sourceFileLocation")]
     public string? SourceFileLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowStatusAtProviderStepsCustomStepDetails
@@ -1441,7 +1610,9 @@ public partial class V1beta1WorkflowStatusAtProviderStepsCustomStepDetails
     [JsonPropertyName("timeoutSeconds")]
     public double? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowStatusAtProviderStepsDecryptStepDetailsDestinationFileLocationEfsFileLocation
@@ -1454,7 +1625,9 @@ public partial class V1beta1WorkflowStatusAtProviderStepsDecryptStepDetailsDesti
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowStatusAtProviderStepsDecryptStepDetailsDestinationFileLocationS3FileLocation
@@ -1467,7 +1640,9 @@ public partial class V1beta1WorkflowStatusAtProviderStepsDecryptStepDetailsDesti
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowStatusAtProviderStepsDecryptStepDetailsDestinationFileLocation
@@ -1480,7 +1655,9 @@ public partial class V1beta1WorkflowStatusAtProviderStepsDecryptStepDetailsDesti
     [JsonPropertyName("s3FileLocation")]
     public IList<V1beta1WorkflowStatusAtProviderStepsDecryptStepDetailsDestinationFileLocationS3FileLocation>? S3FileLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowStatusAtProviderStepsDecryptStepDetails
@@ -1505,7 +1682,9 @@ public partial class V1beta1WorkflowStatusAtProviderStepsDecryptStepDetails
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowStatusAtProviderStepsDeleteStepDetails
@@ -1518,7 +1697,9 @@ public partial class V1beta1WorkflowStatusAtProviderStepsDeleteStepDetails
     [JsonPropertyName("sourceFileLocation")]
     public string? SourceFileLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowStatusAtProviderStepsTagStepDetailsTags
@@ -1531,7 +1712,9 @@ public partial class V1beta1WorkflowStatusAtProviderStepsTagStepDetailsTags
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowStatusAtProviderStepsTagStepDetails
@@ -1548,7 +1731,9 @@ public partial class V1beta1WorkflowStatusAtProviderStepsTagStepDetails
     [JsonPropertyName("tags")]
     public IList<V1beta1WorkflowStatusAtProviderStepsTagStepDetailsTags>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowStatusAtProviderSteps
@@ -1577,7 +1762,9 @@ public partial class V1beta1WorkflowStatusAtProviderSteps
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowStatusAtProvider
@@ -1614,7 +1801,9 @@ public partial class V1beta1WorkflowStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowStatusConditions
@@ -1643,7 +1832,9 @@ public partial class V1beta1WorkflowStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkflowStatus defines the observed state of Workflow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowStatus
@@ -1660,7 +1851,9 @@ public partial class V1beta1WorkflowStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Workflow is the Schema for the Workflows API. Provides a AWS Transfer Workflow resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1690,3 +1883,4 @@ public partial class V1beta1Workflow : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1beta1WorkflowStatus? Status { get; set; }
 }
+#nullable disable

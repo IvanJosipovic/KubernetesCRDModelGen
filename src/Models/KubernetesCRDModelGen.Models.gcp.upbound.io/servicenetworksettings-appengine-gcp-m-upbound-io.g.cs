@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appengine.gcp.m.upbound.io;
+#nullable enable
 /// <summary>ServiceNetworkSettings is the Schema for the ServiceNetworkSettingss API. A NetworkSettings resource is a container for ingress settings for a version or service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ServiceNetworkSettingsList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1ServiceNetworkSettings> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Ingress settings for this service. Will apply to all versions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceNetworkSettingsSpecForProviderNetworkSettings
@@ -42,7 +45,9 @@ public partial class V1beta1ServiceNetworkSettingsSpecForProviderNetworkSettings
     [JsonPropertyName("ingressTrafficAllowed")]
     public string? IngressTrafficAllowed { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceNetworkSettingsSpecForProviderServiceRefPolicy
@@ -55,7 +60,9 @@ public partial class V1beta1ServiceNetworkSettingsSpecForProviderServiceRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a StandardAppVersion in appengine to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceNetworkSettingsSpecForProviderServiceRef
@@ -72,7 +79,9 @@ public partial class V1beta1ServiceNetworkSettingsSpecForProviderServiceRef
     [JsonPropertyName("policy")]
     public V1beta1ServiceNetworkSettingsSpecForProviderServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceNetworkSettingsSpecForProviderServiceSelectorPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1ServiceNetworkSettingsSpecForProviderServiceSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a StandardAppVersion in appengine to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceNetworkSettingsSpecForProviderServiceSelector
@@ -106,7 +117,9 @@ public partial class V1beta1ServiceNetworkSettingsSpecForProviderServiceSelector
     [JsonPropertyName("policy")]
     public V1beta1ServiceNetworkSettingsSpecForProviderServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceNetworkSettingsSpecForProvider
@@ -131,7 +144,9 @@ public partial class V1beta1ServiceNetworkSettingsSpecForProvider
     [JsonPropertyName("serviceSelector")]
     public V1beta1ServiceNetworkSettingsSpecForProviderServiceSelector? ServiceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Ingress settings for this service. Will apply to all versions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceNetworkSettingsSpecInitProviderNetworkSettings
@@ -140,7 +155,9 @@ public partial class V1beta1ServiceNetworkSettingsSpecInitProviderNetworkSetting
     [JsonPropertyName("ingressTrafficAllowed")]
     public string? IngressTrafficAllowed { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceNetworkSettingsSpecInitProviderServiceRefPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1ServiceNetworkSettingsSpecInitProviderServiceRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a StandardAppVersion in appengine to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceNetworkSettingsSpecInitProviderServiceRef
@@ -170,7 +189,9 @@ public partial class V1beta1ServiceNetworkSettingsSpecInitProviderServiceRef
     [JsonPropertyName("policy")]
     public V1beta1ServiceNetworkSettingsSpecInitProviderServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceNetworkSettingsSpecInitProviderServiceSelectorPolicy
@@ -183,7 +204,9 @@ public partial class V1beta1ServiceNetworkSettingsSpecInitProviderServiceSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a StandardAppVersion in appengine to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceNetworkSettingsSpecInitProviderServiceSelector
@@ -204,7 +227,9 @@ public partial class V1beta1ServiceNetworkSettingsSpecInitProviderServiceSelecto
     [JsonPropertyName("policy")]
     public V1beta1ServiceNetworkSettingsSpecInitProviderServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceNetworkSettingsSpecInitProvider
@@ -229,7 +254,9 @@ public partial class V1beta1ServiceNetworkSettingsSpecInitProvider
     [JsonPropertyName("serviceSelector")]
     public V1beta1ServiceNetworkSettingsSpecInitProviderServiceSelector? ServiceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceNetworkSettingsSpecProviderConfigRef
@@ -242,7 +269,9 @@ public partial class V1beta1ServiceNetworkSettingsSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceNetworkSettingsSpecWriteConnectionSecretToRef
@@ -251,7 +280,9 @@ public partial class V1beta1ServiceNetworkSettingsSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServiceNetworkSettingsSpec defines the desired state of ServiceNetworkSettings</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceNetworkSettingsSpec
@@ -276,7 +307,9 @@ public partial class V1beta1ServiceNetworkSettingsSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ServiceNetworkSettingsSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Ingress settings for this service. Will apply to all versions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceNetworkSettingsStatusAtProviderNetworkSettings
@@ -285,7 +318,9 @@ public partial class V1beta1ServiceNetworkSettingsStatusAtProviderNetworkSetting
     [JsonPropertyName("ingressTrafficAllowed")]
     public string? IngressTrafficAllowed { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceNetworkSettingsStatusAtProvider
@@ -306,7 +341,9 @@ public partial class V1beta1ServiceNetworkSettingsStatusAtProvider
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceNetworkSettingsStatusConditions
@@ -335,7 +372,9 @@ public partial class V1beta1ServiceNetworkSettingsStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServiceNetworkSettingsStatus defines the observed state of ServiceNetworkSettings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceNetworkSettingsStatus
@@ -352,7 +391,9 @@ public partial class V1beta1ServiceNetworkSettingsStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServiceNetworkSettings is the Schema for the ServiceNetworkSettingss API. A NetworkSettings resource is a container for ingress settings for a version or service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -382,3 +423,4 @@ public partial class V1beta1ServiceNetworkSettings : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1ServiceNetworkSettingsStatus? Status { get; set; }
 }
+#nullable disable

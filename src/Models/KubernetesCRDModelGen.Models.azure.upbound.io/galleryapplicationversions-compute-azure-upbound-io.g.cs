@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.azure.upbound.io;
+#nullable enable
 /// <summary>GalleryApplicationVersion is the Schema for the GalleryApplicationVersions API. Manages a Gallery Application Version.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1GalleryApplicationVersionList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1beta1GalleryApplicationVersion> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecForProviderGalleryApplicationIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1GalleryApplicationVersionSpecForProviderGalleryAppli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a GalleryApplication in compute to populate galleryApplicationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecForProviderGalleryApplicationIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1GalleryApplicationVersionSpecForProviderGalleryAppli
     [JsonPropertyName("policy")]
     public V1beta1GalleryApplicationVersionSpecForProviderGalleryApplicationIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecForProviderGalleryApplicationIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1GalleryApplicationVersionSpecForProviderGalleryAppli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a GalleryApplication in compute to populate galleryApplicationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecForProviderGalleryApplicationIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1GalleryApplicationVersionSpecForProviderGalleryAppli
     [JsonPropertyName("policy")]
     public V1beta1GalleryApplicationVersionSpecForProviderGalleryApplicationIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecForProviderManageAction
@@ -106,7 +117,9 @@ public partial class V1beta1GalleryApplicationVersionSpecForProviderManageAction
     [JsonPropertyName("update")]
     public string? Update { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecForProviderSourceMediaLinkRefPolicy
@@ -119,7 +132,9 @@ public partial class V1beta1GalleryApplicationVersionSpecForProviderSourceMediaL
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Blob in storage to populate mediaLink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecForProviderSourceMediaLinkRef
@@ -132,7 +147,9 @@ public partial class V1beta1GalleryApplicationVersionSpecForProviderSourceMediaL
     [JsonPropertyName("policy")]
     public V1beta1GalleryApplicationVersionSpecForProviderSourceMediaLinkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecForProviderSourceMediaLinkSelectorPolicy
@@ -145,7 +162,9 @@ public partial class V1beta1GalleryApplicationVersionSpecForProviderSourceMediaL
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Blob in storage to populate mediaLink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecForProviderSourceMediaLinkSelector
@@ -162,7 +181,9 @@ public partial class V1beta1GalleryApplicationVersionSpecForProviderSourceMediaL
     [JsonPropertyName("policy")]
     public V1beta1GalleryApplicationVersionSpecForProviderSourceMediaLinkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecForProviderSource
@@ -183,7 +204,9 @@ public partial class V1beta1GalleryApplicationVersionSpecForProviderSource
     [JsonPropertyName("mediaLinkSelector")]
     public V1beta1GalleryApplicationVersionSpecForProviderSourceMediaLinkSelector? MediaLinkSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecForProviderTargetRegionNameRefPolicy
@@ -196,7 +219,9 @@ public partial class V1beta1GalleryApplicationVersionSpecForProviderTargetRegion
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a GalleryApplication in compute to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecForProviderTargetRegionNameRef
@@ -209,7 +234,9 @@ public partial class V1beta1GalleryApplicationVersionSpecForProviderTargetRegion
     [JsonPropertyName("policy")]
     public V1beta1GalleryApplicationVersionSpecForProviderTargetRegionNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecForProviderTargetRegionNameSelectorPolicy
@@ -222,7 +249,9 @@ public partial class V1beta1GalleryApplicationVersionSpecForProviderTargetRegion
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a GalleryApplication in compute to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecForProviderTargetRegionNameSelector
@@ -239,7 +268,9 @@ public partial class V1beta1GalleryApplicationVersionSpecForProviderTargetRegion
     [JsonPropertyName("policy")]
     public V1beta1GalleryApplicationVersionSpecForProviderTargetRegionNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecForProviderTargetRegion
@@ -268,7 +299,9 @@ public partial class V1beta1GalleryApplicationVersionSpecForProviderTargetRegion
     [JsonPropertyName("storageAccountType")]
     public string? StorageAccountType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecForProvider
@@ -329,7 +362,9 @@ public partial class V1beta1GalleryApplicationVersionSpecForProvider
     [JsonPropertyName("targetRegion")]
     public IList<V1beta1GalleryApplicationVersionSpecForProviderTargetRegion>? TargetRegion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecInitProviderGalleryApplicationIdRefPolicy
@@ -342,7 +377,9 @@ public partial class V1beta1GalleryApplicationVersionSpecInitProviderGalleryAppl
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a GalleryApplication in compute to populate galleryApplicationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecInitProviderGalleryApplicationIdRef
@@ -355,7 +392,9 @@ public partial class V1beta1GalleryApplicationVersionSpecInitProviderGalleryAppl
     [JsonPropertyName("policy")]
     public V1beta1GalleryApplicationVersionSpecInitProviderGalleryApplicationIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecInitProviderGalleryApplicationIdSelectorPolicy
@@ -368,7 +407,9 @@ public partial class V1beta1GalleryApplicationVersionSpecInitProviderGalleryAppl
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a GalleryApplication in compute to populate galleryApplicationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecInitProviderGalleryApplicationIdSelector
@@ -385,7 +426,9 @@ public partial class V1beta1GalleryApplicationVersionSpecInitProviderGalleryAppl
     [JsonPropertyName("policy")]
     public V1beta1GalleryApplicationVersionSpecInitProviderGalleryApplicationIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecInitProviderManageAction
@@ -402,7 +445,9 @@ public partial class V1beta1GalleryApplicationVersionSpecInitProviderManageActio
     [JsonPropertyName("update")]
     public string? Update { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecInitProviderSourceMediaLinkRefPolicy
@@ -415,7 +460,9 @@ public partial class V1beta1GalleryApplicationVersionSpecInitProviderSourceMedia
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Blob in storage to populate mediaLink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecInitProviderSourceMediaLinkRef
@@ -428,7 +475,9 @@ public partial class V1beta1GalleryApplicationVersionSpecInitProviderSourceMedia
     [JsonPropertyName("policy")]
     public V1beta1GalleryApplicationVersionSpecInitProviderSourceMediaLinkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecInitProviderSourceMediaLinkSelectorPolicy
@@ -441,7 +490,9 @@ public partial class V1beta1GalleryApplicationVersionSpecInitProviderSourceMedia
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Blob in storage to populate mediaLink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecInitProviderSourceMediaLinkSelector
@@ -458,7 +509,9 @@ public partial class V1beta1GalleryApplicationVersionSpecInitProviderSourceMedia
     [JsonPropertyName("policy")]
     public V1beta1GalleryApplicationVersionSpecInitProviderSourceMediaLinkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecInitProviderSource
@@ -479,7 +532,9 @@ public partial class V1beta1GalleryApplicationVersionSpecInitProviderSource
     [JsonPropertyName("mediaLinkSelector")]
     public V1beta1GalleryApplicationVersionSpecInitProviderSourceMediaLinkSelector? MediaLinkSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecInitProviderTargetRegionNameRefPolicy
@@ -492,7 +547,9 @@ public partial class V1beta1GalleryApplicationVersionSpecInitProviderTargetRegio
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a GalleryApplication in compute to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecInitProviderTargetRegionNameRef
@@ -505,7 +562,9 @@ public partial class V1beta1GalleryApplicationVersionSpecInitProviderTargetRegio
     [JsonPropertyName("policy")]
     public V1beta1GalleryApplicationVersionSpecInitProviderTargetRegionNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecInitProviderTargetRegionNameSelectorPolicy
@@ -518,7 +577,9 @@ public partial class V1beta1GalleryApplicationVersionSpecInitProviderTargetRegio
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a GalleryApplication in compute to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecInitProviderTargetRegionNameSelector
@@ -535,7 +596,9 @@ public partial class V1beta1GalleryApplicationVersionSpecInitProviderTargetRegio
     [JsonPropertyName("policy")]
     public V1beta1GalleryApplicationVersionSpecInitProviderTargetRegionNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecInitProviderTargetRegion
@@ -564,7 +627,9 @@ public partial class V1beta1GalleryApplicationVersionSpecInitProviderTargetRegio
     [JsonPropertyName("storageAccountType")]
     public string? StorageAccountType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecInitProvider
@@ -625,7 +690,9 @@ public partial class V1beta1GalleryApplicationVersionSpecInitProvider
     [JsonPropertyName("targetRegion")]
     public IList<V1beta1GalleryApplicationVersionSpecInitProviderTargetRegion>? TargetRegion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecProviderConfigRefPolicy
@@ -638,7 +705,9 @@ public partial class V1beta1GalleryApplicationVersionSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecProviderConfigRef
@@ -651,7 +720,9 @@ public partial class V1beta1GalleryApplicationVersionSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1GalleryApplicationVersionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecWriteConnectionSecretToRef
@@ -664,7 +735,9 @@ public partial class V1beta1GalleryApplicationVersionSpecWriteConnectionSecretTo
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GalleryApplicationVersionSpec defines the desired state of GalleryApplicationVersion</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpec
@@ -693,7 +766,9 @@ public partial class V1beta1GalleryApplicationVersionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1GalleryApplicationVersionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionStatusAtProviderManageAction
@@ -710,7 +785,9 @@ public partial class V1beta1GalleryApplicationVersionStatusAtProviderManageActio
     [JsonPropertyName("update")]
     public string? Update { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionStatusAtProviderSource
@@ -723,7 +800,9 @@ public partial class V1beta1GalleryApplicationVersionStatusAtProviderSource
     [JsonPropertyName("mediaLink")]
     public string? MediaLink { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionStatusAtProviderTargetRegion
@@ -744,7 +823,9 @@ public partial class V1beta1GalleryApplicationVersionStatusAtProviderTargetRegio
     [JsonPropertyName("storageAccountType")]
     public string? StorageAccountType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionStatusAtProvider
@@ -801,7 +882,9 @@ public partial class V1beta1GalleryApplicationVersionStatusAtProvider
     [JsonPropertyName("targetRegion")]
     public IList<V1beta1GalleryApplicationVersionStatusAtProviderTargetRegion>? TargetRegion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionStatusConditions
@@ -830,7 +913,9 @@ public partial class V1beta1GalleryApplicationVersionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GalleryApplicationVersionStatus defines the observed state of GalleryApplicationVersion.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionStatus
@@ -847,7 +932,9 @@ public partial class V1beta1GalleryApplicationVersionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GalleryApplicationVersion is the Schema for the GalleryApplicationVersions API. Manages a Gallery Application Version.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -877,3 +964,4 @@ public partial class V1beta1GalleryApplicationVersion : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1beta1GalleryApplicationVersionStatus? Status { get; set; }
 }
+#nullable disable

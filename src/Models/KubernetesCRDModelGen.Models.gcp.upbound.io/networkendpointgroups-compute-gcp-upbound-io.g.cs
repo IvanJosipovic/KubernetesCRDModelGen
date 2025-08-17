@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+#nullable enable
 /// <summary>NetworkEndpointGroup is the Schema for the NetworkEndpointGroups API. Network endpoint groups (NEGs) are zonal resources that represent collections of IP address and port combinations for GCP resources within a single subnet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1NetworkEndpointGroupList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1NetworkEndpointGroup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkEndpointGroupSpecForProviderNetworkRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1NetworkEndpointGroupSpecForProviderNetworkRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkEndpointGroupSpecForProviderNetworkRef
@@ -59,7 +64,9 @@ public partial class V1beta1NetworkEndpointGroupSpecForProviderNetworkRef
     [JsonPropertyName("policy")]
     public V1beta1NetworkEndpointGroupSpecForProviderNetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkEndpointGroupSpecForProviderNetworkSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1NetworkEndpointGroupSpecForProviderNetworkSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkEndpointGroupSpecForProviderNetworkSelector
@@ -89,7 +98,9 @@ public partial class V1beta1NetworkEndpointGroupSpecForProviderNetworkSelector
     [JsonPropertyName("policy")]
     public V1beta1NetworkEndpointGroupSpecForProviderNetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkEndpointGroupSpecForProviderSubnetworkRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1NetworkEndpointGroupSpecForProviderSubnetworkRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnetwork in compute to populate subnetwork.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkEndpointGroupSpecForProviderSubnetworkRef
@@ -115,7 +128,9 @@ public partial class V1beta1NetworkEndpointGroupSpecForProviderSubnetworkRef
     [JsonPropertyName("policy")]
     public V1beta1NetworkEndpointGroupSpecForProviderSubnetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkEndpointGroupSpecForProviderSubnetworkSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1NetworkEndpointGroupSpecForProviderSubnetworkSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnetwork in compute to populate subnetwork.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkEndpointGroupSpecForProviderSubnetworkSelector
@@ -145,7 +162,9 @@ public partial class V1beta1NetworkEndpointGroupSpecForProviderSubnetworkSelecto
     [JsonPropertyName("policy")]
     public V1beta1NetworkEndpointGroupSpecForProviderSubnetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkEndpointGroupSpecForProvider
@@ -194,7 +213,9 @@ public partial class V1beta1NetworkEndpointGroupSpecForProvider
     [JsonPropertyName("zone")]
     public string Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkEndpointGroupSpecInitProviderNetworkRefPolicy
@@ -207,7 +228,9 @@ public partial class V1beta1NetworkEndpointGroupSpecInitProviderNetworkRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkEndpointGroupSpecInitProviderNetworkRef
@@ -220,7 +243,9 @@ public partial class V1beta1NetworkEndpointGroupSpecInitProviderNetworkRef
     [JsonPropertyName("policy")]
     public V1beta1NetworkEndpointGroupSpecInitProviderNetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkEndpointGroupSpecInitProviderNetworkSelectorPolicy
@@ -233,7 +258,9 @@ public partial class V1beta1NetworkEndpointGroupSpecInitProviderNetworkSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkEndpointGroupSpecInitProviderNetworkSelector
@@ -250,7 +277,9 @@ public partial class V1beta1NetworkEndpointGroupSpecInitProviderNetworkSelector
     [JsonPropertyName("policy")]
     public V1beta1NetworkEndpointGroupSpecInitProviderNetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkEndpointGroupSpecInitProviderSubnetworkRefPolicy
@@ -263,7 +292,9 @@ public partial class V1beta1NetworkEndpointGroupSpecInitProviderSubnetworkRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnetwork in compute to populate subnetwork.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkEndpointGroupSpecInitProviderSubnetworkRef
@@ -276,7 +307,9 @@ public partial class V1beta1NetworkEndpointGroupSpecInitProviderSubnetworkRef
     [JsonPropertyName("policy")]
     public V1beta1NetworkEndpointGroupSpecInitProviderSubnetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkEndpointGroupSpecInitProviderSubnetworkSelectorPolicy
@@ -289,7 +322,9 @@ public partial class V1beta1NetworkEndpointGroupSpecInitProviderSubnetworkSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnetwork in compute to populate subnetwork.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkEndpointGroupSpecInitProviderSubnetworkSelector
@@ -306,7 +341,9 @@ public partial class V1beta1NetworkEndpointGroupSpecInitProviderSubnetworkSelect
     [JsonPropertyName("policy")]
     public V1beta1NetworkEndpointGroupSpecInitProviderSubnetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkEndpointGroupSpecInitProvider
@@ -351,7 +388,9 @@ public partial class V1beta1NetworkEndpointGroupSpecInitProvider
     [JsonPropertyName("subnetworkSelector")]
     public V1beta1NetworkEndpointGroupSpecInitProviderSubnetworkSelector? SubnetworkSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkEndpointGroupSpecProviderConfigRefPolicy
@@ -364,7 +403,9 @@ public partial class V1beta1NetworkEndpointGroupSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkEndpointGroupSpecProviderConfigRef
@@ -377,7 +418,9 @@ public partial class V1beta1NetworkEndpointGroupSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1NetworkEndpointGroupSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkEndpointGroupSpecWriteConnectionSecretToRef
@@ -390,7 +433,9 @@ public partial class V1beta1NetworkEndpointGroupSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkEndpointGroupSpec defines the desired state of NetworkEndpointGroup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkEndpointGroupSpec
@@ -419,7 +464,9 @@ public partial class V1beta1NetworkEndpointGroupSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1NetworkEndpointGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkEndpointGroupStatusAtProvider
@@ -468,7 +515,9 @@ public partial class V1beta1NetworkEndpointGroupStatusAtProvider
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkEndpointGroupStatusConditions
@@ -497,7 +546,9 @@ public partial class V1beta1NetworkEndpointGroupStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkEndpointGroupStatus defines the observed state of NetworkEndpointGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkEndpointGroupStatus
@@ -514,7 +565,9 @@ public partial class V1beta1NetworkEndpointGroupStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkEndpointGroup is the Schema for the NetworkEndpointGroups API. Network endpoint groups (NEGs) are zonal resources that represent collections of IP address and port combinations for GCP resources within a single subnet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -544,3 +597,4 @@ public partial class V1beta1NetworkEndpointGroup : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1NetworkEndpointGroupStatus? Status { get; set; }
 }
+#nullable disable

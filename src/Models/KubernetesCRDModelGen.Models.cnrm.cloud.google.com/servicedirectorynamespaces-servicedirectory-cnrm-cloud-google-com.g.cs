@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.servicedirectory.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ServiceDirectoryNamespaceList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1beta1ServiceDirectoryNamespace> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceDirectoryNamespaceSpecProjectRef
@@ -50,7 +53,9 @@ public partial class V1beta1ServiceDirectoryNamespaceSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceDirectoryNamespaceSpec
@@ -67,7 +72,9 @@ public partial class V1beta1ServiceDirectoryNamespaceSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceDirectoryNamespaceStatusConditions
@@ -92,7 +99,9 @@ public partial class V1beta1ServiceDirectoryNamespaceStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceDirectoryNamespaceStatus
@@ -109,7 +118,9 @@ public partial class V1beta1ServiceDirectoryNamespaceStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -139,3 +150,4 @@ public partial class V1beta1ServiceDirectoryNamespace : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1beta1ServiceDirectoryNamespaceStatus? Status { get; set; }
 }
+#nullable disable

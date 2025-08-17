@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.servicebus.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20240101.NamespacesTopicsSubscriptionsRule Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/stable/2024-01-01/Rules.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}/subscriptions/{subscriptionName}/rules/{ruleName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleList :
     [JsonPropertyName("items")]
     public IList<V1api20240101storageNamespacesTopicsSubscriptionsRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.Action Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleSpecAction
@@ -54,7 +57,9 @@ public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleSpecAc
     [JsonPropertyName("sqlExpression")]
     public string? SqlExpression { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.CorrelationFilter Represents the correlation filter expression.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleSpecCorrelationFilter
@@ -103,7 +108,9 @@ public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleSpecCo
     [JsonPropertyName("to")]
     public string? To { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleSpecOperatorSpecConfigMapExpressions
@@ -120,7 +127,9 @@ public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleSpecOp
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleSpecOperatorSpecSecretExpressions
@@ -137,7 +146,9 @@ public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleSpecOp
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.NamespacesTopicsSubscriptionsRuleOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleSpecOperatorSpec
@@ -154,7 +165,9 @@ public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleSpecOp
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20240101storageNamespacesTopicsSubscriptionsRuleSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a servicebus.azure.com/NamespacesTopicsSubscription resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleSpecOwner
@@ -167,7 +180,9 @@ public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleSpecOw
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.SqlFilter Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleSpecSqlFilter
@@ -188,7 +203,9 @@ public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleSpecSq
     [JsonPropertyName("sqlExpression")]
     public string? SqlExpression { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.NamespacesTopicsSubscriptionsRule_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleSpec
@@ -229,7 +246,9 @@ public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleSpec
     [JsonPropertyName("sqlFilter")]
     public V1api20240101storageNamespacesTopicsSubscriptionsRuleSpecSqlFilter? SqlFilter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.Action_STATUS Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleStatusAction
@@ -250,7 +269,9 @@ public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleStatus
     [JsonPropertyName("sqlExpression")]
     public string? SqlExpression { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleStatusConditions
@@ -283,7 +304,9 @@ public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleStatus
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.CorrelationFilter_STATUS Represents the correlation filter expression.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleStatusCorrelationFilter
@@ -332,7 +355,9 @@ public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleStatus
     [JsonPropertyName("to")]
     public string? To { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.SqlFilter_STATUS Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleStatusSqlFilter
@@ -353,7 +378,9 @@ public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleStatus
     [JsonPropertyName("sqlExpression")]
     public string? SqlExpression { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleStatusSystemData
@@ -386,7 +413,9 @@ public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleStatus
     [JsonPropertyName("lastModifiedByType")]
     public string? LastModifiedByType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.NamespacesTopicsSubscriptionsRule_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleStatus
@@ -435,7 +464,9 @@ public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.NamespacesTopicsSubscriptionsRule Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/stable/2024-01-01/Rules.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}/subscriptions/{subscriptionName}/rules/{ruleName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -465,3 +496,4 @@ public partial class V1api20240101storageNamespacesTopicsSubscriptionsRule : IKu
     [JsonPropertyName("status")]
     public V1api20240101storageNamespacesTopicsSubscriptionsRuleStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ComputeRegionNetworkEndpointGroupList : IKubernetesO
     [JsonPropertyName("items")]
     public IList<V1beta1ComputeRegionNetworkEndpointGroup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. A user-defined name of the Cloud Function. The function name is case-sensitive and must be 1-63 characters long. Example value: "func1".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecCloudFunctionFunctionRef
@@ -50,7 +53,9 @@ public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecCloudFunctionFu
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Only valid when networkEndpointType is "SERVERLESS". Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecCloudFunction
@@ -63,7 +68,9 @@ public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecCloudFunction
     [JsonPropertyName("urlMask")]
     public string? UrlMask { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Cloud Run service is the main resource of Cloud Run. The service must be 1-63 characters long, and comply with RFC1035. Example value: "run-service".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecCloudRunServiceRef
@@ -80,7 +87,9 @@ public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecCloudRunService
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Only valid when networkEndpointType is "SERVERLESS". Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecCloudRun
@@ -97,7 +106,9 @@ public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecCloudRun
     [JsonPropertyName("urlMask")]
     public string? UrlMask { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. This field is only used for PSC. The URL of the network to which all network endpoints in the NEG belong. Uses "default" project network if unspecified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecNetworkRef
@@ -114,7 +125,9 @@ public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecNetworkRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. This field is only used for PSC. Optional URL of the subnetwork to which all network endpoints in the NEG belong.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecSubnetworkRef
@@ -131,7 +144,9 @@ public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecSubnetworkRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRegionNetworkEndpointGroupSpec
@@ -172,7 +187,9 @@ public partial class V1beta1ComputeRegionNetworkEndpointGroupSpec
     [JsonPropertyName("subnetworkRef")]
     public V1beta1ComputeRegionNetworkEndpointGroupSpecSubnetworkRef? SubnetworkRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRegionNetworkEndpointGroupStatusConditions
@@ -197,7 +214,9 @@ public partial class V1beta1ComputeRegionNetworkEndpointGroupStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeRegionNetworkEndpointGroupStatus
@@ -214,7 +233,9 @@ public partial class V1beta1ComputeRegionNetworkEndpointGroupStatus
     [JsonPropertyName("selfLink")]
     public string? SelfLink { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -244,3 +265,4 @@ public partial class V1beta1ComputeRegionNetworkEndpointGroup : IKubernetesObjec
     [JsonPropertyName("status")]
     public V1beta1ComputeRegionNetworkEndpointGroupStatus? Status { get; set; }
 }
+#nullable disable

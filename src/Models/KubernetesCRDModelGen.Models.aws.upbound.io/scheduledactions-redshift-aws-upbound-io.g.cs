@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.redshift.aws.upbound.io;
+#nullable enable
 /// <summary>ScheduledAction is the Schema for the ScheduledActions API. Provides a Redshift Scheduled Action resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ScheduledActionList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1ScheduledAction> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecForProviderIamRoleRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ScheduledActionSpecForProviderIamRoleRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate iamRole.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecForProviderIamRoleRef
@@ -59,7 +64,9 @@ public partial class V1beta1ScheduledActionSpecForProviderIamRoleRef
     [JsonPropertyName("policy")]
     public V1beta1ScheduledActionSpecForProviderIamRoleRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecForProviderIamRoleSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1ScheduledActionSpecForProviderIamRoleSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate iamRole.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecForProviderIamRoleSelector
@@ -89,7 +98,9 @@ public partial class V1beta1ScheduledActionSpecForProviderIamRoleSelector
     [JsonPropertyName("policy")]
     public V1beta1ScheduledActionSpecForProviderIamRoleSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecForProviderTargetActionPauseCluster
@@ -98,7 +109,9 @@ public partial class V1beta1ScheduledActionSpecForProviderTargetActionPauseClust
     [JsonPropertyName("clusterIdentifier")]
     public string? ClusterIdentifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecForProviderTargetActionResizeCluster
@@ -123,7 +136,9 @@ public partial class V1beta1ScheduledActionSpecForProviderTargetActionResizeClus
     [JsonPropertyName("numberOfNodes")]
     public double? NumberOfNodes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecForProviderTargetActionResumeCluster
@@ -132,7 +147,9 @@ public partial class V1beta1ScheduledActionSpecForProviderTargetActionResumeClus
     [JsonPropertyName("clusterIdentifier")]
     public string? ClusterIdentifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecForProviderTargetAction
@@ -149,7 +166,9 @@ public partial class V1beta1ScheduledActionSpecForProviderTargetAction
     [JsonPropertyName("resumeCluster")]
     public IList<V1beta1ScheduledActionSpecForProviderTargetActionResumeCluster>? ResumeCluster { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecForProvider
@@ -194,7 +213,9 @@ public partial class V1beta1ScheduledActionSpecForProvider
     [JsonPropertyName("targetAction")]
     public IList<V1beta1ScheduledActionSpecForProviderTargetAction>? TargetAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecInitProviderIamRoleRefPolicy
@@ -207,7 +228,9 @@ public partial class V1beta1ScheduledActionSpecInitProviderIamRoleRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate iamRole.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecInitProviderIamRoleRef
@@ -220,7 +243,9 @@ public partial class V1beta1ScheduledActionSpecInitProviderIamRoleRef
     [JsonPropertyName("policy")]
     public V1beta1ScheduledActionSpecInitProviderIamRoleRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecInitProviderIamRoleSelectorPolicy
@@ -233,7 +258,9 @@ public partial class V1beta1ScheduledActionSpecInitProviderIamRoleSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate iamRole.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecInitProviderIamRoleSelector
@@ -250,7 +277,9 @@ public partial class V1beta1ScheduledActionSpecInitProviderIamRoleSelector
     [JsonPropertyName("policy")]
     public V1beta1ScheduledActionSpecInitProviderIamRoleSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecInitProviderTargetActionPauseCluster
@@ -259,7 +288,9 @@ public partial class V1beta1ScheduledActionSpecInitProviderTargetActionPauseClus
     [JsonPropertyName("clusterIdentifier")]
     public string? ClusterIdentifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecInitProviderTargetActionResizeCluster
@@ -284,7 +315,9 @@ public partial class V1beta1ScheduledActionSpecInitProviderTargetActionResizeClu
     [JsonPropertyName("numberOfNodes")]
     public double? NumberOfNodes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecInitProviderTargetActionResumeCluster
@@ -293,7 +326,9 @@ public partial class V1beta1ScheduledActionSpecInitProviderTargetActionResumeClu
     [JsonPropertyName("clusterIdentifier")]
     public string? ClusterIdentifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecInitProviderTargetAction
@@ -310,7 +345,9 @@ public partial class V1beta1ScheduledActionSpecInitProviderTargetAction
     [JsonPropertyName("resumeCluster")]
     public IList<V1beta1ScheduledActionSpecInitProviderTargetActionResumeCluster>? ResumeCluster { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecInitProvider
@@ -351,7 +388,9 @@ public partial class V1beta1ScheduledActionSpecInitProvider
     [JsonPropertyName("targetAction")]
     public IList<V1beta1ScheduledActionSpecInitProviderTargetAction>? TargetAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecProviderConfigRefPolicy
@@ -364,7 +403,9 @@ public partial class V1beta1ScheduledActionSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecProviderConfigRef
@@ -377,7 +418,9 @@ public partial class V1beta1ScheduledActionSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ScheduledActionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecWriteConnectionSecretToRef
@@ -390,7 +433,9 @@ public partial class V1beta1ScheduledActionSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ScheduledActionSpec defines the desired state of ScheduledAction</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpec
@@ -419,7 +464,9 @@ public partial class V1beta1ScheduledActionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ScheduledActionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionStatusAtProviderTargetActionPauseCluster
@@ -428,7 +475,9 @@ public partial class V1beta1ScheduledActionStatusAtProviderTargetActionPauseClus
     [JsonPropertyName("clusterIdentifier")]
     public string? ClusterIdentifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionStatusAtProviderTargetActionResizeCluster
@@ -453,7 +502,9 @@ public partial class V1beta1ScheduledActionStatusAtProviderTargetActionResizeClu
     [JsonPropertyName("numberOfNodes")]
     public double? NumberOfNodes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionStatusAtProviderTargetActionResumeCluster
@@ -462,7 +513,9 @@ public partial class V1beta1ScheduledActionStatusAtProviderTargetActionResumeClu
     [JsonPropertyName("clusterIdentifier")]
     public string? ClusterIdentifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionStatusAtProviderTargetAction
@@ -479,7 +532,9 @@ public partial class V1beta1ScheduledActionStatusAtProviderTargetAction
     [JsonPropertyName("resumeCluster")]
     public IList<V1beta1ScheduledActionStatusAtProviderTargetActionResumeCluster>? ResumeCluster { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionStatusAtProvider
@@ -520,7 +575,9 @@ public partial class V1beta1ScheduledActionStatusAtProvider
     [JsonPropertyName("targetAction")]
     public IList<V1beta1ScheduledActionStatusAtProviderTargetAction>? TargetAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionStatusConditions
@@ -549,7 +606,9 @@ public partial class V1beta1ScheduledActionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ScheduledActionStatus defines the observed state of ScheduledAction.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionStatus
@@ -566,7 +625,9 @@ public partial class V1beta1ScheduledActionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ScheduledAction is the Schema for the ScheduledActions API. Provides a Redshift Scheduled Action resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -596,3 +657,4 @@ public partial class V1beta1ScheduledAction : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1ScheduledActionStatus? Status { get; set; }
 }
+#nullable disable

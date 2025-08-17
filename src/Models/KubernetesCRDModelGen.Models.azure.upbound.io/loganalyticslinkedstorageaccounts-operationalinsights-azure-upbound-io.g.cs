@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.operationalinsights.azure.upbound.io;
+#nullable enable
 /// <summary>LogAnalyticsLinkedStorageAccount is the Schema for the LogAnalyticsLinkedStorageAccounts API. Manages a Log Analytics Linked Storage Account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountList : IKubernetesOb
     [JsonPropertyName("items")]
     public IList<V1beta1LogAnalyticsLinkedStorageAccount> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderResourceGroupNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderResou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderResourceGroupNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderResou
     [JsonPropertyName("policy")]
     public V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderResourceGroupNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderResou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderResourceGroupNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderResou
     [JsonPropertyName("policy")]
     public V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStorageAccountIdsRefsPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStora
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStorageAccountIdsRefs
@@ -115,7 +128,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStora
     [JsonPropertyName("policy")]
     public V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStorageAccountIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStorageAccountIdsSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStora
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Account in storage to populate storageAccountIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStorageAccountIdsSelector
@@ -145,7 +162,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStora
     [JsonPropertyName("policy")]
     public V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStorageAccountIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceIdRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorks
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in operationalinsights to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceIdRef
@@ -171,7 +192,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorks
     [JsonPropertyName("policy")]
     public V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceIdSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorks
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in operationalinsights to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceIdSelector
@@ -201,7 +226,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorks
     [JsonPropertyName("policy")]
     public V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProvider
@@ -250,7 +277,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProvider
     [JsonPropertyName("workspaceResourceId")]
     public string? WorkspaceResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderResourceGroupNameRefPolicy
@@ -263,7 +292,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderReso
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderResourceGroupNameRef
@@ -276,7 +307,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderReso
     [JsonPropertyName("policy")]
     public V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderResourceGroupNameSelectorPolicy
@@ -289,7 +322,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderReso
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderResourceGroupNameSelector
@@ -306,7 +341,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderReso
     [JsonPropertyName("policy")]
     public V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStorageAccountIdsRefsPolicy
@@ -319,7 +356,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStor
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStorageAccountIdsRefs
@@ -332,7 +371,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStor
     [JsonPropertyName("policy")]
     public V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStorageAccountIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStorageAccountIdsSelectorPolicy
@@ -345,7 +386,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStor
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Account in storage to populate storageAccountIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStorageAccountIdsSelector
@@ -362,7 +405,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStor
     [JsonPropertyName("policy")]
     public V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStorageAccountIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceIdRefPolicy
@@ -375,7 +420,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWork
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in operationalinsights to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceIdRef
@@ -388,7 +435,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWork
     [JsonPropertyName("policy")]
     public V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceIdSelectorPolicy
@@ -401,7 +450,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWork
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in operationalinsights to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceIdSelector
@@ -418,7 +469,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWork
     [JsonPropertyName("policy")]
     public V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProvider
@@ -467,7 +520,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProvider
     [JsonPropertyName("workspaceResourceId")]
     public string? WorkspaceResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecProviderConfigRefPolicy
@@ -480,7 +535,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecProviderConfigRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecProviderConfigRef
@@ -493,7 +550,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecProviderConfigRe
     [JsonPropertyName("policy")]
     public V1beta1LogAnalyticsLinkedStorageAccountSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecWriteConnectionSecretToRef
@@ -506,7 +565,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecWriteConnectionS
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LogAnalyticsLinkedStorageAccountSpec defines the desired state of LogAnalyticsLinkedStorageAccount</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpec
@@ -535,7 +596,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LogAnalyticsLinkedStorageAccountSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountStatusAtProvider
@@ -564,7 +627,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountStatusAtProvider
     [JsonPropertyName("workspaceResourceId")]
     public string? WorkspaceResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountStatusConditions
@@ -593,7 +658,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LogAnalyticsLinkedStorageAccountStatus defines the observed state of LogAnalyticsLinkedStorageAccount.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsLinkedStorageAccountStatus
@@ -610,7 +677,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LogAnalyticsLinkedStorageAccount is the Schema for the LogAnalyticsLinkedStorageAccounts API. Manages a Log Analytics Linked Storage Account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -640,3 +709,4 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccount : IKubernetesObject
     [JsonPropertyName("status")]
     public V1beta1LogAnalyticsLinkedStorageAccountStatus? Status { get; set; }
 }
+#nullable disable

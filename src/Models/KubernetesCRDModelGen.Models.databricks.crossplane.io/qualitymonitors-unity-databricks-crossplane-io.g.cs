@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.unity.databricks.crossplane.io;
+#nullable enable
 /// <summary>QualityMonitor is the Schema for the QualityMonitors API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1QualityMonitorList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1alpha1QualityMonitor> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorSpecForProviderCustomMetrics
@@ -58,7 +61,9 @@ public partial class V1alpha1QualityMonitorSpecForProviderCustomMetrics
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorSpecForProviderDataClassificationConfig
@@ -67,7 +72,9 @@ public partial class V1alpha1QualityMonitorSpecForProviderDataClassificationConf
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorSpecForProviderInferenceLog
@@ -100,7 +107,9 @@ public partial class V1alpha1QualityMonitorSpecForProviderInferenceLog
     [JsonPropertyName("timestampCol")]
     public string? TimestampCol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorSpecForProviderNotificationsOnFailure
@@ -109,7 +118,9 @@ public partial class V1alpha1QualityMonitorSpecForProviderNotificationsOnFailure
     [JsonPropertyName("emailAddresses")]
     public IList<string>? EmailAddresses { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorSpecForProviderNotificationsOnNewClassificationTagDetected
@@ -118,7 +129,9 @@ public partial class V1alpha1QualityMonitorSpecForProviderNotificationsOnNewClas
     [JsonPropertyName("emailAddresses")]
     public IList<string>? EmailAddresses { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorSpecForProviderNotifications
@@ -131,7 +144,9 @@ public partial class V1alpha1QualityMonitorSpecForProviderNotifications
     [JsonPropertyName("onNewClassificationTagDetected")]
     public IList<V1alpha1QualityMonitorSpecForProviderNotificationsOnNewClassificationTagDetected>? OnNewClassificationTagDetected { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorSpecForProviderSchedule
@@ -144,13 +159,17 @@ public partial class V1alpha1QualityMonitorSpecForProviderSchedule
     [JsonPropertyName("timezoneId")]
     public string? TimezoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorSpecForProviderSnapshot
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorSpecForProviderTimeSeries
@@ -163,7 +182,9 @@ public partial class V1alpha1QualityMonitorSpecForProviderTimeSeries
     [JsonPropertyName("timestampCol")]
     public string? TimestampCol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorSpecForProvider
@@ -228,7 +249,9 @@ public partial class V1alpha1QualityMonitorSpecForProvider
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorSpecInitProviderCustomMetrics
@@ -253,7 +276,9 @@ public partial class V1alpha1QualityMonitorSpecInitProviderCustomMetrics
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorSpecInitProviderDataClassificationConfig
@@ -262,7 +287,9 @@ public partial class V1alpha1QualityMonitorSpecInitProviderDataClassificationCon
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorSpecInitProviderInferenceLog
@@ -295,7 +322,9 @@ public partial class V1alpha1QualityMonitorSpecInitProviderInferenceLog
     [JsonPropertyName("timestampCol")]
     public string? TimestampCol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorSpecInitProviderNotificationsOnFailure
@@ -304,7 +333,9 @@ public partial class V1alpha1QualityMonitorSpecInitProviderNotificationsOnFailur
     [JsonPropertyName("emailAddresses")]
     public IList<string>? EmailAddresses { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorSpecInitProviderNotificationsOnNewClassificationTagDetected
@@ -313,7 +344,9 @@ public partial class V1alpha1QualityMonitorSpecInitProviderNotificationsOnNewCla
     [JsonPropertyName("emailAddresses")]
     public IList<string>? EmailAddresses { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorSpecInitProviderNotifications
@@ -326,7 +359,9 @@ public partial class V1alpha1QualityMonitorSpecInitProviderNotifications
     [JsonPropertyName("onNewClassificationTagDetected")]
     public IList<V1alpha1QualityMonitorSpecInitProviderNotificationsOnNewClassificationTagDetected>? OnNewClassificationTagDetected { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorSpecInitProviderSchedule
@@ -339,13 +374,17 @@ public partial class V1alpha1QualityMonitorSpecInitProviderSchedule
     [JsonPropertyName("timezoneId")]
     public string? TimezoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorSpecInitProviderSnapshot
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorSpecInitProviderTimeSeries
@@ -358,7 +397,9 @@ public partial class V1alpha1QualityMonitorSpecInitProviderTimeSeries
     [JsonPropertyName("timestampCol")]
     public string? TimestampCol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorSpecInitProvider
@@ -423,7 +464,9 @@ public partial class V1alpha1QualityMonitorSpecInitProvider
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorSpecProviderConfigRefPolicy
@@ -436,7 +479,9 @@ public partial class V1alpha1QualityMonitorSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorSpecProviderConfigRef
@@ -449,7 +494,9 @@ public partial class V1alpha1QualityMonitorSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1QualityMonitorSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorSpecPublishConnectionDetailsToConfigRefPolicy
@@ -462,7 +509,9 @@ public partial class V1alpha1QualityMonitorSpecPublishConnectionDetailsToConfigR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorSpecPublishConnectionDetailsToConfigRef
@@ -475,7 +524,9 @@ public partial class V1alpha1QualityMonitorSpecPublishConnectionDetailsToConfigR
     [JsonPropertyName("policy")]
     public V1alpha1QualityMonitorSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Metadata is the metadata for connection secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorSpecPublishConnectionDetailsToMetadata
@@ -492,7 +543,9 @@ public partial class V1alpha1QualityMonitorSpecPublishConnectionDetailsToMetadat
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorSpecPublishConnectionDetailsTo
@@ -509,7 +562,9 @@ public partial class V1alpha1QualityMonitorSpecPublishConnectionDetailsTo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorSpecWriteConnectionSecretToRef
@@ -522,7 +577,9 @@ public partial class V1alpha1QualityMonitorSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>QualityMonitorSpec defines the desired state of QualityMonitor</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorSpec
@@ -555,7 +612,9 @@ public partial class V1alpha1QualityMonitorSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1alpha1QualityMonitorSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorStatusAtProviderCustomMetrics
@@ -580,7 +639,9 @@ public partial class V1alpha1QualityMonitorStatusAtProviderCustomMetrics
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorStatusAtProviderDataClassificationConfig
@@ -589,7 +650,9 @@ public partial class V1alpha1QualityMonitorStatusAtProviderDataClassificationCon
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorStatusAtProviderInferenceLog
@@ -622,7 +685,9 @@ public partial class V1alpha1QualityMonitorStatusAtProviderInferenceLog
     [JsonPropertyName("timestampCol")]
     public string? TimestampCol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorStatusAtProviderNotificationsOnFailure
@@ -631,7 +696,9 @@ public partial class V1alpha1QualityMonitorStatusAtProviderNotificationsOnFailur
     [JsonPropertyName("emailAddresses")]
     public IList<string>? EmailAddresses { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorStatusAtProviderNotificationsOnNewClassificationTagDetected
@@ -640,7 +707,9 @@ public partial class V1alpha1QualityMonitorStatusAtProviderNotificationsOnNewCla
     [JsonPropertyName("emailAddresses")]
     public IList<string>? EmailAddresses { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorStatusAtProviderNotifications
@@ -653,7 +722,9 @@ public partial class V1alpha1QualityMonitorStatusAtProviderNotifications
     [JsonPropertyName("onNewClassificationTagDetected")]
     public IList<V1alpha1QualityMonitorStatusAtProviderNotificationsOnNewClassificationTagDetected>? OnNewClassificationTagDetected { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorStatusAtProviderSchedule
@@ -670,13 +741,17 @@ public partial class V1alpha1QualityMonitorStatusAtProviderSchedule
     [JsonPropertyName("timezoneId")]
     public string? TimezoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorStatusAtProviderSnapshot
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorStatusAtProviderTimeSeries
@@ -689,7 +764,9 @@ public partial class V1alpha1QualityMonitorStatusAtProviderTimeSeries
     [JsonPropertyName("timestampCol")]
     public string? TimestampCol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorStatusAtProvider
@@ -778,7 +855,9 @@ public partial class V1alpha1QualityMonitorStatusAtProvider
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorStatusConditions
@@ -807,7 +886,9 @@ public partial class V1alpha1QualityMonitorStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>QualityMonitorStatus defines the observed state of QualityMonitor.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QualityMonitorStatus
@@ -824,7 +905,9 @@ public partial class V1alpha1QualityMonitorStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>QualityMonitor is the Schema for the QualityMonitors API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -854,3 +937,4 @@ public partial class V1alpha1QualityMonitor : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1alpha1QualityMonitorStatus? Status { get; set; }
 }
+#nullable disable

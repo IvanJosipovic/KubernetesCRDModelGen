@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gke.gcp.upbound.io;
+#nullable enable
 /// <summary>BackupBackupPlan is the Schema for the BackupBackupPlans API. Represents a Backup Plan instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BackupBackupPlanList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1BackupBackupPlan> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeyRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptio
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CryptoKey in kms to populate gcpKmsEncryptionKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeyRef
@@ -59,7 +64,9 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptio
     [JsonPropertyName("policy")]
     public V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeyRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeySelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptio
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CryptoKey in kms to populate gcpKmsEncryptionKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeySelector
@@ -89,7 +98,9 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptio
     [JsonPropertyName("policy")]
     public V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKey
@@ -106,7 +117,9 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptio
     [JsonPropertyName("gcpKmsEncryptionKeySelector")]
     public V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeySelector? GcpKmsEncryptionKeySelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigSelectedApplicationsNamespacedNames
@@ -119,7 +132,9 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigSelectedA
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigSelectedApplications
@@ -128,7 +143,9 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigSelectedA
     [JsonPropertyName("namespacedNames")]
     public IList<V1beta1BackupBackupPlanSpecForProviderBackupConfigSelectedApplicationsNamespacedNames>? NamespacedNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigSelectedNamespaces
@@ -137,7 +154,9 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigSelectedN
     [JsonPropertyName("namespaces")]
     public IList<string>? Namespaces { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfig
@@ -170,7 +189,9 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfig
     [JsonPropertyName("selectedNamespaces")]
     public IList<V1beta1BackupBackupPlanSpecForProviderBackupConfigSelectedNamespaces>? SelectedNamespaces { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConfigExclusionWindowsDaysOfWeek
@@ -179,7 +200,9 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConf
     [JsonPropertyName("daysOfWeek")]
     public IList<string>? DaysOfWeek { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConfigExclusionWindowsSingleOccurrenceDate
@@ -196,7 +219,9 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConf
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConfigExclusionWindowsStartTime
@@ -217,7 +242,9 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConf
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConfigExclusionWindows
@@ -242,7 +269,9 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConf
     [JsonPropertyName("startTime")]
     public IList<V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConfigExclusionWindowsStartTime>? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConfig
@@ -255,7 +284,9 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConf
     [JsonPropertyName("targetRpoMinutes")]
     public double? TargetRpoMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupSchedule
@@ -272,7 +303,9 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupSchedule
     [JsonPropertyName("rpoConfig")]
     public IList<V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConfig>? RpoConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderClusterRefPolicy
@@ -285,7 +318,9 @@ public partial class V1beta1BackupBackupPlanSpecForProviderClusterRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in container to populate cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderClusterRef
@@ -298,7 +333,9 @@ public partial class V1beta1BackupBackupPlanSpecForProviderClusterRef
     [JsonPropertyName("policy")]
     public V1beta1BackupBackupPlanSpecForProviderClusterRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderClusterSelectorPolicy
@@ -311,7 +348,9 @@ public partial class V1beta1BackupBackupPlanSpecForProviderClusterSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in container to populate cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderClusterSelector
@@ -328,7 +367,9 @@ public partial class V1beta1BackupBackupPlanSpecForProviderClusterSelector
     [JsonPropertyName("policy")]
     public V1beta1BackupBackupPlanSpecForProviderClusterSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProviderRetentionPolicy
@@ -345,7 +386,9 @@ public partial class V1beta1BackupBackupPlanSpecForProviderRetentionPolicy
     [JsonPropertyName("locked")]
     public bool? Locked { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecForProvider
@@ -394,7 +437,9 @@ public partial class V1beta1BackupBackupPlanSpecForProvider
     [JsonPropertyName("retentionPolicy")]
     public IList<V1beta1BackupBackupPlanSpecForProviderRetentionPolicy>? RetentionPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeyRefPolicy
@@ -407,7 +452,9 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncrypti
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CryptoKey in kms to populate gcpKmsEncryptionKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeyRef
@@ -420,7 +467,9 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncrypti
     [JsonPropertyName("policy")]
     public V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeyRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeySelectorPolicy
@@ -433,7 +482,9 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncrypti
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CryptoKey in kms to populate gcpKmsEncryptionKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeySelector
@@ -450,7 +501,9 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncrypti
     [JsonPropertyName("policy")]
     public V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKey
@@ -467,7 +520,9 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncrypti
     [JsonPropertyName("gcpKmsEncryptionKeySelector")]
     public V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeySelector? GcpKmsEncryptionKeySelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigSelectedApplicationsNamespacedNames
@@ -480,7 +535,9 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigSelected
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigSelectedApplications
@@ -489,7 +546,9 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigSelected
     [JsonPropertyName("namespacedNames")]
     public IList<V1beta1BackupBackupPlanSpecInitProviderBackupConfigSelectedApplicationsNamespacedNames>? NamespacedNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigSelectedNamespaces
@@ -498,7 +557,9 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigSelected
     [JsonPropertyName("namespaces")]
     public IList<string>? Namespaces { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfig
@@ -531,7 +592,9 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfig
     [JsonPropertyName("selectedNamespaces")]
     public IList<V1beta1BackupBackupPlanSpecInitProviderBackupConfigSelectedNamespaces>? SelectedNamespaces { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoConfigExclusionWindowsDaysOfWeek
@@ -540,7 +603,9 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoCon
     [JsonPropertyName("daysOfWeek")]
     public IList<string>? DaysOfWeek { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoConfigExclusionWindowsSingleOccurrenceDate
@@ -557,7 +622,9 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoCon
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoConfigExclusionWindowsStartTime
@@ -578,7 +645,9 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoCon
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoConfigExclusionWindows
@@ -603,7 +672,9 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoCon
     [JsonPropertyName("startTime")]
     public IList<V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoConfigExclusionWindowsStartTime>? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoConfig
@@ -616,7 +687,9 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoCon
     [JsonPropertyName("targetRpoMinutes")]
     public double? TargetRpoMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupSchedule
@@ -633,7 +706,9 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupSchedule
     [JsonPropertyName("rpoConfig")]
     public IList<V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoConfig>? RpoConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderClusterRefPolicy
@@ -646,7 +721,9 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderClusterRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in container to populate cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderClusterRef
@@ -659,7 +736,9 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderClusterRef
     [JsonPropertyName("policy")]
     public V1beta1BackupBackupPlanSpecInitProviderClusterRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderClusterSelectorPolicy
@@ -672,7 +751,9 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderClusterSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in container to populate cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderClusterSelector
@@ -689,7 +770,9 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderClusterSelector
     [JsonPropertyName("policy")]
     public V1beta1BackupBackupPlanSpecInitProviderClusterSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProviderRetentionPolicy
@@ -706,7 +789,9 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderRetentionPolicy
     [JsonPropertyName("locked")]
     public bool? Locked { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecInitProvider
@@ -751,7 +836,9 @@ public partial class V1beta1BackupBackupPlanSpecInitProvider
     [JsonPropertyName("retentionPolicy")]
     public IList<V1beta1BackupBackupPlanSpecInitProviderRetentionPolicy>? RetentionPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecProviderConfigRefPolicy
@@ -764,7 +851,9 @@ public partial class V1beta1BackupBackupPlanSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecProviderConfigRef
@@ -777,7 +866,9 @@ public partial class V1beta1BackupBackupPlanSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1BackupBackupPlanSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpecWriteConnectionSecretToRef
@@ -790,7 +881,9 @@ public partial class V1beta1BackupBackupPlanSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupBackupPlanSpec defines the desired state of BackupBackupPlan</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanSpec
@@ -819,7 +912,9 @@ public partial class V1beta1BackupBackupPlanSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BackupBackupPlanSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupConfigEncryptionKey
@@ -828,7 +923,9 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupConfigEncrypti
     [JsonPropertyName("gcpKmsEncryptionKey")]
     public string? GcpKmsEncryptionKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupConfigSelectedApplicationsNamespacedNames
@@ -841,7 +938,9 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupConfigSelected
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupConfigSelectedApplications
@@ -850,7 +949,9 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupConfigSelected
     [JsonPropertyName("namespacedNames")]
     public IList<V1beta1BackupBackupPlanStatusAtProviderBackupConfigSelectedApplicationsNamespacedNames>? NamespacedNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupConfigSelectedNamespaces
@@ -859,7 +960,9 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupConfigSelected
     [JsonPropertyName("namespaces")]
     public IList<string>? Namespaces { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupConfig
@@ -892,7 +995,9 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupConfig
     [JsonPropertyName("selectedNamespaces")]
     public IList<V1beta1BackupBackupPlanStatusAtProviderBackupConfigSelectedNamespaces>? SelectedNamespaces { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoConfigExclusionWindowsDaysOfWeek
@@ -901,7 +1006,9 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoCon
     [JsonPropertyName("daysOfWeek")]
     public IList<string>? DaysOfWeek { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoConfigExclusionWindowsSingleOccurrenceDate
@@ -918,7 +1025,9 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoCon
     [JsonPropertyName("year")]
     public double? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoConfigExclusionWindowsStartTime
@@ -939,7 +1048,9 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoCon
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoConfigExclusionWindows
@@ -964,7 +1075,9 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoCon
     [JsonPropertyName("startTime")]
     public IList<V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoConfigExclusionWindowsStartTime>? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoConfig
@@ -977,7 +1090,9 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoCon
     [JsonPropertyName("targetRpoMinutes")]
     public double? TargetRpoMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupSchedule
@@ -994,7 +1109,9 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupSchedule
     [JsonPropertyName("rpoConfig")]
     public IList<V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoConfig>? RpoConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanStatusAtProviderRetentionPolicy
@@ -1011,7 +1128,9 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderRetentionPolicy
     [JsonPropertyName("locked")]
     public bool? Locked { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanStatusAtProvider
@@ -1084,7 +1203,9 @@ public partial class V1beta1BackupBackupPlanStatusAtProvider
     [JsonPropertyName("uid")]
     public string? Uid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanStatusConditions
@@ -1113,7 +1234,9 @@ public partial class V1beta1BackupBackupPlanStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupBackupPlanStatus defines the observed state of BackupBackupPlan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupBackupPlanStatus
@@ -1130,7 +1253,9 @@ public partial class V1beta1BackupBackupPlanStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupBackupPlan is the Schema for the BackupBackupPlans API. Represents a Backup Plan instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1160,3 +1285,4 @@ public partial class V1beta1BackupBackupPlan : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1BackupBackupPlanStatus? Status { get; set; }
 }
+#nullable disable

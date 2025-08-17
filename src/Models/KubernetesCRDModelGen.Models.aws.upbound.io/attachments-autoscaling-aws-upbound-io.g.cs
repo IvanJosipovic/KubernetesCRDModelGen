@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.autoscaling.aws.upbound.io;
+#nullable enable
 /// <summary>Attachment is the Schema for the Attachments API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta2AttachmentList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1beta2Attachment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentSpecForProviderAutoscalingGroupNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta2AttachmentSpecForProviderAutoscalingGroupNameRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a AutoscalingGroup in autoscaling to populate autoscalingGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentSpecForProviderAutoscalingGroupNameRef
@@ -59,7 +64,9 @@ public partial class V1beta2AttachmentSpecForProviderAutoscalingGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta2AttachmentSpecForProviderAutoscalingGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentSpecForProviderAutoscalingGroupNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta2AttachmentSpecForProviderAutoscalingGroupNameSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a AutoscalingGroup in autoscaling to populate autoscalingGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentSpecForProviderAutoscalingGroupNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta2AttachmentSpecForProviderAutoscalingGroupNameSelecto
     [JsonPropertyName("policy")]
     public V1beta2AttachmentSpecForProviderAutoscalingGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentSpecForProviderElbRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta2AttachmentSpecForProviderElbRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ELB in elb to populate elb.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentSpecForProviderElbRef
@@ -115,7 +128,9 @@ public partial class V1beta2AttachmentSpecForProviderElbRef
     [JsonPropertyName("policy")]
     public V1beta2AttachmentSpecForProviderElbRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentSpecForProviderElbSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta2AttachmentSpecForProviderElbSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ELB in elb to populate elb.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentSpecForProviderElbSelector
@@ -145,7 +162,9 @@ public partial class V1beta2AttachmentSpecForProviderElbSelector
     [JsonPropertyName("policy")]
     public V1beta2AttachmentSpecForProviderElbSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentSpecForProviderLbTargetGroupArnRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta2AttachmentSpecForProviderLbTargetGroupArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LBTargetGroup in elbv2 to populate lbTargetGroupArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentSpecForProviderLbTargetGroupArnRef
@@ -171,7 +192,9 @@ public partial class V1beta2AttachmentSpecForProviderLbTargetGroupArnRef
     [JsonPropertyName("policy")]
     public V1beta2AttachmentSpecForProviderLbTargetGroupArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentSpecForProviderLbTargetGroupArnSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta2AttachmentSpecForProviderLbTargetGroupArnSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LBTargetGroup in elbv2 to populate lbTargetGroupArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentSpecForProviderLbTargetGroupArnSelector
@@ -201,7 +226,9 @@ public partial class V1beta2AttachmentSpecForProviderLbTargetGroupArnSelector
     [JsonPropertyName("policy")]
     public V1beta2AttachmentSpecForProviderLbTargetGroupArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentSpecForProvider
@@ -246,7 +273,9 @@ public partial class V1beta2AttachmentSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentSpecInitProviderAutoscalingGroupNameRefPolicy
@@ -259,7 +288,9 @@ public partial class V1beta2AttachmentSpecInitProviderAutoscalingGroupNameRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a AutoscalingGroup in autoscaling to populate autoscalingGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentSpecInitProviderAutoscalingGroupNameRef
@@ -272,7 +303,9 @@ public partial class V1beta2AttachmentSpecInitProviderAutoscalingGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta2AttachmentSpecInitProviderAutoscalingGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentSpecInitProviderAutoscalingGroupNameSelectorPolicy
@@ -285,7 +318,9 @@ public partial class V1beta2AttachmentSpecInitProviderAutoscalingGroupNameSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a AutoscalingGroup in autoscaling to populate autoscalingGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentSpecInitProviderAutoscalingGroupNameSelector
@@ -302,7 +337,9 @@ public partial class V1beta2AttachmentSpecInitProviderAutoscalingGroupNameSelect
     [JsonPropertyName("policy")]
     public V1beta2AttachmentSpecInitProviderAutoscalingGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentSpecInitProviderElbRefPolicy
@@ -315,7 +352,9 @@ public partial class V1beta2AttachmentSpecInitProviderElbRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ELB in elb to populate elb.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentSpecInitProviderElbRef
@@ -328,7 +367,9 @@ public partial class V1beta2AttachmentSpecInitProviderElbRef
     [JsonPropertyName("policy")]
     public V1beta2AttachmentSpecInitProviderElbRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentSpecInitProviderElbSelectorPolicy
@@ -341,7 +382,9 @@ public partial class V1beta2AttachmentSpecInitProviderElbSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ELB in elb to populate elb.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentSpecInitProviderElbSelector
@@ -358,7 +401,9 @@ public partial class V1beta2AttachmentSpecInitProviderElbSelector
     [JsonPropertyName("policy")]
     public V1beta2AttachmentSpecInitProviderElbSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentSpecInitProviderLbTargetGroupArnRefPolicy
@@ -371,7 +416,9 @@ public partial class V1beta2AttachmentSpecInitProviderLbTargetGroupArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LBTargetGroup in elbv2 to populate lbTargetGroupArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentSpecInitProviderLbTargetGroupArnRef
@@ -384,7 +431,9 @@ public partial class V1beta2AttachmentSpecInitProviderLbTargetGroupArnRef
     [JsonPropertyName("policy")]
     public V1beta2AttachmentSpecInitProviderLbTargetGroupArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentSpecInitProviderLbTargetGroupArnSelectorPolicy
@@ -397,7 +446,9 @@ public partial class V1beta2AttachmentSpecInitProviderLbTargetGroupArnSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LBTargetGroup in elbv2 to populate lbTargetGroupArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentSpecInitProviderLbTargetGroupArnSelector
@@ -414,7 +465,9 @@ public partial class V1beta2AttachmentSpecInitProviderLbTargetGroupArnSelector
     [JsonPropertyName("policy")]
     public V1beta2AttachmentSpecInitProviderLbTargetGroupArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentSpecInitProvider
@@ -455,7 +508,9 @@ public partial class V1beta2AttachmentSpecInitProvider
     [JsonPropertyName("lbTargetGroupArnSelector")]
     public V1beta2AttachmentSpecInitProviderLbTargetGroupArnSelector? LbTargetGroupArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentSpecProviderConfigRefPolicy
@@ -468,7 +523,9 @@ public partial class V1beta2AttachmentSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentSpecProviderConfigRef
@@ -481,7 +538,9 @@ public partial class V1beta2AttachmentSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta2AttachmentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentSpecWriteConnectionSecretToRef
@@ -494,7 +553,9 @@ public partial class V1beta2AttachmentSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AttachmentSpec defines the desired state of Attachment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentSpec
@@ -523,7 +584,9 @@ public partial class V1beta2AttachmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta2AttachmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentStatusAtProvider
@@ -548,7 +611,9 @@ public partial class V1beta2AttachmentStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentStatusConditions
@@ -577,7 +642,9 @@ public partial class V1beta2AttachmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AttachmentStatus defines the observed state of Attachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AttachmentStatus
@@ -594,7 +661,9 @@ public partial class V1beta2AttachmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Attachment is the Schema for the Attachments API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -624,3 +693,4 @@ public partial class V1beta2Attachment : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta2AttachmentStatus? Status { get; set; }
 }
+#nullable disable

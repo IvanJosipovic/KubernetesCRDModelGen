@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apprunner.aws.upbound.io;
+#nullable enable
 /// <summary>ObservabilityConfiguration is the Schema for the ObservabilityConfigurations API. Manages an App Runner Observability Configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ObservabilityConfigurationList : IKubernetesObject<V
     [JsonPropertyName("items")]
     public IList<V1beta1ObservabilityConfiguration> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObservabilityConfigurationSpecForProviderTraceConfiguration
@@ -42,7 +45,9 @@ public partial class V1beta1ObservabilityConfigurationSpecForProviderTraceConfig
     [JsonPropertyName("vendor")]
     public string? Vendor { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObservabilityConfigurationSpecForProvider
@@ -63,7 +68,9 @@ public partial class V1beta1ObservabilityConfigurationSpecForProvider
     [JsonPropertyName("traceConfiguration")]
     public IList<V1beta1ObservabilityConfigurationSpecForProviderTraceConfiguration>? TraceConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObservabilityConfigurationSpecInitProviderTraceConfiguration
@@ -72,7 +79,9 @@ public partial class V1beta1ObservabilityConfigurationSpecInitProviderTraceConfi
     [JsonPropertyName("vendor")]
     public string? Vendor { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObservabilityConfigurationSpecInitProvider
@@ -89,7 +98,9 @@ public partial class V1beta1ObservabilityConfigurationSpecInitProvider
     [JsonPropertyName("traceConfiguration")]
     public IList<V1beta1ObservabilityConfigurationSpecInitProviderTraceConfiguration>? TraceConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObservabilityConfigurationSpecProviderConfigRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1ObservabilityConfigurationSpecProviderConfigRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObservabilityConfigurationSpecProviderConfigRef
@@ -115,7 +128,9 @@ public partial class V1beta1ObservabilityConfigurationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ObservabilityConfigurationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObservabilityConfigurationSpecWriteConnectionSecretToRef
@@ -128,7 +143,9 @@ public partial class V1beta1ObservabilityConfigurationSpecWriteConnectionSecretT
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservabilityConfigurationSpec defines the desired state of ObservabilityConfiguration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObservabilityConfigurationSpec
@@ -157,7 +174,9 @@ public partial class V1beta1ObservabilityConfigurationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ObservabilityConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObservabilityConfigurationStatusAtProviderTraceConfiguration
@@ -166,7 +185,9 @@ public partial class V1beta1ObservabilityConfigurationStatusAtProviderTraceConfi
     [JsonPropertyName("vendor")]
     public string? Vendor { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObservabilityConfigurationStatusAtProvider
@@ -211,7 +232,9 @@ public partial class V1beta1ObservabilityConfigurationStatusAtProvider
     [JsonPropertyName("traceConfiguration")]
     public IList<V1beta1ObservabilityConfigurationStatusAtProviderTraceConfiguration>? TraceConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObservabilityConfigurationStatusConditions
@@ -240,7 +263,9 @@ public partial class V1beta1ObservabilityConfigurationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservabilityConfigurationStatus defines the observed state of ObservabilityConfiguration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObservabilityConfigurationStatus
@@ -257,7 +282,9 @@ public partial class V1beta1ObservabilityConfigurationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservabilityConfiguration is the Schema for the ObservabilityConfigurations API. Manages an App Runner Observability Configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -287,3 +314,4 @@ public partial class V1beta1ObservabilityConfiguration : IKubernetesObject<V1Obj
     [JsonPropertyName("status")]
     public V1beta1ObservabilityConfigurationStatus? Status { get; set; }
 }
+#nullable disable

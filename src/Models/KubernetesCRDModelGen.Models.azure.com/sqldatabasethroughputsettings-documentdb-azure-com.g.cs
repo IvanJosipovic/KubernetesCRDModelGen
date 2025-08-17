@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.documentdb.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20240815.SqlDatabaseThroughputSetting Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2024-08-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20240815storageSqlDatabaseThroughputSettingList : IKub
     [JsonPropertyName("items")]
     public IList<V1api20240815storageSqlDatabaseThroughputSetting> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseThroughputSettingSpecOperatorSpecConfigMapExpressions
@@ -50,7 +53,9 @@ public partial class V1api20240815storageSqlDatabaseThroughputSettingSpecOperato
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseThroughputSettingSpecOperatorSpecSecretExpressions
@@ -67,7 +72,9 @@ public partial class V1api20240815storageSqlDatabaseThroughputSettingSpecOperato
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.SqlDatabaseThroughputSettingOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseThroughputSettingSpecOperatorSpec
@@ -84,7 +91,9 @@ public partial class V1api20240815storageSqlDatabaseThroughputSettingSpecOperato
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20240815storageSqlDatabaseThroughputSettingSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a documentdb.azure.com/SqlDatabase resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseThroughputSettingSpecOwner
@@ -97,7 +106,9 @@ public partial class V1api20240815storageSqlDatabaseThroughputSettingSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.ThroughputPolicyResource Cosmos DB resource throughput policy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseThroughputSettingSpecResourceAutoscaleSettingsAutoUpgradePolicyThroughputPolicy
@@ -114,7 +125,9 @@ public partial class V1api20240815storageSqlDatabaseThroughputSettingSpecResourc
     [JsonPropertyName("isEnabled")]
     public bool? IsEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.AutoUpgradePolicyResource Cosmos DB resource auto-upgrade policy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseThroughputSettingSpecResourceAutoscaleSettingsAutoUpgradePolicy
@@ -127,7 +140,9 @@ public partial class V1api20240815storageSqlDatabaseThroughputSettingSpecResourc
     [JsonPropertyName("throughputPolicy")]
     public V1api20240815storageSqlDatabaseThroughputSettingSpecResourceAutoscaleSettingsAutoUpgradePolicyThroughputPolicy? ThroughputPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.AutoscaleSettingsResource Cosmos DB provisioned throughput settings object</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseThroughputSettingSpecResourceAutoscaleSettings
@@ -144,7 +159,9 @@ public partial class V1api20240815storageSqlDatabaseThroughputSettingSpecResourc
     [JsonPropertyName("maxThroughput")]
     public int? MaxThroughput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.ThroughputSettingsResource Cosmos DB resource throughput object. Either throughput is required or autoscaleSettings is required, but not both.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseThroughputSettingSpecResource
@@ -161,7 +178,9 @@ public partial class V1api20240815storageSqlDatabaseThroughputSettingSpecResourc
     [JsonPropertyName("throughput")]
     public int? Throughput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.SqlDatabaseThroughputSetting_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseThroughputSettingSpec
@@ -194,7 +213,9 @@ public partial class V1api20240815storageSqlDatabaseThroughputSettingSpec
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseThroughputSettingStatusConditions
@@ -227,7 +248,9 @@ public partial class V1api20240815storageSqlDatabaseThroughputSettingStatusCondi
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.ThroughputPolicyResource_STATUS Cosmos DB resource throughput policy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseThroughputSettingStatusResourceAutoscaleSettingsAutoUpgradePolicyThroughputPolicy
@@ -244,7 +267,9 @@ public partial class V1api20240815storageSqlDatabaseThroughputSettingStatusResou
     [JsonPropertyName("isEnabled")]
     public bool? IsEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.AutoUpgradePolicyResource_STATUS Cosmos DB resource auto-upgrade policy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseThroughputSettingStatusResourceAutoscaleSettingsAutoUpgradePolicy
@@ -257,7 +282,9 @@ public partial class V1api20240815storageSqlDatabaseThroughputSettingStatusResou
     [JsonPropertyName("throughputPolicy")]
     public V1api20240815storageSqlDatabaseThroughputSettingStatusResourceAutoscaleSettingsAutoUpgradePolicyThroughputPolicy? ThroughputPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.AutoscaleSettingsResource_STATUS Cosmos DB provisioned throughput settings object</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseThroughputSettingStatusResourceAutoscaleSettings
@@ -278,7 +305,9 @@ public partial class V1api20240815storageSqlDatabaseThroughputSettingStatusResou
     [JsonPropertyName("targetMaxThroughput")]
     public int? TargetMaxThroughput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.ThroughputSettingsGetProperties_Resource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseThroughputSettingStatusResource
@@ -323,7 +352,9 @@ public partial class V1api20240815storageSqlDatabaseThroughputSettingStatusResou
     [JsonPropertyName("throughput")]
     public int? Throughput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.SqlDatabaseThroughputSetting_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseThroughputSettingStatus
@@ -360,7 +391,9 @@ public partial class V1api20240815storageSqlDatabaseThroughputSettingStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.SqlDatabaseThroughputSetting Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2024-08-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -390,3 +423,4 @@ public partial class V1api20240815storageSqlDatabaseThroughputSetting : IKuberne
     [JsonPropertyName("status")]
     public V1api20240815storageSqlDatabaseThroughputSettingStatus? Status { get; set; }
 }
+#nullable disable

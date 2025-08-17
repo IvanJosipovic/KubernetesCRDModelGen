@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hub.traefik.io;
+#nullable enable
 /// <summary>APIPlan defines API Plan policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1APIPlanList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1alpha1APIPlan> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Quota defines the quota policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIPlanSpecQuota
@@ -46,7 +49,9 @@ public partial class V1alpha1APIPlanSpecQuota
     [JsonPropertyName("period")]
     public string? Period { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RateLimit defines the rate limit policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIPlanSpecRateLimit
@@ -59,7 +64,9 @@ public partial class V1alpha1APIPlanSpecRateLimit
     [JsonPropertyName("period")]
     public string? Period { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The desired behavior of this APIPlan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIPlanSpec
@@ -80,7 +87,9 @@ public partial class V1alpha1APIPlanSpec
     [JsonPropertyName("title")]
     public string Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The current status of this APIPlan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIPlanStatus
@@ -97,7 +106,9 @@ public partial class V1alpha1APIPlanStatus
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>APIPlan defines API Plan policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -127,3 +138,4 @@ public partial class V1alpha1APIPlan : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1alpha1APIPlanStatus? Status { get; set; }
 }
+#nullable disable

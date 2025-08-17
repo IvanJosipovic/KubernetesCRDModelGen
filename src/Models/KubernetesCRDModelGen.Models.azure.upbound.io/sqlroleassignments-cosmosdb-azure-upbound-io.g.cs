@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cosmosdb.azure.upbound.io;
+#nullable enable
 /// <summary>SQLRoleAssignment is the Schema for the SQLRoleAssignments API. Manages a Cosmos DB SQL Role Assignment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SQLRoleAssignmentList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1SQLRoleAssignment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecForProviderAccountNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderAccountNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in cosmosdb to populate accountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecForProviderAccountNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderAccountNameRef
     [JsonPropertyName("policy")]
     public V1beta1SQLRoleAssignmentSpecForProviderAccountNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecForProviderAccountNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderAccountNameSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in cosmosdb to populate accountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecForProviderAccountNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderAccountNameSelector
     [JsonPropertyName("policy")]
     public V1beta1SQLRoleAssignmentSpecForProviderAccountNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecForProviderResourceGroupNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderResourceGroupNameRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecForProviderResourceGroupNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1SQLRoleAssignmentSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecForProviderResourceGroupNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderResourceGroupNameSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecForProviderResourceGroupNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderResourceGroupNameSel
     [JsonPropertyName("policy")]
     public V1beta1SQLRoleAssignmentSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecForProviderRoleDefinitionIdRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderRoleDefinitionIdRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SQLRoleDefinition in cosmosdb to populate roleDefinitionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecForProviderRoleDefinitionIdRef
@@ -171,7 +192,9 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderRoleDefinitionIdRef
     [JsonPropertyName("policy")]
     public V1beta1SQLRoleAssignmentSpecForProviderRoleDefinitionIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecForProviderRoleDefinitionIdSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderRoleDefinitionIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SQLRoleDefinition in cosmosdb to populate roleDefinitionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecForProviderRoleDefinitionIdSelector
@@ -201,7 +226,9 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderRoleDefinitionIdSele
     [JsonPropertyName("policy")]
     public V1beta1SQLRoleAssignmentSpecForProviderRoleDefinitionIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecForProviderScopeRefPolicy
@@ -214,7 +241,9 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderScopeRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in cosmosdb to populate scope.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecForProviderScopeRef
@@ -227,7 +256,9 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderScopeRef
     [JsonPropertyName("policy")]
     public V1beta1SQLRoleAssignmentSpecForProviderScopeRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecForProviderScopeSelectorPolicy
@@ -240,7 +271,9 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderScopeSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in cosmosdb to populate scope.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecForProviderScopeSelector
@@ -257,7 +290,9 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderScopeSelector
     [JsonPropertyName("policy")]
     public V1beta1SQLRoleAssignmentSpecForProviderScopeSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecForProvider
@@ -318,7 +353,9 @@ public partial class V1beta1SQLRoleAssignmentSpecForProvider
     [JsonPropertyName("scopeSelector")]
     public V1beta1SQLRoleAssignmentSpecForProviderScopeSelector? ScopeSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderAccountNameRefPolicy
@@ -331,7 +368,9 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderAccountNameRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in cosmosdb to populate accountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderAccountNameRef
@@ -344,7 +383,9 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderAccountNameRef
     [JsonPropertyName("policy")]
     public V1beta1SQLRoleAssignmentSpecInitProviderAccountNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderAccountNameSelectorPolicy
@@ -357,7 +398,9 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderAccountNameSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in cosmosdb to populate accountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderAccountNameSelector
@@ -374,7 +417,9 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderAccountNameSelector
     [JsonPropertyName("policy")]
     public V1beta1SQLRoleAssignmentSpecInitProviderAccountNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderResourceGroupNameRefPolicy
@@ -387,7 +432,9 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderResourceGroupNameRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderResourceGroupNameRef
@@ -400,7 +447,9 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderResourceGroupNameRe
     [JsonPropertyName("policy")]
     public V1beta1SQLRoleAssignmentSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderResourceGroupNameSelectorPolicy
@@ -413,7 +462,9 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderResourceGroupNameSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderResourceGroupNameSelector
@@ -430,7 +481,9 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderResourceGroupNameSe
     [JsonPropertyName("policy")]
     public V1beta1SQLRoleAssignmentSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderRoleDefinitionIdRefPolicy
@@ -443,7 +496,9 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderRoleDefinitionIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SQLRoleDefinition in cosmosdb to populate roleDefinitionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderRoleDefinitionIdRef
@@ -456,7 +511,9 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderRoleDefinitionIdRef
     [JsonPropertyName("policy")]
     public V1beta1SQLRoleAssignmentSpecInitProviderRoleDefinitionIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderRoleDefinitionIdSelectorPolicy
@@ -469,7 +526,9 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderRoleDefinitionIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SQLRoleDefinition in cosmosdb to populate roleDefinitionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderRoleDefinitionIdSelector
@@ -486,7 +545,9 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderRoleDefinitionIdSel
     [JsonPropertyName("policy")]
     public V1beta1SQLRoleAssignmentSpecInitProviderRoleDefinitionIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderScopeRefPolicy
@@ -499,7 +560,9 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderScopeRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in cosmosdb to populate scope.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderScopeRef
@@ -512,7 +575,9 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderScopeRef
     [JsonPropertyName("policy")]
     public V1beta1SQLRoleAssignmentSpecInitProviderScopeRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderScopeSelectorPolicy
@@ -525,7 +590,9 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderScopeSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in cosmosdb to populate scope.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderScopeSelector
@@ -542,7 +609,9 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderScopeSelector
     [JsonPropertyName("policy")]
     public V1beta1SQLRoleAssignmentSpecInitProviderScopeSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecInitProvider
@@ -603,7 +672,9 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProvider
     [JsonPropertyName("scopeSelector")]
     public V1beta1SQLRoleAssignmentSpecInitProviderScopeSelector? ScopeSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecProviderConfigRefPolicy
@@ -616,7 +687,9 @@ public partial class V1beta1SQLRoleAssignmentSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecProviderConfigRef
@@ -629,7 +702,9 @@ public partial class V1beta1SQLRoleAssignmentSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1SQLRoleAssignmentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpecWriteConnectionSecretToRef
@@ -642,7 +717,9 @@ public partial class V1beta1SQLRoleAssignmentSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SQLRoleAssignmentSpec defines the desired state of SQLRoleAssignment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentSpec
@@ -671,7 +748,9 @@ public partial class V1beta1SQLRoleAssignmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SQLRoleAssignmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentStatusAtProvider
@@ -704,7 +783,9 @@ public partial class V1beta1SQLRoleAssignmentStatusAtProvider
     [JsonPropertyName("scope")]
     public string? Scope { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentStatusConditions
@@ -733,7 +814,9 @@ public partial class V1beta1SQLRoleAssignmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SQLRoleAssignmentStatus defines the observed state of SQLRoleAssignment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleAssignmentStatus
@@ -750,7 +833,9 @@ public partial class V1beta1SQLRoleAssignmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SQLRoleAssignment is the Schema for the SQLRoleAssignments API. Manages a Cosmos DB SQL Role Assignment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -780,3 +865,4 @@ public partial class V1beta1SQLRoleAssignment : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1SQLRoleAssignmentStatus? Status { get; set; }
 }
+#nullable disable

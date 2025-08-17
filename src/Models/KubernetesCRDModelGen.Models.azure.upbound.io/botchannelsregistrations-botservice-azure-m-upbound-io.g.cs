@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.botservice.azure.m.upbound.io;
+#nullable enable
 /// <summary>BotChannelsRegistration is the Schema for the BotChannelsRegistrations API. Manages a Bot Channels Registration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BotChannelsRegistrationList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1BotChannelsRegistration> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Application Insights API Key to associate with the Bot Channels Registration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelsRegistrationSpecForProviderDeveloperAppInsightsApiKeySecretRef
@@ -46,7 +49,9 @@ public partial class V1beta1BotChannelsRegistrationSpecForProviderDeveloperAppIn
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelsRegistrationSpecForProviderResourceGroupNameRefPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1BotChannelsRegistrationSpecForProviderResourceGroupN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelsRegistrationSpecForProviderResourceGroupNameRef
@@ -76,7 +83,9 @@ public partial class V1beta1BotChannelsRegistrationSpecForProviderResourceGroupN
     [JsonPropertyName("policy")]
     public V1beta1BotChannelsRegistrationSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelsRegistrationSpecForProviderResourceGroupNameSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1BotChannelsRegistrationSpecForProviderResourceGroupN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelsRegistrationSpecForProviderResourceGroupNameSelector
@@ -110,7 +121,9 @@ public partial class V1beta1BotChannelsRegistrationSpecForProviderResourceGroupN
     [JsonPropertyName("policy")]
     public V1beta1BotChannelsRegistrationSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelsRegistrationSpecForProvider
@@ -187,7 +200,9 @@ public partial class V1beta1BotChannelsRegistrationSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Application Insights API Key to associate with the Bot Channels Registration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelsRegistrationSpecInitProviderDeveloperAppInsightsApiKeySecretRef
@@ -200,7 +215,9 @@ public partial class V1beta1BotChannelsRegistrationSpecInitProviderDeveloperAppI
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelsRegistrationSpecInitProviderResourceGroupNameRefPolicy
@@ -213,7 +230,9 @@ public partial class V1beta1BotChannelsRegistrationSpecInitProviderResourceGroup
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelsRegistrationSpecInitProviderResourceGroupNameRef
@@ -230,7 +249,9 @@ public partial class V1beta1BotChannelsRegistrationSpecInitProviderResourceGroup
     [JsonPropertyName("policy")]
     public V1beta1BotChannelsRegistrationSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelsRegistrationSpecInitProviderResourceGroupNameSelectorPolicy
@@ -243,7 +264,9 @@ public partial class V1beta1BotChannelsRegistrationSpecInitProviderResourceGroup
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelsRegistrationSpecInitProviderResourceGroupNameSelector
@@ -264,7 +287,9 @@ public partial class V1beta1BotChannelsRegistrationSpecInitProviderResourceGroup
     [JsonPropertyName("policy")]
     public V1beta1BotChannelsRegistrationSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelsRegistrationSpecInitProvider
@@ -341,7 +366,9 @@ public partial class V1beta1BotChannelsRegistrationSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelsRegistrationSpecProviderConfigRef
@@ -354,7 +381,9 @@ public partial class V1beta1BotChannelsRegistrationSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelsRegistrationSpecWriteConnectionSecretToRef
@@ -363,7 +392,9 @@ public partial class V1beta1BotChannelsRegistrationSpecWriteConnectionSecretToRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BotChannelsRegistrationSpec defines the desired state of BotChannelsRegistration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelsRegistrationSpec
@@ -388,7 +419,9 @@ public partial class V1beta1BotChannelsRegistrationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BotChannelsRegistrationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelsRegistrationStatusAtProvider
@@ -457,7 +490,9 @@ public partial class V1beta1BotChannelsRegistrationStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelsRegistrationStatusConditions
@@ -486,7 +521,9 @@ public partial class V1beta1BotChannelsRegistrationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BotChannelsRegistrationStatus defines the observed state of BotChannelsRegistration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelsRegistrationStatus
@@ -503,7 +540,9 @@ public partial class V1beta1BotChannelsRegistrationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BotChannelsRegistration is the Schema for the BotChannelsRegistrations API. Manages a Bot Channels Registration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -533,3 +572,4 @@ public partial class V1beta1BotChannelsRegistration : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1BotChannelsRegistrationStatus? Status { get; set; }
 }
+#nullable disable

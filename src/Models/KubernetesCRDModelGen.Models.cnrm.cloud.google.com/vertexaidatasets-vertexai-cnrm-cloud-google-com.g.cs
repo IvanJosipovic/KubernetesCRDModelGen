@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.vertexai.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1VertexAIDatasetList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1alpha1VertexAIDataset> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The Cloud KMS resource identifier of the customer managed encryption key used to protect a resource. Has the form: projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key. The key needs to be in the same region as where the compute resource is created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIDatasetSpecEncryptionSpecKmsKeyNameRef
@@ -50,7 +53,9 @@ public partial class V1alpha1VertexAIDatasetSpecEncryptionSpecKmsKeyNameRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Customer-managed encryption key spec for a Dataset. If set, this Dataset and all sub-resources of this Dataset will be secured by this key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIDatasetSpecEncryptionSpec
@@ -59,7 +64,9 @@ public partial class V1alpha1VertexAIDatasetSpecEncryptionSpec
     [JsonPropertyName("kmsKeyNameRef")]
     public V1alpha1VertexAIDatasetSpecEncryptionSpecKmsKeyNameRef? KmsKeyNameRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIDatasetSpecProjectRef
@@ -76,7 +83,9 @@ public partial class V1alpha1VertexAIDatasetSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIDatasetSpec
@@ -105,7 +114,9 @@ public partial class V1alpha1VertexAIDatasetSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIDatasetStatusConditions
@@ -130,7 +141,9 @@ public partial class V1alpha1VertexAIDatasetStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The observed state of the underlying GCP resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIDatasetStatusObservedState
@@ -143,7 +156,9 @@ public partial class V1alpha1VertexAIDatasetStatusObservedState
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIDatasetStatus
@@ -160,7 +175,9 @@ public partial class V1alpha1VertexAIDatasetStatus
     [JsonPropertyName("observedState")]
     public V1alpha1VertexAIDatasetStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -190,3 +207,4 @@ public partial class V1alpha1VertexAIDataset : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1alpha1VertexAIDatasetStatus? Status { get; set; }
 }
+#nullable disable

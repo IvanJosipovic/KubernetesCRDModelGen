@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.osis.aws.upbound.io;
+#nullable enable
 /// <summary>Pipeline is the Schema for the Pipelines API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PipelineList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1beta1Pipeline> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipelineSpecForProviderBufferOptions
@@ -42,7 +45,9 @@ public partial class V1beta1PipelineSpecForProviderBufferOptions
     [JsonPropertyName("persistentBufferEnabled")]
     public bool? PersistentBufferEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipelineSpecForProviderEncryptionAtRestOptions
@@ -51,7 +56,9 @@ public partial class V1beta1PipelineSpecForProviderEncryptionAtRestOptions
     [JsonPropertyName("kmsKeyArn")]
     public string? KmsKeyArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipelineSpecForProviderLogPublishingOptionsCloudwatchLogDestination
@@ -60,7 +67,9 @@ public partial class V1beta1PipelineSpecForProviderLogPublishingOptionsCloudwatc
     [JsonPropertyName("logGroup")]
     public string? LogGroup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipelineSpecForProviderLogPublishingOptions
@@ -73,7 +82,9 @@ public partial class V1beta1PipelineSpecForProviderLogPublishingOptions
     [JsonPropertyName("isLoggingEnabled")]
     public bool? IsLoggingEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipelineSpecForProviderVpcOptions
@@ -90,7 +101,9 @@ public partial class V1beta1PipelineSpecForProviderVpcOptions
     [JsonPropertyName("vpcEndpointManagement")]
     public string? VpcEndpointManagement { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipelineSpecForProvider
@@ -131,7 +144,9 @@ public partial class V1beta1PipelineSpecForProvider
     [JsonPropertyName("vpcOptions")]
     public IList<V1beta1PipelineSpecForProviderVpcOptions>? VpcOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipelineSpecInitProviderBufferOptions
@@ -140,7 +155,9 @@ public partial class V1beta1PipelineSpecInitProviderBufferOptions
     [JsonPropertyName("persistentBufferEnabled")]
     public bool? PersistentBufferEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipelineSpecInitProviderEncryptionAtRestOptions
@@ -149,7 +166,9 @@ public partial class V1beta1PipelineSpecInitProviderEncryptionAtRestOptions
     [JsonPropertyName("kmsKeyArn")]
     public string? KmsKeyArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipelineSpecInitProviderLogPublishingOptionsCloudwatchLogDestination
@@ -158,7 +177,9 @@ public partial class V1beta1PipelineSpecInitProviderLogPublishingOptionsCloudwat
     [JsonPropertyName("logGroup")]
     public string? LogGroup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipelineSpecInitProviderLogPublishingOptions
@@ -171,7 +192,9 @@ public partial class V1beta1PipelineSpecInitProviderLogPublishingOptions
     [JsonPropertyName("isLoggingEnabled")]
     public bool? IsLoggingEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipelineSpecInitProviderVpcOptions
@@ -188,7 +211,9 @@ public partial class V1beta1PipelineSpecInitProviderVpcOptions
     [JsonPropertyName("vpcEndpointManagement")]
     public string? VpcEndpointManagement { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipelineSpecInitProvider
@@ -225,7 +250,9 @@ public partial class V1beta1PipelineSpecInitProvider
     [JsonPropertyName("vpcOptions")]
     public IList<V1beta1PipelineSpecInitProviderVpcOptions>? VpcOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipelineSpecProviderConfigRefPolicy
@@ -238,7 +265,9 @@ public partial class V1beta1PipelineSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipelineSpecProviderConfigRef
@@ -251,7 +280,9 @@ public partial class V1beta1PipelineSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1PipelineSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipelineSpecWriteConnectionSecretToRef
@@ -264,7 +295,9 @@ public partial class V1beta1PipelineSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PipelineSpec defines the desired state of Pipeline</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipelineSpec
@@ -293,7 +326,9 @@ public partial class V1beta1PipelineSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1PipelineSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipelineStatusAtProviderBufferOptions
@@ -302,7 +337,9 @@ public partial class V1beta1PipelineStatusAtProviderBufferOptions
     [JsonPropertyName("persistentBufferEnabled")]
     public bool? PersistentBufferEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipelineStatusAtProviderEncryptionAtRestOptions
@@ -311,7 +348,9 @@ public partial class V1beta1PipelineStatusAtProviderEncryptionAtRestOptions
     [JsonPropertyName("kmsKeyArn")]
     public string? KmsKeyArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipelineStatusAtProviderLogPublishingOptionsCloudwatchLogDestination
@@ -320,7 +359,9 @@ public partial class V1beta1PipelineStatusAtProviderLogPublishingOptionsCloudwat
     [JsonPropertyName("logGroup")]
     public string? LogGroup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipelineStatusAtProviderLogPublishingOptions
@@ -333,7 +374,9 @@ public partial class V1beta1PipelineStatusAtProviderLogPublishingOptions
     [JsonPropertyName("isLoggingEnabled")]
     public bool? IsLoggingEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipelineStatusAtProviderVpcOptions
@@ -350,7 +393,9 @@ public partial class V1beta1PipelineStatusAtProviderVpcOptions
     [JsonPropertyName("vpcEndpointManagement")]
     public string? VpcEndpointManagement { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipelineStatusAtProvider
@@ -407,7 +452,9 @@ public partial class V1beta1PipelineStatusAtProvider
     [JsonPropertyName("vpcOptions")]
     public IList<V1beta1PipelineStatusAtProviderVpcOptions>? VpcOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipelineStatusConditions
@@ -436,7 +483,9 @@ public partial class V1beta1PipelineStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PipelineStatus defines the observed state of Pipeline.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipelineStatus
@@ -453,7 +502,9 @@ public partial class V1beta1PipelineStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Pipeline is the Schema for the Pipelines API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -483,3 +534,4 @@ public partial class V1beta1Pipeline : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1beta1PipelineStatus? Status { get; set; }
 }
+#nullable disable

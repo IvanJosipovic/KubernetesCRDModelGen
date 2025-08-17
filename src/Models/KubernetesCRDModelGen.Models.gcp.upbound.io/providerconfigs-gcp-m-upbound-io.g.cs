@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gcp.m.upbound.io;
+#nullable enable
 /// <summary>A ProviderConfig configures a GCP provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ProviderConfigList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1ProviderConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Env is a reference to an environment variable that contains credentials that must be used to connect to the provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentialsEnv
@@ -42,7 +45,9 @@ public partial class V1beta1ProviderConfigSpecCredentialsEnv
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Fs is a reference to a filesystem location that contains credentials that must be used to connect to the provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentialsFs
@@ -51,7 +56,9 @@ public partial class V1beta1ProviderConfigSpecCredentialsFs
     [JsonPropertyName("path")]
     public string Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Use GCP service account impersonation for authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentialsImpersonateServiceAccount
@@ -60,7 +67,9 @@ public partial class V1beta1ProviderConfigSpecCredentialsImpersonateServiceAccou
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SecretRef is a reference to a secret key that contains the credentials that must be used to connect to the provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentialsSecretRef
@@ -77,7 +86,9 @@ public partial class V1beta1ProviderConfigSpecCredentialsSecretRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Federation is the configuration for federated identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentialsUpboundFederation
@@ -90,7 +101,9 @@ public partial class V1beta1ProviderConfigSpecCredentialsUpboundFederation
     [JsonPropertyName("serviceAccount")]
     public string ServiceAccount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Upbound defines the options for authenticating using Upbound as an identity provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentialsUpbound
@@ -99,7 +112,9 @@ public partial class V1beta1ProviderConfigSpecCredentialsUpbound
     [JsonPropertyName("federation")]
     public V1beta1ProviderConfigSpecCredentialsUpboundFederation? Federation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Credentials required to authenticate to this provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentials
@@ -128,7 +143,9 @@ public partial class V1beta1ProviderConfigSpecCredentials
     [JsonPropertyName("upbound")]
     public V1beta1ProviderConfigSpecCredentialsUpbound? Upbound { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ProviderConfigSpec defines the desired state of a ProviderConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpec
@@ -141,7 +158,9 @@ public partial class V1beta1ProviderConfigSpec
     [JsonPropertyName("projectID")]
     public string ProjectID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigStatusConditions
@@ -170,7 +189,9 @@ public partial class V1beta1ProviderConfigStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ProviderConfigStatus reflects the observed state of a ProviderConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigStatus
@@ -183,7 +204,9 @@ public partial class V1beta1ProviderConfigStatus
     [JsonPropertyName("users")]
     public long? Users { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ProviderConfig configures a GCP provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -213,3 +236,4 @@ public partial class V1beta1ProviderConfig : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1ProviderConfigStatus? Status { get; set; }
 }
+#nullable disable

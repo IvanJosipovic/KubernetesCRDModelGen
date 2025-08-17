@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storagetransfer.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1StorageTransferJobList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1StorageTransferJob> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The PubSubTopic to which to publish notifications.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobSpecNotificationConfigTopicRef
@@ -50,7 +53,9 @@ public partial class V1beta1StorageTransferJobSpecNotificationConfigTopicRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Notification configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobSpecNotificationConfig
@@ -67,7 +72,9 @@ public partial class V1beta1StorageTransferJobSpecNotificationConfig
     [JsonPropertyName("topicRef")]
     public V1beta1StorageTransferJobSpecNotificationConfigTopicRef TopicRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The last day the recurring transfer will be run. If schedule_end_date is the same as schedule_start_date, the transfer will be executed only once.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobSpecScheduleScheduleEndDate
@@ -84,7 +91,9 @@ public partial class V1beta1StorageTransferJobSpecScheduleScheduleEndDate
     [JsonPropertyName("year")]
     public int Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The first day the recurring transfer is scheduled to run. If schedule_start_date is in the past, the transfer will run for the first time on the following day.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobSpecScheduleScheduleStartDate
@@ -101,7 +110,9 @@ public partial class V1beta1StorageTransferJobSpecScheduleScheduleStartDate
     [JsonPropertyName("year")]
     public int Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The time in UTC at which the transfer will be scheduled to start in a day. Transfers may start later than this time. If not specified, recurring and one-time transfers that are scheduled to run today will run immediately; recurring transfers that are scheduled to run on a future date will start at approximately midnight UTC on that date. Note that when configuring a transfer with the Cloud Platform Console, the transfer's start time in a day is specified in your local timezone.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobSpecScheduleStartTimeOfDay
@@ -122,7 +133,9 @@ public partial class V1beta1StorageTransferJobSpecScheduleStartTimeOfDay
     [JsonPropertyName("seconds")]
     public int Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobSpecSchedule
@@ -143,7 +156,9 @@ public partial class V1beta1StorageTransferJobSpecSchedule
     [JsonPropertyName("startTimeOfDay")]
     public V1beta1StorageTransferJobSpecScheduleStartTimeOfDay? StartTimeOfDay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeyAccessKeyIdValueFromSecretKeyRef
@@ -156,7 +171,9 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAws
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeyAccessKeyIdValueFrom
@@ -165,7 +182,9 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAws
     [JsonPropertyName("secretKeyRef")]
     public V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeyAccessKeyIdValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AWS Key ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeyAccessKeyId
@@ -178,7 +197,9 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAws
     [JsonPropertyName("valueFrom")]
     public V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeyAccessKeyIdValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeySecretAccessKeyValueFromSecretKeyRef
@@ -191,7 +212,9 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAws
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeySecretAccessKeyValueFrom
@@ -200,7 +223,9 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAws
     [JsonPropertyName("secretKeyRef")]
     public V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeySecretAccessKeyValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AWS Secret Access Key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeySecretAccessKey
@@ -213,7 +238,9 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAws
     [JsonPropertyName("valueFrom")]
     public V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeySecretAccessKeyValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AWS credentials block.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKey
@@ -226,7 +253,9 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAws
     [JsonPropertyName("secretAccessKey")]
     public V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeySecretAccessKey SecretAccessKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An AWS S3 data source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSource
@@ -247,7 +276,9 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSource
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourceAzureCredentialsSasTokenValueFromSecretKeyRef
@@ -260,7 +291,9 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDa
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourceAzureCredentialsSasTokenValueFrom
@@ -269,7 +302,9 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDa
     [JsonPropertyName("secretKeyRef")]
     public V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourceAzureCredentialsSasTokenValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Azure shared access signature.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourceAzureCredentialsSasToken
@@ -282,7 +317,9 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDa
     [JsonPropertyName("valueFrom")]
     public V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourceAzureCredentialsSasTokenValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary> Credentials used to authenticate API requests to Azure.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourceAzureCredentials
@@ -291,7 +328,9 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDa
     [JsonPropertyName("sasToken")]
     public V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourceAzureCredentialsSasToken SasToken { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An Azure Blob Storage data source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDataSource
@@ -312,7 +351,9 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDa
     [JsonPropertyName("storageAccount")]
     public string StorageAccount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobSpecTransferSpecGcsDataSinkBucketRef
@@ -329,7 +370,9 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecGcsDataSinkBucketR
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Google Cloud Storage data sink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobSpecTransferSpecGcsDataSink
@@ -342,7 +385,9 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecGcsDataSink
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobSpecTransferSpecGcsDataSourceBucketRef
@@ -359,7 +404,9 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecGcsDataSourceBucke
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Google Cloud Storage data source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobSpecTransferSpecGcsDataSource
@@ -372,7 +419,9 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecGcsDataSource
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A HTTP URL data source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobSpecTransferSpecHttpDataSource
@@ -381,7 +430,9 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecHttpDataSource
     [JsonPropertyName("listUrl")]
     public string ListUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' last_modification_time do not exclude objects in a data sink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobSpecTransferSpecObjectConditions
@@ -410,7 +461,9 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecObjectConditions
     [JsonPropertyName("minTimeElapsedSinceLastModification")]
     public string? MinTimeElapsedSinceLastModification { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A POSIX filesystem data sink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobSpecTransferSpecPosixDataSink
@@ -419,7 +472,9 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecPosixDataSink
     [JsonPropertyName("rootDirectory")]
     public string RootDirectory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A POSIX filesystem data source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobSpecTransferSpecPosixDataSource
@@ -428,7 +483,9 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecPosixDataSource
     [JsonPropertyName("rootDirectory")]
     public string RootDirectory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Characteristics of how to treat files from datasource and sink during job. If the option delete_objects_unique_in_sink is true, object conditions based on objects' last_modification_time are ignored and do not exclude objects in a data source or a data sink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobSpecTransferSpecTransferOptions
@@ -449,7 +506,9 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecTransferOptions
     [JsonPropertyName("overwriteWhen")]
     public string? OverwriteWhen { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Transfer specification.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobSpecTransferSpec
@@ -498,7 +557,9 @@ public partial class V1beta1StorageTransferJobSpecTransferSpec
     [JsonPropertyName("transferOptions")]
     public V1beta1StorageTransferJobSpecTransferSpecTransferOptions? TransferOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobSpec
@@ -527,7 +588,9 @@ public partial class V1beta1StorageTransferJobSpec
     [JsonPropertyName("transferSpec")]
     public V1beta1StorageTransferJobSpecTransferSpec TransferSpec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobStatusConditions
@@ -552,7 +615,9 @@ public partial class V1beta1StorageTransferJobStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageTransferJobStatus
@@ -581,7 +646,9 @@ public partial class V1beta1StorageTransferJobStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -611,3 +678,4 @@ public partial class V1beta1StorageTransferJob : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1StorageTransferJobStatus? Status { get; set; }
 }
+#nullable disable

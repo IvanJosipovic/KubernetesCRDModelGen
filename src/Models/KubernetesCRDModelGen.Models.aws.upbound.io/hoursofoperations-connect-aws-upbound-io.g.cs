@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.connect.aws.upbound.io;
+#nullable enable
 /// <summary>HoursOfOperation is the Schema for the HoursOfOperations API. Provides details about a specific Amazon Connect Hours of Operation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta2HoursOfOperationList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta2HoursOfOperation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2HoursOfOperationSpecForProviderConfigEndTime
@@ -46,7 +49,9 @@ public partial class V1beta2HoursOfOperationSpecForProviderConfigEndTime
     [JsonPropertyName("minutes")]
     public double? Minutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2HoursOfOperationSpecForProviderConfigStartTime
@@ -59,7 +64,9 @@ public partial class V1beta2HoursOfOperationSpecForProviderConfigStartTime
     [JsonPropertyName("minutes")]
     public double? Minutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2HoursOfOperationSpecForProviderConfig
@@ -76,7 +83,9 @@ public partial class V1beta2HoursOfOperationSpecForProviderConfig
     [JsonPropertyName("startTime")]
     public IList<V1beta2HoursOfOperationSpecForProviderConfigStartTime>? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2HoursOfOperationSpecForProviderInstanceIdRefPolicy
@@ -89,7 +98,9 @@ public partial class V1beta2HoursOfOperationSpecForProviderInstanceIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in connect to populate instanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2HoursOfOperationSpecForProviderInstanceIdRef
@@ -102,7 +113,9 @@ public partial class V1beta2HoursOfOperationSpecForProviderInstanceIdRef
     [JsonPropertyName("policy")]
     public V1beta2HoursOfOperationSpecForProviderInstanceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2HoursOfOperationSpecForProviderInstanceIdSelectorPolicy
@@ -115,7 +128,9 @@ public partial class V1beta2HoursOfOperationSpecForProviderInstanceIdSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in connect to populate instanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2HoursOfOperationSpecForProviderInstanceIdSelector
@@ -132,7 +147,9 @@ public partial class V1beta2HoursOfOperationSpecForProviderInstanceIdSelector
     [JsonPropertyName("policy")]
     public V1beta2HoursOfOperationSpecForProviderInstanceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2HoursOfOperationSpecForProvider
@@ -173,7 +190,9 @@ public partial class V1beta2HoursOfOperationSpecForProvider
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2HoursOfOperationSpecInitProviderConfigEndTime
@@ -186,7 +205,9 @@ public partial class V1beta2HoursOfOperationSpecInitProviderConfigEndTime
     [JsonPropertyName("minutes")]
     public double? Minutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2HoursOfOperationSpecInitProviderConfigStartTime
@@ -199,7 +220,9 @@ public partial class V1beta2HoursOfOperationSpecInitProviderConfigStartTime
     [JsonPropertyName("minutes")]
     public double? Minutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2HoursOfOperationSpecInitProviderConfig
@@ -216,7 +239,9 @@ public partial class V1beta2HoursOfOperationSpecInitProviderConfig
     [JsonPropertyName("startTime")]
     public IList<V1beta2HoursOfOperationSpecInitProviderConfigStartTime>? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2HoursOfOperationSpecInitProviderInstanceIdRefPolicy
@@ -229,7 +254,9 @@ public partial class V1beta2HoursOfOperationSpecInitProviderInstanceIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in connect to populate instanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2HoursOfOperationSpecInitProviderInstanceIdRef
@@ -242,7 +269,9 @@ public partial class V1beta2HoursOfOperationSpecInitProviderInstanceIdRef
     [JsonPropertyName("policy")]
     public V1beta2HoursOfOperationSpecInitProviderInstanceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2HoursOfOperationSpecInitProviderInstanceIdSelectorPolicy
@@ -255,7 +284,9 @@ public partial class V1beta2HoursOfOperationSpecInitProviderInstanceIdSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in connect to populate instanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2HoursOfOperationSpecInitProviderInstanceIdSelector
@@ -272,7 +303,9 @@ public partial class V1beta2HoursOfOperationSpecInitProviderInstanceIdSelector
     [JsonPropertyName("policy")]
     public V1beta2HoursOfOperationSpecInitProviderInstanceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2HoursOfOperationSpecInitProvider
@@ -309,7 +342,9 @@ public partial class V1beta2HoursOfOperationSpecInitProvider
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2HoursOfOperationSpecProviderConfigRefPolicy
@@ -322,7 +357,9 @@ public partial class V1beta2HoursOfOperationSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2HoursOfOperationSpecProviderConfigRef
@@ -335,7 +372,9 @@ public partial class V1beta2HoursOfOperationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta2HoursOfOperationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2HoursOfOperationSpecWriteConnectionSecretToRef
@@ -348,7 +387,9 @@ public partial class V1beta2HoursOfOperationSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HoursOfOperationSpec defines the desired state of HoursOfOperation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2HoursOfOperationSpec
@@ -377,7 +418,9 @@ public partial class V1beta2HoursOfOperationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta2HoursOfOperationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2HoursOfOperationStatusAtProviderConfigEndTime
@@ -390,7 +433,9 @@ public partial class V1beta2HoursOfOperationStatusAtProviderConfigEndTime
     [JsonPropertyName("minutes")]
     public double? Minutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2HoursOfOperationStatusAtProviderConfigStartTime
@@ -403,7 +448,9 @@ public partial class V1beta2HoursOfOperationStatusAtProviderConfigStartTime
     [JsonPropertyName("minutes")]
     public double? Minutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2HoursOfOperationStatusAtProviderConfig
@@ -420,7 +467,9 @@ public partial class V1beta2HoursOfOperationStatusAtProviderConfig
     [JsonPropertyName("startTime")]
     public IList<V1beta2HoursOfOperationStatusAtProviderConfigStartTime>? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2HoursOfOperationStatusAtProvider
@@ -469,7 +518,9 @@ public partial class V1beta2HoursOfOperationStatusAtProvider
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2HoursOfOperationStatusConditions
@@ -498,7 +549,9 @@ public partial class V1beta2HoursOfOperationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HoursOfOperationStatus defines the observed state of HoursOfOperation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2HoursOfOperationStatus
@@ -515,7 +568,9 @@ public partial class V1beta2HoursOfOperationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HoursOfOperation is the Schema for the HoursOfOperations API. Provides details about a specific Amazon Connect Hours of Operation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -545,3 +600,4 @@ public partial class V1beta2HoursOfOperation : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta2HoursOfOperationStatus? Status { get; set; }
 }
+#nullable disable

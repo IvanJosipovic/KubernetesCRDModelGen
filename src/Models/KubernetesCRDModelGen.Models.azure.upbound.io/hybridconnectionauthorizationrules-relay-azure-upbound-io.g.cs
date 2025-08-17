@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.relay.azure.upbound.io;
+#nullable enable
 /// <summary>HybridConnectionAuthorizationRule is the Schema for the HybridConnectionAuthorizationRules API. Manages an Azure Relay Hybrid Connection Authorization Rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1HybridConnectionAuthorizationRuleList : IKubernetesO
     [JsonPropertyName("items")]
     public IList<V1beta1HybridConnectionAuthorizationRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridConnectionAuthorizationRuleSpecForProviderHybridConnectionNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1HybridConnectionAuthorizationRuleSpecForProviderHybr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a HybridConnection in relay to populate hybridConnectionName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridConnectionAuthorizationRuleSpecForProviderHybridConnectionNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1HybridConnectionAuthorizationRuleSpecForProviderHybr
     [JsonPropertyName("policy")]
     public V1beta1HybridConnectionAuthorizationRuleSpecForProviderHybridConnectionNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridConnectionAuthorizationRuleSpecForProviderHybridConnectionNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1HybridConnectionAuthorizationRuleSpecForProviderHybr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a HybridConnection in relay to populate hybridConnectionName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridConnectionAuthorizationRuleSpecForProviderHybridConnectionNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1HybridConnectionAuthorizationRuleSpecForProviderHybr
     [JsonPropertyName("policy")]
     public V1beta1HybridConnectionAuthorizationRuleSpecForProviderHybridConnectionNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridConnectionAuthorizationRuleSpecForProviderNamespaceNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1HybridConnectionAuthorizationRuleSpecForProviderName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EventRelayNamespace in relay to populate namespaceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridConnectionAuthorizationRuleSpecForProviderNamespaceNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1HybridConnectionAuthorizationRuleSpecForProviderName
     [JsonPropertyName("policy")]
     public V1beta1HybridConnectionAuthorizationRuleSpecForProviderNamespaceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridConnectionAuthorizationRuleSpecForProviderNamespaceNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1HybridConnectionAuthorizationRuleSpecForProviderName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EventRelayNamespace in relay to populate namespaceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridConnectionAuthorizationRuleSpecForProviderNamespaceNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1HybridConnectionAuthorizationRuleSpecForProviderName
     [JsonPropertyName("policy")]
     public V1beta1HybridConnectionAuthorizationRuleSpecForProviderNamespaceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridConnectionAuthorizationRuleSpecForProviderResourceGroupNameRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1HybridConnectionAuthorizationRuleSpecForProviderReso
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridConnectionAuthorizationRuleSpecForProviderResourceGroupNameRef
@@ -171,7 +192,9 @@ public partial class V1beta1HybridConnectionAuthorizationRuleSpecForProviderReso
     [JsonPropertyName("policy")]
     public V1beta1HybridConnectionAuthorizationRuleSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridConnectionAuthorizationRuleSpecForProviderResourceGroupNameSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1HybridConnectionAuthorizationRuleSpecForProviderReso
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridConnectionAuthorizationRuleSpecForProviderResourceGroupNameSelector
@@ -201,7 +226,9 @@ public partial class V1beta1HybridConnectionAuthorizationRuleSpecForProviderReso
     [JsonPropertyName("policy")]
     public V1beta1HybridConnectionAuthorizationRuleSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridConnectionAuthorizationRuleSpecForProvider
@@ -254,7 +281,9 @@ public partial class V1beta1HybridConnectionAuthorizationRuleSpecForProvider
     [JsonPropertyName("send")]
     public bool? Send { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridConnectionAuthorizationRuleSpecInitProviderNamespaceNameRefPolicy
@@ -267,7 +296,9 @@ public partial class V1beta1HybridConnectionAuthorizationRuleSpecInitProviderNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EventRelayNamespace in relay to populate namespaceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridConnectionAuthorizationRuleSpecInitProviderNamespaceNameRef
@@ -280,7 +311,9 @@ public partial class V1beta1HybridConnectionAuthorizationRuleSpecInitProviderNam
     [JsonPropertyName("policy")]
     public V1beta1HybridConnectionAuthorizationRuleSpecInitProviderNamespaceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridConnectionAuthorizationRuleSpecInitProviderNamespaceNameSelectorPolicy
@@ -293,7 +326,9 @@ public partial class V1beta1HybridConnectionAuthorizationRuleSpecInitProviderNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EventRelayNamespace in relay to populate namespaceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridConnectionAuthorizationRuleSpecInitProviderNamespaceNameSelector
@@ -310,7 +345,9 @@ public partial class V1beta1HybridConnectionAuthorizationRuleSpecInitProviderNam
     [JsonPropertyName("policy")]
     public V1beta1HybridConnectionAuthorizationRuleSpecInitProviderNamespaceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridConnectionAuthorizationRuleSpecInitProvider
@@ -339,7 +376,9 @@ public partial class V1beta1HybridConnectionAuthorizationRuleSpecInitProvider
     [JsonPropertyName("send")]
     public bool? Send { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridConnectionAuthorizationRuleSpecProviderConfigRefPolicy
@@ -352,7 +391,9 @@ public partial class V1beta1HybridConnectionAuthorizationRuleSpecProviderConfigR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridConnectionAuthorizationRuleSpecProviderConfigRef
@@ -365,7 +406,9 @@ public partial class V1beta1HybridConnectionAuthorizationRuleSpecProviderConfigR
     [JsonPropertyName("policy")]
     public V1beta1HybridConnectionAuthorizationRuleSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridConnectionAuthorizationRuleSpecWriteConnectionSecretToRef
@@ -378,7 +421,9 @@ public partial class V1beta1HybridConnectionAuthorizationRuleSpecWriteConnection
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HybridConnectionAuthorizationRuleSpec defines the desired state of HybridConnectionAuthorizationRule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridConnectionAuthorizationRuleSpec
@@ -407,7 +452,9 @@ public partial class V1beta1HybridConnectionAuthorizationRuleSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1HybridConnectionAuthorizationRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridConnectionAuthorizationRuleStatusAtProvider
@@ -440,7 +487,9 @@ public partial class V1beta1HybridConnectionAuthorizationRuleStatusAtProvider
     [JsonPropertyName("send")]
     public bool? Send { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridConnectionAuthorizationRuleStatusConditions
@@ -469,7 +518,9 @@ public partial class V1beta1HybridConnectionAuthorizationRuleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HybridConnectionAuthorizationRuleStatus defines the observed state of HybridConnectionAuthorizationRule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridConnectionAuthorizationRuleStatus
@@ -486,7 +537,9 @@ public partial class V1beta1HybridConnectionAuthorizationRuleStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HybridConnectionAuthorizationRule is the Schema for the HybridConnectionAuthorizationRules API. Manages an Azure Relay Hybrid Connection Authorization Rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -516,3 +569,4 @@ public partial class V1beta1HybridConnectionAuthorizationRule : IKubernetesObjec
     [JsonPropertyName("status")]
     public V1beta1HybridConnectionAuthorizationRuleStatus? Status { get; set; }
 }
+#nullable disable

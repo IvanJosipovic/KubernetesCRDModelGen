@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudtasks.gcp.m.upbound.io;
+#nullable enable
 /// <summary>Queue is the Schema for the Queues API. A named resource to which messages are sent by publishers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1QueueList : IKubernetesObject<V1ListMeta>, IItems<V1
     [JsonPropertyName("items")]
     public IList<V1beta1Queue> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Overrides for task-level appEngineRouting. These settings apply only to App Engine tasks in this queue Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecForProviderAppEngineRoutingOverride
@@ -50,7 +53,9 @@ public partial class V1beta1QueueSpecForProviderAppEngineRoutingOverride
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Header embodying a key and a value. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecForProviderHttpTargetHeaderOverridesHeader
@@ -63,7 +68,9 @@ public partial class V1beta1QueueSpecForProviderHttpTargetHeaderOverridesHeader
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecForProviderHttpTargetHeaderOverrides
@@ -72,7 +79,9 @@ public partial class V1beta1QueueSpecForProviderHttpTargetHeaderOverrides
     [JsonPropertyName("header")]
     public V1beta1QueueSpecForProviderHttpTargetHeaderOverridesHeader? Header { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecForProviderHttpTargetOauthTokenServiceAccountEmailRefPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1QueueSpecForProviderHttpTargetOauthTokenServiceAccou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecForProviderHttpTargetOauthTokenServiceAccountEmailRef
@@ -102,7 +113,9 @@ public partial class V1beta1QueueSpecForProviderHttpTargetOauthTokenServiceAccou
     [JsonPropertyName("policy")]
     public V1beta1QueueSpecForProviderHttpTargetOauthTokenServiceAccountEmailRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecForProviderHttpTargetOauthTokenServiceAccountEmailSelectorPolicy
@@ -115,7 +128,9 @@ public partial class V1beta1QueueSpecForProviderHttpTargetOauthTokenServiceAccou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecForProviderHttpTargetOauthTokenServiceAccountEmailSelector
@@ -136,7 +151,9 @@ public partial class V1beta1QueueSpecForProviderHttpTargetOauthTokenServiceAccou
     [JsonPropertyName("policy")]
     public V1beta1QueueSpecForProviderHttpTargetOauthTokenServiceAccountEmailSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If specified, an OAuth token is generated and attached as the Authorization header in the HTTP request. This type of authorization should generally be used only when calling Google APIs hosted on *.googleapis.com. Note that both the service account email and the scope MUST be specified when using the queue-level authorization override. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecForProviderHttpTargetOauthToken
@@ -157,7 +174,9 @@ public partial class V1beta1QueueSpecForProviderHttpTargetOauthToken
     [JsonPropertyName("serviceAccountEmailSelector")]
     public V1beta1QueueSpecForProviderHttpTargetOauthTokenServiceAccountEmailSelector? ServiceAccountEmailSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecForProviderHttpTargetOidcTokenServiceAccountEmailRefPolicy
@@ -170,7 +189,9 @@ public partial class V1beta1QueueSpecForProviderHttpTargetOidcTokenServiceAccoun
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecForProviderHttpTargetOidcTokenServiceAccountEmailRef
@@ -187,7 +208,9 @@ public partial class V1beta1QueueSpecForProviderHttpTargetOidcTokenServiceAccoun
     [JsonPropertyName("policy")]
     public V1beta1QueueSpecForProviderHttpTargetOidcTokenServiceAccountEmailRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecForProviderHttpTargetOidcTokenServiceAccountEmailSelectorPolicy
@@ -200,7 +223,9 @@ public partial class V1beta1QueueSpecForProviderHttpTargetOidcTokenServiceAccoun
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecForProviderHttpTargetOidcTokenServiceAccountEmailSelector
@@ -221,7 +246,9 @@ public partial class V1beta1QueueSpecForProviderHttpTargetOidcTokenServiceAccoun
     [JsonPropertyName("policy")]
     public V1beta1QueueSpecForProviderHttpTargetOidcTokenServiceAccountEmailSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If specified, an OIDC token is generated and attached as an Authorization header in the HTTP request. This type of authorization can be used for many scenarios, including calling Cloud Run, or endpoints where you intend to validate the token yourself. Note that both the service account email and the audience MUST be specified when using the queue-level authorization override. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecForProviderHttpTargetOidcToken
@@ -242,7 +269,9 @@ public partial class V1beta1QueueSpecForProviderHttpTargetOidcToken
     [JsonPropertyName("serviceAccountEmailSelector")]
     public V1beta1QueueSpecForProviderHttpTargetOidcTokenServiceAccountEmailSelector? ServiceAccountEmailSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>URI path. When specified, replaces the existing path of the task URL. Setting the path value to an empty string clears the URI path segment. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecForProviderHttpTargetUriOverridePathOverride
@@ -251,7 +280,9 @@ public partial class V1beta1QueueSpecForProviderHttpTargetUriOverridePathOverrid
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>URI query. When specified, replaces the query part of the task URI. Setting the query value to an empty string clears the URI query segment. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecForProviderHttpTargetUriOverrideQueryOverride
@@ -260,7 +291,9 @@ public partial class V1beta1QueueSpecForProviderHttpTargetUriOverrideQueryOverri
     [JsonPropertyName("queryParams")]
     public string? QueryParams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>URI override. When specified, overrides the execution URI for all the tasks in the queue. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecForProviderHttpTargetUriOverride
@@ -289,7 +322,9 @@ public partial class V1beta1QueueSpecForProviderHttpTargetUriOverride
     [JsonPropertyName("uriOverrideEnforceMode")]
     public string? UriOverrideEnforceMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Modifies HTTP target for HTTP tasks. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecForProviderHttpTarget
@@ -314,7 +349,9 @@ public partial class V1beta1QueueSpecForProviderHttpTarget
     [JsonPropertyName("uriOverride")]
     public V1beta1QueueSpecForProviderHttpTargetUriOverride? UriOverride { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecForProviderProjectRefPolicy
@@ -327,7 +364,9 @@ public partial class V1beta1QueueSpecForProviderProjectRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Project in cloudplatform to populate project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecForProviderProjectRef
@@ -344,7 +383,9 @@ public partial class V1beta1QueueSpecForProviderProjectRef
     [JsonPropertyName("policy")]
     public V1beta1QueueSpecForProviderProjectRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecForProviderProjectSelectorPolicy
@@ -357,7 +398,9 @@ public partial class V1beta1QueueSpecForProviderProjectSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Project in cloudplatform to populate project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecForProviderProjectSelector
@@ -378,7 +421,9 @@ public partial class V1beta1QueueSpecForProviderProjectSelector
     [JsonPropertyName("policy")]
     public V1beta1QueueSpecForProviderProjectSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Rate limits for task dispatches. The queue's actual dispatch rate is the result of:</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecForProviderRateLimits
@@ -391,7 +436,9 @@ public partial class V1beta1QueueSpecForProviderRateLimits
     [JsonPropertyName("maxDispatchesPerSecond")]
     public double? MaxDispatchesPerSecond { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings that determine the retry behavior. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecForProviderRetryConfig
@@ -416,7 +463,9 @@ public partial class V1beta1QueueSpecForProviderRetryConfig
     [JsonPropertyName("minBackoff")]
     public string? MinBackoff { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration options for writing logs to Stackdriver Logging. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecForProviderStackdriverLoggingConfig
@@ -425,7 +474,9 @@ public partial class V1beta1QueueSpecForProviderStackdriverLoggingConfig
     [JsonPropertyName("samplingRatio")]
     public double? SamplingRatio { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecForProvider
@@ -466,7 +517,9 @@ public partial class V1beta1QueueSpecForProvider
     [JsonPropertyName("stackdriverLoggingConfig")]
     public V1beta1QueueSpecForProviderStackdriverLoggingConfig? StackdriverLoggingConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Overrides for task-level appEngineRouting. These settings apply only to App Engine tasks in this queue Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecInitProviderAppEngineRoutingOverride
@@ -483,7 +536,9 @@ public partial class V1beta1QueueSpecInitProviderAppEngineRoutingOverride
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Header embodying a key and a value. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecInitProviderHttpTargetHeaderOverridesHeader
@@ -496,7 +551,9 @@ public partial class V1beta1QueueSpecInitProviderHttpTargetHeaderOverridesHeader
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecInitProviderHttpTargetHeaderOverrides
@@ -505,7 +562,9 @@ public partial class V1beta1QueueSpecInitProviderHttpTargetHeaderOverrides
     [JsonPropertyName("header")]
     public V1beta1QueueSpecInitProviderHttpTargetHeaderOverridesHeader? Header { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecInitProviderHttpTargetOauthTokenServiceAccountEmailRefPolicy
@@ -518,7 +577,9 @@ public partial class V1beta1QueueSpecInitProviderHttpTargetOauthTokenServiceAcco
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecInitProviderHttpTargetOauthTokenServiceAccountEmailRef
@@ -535,7 +596,9 @@ public partial class V1beta1QueueSpecInitProviderHttpTargetOauthTokenServiceAcco
     [JsonPropertyName("policy")]
     public V1beta1QueueSpecInitProviderHttpTargetOauthTokenServiceAccountEmailRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecInitProviderHttpTargetOauthTokenServiceAccountEmailSelectorPolicy
@@ -548,7 +611,9 @@ public partial class V1beta1QueueSpecInitProviderHttpTargetOauthTokenServiceAcco
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecInitProviderHttpTargetOauthTokenServiceAccountEmailSelector
@@ -569,7 +634,9 @@ public partial class V1beta1QueueSpecInitProviderHttpTargetOauthTokenServiceAcco
     [JsonPropertyName("policy")]
     public V1beta1QueueSpecInitProviderHttpTargetOauthTokenServiceAccountEmailSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If specified, an OAuth token is generated and attached as the Authorization header in the HTTP request. This type of authorization should generally be used only when calling Google APIs hosted on *.googleapis.com. Note that both the service account email and the scope MUST be specified when using the queue-level authorization override. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecInitProviderHttpTargetOauthToken
@@ -590,7 +657,9 @@ public partial class V1beta1QueueSpecInitProviderHttpTargetOauthToken
     [JsonPropertyName("serviceAccountEmailSelector")]
     public V1beta1QueueSpecInitProviderHttpTargetOauthTokenServiceAccountEmailSelector? ServiceAccountEmailSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecInitProviderHttpTargetOidcTokenServiceAccountEmailRefPolicy
@@ -603,7 +672,9 @@ public partial class V1beta1QueueSpecInitProviderHttpTargetOidcTokenServiceAccou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecInitProviderHttpTargetOidcTokenServiceAccountEmailRef
@@ -620,7 +691,9 @@ public partial class V1beta1QueueSpecInitProviderHttpTargetOidcTokenServiceAccou
     [JsonPropertyName("policy")]
     public V1beta1QueueSpecInitProviderHttpTargetOidcTokenServiceAccountEmailRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecInitProviderHttpTargetOidcTokenServiceAccountEmailSelectorPolicy
@@ -633,7 +706,9 @@ public partial class V1beta1QueueSpecInitProviderHttpTargetOidcTokenServiceAccou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecInitProviderHttpTargetOidcTokenServiceAccountEmailSelector
@@ -654,7 +729,9 @@ public partial class V1beta1QueueSpecInitProviderHttpTargetOidcTokenServiceAccou
     [JsonPropertyName("policy")]
     public V1beta1QueueSpecInitProviderHttpTargetOidcTokenServiceAccountEmailSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If specified, an OIDC token is generated and attached as an Authorization header in the HTTP request. This type of authorization can be used for many scenarios, including calling Cloud Run, or endpoints where you intend to validate the token yourself. Note that both the service account email and the audience MUST be specified when using the queue-level authorization override. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecInitProviderHttpTargetOidcToken
@@ -675,7 +752,9 @@ public partial class V1beta1QueueSpecInitProviderHttpTargetOidcToken
     [JsonPropertyName("serviceAccountEmailSelector")]
     public V1beta1QueueSpecInitProviderHttpTargetOidcTokenServiceAccountEmailSelector? ServiceAccountEmailSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>URI path. When specified, replaces the existing path of the task URL. Setting the path value to an empty string clears the URI path segment. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecInitProviderHttpTargetUriOverridePathOverride
@@ -684,7 +763,9 @@ public partial class V1beta1QueueSpecInitProviderHttpTargetUriOverridePathOverri
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>URI query. When specified, replaces the query part of the task URI. Setting the query value to an empty string clears the URI query segment. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecInitProviderHttpTargetUriOverrideQueryOverride
@@ -693,7 +774,9 @@ public partial class V1beta1QueueSpecInitProviderHttpTargetUriOverrideQueryOverr
     [JsonPropertyName("queryParams")]
     public string? QueryParams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>URI override. When specified, overrides the execution URI for all the tasks in the queue. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecInitProviderHttpTargetUriOverride
@@ -722,7 +805,9 @@ public partial class V1beta1QueueSpecInitProviderHttpTargetUriOverride
     [JsonPropertyName("uriOverrideEnforceMode")]
     public string? UriOverrideEnforceMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Modifies HTTP target for HTTP tasks. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecInitProviderHttpTarget
@@ -747,7 +832,9 @@ public partial class V1beta1QueueSpecInitProviderHttpTarget
     [JsonPropertyName("uriOverride")]
     public V1beta1QueueSpecInitProviderHttpTargetUriOverride? UriOverride { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecInitProviderProjectRefPolicy
@@ -760,7 +847,9 @@ public partial class V1beta1QueueSpecInitProviderProjectRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Project in cloudplatform to populate project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecInitProviderProjectRef
@@ -777,7 +866,9 @@ public partial class V1beta1QueueSpecInitProviderProjectRef
     [JsonPropertyName("policy")]
     public V1beta1QueueSpecInitProviderProjectRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecInitProviderProjectSelectorPolicy
@@ -790,7 +881,9 @@ public partial class V1beta1QueueSpecInitProviderProjectSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Project in cloudplatform to populate project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecInitProviderProjectSelector
@@ -811,7 +904,9 @@ public partial class V1beta1QueueSpecInitProviderProjectSelector
     [JsonPropertyName("policy")]
     public V1beta1QueueSpecInitProviderProjectSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Rate limits for task dispatches. The queue's actual dispatch rate is the result of:</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecInitProviderRateLimits
@@ -824,7 +919,9 @@ public partial class V1beta1QueueSpecInitProviderRateLimits
     [JsonPropertyName("maxDispatchesPerSecond")]
     public double? MaxDispatchesPerSecond { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings that determine the retry behavior. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecInitProviderRetryConfig
@@ -849,7 +946,9 @@ public partial class V1beta1QueueSpecInitProviderRetryConfig
     [JsonPropertyName("minBackoff")]
     public string? MinBackoff { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration options for writing logs to Stackdriver Logging. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecInitProviderStackdriverLoggingConfig
@@ -858,7 +957,9 @@ public partial class V1beta1QueueSpecInitProviderStackdriverLoggingConfig
     [JsonPropertyName("samplingRatio")]
     public double? SamplingRatio { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecInitProvider
@@ -895,7 +996,9 @@ public partial class V1beta1QueueSpecInitProvider
     [JsonPropertyName("stackdriverLoggingConfig")]
     public V1beta1QueueSpecInitProviderStackdriverLoggingConfig? StackdriverLoggingConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecProviderConfigRef
@@ -908,7 +1011,9 @@ public partial class V1beta1QueueSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecWriteConnectionSecretToRef
@@ -917,7 +1022,9 @@ public partial class V1beta1QueueSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>QueueSpec defines the desired state of Queue</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpec
@@ -942,7 +1049,9 @@ public partial class V1beta1QueueSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1QueueSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Overrides for task-level appEngineRouting. These settings apply only to App Engine tasks in this queue Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueStatusAtProviderAppEngineRoutingOverride
@@ -963,7 +1072,9 @@ public partial class V1beta1QueueStatusAtProviderAppEngineRoutingOverride
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Header embodying a key and a value. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueStatusAtProviderHttpTargetHeaderOverridesHeader
@@ -976,7 +1087,9 @@ public partial class V1beta1QueueStatusAtProviderHttpTargetHeaderOverridesHeader
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueStatusAtProviderHttpTargetHeaderOverrides
@@ -985,7 +1098,9 @@ public partial class V1beta1QueueStatusAtProviderHttpTargetHeaderOverrides
     [JsonPropertyName("header")]
     public V1beta1QueueStatusAtProviderHttpTargetHeaderOverridesHeader? Header { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If specified, an OAuth token is generated and attached as the Authorization header in the HTTP request. This type of authorization should generally be used only when calling Google APIs hosted on *.googleapis.com. Note that both the service account email and the scope MUST be specified when using the queue-level authorization override. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueStatusAtProviderHttpTargetOauthToken
@@ -998,7 +1113,9 @@ public partial class V1beta1QueueStatusAtProviderHttpTargetOauthToken
     [JsonPropertyName("serviceAccountEmail")]
     public string? ServiceAccountEmail { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If specified, an OIDC token is generated and attached as an Authorization header in the HTTP request. This type of authorization can be used for many scenarios, including calling Cloud Run, or endpoints where you intend to validate the token yourself. Note that both the service account email and the audience MUST be specified when using the queue-level authorization override. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueStatusAtProviderHttpTargetOidcToken
@@ -1011,7 +1128,9 @@ public partial class V1beta1QueueStatusAtProviderHttpTargetOidcToken
     [JsonPropertyName("serviceAccountEmail")]
     public string? ServiceAccountEmail { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>URI path. When specified, replaces the existing path of the task URL. Setting the path value to an empty string clears the URI path segment. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueStatusAtProviderHttpTargetUriOverridePathOverride
@@ -1020,7 +1139,9 @@ public partial class V1beta1QueueStatusAtProviderHttpTargetUriOverridePathOverri
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>URI query. When specified, replaces the query part of the task URI. Setting the query value to an empty string clears the URI query segment. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueStatusAtProviderHttpTargetUriOverrideQueryOverride
@@ -1029,7 +1150,9 @@ public partial class V1beta1QueueStatusAtProviderHttpTargetUriOverrideQueryOverr
     [JsonPropertyName("queryParams")]
     public string? QueryParams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>URI override. When specified, overrides the execution URI for all the tasks in the queue. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueStatusAtProviderHttpTargetUriOverride
@@ -1058,7 +1181,9 @@ public partial class V1beta1QueueStatusAtProviderHttpTargetUriOverride
     [JsonPropertyName("uriOverrideEnforceMode")]
     public string? UriOverrideEnforceMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Modifies HTTP target for HTTP tasks. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueStatusAtProviderHttpTarget
@@ -1083,7 +1208,9 @@ public partial class V1beta1QueueStatusAtProviderHttpTarget
     [JsonPropertyName("uriOverride")]
     public V1beta1QueueStatusAtProviderHttpTargetUriOverride? UriOverride { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Rate limits for task dispatches. The queue's actual dispatch rate is the result of:</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueStatusAtProviderRateLimits
@@ -1100,7 +1227,9 @@ public partial class V1beta1QueueStatusAtProviderRateLimits
     [JsonPropertyName("maxDispatchesPerSecond")]
     public double? MaxDispatchesPerSecond { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings that determine the retry behavior. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueStatusAtProviderRetryConfig
@@ -1125,7 +1254,9 @@ public partial class V1beta1QueueStatusAtProviderRetryConfig
     [JsonPropertyName("minBackoff")]
     public string? MinBackoff { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration options for writing logs to Stackdriver Logging. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueStatusAtProviderStackdriverLoggingConfig
@@ -1134,7 +1265,9 @@ public partial class V1beta1QueueStatusAtProviderStackdriverLoggingConfig
     [JsonPropertyName("samplingRatio")]
     public double? SamplingRatio { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueStatusAtProvider
@@ -1171,7 +1304,9 @@ public partial class V1beta1QueueStatusAtProvider
     [JsonPropertyName("stackdriverLoggingConfig")]
     public V1beta1QueueStatusAtProviderStackdriverLoggingConfig? StackdriverLoggingConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueStatusConditions
@@ -1200,7 +1335,9 @@ public partial class V1beta1QueueStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>QueueStatus defines the observed state of Queue.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueStatus
@@ -1217,7 +1354,9 @@ public partial class V1beta1QueueStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Queue is the Schema for the Queues API. A named resource to which messages are sent by publishers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1247,3 +1386,4 @@ public partial class V1beta1Queue : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     [JsonPropertyName("status")]
     public V1beta1QueueStatus? Status { get; set; }
 }
+#nullable disable

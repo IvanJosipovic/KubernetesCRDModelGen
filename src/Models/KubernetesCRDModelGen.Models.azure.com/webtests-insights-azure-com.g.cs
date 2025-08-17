@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20220615.Webtest Generator information: - Generated from: /applicationinsights/resource-manager/Microsoft.Insights/stable/2022-06-15/webTests_API.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/webtests/{webTestName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20220615storageWebtestList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1api20220615storageWebtest> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.WebTestProperties_Configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageWebtestSpecConfiguration
@@ -46,7 +49,9 @@ public partial class V1api20220615storageWebtestSpecConfiguration
     [JsonPropertyName("WebTest")]
     public string? WebTest { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.WebTestGeolocation Geo-physical location to run a WebTest from. You must specify one or more locations for the test to run from.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageWebtestSpecLocations
@@ -59,7 +64,9 @@ public partial class V1api20220615storageWebtestSpecLocations
     [JsonPropertyName("Id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.HeaderField A header to add to the WebTest.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageWebtestSpecRequestHeaders
@@ -76,7 +83,9 @@ public partial class V1api20220615storageWebtestSpecRequestHeaders
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.WebTestProperties_Request</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageWebtestSpecRequest
@@ -109,7 +118,9 @@ public partial class V1api20220615storageWebtestSpecRequest
     [JsonPropertyName("RequestUrl")]
     public string? RequestUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.WebTestProperties_ValidationRules_ContentValidation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageWebtestSpecValidationRulesContentValidation
@@ -130,7 +141,9 @@ public partial class V1api20220615storageWebtestSpecValidationRulesContentValida
     [JsonPropertyName("PassIfTextFound")]
     public bool? PassIfTextFound { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.WebTestProperties_ValidationRules</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageWebtestSpecValidationRules
@@ -159,7 +172,9 @@ public partial class V1api20220615storageWebtestSpecValidationRules
     [JsonPropertyName("SSLCheck")]
     public bool? SSLCheck { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageWebtestSpecOperatorSpecConfigMapExpressions
@@ -176,7 +191,9 @@ public partial class V1api20220615storageWebtestSpecOperatorSpecConfigMapExpress
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageWebtestSpecOperatorSpecSecretExpressions
@@ -193,7 +210,9 @@ public partial class V1api20220615storageWebtestSpecOperatorSpecSecretExpression
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.WebtestOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageWebtestSpecOperatorSpec
@@ -210,7 +229,9 @@ public partial class V1api20220615storageWebtestSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20220615storageWebtestSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageWebtestSpecOwner
@@ -223,7 +244,9 @@ public partial class V1api20220615storageWebtestSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.Webtest_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageWebtestSpec
@@ -304,7 +327,9 @@ public partial class V1api20220615storageWebtestSpec
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.WebTestProperties_Configuration_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageWebtestStatusConfiguration
@@ -317,7 +342,9 @@ public partial class V1api20220615storageWebtestStatusConfiguration
     [JsonPropertyName("WebTest")]
     public string? WebTest { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.WebTestGeolocation_STATUS Geo-physical location to run a WebTest from. You must specify one or more locations for the test to run from.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageWebtestStatusLocations
@@ -330,7 +357,9 @@ public partial class V1api20220615storageWebtestStatusLocations
     [JsonPropertyName("Id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.HeaderField_STATUS A header to add to the WebTest.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageWebtestStatusRequestHeaders
@@ -347,7 +376,9 @@ public partial class V1api20220615storageWebtestStatusRequestHeaders
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.WebTestProperties_Request_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageWebtestStatusRequest
@@ -380,7 +411,9 @@ public partial class V1api20220615storageWebtestStatusRequest
     [JsonPropertyName("RequestUrl")]
     public string? RequestUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.WebTestProperties_ValidationRules_ContentValidation_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageWebtestStatusValidationRulesContentValidation
@@ -401,7 +434,9 @@ public partial class V1api20220615storageWebtestStatusValidationRulesContentVali
     [JsonPropertyName("PassIfTextFound")]
     public bool? PassIfTextFound { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.WebTestProperties_ValidationRules_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageWebtestStatusValidationRules
@@ -430,7 +465,9 @@ public partial class V1api20220615storageWebtestStatusValidationRules
     [JsonPropertyName("SSLCheck")]
     public bool? SSLCheck { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageWebtestStatusConditions
@@ -463,7 +500,9 @@ public partial class V1api20220615storageWebtestStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.Webtest_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220615storageWebtestStatus
@@ -548,7 +587,9 @@ public partial class V1api20220615storageWebtestStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220615.Webtest Generator information: - Generated from: /applicationinsights/resource-manager/Microsoft.Insights/stable/2022-06-15/webTests_API.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/webtests/{webTestName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -578,3 +619,4 @@ public partial class V1api20220615storageWebtest : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1api20220615storageWebtestStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.backup.aws.upbound.io;
+#nullable enable
 /// <summary>VaultLockConfiguration is the Schema for the VaultLockConfigurations API. Provides an AWS Backup vault lock configuration resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VaultLockConfigurationList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1VaultLockConfiguration> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultLockConfigurationSpecForProviderBackupVaultNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1VaultLockConfigurationSpecForProviderBackupVaultName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Vault in backup to populate backupVaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultLockConfigurationSpecForProviderBackupVaultNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1VaultLockConfigurationSpecForProviderBackupVaultName
     [JsonPropertyName("policy")]
     public V1beta1VaultLockConfigurationSpecForProviderBackupVaultNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultLockConfigurationSpecForProviderBackupVaultNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1VaultLockConfigurationSpecForProviderBackupVaultName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Vault in backup to populate backupVaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultLockConfigurationSpecForProviderBackupVaultNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1VaultLockConfigurationSpecForProviderBackupVaultName
     [JsonPropertyName("policy")]
     public V1beta1VaultLockConfigurationSpecForProviderBackupVaultNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultLockConfigurationSpecForProvider
@@ -122,7 +133,9 @@ public partial class V1beta1VaultLockConfigurationSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultLockConfigurationSpecInitProviderBackupVaultNameRefPolicy
@@ -135,7 +148,9 @@ public partial class V1beta1VaultLockConfigurationSpecInitProviderBackupVaultNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Vault in backup to populate backupVaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultLockConfigurationSpecInitProviderBackupVaultNameRef
@@ -148,7 +163,9 @@ public partial class V1beta1VaultLockConfigurationSpecInitProviderBackupVaultNam
     [JsonPropertyName("policy")]
     public V1beta1VaultLockConfigurationSpecInitProviderBackupVaultNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultLockConfigurationSpecInitProviderBackupVaultNameSelectorPolicy
@@ -161,7 +178,9 @@ public partial class V1beta1VaultLockConfigurationSpecInitProviderBackupVaultNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Vault in backup to populate backupVaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultLockConfigurationSpecInitProviderBackupVaultNameSelector
@@ -178,7 +197,9 @@ public partial class V1beta1VaultLockConfigurationSpecInitProviderBackupVaultNam
     [JsonPropertyName("policy")]
     public V1beta1VaultLockConfigurationSpecInitProviderBackupVaultNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultLockConfigurationSpecInitProvider
@@ -207,7 +228,9 @@ public partial class V1beta1VaultLockConfigurationSpecInitProvider
     [JsonPropertyName("minRetentionDays")]
     public double? MinRetentionDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultLockConfigurationSpecProviderConfigRefPolicy
@@ -220,7 +243,9 @@ public partial class V1beta1VaultLockConfigurationSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultLockConfigurationSpecProviderConfigRef
@@ -233,7 +258,9 @@ public partial class V1beta1VaultLockConfigurationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1VaultLockConfigurationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultLockConfigurationSpecWriteConnectionSecretToRef
@@ -246,7 +273,9 @@ public partial class V1beta1VaultLockConfigurationSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VaultLockConfigurationSpec defines the desired state of VaultLockConfiguration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultLockConfigurationSpec
@@ -275,7 +304,9 @@ public partial class V1beta1VaultLockConfigurationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VaultLockConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultLockConfigurationStatusAtProvider
@@ -308,7 +339,9 @@ public partial class V1beta1VaultLockConfigurationStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultLockConfigurationStatusConditions
@@ -337,7 +370,9 @@ public partial class V1beta1VaultLockConfigurationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VaultLockConfigurationStatus defines the observed state of VaultLockConfiguration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultLockConfigurationStatus
@@ -354,7 +389,9 @@ public partial class V1beta1VaultLockConfigurationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VaultLockConfiguration is the Schema for the VaultLockConfigurations API. Provides an AWS Backup vault lock configuration resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -384,3 +421,4 @@ public partial class V1beta1VaultLockConfiguration : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1VaultLockConfigurationStatus? Status { get; set; }
 }
+#nullable disable

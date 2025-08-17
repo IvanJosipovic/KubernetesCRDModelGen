@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.servicebus.azure.upbound.io;
+#nullable enable
 /// <summary>TopicAuthorizationRule is the Schema for the TopicAuthorizationRules API. Manages a ServiceBus Topic authorization Rule within a ServiceBus Topic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TopicAuthorizationRuleList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1TopicAuthorizationRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicAuthorizationRuleSpecForProviderTopicIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1TopicAuthorizationRuleSpecForProviderTopicIdRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in servicebus to populate topicId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicAuthorizationRuleSpecForProviderTopicIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1TopicAuthorizationRuleSpecForProviderTopicIdRef
     [JsonPropertyName("policy")]
     public V1beta1TopicAuthorizationRuleSpecForProviderTopicIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicAuthorizationRuleSpecForProviderTopicIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1TopicAuthorizationRuleSpecForProviderTopicIdSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in servicebus to populate topicId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicAuthorizationRuleSpecForProviderTopicIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1TopicAuthorizationRuleSpecForProviderTopicIdSelector
     [JsonPropertyName("policy")]
     public V1beta1TopicAuthorizationRuleSpecForProviderTopicIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicAuthorizationRuleSpecForProvider
@@ -118,7 +129,9 @@ public partial class V1beta1TopicAuthorizationRuleSpecForProvider
     [JsonPropertyName("topicIdSelector")]
     public V1beta1TopicAuthorizationRuleSpecForProviderTopicIdSelector? TopicIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicAuthorizationRuleSpecInitProvider
@@ -135,7 +148,9 @@ public partial class V1beta1TopicAuthorizationRuleSpecInitProvider
     [JsonPropertyName("send")]
     public bool? Send { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicAuthorizationRuleSpecProviderConfigRefPolicy
@@ -148,7 +163,9 @@ public partial class V1beta1TopicAuthorizationRuleSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicAuthorizationRuleSpecProviderConfigRef
@@ -161,7 +178,9 @@ public partial class V1beta1TopicAuthorizationRuleSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1TopicAuthorizationRuleSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicAuthorizationRuleSpecWriteConnectionSecretToRef
@@ -174,7 +193,9 @@ public partial class V1beta1TopicAuthorizationRuleSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TopicAuthorizationRuleSpec defines the desired state of TopicAuthorizationRule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicAuthorizationRuleSpec
@@ -203,7 +224,9 @@ public partial class V1beta1TopicAuthorizationRuleSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TopicAuthorizationRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicAuthorizationRuleStatusAtProvider
@@ -228,7 +251,9 @@ public partial class V1beta1TopicAuthorizationRuleStatusAtProvider
     [JsonPropertyName("topicId")]
     public string? TopicId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicAuthorizationRuleStatusConditions
@@ -257,7 +282,9 @@ public partial class V1beta1TopicAuthorizationRuleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TopicAuthorizationRuleStatus defines the observed state of TopicAuthorizationRule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicAuthorizationRuleStatus
@@ -274,7 +301,9 @@ public partial class V1beta1TopicAuthorizationRuleStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TopicAuthorizationRule is the Schema for the TopicAuthorizationRules API. Manages a ServiceBus Topic authorization Rule within a ServiceBus Topic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -304,3 +333,4 @@ public partial class V1beta1TopicAuthorizationRule : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1TopicAuthorizationRuleStatus? Status { get; set; }
 }
+#nullable disable

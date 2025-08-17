@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hub.traefik.io;
+#nullable enable
 /// <summary>APIAuth defines the authentication configuration for APIs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,13 +34,17 @@ public partial class V1alpha1APIAuthList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1alpha1APIAuth> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>APIKey configures API key authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIAuthSpecApiKey
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>JWT configures JWT authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIAuthSpecJwt
@@ -80,7 +85,9 @@ public partial class V1alpha1APIAuthSpecJwt
     [JsonPropertyName("tokenQueryKey")]
     public string? TokenQueryKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The desired behavior of this APIAuth.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIAuthSpec
@@ -97,7 +104,9 @@ public partial class V1alpha1APIAuthSpec
     [JsonPropertyName("jwt")]
     public V1alpha1APIAuthSpecJwt? Jwt { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The current status of this APIAuth.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIAuthStatus
@@ -114,7 +123,9 @@ public partial class V1alpha1APIAuthStatus
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>APIAuth defines the authentication configuration for APIs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -144,3 +155,4 @@ public partial class V1alpha1APIAuth : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1alpha1APIAuthStatus? Status { get; set; }
 }
+#nullable disable

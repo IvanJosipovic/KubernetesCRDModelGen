@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kusto.azure.m.upbound.io;
+#nullable enable
 /// <summary>EventHubDataConnection is the Schema for the EventHubDataConnections API. Manages Kusto / Data Explorer EventHub Data Connection</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1EventHubDataConnectionList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1EventHubDataConnection> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecForProviderClusterNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderClusterNameRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in kusto to populate clusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecForProviderClusterNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderClusterNameRef
     [JsonPropertyName("policy")]
     public V1beta1EventHubDataConnectionSpecForProviderClusterNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecForProviderClusterNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderClusterNameSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in kusto to populate clusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecForProviderClusterNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderClusterNameSele
     [JsonPropertyName("policy")]
     public V1beta1EventHubDataConnectionSpecForProviderClusterNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecForProviderConsumerGroupRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderConsumerGroupRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ConsumerGroup in eventhub to populate consumerGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecForProviderConsumerGroupRef
@@ -127,7 +140,9 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderConsumerGroupRe
     [JsonPropertyName("policy")]
     public V1beta1EventHubDataConnectionSpecForProviderConsumerGroupRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecForProviderConsumerGroupSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderConsumerGroupSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ConsumerGroup in eventhub to populate consumerGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecForProviderConsumerGroupSelector
@@ -161,7 +178,9 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderConsumerGroupSe
     [JsonPropertyName("policy")]
     public V1beta1EventHubDataConnectionSpecForProviderConsumerGroupSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecForProviderDatabaseNameRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderDatabaseNameRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Database in kusto to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecForProviderDatabaseNameRef
@@ -191,7 +212,9 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderDatabaseNameRef
     [JsonPropertyName("policy")]
     public V1beta1EventHubDataConnectionSpecForProviderDatabaseNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecForProviderDatabaseNameSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderDatabaseNameSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Database in kusto to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecForProviderDatabaseNameSelector
@@ -225,7 +250,9 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderDatabaseNameSel
     [JsonPropertyName("policy")]
     public V1beta1EventHubDataConnectionSpecForProviderDatabaseNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecForProviderEventhubIdRefPolicy
@@ -238,7 +265,9 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderEventhubIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EventHub in eventhub to populate eventhubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecForProviderEventhubIdRef
@@ -255,7 +284,9 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderEventhubIdRef
     [JsonPropertyName("policy")]
     public V1beta1EventHubDataConnectionSpecForProviderEventhubIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecForProviderEventhubIdSelectorPolicy
@@ -268,7 +299,9 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderEventhubIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EventHub in eventhub to populate eventhubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecForProviderEventhubIdSelector
@@ -289,7 +322,9 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderEventhubIdSelec
     [JsonPropertyName("policy")]
     public V1beta1EventHubDataConnectionSpecForProviderEventhubIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecForProviderResourceGroupNameRefPolicy
@@ -302,7 +337,9 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderResourceGroupNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecForProviderResourceGroupNameRef
@@ -319,7 +356,9 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderResourceGroupNa
     [JsonPropertyName("policy")]
     public V1beta1EventHubDataConnectionSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecForProviderResourceGroupNameSelectorPolicy
@@ -332,7 +371,9 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderResourceGroupNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecForProviderResourceGroupNameSelector
@@ -353,7 +394,9 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderResourceGroupNa
     [JsonPropertyName("policy")]
     public V1beta1EventHubDataConnectionSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecForProvider
@@ -450,7 +493,9 @@ public partial class V1beta1EventHubDataConnectionSpecForProvider
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecInitProviderConsumerGroupRefPolicy
@@ -463,7 +508,9 @@ public partial class V1beta1EventHubDataConnectionSpecInitProviderConsumerGroupR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ConsumerGroup in eventhub to populate consumerGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecInitProviderConsumerGroupRef
@@ -480,7 +527,9 @@ public partial class V1beta1EventHubDataConnectionSpecInitProviderConsumerGroupR
     [JsonPropertyName("policy")]
     public V1beta1EventHubDataConnectionSpecInitProviderConsumerGroupRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecInitProviderConsumerGroupSelectorPolicy
@@ -493,7 +542,9 @@ public partial class V1beta1EventHubDataConnectionSpecInitProviderConsumerGroupS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ConsumerGroup in eventhub to populate consumerGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecInitProviderConsumerGroupSelector
@@ -514,7 +565,9 @@ public partial class V1beta1EventHubDataConnectionSpecInitProviderConsumerGroupS
     [JsonPropertyName("policy")]
     public V1beta1EventHubDataConnectionSpecInitProviderConsumerGroupSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecInitProviderEventhubIdRefPolicy
@@ -527,7 +580,9 @@ public partial class V1beta1EventHubDataConnectionSpecInitProviderEventhubIdRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EventHub in eventhub to populate eventhubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecInitProviderEventhubIdRef
@@ -544,7 +599,9 @@ public partial class V1beta1EventHubDataConnectionSpecInitProviderEventhubIdRef
     [JsonPropertyName("policy")]
     public V1beta1EventHubDataConnectionSpecInitProviderEventhubIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecInitProviderEventhubIdSelectorPolicy
@@ -557,7 +614,9 @@ public partial class V1beta1EventHubDataConnectionSpecInitProviderEventhubIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EventHub in eventhub to populate eventhubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecInitProviderEventhubIdSelector
@@ -578,7 +637,9 @@ public partial class V1beta1EventHubDataConnectionSpecInitProviderEventhubIdSele
     [JsonPropertyName("policy")]
     public V1beta1EventHubDataConnectionSpecInitProviderEventhubIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecInitProvider
@@ -639,7 +700,9 @@ public partial class V1beta1EventHubDataConnectionSpecInitProvider
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecProviderConfigRef
@@ -652,7 +715,9 @@ public partial class V1beta1EventHubDataConnectionSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpecWriteConnectionSecretToRef
@@ -661,7 +726,9 @@ public partial class V1beta1EventHubDataConnectionSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EventHubDataConnectionSpec defines the desired state of EventHubDataConnection</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionSpec
@@ -686,7 +753,9 @@ public partial class V1beta1EventHubDataConnectionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1EventHubDataConnectionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionStatusAtProvider
@@ -747,7 +816,9 @@ public partial class V1beta1EventHubDataConnectionStatusAtProvider
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionStatusConditions
@@ -776,7 +847,9 @@ public partial class V1beta1EventHubDataConnectionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EventHubDataConnectionStatus defines the observed state of EventHubDataConnection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubDataConnectionStatus
@@ -793,7 +866,9 @@ public partial class V1beta1EventHubDataConnectionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EventHubDataConnection is the Schema for the EventHubDataConnections API. Manages Kusto / Data Explorer EventHub Data Connection</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -823,3 +898,4 @@ public partial class V1beta1EventHubDataConnection : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1EventHubDataConnectionStatus? Status { get; set; }
 }
+#nullable disable

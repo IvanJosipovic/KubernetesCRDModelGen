@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sagemaker.aws.m.upbound.io;
+#nullable enable
 /// <summary>EndpointConfiguration is the Schema for the EndpointConfigurations API. Provides a SageMaker AI Endpoint Configuration resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1EndpointConfigurationList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1EndpointConfiguration> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures the behavior of the client used by Amazon SageMaker AI to interact with the model container during asynchronous inference.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderAsyncInferenceConfigClientConfig
@@ -42,7 +45,9 @@ public partial class V1beta1EndpointConfigurationSpecForProviderAsyncInferenceCo
     [JsonPropertyName("maxConcurrentInvocationsPerInstance")]
     public double? MaxConcurrentInvocationsPerInstance { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the configuration for notifications of inference results for asynchronous inference.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderAsyncInferenceConfigOutputConfigNotificationConfig
@@ -59,7 +64,9 @@ public partial class V1beta1EndpointConfigurationSpecForProviderAsyncInferenceCo
     [JsonPropertyName("successTopic")]
     public string? SuccessTopic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the configuration for asynchronous inference invocation outputs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderAsyncInferenceConfigOutputConfig
@@ -80,7 +87,9 @@ public partial class V1beta1EndpointConfigurationSpecForProviderAsyncInferenceCo
     [JsonPropertyName("s3OutputPath")]
     public string? S3OutputPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies configuration for how an endpoint performs asynchronous inference.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderAsyncInferenceConfig
@@ -93,7 +102,9 @@ public partial class V1beta1EndpointConfigurationSpecForProviderAsyncInferenceCo
     [JsonPropertyName("outputConfig")]
     public V1beta1EndpointConfigurationSpecForProviderAsyncInferenceConfigOutputConfig? OutputConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The content type headers to capture. See capture_content_type_header below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderDataCaptureConfigCaptureContentTypeHeader
@@ -106,7 +117,9 @@ public partial class V1beta1EndpointConfigurationSpecForProviderDataCaptureConfi
     [JsonPropertyName("jsonContentTypes")]
     public IList<string>? JsonContentTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderDataCaptureConfigCaptureOptions
@@ -115,7 +128,9 @@ public partial class V1beta1EndpointConfigurationSpecForProviderDataCaptureConfi
     [JsonPropertyName("captureMode")]
     public string? CaptureMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the parameters to capture input/output of SageMaker AI models endpoints. Fields are documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderDataCaptureConfig
@@ -144,7 +159,9 @@ public partial class V1beta1EndpointConfigurationSpecForProviderDataCaptureConfi
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderKmsKeyArnRefPolicy
@@ -157,7 +174,9 @@ public partial class V1beta1EndpointConfigurationSpecForProviderKmsKeyArnRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderKmsKeyArnRef
@@ -174,7 +193,9 @@ public partial class V1beta1EndpointConfigurationSpecForProviderKmsKeyArnRef
     [JsonPropertyName("policy")]
     public V1beta1EndpointConfigurationSpecForProviderKmsKeyArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderKmsKeyArnSelectorPolicy
@@ -187,7 +208,9 @@ public partial class V1beta1EndpointConfigurationSpecForProviderKmsKeyArnSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderKmsKeyArnSelector
@@ -208,7 +231,9 @@ public partial class V1beta1EndpointConfigurationSpecForProviderKmsKeyArnSelecto
     [JsonPropertyName("policy")]
     public V1beta1EndpointConfigurationSpecForProviderKmsKeyArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies configuration for a core dump from the model container when the process crashes. Fields are documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderProductionVariantsCoreDumpConfig
@@ -221,7 +246,9 @@ public partial class V1beta1EndpointConfigurationSpecForProviderProductionVarian
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings that control the range in the number of instances that the endpoint provisions as it scales up or down to accommodate traffic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderProductionVariantsManagedInstanceScaling
@@ -238,7 +265,9 @@ public partial class V1beta1EndpointConfigurationSpecForProviderProductionVarian
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderProductionVariantsModelNameRefPolicy
@@ -251,7 +280,9 @@ public partial class V1beta1EndpointConfigurationSpecForProviderProductionVarian
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Model in sagemaker to populate modelName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderProductionVariantsModelNameRef
@@ -268,7 +299,9 @@ public partial class V1beta1EndpointConfigurationSpecForProviderProductionVarian
     [JsonPropertyName("policy")]
     public V1beta1EndpointConfigurationSpecForProviderProductionVariantsModelNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderProductionVariantsModelNameSelectorPolicy
@@ -281,7 +314,9 @@ public partial class V1beta1EndpointConfigurationSpecForProviderProductionVarian
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Model in sagemaker to populate modelName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderProductionVariantsModelNameSelector
@@ -302,7 +337,9 @@ public partial class V1beta1EndpointConfigurationSpecForProviderProductionVarian
     [JsonPropertyName("policy")]
     public V1beta1EndpointConfigurationSpecForProviderProductionVariantsModelNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderProductionVariantsRoutingConfig
@@ -311,7 +348,9 @@ public partial class V1beta1EndpointConfigurationSpecForProviderProductionVarian
     [JsonPropertyName("routingStrategy")]
     public string? RoutingStrategy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies configuration for how an endpoint performs asynchronous inference.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderProductionVariantsServerlessConfig
@@ -328,7 +367,9 @@ public partial class V1beta1EndpointConfigurationSpecForProviderProductionVarian
     [JsonPropertyName("provisionedConcurrency")]
     public double? ProvisionedConcurrency { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderProductionVariants
@@ -401,7 +442,9 @@ public partial class V1beta1EndpointConfigurationSpecForProviderProductionVarian
     [JsonPropertyName("volumeSizeInGb")]
     public double? VolumeSizeInGb { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies configuration for a core dump from the model container when the process crashes. Fields are documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderShadowProductionVariantsCoreDumpConfig
@@ -414,7 +457,9 @@ public partial class V1beta1EndpointConfigurationSpecForProviderShadowProduction
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings that control the range in the number of instances that the endpoint provisions as it scales up or down to accommodate traffic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderShadowProductionVariantsManagedInstanceScaling
@@ -431,7 +476,9 @@ public partial class V1beta1EndpointConfigurationSpecForProviderShadowProduction
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderShadowProductionVariantsRoutingConfig
@@ -440,7 +487,9 @@ public partial class V1beta1EndpointConfigurationSpecForProviderShadowProduction
     [JsonPropertyName("routingStrategy")]
     public string? RoutingStrategy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies configuration for how an endpoint performs asynchronous inference.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderShadowProductionVariantsServerlessConfig
@@ -457,7 +506,9 @@ public partial class V1beta1EndpointConfigurationSpecForProviderShadowProduction
     [JsonPropertyName("provisionedConcurrency")]
     public double? ProvisionedConcurrency { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderShadowProductionVariants
@@ -522,7 +573,9 @@ public partial class V1beta1EndpointConfigurationSpecForProviderShadowProduction
     [JsonPropertyName("volumeSizeInGb")]
     public double? VolumeSizeInGb { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProvider
@@ -563,7 +616,9 @@ public partial class V1beta1EndpointConfigurationSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures the behavior of the client used by Amazon SageMaker AI to interact with the model container during asynchronous inference.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderAsyncInferenceConfigClientConfig
@@ -572,7 +627,9 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderAsyncInferenceC
     [JsonPropertyName("maxConcurrentInvocationsPerInstance")]
     public double? MaxConcurrentInvocationsPerInstance { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the configuration for notifications of inference results for asynchronous inference.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderAsyncInferenceConfigOutputConfigNotificationConfig
@@ -589,7 +646,9 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderAsyncInferenceC
     [JsonPropertyName("successTopic")]
     public string? SuccessTopic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the configuration for asynchronous inference invocation outputs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderAsyncInferenceConfigOutputConfig
@@ -610,7 +669,9 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderAsyncInferenceC
     [JsonPropertyName("s3OutputPath")]
     public string? S3OutputPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies configuration for how an endpoint performs asynchronous inference.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderAsyncInferenceConfig
@@ -623,7 +684,9 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderAsyncInferenceC
     [JsonPropertyName("outputConfig")]
     public V1beta1EndpointConfigurationSpecInitProviderAsyncInferenceConfigOutputConfig? OutputConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The content type headers to capture. See capture_content_type_header below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderDataCaptureConfigCaptureContentTypeHeader
@@ -636,7 +699,9 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderDataCaptureConf
     [JsonPropertyName("jsonContentTypes")]
     public IList<string>? JsonContentTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderDataCaptureConfigCaptureOptions
@@ -645,7 +710,9 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderDataCaptureConf
     [JsonPropertyName("captureMode")]
     public string? CaptureMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the parameters to capture input/output of SageMaker AI models endpoints. Fields are documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderDataCaptureConfig
@@ -674,7 +741,9 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderDataCaptureConf
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderKmsKeyArnRefPolicy
@@ -687,7 +756,9 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderKmsKeyArnRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderKmsKeyArnRef
@@ -704,7 +775,9 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderKmsKeyArnRef
     [JsonPropertyName("policy")]
     public V1beta1EndpointConfigurationSpecInitProviderKmsKeyArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderKmsKeyArnSelectorPolicy
@@ -717,7 +790,9 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderKmsKeyArnSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderKmsKeyArnSelector
@@ -738,7 +813,9 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderKmsKeyArnSelect
     [JsonPropertyName("policy")]
     public V1beta1EndpointConfigurationSpecInitProviderKmsKeyArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies configuration for a core dump from the model container when the process crashes. Fields are documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVariantsCoreDumpConfig
@@ -751,7 +828,9 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVaria
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings that control the range in the number of instances that the endpoint provisions as it scales up or down to accommodate traffic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVariantsManagedInstanceScaling
@@ -768,7 +847,9 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVaria
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVariantsModelNameRefPolicy
@@ -781,7 +862,9 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVaria
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Model in sagemaker to populate modelName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVariantsModelNameRef
@@ -798,7 +881,9 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVaria
     [JsonPropertyName("policy")]
     public V1beta1EndpointConfigurationSpecInitProviderProductionVariantsModelNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVariantsModelNameSelectorPolicy
@@ -811,7 +896,9 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVaria
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Model in sagemaker to populate modelName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVariantsModelNameSelector
@@ -832,7 +919,9 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVaria
     [JsonPropertyName("policy")]
     public V1beta1EndpointConfigurationSpecInitProviderProductionVariantsModelNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVariantsRoutingConfig
@@ -841,7 +930,9 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVaria
     [JsonPropertyName("routingStrategy")]
     public string? RoutingStrategy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies configuration for how an endpoint performs asynchronous inference.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVariantsServerlessConfig
@@ -858,7 +949,9 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVaria
     [JsonPropertyName("provisionedConcurrency")]
     public double? ProvisionedConcurrency { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVariants
@@ -931,7 +1024,9 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVaria
     [JsonPropertyName("volumeSizeInGb")]
     public double? VolumeSizeInGb { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies configuration for a core dump from the model container when the process crashes. Fields are documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderShadowProductionVariantsCoreDumpConfig
@@ -944,7 +1039,9 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderShadowProductio
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings that control the range in the number of instances that the endpoint provisions as it scales up or down to accommodate traffic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderShadowProductionVariantsManagedInstanceScaling
@@ -961,7 +1058,9 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderShadowProductio
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderShadowProductionVariantsRoutingConfig
@@ -970,7 +1069,9 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderShadowProductio
     [JsonPropertyName("routingStrategy")]
     public string? RoutingStrategy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies configuration for how an endpoint performs asynchronous inference.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderShadowProductionVariantsServerlessConfig
@@ -987,7 +1088,9 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderShadowProductio
     [JsonPropertyName("provisionedConcurrency")]
     public double? ProvisionedConcurrency { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderShadowProductionVariants
@@ -1052,7 +1155,9 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderShadowProductio
     [JsonPropertyName("volumeSizeInGb")]
     public double? VolumeSizeInGb { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProvider
@@ -1089,7 +1194,9 @@ public partial class V1beta1EndpointConfigurationSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecProviderConfigRef
@@ -1102,7 +1209,9 @@ public partial class V1beta1EndpointConfigurationSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecWriteConnectionSecretToRef
@@ -1111,7 +1220,9 @@ public partial class V1beta1EndpointConfigurationSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EndpointConfigurationSpec defines the desired state of EndpointConfiguration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpec
@@ -1136,7 +1247,9 @@ public partial class V1beta1EndpointConfigurationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1EndpointConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures the behavior of the client used by Amazon SageMaker AI to interact with the model container during asynchronous inference.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationStatusAtProviderAsyncInferenceConfigClientConfig
@@ -1145,7 +1258,9 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderAsyncInferenceC
     [JsonPropertyName("maxConcurrentInvocationsPerInstance")]
     public double? MaxConcurrentInvocationsPerInstance { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the configuration for notifications of inference results for asynchronous inference.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationStatusAtProviderAsyncInferenceConfigOutputConfigNotificationConfig
@@ -1162,7 +1277,9 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderAsyncInferenceC
     [JsonPropertyName("successTopic")]
     public string? SuccessTopic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the configuration for asynchronous inference invocation outputs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationStatusAtProviderAsyncInferenceConfigOutputConfig
@@ -1183,7 +1300,9 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderAsyncInferenceC
     [JsonPropertyName("s3OutputPath")]
     public string? S3OutputPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies configuration for how an endpoint performs asynchronous inference.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationStatusAtProviderAsyncInferenceConfig
@@ -1196,7 +1315,9 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderAsyncInferenceC
     [JsonPropertyName("outputConfig")]
     public V1beta1EndpointConfigurationStatusAtProviderAsyncInferenceConfigOutputConfig? OutputConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The content type headers to capture. See capture_content_type_header below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationStatusAtProviderDataCaptureConfigCaptureContentTypeHeader
@@ -1209,7 +1330,9 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderDataCaptureConf
     [JsonPropertyName("jsonContentTypes")]
     public IList<string>? JsonContentTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationStatusAtProviderDataCaptureConfigCaptureOptions
@@ -1218,7 +1341,9 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderDataCaptureConf
     [JsonPropertyName("captureMode")]
     public string? CaptureMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the parameters to capture input/output of SageMaker AI models endpoints. Fields are documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationStatusAtProviderDataCaptureConfig
@@ -1247,7 +1372,9 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderDataCaptureConf
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies configuration for a core dump from the model container when the process crashes. Fields are documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationStatusAtProviderProductionVariantsCoreDumpConfig
@@ -1260,7 +1387,9 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderProductionVaria
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings that control the range in the number of instances that the endpoint provisions as it scales up or down to accommodate traffic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationStatusAtProviderProductionVariantsManagedInstanceScaling
@@ -1277,7 +1406,9 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderProductionVaria
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationStatusAtProviderProductionVariantsRoutingConfig
@@ -1286,7 +1417,9 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderProductionVaria
     [JsonPropertyName("routingStrategy")]
     public string? RoutingStrategy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies configuration for how an endpoint performs asynchronous inference.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationStatusAtProviderProductionVariantsServerlessConfig
@@ -1303,7 +1436,9 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderProductionVaria
     [JsonPropertyName("provisionedConcurrency")]
     public double? ProvisionedConcurrency { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationStatusAtProviderProductionVariants
@@ -1368,7 +1503,9 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderProductionVaria
     [JsonPropertyName("volumeSizeInGb")]
     public double? VolumeSizeInGb { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies configuration for a core dump from the model container when the process crashes. Fields are documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationStatusAtProviderShadowProductionVariantsCoreDumpConfig
@@ -1381,7 +1518,9 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderShadowProductio
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings that control the range in the number of instances that the endpoint provisions as it scales up or down to accommodate traffic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationStatusAtProviderShadowProductionVariantsManagedInstanceScaling
@@ -1398,7 +1537,9 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderShadowProductio
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationStatusAtProviderShadowProductionVariantsRoutingConfig
@@ -1407,7 +1548,9 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderShadowProductio
     [JsonPropertyName("routingStrategy")]
     public string? RoutingStrategy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies configuration for how an endpoint performs asynchronous inference.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationStatusAtProviderShadowProductionVariantsServerlessConfig
@@ -1424,7 +1567,9 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderShadowProductio
     [JsonPropertyName("provisionedConcurrency")]
     public double? ProvisionedConcurrency { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationStatusAtProviderShadowProductionVariants
@@ -1489,7 +1634,9 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderShadowProductio
     [JsonPropertyName("volumeSizeInGb")]
     public double? VolumeSizeInGb { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationStatusAtProvider
@@ -1534,7 +1681,9 @@ public partial class V1beta1EndpointConfigurationStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationStatusConditions
@@ -1563,7 +1712,9 @@ public partial class V1beta1EndpointConfigurationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EndpointConfigurationStatus defines the observed state of EndpointConfiguration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationStatus
@@ -1580,7 +1731,9 @@ public partial class V1beta1EndpointConfigurationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EndpointConfiguration is the Schema for the EndpointConfigurations API. Provides a SageMaker AI Endpoint Configuration resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1610,3 +1763,4 @@ public partial class V1beta1EndpointConfiguration : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1EndpointConfigurationStatus? Status { get; set; }
 }
+#nullable disable

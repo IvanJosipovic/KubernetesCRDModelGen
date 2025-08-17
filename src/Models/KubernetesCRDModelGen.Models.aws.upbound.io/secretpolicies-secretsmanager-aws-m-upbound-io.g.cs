@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.secretsmanager.aws.m.upbound.io;
+#nullable enable
 /// <summary>SecretPolicy is the Schema for the SecretPolicys API. Provides a resource to manage AWS Secrets Manager secret policy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SecretPolicyList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1SecretPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretPolicySpecForProviderSecretArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SecretPolicySpecForProviderSecretArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Secret in secretsmanager to populate secretArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretPolicySpecForProviderSecretArnRef
@@ -63,7 +68,9 @@ public partial class V1beta1SecretPolicySpecForProviderSecretArnRef
     [JsonPropertyName("policy")]
     public V1beta1SecretPolicySpecForProviderSecretArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretPolicySpecForProviderSecretArnSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1SecretPolicySpecForProviderSecretArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Secret in secretsmanager to populate secretArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretPolicySpecForProviderSecretArnSelector
@@ -97,7 +106,9 @@ public partial class V1beta1SecretPolicySpecForProviderSecretArnSelector
     [JsonPropertyName("policy")]
     public V1beta1SecretPolicySpecForProviderSecretArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretPolicySpecForProvider
@@ -126,7 +137,9 @@ public partial class V1beta1SecretPolicySpecForProvider
     [JsonPropertyName("secretArnSelector")]
     public V1beta1SecretPolicySpecForProviderSecretArnSelector? SecretArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretPolicySpecInitProviderSecretArnRefPolicy
@@ -139,7 +152,9 @@ public partial class V1beta1SecretPolicySpecInitProviderSecretArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Secret in secretsmanager to populate secretArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretPolicySpecInitProviderSecretArnRef
@@ -156,7 +171,9 @@ public partial class V1beta1SecretPolicySpecInitProviderSecretArnRef
     [JsonPropertyName("policy")]
     public V1beta1SecretPolicySpecInitProviderSecretArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretPolicySpecInitProviderSecretArnSelectorPolicy
@@ -169,7 +186,9 @@ public partial class V1beta1SecretPolicySpecInitProviderSecretArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Secret in secretsmanager to populate secretArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretPolicySpecInitProviderSecretArnSelector
@@ -190,7 +209,9 @@ public partial class V1beta1SecretPolicySpecInitProviderSecretArnSelector
     [JsonPropertyName("policy")]
     public V1beta1SecretPolicySpecInitProviderSecretArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretPolicySpecInitProvider
@@ -215,7 +236,9 @@ public partial class V1beta1SecretPolicySpecInitProvider
     [JsonPropertyName("secretArnSelector")]
     public V1beta1SecretPolicySpecInitProviderSecretArnSelector? SecretArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretPolicySpecProviderConfigRef
@@ -228,7 +251,9 @@ public partial class V1beta1SecretPolicySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretPolicySpecWriteConnectionSecretToRef
@@ -237,7 +262,9 @@ public partial class V1beta1SecretPolicySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretPolicySpec defines the desired state of SecretPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretPolicySpec
@@ -262,7 +289,9 @@ public partial class V1beta1SecretPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SecretPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretPolicyStatusAtProvider
@@ -287,7 +316,9 @@ public partial class V1beta1SecretPolicyStatusAtProvider
     [JsonPropertyName("secretArn")]
     public string? SecretArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretPolicyStatusConditions
@@ -316,7 +347,9 @@ public partial class V1beta1SecretPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretPolicyStatus defines the observed state of SecretPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretPolicyStatus
@@ -333,7 +366,9 @@ public partial class V1beta1SecretPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretPolicy is the Schema for the SecretPolicys API. Provides a resource to manage AWS Secrets Manager secret policy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -363,3 +398,4 @@ public partial class V1beta1SecretPolicy : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1SecretPolicyStatus? Status { get; set; }
 }
+#nullable disable

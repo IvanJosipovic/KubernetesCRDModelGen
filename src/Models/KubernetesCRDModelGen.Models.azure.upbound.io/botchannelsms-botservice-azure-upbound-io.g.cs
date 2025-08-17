@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.botservice.azure.upbound.io;
+#nullable enable
 /// <summary>BotChannelSMS is the Schema for the BotChannelSMSs API. Manages a SMS integration for a Bot Channel</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BotChannelSMSList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1beta1BotChannelSMS> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelSMSSpecForProviderBotNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1BotChannelSMSSpecForProviderBotNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BotChannelsRegistration in botservice to populate botName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelSMSSpecForProviderBotNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1BotChannelSMSSpecForProviderBotNameRef
     [JsonPropertyName("policy")]
     public V1beta1BotChannelSMSSpecForProviderBotNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelSMSSpecForProviderBotNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1BotChannelSMSSpecForProviderBotNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BotChannelsRegistration in botservice to populate botName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelSMSSpecForProviderBotNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1BotChannelSMSSpecForProviderBotNameSelector
     [JsonPropertyName("policy")]
     public V1beta1BotChannelSMSSpecForProviderBotNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelSMSSpecForProviderResourceGroupNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1BotChannelSMSSpecForProviderResourceGroupNameRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelSMSSpecForProviderResourceGroupNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1BotChannelSMSSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1BotChannelSMSSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelSMSSpecForProviderResourceGroupNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1BotChannelSMSSpecForProviderResourceGroupNameSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelSMSSpecForProviderResourceGroupNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1BotChannelSMSSpecForProviderResourceGroupNameSelecto
     [JsonPropertyName("policy")]
     public V1beta1BotChannelSMSSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The authorization token for the SMS Channel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelSMSSpecForProviderSmsChannelAuthTokenSecretRef
@@ -162,7 +181,9 @@ public partial class V1beta1BotChannelSMSSpecForProviderSmsChannelAuthTokenSecre
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelSMSSpecForProvider
@@ -207,7 +228,9 @@ public partial class V1beta1BotChannelSMSSpecForProvider
     [JsonPropertyName("smsChannelAuthTokenSecretRef")]
     public V1beta1BotChannelSMSSpecForProviderSmsChannelAuthTokenSecretRef? SmsChannelAuthTokenSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The authorization token for the SMS Channel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelSMSSpecInitProviderSmsChannelAuthTokenSecretRef
@@ -224,7 +247,9 @@ public partial class V1beta1BotChannelSMSSpecInitProviderSmsChannelAuthTokenSecr
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelSMSSpecInitProvider
@@ -245,7 +270,9 @@ public partial class V1beta1BotChannelSMSSpecInitProvider
     [JsonPropertyName("smsChannelAuthTokenSecretRef")]
     public V1beta1BotChannelSMSSpecInitProviderSmsChannelAuthTokenSecretRef SmsChannelAuthTokenSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelSMSSpecProviderConfigRefPolicy
@@ -258,7 +285,9 @@ public partial class V1beta1BotChannelSMSSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelSMSSpecProviderConfigRef
@@ -271,7 +300,9 @@ public partial class V1beta1BotChannelSMSSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1BotChannelSMSSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelSMSSpecWriteConnectionSecretToRef
@@ -284,7 +315,9 @@ public partial class V1beta1BotChannelSMSSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BotChannelSMSSpec defines the desired state of BotChannelSMS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelSMSSpec
@@ -313,7 +346,9 @@ public partial class V1beta1BotChannelSMSSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BotChannelSMSSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelSMSStatusAtProvider
@@ -342,7 +377,9 @@ public partial class V1beta1BotChannelSMSStatusAtProvider
     [JsonPropertyName("smsChannelAccountSecurityId")]
     public string? SmsChannelAccountSecurityId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelSMSStatusConditions
@@ -371,7 +408,9 @@ public partial class V1beta1BotChannelSMSStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BotChannelSMSStatus defines the observed state of BotChannelSMS.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelSMSStatus
@@ -388,7 +427,9 @@ public partial class V1beta1BotChannelSMSStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BotChannelSMS is the Schema for the BotChannelSMSs API. Manages a SMS integration for a Bot Channel</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -418,3 +459,4 @@ public partial class V1beta1BotChannelSMS : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1BotChannelSMSStatus? Status { get; set; }
 }
+#nullable disable

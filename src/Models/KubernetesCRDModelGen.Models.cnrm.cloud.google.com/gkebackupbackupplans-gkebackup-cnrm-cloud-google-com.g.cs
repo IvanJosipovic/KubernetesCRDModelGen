@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gkebackup.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>GKEBackupBackupPlan is the Schema for the GKEBackupBackupPlan API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1GKEBackupBackupPlanList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1alpha1GKEBackupBackupPlan> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Google Cloud KMS encryption key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupBackupPlanSpecBackupConfigEncryptionKeyKmsKeyRef
@@ -50,7 +53,9 @@ public partial class V1alpha1GKEBackupBackupPlanSpecBackupConfigEncryptionKeyKms
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. This defines a customer managed encryption key that will be  used to encrypt the "config" portion (the Kubernetes resources) of  Backups created via this plan.   Default (empty): Config backup artifacts will not be encrypted.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupBackupPlanSpecBackupConfigEncryptionKey
@@ -59,7 +64,9 @@ public partial class V1alpha1GKEBackupBackupPlanSpecBackupConfigEncryptionKey
     [JsonPropertyName("kmsKeyRef")]
     public V1alpha1GKEBackupBackupPlanSpecBackupConfigEncryptionKeyKmsKeyRef? KmsKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupBackupPlanSpecBackupConfigSelectedApplicationsNamespacedNames
@@ -72,7 +79,9 @@ public partial class V1alpha1GKEBackupBackupPlanSpecBackupConfigSelectedApplicat
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If set, include just the resources referenced by the listed ProtectedApplications.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupBackupPlanSpecBackupConfigSelectedApplications
@@ -81,7 +90,9 @@ public partial class V1alpha1GKEBackupBackupPlanSpecBackupConfigSelectedApplicat
     [JsonPropertyName("namespacedNames")]
     public IList<V1alpha1GKEBackupBackupPlanSpecBackupConfigSelectedApplicationsNamespacedNames>? NamespacedNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If set, include just the resources in the listed namespaces.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupBackupPlanSpecBackupConfigSelectedNamespaces
@@ -90,7 +101,9 @@ public partial class V1alpha1GKEBackupBackupPlanSpecBackupConfigSelectedNamespac
     [JsonPropertyName("namespaces")]
     public IList<string>? Namespaces { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Defines the configuration of Backups created via this BackupPlan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupBackupPlanSpecBackupConfig
@@ -123,7 +136,9 @@ public partial class V1alpha1GKEBackupBackupPlanSpecBackupConfig
     [JsonPropertyName("selectedNamespaces")]
     public V1alpha1GKEBackupBackupPlanSpecBackupConfigSelectedNamespaces? SelectedNamespaces { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The exclusion window occurs on these days of each week in UTC.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupBackupPlanSpecBackupScheduleRpoConfigExclusionWindowsDaysOfWeek
@@ -132,7 +147,9 @@ public partial class V1alpha1GKEBackupBackupPlanSpecBackupScheduleRpoConfigExclu
     [JsonPropertyName("daysOfWeek")]
     public IList<string>? DaysOfWeek { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>No recurrence. The exclusion window occurs only once and on this date in UTC.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupBackupPlanSpecBackupScheduleRpoConfigExclusionWindowsSingleOccurrenceDate
@@ -149,7 +166,9 @@ public partial class V1alpha1GKEBackupBackupPlanSpecBackupScheduleRpoConfigExclu
     [JsonPropertyName("year")]
     public int? Year { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Specifies the start time of the window using time of the day in UTC.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupBackupPlanSpecBackupScheduleRpoConfigExclusionWindowsStartTime
@@ -170,7 +189,9 @@ public partial class V1alpha1GKEBackupBackupPlanSpecBackupScheduleRpoConfigExclu
     [JsonPropertyName("seconds")]
     public int? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupBackupPlanSpecBackupScheduleRpoConfigExclusionWindows
@@ -195,7 +216,9 @@ public partial class V1alpha1GKEBackupBackupPlanSpecBackupScheduleRpoConfigExclu
     [JsonPropertyName("startTime")]
     public V1alpha1GKEBackupBackupPlanSpecBackupScheduleRpoConfigExclusionWindowsStartTime StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Defines the RPO schedule configuration for this BackupPlan.  This is mutually exclusive with the  [cron_schedule][google.cloud.gkebackup.v1.BackupPlan.Schedule.cron_schedule]  field since at most one schedule can be defined for a BackupPLan. If this  is defined, then  [backup_retain_days][google.cloud.gkebackup.v1.BackupPlan.RetentionPolicy.backup_retain_days]  must also be defined.   Default (empty): no automatic backup creation will occur.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupBackupPlanSpecBackupScheduleRpoConfig
@@ -208,7 +231,9 @@ public partial class V1alpha1GKEBackupBackupPlanSpecBackupScheduleRpoConfig
     [JsonPropertyName("targetRPOMinutes")]
     public int? TargetRPOMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Defines a schedule for automatic Backup creation via this BackupPlan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupBackupPlanSpecBackupSchedule
@@ -225,7 +250,9 @@ public partial class V1alpha1GKEBackupBackupPlanSpecBackupSchedule
     [JsonPropertyName("rpoConfig")]
     public V1alpha1GKEBackupBackupPlanSpecBackupScheduleRpoConfig? RpoConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Immutable. The source cluster from which Backups will be created via this BackupPlan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupBackupPlanSpecClusterRef
@@ -242,7 +269,9 @@ public partial class V1alpha1GKEBackupBackupPlanSpecClusterRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupBackupPlanSpecProjectRef
@@ -263,7 +292,9 @@ public partial class V1alpha1GKEBackupBackupPlanSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. RetentionPolicy governs lifecycle of Backups created under this plan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupBackupPlanSpecRetentionPolicy
@@ -280,7 +311,9 @@ public partial class V1alpha1GKEBackupBackupPlanSpecRetentionPolicy
     [JsonPropertyName("locked")]
     public bool? Locked { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GKEBackupBackupPlanSpec defines the desired state of GKEBackupBackupPlan</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupBackupPlanSpec
@@ -325,7 +358,9 @@ public partial class V1alpha1GKEBackupBackupPlanSpec
     [JsonPropertyName("retentionPolicy")]
     public V1alpha1GKEBackupBackupPlanSpecRetentionPolicy? RetentionPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupBackupPlanStatusConditions
@@ -350,7 +385,9 @@ public partial class V1alpha1GKEBackupBackupPlanStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Defines a schedule for automatic Backup creation via this BackupPlan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupBackupPlanStatusObservedStateBackupSchedule
@@ -359,7 +396,9 @@ public partial class V1alpha1GKEBackupBackupPlanStatusObservedStateBackupSchedul
     [JsonPropertyName("nextScheduledBackupTime")]
     public string? NextScheduledBackupTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupBackupPlanStatusObservedState
@@ -404,7 +443,9 @@ public partial class V1alpha1GKEBackupBackupPlanStatusObservedState
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GKEBackupBackupPlanStatus defines the config connector machine state of GKEBackupBackupPlan</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupBackupPlanStatus
@@ -425,7 +466,9 @@ public partial class V1alpha1GKEBackupBackupPlanStatus
     [JsonPropertyName("observedState")]
     public V1alpha1GKEBackupBackupPlanStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GKEBackupBackupPlan is the Schema for the GKEBackupBackupPlan API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -455,3 +498,4 @@ public partial class V1alpha1GKEBackupBackupPlan : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1alpha1GKEBackupBackupPlanStatus? Status { get; set; }
 }
+#nullable disable

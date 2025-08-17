@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+#nullable enable
 /// <summary>NATGatewayPublicIPPrefixAssociation is the Schema for the NATGatewayPublicIPPrefixAssociations API. Manages the association between a NAT Gateway and a Public IP Prefix.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationList : IKubernete
     [JsonPropertyName("items")]
     public IList<V1beta1NATGatewayPublicIPPrefixAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderNatGatewayIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a NATGateway in network to populate natGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderNatGatewayIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderNa
     [JsonPropertyName("policy")]
     public V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderNatGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderNatGatewayIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a NATGateway in network to populate natGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderNatGatewayIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderNa
     [JsonPropertyName("policy")]
     public V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderNatGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderPublicIpPrefixIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderPu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PublicIPPrefix in network to populate publicIpPrefixId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderPublicIpPrefixIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderPu
     [JsonPropertyName("policy")]
     public V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderPublicIpPrefixIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderPublicIpPrefixIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderPu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PublicIPPrefix in network to populate publicIpPrefixId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderPublicIpPrefixIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderPu
     [JsonPropertyName("policy")]
     public V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderPublicIpPrefixIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecForProvider
@@ -174,7 +193,9 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecForProvider
     [JsonPropertyName("publicIpPrefixIdSelector")]
     public V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderPublicIpPrefixIdSelector? PublicIpPrefixIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderNatGatewayIdRefPolicy
@@ -187,7 +208,9 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a NATGateway in network to populate natGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderNatGatewayIdRef
@@ -200,7 +223,9 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderN
     [JsonPropertyName("policy")]
     public V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderNatGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderNatGatewayIdSelectorPolicy
@@ -213,7 +238,9 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a NATGateway in network to populate natGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderNatGatewayIdSelector
@@ -230,7 +257,9 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderN
     [JsonPropertyName("policy")]
     public V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderNatGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderPublicIpPrefixIdRefPolicy
@@ -243,7 +272,9 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PublicIPPrefix in network to populate publicIpPrefixId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderPublicIpPrefixIdRef
@@ -256,7 +287,9 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderP
     [JsonPropertyName("policy")]
     public V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderPublicIpPrefixIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderPublicIpPrefixIdSelectorPolicy
@@ -269,7 +302,9 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PublicIPPrefix in network to populate publicIpPrefixId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderPublicIpPrefixIdSelector
@@ -286,7 +321,9 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderP
     [JsonPropertyName("policy")]
     public V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderPublicIpPrefixIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProvider
@@ -315,7 +352,9 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProvider
     [JsonPropertyName("publicIpPrefixIdSelector")]
     public V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderPublicIpPrefixIdSelector? PublicIpPrefixIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecProviderConfigRefPolicy
@@ -328,7 +367,9 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecProviderConfi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecProviderConfigRef
@@ -341,7 +382,9 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecProviderConfi
     [JsonPropertyName("policy")]
     public V1beta1NATGatewayPublicIPPrefixAssociationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecWriteConnectionSecretToRef
@@ -354,7 +397,9 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecWriteConnecti
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NATGatewayPublicIPPrefixAssociationSpec defines the desired state of NATGatewayPublicIPPrefixAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpec
@@ -383,7 +428,9 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1NATGatewayPublicIPPrefixAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewayPublicIPPrefixAssociationStatusAtProvider
@@ -400,7 +447,9 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationStatusAtProvider
     [JsonPropertyName("publicIpPrefixId")]
     public string? PublicIpPrefixId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewayPublicIPPrefixAssociationStatusConditions
@@ -429,7 +478,9 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NATGatewayPublicIPPrefixAssociationStatus defines the observed state of NATGatewayPublicIPPrefixAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewayPublicIPPrefixAssociationStatus
@@ -446,7 +497,9 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NATGatewayPublicIPPrefixAssociation is the Schema for the NATGatewayPublicIPPrefixAssociations API. Manages the association between a NAT Gateway and a Public IP Prefix.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -476,3 +529,4 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociation : IKubernetesObj
     [JsonPropertyName("status")]
     public V1beta1NATGatewayPublicIPPrefixAssociationStatus? Status { get; set; }
 }
+#nullable disable

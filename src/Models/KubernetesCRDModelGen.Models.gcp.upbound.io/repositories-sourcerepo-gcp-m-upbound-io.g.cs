@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sourcerepo.gcp.m.upbound.io;
+#nullable enable
 /// <summary>Repository is the Schema for the Repositorys API. A repository (or repo) is a Git repository storing versioned source content.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RepositoryList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1beta1Repository> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecForProviderPubsubConfigsServiceAccountEmailRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1RepositorySpecForProviderPubsubConfigsServiceAccount
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecForProviderPubsubConfigsServiceAccountEmailRef
@@ -63,7 +68,9 @@ public partial class V1beta1RepositorySpecForProviderPubsubConfigsServiceAccount
     [JsonPropertyName("policy")]
     public V1beta1RepositorySpecForProviderPubsubConfigsServiceAccountEmailRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecForProviderPubsubConfigsServiceAccountEmailSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1RepositorySpecForProviderPubsubConfigsServiceAccount
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecForProviderPubsubConfigsServiceAccountEmailSelector
@@ -97,7 +106,9 @@ public partial class V1beta1RepositorySpecForProviderPubsubConfigsServiceAccount
     [JsonPropertyName("policy")]
     public V1beta1RepositorySpecForProviderPubsubConfigsServiceAccountEmailSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecForProviderPubsubConfigsTopicRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1RepositorySpecForProviderPubsubConfigsTopicRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in pubsub to populate topic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecForProviderPubsubConfigsTopicRef
@@ -127,7 +140,9 @@ public partial class V1beta1RepositorySpecForProviderPubsubConfigsTopicRef
     [JsonPropertyName("policy")]
     public V1beta1RepositorySpecForProviderPubsubConfigsTopicRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecForProviderPubsubConfigsTopicSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1RepositorySpecForProviderPubsubConfigsTopicSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in pubsub to populate topic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecForProviderPubsubConfigsTopicSelector
@@ -161,7 +178,9 @@ public partial class V1beta1RepositorySpecForProviderPubsubConfigsTopicSelector
     [JsonPropertyName("policy")]
     public V1beta1RepositorySpecForProviderPubsubConfigsTopicSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecForProviderPubsubConfigs
@@ -194,7 +213,9 @@ public partial class V1beta1RepositorySpecForProviderPubsubConfigs
     [JsonPropertyName("topicSelector")]
     public V1beta1RepositorySpecForProviderPubsubConfigsTopicSelector? TopicSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecForProvider
@@ -211,7 +232,9 @@ public partial class V1beta1RepositorySpecForProvider
     [JsonPropertyName("pubsubConfigs")]
     public IList<V1beta1RepositorySpecForProviderPubsubConfigs>? PubsubConfigs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecInitProviderPubsubConfigsServiceAccountEmailRefPolicy
@@ -224,7 +247,9 @@ public partial class V1beta1RepositorySpecInitProviderPubsubConfigsServiceAccoun
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecInitProviderPubsubConfigsServiceAccountEmailRef
@@ -241,7 +266,9 @@ public partial class V1beta1RepositorySpecInitProviderPubsubConfigsServiceAccoun
     [JsonPropertyName("policy")]
     public V1beta1RepositorySpecInitProviderPubsubConfigsServiceAccountEmailRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecInitProviderPubsubConfigsServiceAccountEmailSelectorPolicy
@@ -254,7 +281,9 @@ public partial class V1beta1RepositorySpecInitProviderPubsubConfigsServiceAccoun
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecInitProviderPubsubConfigsServiceAccountEmailSelector
@@ -275,7 +304,9 @@ public partial class V1beta1RepositorySpecInitProviderPubsubConfigsServiceAccoun
     [JsonPropertyName("policy")]
     public V1beta1RepositorySpecInitProviderPubsubConfigsServiceAccountEmailSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecInitProviderPubsubConfigsTopicRefPolicy
@@ -288,7 +319,9 @@ public partial class V1beta1RepositorySpecInitProviderPubsubConfigsTopicRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in pubsub to populate topic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecInitProviderPubsubConfigsTopicRef
@@ -305,7 +338,9 @@ public partial class V1beta1RepositorySpecInitProviderPubsubConfigsTopicRef
     [JsonPropertyName("policy")]
     public V1beta1RepositorySpecInitProviderPubsubConfigsTopicRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecInitProviderPubsubConfigsTopicSelectorPolicy
@@ -318,7 +353,9 @@ public partial class V1beta1RepositorySpecInitProviderPubsubConfigsTopicSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in pubsub to populate topic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecInitProviderPubsubConfigsTopicSelector
@@ -339,7 +376,9 @@ public partial class V1beta1RepositorySpecInitProviderPubsubConfigsTopicSelector
     [JsonPropertyName("policy")]
     public V1beta1RepositorySpecInitProviderPubsubConfigsTopicSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecInitProviderPubsubConfigs
@@ -372,7 +411,9 @@ public partial class V1beta1RepositorySpecInitProviderPubsubConfigs
     [JsonPropertyName("topicSelector")]
     public V1beta1RepositorySpecInitProviderPubsubConfigsTopicSelector? TopicSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecInitProvider
@@ -389,7 +430,9 @@ public partial class V1beta1RepositorySpecInitProvider
     [JsonPropertyName("pubsubConfigs")]
     public IList<V1beta1RepositorySpecInitProviderPubsubConfigs>? PubsubConfigs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecProviderConfigRef
@@ -402,7 +445,9 @@ public partial class V1beta1RepositorySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecWriteConnectionSecretToRef
@@ -411,7 +456,9 @@ public partial class V1beta1RepositorySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RepositorySpec defines the desired state of Repository</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpec
@@ -436,7 +483,9 @@ public partial class V1beta1RepositorySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RepositorySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositoryStatusAtProviderPubsubConfigs
@@ -453,7 +502,9 @@ public partial class V1beta1RepositoryStatusAtProviderPubsubConfigs
     [JsonPropertyName("topic")]
     public string? Topic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositoryStatusAtProvider
@@ -482,7 +533,9 @@ public partial class V1beta1RepositoryStatusAtProvider
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositoryStatusConditions
@@ -511,7 +564,9 @@ public partial class V1beta1RepositoryStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RepositoryStatus defines the observed state of Repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositoryStatus
@@ -528,7 +583,9 @@ public partial class V1beta1RepositoryStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Repository is the Schema for the Repositorys API. A repository (or repo) is a Git repository storing versioned source content.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -558,3 +615,4 @@ public partial class V1beta1Repository : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1RepositoryStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.backup.aws.m.upbound.io;
+#nullable enable
 /// <summary>Plan is the Schema for the Plans API. Provides an AWS Backup plan resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PlanList : IKubernetesObject<V1ListMeta>, IItems<V1b
     [JsonPropertyName("items")]
     public IList<V1beta1Plan> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanSpecForProviderAdvancedBackupSetting
@@ -46,7 +49,9 @@ public partial class V1beta1PlanSpecForProviderAdvancedBackupSetting
     [JsonPropertyName("resourceType")]
     public string? ResourceType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The lifecycle defines when a protected resource is transitioned to cold storage and when it expires.  Fields documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanSpecForProviderRuleCopyActionLifecycle
@@ -63,7 +68,9 @@ public partial class V1beta1PlanSpecForProviderRuleCopyActionLifecycle
     [JsonPropertyName("optInToArchiveForSupportedResources")]
     public bool? OptInToArchiveForSupportedResources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanSpecForProviderRuleCopyAction
@@ -76,7 +83,9 @@ public partial class V1beta1PlanSpecForProviderRuleCopyAction
     [JsonPropertyName("lifecycle")]
     public V1beta1PlanSpecForProviderRuleCopyActionLifecycle? Lifecycle { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The lifecycle defines when a protected resource is transitioned to cold storage and when it expires.  Fields documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanSpecForProviderRuleLifecycle
@@ -93,7 +102,9 @@ public partial class V1beta1PlanSpecForProviderRuleLifecycle
     [JsonPropertyName("optInToArchiveForSupportedResources")]
     public bool? OptInToArchiveForSupportedResources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanSpecForProviderRuleTargetVaultNameRefPolicy
@@ -106,7 +117,9 @@ public partial class V1beta1PlanSpecForProviderRuleTargetVaultNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Vault in backup to populate targetVaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanSpecForProviderRuleTargetVaultNameRef
@@ -123,7 +136,9 @@ public partial class V1beta1PlanSpecForProviderRuleTargetVaultNameRef
     [JsonPropertyName("policy")]
     public V1beta1PlanSpecForProviderRuleTargetVaultNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanSpecForProviderRuleTargetVaultNameSelectorPolicy
@@ -136,7 +151,9 @@ public partial class V1beta1PlanSpecForProviderRuleTargetVaultNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Vault in backup to populate targetVaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanSpecForProviderRuleTargetVaultNameSelector
@@ -157,7 +174,9 @@ public partial class V1beta1PlanSpecForProviderRuleTargetVaultNameSelector
     [JsonPropertyName("policy")]
     public V1beta1PlanSpecForProviderRuleTargetVaultNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanSpecForProviderRule
@@ -210,7 +229,9 @@ public partial class V1beta1PlanSpecForProviderRule
     [JsonPropertyName("targetVaultNameSelector")]
     public V1beta1PlanSpecForProviderRuleTargetVaultNameSelector? TargetVaultNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanSpecForProvider
@@ -235,7 +256,9 @@ public partial class V1beta1PlanSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanSpecInitProviderAdvancedBackupSetting
@@ -248,7 +271,9 @@ public partial class V1beta1PlanSpecInitProviderAdvancedBackupSetting
     [JsonPropertyName("resourceType")]
     public string? ResourceType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The lifecycle defines when a protected resource is transitioned to cold storage and when it expires.  Fields documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanSpecInitProviderRuleCopyActionLifecycle
@@ -265,7 +290,9 @@ public partial class V1beta1PlanSpecInitProviderRuleCopyActionLifecycle
     [JsonPropertyName("optInToArchiveForSupportedResources")]
     public bool? OptInToArchiveForSupportedResources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanSpecInitProviderRuleCopyAction
@@ -278,7 +305,9 @@ public partial class V1beta1PlanSpecInitProviderRuleCopyAction
     [JsonPropertyName("lifecycle")]
     public V1beta1PlanSpecInitProviderRuleCopyActionLifecycle? Lifecycle { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The lifecycle defines when a protected resource is transitioned to cold storage and when it expires.  Fields documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanSpecInitProviderRuleLifecycle
@@ -295,7 +324,9 @@ public partial class V1beta1PlanSpecInitProviderRuleLifecycle
     [JsonPropertyName("optInToArchiveForSupportedResources")]
     public bool? OptInToArchiveForSupportedResources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanSpecInitProviderRuleTargetVaultNameRefPolicy
@@ -308,7 +339,9 @@ public partial class V1beta1PlanSpecInitProviderRuleTargetVaultNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Vault in backup to populate targetVaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanSpecInitProviderRuleTargetVaultNameRef
@@ -325,7 +358,9 @@ public partial class V1beta1PlanSpecInitProviderRuleTargetVaultNameRef
     [JsonPropertyName("policy")]
     public V1beta1PlanSpecInitProviderRuleTargetVaultNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanSpecInitProviderRuleTargetVaultNameSelectorPolicy
@@ -338,7 +373,9 @@ public partial class V1beta1PlanSpecInitProviderRuleTargetVaultNameSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Vault in backup to populate targetVaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanSpecInitProviderRuleTargetVaultNameSelector
@@ -359,7 +396,9 @@ public partial class V1beta1PlanSpecInitProviderRuleTargetVaultNameSelector
     [JsonPropertyName("policy")]
     public V1beta1PlanSpecInitProviderRuleTargetVaultNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanSpecInitProviderRule
@@ -412,7 +451,9 @@ public partial class V1beta1PlanSpecInitProviderRule
     [JsonPropertyName("targetVaultNameSelector")]
     public V1beta1PlanSpecInitProviderRuleTargetVaultNameSelector? TargetVaultNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanSpecInitProvider
@@ -433,7 +474,9 @@ public partial class V1beta1PlanSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanSpecProviderConfigRef
@@ -446,7 +489,9 @@ public partial class V1beta1PlanSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanSpecWriteConnectionSecretToRef
@@ -455,7 +500,9 @@ public partial class V1beta1PlanSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PlanSpec defines the desired state of Plan</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanSpec
@@ -480,7 +527,9 @@ public partial class V1beta1PlanSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1PlanSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanStatusAtProviderAdvancedBackupSetting
@@ -493,7 +542,9 @@ public partial class V1beta1PlanStatusAtProviderAdvancedBackupSetting
     [JsonPropertyName("resourceType")]
     public string? ResourceType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The lifecycle defines when a protected resource is transitioned to cold storage and when it expires.  Fields documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanStatusAtProviderRuleCopyActionLifecycle
@@ -510,7 +561,9 @@ public partial class V1beta1PlanStatusAtProviderRuleCopyActionLifecycle
     [JsonPropertyName("optInToArchiveForSupportedResources")]
     public bool? OptInToArchiveForSupportedResources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanStatusAtProviderRuleCopyAction
@@ -523,7 +576,9 @@ public partial class V1beta1PlanStatusAtProviderRuleCopyAction
     [JsonPropertyName("lifecycle")]
     public V1beta1PlanStatusAtProviderRuleCopyActionLifecycle? Lifecycle { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The lifecycle defines when a protected resource is transitioned to cold storage and when it expires.  Fields documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanStatusAtProviderRuleLifecycle
@@ -540,7 +595,9 @@ public partial class V1beta1PlanStatusAtProviderRuleLifecycle
     [JsonPropertyName("optInToArchiveForSupportedResources")]
     public bool? OptInToArchiveForSupportedResources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanStatusAtProviderRule
@@ -585,7 +642,9 @@ public partial class V1beta1PlanStatusAtProviderRule
     [JsonPropertyName("targetVaultName")]
     public string? TargetVaultName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanStatusAtProvider
@@ -626,7 +685,9 @@ public partial class V1beta1PlanStatusAtProvider
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanStatusConditions
@@ -655,7 +716,9 @@ public partial class V1beta1PlanStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PlanStatus defines the observed state of Plan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanStatus
@@ -672,7 +735,9 @@ public partial class V1beta1PlanStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Plan is the Schema for the Plans API. Provides an AWS Backup plan resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -702,3 +767,4 @@ public partial class V1beta1Plan : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta
     [JsonPropertyName("status")]
     public V1beta1PlanStatus? Status { get; set; }
 }
+#nullable disable

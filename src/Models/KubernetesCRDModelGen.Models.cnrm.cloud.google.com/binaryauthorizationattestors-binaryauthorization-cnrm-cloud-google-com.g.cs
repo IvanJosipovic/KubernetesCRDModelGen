@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.binaryauthorization.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BinaryAuthorizationAttestorList : IKubernetesObject<
     [JsonPropertyName("items")]
     public IList<V1beta1BinaryAuthorizationAttestor> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BinaryAuthorizationAttestorSpecProjectRef
@@ -50,7 +53,9 @@ public partial class V1beta1BinaryAuthorizationAttestorSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BinaryAuthorizationAttestorSpecUserOwnedDrydockNoteNoteRef
@@ -67,7 +72,9 @@ public partial class V1beta1BinaryAuthorizationAttestorSpecUserOwnedDrydockNoteN
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A raw PKIX SubjectPublicKeyInfo format public key. NOTE: `id` may be explicitly provided by the caller when using this type of public key, but it MUST be a valid RFC3986 URI. If `id` is left blank, a default one will be computed based on the digest of the DER encoding of the public key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BinaryAuthorizationAttestorSpecUserOwnedDrydockNotePublicKeysPkixPublicKey
@@ -80,7 +87,9 @@ public partial class V1beta1BinaryAuthorizationAttestorSpecUserOwnedDrydockNoteP
     [JsonPropertyName("signatureAlgorithm")]
     public string? SignatureAlgorithm { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BinaryAuthorizationAttestorSpecUserOwnedDrydockNotePublicKeys
@@ -101,7 +110,9 @@ public partial class V1beta1BinaryAuthorizationAttestorSpecUserOwnedDrydockNoteP
     [JsonPropertyName("pkixPublicKey")]
     public V1beta1BinaryAuthorizationAttestorSpecUserOwnedDrydockNotePublicKeysPkixPublicKey? PkixPublicKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>This specifies how an attestation will be read, and how it will be used during policy enforcement.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BinaryAuthorizationAttestorSpecUserOwnedDrydockNote
@@ -114,7 +125,9 @@ public partial class V1beta1BinaryAuthorizationAttestorSpecUserOwnedDrydockNote
     [JsonPropertyName("publicKeys")]
     public IList<V1beta1BinaryAuthorizationAttestorSpecUserOwnedDrydockNotePublicKeys>? PublicKeys { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BinaryAuthorizationAttestorSpec
@@ -135,7 +148,9 @@ public partial class V1beta1BinaryAuthorizationAttestorSpec
     [JsonPropertyName("userOwnedDrydockNote")]
     public V1beta1BinaryAuthorizationAttestorSpecUserOwnedDrydockNote? UserOwnedDrydockNote { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BinaryAuthorizationAttestorStatusConditions
@@ -160,7 +175,9 @@ public partial class V1beta1BinaryAuthorizationAttestorStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BinaryAuthorizationAttestorStatusUserOwnedDrydockNote
@@ -169,7 +186,9 @@ public partial class V1beta1BinaryAuthorizationAttestorStatusUserOwnedDrydockNot
     [JsonPropertyName("delegationServiceAccountEmail")]
     public string? DelegationServiceAccountEmail { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BinaryAuthorizationAttestorStatus
@@ -190,7 +209,9 @@ public partial class V1beta1BinaryAuthorizationAttestorStatus
     [JsonPropertyName("userOwnedDrydockNote")]
     public V1beta1BinaryAuthorizationAttestorStatusUserOwnedDrydockNote? UserOwnedDrydockNote { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -220,3 +241,4 @@ public partial class V1beta1BinaryAuthorizationAttestor : IKubernetesObject<V1Ob
     [JsonPropertyName("status")]
     public V1beta1BinaryAuthorizationAttestorStatus? Status { get; set; }
 }
+#nullable disable

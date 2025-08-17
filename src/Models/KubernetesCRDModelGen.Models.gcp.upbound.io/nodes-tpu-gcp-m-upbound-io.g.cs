@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.tpu.gcp.m.upbound.io;
+#nullable enable
 /// <summary>Node is the Schema for the Nodes API. A Cloud TPU instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1NodeList : IKubernetesObject<V1ListMeta>, IItems<V1b
     [JsonPropertyName("items")]
     public IList<V1beta1Node> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeSpecForProviderNetworkRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1NodeSpecForProviderNetworkRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Connection in servicenetworking to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeSpecForProviderNetworkRef
@@ -63,7 +68,9 @@ public partial class V1beta1NodeSpecForProviderNetworkRef
     [JsonPropertyName("policy")]
     public V1beta1NodeSpecForProviderNetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeSpecForProviderNetworkSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1NodeSpecForProviderNetworkSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Connection in servicenetworking to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeSpecForProviderNetworkSelector
@@ -97,7 +106,9 @@ public partial class V1beta1NodeSpecForProviderNetworkSelector
     [JsonPropertyName("policy")]
     public V1beta1NodeSpecForProviderNetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sets the scheduling options for this TPU instance. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeSpecForProviderSchedulingConfig
@@ -106,7 +117,9 @@ public partial class V1beta1NodeSpecForProviderSchedulingConfig
     [JsonPropertyName("preemptible")]
     public bool? Preemptible { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeSpecForProvider
@@ -159,7 +172,9 @@ public partial class V1beta1NodeSpecForProvider
     [JsonPropertyName("zone")]
     public string Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeSpecInitProviderNetworkRefPolicy
@@ -172,7 +187,9 @@ public partial class V1beta1NodeSpecInitProviderNetworkRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Connection in servicenetworking to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeSpecInitProviderNetworkRef
@@ -189,7 +206,9 @@ public partial class V1beta1NodeSpecInitProviderNetworkRef
     [JsonPropertyName("policy")]
     public V1beta1NodeSpecInitProviderNetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeSpecInitProviderNetworkSelectorPolicy
@@ -202,7 +221,9 @@ public partial class V1beta1NodeSpecInitProviderNetworkSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Connection in servicenetworking to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeSpecInitProviderNetworkSelector
@@ -223,7 +244,9 @@ public partial class V1beta1NodeSpecInitProviderNetworkSelector
     [JsonPropertyName("policy")]
     public V1beta1NodeSpecInitProviderNetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sets the scheduling options for this TPU instance. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeSpecInitProviderSchedulingConfig
@@ -232,7 +255,9 @@ public partial class V1beta1NodeSpecInitProviderSchedulingConfig
     [JsonPropertyName("preemptible")]
     public bool? Preemptible { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeSpecInitProvider
@@ -281,7 +306,9 @@ public partial class V1beta1NodeSpecInitProvider
     [JsonPropertyName("useServiceNetworking")]
     public bool? UseServiceNetworking { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeSpecProviderConfigRef
@@ -294,7 +321,9 @@ public partial class V1beta1NodeSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeSpecWriteConnectionSecretToRef
@@ -303,7 +332,9 @@ public partial class V1beta1NodeSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NodeSpec defines the desired state of Node</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeSpec
@@ -328,7 +359,9 @@ public partial class V1beta1NodeSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1NodeSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeStatusAtProviderNetworkEndpoints
@@ -341,7 +374,9 @@ public partial class V1beta1NodeStatusAtProviderNetworkEndpoints
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sets the scheduling options for this TPU instance. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeStatusAtProviderSchedulingConfig
@@ -350,7 +385,9 @@ public partial class V1beta1NodeStatusAtProviderSchedulingConfig
     [JsonPropertyName("preemptible")]
     public bool? Preemptible { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeStatusAtProvider
@@ -415,7 +452,9 @@ public partial class V1beta1NodeStatusAtProvider
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeStatusConditions
@@ -444,7 +483,9 @@ public partial class V1beta1NodeStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NodeStatus defines the observed state of Node.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeStatus
@@ -461,7 +502,9 @@ public partial class V1beta1NodeStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Node is the Schema for the Nodes API. A Cloud TPU instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -491,3 +534,4 @@ public partial class V1beta1Node : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta
     [JsonPropertyName("status")]
     public V1beta1NodeStatus? Status { get; set; }
 }
+#nullable disable

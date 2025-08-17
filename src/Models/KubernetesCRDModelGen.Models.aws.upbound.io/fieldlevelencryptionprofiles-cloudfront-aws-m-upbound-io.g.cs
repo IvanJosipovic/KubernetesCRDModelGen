@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudfront.aws.m.upbound.io;
+#nullable enable
 /// <summary>FieldLevelEncryptionProfile is the Schema for the FieldLevelEncryptionProfiles API. Provides a CloudFront Field-level Encryption Profile resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FieldLevelEncryptionProfileList : IKubernetesObject<
     [JsonPropertyName("items")]
     public IList<V1beta1FieldLevelEncryptionProfile> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that contains an attribute items that contains the list of field patterns in a field-level encryption content type profile specify the fields that you want to be encrypted.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionProfileSpecForProviderEncryptionEntitiesItemsFieldPatterns
@@ -42,7 +45,9 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecForProviderEncryption
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionProfileSpecForProviderEncryptionEntitiesItemsPublicKeyIdRefPolicy
@@ -55,7 +60,9 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecForProviderEncryption
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PublicKey in cloudfront to populate publicKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionProfileSpecForProviderEncryptionEntitiesItemsPublicKeyIdRef
@@ -72,7 +79,9 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecForProviderEncryption
     [JsonPropertyName("policy")]
     public V1beta1FieldLevelEncryptionProfileSpecForProviderEncryptionEntitiesItemsPublicKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionProfileSpecForProviderEncryptionEntitiesItemsPublicKeyIdSelectorPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecForProviderEncryption
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PublicKey in cloudfront to populate publicKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionProfileSpecForProviderEncryptionEntitiesItemsPublicKeyIdSelector
@@ -106,7 +117,9 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecForProviderEncryption
     [JsonPropertyName("policy")]
     public V1beta1FieldLevelEncryptionProfileSpecForProviderEncryptionEntitiesItemsPublicKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionProfileSpecForProviderEncryptionEntitiesItems
@@ -131,7 +144,9 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecForProviderEncryption
     [JsonPropertyName("publicKeyIdSelector")]
     public V1beta1FieldLevelEncryptionProfileSpecForProviderEncryptionEntitiesItemsPublicKeyIdSelector? PublicKeyIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The encryption entities config block for field-level encryption profiles that contains an attribute items which includes the encryption key and field pattern specifications.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionProfileSpecForProviderEncryptionEntities
@@ -140,7 +155,9 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecForProviderEncryption
     [JsonPropertyName("items")]
     public IList<V1beta1FieldLevelEncryptionProfileSpecForProviderEncryptionEntitiesItems>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionProfileSpecForProvider
@@ -157,7 +174,9 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that contains an attribute items that contains the list of field patterns in a field-level encryption content type profile specify the fields that you want to be encrypted.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptionEntitiesItemsFieldPatterns
@@ -166,7 +185,9 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptio
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptionEntitiesItemsPublicKeyIdRefPolicy
@@ -179,7 +200,9 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptio
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PublicKey in cloudfront to populate publicKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptionEntitiesItemsPublicKeyIdRef
@@ -196,7 +219,9 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptio
     [JsonPropertyName("policy")]
     public V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptionEntitiesItemsPublicKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptionEntitiesItemsPublicKeyIdSelectorPolicy
@@ -209,7 +234,9 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptio
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PublicKey in cloudfront to populate publicKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptionEntitiesItemsPublicKeyIdSelector
@@ -230,7 +257,9 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptio
     [JsonPropertyName("policy")]
     public V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptionEntitiesItemsPublicKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptionEntitiesItems
@@ -255,7 +284,9 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptio
     [JsonPropertyName("publicKeyIdSelector")]
     public V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptionEntitiesItemsPublicKeyIdSelector? PublicKeyIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The encryption entities config block for field-level encryption profiles that contains an attribute items which includes the encryption key and field pattern specifications.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptionEntities
@@ -264,7 +295,9 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptio
     [JsonPropertyName("items")]
     public IList<V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptionEntitiesItems>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionProfileSpecInitProvider
@@ -281,7 +314,9 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecInitProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionProfileSpecProviderConfigRef
@@ -294,7 +329,9 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionProfileSpecWriteConnectionSecretToRef
@@ -303,7 +340,9 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecWriteConnectionSecret
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FieldLevelEncryptionProfileSpec defines the desired state of FieldLevelEncryptionProfile</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionProfileSpec
@@ -328,7 +367,9 @@ public partial class V1beta1FieldLevelEncryptionProfileSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1FieldLevelEncryptionProfileSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that contains an attribute items that contains the list of field patterns in a field-level encryption content type profile specify the fields that you want to be encrypted.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionProfileStatusAtProviderEncryptionEntitiesItemsFieldPatterns
@@ -337,7 +378,9 @@ public partial class V1beta1FieldLevelEncryptionProfileStatusAtProviderEncryptio
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionProfileStatusAtProviderEncryptionEntitiesItems
@@ -354,7 +397,9 @@ public partial class V1beta1FieldLevelEncryptionProfileStatusAtProviderEncryptio
     [JsonPropertyName("publicKeyId")]
     public string? PublicKeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The encryption entities config block for field-level encryption profiles that contains an attribute items which includes the encryption key and field pattern specifications.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionProfileStatusAtProviderEncryptionEntities
@@ -363,7 +408,9 @@ public partial class V1beta1FieldLevelEncryptionProfileStatusAtProviderEncryptio
     [JsonPropertyName("items")]
     public IList<V1beta1FieldLevelEncryptionProfileStatusAtProviderEncryptionEntitiesItems>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionProfileStatusAtProvider
@@ -396,7 +443,9 @@ public partial class V1beta1FieldLevelEncryptionProfileStatusAtProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionProfileStatusConditions
@@ -425,7 +474,9 @@ public partial class V1beta1FieldLevelEncryptionProfileStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FieldLevelEncryptionProfileStatus defines the observed state of FieldLevelEncryptionProfile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionProfileStatus
@@ -442,7 +493,9 @@ public partial class V1beta1FieldLevelEncryptionProfileStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FieldLevelEncryptionProfile is the Schema for the FieldLevelEncryptionProfiles API. Provides a CloudFront Field-level Encryption Profile resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -472,3 +525,4 @@ public partial class V1beta1FieldLevelEncryptionProfile : IKubernetesObject<V1Ob
     [JsonPropertyName("status")]
     public V1beta1FieldLevelEncryptionProfileStatus? Status { get; set; }
 }
+#nullable disable

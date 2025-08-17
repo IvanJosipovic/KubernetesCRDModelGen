@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.composer.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>ComposerEnvironment is the Schema for the ComposerEnvironment API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1ComposerEnvironmentList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1alpha1ComposerEnvironment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The retention policy for airflow metadata database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigDataRetentionConfigAirflowMetadataRetentionConfig
@@ -46,7 +49,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigDataRetentionConfigAir
     [JsonPropertyName("retentionMode")]
     public string? RetentionMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The configuration settings for task logs retention</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigDataRetentionConfigTaskLogsRetentionConfig
@@ -55,7 +60,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigDataRetentionConfigTas
     [JsonPropertyName("storageMode")]
     public string? StorageMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The configuration setting for Airflow database data retention mechanism.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigDataRetentionConfig
@@ -68,7 +75,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigDataRetentionConfig
     [JsonPropertyName("taskLogsRetentionConfig")]
     public V1alpha1ComposerEnvironmentSpecConfigDataRetentionConfigTaskLogsRetentionConfig? TaskLogsRetentionConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow software.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigDatabaseConfig
@@ -81,7 +90,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigDatabaseConfig
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Customer-managed Encryption Key available through Google's Key Management Service. Cannot be updated. If not specified, Google-managed key will be used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigEncryptionConfigKmsKeyRef
@@ -98,7 +109,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigEncryptionConfigKmsKey
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The encryption options for the Cloud Composer environment and its dependencies. Cannot be updated.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigEncryptionConfig
@@ -107,7 +120,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigEncryptionConfig
     [JsonPropertyName("kmsKeyRef")]
     public V1alpha1ComposerEnvironmentSpecConfigEncryptionConfigKmsKeyRef? KmsKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The maintenance window is the period when Cloud Composer  components may undergo maintenance. It is defined so that maintenance is  not executed during peak hours or critical time periods.   The system will not be under maintenance for every occurrence of this  window, but when maintenance is planned, it will be scheduled  during the window.   The maintenance window period must encompass at least 12 hours per week.  This may be split into multiple chunks, each with a size of  at least 4 hours.   If this value is omitted, the default value for maintenance window is  applied. By default, maintenance windows are from 00:00:00 to 04:00:00  (GMT) on Friday, Saturday, and Sunday every week.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigMaintenanceWindow
@@ -124,7 +139,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigMaintenanceWindow
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigMasterAuthorizedNetworksConfigCidrBlocks
@@ -137,7 +154,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigMasterAuthorizedNetwor
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The configuration options for GKE cluster master authorized networks. By default master authorized networks feature is: - in case of private environment: enabled with no external networks allowlisted. - in case of public environment: disabled.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigMasterAuthorizedNetworksConfig
@@ -150,7 +169,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigMasterAuthorizedNetwor
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Network Attachment that Cloud Composer environment is connected  to, which provides connectivity with a user's VPC network. Takes precedence  over network and subnetwork settings. If not provided, but network and  subnetwork are defined during environment, it will be provisioned. If not  provided and network and subnetwork are also empty, then connectivity to  user's VPC network is disabled. Network attachment must be provided in  format  projects/{project}/regions/{region}/networkAttachments/{networkAttachment}.   This field is supported for Cloud Composer environments in versions  composer-3.*.*-airflow-*.*.* and newer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigNodeConfigComposerNetworkAttachmentRef
@@ -167,7 +188,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigNodeConfigComposerNetw
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The configuration for controlling how IPs are allocated in the GKE cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigNodeConfigIpAllocationPolicy
@@ -192,7 +215,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigNodeConfigIpAllocation
     [JsonPropertyName("useIPAliases")]
     public bool? UseIPAliases { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The Compute Engine network to be used for machine  communications, specified as a  [relative resource  name](/apis/design/resource_names#relative_resource_name). For example:  "projects/{projectId}/global/networks/{networkId}".   If unspecified, the "default" network ID in the environment's project is  used. If a [Custom Subnet Network](/vpc/docs/vpc#vpc_networks_and_subnets)  is provided, `nodeConfig.subnetwork` must also be provided. For  [Shared VPC](/vpc/docs/shared-vpc) subnetwork requirements, see  `nodeConfig.subnetwork`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigNodeConfigNetworkRef
@@ -209,7 +234,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigNodeConfigNetworkRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The Google Cloud Platform Service Account to be used by the node VMs. If a service account is not specified, the "default" Compute Engine service account is used. Cannot be updated.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigNodeConfigServiceAccountRef
@@ -226,7 +253,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigNodeConfigServiceAccou
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The Compute Engine subnetwork to be used for machine  communications, specified as a  [relative resource  name](/apis/design/resource_names#relative_resource_name). For example:  "projects/{projectId}/regions/{regionId}/subnetworks/{subnetworkId}"   If a subnetwork is provided, `nodeConfig.network` must also be provided,  and the subnetwork must belong to the enclosing environment's project and  location.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigNodeConfigSubnetworkRef
@@ -243,7 +272,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigNodeConfigSubnetworkRe
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The configuration used for the Kubernetes Engine cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigNodeConfig
@@ -296,7 +327,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigNodeConfig
     [JsonPropertyName("tags")]
     public IList<string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. When specified, the environment will use Private Service Connect instead of VPC peerings to connect to Cloud SQL in the Tenant Project, and the PSC endpoint in the Customer Project will use an IP address from this subnetwork.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigPrivateEnvironmentConfigCloudComposerConnectionSubnetworkRef
@@ -313,7 +346,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigPrivateEnvironmentConf
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Configuration for the network connections configuration in the environment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigPrivateEnvironmentConfigNetworkingConfig
@@ -322,7 +357,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigPrivateEnvironmentConf
     [JsonPropertyName("connectionType")]
     public string? ConnectionType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Configuration for the private GKE cluster for a Private IP Cloud Composer environment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigPrivateEnvironmentConfigPrivateClusterConfig
@@ -335,7 +372,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigPrivateEnvironmentConf
     [JsonPropertyName("masterIPV4CIDRBlock")]
     public string? MasterIPV4CIDRBlock { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The configuration used for the Private IP Cloud Composer environment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigPrivateEnvironmentConfig
@@ -376,7 +415,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigPrivateEnvironmentConf
     [JsonPropertyName("webServerIPv4CIDRBlock")]
     public string? WebServerIPv4CIDRBlock { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The configuration for scheduled snapshot creation mechanism.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigRecoveryConfigScheduledSnapshotsConfig
@@ -397,7 +438,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigRecoveryConfigSchedule
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The Recovery settings configuration of an environment.   This field is supported for Cloud Composer environments in versions  composer-2.*.*-airflow-*.*.* and newer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigRecoveryConfig
@@ -406,7 +449,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigRecoveryConfig
     [JsonPropertyName("scheduledSnapshotsConfig")]
     public V1alpha1ComposerEnvironmentSpecConfigRecoveryConfigScheduledSnapshotsConfig? ScheduledSnapshotsConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The configuration for Cloud Data Lineage integration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigSoftwareConfigCloudDataLineageIntegration
@@ -415,7 +460,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigSoftwareConfigCloudDat
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The configuration settings for software inside the environment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigSoftwareConfig
@@ -452,7 +499,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigSoftwareConfig
     [JsonPropertyName("webServerPluginsMode")]
     public string? WebServerPluginsMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The configuration settings for the Airflow web server App Engine instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigWebServerConfig
@@ -461,7 +510,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigWebServerConfig
     [JsonPropertyName("machineType")]
     public string? MachineType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigWebServerNetworkAccessControlAllowedIPRanges
@@ -474,7 +525,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigWebServerNetworkAccess
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigWebServerNetworkAccessControl
@@ -483,7 +536,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigWebServerNetworkAccess
     [JsonPropertyName("allowedIPRanges")]
     public IList<V1alpha1ComposerEnvironmentSpecConfigWebServerNetworkAccessControlAllowedIPRanges>? AllowedIPRanges { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Resources used by Airflow DAG processors.   This field is supported for Cloud Composer environments in versions  composer-3.*.*-airflow-*.*.* and newer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigWorkloadsConfigDagProcessor
@@ -504,7 +559,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigWorkloadsConfigDagProc
     [JsonPropertyName("storageGB")]
     public string? StorageGB { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Resources used by Airflow schedulers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigWorkloadsConfigScheduler
@@ -525,7 +582,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigWorkloadsConfigSchedul
     [JsonPropertyName("storageGB")]
     public string? StorageGB { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Resources used by Airflow triggerers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigWorkloadsConfigTriggerer
@@ -542,7 +601,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigWorkloadsConfigTrigger
     [JsonPropertyName("memoryGB")]
     public string? MemoryGB { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Resources used by Airflow web server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigWorkloadsConfigWebServer
@@ -559,7 +620,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigWorkloadsConfigWebServ
     [JsonPropertyName("storageGB")]
     public string? StorageGB { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Resources used by Airflow workers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigWorkloadsConfigWorker
@@ -584,7 +647,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigWorkloadsConfigWorker
     [JsonPropertyName("storageGB")]
     public string? StorageGB { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The workloads configuration settings for the GKE cluster  associated with the Cloud Composer environment. The GKE cluster runs  Airflow scheduler, web server and workers workloads.   This field is supported for Cloud Composer environments in versions  composer-2.*.*-airflow-*.*.* and newer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfigWorkloadsConfig
@@ -609,7 +674,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfigWorkloadsConfig
     [JsonPropertyName("worker")]
     public V1alpha1ComposerEnvironmentSpecConfigWorkloadsConfigWorker? Worker { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Configuration parameters for this environment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecConfig
@@ -674,7 +741,9 @@ public partial class V1alpha1ComposerEnvironmentSpecConfig
     [JsonPropertyName("workloadsConfig")]
     public V1alpha1ComposerEnvironmentSpecConfigWorkloadsConfig? WorkloadsConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecProjectRef
@@ -695,7 +764,9 @@ public partial class V1alpha1ComposerEnvironmentSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The name of the Cloud Storage bucket used by the environment. No `gs://` prefix.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecStorageConfigBucketRef
@@ -712,7 +783,9 @@ public partial class V1alpha1ComposerEnvironmentSpecStorageConfigBucketRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Storage configuration for this environment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpecStorageConfig
@@ -721,7 +794,9 @@ public partial class V1alpha1ComposerEnvironmentSpecStorageConfig
     [JsonPropertyName("bucketRef")]
     public V1alpha1ComposerEnvironmentSpecStorageConfigBucketRef? BucketRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ComposerEnvironmentSpec defines the desired state of ComposerEnvironment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentSpec
@@ -750,7 +825,9 @@ public partial class V1alpha1ComposerEnvironmentSpec
     [JsonPropertyName("storageConfig")]
     public V1alpha1ComposerEnvironmentSpecStorageConfig? StorageConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentStatusConditions
@@ -775,7 +852,9 @@ public partial class V1alpha1ComposerEnvironmentStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Configuration for the private GKE cluster for a Private IP Cloud Composer environment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentStatusObservedStateConfigPrivateEnvironmentConfigPrivateClusterConfig
@@ -784,7 +863,9 @@ public partial class V1alpha1ComposerEnvironmentStatusObservedStateConfigPrivate
     [JsonPropertyName("masterIPV4ReservedRange")]
     public string? MasterIPV4ReservedRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The configuration used for the Private IP Cloud Composer environment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentStatusObservedStateConfigPrivateEnvironmentConfig
@@ -801,7 +882,9 @@ public partial class V1alpha1ComposerEnvironmentStatusObservedStateConfigPrivate
     [JsonPropertyName("webServerIPv4ReservedRange")]
     public string? WebServerIPv4ReservedRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Configuration parameters for this environment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentStatusObservedStateConfig
@@ -826,7 +909,9 @@ public partial class V1alpha1ComposerEnvironmentStatusObservedStateConfig
     [JsonPropertyName("privateEnvironmentConfig")]
     public V1alpha1ComposerEnvironmentStatusObservedStateConfigPrivateEnvironmentConfig? PrivateEnvironmentConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentStatusObservedState
@@ -851,7 +936,9 @@ public partial class V1alpha1ComposerEnvironmentStatusObservedState
     [JsonPropertyName("uuid")]
     public string? Uuid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ComposerEnvironmentStatus defines the config connector machine state of ComposerEnvironment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComposerEnvironmentStatus
@@ -872,7 +959,9 @@ public partial class V1alpha1ComposerEnvironmentStatus
     [JsonPropertyName("observedState")]
     public V1alpha1ComposerEnvironmentStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ComposerEnvironment is the Schema for the ComposerEnvironment API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -902,3 +991,4 @@ public partial class V1alpha1ComposerEnvironment : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1alpha1ComposerEnvironmentStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ComputeNetworkFirewallPolicyAssociationList : IKuber
     [JsonPropertyName("items")]
     public IList<V1beta1ComputeNetworkFirewallPolicyAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The target that the firewall policy is attached to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNetworkFirewallPolicyAssociationSpecAttachmentTargetRef
@@ -50,7 +53,9 @@ public partial class V1beta1ComputeNetworkFirewallPolicyAssociationSpecAttachmen
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The firewall policy ID of the association.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNetworkFirewallPolicyAssociationSpecFirewallPolicyRef
@@ -67,7 +72,9 @@ public partial class V1beta1ComputeNetworkFirewallPolicyAssociationSpecFirewallP
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNetworkFirewallPolicyAssociationSpecProjectRef
@@ -84,7 +91,9 @@ public partial class V1beta1ComputeNetworkFirewallPolicyAssociationSpecProjectRe
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNetworkFirewallPolicyAssociationSpec
@@ -105,7 +114,9 @@ public partial class V1beta1ComputeNetworkFirewallPolicyAssociationSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNetworkFirewallPolicyAssociationStatusConditions
@@ -130,7 +141,9 @@ public partial class V1beta1ComputeNetworkFirewallPolicyAssociationStatusConditi
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNetworkFirewallPolicyAssociationStatus
@@ -147,7 +160,9 @@ public partial class V1beta1ComputeNetworkFirewallPolicyAssociationStatus
     [JsonPropertyName("shortName")]
     public string? ShortName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -177,3 +192,4 @@ public partial class V1beta1ComputeNetworkFirewallPolicyAssociation : IKubernete
     [JsonPropertyName("status")]
     public V1beta1ComputeNetworkFirewallPolicyAssociationStatus? Status { get; set; }
 }
+#nullable disable

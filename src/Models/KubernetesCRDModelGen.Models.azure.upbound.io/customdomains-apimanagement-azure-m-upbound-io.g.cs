@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.m.upbound.io;
+#nullable enable
 /// <summary>CustomDomain is the Schema for the CustomDomains API. Manages an API Management Custom Domain.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1CustomDomainList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1CustomDomain> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderApiManagementIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1CustomDomainSpecForProviderApiManagementIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Management in apimanagement to populate apiManagementId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderApiManagementIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1CustomDomainSpecForProviderApiManagementIdRef
     [JsonPropertyName("policy")]
     public V1beta1CustomDomainSpecForProviderApiManagementIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderApiManagementIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1CustomDomainSpecForProviderApiManagementIdSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Management in apimanagement to populate apiManagementId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderApiManagementIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1CustomDomainSpecForProviderApiManagementIdSelector
     [JsonPropertyName("policy")]
     public V1beta1CustomDomainSpecForProviderApiManagementIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password associated with the certificate provided above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalCertificatePasswordSecretRef
@@ -110,7 +121,9 @@ public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalCertificat
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_certificate_id.)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalCertificateSecretRef
@@ -123,7 +136,9 @@ public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalCertificat
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultCertificateIdRefPolicy
@@ -136,7 +151,9 @@ public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultCe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Certificate in keyvault to populate keyVaultCertificateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultCertificateIdRef
@@ -153,7 +170,9 @@ public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultCe
     [JsonPropertyName("policy")]
     public V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultCertificateIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultCertificateIdSelectorPolicy
@@ -166,7 +185,9 @@ public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultCe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Certificate in keyvault to populate keyVaultCertificateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultCertificateIdSelector
@@ -187,7 +208,9 @@ public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultCe
     [JsonPropertyName("policy")]
     public V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultCertificateIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderDeveloperPortal
@@ -228,7 +251,9 @@ public partial class V1beta1CustomDomainSpecForProviderDeveloperPortal
     [JsonPropertyName("sslKeyvaultIdentityClientId")]
     public string? SslKeyvaultIdentityClientId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password associated with the certificate provided above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderGatewayCertificatePasswordSecretRef
@@ -241,7 +266,9 @@ public partial class V1beta1CustomDomainSpecForProviderGatewayCertificatePasswor
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_certificate_id.)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderGatewayCertificateSecretRef
@@ -254,7 +281,9 @@ public partial class V1beta1CustomDomainSpecForProviderGatewayCertificateSecretR
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultCertificateIdRefPolicy
@@ -267,7 +296,9 @@ public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultCertificat
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Certificate in keyvault to populate keyVaultCertificateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultCertificateIdRef
@@ -284,7 +315,9 @@ public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultCertificat
     [JsonPropertyName("policy")]
     public V1beta1CustomDomainSpecForProviderGatewayKeyVaultCertificateIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultCertificateIdSelectorPolicy
@@ -297,7 +330,9 @@ public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultCertificat
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Certificate in keyvault to populate keyVaultCertificateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultCertificateIdSelector
@@ -318,7 +353,9 @@ public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultCertificat
     [JsonPropertyName("policy")]
     public V1beta1CustomDomainSpecForProviderGatewayKeyVaultCertificateIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderGateway
@@ -363,7 +400,9 @@ public partial class V1beta1CustomDomainSpecForProviderGateway
     [JsonPropertyName("sslKeyvaultIdentityClientId")]
     public string? SslKeyvaultIdentityClientId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password associated with the certificate provided above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderManagementCertificatePasswordSecretRef
@@ -376,7 +415,9 @@ public partial class V1beta1CustomDomainSpecForProviderManagementCertificatePass
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_certificate_id.)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderManagementCertificateSecretRef
@@ -389,7 +430,9 @@ public partial class V1beta1CustomDomainSpecForProviderManagementCertificateSecr
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderManagement
@@ -422,7 +465,9 @@ public partial class V1beta1CustomDomainSpecForProviderManagement
     [JsonPropertyName("sslKeyvaultIdentityClientId")]
     public string? SslKeyvaultIdentityClientId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password associated with the certificate provided above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderPortalCertificatePasswordSecretRef
@@ -435,7 +480,9 @@ public partial class V1beta1CustomDomainSpecForProviderPortalCertificatePassword
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_certificate_id.)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderPortalCertificateSecretRef
@@ -448,7 +495,9 @@ public partial class V1beta1CustomDomainSpecForProviderPortalCertificateSecretRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderPortal
@@ -481,7 +530,9 @@ public partial class V1beta1CustomDomainSpecForProviderPortal
     [JsonPropertyName("sslKeyvaultIdentityClientId")]
     public string? SslKeyvaultIdentityClientId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password associated with the certificate provided above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderScmCertificatePasswordSecretRef
@@ -494,7 +545,9 @@ public partial class V1beta1CustomDomainSpecForProviderScmCertificatePasswordSec
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_certificate_id.)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderScmCertificateSecretRef
@@ -507,7 +560,9 @@ public partial class V1beta1CustomDomainSpecForProviderScmCertificateSecretRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderScm
@@ -540,7 +595,9 @@ public partial class V1beta1CustomDomainSpecForProviderScm
     [JsonPropertyName("sslKeyvaultIdentityClientId")]
     public string? SslKeyvaultIdentityClientId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProvider
@@ -577,7 +634,9 @@ public partial class V1beta1CustomDomainSpecForProvider
     [JsonPropertyName("scm")]
     public IList<V1beta1CustomDomainSpecForProviderScm>? Scm { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password associated with the certificate provided above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalCertificatePasswordSecretRef
@@ -590,7 +649,9 @@ public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalCertifica
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_certificate_id.)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalCertificateSecretRef
@@ -603,7 +664,9 @@ public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalCertifica
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultCertificateIdRefPolicy
@@ -616,7 +679,9 @@ public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultC
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Certificate in keyvault to populate keyVaultCertificateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultCertificateIdRef
@@ -633,7 +698,9 @@ public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultC
     [JsonPropertyName("policy")]
     public V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultCertificateIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultCertificateIdSelectorPolicy
@@ -646,7 +713,9 @@ public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultC
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Certificate in keyvault to populate keyVaultCertificateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultCertificateIdSelector
@@ -667,7 +736,9 @@ public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultC
     [JsonPropertyName("policy")]
     public V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultCertificateIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortal
@@ -708,7 +779,9 @@ public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortal
     [JsonPropertyName("sslKeyvaultIdentityClientId")]
     public string? SslKeyvaultIdentityClientId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password associated with the certificate provided above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderGatewayCertificatePasswordSecretRef
@@ -721,7 +794,9 @@ public partial class V1beta1CustomDomainSpecInitProviderGatewayCertificatePasswo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_certificate_id.)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderGatewayCertificateSecretRef
@@ -734,7 +809,9 @@ public partial class V1beta1CustomDomainSpecInitProviderGatewayCertificateSecret
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultCertificateIdRefPolicy
@@ -747,7 +824,9 @@ public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultCertifica
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Certificate in keyvault to populate keyVaultCertificateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultCertificateIdRef
@@ -764,7 +843,9 @@ public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultCertifica
     [JsonPropertyName("policy")]
     public V1beta1CustomDomainSpecInitProviderGatewayKeyVaultCertificateIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultCertificateIdSelectorPolicy
@@ -777,7 +858,9 @@ public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultCertifica
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Certificate in keyvault to populate keyVaultCertificateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultCertificateIdSelector
@@ -798,7 +881,9 @@ public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultCertifica
     [JsonPropertyName("policy")]
     public V1beta1CustomDomainSpecInitProviderGatewayKeyVaultCertificateIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderGateway
@@ -843,7 +928,9 @@ public partial class V1beta1CustomDomainSpecInitProviderGateway
     [JsonPropertyName("sslKeyvaultIdentityClientId")]
     public string? SslKeyvaultIdentityClientId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password associated with the certificate provided above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderManagementCertificatePasswordSecretRef
@@ -856,7 +943,9 @@ public partial class V1beta1CustomDomainSpecInitProviderManagementCertificatePas
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_certificate_id.)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderManagementCertificateSecretRef
@@ -869,7 +958,9 @@ public partial class V1beta1CustomDomainSpecInitProviderManagementCertificateSec
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderManagement
@@ -902,7 +993,9 @@ public partial class V1beta1CustomDomainSpecInitProviderManagement
     [JsonPropertyName("sslKeyvaultIdentityClientId")]
     public string? SslKeyvaultIdentityClientId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password associated with the certificate provided above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderPortalCertificatePasswordSecretRef
@@ -915,7 +1008,9 @@ public partial class V1beta1CustomDomainSpecInitProviderPortalCertificatePasswor
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_certificate_id.)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderPortalCertificateSecretRef
@@ -928,7 +1023,9 @@ public partial class V1beta1CustomDomainSpecInitProviderPortalCertificateSecretR
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderPortal
@@ -961,7 +1058,9 @@ public partial class V1beta1CustomDomainSpecInitProviderPortal
     [JsonPropertyName("sslKeyvaultIdentityClientId")]
     public string? SslKeyvaultIdentityClientId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password associated with the certificate provided above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderScmCertificatePasswordSecretRef
@@ -974,7 +1073,9 @@ public partial class V1beta1CustomDomainSpecInitProviderScmCertificatePasswordSe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_certificate_id.)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderScmCertificateSecretRef
@@ -987,7 +1088,9 @@ public partial class V1beta1CustomDomainSpecInitProviderScmCertificateSecretRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderScm
@@ -1020,7 +1123,9 @@ public partial class V1beta1CustomDomainSpecInitProviderScm
     [JsonPropertyName("sslKeyvaultIdentityClientId")]
     public string? SslKeyvaultIdentityClientId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProvider
@@ -1045,7 +1150,9 @@ public partial class V1beta1CustomDomainSpecInitProvider
     [JsonPropertyName("scm")]
     public IList<V1beta1CustomDomainSpecInitProviderScm>? Scm { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecProviderConfigRef
@@ -1058,7 +1165,9 @@ public partial class V1beta1CustomDomainSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecWriteConnectionSecretToRef
@@ -1067,7 +1176,9 @@ public partial class V1beta1CustomDomainSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CustomDomainSpec defines the desired state of CustomDomain</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpec
@@ -1092,7 +1203,9 @@ public partial class V1beta1CustomDomainSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1CustomDomainSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainStatusAtProviderDeveloperPortal
@@ -1137,7 +1250,9 @@ public partial class V1beta1CustomDomainStatusAtProviderDeveloperPortal
     [JsonPropertyName("thumbprint")]
     public string? Thumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainStatusAtProviderGateway
@@ -1186,7 +1301,9 @@ public partial class V1beta1CustomDomainStatusAtProviderGateway
     [JsonPropertyName("thumbprint")]
     public string? Thumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainStatusAtProviderManagement
@@ -1231,7 +1348,9 @@ public partial class V1beta1CustomDomainStatusAtProviderManagement
     [JsonPropertyName("thumbprint")]
     public string? Thumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainStatusAtProviderPortal
@@ -1276,7 +1395,9 @@ public partial class V1beta1CustomDomainStatusAtProviderPortal
     [JsonPropertyName("thumbprint")]
     public string? Thumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainStatusAtProviderScm
@@ -1321,7 +1442,9 @@ public partial class V1beta1CustomDomainStatusAtProviderScm
     [JsonPropertyName("thumbprint")]
     public string? Thumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainStatusAtProvider
@@ -1354,7 +1477,9 @@ public partial class V1beta1CustomDomainStatusAtProvider
     [JsonPropertyName("scm")]
     public IList<V1beta1CustomDomainStatusAtProviderScm>? Scm { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainStatusConditions
@@ -1383,7 +1508,9 @@ public partial class V1beta1CustomDomainStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CustomDomainStatus defines the observed state of CustomDomain.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainStatus
@@ -1400,7 +1527,9 @@ public partial class V1beta1CustomDomainStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CustomDomain is the Schema for the CustomDomains API. Manages an API Management Custom Domain.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1430,3 +1559,4 @@ public partial class V1beta1CustomDomain : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1CustomDomainStatus? Status { get; set; }
 }
+#nullable disable

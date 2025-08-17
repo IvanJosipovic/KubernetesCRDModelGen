@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hub.traefik.io;
+#nullable enable
 /// <summary>APICatalogItem defines APIs that will be part of the API catalog on the portal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1APICatalogItemList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1alpha1APICatalogItem> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>APIBundleReference references an APIBundle.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APICatalogItemSpecApiBundles
@@ -42,7 +45,9 @@ public partial class V1alpha1APICatalogItemSpecApiBundles
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>APIPlan defines which APIPlan will be available. If multiple APICatalogItem specify the same API with different APIPlan, the API consumer will be able to pick a plan from this list.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APICatalogItemSpecApiPlan
@@ -51,7 +56,9 @@ public partial class V1alpha1APICatalogItemSpecApiPlan
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APICatalogItemSpecApiSelectorMatchExpressions
@@ -68,7 +75,9 @@ public partial class V1alpha1APICatalogItemSpecApiSelectorMatchExpressions
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>APISelector selects the APIs that will be visible to the configured audience. Multiple APICatalogItem can select the same set of APIs. This field is optional and follows standard label selector semantics. An empty APISelector matches any API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APICatalogItemSpecApiSelector
@@ -81,7 +90,9 @@ public partial class V1alpha1APICatalogItemSpecApiSelector
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>APIReference references an API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APICatalogItemSpecApis
@@ -90,7 +101,9 @@ public partial class V1alpha1APICatalogItemSpecApis
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OperationFilter specifies the visible operations on APIs and APIVersions. If not set, all operations are available. An empty OperationFilter prohibits all operations.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APICatalogItemSpecOperationFilter
@@ -99,7 +112,9 @@ public partial class V1alpha1APICatalogItemSpecOperationFilter
     [JsonPropertyName("include")]
     public IList<string>? Include { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The desired behavior of this APICatalogItem.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APICatalogItemSpec
@@ -132,7 +147,9 @@ public partial class V1alpha1APICatalogItemSpec
     [JsonPropertyName("operationFilter")]
     public V1alpha1APICatalogItemSpecOperationFilter? OperationFilter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The current status of this APICatalogItem.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APICatalogItemStatus
@@ -149,7 +166,9 @@ public partial class V1alpha1APICatalogItemStatus
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>APICatalogItem defines APIs that will be part of the API catalog on the portal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -179,3 +198,4 @@ public partial class V1alpha1APICatalogItem : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1alpha1APICatalogItemStatus? Status { get; set; }
 }
+#nullable disable

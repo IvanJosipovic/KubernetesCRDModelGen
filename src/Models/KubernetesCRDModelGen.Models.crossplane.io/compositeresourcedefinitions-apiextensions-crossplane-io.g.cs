@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apiextensions.crossplane.io;
+#nullable enable
 /// <summary>A CompositeResourceDefinition defines the schema for a new custom Kubernetes API.  Read the Crossplane documentation for [more information about CustomResourceDefinitions](https://docs.crossplane.io/latest/concepts/composite-resource-definitions).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1CompositeResourceDefinitionList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1CompositeResourceDefinition> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClaimNames specifies the names of an optional composite resource claim. When claim names are specified Crossplane will create a namespaced 'composite resource claim' CRD that corresponds to the defined composite resource. This composite resource claim acts as a namespaced proxy for the composite resource; creating, updating, or deleting the claim will create, update, or delete a corresponding composite resource. You may add claim names to an existing CompositeResourceDefinition, but they cannot be changed or removed once they have been set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositeResourceDefinitionSpecClaimNames
@@ -62,7 +65,9 @@ public partial class V1CompositeResourceDefinitionSpecClaimNames
     [JsonPropertyName("singular")]
     public string? Singular { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>service is a reference to the service for this webhook. Either service or url must be specified.  If the webhook is running within the cluster, then you should use `service`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositeResourceDefinitionSpecConversionWebhookClientConfigService
@@ -83,7 +88,9 @@ public partial class V1CompositeResourceDefinitionSpecConversionWebhookClientCon
     [JsonPropertyName("port")]
     public int? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>clientConfig is the instructions for how to call the webhook if strategy is `Webhook`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositeResourceDefinitionSpecConversionWebhookClientConfig
@@ -100,7 +107,9 @@ public partial class V1CompositeResourceDefinitionSpecConversionWebhookClientCon
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>webhook describes how to call the conversion webhook. Required when `strategy` is set to `"Webhook"`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositeResourceDefinitionSpecConversionWebhook
@@ -113,7 +122,9 @@ public partial class V1CompositeResourceDefinitionSpecConversionWebhook
     [JsonPropertyName("conversionReviewVersions")]
     public IList<string> ConversionReviewVersions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Conversion defines all conversion settings for the defined Composite resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositeResourceDefinitionSpecConversion
@@ -126,7 +137,9 @@ public partial class V1CompositeResourceDefinitionSpecConversion
     [JsonPropertyName("webhook")]
     public V1CompositeResourceDefinitionSpecConversionWebhook? Webhook { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DefaultCompositionRef refers to the Composition resource that will be used in case no composition selector is given.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositeResourceDefinitionSpecDefaultCompositionRef
@@ -135,7 +148,9 @@ public partial class V1CompositeResourceDefinitionSpecDefaultCompositionRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnforcedCompositionRef refers to the Composition resource that will be used by all composite instances whose schema is defined by this definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositeResourceDefinitionSpecEnforcedCompositionRef
@@ -144,7 +159,9 @@ public partial class V1CompositeResourceDefinitionSpecEnforcedCompositionRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Metadata specifies the desired metadata for the defined composite resource and claim CRD's.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositeResourceDefinitionSpecMetadata
@@ -157,7 +174,9 @@ public partial class V1CompositeResourceDefinitionSpecMetadata
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Names specifies the resource and kind names of the defined composite resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositeResourceDefinitionSpecNames
@@ -186,7 +205,9 @@ public partial class V1CompositeResourceDefinitionSpecNames
     [JsonPropertyName("singular")]
     public string? Singular { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CustomResourceColumnDefinition specifies a column for server side printing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositeResourceDefinitionSpecVersionsAdditionalPrinterColumns
@@ -215,7 +236,9 @@ public partial class V1CompositeResourceDefinitionSpecVersionsAdditionalPrinterC
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Schema describes the schema used for validation, pruning, and defaulting of this version of the defined composite resource. Fields required by all composite resources will be injected into this schema automatically, and will override equivalently named fields in this schema. Omitting this schema results in a schema that contains only the fields required by all composite resources.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositeResourceDefinitionSpecVersionsSchema
@@ -224,7 +247,9 @@ public partial class V1CompositeResourceDefinitionSpecVersionsSchema
     [JsonPropertyName("openAPIV3Schema")]
     public JsonNode? OpenAPIV3Schema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CompositeResourceDefinitionVersion describes a version of an XR.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositeResourceDefinitionSpecVersions
@@ -257,7 +282,9 @@ public partial class V1CompositeResourceDefinitionSpecVersions
     [JsonPropertyName("served")]
     public bool Served { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CompositeResourceDefinitionSpec specifies the desired state of the definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositeResourceDefinitionSpec
@@ -310,7 +337,9 @@ public partial class V1CompositeResourceDefinitionSpec
     [JsonPropertyName("versions")]
     public IList<V1CompositeResourceDefinitionSpecVersions> Versions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositeResourceDefinitionStatusConditions
@@ -339,7 +368,9 @@ public partial class V1CompositeResourceDefinitionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The CompositeResourceClaimTypeRef is the type of composite resource claim that Crossplane is currently reconciling for this definition. Its version will eventually become consistent with the definition's referenceable version. Note that clients may interact with any served type; this is simply the type that Crossplane interacts with.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositeResourceDefinitionStatusControllersCompositeResourceClaimType
@@ -352,7 +383,9 @@ public partial class V1CompositeResourceDefinitionStatusControllersCompositeReso
     [JsonPropertyName("kind")]
     public string Kind { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The CompositeResourceTypeRef is the type of composite resource that Crossplane is currently reconciling for this definition. Its version will eventually become consistent with the definition's referenceable version. Note that clients may interact with any served type; this is simply the type that Crossplane interacts with.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositeResourceDefinitionStatusControllersCompositeResourceType
@@ -365,7 +398,9 @@ public partial class V1CompositeResourceDefinitionStatusControllersCompositeReso
     [JsonPropertyName("kind")]
     public string Kind { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Controllers represents the status of the controllers that power this composite resource definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositeResourceDefinitionStatusControllers
@@ -378,7 +413,9 @@ public partial class V1CompositeResourceDefinitionStatusControllers
     [JsonPropertyName("compositeResourceType")]
     public V1CompositeResourceDefinitionStatusControllersCompositeResourceType? CompositeResourceType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CompositeResourceDefinitionStatus shows the observed state of the definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositeResourceDefinitionStatus
@@ -391,7 +428,9 @@ public partial class V1CompositeResourceDefinitionStatus
     [JsonPropertyName("controllers")]
     public V1CompositeResourceDefinitionStatusControllers? Controllers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A CompositeResourceDefinition defines the schema for a new custom Kubernetes API.  Read the Crossplane documentation for [more information about CustomResourceDefinitions](https://docs.crossplane.io/latest/concepts/composite-resource-definitions).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -421,3 +460,4 @@ public partial class V1CompositeResourceDefinition : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1CompositeResourceDefinitionStatus? Status { get; set; }
 }
+#nullable disable

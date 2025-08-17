@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigquery.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>BigQueryDataset is the Schema for the BigQueryDataset API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BigQueryDatasetList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1BigQueryDataset> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The dataset this entry applies to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryDatasetSpecAccessDatasetDataset
@@ -46,7 +49,9 @@ public partial class V1beta1BigQueryDatasetSpecAccessDatasetDataset
     [JsonPropertyName("projectId")]
     public string ProjectId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>[Pick one] A grant authorizing all resources of a particular type in a particular dataset access to this dataset. Only views are supported for now. The role field is not required when this field is set. If that dataset is deleted and re-created, its access needs to be granted again via an update operation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryDatasetSpecAccessDataset
@@ -59,7 +64,9 @@ public partial class V1beta1BigQueryDatasetSpecAccessDataset
     [JsonPropertyName("targetTypes")]
     public IList<string> TargetTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>[Pick one] A routine from a different dataset to grant access to. Queries executed against that routine will have read access to views/tables/routines in this dataset. Only UDF is supported for now. The role field is not required when this field is set. If that routine is updated by any user, access to the routine needs to be granted again via an update operation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryDatasetSpecAccessRoutine
@@ -76,7 +83,9 @@ public partial class V1beta1BigQueryDatasetSpecAccessRoutine
     [JsonPropertyName("routineId")]
     public string RoutineId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>[Pick one] A view from a different dataset to grant access to. Queries executed against that view will have read access to views/tables/routines in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryDatasetSpecAccessView
@@ -93,7 +102,9 @@ public partial class V1beta1BigQueryDatasetSpecAccessView
     [JsonPropertyName("tableId")]
     public string TableId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryDatasetSpecAccess
@@ -134,7 +145,9 @@ public partial class V1beta1BigQueryDatasetSpecAccess
     [JsonPropertyName("view")]
     public V1beta1BigQueryDatasetSpecAccessView? View { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryDatasetSpecDefaultEncryptionConfigurationKmsKeyRef
@@ -151,7 +164,9 @@ public partial class V1beta1BigQueryDatasetSpecDefaultEncryptionConfigurationKms
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The default encryption key for all tables in the dataset. After this property is set, the encryption key of all newly-created tables in the dataset is set to this value unless the table creation request or query explicitly overrides the key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryDatasetSpecDefaultEncryptionConfiguration
@@ -160,7 +175,9 @@ public partial class V1beta1BigQueryDatasetSpecDefaultEncryptionConfiguration
     [JsonPropertyName("kmsKeyRef")]
     public V1beta1BigQueryDatasetSpecDefaultEncryptionConfigurationKmsKeyRef? KmsKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary> Optional. The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryDatasetSpecProjectRef
@@ -181,7 +198,9 @@ public partial class V1beta1BigQueryDatasetSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigQueryDatasetSpec defines the desired state of BigQueryDataset</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryDatasetSpec
@@ -238,7 +257,9 @@ public partial class V1beta1BigQueryDatasetSpec
     [JsonPropertyName("storageBillingModel")]
     public string? StorageBillingModel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryDatasetStatusConditions
@@ -263,7 +284,9 @@ public partial class V1beta1BigQueryDatasetStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryDatasetStatusObservedState
@@ -272,7 +295,9 @@ public partial class V1beta1BigQueryDatasetStatusObservedState
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigQueryDatasetStatus defines the config connector machine state of BigQueryDataset</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryDatasetStatus
@@ -309,7 +334,9 @@ public partial class V1beta1BigQueryDatasetStatus
     [JsonPropertyName("selfLink")]
     public string? SelfLink { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigQueryDataset is the Schema for the BigQueryDataset API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -339,3 +366,4 @@ public partial class V1beta1BigQueryDataset : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1BigQueryDatasetStatus? Status { get; set; }
 }
+#nullable disable

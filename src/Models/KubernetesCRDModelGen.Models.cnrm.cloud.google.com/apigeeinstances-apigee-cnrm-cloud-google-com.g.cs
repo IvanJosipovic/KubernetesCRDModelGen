@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>ApigeeInstance is the Schema for the ApigeeInstance API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ApigeeInstanceList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1ApigeeInstance> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Access logging configuration enables the access logging feature at the instance. Apigee customers can enable access logging to ship the access logs to their own project's cloud logging.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApigeeInstanceSpecAccessLoggingConfig
@@ -46,7 +49,9 @@ public partial class V1beta1ApigeeInstanceSpecAccessLoggingConfig
     [JsonPropertyName("filter")]
     public string? Filter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Customer Managed Encryption Key (CMEK) used for disk and volume encryption. If not specified, a Google-Managed encryption key will be used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApigeeInstanceSpecDiskEncryptionKMSCryptoKeyRef
@@ -63,7 +68,9 @@ public partial class V1beta1ApigeeInstanceSpecDiskEncryptionKMSCryptoKeyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to parent Apigee Organization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApigeeInstanceSpecOrganizationRef
@@ -80,7 +87,9 @@ public partial class V1beta1ApigeeInstanceSpecOrganizationRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApigeeInstanceSpec defines the desired state of ApigeeInstance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApigeeInstanceSpec
@@ -125,7 +134,9 @@ public partial class V1beta1ApigeeInstanceSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApigeeInstanceStatusConditions
@@ -150,7 +161,9 @@ public partial class V1beta1ApigeeInstanceStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApigeeInstanceStatusObservedState
@@ -183,7 +196,9 @@ public partial class V1beta1ApigeeInstanceStatusObservedState
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApigeeInstanceStatus defines the config connector machine state of ApigeeInstance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApigeeInstanceStatus
@@ -204,7 +219,9 @@ public partial class V1beta1ApigeeInstanceStatus
     [JsonPropertyName("observedState")]
     public V1beta1ApigeeInstanceStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApigeeInstance is the Schema for the ApigeeInstance API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -234,3 +251,4 @@ public partial class V1beta1ApigeeInstance : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1ApigeeInstanceStatus? Status { get; set; }
 }
+#nullable disable

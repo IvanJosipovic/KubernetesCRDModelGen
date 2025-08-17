@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafactory.azure.m.upbound.io;
+#nullable enable
 /// <summary>LinkedServiceCosmosDB is the Schema for the LinkedServiceCosmosDBs API. Manages a Linked Service (connection) between a CosmosDB and Azure Data Factory using SQL API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LinkedServiceCosmosDBList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1LinkedServiceCosmosDB> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The account key of the Azure Cosmos DB account. Required if connection_string is unspecified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceCosmosDBSpecForProviderAccountKeySecretRef
@@ -46,7 +49,9 @@ public partial class V1beta1LinkedServiceCosmosDBSpecForProviderAccountKeySecret
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The connection string. Required if account_endpoint, account_key, and database are unspecified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceCosmosDBSpecForProviderConnectionStringSecretRef
@@ -59,7 +64,9 @@ public partial class V1beta1LinkedServiceCosmosDBSpecForProviderConnectionString
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceCosmosDBSpecForProviderDataFactoryIdRefPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1LinkedServiceCosmosDBSpecForProviderDataFactoryIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Factory in datafactory to populate dataFactoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceCosmosDBSpecForProviderDataFactoryIdRef
@@ -89,7 +98,9 @@ public partial class V1beta1LinkedServiceCosmosDBSpecForProviderDataFactoryIdRef
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceCosmosDBSpecForProviderDataFactoryIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceCosmosDBSpecForProviderDataFactoryIdSelectorPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1LinkedServiceCosmosDBSpecForProviderDataFactoryIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Factory in datafactory to populate dataFactoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceCosmosDBSpecForProviderDataFactoryIdSelector
@@ -123,7 +136,9 @@ public partial class V1beta1LinkedServiceCosmosDBSpecForProviderDataFactoryIdSel
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceCosmosDBSpecForProviderDataFactoryIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceCosmosDBSpecForProvider
@@ -176,7 +191,9 @@ public partial class V1beta1LinkedServiceCosmosDBSpecForProvider
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The account key of the Azure Cosmos DB account. Required if connection_string is unspecified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceCosmosDBSpecInitProviderAccountKeySecretRef
@@ -189,7 +206,9 @@ public partial class V1beta1LinkedServiceCosmosDBSpecInitProviderAccountKeySecre
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The connection string. Required if account_endpoint, account_key, and database are unspecified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceCosmosDBSpecInitProviderConnectionStringSecretRef
@@ -202,7 +221,9 @@ public partial class V1beta1LinkedServiceCosmosDBSpecInitProviderConnectionStrin
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceCosmosDBSpecInitProvider
@@ -243,7 +264,9 @@ public partial class V1beta1LinkedServiceCosmosDBSpecInitProvider
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceCosmosDBSpecProviderConfigRef
@@ -256,7 +279,9 @@ public partial class V1beta1LinkedServiceCosmosDBSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceCosmosDBSpecWriteConnectionSecretToRef
@@ -265,7 +290,9 @@ public partial class V1beta1LinkedServiceCosmosDBSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LinkedServiceCosmosDBSpec defines the desired state of LinkedServiceCosmosDB</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceCosmosDBSpec
@@ -290,7 +317,9 @@ public partial class V1beta1LinkedServiceCosmosDBSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LinkedServiceCosmosDBSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceCosmosDBStatusAtProvider
@@ -331,7 +360,9 @@ public partial class V1beta1LinkedServiceCosmosDBStatusAtProvider
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceCosmosDBStatusConditions
@@ -360,7 +391,9 @@ public partial class V1beta1LinkedServiceCosmosDBStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LinkedServiceCosmosDBStatus defines the observed state of LinkedServiceCosmosDB.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceCosmosDBStatus
@@ -377,7 +410,9 @@ public partial class V1beta1LinkedServiceCosmosDBStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LinkedServiceCosmosDB is the Schema for the LinkedServiceCosmosDBs API. Manages a Linked Service (connection) between a CosmosDB and Azure Data Factory using SQL API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -407,3 +442,4 @@ public partial class V1beta1LinkedServiceCosmosDB : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1LinkedServiceCosmosDBStatus? Status { get; set; }
 }
+#nullable disable

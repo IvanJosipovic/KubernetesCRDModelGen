@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.servicefabric.azure.m.upbound.io;
+#nullable enable
 /// <summary>Cluster is the Schema for the Clusters API. Manages a Service Fabric Cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ClusterList : IKubernetesObject<V1ListMeta>, IItems<
     [JsonPropertyName("items")]
     public IList<V1beta1Cluster> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An azure_active_directory block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderAzureActiveDirectory
@@ -50,7 +53,9 @@ public partial class V1beta1ClusterSpecForProviderAzureActiveDirectory
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A certificate block as defined below. Conflicts with certificate_common_names.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderCertificate
@@ -67,7 +72,9 @@ public partial class V1beta1ClusterSpecForProviderCertificate
     [JsonPropertyName("x509StoreName")]
     public string? X509StoreName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderCertificateCommonNamesCommonNames
@@ -80,7 +87,9 @@ public partial class V1beta1ClusterSpecForProviderCertificateCommonNamesCommonNa
     [JsonPropertyName("certificateIssuerThumbprint")]
     public string? CertificateIssuerThumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A certificate_common_names block as defined below. Conflicts with certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderCertificateCommonNames
@@ -93,7 +102,9 @@ public partial class V1beta1ClusterSpecForProviderCertificateCommonNames
     [JsonPropertyName("x509StoreName")]
     public string? X509StoreName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClientCertificateCommonName
@@ -110,7 +121,9 @@ public partial class V1beta1ClusterSpecForProviderClientCertificateCommonName
     [JsonPropertyName("issuerThumbprint")]
     public string? IssuerThumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClientCertificateThumbprint
@@ -123,7 +136,9 @@ public partial class V1beta1ClusterSpecForProviderClientCertificateThumbprint
     [JsonPropertyName("thumbprint")]
     public string? Thumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A diagnostics_config block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderDiagnosticsConfig
@@ -148,7 +163,9 @@ public partial class V1beta1ClusterSpecForProviderDiagnosticsConfig
     [JsonPropertyName("tableEndpoint")]
     public string? TableEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderFabricSettings
@@ -161,7 +178,9 @@ public partial class V1beta1ClusterSpecForProviderFabricSettings
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A application_ports block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeTypeApplicationPorts
@@ -174,7 +193,9 @@ public partial class V1beta1ClusterSpecForProviderNodeTypeApplicationPorts
     [JsonPropertyName("startPort")]
     public double? StartPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ephemeral_ports block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeTypeEphemeralPorts
@@ -187,7 +208,9 @@ public partial class V1beta1ClusterSpecForProviderNodeTypeEphemeralPorts
     [JsonPropertyName("startPort")]
     public double? StartPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeType
@@ -244,7 +267,9 @@ public partial class V1beta1ClusterSpecForProviderNodeType
     [JsonPropertyName("reverseProxyEndpointPort")]
     public double? ReverseProxyEndpointPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderResourceGroupNameRefPolicy
@@ -257,7 +282,9 @@ public partial class V1beta1ClusterSpecForProviderResourceGroupNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderResourceGroupNameRef
@@ -274,7 +301,9 @@ public partial class V1beta1ClusterSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderResourceGroupNameSelectorPolicy
@@ -287,7 +316,9 @@ public partial class V1beta1ClusterSpecForProviderResourceGroupNameSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderResourceGroupNameSelector
@@ -308,7 +339,9 @@ public partial class V1beta1ClusterSpecForProviderResourceGroupNameSelector
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A reverse_proxy_certificate block as defined below. Conflicts with reverse_proxy_certificate_common_names.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderReverseProxyCertificate
@@ -325,7 +358,9 @@ public partial class V1beta1ClusterSpecForProviderReverseProxyCertificate
     [JsonPropertyName("x509StoreName")]
     public string? X509StoreName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderReverseProxyCertificateCommonNamesCommonNames
@@ -338,7 +373,9 @@ public partial class V1beta1ClusterSpecForProviderReverseProxyCertificateCommonN
     [JsonPropertyName("certificateIssuerThumbprint")]
     public string? CertificateIssuerThumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A reverse_proxy_certificate_common_names block as defined below. Conflicts with reverse_proxy_certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderReverseProxyCertificateCommonNames
@@ -351,7 +388,9 @@ public partial class V1beta1ClusterSpecForProviderReverseProxyCertificateCommonN
     [JsonPropertyName("x509StoreName")]
     public string? X509StoreName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A delta_health_policy block as defined below</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderUpgradePolicyDeltaHealthPolicy
@@ -368,7 +407,9 @@ public partial class V1beta1ClusterSpecForProviderUpgradePolicyDeltaHealthPolicy
     [JsonPropertyName("maxUpgradeDomainDeltaUnhealthyNodesPercent")]
     public double? MaxUpgradeDomainDeltaUnhealthyNodesPercent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A health_policy block as defined below</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderUpgradePolicyHealthPolicy
@@ -381,7 +422,9 @@ public partial class V1beta1ClusterSpecForProviderUpgradePolicyHealthPolicy
     [JsonPropertyName("maxUnhealthyNodesPercent")]
     public double? MaxUnhealthyNodesPercent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A upgrade_policy block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderUpgradePolicy
@@ -422,7 +465,9 @@ public partial class V1beta1ClusterSpecForProviderUpgradePolicy
     [JsonPropertyName("upgradeTimeout")]
     public string? UpgradeTimeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProvider
@@ -523,7 +568,9 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("vmssZonalUpgradeMode")]
     public string? VmssZonalUpgradeMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An azure_active_directory block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderAzureActiveDirectory
@@ -540,7 +587,9 @@ public partial class V1beta1ClusterSpecInitProviderAzureActiveDirectory
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A certificate block as defined below. Conflicts with certificate_common_names.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderCertificate
@@ -557,7 +606,9 @@ public partial class V1beta1ClusterSpecInitProviderCertificate
     [JsonPropertyName("x509StoreName")]
     public string? X509StoreName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderCertificateCommonNamesCommonNames
@@ -570,7 +621,9 @@ public partial class V1beta1ClusterSpecInitProviderCertificateCommonNamesCommonN
     [JsonPropertyName("certificateIssuerThumbprint")]
     public string? CertificateIssuerThumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A certificate_common_names block as defined below. Conflicts with certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderCertificateCommonNames
@@ -583,7 +636,9 @@ public partial class V1beta1ClusterSpecInitProviderCertificateCommonNames
     [JsonPropertyName("x509StoreName")]
     public string? X509StoreName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClientCertificateCommonName
@@ -600,7 +655,9 @@ public partial class V1beta1ClusterSpecInitProviderClientCertificateCommonName
     [JsonPropertyName("issuerThumbprint")]
     public string? IssuerThumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClientCertificateThumbprint
@@ -613,7 +670,9 @@ public partial class V1beta1ClusterSpecInitProviderClientCertificateThumbprint
     [JsonPropertyName("thumbprint")]
     public string? Thumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A diagnostics_config block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderDiagnosticsConfig
@@ -638,7 +697,9 @@ public partial class V1beta1ClusterSpecInitProviderDiagnosticsConfig
     [JsonPropertyName("tableEndpoint")]
     public string? TableEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderFabricSettings
@@ -651,7 +712,9 @@ public partial class V1beta1ClusterSpecInitProviderFabricSettings
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A application_ports block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeTypeApplicationPorts
@@ -664,7 +727,9 @@ public partial class V1beta1ClusterSpecInitProviderNodeTypeApplicationPorts
     [JsonPropertyName("startPort")]
     public double? StartPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ephemeral_ports block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeTypeEphemeralPorts
@@ -677,7 +742,9 @@ public partial class V1beta1ClusterSpecInitProviderNodeTypeEphemeralPorts
     [JsonPropertyName("startPort")]
     public double? StartPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeType
@@ -734,7 +801,9 @@ public partial class V1beta1ClusterSpecInitProviderNodeType
     [JsonPropertyName("reverseProxyEndpointPort")]
     public double? ReverseProxyEndpointPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A reverse_proxy_certificate block as defined below. Conflicts with reverse_proxy_certificate_common_names.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderReverseProxyCertificate
@@ -751,7 +820,9 @@ public partial class V1beta1ClusterSpecInitProviderReverseProxyCertificate
     [JsonPropertyName("x509StoreName")]
     public string? X509StoreName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderReverseProxyCertificateCommonNamesCommonNames
@@ -764,7 +835,9 @@ public partial class V1beta1ClusterSpecInitProviderReverseProxyCertificateCommon
     [JsonPropertyName("certificateIssuerThumbprint")]
     public string? CertificateIssuerThumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A reverse_proxy_certificate_common_names block as defined below. Conflicts with reverse_proxy_certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderReverseProxyCertificateCommonNames
@@ -777,7 +850,9 @@ public partial class V1beta1ClusterSpecInitProviderReverseProxyCertificateCommon
     [JsonPropertyName("x509StoreName")]
     public string? X509StoreName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A delta_health_policy block as defined below</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderUpgradePolicyDeltaHealthPolicy
@@ -794,7 +869,9 @@ public partial class V1beta1ClusterSpecInitProviderUpgradePolicyDeltaHealthPolic
     [JsonPropertyName("maxUpgradeDomainDeltaUnhealthyNodesPercent")]
     public double? MaxUpgradeDomainDeltaUnhealthyNodesPercent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A health_policy block as defined below</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderUpgradePolicyHealthPolicy
@@ -807,7 +884,9 @@ public partial class V1beta1ClusterSpecInitProviderUpgradePolicyHealthPolicy
     [JsonPropertyName("maxUnhealthyNodesPercent")]
     public double? MaxUnhealthyNodesPercent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A upgrade_policy block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderUpgradePolicy
@@ -848,7 +927,9 @@ public partial class V1beta1ClusterSpecInitProviderUpgradePolicy
     [JsonPropertyName("upgradeTimeout")]
     public string? UpgradeTimeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProvider
@@ -937,7 +1018,9 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("vmssZonalUpgradeMode")]
     public string? VmssZonalUpgradeMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecProviderConfigRef
@@ -950,7 +1033,9 @@ public partial class V1beta1ClusterSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecWriteConnectionSecretToRef
@@ -959,7 +1044,9 @@ public partial class V1beta1ClusterSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClusterSpec defines the desired state of Cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpec
@@ -984,7 +1071,9 @@ public partial class V1beta1ClusterSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ClusterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An azure_active_directory block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderAzureActiveDirectory
@@ -1001,7 +1090,9 @@ public partial class V1beta1ClusterStatusAtProviderAzureActiveDirectory
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A certificate block as defined below. Conflicts with certificate_common_names.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderCertificate
@@ -1018,7 +1109,9 @@ public partial class V1beta1ClusterStatusAtProviderCertificate
     [JsonPropertyName("x509StoreName")]
     public string? X509StoreName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderCertificateCommonNamesCommonNames
@@ -1031,7 +1124,9 @@ public partial class V1beta1ClusterStatusAtProviderCertificateCommonNamesCommonN
     [JsonPropertyName("certificateIssuerThumbprint")]
     public string? CertificateIssuerThumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A certificate_common_names block as defined below. Conflicts with certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderCertificateCommonNames
@@ -1044,7 +1139,9 @@ public partial class V1beta1ClusterStatusAtProviderCertificateCommonNames
     [JsonPropertyName("x509StoreName")]
     public string? X509StoreName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClientCertificateCommonName
@@ -1061,7 +1158,9 @@ public partial class V1beta1ClusterStatusAtProviderClientCertificateCommonName
     [JsonPropertyName("issuerThumbprint")]
     public string? IssuerThumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClientCertificateThumbprint
@@ -1074,7 +1173,9 @@ public partial class V1beta1ClusterStatusAtProviderClientCertificateThumbprint
     [JsonPropertyName("thumbprint")]
     public string? Thumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A diagnostics_config block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderDiagnosticsConfig
@@ -1099,7 +1200,9 @@ public partial class V1beta1ClusterStatusAtProviderDiagnosticsConfig
     [JsonPropertyName("tableEndpoint")]
     public string? TableEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderFabricSettings
@@ -1112,7 +1215,9 @@ public partial class V1beta1ClusterStatusAtProviderFabricSettings
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A application_ports block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeTypeApplicationPorts
@@ -1125,7 +1230,9 @@ public partial class V1beta1ClusterStatusAtProviderNodeTypeApplicationPorts
     [JsonPropertyName("startPort")]
     public double? StartPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ephemeral_ports block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeTypeEphemeralPorts
@@ -1138,7 +1245,9 @@ public partial class V1beta1ClusterStatusAtProviderNodeTypeEphemeralPorts
     [JsonPropertyName("startPort")]
     public double? StartPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeType
@@ -1195,7 +1304,9 @@ public partial class V1beta1ClusterStatusAtProviderNodeType
     [JsonPropertyName("reverseProxyEndpointPort")]
     public double? ReverseProxyEndpointPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A reverse_proxy_certificate block as defined below. Conflicts with reverse_proxy_certificate_common_names.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderReverseProxyCertificate
@@ -1212,7 +1323,9 @@ public partial class V1beta1ClusterStatusAtProviderReverseProxyCertificate
     [JsonPropertyName("x509StoreName")]
     public string? X509StoreName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderReverseProxyCertificateCommonNamesCommonNames
@@ -1225,7 +1338,9 @@ public partial class V1beta1ClusterStatusAtProviderReverseProxyCertificateCommon
     [JsonPropertyName("certificateIssuerThumbprint")]
     public string? CertificateIssuerThumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A reverse_proxy_certificate_common_names block as defined below. Conflicts with reverse_proxy_certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderReverseProxyCertificateCommonNames
@@ -1238,7 +1353,9 @@ public partial class V1beta1ClusterStatusAtProviderReverseProxyCertificateCommon
     [JsonPropertyName("x509StoreName")]
     public string? X509StoreName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A delta_health_policy block as defined below</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderUpgradePolicyDeltaHealthPolicy
@@ -1255,7 +1372,9 @@ public partial class V1beta1ClusterStatusAtProviderUpgradePolicyDeltaHealthPolic
     [JsonPropertyName("maxUpgradeDomainDeltaUnhealthyNodesPercent")]
     public double? MaxUpgradeDomainDeltaUnhealthyNodesPercent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A health_policy block as defined below</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderUpgradePolicyHealthPolicy
@@ -1268,7 +1387,9 @@ public partial class V1beta1ClusterStatusAtProviderUpgradePolicyHealthPolicy
     [JsonPropertyName("maxUnhealthyNodesPercent")]
     public double? MaxUnhealthyNodesPercent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A upgrade_policy block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderUpgradePolicy
@@ -1309,7 +1430,9 @@ public partial class V1beta1ClusterStatusAtProviderUpgradePolicy
     [JsonPropertyName("upgradeTimeout")]
     public string? UpgradeTimeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProvider
@@ -1410,7 +1533,9 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("vmssZonalUpgradeMode")]
     public string? VmssZonalUpgradeMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusConditions
@@ -1439,7 +1564,9 @@ public partial class V1beta1ClusterStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClusterStatus defines the observed state of Cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatus
@@ -1456,7 +1583,9 @@ public partial class V1beta1ClusterStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cluster is the Schema for the Clusters API. Manages a Service Fabric Cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1486,3 +1615,4 @@ public partial class V1beta1Cluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     [JsonPropertyName("status")]
     public V1beta1ClusterStatus? Status { get; set; }
 }
+#nullable disable

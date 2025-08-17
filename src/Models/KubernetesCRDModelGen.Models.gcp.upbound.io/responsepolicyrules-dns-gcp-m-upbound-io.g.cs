@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dns.gcp.m.upbound.io;
+#nullable enable
 /// <summary>ResponsePolicyRule is the Schema for the ResponsePolicyRules API. A Response Policy Rule is a selector that applies its behavior to queries that match the selector.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ResponsePolicyRuleList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1ResponsePolicyRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicyRuleSpecForProviderLocalDataLocalDatas
@@ -54,7 +57,9 @@ public partial class V1beta1ResponsePolicyRuleSpecForProviderLocalDataLocalDatas
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Answer this query directly with DNS data. These ResourceRecordSets override any other DNS behavior for the matched name; in particular they override private zones, the public internet, and GCP internal DNS. No SOA nor NS types are allowed. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicyRuleSpecForProviderLocalData
@@ -63,7 +68,9 @@ public partial class V1beta1ResponsePolicyRuleSpecForProviderLocalData
     [JsonPropertyName("localDatas")]
     public IList<V1beta1ResponsePolicyRuleSpecForProviderLocalDataLocalDatas>? LocalDatas { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicyRuleSpecForProviderResponsePolicyRefPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1ResponsePolicyRuleSpecForProviderResponsePolicyRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResponsePolicy in dns to populate responsePolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicyRuleSpecForProviderResponsePolicyRef
@@ -93,7 +102,9 @@ public partial class V1beta1ResponsePolicyRuleSpecForProviderResponsePolicyRef
     [JsonPropertyName("policy")]
     public V1beta1ResponsePolicyRuleSpecForProviderResponsePolicyRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicyRuleSpecForProviderResponsePolicySelectorPolicy
@@ -106,7 +117,9 @@ public partial class V1beta1ResponsePolicyRuleSpecForProviderResponsePolicySelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResponsePolicy in dns to populate responsePolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicyRuleSpecForProviderResponsePolicySelector
@@ -127,7 +140,9 @@ public partial class V1beta1ResponsePolicyRuleSpecForProviderResponsePolicySelec
     [JsonPropertyName("policy")]
     public V1beta1ResponsePolicyRuleSpecForProviderResponsePolicySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicyRuleSpecForProvider
@@ -156,7 +171,9 @@ public partial class V1beta1ResponsePolicyRuleSpecForProvider
     [JsonPropertyName("responsePolicySelector")]
     public V1beta1ResponsePolicyRuleSpecForProviderResponsePolicySelector? ResponsePolicySelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicyRuleSpecInitProviderLocalDataLocalDatas
@@ -177,7 +194,9 @@ public partial class V1beta1ResponsePolicyRuleSpecInitProviderLocalDataLocalData
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Answer this query directly with DNS data. These ResourceRecordSets override any other DNS behavior for the matched name; in particular they override private zones, the public internet, and GCP internal DNS. No SOA nor NS types are allowed. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicyRuleSpecInitProviderLocalData
@@ -186,7 +205,9 @@ public partial class V1beta1ResponsePolicyRuleSpecInitProviderLocalData
     [JsonPropertyName("localDatas")]
     public IList<V1beta1ResponsePolicyRuleSpecInitProviderLocalDataLocalDatas>? LocalDatas { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicyRuleSpecInitProvider
@@ -203,7 +224,9 @@ public partial class V1beta1ResponsePolicyRuleSpecInitProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicyRuleSpecProviderConfigRef
@@ -216,7 +239,9 @@ public partial class V1beta1ResponsePolicyRuleSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicyRuleSpecWriteConnectionSecretToRef
@@ -225,7 +250,9 @@ public partial class V1beta1ResponsePolicyRuleSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResponsePolicyRuleSpec defines the desired state of ResponsePolicyRule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicyRuleSpec
@@ -250,7 +277,9 @@ public partial class V1beta1ResponsePolicyRuleSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ResponsePolicyRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicyRuleStatusAtProviderLocalDataLocalDatas
@@ -271,7 +300,9 @@ public partial class V1beta1ResponsePolicyRuleStatusAtProviderLocalDataLocalData
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Answer this query directly with DNS data. These ResourceRecordSets override any other DNS behavior for the matched name; in particular they override private zones, the public internet, and GCP internal DNS. No SOA nor NS types are allowed. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicyRuleStatusAtProviderLocalData
@@ -280,7 +311,9 @@ public partial class V1beta1ResponsePolicyRuleStatusAtProviderLocalData
     [JsonPropertyName("localDatas")]
     public IList<V1beta1ResponsePolicyRuleStatusAtProviderLocalDataLocalDatas>? LocalDatas { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicyRuleStatusAtProvider
@@ -305,7 +338,9 @@ public partial class V1beta1ResponsePolicyRuleStatusAtProvider
     [JsonPropertyName("responsePolicy")]
     public string? ResponsePolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicyRuleStatusConditions
@@ -334,7 +369,9 @@ public partial class V1beta1ResponsePolicyRuleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResponsePolicyRuleStatus defines the observed state of ResponsePolicyRule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicyRuleStatus
@@ -351,7 +388,9 @@ public partial class V1beta1ResponsePolicyRuleStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResponsePolicyRule is the Schema for the ResponsePolicyRules API. A Response Policy Rule is a selector that applies its behavior to queries that match the selector.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -381,3 +420,4 @@ public partial class V1beta1ResponsePolicyRule : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1ResponsePolicyRuleStatus? Status { get; set; }
 }
+#nullable disable

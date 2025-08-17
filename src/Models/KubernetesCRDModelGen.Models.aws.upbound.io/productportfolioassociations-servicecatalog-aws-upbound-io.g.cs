@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.servicecatalog.aws.upbound.io;
+#nullable enable
 /// <summary>ProductPortfolioAssociation is the Schema for the ProductPortfolioAssociations API. Manages a Service Catalog Product Portfolio Association</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ProductPortfolioAssociationList : IKubernetesObject<
     [JsonPropertyName("items")]
     public IList<V1beta1ProductPortfolioAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProductPortfolioAssociationSpecForProviderPortfolioIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ProductPortfolioAssociationSpecForProviderPortfolioI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Portfolio in servicecatalog to populate portfolioId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProductPortfolioAssociationSpecForProviderPortfolioIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1ProductPortfolioAssociationSpecForProviderPortfolioI
     [JsonPropertyName("policy")]
     public V1beta1ProductPortfolioAssociationSpecForProviderPortfolioIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProductPortfolioAssociationSpecForProviderPortfolioIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1ProductPortfolioAssociationSpecForProviderPortfolioI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Portfolio in servicecatalog to populate portfolioId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProductPortfolioAssociationSpecForProviderPortfolioIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1ProductPortfolioAssociationSpecForProviderPortfolioI
     [JsonPropertyName("policy")]
     public V1beta1ProductPortfolioAssociationSpecForProviderPortfolioIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProductPortfolioAssociationSpecForProviderProductIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1ProductPortfolioAssociationSpecForProviderProductIdR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Product in servicecatalog to populate productId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProductPortfolioAssociationSpecForProviderProductIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1ProductPortfolioAssociationSpecForProviderProductIdR
     [JsonPropertyName("policy")]
     public V1beta1ProductPortfolioAssociationSpecForProviderProductIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProductPortfolioAssociationSpecForProviderProductIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1ProductPortfolioAssociationSpecForProviderProductIdS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Product in servicecatalog to populate productId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProductPortfolioAssociationSpecForProviderProductIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1ProductPortfolioAssociationSpecForProviderProductIdS
     [JsonPropertyName("policy")]
     public V1beta1ProductPortfolioAssociationSpecForProviderProductIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProductPortfolioAssociationSpecForProvider
@@ -186,7 +205,9 @@ public partial class V1beta1ProductPortfolioAssociationSpecForProvider
     [JsonPropertyName("sourcePortfolioId")]
     public string? SourcePortfolioId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProductPortfolioAssociationSpecInitProviderPortfolioIdRefPolicy
@@ -199,7 +220,9 @@ public partial class V1beta1ProductPortfolioAssociationSpecInitProviderPortfolio
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Portfolio in servicecatalog to populate portfolioId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProductPortfolioAssociationSpecInitProviderPortfolioIdRef
@@ -212,7 +235,9 @@ public partial class V1beta1ProductPortfolioAssociationSpecInitProviderPortfolio
     [JsonPropertyName("policy")]
     public V1beta1ProductPortfolioAssociationSpecInitProviderPortfolioIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProductPortfolioAssociationSpecInitProviderPortfolioIdSelectorPolicy
@@ -225,7 +250,9 @@ public partial class V1beta1ProductPortfolioAssociationSpecInitProviderPortfolio
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Portfolio in servicecatalog to populate portfolioId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProductPortfolioAssociationSpecInitProviderPortfolioIdSelector
@@ -242,7 +269,9 @@ public partial class V1beta1ProductPortfolioAssociationSpecInitProviderPortfolio
     [JsonPropertyName("policy")]
     public V1beta1ProductPortfolioAssociationSpecInitProviderPortfolioIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProductPortfolioAssociationSpecInitProviderProductIdRefPolicy
@@ -255,7 +284,9 @@ public partial class V1beta1ProductPortfolioAssociationSpecInitProviderProductId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Product in servicecatalog to populate productId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProductPortfolioAssociationSpecInitProviderProductIdRef
@@ -268,7 +299,9 @@ public partial class V1beta1ProductPortfolioAssociationSpecInitProviderProductId
     [JsonPropertyName("policy")]
     public V1beta1ProductPortfolioAssociationSpecInitProviderProductIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProductPortfolioAssociationSpecInitProviderProductIdSelectorPolicy
@@ -281,7 +314,9 @@ public partial class V1beta1ProductPortfolioAssociationSpecInitProviderProductId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Product in servicecatalog to populate productId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProductPortfolioAssociationSpecInitProviderProductIdSelector
@@ -298,7 +333,9 @@ public partial class V1beta1ProductPortfolioAssociationSpecInitProviderProductId
     [JsonPropertyName("policy")]
     public V1beta1ProductPortfolioAssociationSpecInitProviderProductIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProductPortfolioAssociationSpecInitProvider
@@ -335,7 +372,9 @@ public partial class V1beta1ProductPortfolioAssociationSpecInitProvider
     [JsonPropertyName("sourcePortfolioId")]
     public string? SourcePortfolioId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProductPortfolioAssociationSpecProviderConfigRefPolicy
@@ -348,7 +387,9 @@ public partial class V1beta1ProductPortfolioAssociationSpecProviderConfigRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProductPortfolioAssociationSpecProviderConfigRef
@@ -361,7 +402,9 @@ public partial class V1beta1ProductPortfolioAssociationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ProductPortfolioAssociationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProductPortfolioAssociationSpecWriteConnectionSecretToRef
@@ -374,7 +417,9 @@ public partial class V1beta1ProductPortfolioAssociationSpecWriteConnectionSecret
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProductPortfolioAssociationSpec defines the desired state of ProductPortfolioAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProductPortfolioAssociationSpec
@@ -403,7 +448,9 @@ public partial class V1beta1ProductPortfolioAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ProductPortfolioAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProductPortfolioAssociationStatusAtProvider
@@ -432,7 +479,9 @@ public partial class V1beta1ProductPortfolioAssociationStatusAtProvider
     [JsonPropertyName("sourcePortfolioId")]
     public string? SourcePortfolioId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProductPortfolioAssociationStatusConditions
@@ -461,7 +510,9 @@ public partial class V1beta1ProductPortfolioAssociationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProductPortfolioAssociationStatus defines the observed state of ProductPortfolioAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProductPortfolioAssociationStatus
@@ -478,7 +529,9 @@ public partial class V1beta1ProductPortfolioAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProductPortfolioAssociation is the Schema for the ProductPortfolioAssociations API. Manages a Service Catalog Product Portfolio Association</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -508,3 +561,4 @@ public partial class V1beta1ProductPortfolioAssociation : IKubernetesObject<V1Ob
     [JsonPropertyName("status")]
     public V1beta1ProductPortfolioAssociationStatus? Status { get; set; }
 }
+#nullable disable

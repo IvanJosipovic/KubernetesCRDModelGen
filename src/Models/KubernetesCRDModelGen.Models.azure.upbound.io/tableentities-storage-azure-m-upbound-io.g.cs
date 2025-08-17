@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.azure.m.upbound.io;
+#nullable enable
 /// <summary>TableEntity is the Schema for the TableEntitys API. Manages an Entity within a Table in an Azure Storage Account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TableEntityList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1TableEntity> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableEntitySpecForProviderStorageTableIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1TableEntitySpecForProviderStorageTableIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Table in storage to populate storageTableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableEntitySpecForProviderStorageTableIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1TableEntitySpecForProviderStorageTableIdRef
     [JsonPropertyName("policy")]
     public V1beta1TableEntitySpecForProviderStorageTableIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableEntitySpecForProviderStorageTableIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1TableEntitySpecForProviderStorageTableIdSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Table in storage to populate storageTableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableEntitySpecForProviderStorageTableIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1TableEntitySpecForProviderStorageTableIdSelector
     [JsonPropertyName("policy")]
     public V1beta1TableEntitySpecForProviderStorageTableIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableEntitySpecForProvider
@@ -126,7 +137,9 @@ public partial class V1beta1TableEntitySpecForProvider
     [JsonPropertyName("storageTableIdSelector")]
     public V1beta1TableEntitySpecForProviderStorageTableIdSelector? StorageTableIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableEntitySpecInitProviderStorageTableIdRefPolicy
@@ -139,7 +152,9 @@ public partial class V1beta1TableEntitySpecInitProviderStorageTableIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Table in storage to populate storageTableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableEntitySpecInitProviderStorageTableIdRef
@@ -156,7 +171,9 @@ public partial class V1beta1TableEntitySpecInitProviderStorageTableIdRef
     [JsonPropertyName("policy")]
     public V1beta1TableEntitySpecInitProviderStorageTableIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableEntitySpecInitProviderStorageTableIdSelectorPolicy
@@ -169,7 +186,9 @@ public partial class V1beta1TableEntitySpecInitProviderStorageTableIdSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Table in storage to populate storageTableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableEntitySpecInitProviderStorageTableIdSelector
@@ -190,7 +209,9 @@ public partial class V1beta1TableEntitySpecInitProviderStorageTableIdSelector
     [JsonPropertyName("policy")]
     public V1beta1TableEntitySpecInitProviderStorageTableIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableEntitySpecInitProvider
@@ -219,7 +240,9 @@ public partial class V1beta1TableEntitySpecInitProvider
     [JsonPropertyName("storageTableIdSelector")]
     public V1beta1TableEntitySpecInitProviderStorageTableIdSelector? StorageTableIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableEntitySpecProviderConfigRef
@@ -232,7 +255,9 @@ public partial class V1beta1TableEntitySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableEntitySpecWriteConnectionSecretToRef
@@ -241,7 +266,9 @@ public partial class V1beta1TableEntitySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TableEntitySpec defines the desired state of TableEntity</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableEntitySpec
@@ -266,7 +293,9 @@ public partial class V1beta1TableEntitySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TableEntitySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableEntityStatusAtProvider
@@ -291,7 +320,9 @@ public partial class V1beta1TableEntityStatusAtProvider
     [JsonPropertyName("storageTableId")]
     public string? StorageTableId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableEntityStatusConditions
@@ -320,7 +351,9 @@ public partial class V1beta1TableEntityStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TableEntityStatus defines the observed state of TableEntity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableEntityStatus
@@ -337,7 +370,9 @@ public partial class V1beta1TableEntityStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TableEntity is the Schema for the TableEntitys API. Manages an Entity within a Table in an Azure Storage Account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -367,3 +402,4 @@ public partial class V1beta1TableEntity : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1TableEntityStatus? Status { get; set; }
 }
+#nullable disable

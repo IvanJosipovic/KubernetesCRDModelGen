@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kms.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1KMSSecretCiphertextList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1alpha1KMSSecretCiphertext> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1KMSSecretCiphertextSpecAdditionalAuthenticatedDataValueFromSecretKeyRef
@@ -46,7 +49,9 @@ public partial class V1alpha1KMSSecretCiphertextSpecAdditionalAuthenticatedDataV
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1KMSSecretCiphertextSpecAdditionalAuthenticatedDataValueFrom
@@ -55,7 +60,9 @@ public partial class V1alpha1KMSSecretCiphertextSpecAdditionalAuthenticatedDataV
     [JsonPropertyName("secretKeyRef")]
     public V1alpha1KMSSecretCiphertextSpecAdditionalAuthenticatedDataValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The additional authenticated data used for integrity checks during encryption and decryption.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1KMSSecretCiphertextSpecAdditionalAuthenticatedData
@@ -68,7 +75,9 @@ public partial class V1alpha1KMSSecretCiphertextSpecAdditionalAuthenticatedData
     [JsonPropertyName("valueFrom")]
     public V1alpha1KMSSecretCiphertextSpecAdditionalAuthenticatedDataValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1KMSSecretCiphertextSpecPlaintextValueFromSecretKeyRef
@@ -81,7 +90,9 @@ public partial class V1alpha1KMSSecretCiphertextSpecPlaintextValueFromSecretKeyR
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1KMSSecretCiphertextSpecPlaintextValueFrom
@@ -90,7 +101,9 @@ public partial class V1alpha1KMSSecretCiphertextSpecPlaintextValueFrom
     [JsonPropertyName("secretKeyRef")]
     public V1alpha1KMSSecretCiphertextSpecPlaintextValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The plaintext to be encrypted.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1KMSSecretCiphertextSpecPlaintext
@@ -103,7 +116,9 @@ public partial class V1alpha1KMSSecretCiphertextSpecPlaintext
     [JsonPropertyName("valueFrom")]
     public V1alpha1KMSSecretCiphertextSpecPlaintextValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1KMSSecretCiphertextSpec
@@ -124,7 +139,9 @@ public partial class V1alpha1KMSSecretCiphertextSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1KMSSecretCiphertextStatusConditions
@@ -149,7 +166,9 @@ public partial class V1alpha1KMSSecretCiphertextStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1KMSSecretCiphertextStatus
@@ -166,7 +185,9 @@ public partial class V1alpha1KMSSecretCiphertextStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -196,3 +217,4 @@ public partial class V1alpha1KMSSecretCiphertext : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1alpha1KMSSecretCiphertextStatus? Status { get; set; }
 }
+#nullable disable

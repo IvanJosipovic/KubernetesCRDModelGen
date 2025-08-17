@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.discoveryengine.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>DiscoveryEngineDataStoreTargetSite is the Schema for the DiscoveryEngineDataStoreTargetSite API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1DiscoveryEngineDataStoreTargetSiteList : IKubernete
     [JsonPropertyName("items")]
     public IList<V1alpha1DiscoveryEngineDataStoreTargetSite> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The DataStore this target site should be part of.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DiscoveryEngineDataStoreTargetSiteSpecDataStoreRef
@@ -50,7 +53,9 @@ public partial class V1alpha1DiscoveryEngineDataStoreTargetSiteSpecDataStoreRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DiscoveryEngineDataStoreTargetSiteSpec defines the desired state of DiscoveryEngineDataStoreTargetSite</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DiscoveryEngineDataStoreTargetSiteSpec
@@ -71,7 +76,9 @@ public partial class V1alpha1DiscoveryEngineDataStoreTargetSiteSpec
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DiscoveryEngineDataStoreTargetSiteStatusConditions
@@ -96,7 +103,9 @@ public partial class V1alpha1DiscoveryEngineDataStoreTargetSiteStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Failed due to insufficient quota.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DiscoveryEngineDataStoreTargetSiteStatusObservedStateFailureReasonQuotaFailure
@@ -105,7 +114,9 @@ public partial class V1alpha1DiscoveryEngineDataStoreTargetSiteStatusObservedSta
     [JsonPropertyName("totalRequiredQuota")]
     public long? TotalRequiredQuota { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Failure reason.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DiscoveryEngineDataStoreTargetSiteStatusObservedStateFailureReason
@@ -114,7 +125,9 @@ public partial class V1alpha1DiscoveryEngineDataStoreTargetSiteStatusObservedSta
     [JsonPropertyName("quotaFailure")]
     public V1alpha1DiscoveryEngineDataStoreTargetSiteStatusObservedStateFailureReasonQuotaFailure? QuotaFailure { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Site ownership and validity verification status.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DiscoveryEngineDataStoreTargetSiteStatusObservedStateSiteVerificationInfo
@@ -127,7 +140,9 @@ public partial class V1alpha1DiscoveryEngineDataStoreTargetSiteStatusObservedSta
     [JsonPropertyName("verifyTime")]
     public string? VerifyTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DiscoveryEngineDataStoreTargetSiteStatusObservedState
@@ -156,7 +171,9 @@ public partial class V1alpha1DiscoveryEngineDataStoreTargetSiteStatusObservedSta
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DiscoveryEngineDataStoreTargetSiteStatus defines the config connector machine state of DiscoveryEngineDataStoreTargetSite</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DiscoveryEngineDataStoreTargetSiteStatus
@@ -177,7 +194,9 @@ public partial class V1alpha1DiscoveryEngineDataStoreTargetSiteStatus
     [JsonPropertyName("observedState")]
     public V1alpha1DiscoveryEngineDataStoreTargetSiteStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DiscoveryEngineDataStoreTargetSite is the Schema for the DiscoveryEngineDataStoreTargetSite API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -207,3 +226,4 @@ public partial class V1alpha1DiscoveryEngineDataStoreTargetSite : IKubernetesObj
     [JsonPropertyName("status")]
     public V1alpha1DiscoveryEngineDataStoreTargetSiteStatus? Status { get; set; }
 }
+#nullable disable

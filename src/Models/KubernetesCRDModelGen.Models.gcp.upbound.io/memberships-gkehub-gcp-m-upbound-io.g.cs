@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gkehub.gcp.m.upbound.io;
+#nullable enable
 /// <summary>Membership is the Schema for the Memberships API. Membership contains information about a member cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MembershipList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1beta1Membership> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Authority encodes how Google will recognize identities from this Membership. See the workload identity documentation for more details: https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipSpecForProviderAuthority
@@ -42,7 +45,9 @@ public partial class V1beta1MembershipSpecForProviderAuthority
     [JsonPropertyName("issuer")]
     public string? Issuer { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipSpecForProviderEndpointGkeClusterResourceLinkRefPolicy
@@ -55,7 +60,9 @@ public partial class V1beta1MembershipSpecForProviderEndpointGkeClusterResourceL
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in container to populate resourceLink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipSpecForProviderEndpointGkeClusterResourceLinkRef
@@ -72,7 +79,9 @@ public partial class V1beta1MembershipSpecForProviderEndpointGkeClusterResourceL
     [JsonPropertyName("policy")]
     public V1beta1MembershipSpecForProviderEndpointGkeClusterResourceLinkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipSpecForProviderEndpointGkeClusterResourceLinkSelectorPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1MembershipSpecForProviderEndpointGkeClusterResourceL
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in container to populate resourceLink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipSpecForProviderEndpointGkeClusterResourceLinkSelector
@@ -106,7 +117,9 @@ public partial class V1beta1MembershipSpecForProviderEndpointGkeClusterResourceL
     [JsonPropertyName("policy")]
     public V1beta1MembershipSpecForProviderEndpointGkeClusterResourceLinkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipSpecForProviderEndpointGkeCluster
@@ -123,7 +136,9 @@ public partial class V1beta1MembershipSpecForProviderEndpointGkeCluster
     [JsonPropertyName("resourceLinkSelector")]
     public V1beta1MembershipSpecForProviderEndpointGkeClusterResourceLinkSelector? ResourceLinkSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipSpecForProviderEndpoint
@@ -132,7 +147,9 @@ public partial class V1beta1MembershipSpecForProviderEndpoint
     [JsonPropertyName("gkeCluster")]
     public V1beta1MembershipSpecForProviderEndpointGkeCluster? GkeCluster { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipSpecForProvider
@@ -157,7 +174,9 @@ public partial class V1beta1MembershipSpecForProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Authority encodes how Google will recognize identities from this Membership. See the workload identity documentation for more details: https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipSpecInitProviderAuthority
@@ -166,7 +185,9 @@ public partial class V1beta1MembershipSpecInitProviderAuthority
     [JsonPropertyName("issuer")]
     public string? Issuer { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipSpecInitProviderEndpointGkeClusterResourceLinkRefPolicy
@@ -179,7 +200,9 @@ public partial class V1beta1MembershipSpecInitProviderEndpointGkeClusterResource
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in container to populate resourceLink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipSpecInitProviderEndpointGkeClusterResourceLinkRef
@@ -196,7 +219,9 @@ public partial class V1beta1MembershipSpecInitProviderEndpointGkeClusterResource
     [JsonPropertyName("policy")]
     public V1beta1MembershipSpecInitProviderEndpointGkeClusterResourceLinkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipSpecInitProviderEndpointGkeClusterResourceLinkSelectorPolicy
@@ -209,7 +234,9 @@ public partial class V1beta1MembershipSpecInitProviderEndpointGkeClusterResource
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in container to populate resourceLink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipSpecInitProviderEndpointGkeClusterResourceLinkSelector
@@ -230,7 +257,9 @@ public partial class V1beta1MembershipSpecInitProviderEndpointGkeClusterResource
     [JsonPropertyName("policy")]
     public V1beta1MembershipSpecInitProviderEndpointGkeClusterResourceLinkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipSpecInitProviderEndpointGkeCluster
@@ -247,7 +276,9 @@ public partial class V1beta1MembershipSpecInitProviderEndpointGkeCluster
     [JsonPropertyName("resourceLinkSelector")]
     public V1beta1MembershipSpecInitProviderEndpointGkeClusterResourceLinkSelector? ResourceLinkSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipSpecInitProviderEndpoint
@@ -256,7 +287,9 @@ public partial class V1beta1MembershipSpecInitProviderEndpoint
     [JsonPropertyName("gkeCluster")]
     public V1beta1MembershipSpecInitProviderEndpointGkeCluster? GkeCluster { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipSpecInitProvider
@@ -277,7 +310,9 @@ public partial class V1beta1MembershipSpecInitProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipSpecProviderConfigRef
@@ -290,7 +325,9 @@ public partial class V1beta1MembershipSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipSpecWriteConnectionSecretToRef
@@ -299,7 +336,9 @@ public partial class V1beta1MembershipSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MembershipSpec defines the desired state of Membership</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipSpec
@@ -324,7 +363,9 @@ public partial class V1beta1MembershipSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MembershipSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Authority encodes how Google will recognize identities from this Membership. See the workload identity documentation for more details: https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipStatusAtProviderAuthority
@@ -333,7 +374,9 @@ public partial class V1beta1MembershipStatusAtProviderAuthority
     [JsonPropertyName("issuer")]
     public string? Issuer { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipStatusAtProviderEndpointGkeCluster
@@ -342,7 +385,9 @@ public partial class V1beta1MembershipStatusAtProviderEndpointGkeCluster
     [JsonPropertyName("resourceLink")]
     public string? ResourceLink { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipStatusAtProviderEndpoint
@@ -351,7 +396,9 @@ public partial class V1beta1MembershipStatusAtProviderEndpoint
     [JsonPropertyName("gkeCluster")]
     public V1beta1MembershipStatusAtProviderEndpointGkeCluster? GkeCluster { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipStatusAtProvider
@@ -392,7 +439,9 @@ public partial class V1beta1MembershipStatusAtProvider
     [JsonPropertyName("terraformLabels")]
     public IDictionary<string, string>? TerraformLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipStatusConditions
@@ -421,7 +470,9 @@ public partial class V1beta1MembershipStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MembershipStatus defines the observed state of Membership.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipStatus
@@ -438,7 +489,9 @@ public partial class V1beta1MembershipStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Membership is the Schema for the Memberships API. Membership contains information about a member cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -468,3 +521,4 @@ public partial class V1beta1Membership : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1MembershipStatus? Status { get; set; }
 }
+#nullable disable

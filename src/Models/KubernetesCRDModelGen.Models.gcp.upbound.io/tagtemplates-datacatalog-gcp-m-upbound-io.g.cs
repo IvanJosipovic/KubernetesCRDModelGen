@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datacatalog.gcp.m.upbound.io;
+#nullable enable
 /// <summary>TagTemplate is the Schema for the TagTemplates API. A tag template defines a tag, which can have one or more typed fields.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TagTemplateList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1TagTemplate> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagTemplateSpecForProviderFieldsTypeEnumTypeAllowedValues
@@ -42,7 +45,9 @@ public partial class V1beta1TagTemplateSpecForProviderFieldsTypeEnumTypeAllowedV
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents an enum type. Exactly one of primitive_type or enum_type must be set Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagTemplateSpecForProviderFieldsTypeEnumType
@@ -51,7 +56,9 @@ public partial class V1beta1TagTemplateSpecForProviderFieldsTypeEnumType
     [JsonPropertyName("allowedValues")]
     public IList<V1beta1TagTemplateSpecForProviderFieldsTypeEnumTypeAllowedValues>? AllowedValues { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The type of value this tag field can contain. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagTemplateSpecForProviderFieldsType
@@ -64,7 +71,9 @@ public partial class V1beta1TagTemplateSpecForProviderFieldsType
     [JsonPropertyName("primitiveType")]
     public string? PrimitiveType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagTemplateSpecForProviderFields
@@ -93,7 +102,9 @@ public partial class V1beta1TagTemplateSpecForProviderFields
     [JsonPropertyName("type")]
     public V1beta1TagTemplateSpecForProviderFieldsType? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagTemplateSpecForProvider
@@ -118,7 +129,9 @@ public partial class V1beta1TagTemplateSpecForProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagTemplateSpecInitProviderFieldsTypeEnumTypeAllowedValues
@@ -127,7 +140,9 @@ public partial class V1beta1TagTemplateSpecInitProviderFieldsTypeEnumTypeAllowed
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents an enum type. Exactly one of primitive_type or enum_type must be set Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagTemplateSpecInitProviderFieldsTypeEnumType
@@ -136,7 +151,9 @@ public partial class V1beta1TagTemplateSpecInitProviderFieldsTypeEnumType
     [JsonPropertyName("allowedValues")]
     public IList<V1beta1TagTemplateSpecInitProviderFieldsTypeEnumTypeAllowedValues>? AllowedValues { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The type of value this tag field can contain. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagTemplateSpecInitProviderFieldsType
@@ -149,7 +166,9 @@ public partial class V1beta1TagTemplateSpecInitProviderFieldsType
     [JsonPropertyName("primitiveType")]
     public string? PrimitiveType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagTemplateSpecInitProviderFields
@@ -178,7 +197,9 @@ public partial class V1beta1TagTemplateSpecInitProviderFields
     [JsonPropertyName("type")]
     public V1beta1TagTemplateSpecInitProviderFieldsType? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagTemplateSpecInitProvider
@@ -199,7 +220,9 @@ public partial class V1beta1TagTemplateSpecInitProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagTemplateSpecProviderConfigRef
@@ -212,7 +235,9 @@ public partial class V1beta1TagTemplateSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagTemplateSpecWriteConnectionSecretToRef
@@ -221,7 +246,9 @@ public partial class V1beta1TagTemplateSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TagTemplateSpec defines the desired state of TagTemplate</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagTemplateSpec
@@ -246,7 +273,9 @@ public partial class V1beta1TagTemplateSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TagTemplateSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagTemplateStatusAtProviderFieldsTypeEnumTypeAllowedValues
@@ -255,7 +284,9 @@ public partial class V1beta1TagTemplateStatusAtProviderFieldsTypeEnumTypeAllowed
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents an enum type. Exactly one of primitive_type or enum_type must be set Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagTemplateStatusAtProviderFieldsTypeEnumType
@@ -264,7 +295,9 @@ public partial class V1beta1TagTemplateStatusAtProviderFieldsTypeEnumType
     [JsonPropertyName("allowedValues")]
     public IList<V1beta1TagTemplateStatusAtProviderFieldsTypeEnumTypeAllowedValues>? AllowedValues { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The type of value this tag field can contain. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagTemplateStatusAtProviderFieldsType
@@ -277,7 +310,9 @@ public partial class V1beta1TagTemplateStatusAtProviderFieldsType
     [JsonPropertyName("primitiveType")]
     public string? PrimitiveType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagTemplateStatusAtProviderFields
@@ -310,7 +345,9 @@ public partial class V1beta1TagTemplateStatusAtProviderFields
     [JsonPropertyName("type")]
     public V1beta1TagTemplateStatusAtProviderFieldsType? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagTemplateStatusAtProvider
@@ -343,7 +380,9 @@ public partial class V1beta1TagTemplateStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagTemplateStatusConditions
@@ -372,7 +411,9 @@ public partial class V1beta1TagTemplateStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TagTemplateStatus defines the observed state of TagTemplate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagTemplateStatus
@@ -389,7 +430,9 @@ public partial class V1beta1TagTemplateStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TagTemplate is the Schema for the TagTemplates API. A tag template defines a tag, which can have one or more typed fields.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -419,3 +462,4 @@ public partial class V1beta1TagTemplate : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1TagTemplateStatus? Status { get; set; }
 }
+#nullable disable

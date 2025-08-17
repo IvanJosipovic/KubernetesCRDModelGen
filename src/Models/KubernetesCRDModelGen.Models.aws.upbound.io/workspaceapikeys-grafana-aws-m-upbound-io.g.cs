@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.grafana.aws.m.upbound.io;
+#nullable enable
 /// <summary>WorkspaceAPIKey is the Schema for the WorkspaceAPIKeys API. Creates a Grafana API key for the workspace. This key can be used to authenticate requests sent to the workspace's HTTP API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1WorkspaceAPIKeyList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1WorkspaceAPIKey> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceAPIKeySpecForProviderWorkspaceIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1WorkspaceAPIKeySpecForProviderWorkspaceIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in grafana to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceAPIKeySpecForProviderWorkspaceIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1WorkspaceAPIKeySpecForProviderWorkspaceIdRef
     [JsonPropertyName("policy")]
     public V1beta1WorkspaceAPIKeySpecForProviderWorkspaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceAPIKeySpecForProviderWorkspaceIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1WorkspaceAPIKeySpecForProviderWorkspaceIdSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in grafana to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceAPIKeySpecForProviderWorkspaceIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1WorkspaceAPIKeySpecForProviderWorkspaceIdSelector
     [JsonPropertyName("policy")]
     public V1beta1WorkspaceAPIKeySpecForProviderWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceAPIKeySpecForProvider
@@ -130,7 +141,9 @@ public partial class V1beta1WorkspaceAPIKeySpecForProvider
     [JsonPropertyName("workspaceIdSelector")]
     public V1beta1WorkspaceAPIKeySpecForProviderWorkspaceIdSelector? WorkspaceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceAPIKeySpecInitProviderWorkspaceIdRefPolicy
@@ -143,7 +156,9 @@ public partial class V1beta1WorkspaceAPIKeySpecInitProviderWorkspaceIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in grafana to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceAPIKeySpecInitProviderWorkspaceIdRef
@@ -160,7 +175,9 @@ public partial class V1beta1WorkspaceAPIKeySpecInitProviderWorkspaceIdRef
     [JsonPropertyName("policy")]
     public V1beta1WorkspaceAPIKeySpecInitProviderWorkspaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceAPIKeySpecInitProviderWorkspaceIdSelectorPolicy
@@ -173,7 +190,9 @@ public partial class V1beta1WorkspaceAPIKeySpecInitProviderWorkspaceIdSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in grafana to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceAPIKeySpecInitProviderWorkspaceIdSelector
@@ -194,7 +213,9 @@ public partial class V1beta1WorkspaceAPIKeySpecInitProviderWorkspaceIdSelector
     [JsonPropertyName("policy")]
     public V1beta1WorkspaceAPIKeySpecInitProviderWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceAPIKeySpecInitProvider
@@ -223,7 +244,9 @@ public partial class V1beta1WorkspaceAPIKeySpecInitProvider
     [JsonPropertyName("workspaceIdSelector")]
     public V1beta1WorkspaceAPIKeySpecInitProviderWorkspaceIdSelector? WorkspaceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceAPIKeySpecProviderConfigRef
@@ -236,7 +259,9 @@ public partial class V1beta1WorkspaceAPIKeySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceAPIKeySpecWriteConnectionSecretToRef
@@ -245,7 +270,9 @@ public partial class V1beta1WorkspaceAPIKeySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkspaceAPIKeySpec defines the desired state of WorkspaceAPIKey</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceAPIKeySpec
@@ -270,7 +297,9 @@ public partial class V1beta1WorkspaceAPIKeySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1WorkspaceAPIKeySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceAPIKeyStatusAtProvider
@@ -299,7 +328,9 @@ public partial class V1beta1WorkspaceAPIKeyStatusAtProvider
     [JsonPropertyName("workspaceId")]
     public string? WorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceAPIKeyStatusConditions
@@ -328,7 +359,9 @@ public partial class V1beta1WorkspaceAPIKeyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkspaceAPIKeyStatus defines the observed state of WorkspaceAPIKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceAPIKeyStatus
@@ -345,7 +378,9 @@ public partial class V1beta1WorkspaceAPIKeyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkspaceAPIKey is the Schema for the WorkspaceAPIKeys API. Creates a Grafana API key for the workspace. This key can be used to authenticate requests sent to the workspace's HTTP API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -375,3 +410,4 @@ public partial class V1beta1WorkspaceAPIKey : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1WorkspaceAPIKeyStatus? Status { get; set; }
 }
+#nullable disable

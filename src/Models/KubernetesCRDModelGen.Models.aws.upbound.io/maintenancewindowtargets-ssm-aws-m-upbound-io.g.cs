@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ssm.aws.m.upbound.io;
+#nullable enable
 /// <summary>MaintenanceWindowTarget is the Schema for the MaintenanceWindowTargets API. Provides an SSM Maintenance Window Target resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MaintenanceWindowTargetList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1MaintenanceWindowTarget> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecForProviderTargets
@@ -46,7 +49,9 @@ public partial class V1beta1MaintenanceWindowTargetSpecForProviderTargets
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecForProviderWindowIdRefPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1MaintenanceWindowTargetSpecForProviderWindowIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MaintenanceWindow in ssm to populate windowId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecForProviderWindowIdRef
@@ -76,7 +83,9 @@ public partial class V1beta1MaintenanceWindowTargetSpecForProviderWindowIdRef
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTargetSpecForProviderWindowIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecForProviderWindowIdSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1MaintenanceWindowTargetSpecForProviderWindowIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MaintenanceWindow in ssm to populate windowId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecForProviderWindowIdSelector
@@ -110,7 +121,9 @@ public partial class V1beta1MaintenanceWindowTargetSpecForProviderWindowIdSelect
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTargetSpecForProviderWindowIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecForProvider
@@ -151,7 +164,9 @@ public partial class V1beta1MaintenanceWindowTargetSpecForProvider
     [JsonPropertyName("windowIdSelector")]
     public V1beta1MaintenanceWindowTargetSpecForProviderWindowIdSelector? WindowIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecInitProviderTargets
@@ -164,7 +179,9 @@ public partial class V1beta1MaintenanceWindowTargetSpecInitProviderTargets
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdRefPolicy
@@ -177,7 +194,9 @@ public partial class V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MaintenanceWindow in ssm to populate windowId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdRef
@@ -194,7 +213,9 @@ public partial class V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdRef
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdSelectorPolicy
@@ -207,7 +228,9 @@ public partial class V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MaintenanceWindow in ssm to populate windowId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdSelector
@@ -228,7 +251,9 @@ public partial class V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdSelec
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecInitProvider
@@ -265,7 +290,9 @@ public partial class V1beta1MaintenanceWindowTargetSpecInitProvider
     [JsonPropertyName("windowIdSelector")]
     public V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdSelector? WindowIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecProviderConfigRef
@@ -278,7 +305,9 @@ public partial class V1beta1MaintenanceWindowTargetSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpecWriteConnectionSecretToRef
@@ -287,7 +316,9 @@ public partial class V1beta1MaintenanceWindowTargetSpecWriteConnectionSecretToRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MaintenanceWindowTargetSpec defines the desired state of MaintenanceWindowTarget</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetSpec
@@ -312,7 +343,9 @@ public partial class V1beta1MaintenanceWindowTargetSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MaintenanceWindowTargetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetStatusAtProviderTargets
@@ -325,7 +358,9 @@ public partial class V1beta1MaintenanceWindowTargetStatusAtProviderTargets
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetStatusAtProvider
@@ -362,7 +397,9 @@ public partial class V1beta1MaintenanceWindowTargetStatusAtProvider
     [JsonPropertyName("windowId")]
     public string? WindowId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetStatusConditions
@@ -391,7 +428,9 @@ public partial class V1beta1MaintenanceWindowTargetStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MaintenanceWindowTargetStatus defines the observed state of MaintenanceWindowTarget.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTargetStatus
@@ -408,7 +447,9 @@ public partial class V1beta1MaintenanceWindowTargetStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MaintenanceWindowTarget is the Schema for the MaintenanceWindowTargets API. Provides an SSM Maintenance Window Target resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -438,3 +479,4 @@ public partial class V1beta1MaintenanceWindowTarget : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1MaintenanceWindowTargetStatus? Status { get; set; }
 }
+#nullable disable

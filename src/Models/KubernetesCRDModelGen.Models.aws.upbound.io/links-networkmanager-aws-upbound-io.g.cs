@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkmanager.aws.upbound.io;
+#nullable enable
 /// <summary>Link is the Schema for the Links API. Manages a Network Manager link.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LinkList : IKubernetesObject<V1ListMeta>, IItems<V1b
     [JsonPropertyName("items")]
     public IList<V1beta1Link> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkSpecForProviderBandwidth
@@ -46,7 +49,9 @@ public partial class V1beta1LinkSpecForProviderBandwidth
     [JsonPropertyName("uploadSpeed")]
     public double? UploadSpeed { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkSpecForProviderGlobalNetworkIdRefPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1LinkSpecForProviderGlobalNetworkIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a GlobalNetwork in networkmanager to populate globalNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkSpecForProviderGlobalNetworkIdRef
@@ -72,7 +79,9 @@ public partial class V1beta1LinkSpecForProviderGlobalNetworkIdRef
     [JsonPropertyName("policy")]
     public V1beta1LinkSpecForProviderGlobalNetworkIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkSpecForProviderGlobalNetworkIdSelectorPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1LinkSpecForProviderGlobalNetworkIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a GlobalNetwork in networkmanager to populate globalNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkSpecForProviderGlobalNetworkIdSelector
@@ -102,7 +113,9 @@ public partial class V1beta1LinkSpecForProviderGlobalNetworkIdSelector
     [JsonPropertyName("policy")]
     public V1beta1LinkSpecForProviderGlobalNetworkIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkSpecForProviderSiteIdRefPolicy
@@ -115,7 +128,9 @@ public partial class V1beta1LinkSpecForProviderSiteIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Site in networkmanager to populate siteId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkSpecForProviderSiteIdRef
@@ -128,7 +143,9 @@ public partial class V1beta1LinkSpecForProviderSiteIdRef
     [JsonPropertyName("policy")]
     public V1beta1LinkSpecForProviderSiteIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkSpecForProviderSiteIdSelectorPolicy
@@ -141,7 +158,9 @@ public partial class V1beta1LinkSpecForProviderSiteIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Site in networkmanager to populate siteId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkSpecForProviderSiteIdSelector
@@ -158,7 +177,9 @@ public partial class V1beta1LinkSpecForProviderSiteIdSelector
     [JsonPropertyName("policy")]
     public V1beta1LinkSpecForProviderSiteIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkSpecForProvider
@@ -207,7 +228,9 @@ public partial class V1beta1LinkSpecForProvider
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkSpecInitProviderBandwidth
@@ -220,7 +243,9 @@ public partial class V1beta1LinkSpecInitProviderBandwidth
     [JsonPropertyName("uploadSpeed")]
     public double? UploadSpeed { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkSpecInitProviderGlobalNetworkIdRefPolicy
@@ -233,7 +258,9 @@ public partial class V1beta1LinkSpecInitProviderGlobalNetworkIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a GlobalNetwork in networkmanager to populate globalNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkSpecInitProviderGlobalNetworkIdRef
@@ -246,7 +273,9 @@ public partial class V1beta1LinkSpecInitProviderGlobalNetworkIdRef
     [JsonPropertyName("policy")]
     public V1beta1LinkSpecInitProviderGlobalNetworkIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkSpecInitProviderGlobalNetworkIdSelectorPolicy
@@ -259,7 +288,9 @@ public partial class V1beta1LinkSpecInitProviderGlobalNetworkIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a GlobalNetwork in networkmanager to populate globalNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkSpecInitProviderGlobalNetworkIdSelector
@@ -276,7 +307,9 @@ public partial class V1beta1LinkSpecInitProviderGlobalNetworkIdSelector
     [JsonPropertyName("policy")]
     public V1beta1LinkSpecInitProviderGlobalNetworkIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkSpecInitProviderSiteIdRefPolicy
@@ -289,7 +322,9 @@ public partial class V1beta1LinkSpecInitProviderSiteIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Site in networkmanager to populate siteId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkSpecInitProviderSiteIdRef
@@ -302,7 +337,9 @@ public partial class V1beta1LinkSpecInitProviderSiteIdRef
     [JsonPropertyName("policy")]
     public V1beta1LinkSpecInitProviderSiteIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkSpecInitProviderSiteIdSelectorPolicy
@@ -315,7 +352,9 @@ public partial class V1beta1LinkSpecInitProviderSiteIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Site in networkmanager to populate siteId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkSpecInitProviderSiteIdSelector
@@ -332,7 +371,9 @@ public partial class V1beta1LinkSpecInitProviderSiteIdSelector
     [JsonPropertyName("policy")]
     public V1beta1LinkSpecInitProviderSiteIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkSpecInitProvider
@@ -381,7 +422,9 @@ public partial class V1beta1LinkSpecInitProvider
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkSpecProviderConfigRefPolicy
@@ -394,7 +437,9 @@ public partial class V1beta1LinkSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkSpecProviderConfigRef
@@ -407,7 +452,9 @@ public partial class V1beta1LinkSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1LinkSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkSpecWriteConnectionSecretToRef
@@ -420,7 +467,9 @@ public partial class V1beta1LinkSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LinkSpec defines the desired state of Link</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkSpec
@@ -449,7 +498,9 @@ public partial class V1beta1LinkSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LinkSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkStatusAtProviderBandwidth
@@ -462,7 +513,9 @@ public partial class V1beta1LinkStatusAtProviderBandwidth
     [JsonPropertyName("uploadSpeed")]
     public double? UploadSpeed { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkStatusAtProvider
@@ -507,7 +560,9 @@ public partial class V1beta1LinkStatusAtProvider
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkStatusConditions
@@ -536,7 +591,9 @@ public partial class V1beta1LinkStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LinkStatus defines the observed state of Link.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkStatus
@@ -553,7 +610,9 @@ public partial class V1beta1LinkStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Link is the Schema for the Links API. Manages a Network Manager link.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -583,3 +642,4 @@ public partial class V1beta1Link : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta
     [JsonPropertyName("status")]
     public V1beta1LinkStatus? Status { get; set; }
 }
+#nullable disable

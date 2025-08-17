@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.app.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20240301.ContainerApp Generator information: - Generated from: /app/resource-manager/Microsoft.App/stable/2024-03-01/ContainerApps.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20240301storageContainerAppList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1api20240301storageContainerApp> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Dapr Container App Dapr configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecConfigurationDapr
@@ -74,7 +77,9 @@ public partial class V1api20240301storageContainerAppSpecConfigurationDapr
     [JsonPropertyName("logLevel")]
     public string? LogLevel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.IngressPortMapping Port mappings of container app ingress</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecConfigurationIngressAdditionalPortMappings
@@ -95,7 +100,9 @@ public partial class V1api20240301storageContainerAppSpecConfigurationIngressAdd
     [JsonPropertyName("targetPort")]
     public int? TargetPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.CorsPolicy Cross-Origin-Resource-Sharing policy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecConfigurationIngressCorsPolicy
@@ -128,7 +135,9 @@ public partial class V1api20240301storageContainerAppSpecConfigurationIngressCor
     [JsonPropertyName("maxAge")]
     public int? MaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CertificateReference: Resource Id of the Certificate to be bound to this hostname. Must exist in the Managed Environment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecConfigurationIngressCustomDomainsCertificateReference
@@ -149,7 +158,9 @@ public partial class V1api20240301storageContainerAppSpecConfigurationIngressCus
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.CustomDomain Custom Domain of a Container App</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecConfigurationIngressCustomDomains
@@ -170,7 +181,9 @@ public partial class V1api20240301storageContainerAppSpecConfigurationIngressCus
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.IpSecurityRestrictionRule Rule to restrict incoming IP address.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecConfigurationIngressIpSecurityRestrictions
@@ -195,7 +208,9 @@ public partial class V1api20240301storageContainerAppSpecConfigurationIngressIpS
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Ingress_StickySessions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecConfigurationIngressStickySessions
@@ -208,7 +223,9 @@ public partial class V1api20240301storageContainerAppSpecConfigurationIngressSti
     [JsonPropertyName("affinity")]
     public string? Affinity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.TrafficWeight Traffic weight assigned to a revision</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecConfigurationIngressTraffic
@@ -233,7 +250,9 @@ public partial class V1api20240301storageContainerAppSpecConfigurationIngressTra
     [JsonPropertyName("weight")]
     public int? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Ingress Container App Ingress configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecConfigurationIngress
@@ -290,7 +309,9 @@ public partial class V1api20240301storageContainerAppSpecConfigurationIngress
     [JsonPropertyName("transport")]
     public string? Transport { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IdentityReference: A Managed Identity to use to authenticate with Azure Container Registry. For user-assigned identities, use the full user-assigned identity Resource ID. For system-assigned identities, use 'system'</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecConfigurationRegistriesIdentityReference
@@ -311,7 +332,9 @@ public partial class V1api20240301storageContainerAppSpecConfigurationRegistries
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.RegistryCredentials Container App Private Registry</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecConfigurationRegistries
@@ -336,7 +359,9 @@ public partial class V1api20240301storageContainerAppSpecConfigurationRegistries
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IdentityReference: Resource ID of a managed identity to authenticate with Azure Key Vault, or System to use a system-assigned identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecConfigurationSecretsIdentityReference
@@ -357,7 +382,9 @@ public partial class V1api20240301storageContainerAppSpecConfigurationSecretsIde
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecConfigurationSecretsValue
@@ -370,7 +397,9 @@ public partial class V1api20240301storageContainerAppSpecConfigurationSecretsVal
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Secret Secret definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecConfigurationSecrets
@@ -395,7 +424,9 @@ public partial class V1api20240301storageContainerAppSpecConfigurationSecrets
     [JsonPropertyName("value")]
     public V1api20240301storageContainerAppSpecConfigurationSecretsValue? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Service Container App to be a dev service</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecConfigurationService
@@ -408,7 +439,9 @@ public partial class V1api20240301storageContainerAppSpecConfigurationService
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Configuration Non versioned Container App configuration properties that define the mutable settings of a Container app</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecConfiguration
@@ -445,7 +478,9 @@ public partial class V1api20240301storageContainerAppSpecConfiguration
     [JsonPropertyName("service")]
     public V1api20240301storageContainerAppSpecConfigurationService? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnvironmentReference: Resource ID of environment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecEnvironmentReference
@@ -466,7 +501,9 @@ public partial class V1api20240301storageContainerAppSpecEnvironmentReference
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ExtendedLocation The complex type of the extended location.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecExtendedLocation
@@ -483,7 +520,9 @@ public partial class V1api20240301storageContainerAppSpecExtendedLocation
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecIdentityUserAssignedIdentitiesReference
@@ -504,7 +543,9 @@ public partial class V1api20240301storageContainerAppSpecIdentityUserAssignedIde
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecIdentityUserAssignedIdentities
@@ -517,7 +558,9 @@ public partial class V1api20240301storageContainerAppSpecIdentityUserAssignedIde
     [JsonPropertyName("reference")]
     public V1api20240301storageContainerAppSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ManagedServiceIdentity Managed service identity (system assigned and/or user assigned identities)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecIdentity
@@ -534,7 +577,9 @@ public partial class V1api20240301storageContainerAppSpecIdentity
     [JsonPropertyName("userAssignedIdentities")]
     public IList<V1api20240301storageContainerAppSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedByReference: The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecManagedByReference
@@ -555,7 +600,9 @@ public partial class V1api20240301storageContainerAppSpecManagedByReference
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedEnvironmentReference: Deprecated. Resource ID of the Container App's environment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecManagedEnvironmentReference
@@ -576,7 +623,9 @@ public partial class V1api20240301storageContainerAppSpecManagedEnvironmentRefer
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecOperatorSpecConfigMapExpressions
@@ -593,7 +642,9 @@ public partial class V1api20240301storageContainerAppSpecOperatorSpecConfigMapEx
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to: SecretDestination in secrets.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecOperatorSpecConfigMapsEventStreamEndpoint
@@ -606,7 +657,9 @@ public partial class V1api20240301storageContainerAppSpecOperatorSpecConfigMapsE
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to: SecretDestination in secrets.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecOperatorSpecConfigMapsFqdn
@@ -619,7 +672,9 @@ public partial class V1api20240301storageContainerAppSpecOperatorSpecConfigMapsF
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ContainerAppOperatorConfigMaps</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecOperatorSpecConfigMaps
@@ -636,7 +691,9 @@ public partial class V1api20240301storageContainerAppSpecOperatorSpecConfigMaps
     [JsonPropertyName("fqdn")]
     public V1api20240301storageContainerAppSpecOperatorSpecConfigMapsFqdn? Fqdn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecOperatorSpecSecretExpressions
@@ -653,7 +710,9 @@ public partial class V1api20240301storageContainerAppSpecOperatorSpecSecretExpre
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ContainerAppOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecOperatorSpec
@@ -674,7 +733,9 @@ public partial class V1api20240301storageContainerAppSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20240301storageContainerAppSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecOwner
@@ -687,7 +748,9 @@ public partial class V1api20240301storageContainerAppSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.EnvironmentVar Container App container environment variable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecTemplateContainersEnv
@@ -708,7 +771,9 @@ public partial class V1api20240301storageContainerAppSpecTemplateContainersEnv
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ContainerAppProbe_HttpGet_HttpHeaders</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecTemplateContainersProbesHttpGetHttpHeaders
@@ -725,7 +790,9 @@ public partial class V1api20240301storageContainerAppSpecTemplateContainersProbe
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ContainerAppProbe_HttpGet</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecTemplateContainersProbesHttpGet
@@ -754,7 +821,9 @@ public partial class V1api20240301storageContainerAppSpecTemplateContainersProbe
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ContainerAppProbe_TcpSocket</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecTemplateContainersProbesTcpSocket
@@ -771,7 +840,9 @@ public partial class V1api20240301storageContainerAppSpecTemplateContainersProbe
     [JsonPropertyName("port")]
     public int? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ContainerAppProbe Probe describes a health check to be performed against a container to determine whether it is alive or ready to receive traffic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecTemplateContainersProbes
@@ -816,7 +887,9 @@ public partial class V1api20240301storageContainerAppSpecTemplateContainersProbe
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ContainerResources Container App container resource requirements.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecTemplateContainersResources
@@ -833,7 +906,9 @@ public partial class V1api20240301storageContainerAppSpecTemplateContainersResou
     [JsonPropertyName("memory")]
     public string? Memory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VolumeMount Volume mount for the Container App.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecTemplateContainersVolumeMounts
@@ -854,7 +929,9 @@ public partial class V1api20240301storageContainerAppSpecTemplateContainersVolum
     [JsonPropertyName("volumeName")]
     public string? VolumeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Container Container App container definition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecTemplateContainers
@@ -895,7 +972,9 @@ public partial class V1api20240301storageContainerAppSpecTemplateContainers
     [JsonPropertyName("volumeMounts")]
     public IList<V1api20240301storageContainerAppSpecTemplateContainersVolumeMounts>? VolumeMounts { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.EnvironmentVar Container App container environment variable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecTemplateInitContainersEnv
@@ -916,7 +995,9 @@ public partial class V1api20240301storageContainerAppSpecTemplateInitContainersE
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ContainerResources Container App container resource requirements.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecTemplateInitContainersResources
@@ -933,7 +1014,9 @@ public partial class V1api20240301storageContainerAppSpecTemplateInitContainersR
     [JsonPropertyName("memory")]
     public string? Memory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VolumeMount Volume mount for the Container App.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecTemplateInitContainersVolumeMounts
@@ -954,7 +1037,9 @@ public partial class V1api20240301storageContainerAppSpecTemplateInitContainersV
     [JsonPropertyName("volumeName")]
     public string? VolumeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.BaseContainer Container App base container definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecTemplateInitContainers
@@ -991,7 +1076,9 @@ public partial class V1api20240301storageContainerAppSpecTemplateInitContainers
     [JsonPropertyName("volumeMounts")]
     public IList<V1api20240301storageContainerAppSpecTemplateInitContainersVolumeMounts>? VolumeMounts { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ScaleRuleAuth Auth Secrets for Scale Rule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecTemplateScaleRulesAzureQueueAuth
@@ -1008,7 +1095,9 @@ public partial class V1api20240301storageContainerAppSpecTemplateScaleRulesAzure
     [JsonPropertyName("triggerParameter")]
     public string? TriggerParameter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.QueueScaleRule Container App container Azure Queue based scaling rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecTemplateScaleRulesAzureQueue
@@ -1029,7 +1118,9 @@ public partial class V1api20240301storageContainerAppSpecTemplateScaleRulesAzure
     [JsonPropertyName("queueName")]
     public string? QueueName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ScaleRuleAuth Auth Secrets for Scale Rule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecTemplateScaleRulesCustomAuth
@@ -1046,7 +1137,9 @@ public partial class V1api20240301storageContainerAppSpecTemplateScaleRulesCusto
     [JsonPropertyName("triggerParameter")]
     public string? TriggerParameter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.CustomScaleRule Container App container Custom scaling rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecTemplateScaleRulesCustom
@@ -1067,7 +1160,9 @@ public partial class V1api20240301storageContainerAppSpecTemplateScaleRulesCusto
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ScaleRuleAuth Auth Secrets for Scale Rule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecTemplateScaleRulesHttpAuth
@@ -1084,7 +1179,9 @@ public partial class V1api20240301storageContainerAppSpecTemplateScaleRulesHttpA
     [JsonPropertyName("triggerParameter")]
     public string? TriggerParameter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.HttpScaleRule Container App container Http scaling rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecTemplateScaleRulesHttp
@@ -1101,7 +1198,9 @@ public partial class V1api20240301storageContainerAppSpecTemplateScaleRulesHttp
     [JsonPropertyName("metadata")]
     public IDictionary<string, string>? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ScaleRuleAuth Auth Secrets for Scale Rule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecTemplateScaleRulesTcpAuth
@@ -1118,7 +1217,9 @@ public partial class V1api20240301storageContainerAppSpecTemplateScaleRulesTcpAu
     [JsonPropertyName("triggerParameter")]
     public string? TriggerParameter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.TcpScaleRule Container App container Tcp scaling rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecTemplateScaleRulesTcp
@@ -1135,7 +1236,9 @@ public partial class V1api20240301storageContainerAppSpecTemplateScaleRulesTcp
     [JsonPropertyName("metadata")]
     public IDictionary<string, string>? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ScaleRule Container App container scaling rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecTemplateScaleRules
@@ -1164,7 +1267,9 @@ public partial class V1api20240301storageContainerAppSpecTemplateScaleRules
     [JsonPropertyName("tcp")]
     public V1api20240301storageContainerAppSpecTemplateScaleRulesTcp? Tcp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Scale Container App scaling configurations.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecTemplateScale
@@ -1185,7 +1290,9 @@ public partial class V1api20240301storageContainerAppSpecTemplateScale
     [JsonPropertyName("rules")]
     public IList<V1api20240301storageContainerAppSpecTemplateScaleRules>? Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServiceReference: Resource id of the target service</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecTemplateServiceBindsServiceReference
@@ -1206,7 +1313,9 @@ public partial class V1api20240301storageContainerAppSpecTemplateServiceBindsSer
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ServiceBind Configuration to bind a ContainerApp to a dev ContainerApp Service</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecTemplateServiceBinds
@@ -1223,7 +1332,9 @@ public partial class V1api20240301storageContainerAppSpecTemplateServiceBinds
     [JsonPropertyName("serviceReference")]
     public V1api20240301storageContainerAppSpecTemplateServiceBindsServiceReference? ServiceReference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SecretVolumeItem Secret to be added to volume.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecTemplateVolumesSecrets
@@ -1240,7 +1351,9 @@ public partial class V1api20240301storageContainerAppSpecTemplateVolumesSecrets
     [JsonPropertyName("secretRef")]
     public string? SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Volume Volume definitions for the Container App.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecTemplateVolumes
@@ -1269,7 +1382,9 @@ public partial class V1api20240301storageContainerAppSpecTemplateVolumes
     [JsonPropertyName("storageType")]
     public string? StorageType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Template Container App versioned application definition. Defines the desired state of an immutable revision. Any changes to this section Will result in a new revision being created</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpecTemplate
@@ -1306,7 +1421,9 @@ public partial class V1api20240301storageContainerAppSpecTemplate
     [JsonPropertyName("volumes")]
     public IList<V1api20240301storageContainerAppSpecTemplateVolumes>? Volumes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ContainerApp_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppSpec
@@ -1371,7 +1488,9 @@ public partial class V1api20240301storageContainerAppSpec
     [JsonPropertyName("workloadProfileName")]
     public string? WorkloadProfileName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusConditions
@@ -1404,7 +1523,9 @@ public partial class V1api20240301storageContainerAppStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Dapr_STATUS Container App Dapr configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusConfigurationDapr
@@ -1445,7 +1566,9 @@ public partial class V1api20240301storageContainerAppStatusConfigurationDapr
     [JsonPropertyName("logLevel")]
     public string? LogLevel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.IngressPortMapping_STATUS Port mappings of container app ingress</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusConfigurationIngressAdditionalPortMappings
@@ -1466,7 +1589,9 @@ public partial class V1api20240301storageContainerAppStatusConfigurationIngressA
     [JsonPropertyName("targetPort")]
     public int? TargetPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.CorsPolicy_STATUS Cross-Origin-Resource-Sharing policy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusConfigurationIngressCorsPolicy
@@ -1499,7 +1624,9 @@ public partial class V1api20240301storageContainerAppStatusConfigurationIngressC
     [JsonPropertyName("maxAge")]
     public int? MaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.CustomDomain_STATUS Custom Domain of a Container App</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusConfigurationIngressCustomDomains
@@ -1520,7 +1647,9 @@ public partial class V1api20240301storageContainerAppStatusConfigurationIngressC
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.IpSecurityRestrictionRule_STATUS Rule to restrict incoming IP address.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusConfigurationIngressIpSecurityRestrictions
@@ -1545,7 +1674,9 @@ public partial class V1api20240301storageContainerAppStatusConfigurationIngressI
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Ingress_StickySessions_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusConfigurationIngressStickySessions
@@ -1558,7 +1689,9 @@ public partial class V1api20240301storageContainerAppStatusConfigurationIngressS
     [JsonPropertyName("affinity")]
     public string? Affinity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.TrafficWeight_STATUS Traffic weight assigned to a revision</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusConfigurationIngressTraffic
@@ -1583,7 +1716,9 @@ public partial class V1api20240301storageContainerAppStatusConfigurationIngressT
     [JsonPropertyName("weight")]
     public int? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Ingress_STATUS Container App Ingress configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusConfigurationIngress
@@ -1644,7 +1779,9 @@ public partial class V1api20240301storageContainerAppStatusConfigurationIngress
     [JsonPropertyName("transport")]
     public string? Transport { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.RegistryCredentials_STATUS Container App Private Registry</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusConfigurationRegistries
@@ -1669,7 +1806,9 @@ public partial class V1api20240301storageContainerAppStatusConfigurationRegistri
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Secret_STATUS Secret definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusConfigurationSecrets
@@ -1690,7 +1829,9 @@ public partial class V1api20240301storageContainerAppStatusConfigurationSecrets
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Service_STATUS Container App to be a dev service</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusConfigurationService
@@ -1703,7 +1844,9 @@ public partial class V1api20240301storageContainerAppStatusConfigurationService
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Configuration_STATUS Non versioned Container App configuration properties that define the mutable settings of a Container app</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusConfiguration
@@ -1740,7 +1883,9 @@ public partial class V1api20240301storageContainerAppStatusConfiguration
     [JsonPropertyName("service")]
     public V1api20240301storageContainerAppStatusConfigurationService? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ExtendedLocation_STATUS The complex type of the extended location.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusExtendedLocation
@@ -1757,7 +1902,9 @@ public partial class V1api20240301storageContainerAppStatusExtendedLocation
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.UserAssignedIdentity_STATUS User assigned identity properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusIdentityUserAssignedIdentities
@@ -1774,7 +1921,9 @@ public partial class V1api20240301storageContainerAppStatusIdentityUserAssignedI
     [JsonPropertyName("principalId")]
     public string? PrincipalId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ManagedServiceIdentity_STATUS Managed service identity (system assigned and/or user assigned identities)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusIdentity
@@ -1799,7 +1948,9 @@ public partial class V1api20240301storageContainerAppStatusIdentity
     [JsonPropertyName("userAssignedIdentities")]
     public IDictionary<string, V1api20240301storageContainerAppStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusSystemData
@@ -1832,7 +1983,9 @@ public partial class V1api20240301storageContainerAppStatusSystemData
     [JsonPropertyName("lastModifiedByType")]
     public string? LastModifiedByType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.EnvironmentVar_STATUS Container App container environment variable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusTemplateContainersEnv
@@ -1853,7 +2006,9 @@ public partial class V1api20240301storageContainerAppStatusTemplateContainersEnv
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ContainerAppProbe_HttpGet_HttpHeaders_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusTemplateContainersProbesHttpGetHttpHeaders
@@ -1870,7 +2025,9 @@ public partial class V1api20240301storageContainerAppStatusTemplateContainersPro
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ContainerAppProbe_HttpGet_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusTemplateContainersProbesHttpGet
@@ -1899,7 +2056,9 @@ public partial class V1api20240301storageContainerAppStatusTemplateContainersPro
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ContainerAppProbe_TcpSocket_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusTemplateContainersProbesTcpSocket
@@ -1916,7 +2075,9 @@ public partial class V1api20240301storageContainerAppStatusTemplateContainersPro
     [JsonPropertyName("port")]
     public int? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ContainerAppProbe_STATUS Probe describes a health check to be performed against a container to determine whether it is alive or ready to receive traffic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusTemplateContainersProbes
@@ -1961,7 +2122,9 @@ public partial class V1api20240301storageContainerAppStatusTemplateContainersPro
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ContainerResources_STATUS Container App container resource requirements.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusTemplateContainersResources
@@ -1982,7 +2145,9 @@ public partial class V1api20240301storageContainerAppStatusTemplateContainersRes
     [JsonPropertyName("memory")]
     public string? Memory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VolumeMount_STATUS Volume mount for the Container App.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusTemplateContainersVolumeMounts
@@ -2003,7 +2168,9 @@ public partial class V1api20240301storageContainerAppStatusTemplateContainersVol
     [JsonPropertyName("volumeName")]
     public string? VolumeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Container_STATUS Container App container definition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusTemplateContainers
@@ -2044,7 +2211,9 @@ public partial class V1api20240301storageContainerAppStatusTemplateContainers
     [JsonPropertyName("volumeMounts")]
     public IList<V1api20240301storageContainerAppStatusTemplateContainersVolumeMounts>? VolumeMounts { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.EnvironmentVar_STATUS Container App container environment variable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusTemplateInitContainersEnv
@@ -2065,7 +2234,9 @@ public partial class V1api20240301storageContainerAppStatusTemplateInitContainer
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ContainerResources_STATUS Container App container resource requirements.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusTemplateInitContainersResources
@@ -2086,7 +2257,9 @@ public partial class V1api20240301storageContainerAppStatusTemplateInitContainer
     [JsonPropertyName("memory")]
     public string? Memory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VolumeMount_STATUS Volume mount for the Container App.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusTemplateInitContainersVolumeMounts
@@ -2107,7 +2280,9 @@ public partial class V1api20240301storageContainerAppStatusTemplateInitContainer
     [JsonPropertyName("volumeName")]
     public string? VolumeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.BaseContainer_STATUS Container App base container definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusTemplateInitContainers
@@ -2144,7 +2319,9 @@ public partial class V1api20240301storageContainerAppStatusTemplateInitContainer
     [JsonPropertyName("volumeMounts")]
     public IList<V1api20240301storageContainerAppStatusTemplateInitContainersVolumeMounts>? VolumeMounts { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ScaleRuleAuth_STATUS Auth Secrets for Scale Rule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusTemplateScaleRulesAzureQueueAuth
@@ -2161,7 +2338,9 @@ public partial class V1api20240301storageContainerAppStatusTemplateScaleRulesAzu
     [JsonPropertyName("triggerParameter")]
     public string? TriggerParameter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.QueueScaleRule_STATUS Container App container Azure Queue based scaling rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusTemplateScaleRulesAzureQueue
@@ -2182,7 +2361,9 @@ public partial class V1api20240301storageContainerAppStatusTemplateScaleRulesAzu
     [JsonPropertyName("queueName")]
     public string? QueueName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ScaleRuleAuth_STATUS Auth Secrets for Scale Rule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusTemplateScaleRulesCustomAuth
@@ -2199,7 +2380,9 @@ public partial class V1api20240301storageContainerAppStatusTemplateScaleRulesCus
     [JsonPropertyName("triggerParameter")]
     public string? TriggerParameter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.CustomScaleRule_STATUS Container App container Custom scaling rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusTemplateScaleRulesCustom
@@ -2220,7 +2403,9 @@ public partial class V1api20240301storageContainerAppStatusTemplateScaleRulesCus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ScaleRuleAuth_STATUS Auth Secrets for Scale Rule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusTemplateScaleRulesHttpAuth
@@ -2237,7 +2422,9 @@ public partial class V1api20240301storageContainerAppStatusTemplateScaleRulesHtt
     [JsonPropertyName("triggerParameter")]
     public string? TriggerParameter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.HttpScaleRule_STATUS Container App container Http scaling rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusTemplateScaleRulesHttp
@@ -2254,7 +2441,9 @@ public partial class V1api20240301storageContainerAppStatusTemplateScaleRulesHtt
     [JsonPropertyName("metadata")]
     public IDictionary<string, string>? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ScaleRuleAuth_STATUS Auth Secrets for Scale Rule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusTemplateScaleRulesTcpAuth
@@ -2271,7 +2460,9 @@ public partial class V1api20240301storageContainerAppStatusTemplateScaleRulesTcp
     [JsonPropertyName("triggerParameter")]
     public string? TriggerParameter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.TcpScaleRule_STATUS Container App container Tcp scaling rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusTemplateScaleRulesTcp
@@ -2288,7 +2479,9 @@ public partial class V1api20240301storageContainerAppStatusTemplateScaleRulesTcp
     [JsonPropertyName("metadata")]
     public IDictionary<string, string>? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ScaleRule_STATUS Container App container scaling rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusTemplateScaleRules
@@ -2317,7 +2510,9 @@ public partial class V1api20240301storageContainerAppStatusTemplateScaleRules
     [JsonPropertyName("tcp")]
     public V1api20240301storageContainerAppStatusTemplateScaleRulesTcp? Tcp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Scale_STATUS Container App scaling configurations.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusTemplateScale
@@ -2338,7 +2533,9 @@ public partial class V1api20240301storageContainerAppStatusTemplateScale
     [JsonPropertyName("rules")]
     public IList<V1api20240301storageContainerAppStatusTemplateScaleRules>? Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ServiceBind_STATUS Configuration to bind a ContainerApp to a dev ContainerApp Service</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusTemplateServiceBinds
@@ -2355,7 +2552,9 @@ public partial class V1api20240301storageContainerAppStatusTemplateServiceBinds
     [JsonPropertyName("serviceId")]
     public string? ServiceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SecretVolumeItem_STATUS Secret to be added to volume.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusTemplateVolumesSecrets
@@ -2372,7 +2571,9 @@ public partial class V1api20240301storageContainerAppStatusTemplateVolumesSecret
     [JsonPropertyName("secretRef")]
     public string? SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Volume_STATUS Volume definitions for the Container App.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusTemplateVolumes
@@ -2401,7 +2602,9 @@ public partial class V1api20240301storageContainerAppStatusTemplateVolumes
     [JsonPropertyName("storageType")]
     public string? StorageType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Template_STATUS Container App versioned application definition. Defines the desired state of an immutable revision. Any changes to this section Will result in a new revision being created</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatusTemplate
@@ -2438,7 +2641,9 @@ public partial class V1api20240301storageContainerAppStatusTemplate
     [JsonPropertyName("volumes")]
     public IList<V1api20240301storageContainerAppStatusTemplateVolumes>? Volumes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ContainerApp_STATUS Container App.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageContainerAppStatus
@@ -2535,7 +2740,9 @@ public partial class V1api20240301storageContainerAppStatus
     [JsonPropertyName("workloadProfileName")]
     public string? WorkloadProfileName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ContainerApp Generator information: - Generated from: /app/resource-manager/Microsoft.App/stable/2024-03-01/ContainerApps.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -2565,3 +2772,4 @@ public partial class V1api20240301storageContainerApp : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1api20240301storageContainerAppStatus? Status { get; set; }
 }
+#nullable disable

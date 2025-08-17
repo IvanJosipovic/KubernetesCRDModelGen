@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apprunner.aws.m.upbound.io;
+#nullable enable
 /// <summary>VPCConnector is the Schema for the VPCConnectors API. Manages an App Runner VPC Connector.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VPCConnectorList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1VPCConnector> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCConnectorSpecForProviderSecurityGroupRefsPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1VPCConnectorSpecForProviderSecurityGroupRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCConnectorSpecForProviderSecurityGroupRefs
@@ -63,7 +68,9 @@ public partial class V1beta1VPCConnectorSpecForProviderSecurityGroupRefs
     [JsonPropertyName("policy")]
     public V1beta1VPCConnectorSpecForProviderSecurityGroupRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCConnectorSpecForProviderSecurityGroupSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1VPCConnectorSpecForProviderSecurityGroupSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCConnectorSpecForProviderSecurityGroupSelector
@@ -97,7 +106,9 @@ public partial class V1beta1VPCConnectorSpecForProviderSecurityGroupSelector
     [JsonPropertyName("policy")]
     public V1beta1VPCConnectorSpecForProviderSecurityGroupSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCConnectorSpecForProviderSubnetRefsPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1VPCConnectorSpecForProviderSubnetRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCConnectorSpecForProviderSubnetRefs
@@ -127,7 +140,9 @@ public partial class V1beta1VPCConnectorSpecForProviderSubnetRefs
     [JsonPropertyName("policy")]
     public V1beta1VPCConnectorSpecForProviderSubnetRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCConnectorSpecForProviderSubnetSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1VPCConnectorSpecForProviderSubnetSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnets.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCConnectorSpecForProviderSubnetSelector
@@ -161,7 +178,9 @@ public partial class V1beta1VPCConnectorSpecForProviderSubnetSelector
     [JsonPropertyName("policy")]
     public V1beta1VPCConnectorSpecForProviderSubnetSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCConnectorSpecForProvider
@@ -202,7 +221,9 @@ public partial class V1beta1VPCConnectorSpecForProvider
     [JsonPropertyName("vpcConnectorName")]
     public string? VpcConnectorName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCConnectorSpecInitProviderSecurityGroupRefsPolicy
@@ -215,7 +236,9 @@ public partial class V1beta1VPCConnectorSpecInitProviderSecurityGroupRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCConnectorSpecInitProviderSecurityGroupRefs
@@ -232,7 +255,9 @@ public partial class V1beta1VPCConnectorSpecInitProviderSecurityGroupRefs
     [JsonPropertyName("policy")]
     public V1beta1VPCConnectorSpecInitProviderSecurityGroupRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCConnectorSpecInitProviderSecurityGroupSelectorPolicy
@@ -245,7 +270,9 @@ public partial class V1beta1VPCConnectorSpecInitProviderSecurityGroupSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCConnectorSpecInitProviderSecurityGroupSelector
@@ -266,7 +293,9 @@ public partial class V1beta1VPCConnectorSpecInitProviderSecurityGroupSelector
     [JsonPropertyName("policy")]
     public V1beta1VPCConnectorSpecInitProviderSecurityGroupSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCConnectorSpecInitProviderSubnetRefsPolicy
@@ -279,7 +308,9 @@ public partial class V1beta1VPCConnectorSpecInitProviderSubnetRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCConnectorSpecInitProviderSubnetRefs
@@ -296,7 +327,9 @@ public partial class V1beta1VPCConnectorSpecInitProviderSubnetRefs
     [JsonPropertyName("policy")]
     public V1beta1VPCConnectorSpecInitProviderSubnetRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCConnectorSpecInitProviderSubnetSelectorPolicy
@@ -309,7 +342,9 @@ public partial class V1beta1VPCConnectorSpecInitProviderSubnetSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnets.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCConnectorSpecInitProviderSubnetSelector
@@ -330,7 +365,9 @@ public partial class V1beta1VPCConnectorSpecInitProviderSubnetSelector
     [JsonPropertyName("policy")]
     public V1beta1VPCConnectorSpecInitProviderSubnetSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCConnectorSpecInitProvider
@@ -367,7 +404,9 @@ public partial class V1beta1VPCConnectorSpecInitProvider
     [JsonPropertyName("vpcConnectorName")]
     public string? VpcConnectorName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCConnectorSpecProviderConfigRef
@@ -380,7 +419,9 @@ public partial class V1beta1VPCConnectorSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCConnectorSpecWriteConnectionSecretToRef
@@ -389,7 +430,9 @@ public partial class V1beta1VPCConnectorSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPCConnectorSpec defines the desired state of VPCConnector</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCConnectorSpec
@@ -414,7 +457,9 @@ public partial class V1beta1VPCConnectorSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VPCConnectorSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCConnectorStatusAtProvider
@@ -459,7 +504,9 @@ public partial class V1beta1VPCConnectorStatusAtProvider
     [JsonPropertyName("vpcConnectorRevision")]
     public double? VpcConnectorRevision { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCConnectorStatusConditions
@@ -488,7 +535,9 @@ public partial class V1beta1VPCConnectorStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPCConnectorStatus defines the observed state of VPCConnector.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCConnectorStatus
@@ -505,7 +554,9 @@ public partial class V1beta1VPCConnectorStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPCConnector is the Schema for the VPCConnectors API. Manages an App Runner VPC Connector.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -535,3 +586,4 @@ public partial class V1beta1VPCConnector : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1VPCConnectorStatus? Status { get; set; }
 }
+#nullable disable

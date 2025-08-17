@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ivs.aws.upbound.io;
+#nullable enable
 /// <summary>RecordingConfiguration is the Schema for the RecordingConfigurations API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RecordingConfigurationList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1RecordingConfiguration> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordingConfigurationSpecForProviderDestinationConfigurationS3
@@ -42,7 +45,9 @@ public partial class V1beta1RecordingConfigurationSpecForProviderDestinationConf
     [JsonPropertyName("bucketName")]
     public string? BucketName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordingConfigurationSpecForProviderDestinationConfiguration
@@ -51,7 +56,9 @@ public partial class V1beta1RecordingConfigurationSpecForProviderDestinationConf
     [JsonPropertyName("s3")]
     public IList<V1beta1RecordingConfigurationSpecForProviderDestinationConfigurationS3>? S3 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordingConfigurationSpecForProviderThumbnailConfiguration
@@ -64,7 +71,9 @@ public partial class V1beta1RecordingConfigurationSpecForProviderThumbnailConfig
     [JsonPropertyName("targetIntervalSeconds")]
     public double? TargetIntervalSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordingConfigurationSpecForProvider
@@ -93,7 +102,9 @@ public partial class V1beta1RecordingConfigurationSpecForProvider
     [JsonPropertyName("thumbnailConfiguration")]
     public IList<V1beta1RecordingConfigurationSpecForProviderThumbnailConfiguration>? ThumbnailConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordingConfigurationSpecInitProviderDestinationConfigurationS3
@@ -102,7 +113,9 @@ public partial class V1beta1RecordingConfigurationSpecInitProviderDestinationCon
     [JsonPropertyName("bucketName")]
     public string? BucketName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordingConfigurationSpecInitProviderDestinationConfiguration
@@ -111,7 +124,9 @@ public partial class V1beta1RecordingConfigurationSpecInitProviderDestinationCon
     [JsonPropertyName("s3")]
     public IList<V1beta1RecordingConfigurationSpecInitProviderDestinationConfigurationS3>? S3 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordingConfigurationSpecInitProviderThumbnailConfiguration
@@ -124,7 +139,9 @@ public partial class V1beta1RecordingConfigurationSpecInitProviderThumbnailConfi
     [JsonPropertyName("targetIntervalSeconds")]
     public double? TargetIntervalSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordingConfigurationSpecInitProvider
@@ -149,7 +166,9 @@ public partial class V1beta1RecordingConfigurationSpecInitProvider
     [JsonPropertyName("thumbnailConfiguration")]
     public IList<V1beta1RecordingConfigurationSpecInitProviderThumbnailConfiguration>? ThumbnailConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordingConfigurationSpecProviderConfigRefPolicy
@@ -162,7 +181,9 @@ public partial class V1beta1RecordingConfigurationSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordingConfigurationSpecProviderConfigRef
@@ -175,7 +196,9 @@ public partial class V1beta1RecordingConfigurationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1RecordingConfigurationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordingConfigurationSpecWriteConnectionSecretToRef
@@ -188,7 +211,9 @@ public partial class V1beta1RecordingConfigurationSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RecordingConfigurationSpec defines the desired state of RecordingConfiguration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordingConfigurationSpec
@@ -217,7 +242,9 @@ public partial class V1beta1RecordingConfigurationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RecordingConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordingConfigurationStatusAtProviderDestinationConfigurationS3
@@ -226,7 +253,9 @@ public partial class V1beta1RecordingConfigurationStatusAtProviderDestinationCon
     [JsonPropertyName("bucketName")]
     public string? BucketName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordingConfigurationStatusAtProviderDestinationConfiguration
@@ -235,7 +264,9 @@ public partial class V1beta1RecordingConfigurationStatusAtProviderDestinationCon
     [JsonPropertyName("s3")]
     public IList<V1beta1RecordingConfigurationStatusAtProviderDestinationConfigurationS3>? S3 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordingConfigurationStatusAtProviderThumbnailConfiguration
@@ -248,7 +279,9 @@ public partial class V1beta1RecordingConfigurationStatusAtProviderThumbnailConfi
     [JsonPropertyName("targetIntervalSeconds")]
     public double? TargetIntervalSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordingConfigurationStatusAtProvider
@@ -293,7 +326,9 @@ public partial class V1beta1RecordingConfigurationStatusAtProvider
     [JsonPropertyName("thumbnailConfiguration")]
     public IList<V1beta1RecordingConfigurationStatusAtProviderThumbnailConfiguration>? ThumbnailConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordingConfigurationStatusConditions
@@ -322,7 +357,9 @@ public partial class V1beta1RecordingConfigurationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RecordingConfigurationStatus defines the observed state of RecordingConfiguration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordingConfigurationStatus
@@ -339,7 +376,9 @@ public partial class V1beta1RecordingConfigurationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RecordingConfiguration is the Schema for the RecordingConfigurations API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -369,3 +408,4 @@ public partial class V1beta1RecordingConfiguration : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1RecordingConfigurationStatus? Status { get; set; }
 }
+#nullable disable

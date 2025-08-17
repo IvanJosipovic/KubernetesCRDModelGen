@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerservice.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20240901.MaintenanceConfiguration Generator information: - Generated from: /containerservice/resource-manager/Microsoft.ContainerService/aks/stable/2024-09-01/managedClusters.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{resourceName}/maintenanceConfigurations/{configName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20240901storageMaintenanceConfigurationList : IKuberne
     [JsonPropertyName("items")]
     public IList<V1api20240901storageMaintenanceConfiguration> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.DateSpan For example, between '2022-12-23' and '2023-01-05'.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageMaintenanceConfigurationSpecMaintenanceWindowNotAllowedDates
@@ -50,7 +53,9 @@ public partial class V1api20240901storageMaintenanceConfigurationSpecMaintenance
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.AbsoluteMonthlySchedule For schedules like: 'recur every month on the 15th' or 'recur every 3 months on the 20th'.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageMaintenanceConfigurationSpecMaintenanceWindowScheduleAbsoluteMonthly
@@ -67,7 +72,9 @@ public partial class V1api20240901storageMaintenanceConfigurationSpecMaintenance
     [JsonPropertyName("intervalMonths")]
     public int? IntervalMonths { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.DailySchedule For schedules like: 'recur every day' or 'recur every 3 days'.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageMaintenanceConfigurationSpecMaintenanceWindowScheduleDaily
@@ -80,7 +87,9 @@ public partial class V1api20240901storageMaintenanceConfigurationSpecMaintenance
     [JsonPropertyName("intervalDays")]
     public int? IntervalDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.RelativeMonthlySchedule For schedules like: 'recur every month on the first Monday' or 'recur every 3 months on last Friday'.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageMaintenanceConfigurationSpecMaintenanceWindowScheduleRelativeMonthly
@@ -101,7 +110,9 @@ public partial class V1api20240901storageMaintenanceConfigurationSpecMaintenance
     [JsonPropertyName("weekIndex")]
     public string? WeekIndex { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.WeeklySchedule For schedules like: 'recur every Monday' or 'recur every 3 weeks on Wednesday'.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageMaintenanceConfigurationSpecMaintenanceWindowScheduleWeekly
@@ -118,7 +129,9 @@ public partial class V1api20240901storageMaintenanceConfigurationSpecMaintenance
     [JsonPropertyName("intervalWeeks")]
     public int? IntervalWeeks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.Schedule One and only one of the schedule types should be specified. Choose either 'daily', 'weekly', 'absoluteMonthly' or 'relativeMonthly' for your maintenance schedule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageMaintenanceConfigurationSpecMaintenanceWindowSchedule
@@ -143,7 +156,9 @@ public partial class V1api20240901storageMaintenanceConfigurationSpecMaintenance
     [JsonPropertyName("weekly")]
     public V1api20240901storageMaintenanceConfigurationSpecMaintenanceWindowScheduleWeekly? Weekly { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.MaintenanceWindow Maintenance window used to configure scheduled auto-upgrade for a Managed Cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageMaintenanceConfigurationSpecMaintenanceWindow
@@ -176,7 +191,9 @@ public partial class V1api20240901storageMaintenanceConfigurationSpecMaintenance
     [JsonPropertyName("utcOffset")]
     public string? UtcOffset { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.TimeSpan For example, between 2021-05-25T13:00:00Z and 2021-05-25T14:00:00Z.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageMaintenanceConfigurationSpecNotAllowedTime
@@ -193,7 +210,9 @@ public partial class V1api20240901storageMaintenanceConfigurationSpecNotAllowedT
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageMaintenanceConfigurationSpecOperatorSpecConfigMapExpressions
@@ -210,7 +229,9 @@ public partial class V1api20240901storageMaintenanceConfigurationSpecOperatorSpe
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageMaintenanceConfigurationSpecOperatorSpecSecretExpressions
@@ -227,7 +248,9 @@ public partial class V1api20240901storageMaintenanceConfigurationSpecOperatorSpe
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.MaintenanceConfigurationOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageMaintenanceConfigurationSpecOperatorSpec
@@ -244,7 +267,9 @@ public partial class V1api20240901storageMaintenanceConfigurationSpecOperatorSpe
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20240901storageMaintenanceConfigurationSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a containerservice.azure.com/ManagedCluster resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageMaintenanceConfigurationSpecOwner
@@ -257,7 +282,9 @@ public partial class V1api20240901storageMaintenanceConfigurationSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.TimeInWeek Time in a week.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageMaintenanceConfigurationSpecTimeInWeek
@@ -274,7 +301,9 @@ public partial class V1api20240901storageMaintenanceConfigurationSpecTimeInWeek
     [JsonPropertyName("hourSlots")]
     public IList<int>? HourSlots { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.MaintenanceConfiguration_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageMaintenanceConfigurationSpec
@@ -311,7 +340,9 @@ public partial class V1api20240901storageMaintenanceConfigurationSpec
     [JsonPropertyName("timeInWeek")]
     public IList<V1api20240901storageMaintenanceConfigurationSpecTimeInWeek>? TimeInWeek { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageMaintenanceConfigurationStatusConditions
@@ -344,7 +375,9 @@ public partial class V1api20240901storageMaintenanceConfigurationStatusCondition
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.DateSpan_STATUS For example, between '2022-12-23' and '2023-01-05'.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageMaintenanceConfigurationStatusMaintenanceWindowNotAllowedDates
@@ -361,7 +394,9 @@ public partial class V1api20240901storageMaintenanceConfigurationStatusMaintenan
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.AbsoluteMonthlySchedule_STATUS For schedules like: 'recur every month on the 15th' or 'recur every 3 months on the 20th'.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageMaintenanceConfigurationStatusMaintenanceWindowScheduleAbsoluteMonthly
@@ -378,7 +413,9 @@ public partial class V1api20240901storageMaintenanceConfigurationStatusMaintenan
     [JsonPropertyName("intervalMonths")]
     public int? IntervalMonths { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.DailySchedule_STATUS For schedules like: 'recur every day' or 'recur every 3 days'.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageMaintenanceConfigurationStatusMaintenanceWindowScheduleDaily
@@ -391,7 +428,9 @@ public partial class V1api20240901storageMaintenanceConfigurationStatusMaintenan
     [JsonPropertyName("intervalDays")]
     public int? IntervalDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.RelativeMonthlySchedule_STATUS For schedules like: 'recur every month on the first Monday' or 'recur every 3 months on last Friday'.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageMaintenanceConfigurationStatusMaintenanceWindowScheduleRelativeMonthly
@@ -412,7 +451,9 @@ public partial class V1api20240901storageMaintenanceConfigurationStatusMaintenan
     [JsonPropertyName("weekIndex")]
     public string? WeekIndex { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.WeeklySchedule_STATUS For schedules like: 'recur every Monday' or 'recur every 3 weeks on Wednesday'.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageMaintenanceConfigurationStatusMaintenanceWindowScheduleWeekly
@@ -429,7 +470,9 @@ public partial class V1api20240901storageMaintenanceConfigurationStatusMaintenan
     [JsonPropertyName("intervalWeeks")]
     public int? IntervalWeeks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.Schedule_STATUS One and only one of the schedule types should be specified. Choose either 'daily', 'weekly', 'absoluteMonthly' or 'relativeMonthly' for your maintenance schedule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageMaintenanceConfigurationStatusMaintenanceWindowSchedule
@@ -454,7 +497,9 @@ public partial class V1api20240901storageMaintenanceConfigurationStatusMaintenan
     [JsonPropertyName("weekly")]
     public V1api20240901storageMaintenanceConfigurationStatusMaintenanceWindowScheduleWeekly? Weekly { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.MaintenanceWindow_STATUS Maintenance window used to configure scheduled auto-upgrade for a Managed Cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageMaintenanceConfigurationStatusMaintenanceWindow
@@ -487,7 +532,9 @@ public partial class V1api20240901storageMaintenanceConfigurationStatusMaintenan
     [JsonPropertyName("utcOffset")]
     public string? UtcOffset { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.TimeSpan_STATUS For example, between 2021-05-25T13:00:00Z and 2021-05-25T14:00:00Z.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageMaintenanceConfigurationStatusNotAllowedTime
@@ -504,7 +551,9 @@ public partial class V1api20240901storageMaintenanceConfigurationStatusNotAllowe
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageMaintenanceConfigurationStatusSystemData
@@ -537,7 +586,9 @@ public partial class V1api20240901storageMaintenanceConfigurationStatusSystemDat
     [JsonPropertyName("lastModifiedByType")]
     public string? LastModifiedByType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.TimeInWeek_STATUS Time in a week.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageMaintenanceConfigurationStatusTimeInWeek
@@ -554,7 +605,9 @@ public partial class V1api20240901storageMaintenanceConfigurationStatusTimeInWee
     [JsonPropertyName("hourSlots")]
     public IList<int>? HourSlots { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.MaintenanceConfiguration_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageMaintenanceConfigurationStatus
@@ -595,7 +648,9 @@ public partial class V1api20240901storageMaintenanceConfigurationStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.MaintenanceConfiguration Generator information: - Generated from: /containerservice/resource-manager/Microsoft.ContainerService/aks/stable/2024-09-01/managedClusters.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{resourceName}/maintenanceConfigurations/{configName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -625,3 +680,4 @@ public partial class V1api20240901storageMaintenanceConfiguration : IKubernetesO
     [JsonPropertyName("status")]
     public V1api20240901storageMaintenanceConfigurationStatus? Status { get; set; }
 }
+#nullable disable

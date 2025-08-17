@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.azure.upbound.io;
+#nullable enable
 /// <summary>Container is the Schema for the Containers API. Manages a Container within an Azure Storage Account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ContainerList : IKubernetesObject<V1ListMeta>, IItem
     [JsonPropertyName("items")]
     public IList<V1beta1Container> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerSpecForProviderStorageAccountIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ContainerSpecForProviderStorageAccountIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerSpecForProviderStorageAccountIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1ContainerSpecForProviderStorageAccountIdRef
     [JsonPropertyName("policy")]
     public V1beta1ContainerSpecForProviderStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerSpecForProviderStorageAccountIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1ContainerSpecForProviderStorageAccountIdSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerSpecForProviderStorageAccountIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1ContainerSpecForProviderStorageAccountIdSelector
     [JsonPropertyName("policy")]
     public V1beta1ContainerSpecForProviderStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerSpecForProviderStorageAccountNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1ContainerSpecForProviderStorageAccountNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerSpecForProviderStorageAccountNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1ContainerSpecForProviderStorageAccountNameRef
     [JsonPropertyName("policy")]
     public V1beta1ContainerSpecForProviderStorageAccountNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerSpecForProviderStorageAccountNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1ContainerSpecForProviderStorageAccountNameSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerSpecForProviderStorageAccountNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1ContainerSpecForProviderStorageAccountNameSelector
     [JsonPropertyName("policy")]
     public V1beta1ContainerSpecForProviderStorageAccountNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerSpecForProvider
@@ -190,7 +209,9 @@ public partial class V1beta1ContainerSpecForProvider
     [JsonPropertyName("storageAccountNameSelector")]
     public V1beta1ContainerSpecForProviderStorageAccountNameSelector? StorageAccountNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerSpecInitProviderStorageAccountIdRefPolicy
@@ -203,7 +224,9 @@ public partial class V1beta1ContainerSpecInitProviderStorageAccountIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerSpecInitProviderStorageAccountIdRef
@@ -216,7 +239,9 @@ public partial class V1beta1ContainerSpecInitProviderStorageAccountIdRef
     [JsonPropertyName("policy")]
     public V1beta1ContainerSpecInitProviderStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerSpecInitProviderStorageAccountIdSelectorPolicy
@@ -229,7 +254,9 @@ public partial class V1beta1ContainerSpecInitProviderStorageAccountIdSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerSpecInitProviderStorageAccountIdSelector
@@ -246,7 +273,9 @@ public partial class V1beta1ContainerSpecInitProviderStorageAccountIdSelector
     [JsonPropertyName("policy")]
     public V1beta1ContainerSpecInitProviderStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerSpecInitProvider
@@ -279,7 +308,9 @@ public partial class V1beta1ContainerSpecInitProvider
     [JsonPropertyName("storageAccountIdSelector")]
     public V1beta1ContainerSpecInitProviderStorageAccountIdSelector? StorageAccountIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerSpecProviderConfigRefPolicy
@@ -292,7 +323,9 @@ public partial class V1beta1ContainerSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerSpecProviderConfigRef
@@ -305,7 +338,9 @@ public partial class V1beta1ContainerSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ContainerSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerSpecWriteConnectionSecretToRef
@@ -318,7 +353,9 @@ public partial class V1beta1ContainerSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerSpec defines the desired state of Container</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerSpec
@@ -347,7 +384,9 @@ public partial class V1beta1ContainerSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ContainerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerStatusAtProvider
@@ -392,7 +431,9 @@ public partial class V1beta1ContainerStatusAtProvider
     [JsonPropertyName("storageAccountName")]
     public string? StorageAccountName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerStatusConditions
@@ -421,7 +462,9 @@ public partial class V1beta1ContainerStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerStatus defines the observed state of Container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerStatus
@@ -438,7 +481,9 @@ public partial class V1beta1ContainerStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Container is the Schema for the Containers API. Manages a Container within an Azure Storage Account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -468,3 +513,4 @@ public partial class V1beta1Container : IKubernetesObject<V1ObjectMeta>, ISpec<V
     [JsonPropertyName("status")]
     public V1beta1ContainerStatus? Status { get; set; }
 }
+#nullable disable

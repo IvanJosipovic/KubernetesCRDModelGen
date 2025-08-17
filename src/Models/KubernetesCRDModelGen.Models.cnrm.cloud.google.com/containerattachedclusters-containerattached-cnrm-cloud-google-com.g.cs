@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerattached.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>ContainerAttachedCluster is the Schema for the ContainerAttachedCluster API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ContainerAttachedClusterList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1ContainerAttachedCluster> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Configuration related to the cluster RBAC settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecAuthorization
@@ -42,7 +45,9 @@ public partial class V1beta1ContainerAttachedClusterSpecAuthorization
     [JsonPropertyName("adminUsers")]
     public IList<string>? AdminUsers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Binary Authorization configuration for this cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecBinaryAuthorization
@@ -51,7 +56,9 @@ public partial class V1beta1ContainerAttachedClusterSpecBinaryAuthorization
     [JsonPropertyName("evaluationMode")]
     public string? EvaluationMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The id of the Fleet host project where this cluster will be registered.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecFleetProjectRef
@@ -68,7 +75,9 @@ public partial class V1beta1ContainerAttachedClusterSpecFleetProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Fleet configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecFleet
@@ -81,7 +90,9 @@ public partial class V1beta1ContainerAttachedClusterSpecFleet
     [JsonPropertyName("projectRef")]
     public V1beta1ContainerAttachedClusterSpecFleetProjectRef ProjectRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration of the logging components;</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecLoggingConfigComponentConfig
@@ -90,7 +101,9 @@ public partial class V1beta1ContainerAttachedClusterSpecLoggingConfigComponentCo
     [JsonPropertyName("enableComponents")]
     public IList<string>? EnableComponents { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Logging configuration for this cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecLoggingConfig
@@ -99,7 +112,9 @@ public partial class V1beta1ContainerAttachedClusterSpecLoggingConfig
     [JsonPropertyName("componentConfig")]
     public V1beta1ContainerAttachedClusterSpecLoggingConfigComponentConfig? ComponentConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Enable Google Cloud Managed Service for Prometheus in the cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecMonitoringConfigManagedPrometheusConfig
@@ -108,7 +123,9 @@ public partial class V1beta1ContainerAttachedClusterSpecMonitoringConfigManagedP
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Monitoring configuration for this cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecMonitoringConfig
@@ -117,7 +134,9 @@ public partial class V1beta1ContainerAttachedClusterSpecMonitoringConfig
     [JsonPropertyName("managedPrometheusConfig")]
     public V1beta1ContainerAttachedClusterSpecMonitoringConfigManagedPrometheusConfig? ManagedPrometheusConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. OpenID Connect (OIDC) discovery information of the target cluster.  Kubernetes Service Account (KSA) tokens are JWT tokens signed by the cluster API server. This field indicates how GCP services	validate KSA tokens in order to allow system workloads (such as GKE Connect and telemetry agents) to authenticate back to GCP.  Both clusters with public and private issuer URLs are supported. Clusters with public issuers only need to specify the 'issuerUrl' field while clusters with private issuers need to provide both 'issuerUrl' and 'jwks'.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecOidcConfig
@@ -130,7 +149,9 @@ public partial class V1beta1ContainerAttachedClusterSpecOidcConfig
     [JsonPropertyName("jwks")]
     public string? Jwks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ID of the project in which the resource belongs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecProjectRef
@@ -151,7 +172,9 @@ public partial class V1beta1ContainerAttachedClusterSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerAttachedClusterSpec defines the desired state of ContainerAttachedCluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpec
@@ -212,7 +235,9 @@ public partial class V1beta1ContainerAttachedClusterSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterStatusConditions
@@ -237,7 +262,9 @@ public partial class V1beta1ContainerAttachedClusterStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterStatusErrors
@@ -246,7 +273,9 @@ public partial class V1beta1ContainerAttachedClusterStatusErrors
     [JsonPropertyName("message")]
     public string? Message { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterStatusObservedState
@@ -255,7 +284,9 @@ public partial class V1beta1ContainerAttachedClusterStatusObservedState
     [JsonPropertyName("fleetMembership")]
     public string? FleetMembership { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterStatusWorkloadIdentityConfig
@@ -272,7 +303,9 @@ public partial class V1beta1ContainerAttachedClusterStatusWorkloadIdentityConfig
     [JsonPropertyName("workloadPool")]
     public string? WorkloadPool { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerAttachedClusterStatus defines the config connector machine state of ContainerAttachedCluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterStatus
@@ -325,7 +358,9 @@ public partial class V1beta1ContainerAttachedClusterStatus
     [JsonPropertyName("workloadIdentityConfig")]
     public IList<V1beta1ContainerAttachedClusterStatusWorkloadIdentityConfig>? WorkloadIdentityConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerAttachedCluster is the Schema for the ContainerAttachedCluster API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -355,3 +390,4 @@ public partial class V1beta1ContainerAttachedCluster : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1ContainerAttachedClusterStatus? Status { get; set; }
 }
+#nullable disable

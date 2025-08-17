@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sharing.databricks.crossplane.io;
+#nullable enable
 /// <summary>Provider is the Schema for the Providers API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1ProviderList : IKubernetesObject<V1ListMeta>, IItem
     [JsonPropertyName("items")]
     public IList<V1alpha1Provider> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>This is the json file that is created from a recipient url.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ProviderSpecForProviderRecipientProfileStrSecretRef
@@ -50,7 +53,9 @@ public partial class V1alpha1ProviderSpecForProviderRecipientProfileStrSecretRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ProviderSpecForProvider
@@ -71,7 +76,9 @@ public partial class V1alpha1ProviderSpecForProvider
     [JsonPropertyName("recipientProfileStrSecretRef")]
     public V1alpha1ProviderSpecForProviderRecipientProfileStrSecretRef? RecipientProfileStrSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>This is the json file that is created from a recipient url.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ProviderSpecInitProviderRecipientProfileStrSecretRef
@@ -88,7 +95,9 @@ public partial class V1alpha1ProviderSpecInitProviderRecipientProfileStrSecretRe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ProviderSpecInitProvider
@@ -109,7 +118,9 @@ public partial class V1alpha1ProviderSpecInitProvider
     [JsonPropertyName("recipientProfileStrSecretRef")]
     public V1alpha1ProviderSpecInitProviderRecipientProfileStrSecretRef RecipientProfileStrSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ProviderSpecProviderConfigRefPolicy
@@ -122,7 +133,9 @@ public partial class V1alpha1ProviderSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ProviderSpecProviderConfigRef
@@ -135,7 +148,9 @@ public partial class V1alpha1ProviderSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1ProviderSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ProviderSpecPublishConnectionDetailsToConfigRefPolicy
@@ -148,7 +163,9 @@ public partial class V1alpha1ProviderSpecPublishConnectionDetailsToConfigRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ProviderSpecPublishConnectionDetailsToConfigRef
@@ -161,7 +178,9 @@ public partial class V1alpha1ProviderSpecPublishConnectionDetailsToConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1ProviderSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Metadata is the metadata for connection secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ProviderSpecPublishConnectionDetailsToMetadata
@@ -178,7 +197,9 @@ public partial class V1alpha1ProviderSpecPublishConnectionDetailsToMetadata
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ProviderSpecPublishConnectionDetailsTo
@@ -195,7 +216,9 @@ public partial class V1alpha1ProviderSpecPublishConnectionDetailsTo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ProviderSpecWriteConnectionSecretToRef
@@ -208,7 +231,9 @@ public partial class V1alpha1ProviderSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderSpec defines the desired state of Provider</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ProviderSpec
@@ -241,7 +266,9 @@ public partial class V1alpha1ProviderSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1alpha1ProviderSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ProviderStatusAtProvider
@@ -262,7 +289,9 @@ public partial class V1alpha1ProviderStatusAtProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ProviderStatusConditions
@@ -291,7 +320,9 @@ public partial class V1alpha1ProviderStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderStatus defines the observed state of Provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ProviderStatus
@@ -308,7 +339,9 @@ public partial class V1alpha1ProviderStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Provider is the Schema for the Providers API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -338,3 +371,4 @@ public partial class V1alpha1Provider : IKubernetesObject<V1ObjectMeta>, ISpec<V
     [JsonPropertyName("status")]
     public V1alpha1ProviderStatus? Status { get; set; }
 }
+#nullable disable

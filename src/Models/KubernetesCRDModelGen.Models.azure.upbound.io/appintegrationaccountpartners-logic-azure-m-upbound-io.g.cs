@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.logic.azure.m.upbound.io;
+#nullable enable
 /// <summary>AppIntegrationAccountPartner is the Schema for the AppIntegrationAccountPartners API. Manages a Logic App Integration Account Partner.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AppIntegrationAccountPartnerList : IKubernetesObject
     [JsonPropertyName("items")]
     public IList<V1beta1AppIntegrationAccountPartner> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountPartnerSpecForProviderBusinessIdentity
@@ -46,7 +49,9 @@ public partial class V1beta1AppIntegrationAccountPartnerSpecForProviderBusinessI
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountPartnerSpecForProviderIntegrationAccountNameRefPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1AppIntegrationAccountPartnerSpecForProviderIntegrati
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a AppIntegrationAccount in logic to populate integrationAccountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountPartnerSpecForProviderIntegrationAccountNameRef
@@ -76,7 +83,9 @@ public partial class V1beta1AppIntegrationAccountPartnerSpecForProviderIntegrati
     [JsonPropertyName("policy")]
     public V1beta1AppIntegrationAccountPartnerSpecForProviderIntegrationAccountNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountPartnerSpecForProviderIntegrationAccountNameSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1AppIntegrationAccountPartnerSpecForProviderIntegrati
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a AppIntegrationAccount in logic to populate integrationAccountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountPartnerSpecForProviderIntegrationAccountNameSelector
@@ -110,7 +121,9 @@ public partial class V1beta1AppIntegrationAccountPartnerSpecForProviderIntegrati
     [JsonPropertyName("policy")]
     public V1beta1AppIntegrationAccountPartnerSpecForProviderIntegrationAccountNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountPartnerSpecForProviderResourceGroupNameRefPolicy
@@ -123,7 +136,9 @@ public partial class V1beta1AppIntegrationAccountPartnerSpecForProviderResourceG
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountPartnerSpecForProviderResourceGroupNameRef
@@ -140,7 +155,9 @@ public partial class V1beta1AppIntegrationAccountPartnerSpecForProviderResourceG
     [JsonPropertyName("policy")]
     public V1beta1AppIntegrationAccountPartnerSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountPartnerSpecForProviderResourceGroupNameSelectorPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1AppIntegrationAccountPartnerSpecForProviderResourceG
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountPartnerSpecForProviderResourceGroupNameSelector
@@ -174,7 +193,9 @@ public partial class V1beta1AppIntegrationAccountPartnerSpecForProviderResourceG
     [JsonPropertyName("policy")]
     public V1beta1AppIntegrationAccountPartnerSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountPartnerSpecForProvider
@@ -211,7 +232,9 @@ public partial class V1beta1AppIntegrationAccountPartnerSpecForProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1AppIntegrationAccountPartnerSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountPartnerSpecInitProviderBusinessIdentity
@@ -224,7 +247,9 @@ public partial class V1beta1AppIntegrationAccountPartnerSpecInitProviderBusiness
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountPartnerSpecInitProvider
@@ -237,7 +262,9 @@ public partial class V1beta1AppIntegrationAccountPartnerSpecInitProvider
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountPartnerSpecProviderConfigRef
@@ -250,7 +277,9 @@ public partial class V1beta1AppIntegrationAccountPartnerSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountPartnerSpecWriteConnectionSecretToRef
@@ -259,7 +288,9 @@ public partial class V1beta1AppIntegrationAccountPartnerSpecWriteConnectionSecre
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppIntegrationAccountPartnerSpec defines the desired state of AppIntegrationAccountPartner</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountPartnerSpec
@@ -284,7 +315,9 @@ public partial class V1beta1AppIntegrationAccountPartnerSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AppIntegrationAccountPartnerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountPartnerStatusAtProviderBusinessIdentity
@@ -297,7 +330,9 @@ public partial class V1beta1AppIntegrationAccountPartnerStatusAtProviderBusiness
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountPartnerStatusAtProvider
@@ -322,7 +357,9 @@ public partial class V1beta1AppIntegrationAccountPartnerStatusAtProvider
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountPartnerStatusConditions
@@ -351,7 +388,9 @@ public partial class V1beta1AppIntegrationAccountPartnerStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppIntegrationAccountPartnerStatus defines the observed state of AppIntegrationAccountPartner.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountPartnerStatus
@@ -368,7 +407,9 @@ public partial class V1beta1AppIntegrationAccountPartnerStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppIntegrationAccountPartner is the Schema for the AppIntegrationAccountPartners API. Manages a Logic App Integration Account Partner.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -398,3 +439,4 @@ public partial class V1beta1AppIntegrationAccountPartner : IKubernetesObject<V1O
     [JsonPropertyName("status")]
     public V1beta1AppIntegrationAccountPartnerStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identityplatform.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigList : IKubernet
     [JsonPropertyName("items")]
     public IList<V1beta1IdentityPlatformTenantOAuthIDPConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpecClientSecretValueFromSecretKeyRef
@@ -46,7 +49,9 @@ public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpecClientSecret
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpecClientSecretValueFrom
@@ -55,7 +60,9 @@ public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpecClientSecret
     [JsonPropertyName("secretKeyRef")]
     public V1beta1IdentityPlatformTenantOAuthIDPConfigSpecClientSecretValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The client secret of the OAuth client, to enable OIDC code flow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpecClientSecret
@@ -68,7 +75,9 @@ public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpecClientSecret
     [JsonPropertyName("valueFrom")]
     public V1beta1IdentityPlatformTenantOAuthIDPConfigSpecClientSecretValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The multiple response type to request for in the OAuth authorization flow. This can possibly be a combination of set bits (e.g.: {id\_token, token}).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpecResponseType
@@ -85,7 +94,9 @@ public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpecResponseType
     [JsonPropertyName("token")]
     public bool? Token { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpecTenantRef
@@ -102,7 +113,9 @@ public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpecTenantRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpec
@@ -139,7 +152,9 @@ public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpec
     [JsonPropertyName("tenantRef")]
     public V1beta1IdentityPlatformTenantOAuthIDPConfigSpecTenantRef TenantRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigStatusConditions
@@ -164,7 +179,9 @@ public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigStatus
@@ -177,7 +194,9 @@ public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -207,3 +226,4 @@ public partial class V1beta1IdentityPlatformTenantOAuthIDPConfig : IKubernetesOb
     [JsonPropertyName("status")]
     public V1beta1IdentityPlatformTenantOAuthIDPConfigStatus? Status { get; set; }
 }
+#nullable disable

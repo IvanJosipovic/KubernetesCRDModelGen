@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.netapp.azure.m.upbound.io;
+#nullable enable
 /// <summary>SnapshotPolicy is the Schema for the SnapshotPolicys API. Manages a NetApp Snapshot Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SnapshotPolicyList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1SnapshotPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotPolicySpecForProviderAccountNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SnapshotPolicySpecForProviderAccountNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in netapp to populate accountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotPolicySpecForProviderAccountNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1SnapshotPolicySpecForProviderAccountNameRef
     [JsonPropertyName("policy")]
     public V1beta1SnapshotPolicySpecForProviderAccountNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotPolicySpecForProviderAccountNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1SnapshotPolicySpecForProviderAccountNameSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in netapp to populate accountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotPolicySpecForProviderAccountNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1SnapshotPolicySpecForProviderAccountNameSelector
     [JsonPropertyName("policy")]
     public V1beta1SnapshotPolicySpecForProviderAccountNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sets a daily snapshot schedule. A daily_schedule block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotPolicySpecForProviderDailySchedule
@@ -114,7 +125,9 @@ public partial class V1beta1SnapshotPolicySpecForProviderDailySchedule
     [JsonPropertyName("snapshotsToKeep")]
     public double? SnapshotsToKeep { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sets an hourly snapshot schedule. A hourly_schedule block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotPolicySpecForProviderHourlySchedule
@@ -127,7 +140,9 @@ public partial class V1beta1SnapshotPolicySpecForProviderHourlySchedule
     [JsonPropertyName("snapshotsToKeep")]
     public double? SnapshotsToKeep { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sets a monthly snapshot schedule. A monthly_schedule block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotPolicySpecForProviderMonthlySchedule
@@ -148,7 +163,9 @@ public partial class V1beta1SnapshotPolicySpecForProviderMonthlySchedule
     [JsonPropertyName("snapshotsToKeep")]
     public double? SnapshotsToKeep { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotPolicySpecForProviderResourceGroupNameRefPolicy
@@ -161,7 +178,9 @@ public partial class V1beta1SnapshotPolicySpecForProviderResourceGroupNameRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotPolicySpecForProviderResourceGroupNameRef
@@ -178,7 +197,9 @@ public partial class V1beta1SnapshotPolicySpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1SnapshotPolicySpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotPolicySpecForProviderResourceGroupNameSelectorPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1SnapshotPolicySpecForProviderResourceGroupNameSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotPolicySpecForProviderResourceGroupNameSelector
@@ -212,7 +235,9 @@ public partial class V1beta1SnapshotPolicySpecForProviderResourceGroupNameSelect
     [JsonPropertyName("policy")]
     public V1beta1SnapshotPolicySpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sets a weekly snapshot schedule. A weekly_schedule block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotPolicySpecForProviderWeeklySchedule
@@ -233,7 +258,9 @@ public partial class V1beta1SnapshotPolicySpecForProviderWeeklySchedule
     [JsonPropertyName("snapshotsToKeep")]
     public double? SnapshotsToKeep { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotPolicySpecForProvider
@@ -290,7 +317,9 @@ public partial class V1beta1SnapshotPolicySpecForProvider
     [JsonPropertyName("weeklySchedule")]
     public V1beta1SnapshotPolicySpecForProviderWeeklySchedule? WeeklySchedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sets a daily snapshot schedule. A daily_schedule block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotPolicySpecInitProviderDailySchedule
@@ -307,7 +336,9 @@ public partial class V1beta1SnapshotPolicySpecInitProviderDailySchedule
     [JsonPropertyName("snapshotsToKeep")]
     public double? SnapshotsToKeep { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sets an hourly snapshot schedule. A hourly_schedule block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotPolicySpecInitProviderHourlySchedule
@@ -320,7 +351,9 @@ public partial class V1beta1SnapshotPolicySpecInitProviderHourlySchedule
     [JsonPropertyName("snapshotsToKeep")]
     public double? SnapshotsToKeep { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sets a monthly snapshot schedule. A monthly_schedule block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotPolicySpecInitProviderMonthlySchedule
@@ -341,7 +374,9 @@ public partial class V1beta1SnapshotPolicySpecInitProviderMonthlySchedule
     [JsonPropertyName("snapshotsToKeep")]
     public double? SnapshotsToKeep { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sets a weekly snapshot schedule. A weekly_schedule block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotPolicySpecInitProviderWeeklySchedule
@@ -362,7 +397,9 @@ public partial class V1beta1SnapshotPolicySpecInitProviderWeeklySchedule
     [JsonPropertyName("snapshotsToKeep")]
     public double? SnapshotsToKeep { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotPolicySpecInitProvider
@@ -395,7 +432,9 @@ public partial class V1beta1SnapshotPolicySpecInitProvider
     [JsonPropertyName("weeklySchedule")]
     public V1beta1SnapshotPolicySpecInitProviderWeeklySchedule? WeeklySchedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotPolicySpecProviderConfigRef
@@ -408,7 +447,9 @@ public partial class V1beta1SnapshotPolicySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotPolicySpecWriteConnectionSecretToRef
@@ -417,7 +458,9 @@ public partial class V1beta1SnapshotPolicySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SnapshotPolicySpec defines the desired state of SnapshotPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotPolicySpec
@@ -442,7 +485,9 @@ public partial class V1beta1SnapshotPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SnapshotPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sets a daily snapshot schedule. A daily_schedule block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotPolicyStatusAtProviderDailySchedule
@@ -459,7 +504,9 @@ public partial class V1beta1SnapshotPolicyStatusAtProviderDailySchedule
     [JsonPropertyName("snapshotsToKeep")]
     public double? SnapshotsToKeep { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sets an hourly snapshot schedule. A hourly_schedule block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotPolicyStatusAtProviderHourlySchedule
@@ -472,7 +519,9 @@ public partial class V1beta1SnapshotPolicyStatusAtProviderHourlySchedule
     [JsonPropertyName("snapshotsToKeep")]
     public double? SnapshotsToKeep { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sets a monthly snapshot schedule. A monthly_schedule block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotPolicyStatusAtProviderMonthlySchedule
@@ -493,7 +542,9 @@ public partial class V1beta1SnapshotPolicyStatusAtProviderMonthlySchedule
     [JsonPropertyName("snapshotsToKeep")]
     public double? SnapshotsToKeep { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sets a weekly snapshot schedule. A weekly_schedule block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotPolicyStatusAtProviderWeeklySchedule
@@ -514,7 +565,9 @@ public partial class V1beta1SnapshotPolicyStatusAtProviderWeeklySchedule
     [JsonPropertyName("snapshotsToKeep")]
     public double? SnapshotsToKeep { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotPolicyStatusAtProvider
@@ -559,7 +612,9 @@ public partial class V1beta1SnapshotPolicyStatusAtProvider
     [JsonPropertyName("weeklySchedule")]
     public V1beta1SnapshotPolicyStatusAtProviderWeeklySchedule? WeeklySchedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotPolicyStatusConditions
@@ -588,7 +643,9 @@ public partial class V1beta1SnapshotPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SnapshotPolicyStatus defines the observed state of SnapshotPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotPolicyStatus
@@ -605,7 +662,9 @@ public partial class V1beta1SnapshotPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SnapshotPolicy is the Schema for the SnapshotPolicys API. Manages a NetApp Snapshot Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -635,3 +694,4 @@ public partial class V1beta1SnapshotPolicy : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1SnapshotPolicyStatus? Status { get; set; }
 }
+#nullable disable

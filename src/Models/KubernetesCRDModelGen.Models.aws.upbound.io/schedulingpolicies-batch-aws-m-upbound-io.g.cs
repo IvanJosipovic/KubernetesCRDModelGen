@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.batch.aws.m.upbound.io;
+#nullable enable
 /// <summary>SchedulingPolicy is the Schema for the SchedulingPolicys API. Provides a Batch Scheduling Policy resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SchedulingPolicyList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1SchedulingPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SchedulingPolicySpecForProviderFairSharePolicyShareDistribution
@@ -46,7 +49,9 @@ public partial class V1beta1SchedulingPolicySpecForProviderFairSharePolicyShareD
     [JsonPropertyName("weightFactor")]
     public double? WeightFactor { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SchedulingPolicySpecForProviderFairSharePolicy
@@ -63,7 +68,9 @@ public partial class V1beta1SchedulingPolicySpecForProviderFairSharePolicy
     [JsonPropertyName("shareDistribution")]
     public IList<V1beta1SchedulingPolicySpecForProviderFairSharePolicyShareDistribution>? ShareDistribution { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SchedulingPolicySpecForProvider
@@ -80,7 +87,9 @@ public partial class V1beta1SchedulingPolicySpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SchedulingPolicySpecInitProviderFairSharePolicyShareDistribution
@@ -93,7 +102,9 @@ public partial class V1beta1SchedulingPolicySpecInitProviderFairSharePolicyShare
     [JsonPropertyName("weightFactor")]
     public double? WeightFactor { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SchedulingPolicySpecInitProviderFairSharePolicy
@@ -110,7 +121,9 @@ public partial class V1beta1SchedulingPolicySpecInitProviderFairSharePolicy
     [JsonPropertyName("shareDistribution")]
     public IList<V1beta1SchedulingPolicySpecInitProviderFairSharePolicyShareDistribution>? ShareDistribution { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SchedulingPolicySpecInitProvider
@@ -123,7 +136,9 @@ public partial class V1beta1SchedulingPolicySpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SchedulingPolicySpecProviderConfigRef
@@ -136,7 +151,9 @@ public partial class V1beta1SchedulingPolicySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SchedulingPolicySpecWriteConnectionSecretToRef
@@ -145,7 +162,9 @@ public partial class V1beta1SchedulingPolicySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SchedulingPolicySpec defines the desired state of SchedulingPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SchedulingPolicySpec
@@ -170,7 +189,9 @@ public partial class V1beta1SchedulingPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SchedulingPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SchedulingPolicyStatusAtProviderFairSharePolicyShareDistribution
@@ -183,7 +204,9 @@ public partial class V1beta1SchedulingPolicyStatusAtProviderFairSharePolicyShare
     [JsonPropertyName("weightFactor")]
     public double? WeightFactor { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SchedulingPolicyStatusAtProviderFairSharePolicy
@@ -200,7 +223,9 @@ public partial class V1beta1SchedulingPolicyStatusAtProviderFairSharePolicy
     [JsonPropertyName("shareDistribution")]
     public IList<V1beta1SchedulingPolicyStatusAtProviderFairSharePolicyShareDistribution>? ShareDistribution { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SchedulingPolicyStatusAtProvider
@@ -229,7 +254,9 @@ public partial class V1beta1SchedulingPolicyStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SchedulingPolicyStatusConditions
@@ -258,7 +285,9 @@ public partial class V1beta1SchedulingPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SchedulingPolicyStatus defines the observed state of SchedulingPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SchedulingPolicyStatus
@@ -275,7 +304,9 @@ public partial class V1beta1SchedulingPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SchedulingPolicy is the Schema for the SchedulingPolicys API. Provides a Batch Scheduling Policy resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -305,3 +336,4 @@ public partial class V1beta1SchedulingPolicy : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1SchedulingPolicyStatus? Status { get; set; }
 }
+#nullable disable

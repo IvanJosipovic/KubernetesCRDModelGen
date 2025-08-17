@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.fis.aws.m.upbound.io;
+#nullable enable
 /// <summary>ExperimentTemplate is the Schema for the ExperimentTemplates API. Provides an FIS Experiment Template.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ExperimentTemplateList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1ExperimentTemplate> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProviderActionParameter
@@ -46,7 +49,9 @@ public partial class V1beta1ExperimentTemplateSpecForProviderActionParameter
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Action's target, if applicable. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProviderActionTarget
@@ -59,7 +64,9 @@ public partial class V1beta1ExperimentTemplateSpecForProviderActionTarget
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProviderAction
@@ -88,7 +95,9 @@ public partial class V1beta1ExperimentTemplateSpecForProviderAction
     [JsonPropertyName("target")]
     public V1beta1ExperimentTemplateSpecForProviderActionTarget? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The experiment options for the experiment template. See experiment_options below for more details!</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProviderExperimentOptions
@@ -101,7 +110,9 @@ public partial class V1beta1ExperimentTemplateSpecForProviderExperimentOptions
     [JsonPropertyName("emptyTargetResolutionMode")]
     public string? EmptyTargetResolutionMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationDataSourcesCloudwatchDashboardDashboardArnRefPolicy
@@ -114,7 +125,9 @@ public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportCon
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Dashboard in cloudwatch to populate dashboardArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationDataSourcesCloudwatchDashboardDashboardArnRef
@@ -131,7 +144,9 @@ public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportCon
     [JsonPropertyName("policy")]
     public V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationDataSourcesCloudwatchDashboardDashboardArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationDataSourcesCloudwatchDashboardDashboardArnSelectorPolicy
@@ -144,7 +159,9 @@ public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportCon
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Dashboard in cloudwatch to populate dashboardArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationDataSourcesCloudwatchDashboardDashboardArnSelector
@@ -165,7 +182,9 @@ public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportCon
     [JsonPropertyName("policy")]
     public V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationDataSourcesCloudwatchDashboardDashboardArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationDataSourcesCloudwatchDashboard
@@ -182,7 +201,9 @@ public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportCon
     [JsonPropertyName("dashboardArnSelector")]
     public V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationDataSourcesCloudwatchDashboardDashboardArnSelector? DashboardArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The data sources for the experiment report. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationDataSources
@@ -191,7 +212,9 @@ public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportCon
     [JsonPropertyName("cloudwatchDashboard")]
     public IList<V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationDataSourcesCloudwatchDashboard>? CloudwatchDashboard { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationOutputsS3ConfigurationBucketNameRefPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportCon
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucketName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationOutputsS3ConfigurationBucketNameRef
@@ -221,7 +246,9 @@ public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportCon
     [JsonPropertyName("policy")]
     public V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationOutputsS3ConfigurationBucketNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationOutputsS3ConfigurationBucketNameSelectorPolicy
@@ -234,7 +261,9 @@ public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportCon
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucketName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationOutputsS3ConfigurationBucketNameSelector
@@ -255,7 +284,9 @@ public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportCon
     [JsonPropertyName("policy")]
     public V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationOutputsS3ConfigurationBucketNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The data sources for the experiment report. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationOutputsS3Configuration
@@ -276,7 +307,9 @@ public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportCon
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The outputs for the experiment report. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationOutputs
@@ -285,7 +318,9 @@ public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportCon
     [JsonPropertyName("s3Configuration")]
     public V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationOutputsS3Configuration? S3Configuration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for experiment reporting. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportConfiguration
@@ -306,7 +341,9 @@ public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportCon
     [JsonPropertyName("preExperimentDuration")]
     public string? PreExperimentDuration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for experiment logging to Amazon CloudWatch Logs. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProviderLogConfigurationCloudwatchLogsConfiguration
@@ -315,7 +352,9 @@ public partial class V1beta1ExperimentTemplateSpecForProviderLogConfigurationClo
     [JsonPropertyName("logGroupArn")]
     public string? LogGroupArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for experiment logging to Amazon S3. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProviderLogConfigurationS3Configuration
@@ -328,7 +367,9 @@ public partial class V1beta1ExperimentTemplateSpecForProviderLogConfigurationS3C
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for experiment logging. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProviderLogConfiguration
@@ -345,7 +386,9 @@ public partial class V1beta1ExperimentTemplateSpecForProviderLogConfiguration
     [JsonPropertyName("s3Configuration")]
     public V1beta1ExperimentTemplateSpecForProviderLogConfigurationS3Configuration? S3Configuration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProviderRoleArnRefPolicy
@@ -358,7 +401,9 @@ public partial class V1beta1ExperimentTemplateSpecForProviderRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProviderRoleArnRef
@@ -375,7 +420,9 @@ public partial class V1beta1ExperimentTemplateSpecForProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1ExperimentTemplateSpecForProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProviderRoleArnSelectorPolicy
@@ -388,7 +435,9 @@ public partial class V1beta1ExperimentTemplateSpecForProviderRoleArnSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProviderRoleArnSelector
@@ -409,7 +458,9 @@ public partial class V1beta1ExperimentTemplateSpecForProviderRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1ExperimentTemplateSpecForProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProviderStopCondition
@@ -422,7 +473,9 @@ public partial class V1beta1ExperimentTemplateSpecForProviderStopCondition
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProviderTargetFilter
@@ -435,7 +488,9 @@ public partial class V1beta1ExperimentTemplateSpecForProviderTargetFilter
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProviderTargetResourceTag
@@ -448,7 +503,9 @@ public partial class V1beta1ExperimentTemplateSpecForProviderTargetResourceTag
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProviderTarget
@@ -481,7 +538,9 @@ public partial class V1beta1ExperimentTemplateSpecForProviderTarget
     [JsonPropertyName("selectionMode")]
     public string? SelectionMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProvider
@@ -534,7 +593,9 @@ public partial class V1beta1ExperimentTemplateSpecForProvider
     [JsonPropertyName("target")]
     public IList<V1beta1ExperimentTemplateSpecForProviderTarget>? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecInitProviderActionParameter
@@ -547,7 +608,9 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderActionParameter
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Action's target, if applicable. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecInitProviderActionTarget
@@ -560,7 +623,9 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderActionTarget
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecInitProviderAction
@@ -589,7 +654,9 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderAction
     [JsonPropertyName("target")]
     public V1beta1ExperimentTemplateSpecInitProviderActionTarget? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The experiment options for the experiment template. See experiment_options below for more details!</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentOptions
@@ -602,7 +669,9 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentOptions
     [JsonPropertyName("emptyTargetResolutionMode")]
     public string? EmptyTargetResolutionMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationDataSourcesCloudwatchDashboardDashboardArnRefPolicy
@@ -615,7 +684,9 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportCo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Dashboard in cloudwatch to populate dashboardArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationDataSourcesCloudwatchDashboardDashboardArnRef
@@ -632,7 +703,9 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportCo
     [JsonPropertyName("policy")]
     public V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationDataSourcesCloudwatchDashboardDashboardArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationDataSourcesCloudwatchDashboardDashboardArnSelectorPolicy
@@ -645,7 +718,9 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportCo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Dashboard in cloudwatch to populate dashboardArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationDataSourcesCloudwatchDashboardDashboardArnSelector
@@ -666,7 +741,9 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportCo
     [JsonPropertyName("policy")]
     public V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationDataSourcesCloudwatchDashboardDashboardArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationDataSourcesCloudwatchDashboard
@@ -683,7 +760,9 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportCo
     [JsonPropertyName("dashboardArnSelector")]
     public V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationDataSourcesCloudwatchDashboardDashboardArnSelector? DashboardArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The data sources for the experiment report. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationDataSources
@@ -692,7 +771,9 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportCo
     [JsonPropertyName("cloudwatchDashboard")]
     public IList<V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationDataSourcesCloudwatchDashboard>? CloudwatchDashboard { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationOutputsS3ConfigurationBucketNameRefPolicy
@@ -705,7 +786,9 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportCo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucketName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationOutputsS3ConfigurationBucketNameRef
@@ -722,7 +805,9 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportCo
     [JsonPropertyName("policy")]
     public V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationOutputsS3ConfigurationBucketNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationOutputsS3ConfigurationBucketNameSelectorPolicy
@@ -735,7 +820,9 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportCo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucketName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationOutputsS3ConfigurationBucketNameSelector
@@ -756,7 +843,9 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportCo
     [JsonPropertyName("policy")]
     public V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationOutputsS3ConfigurationBucketNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The data sources for the experiment report. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationOutputsS3Configuration
@@ -777,7 +866,9 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportCo
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The outputs for the experiment report. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationOutputs
@@ -786,7 +877,9 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportCo
     [JsonPropertyName("s3Configuration")]
     public V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationOutputsS3Configuration? S3Configuration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for experiment reporting. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfiguration
@@ -807,7 +900,9 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportCo
     [JsonPropertyName("preExperimentDuration")]
     public string? PreExperimentDuration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for experiment logging to Amazon CloudWatch Logs. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecInitProviderLogConfigurationCloudwatchLogsConfiguration
@@ -816,7 +911,9 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderLogConfigurationCl
     [JsonPropertyName("logGroupArn")]
     public string? LogGroupArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for experiment logging to Amazon S3. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecInitProviderLogConfigurationS3Configuration
@@ -829,7 +926,9 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderLogConfigurationS3
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for experiment logging. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecInitProviderLogConfiguration
@@ -846,7 +945,9 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderLogConfiguration
     [JsonPropertyName("s3Configuration")]
     public V1beta1ExperimentTemplateSpecInitProviderLogConfigurationS3Configuration? S3Configuration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecInitProviderRoleArnRefPolicy
@@ -859,7 +960,9 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecInitProviderRoleArnRef
@@ -876,7 +979,9 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1ExperimentTemplateSpecInitProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecInitProviderRoleArnSelectorPolicy
@@ -889,7 +994,9 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderRoleArnSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecInitProviderRoleArnSelector
@@ -910,7 +1017,9 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1ExperimentTemplateSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecInitProviderStopCondition
@@ -923,7 +1032,9 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderStopCondition
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecInitProviderTargetFilter
@@ -936,7 +1047,9 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderTargetFilter
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecInitProviderTargetResourceTag
@@ -949,7 +1062,9 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderTargetResourceTag
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecInitProviderTarget
@@ -982,7 +1097,9 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderTarget
     [JsonPropertyName("selectionMode")]
     public string? SelectionMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecInitProvider
@@ -1031,7 +1148,9 @@ public partial class V1beta1ExperimentTemplateSpecInitProvider
     [JsonPropertyName("target")]
     public IList<V1beta1ExperimentTemplateSpecInitProviderTarget>? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecProviderConfigRef
@@ -1044,7 +1163,9 @@ public partial class V1beta1ExperimentTemplateSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecWriteConnectionSecretToRef
@@ -1053,7 +1174,9 @@ public partial class V1beta1ExperimentTemplateSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExperimentTemplateSpec defines the desired state of ExperimentTemplate</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpec
@@ -1078,7 +1201,9 @@ public partial class V1beta1ExperimentTemplateSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ExperimentTemplateSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateStatusAtProviderActionParameter
@@ -1091,7 +1216,9 @@ public partial class V1beta1ExperimentTemplateStatusAtProviderActionParameter
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Action's target, if applicable. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateStatusAtProviderActionTarget
@@ -1104,7 +1231,9 @@ public partial class V1beta1ExperimentTemplateStatusAtProviderActionTarget
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateStatusAtProviderAction
@@ -1133,7 +1262,9 @@ public partial class V1beta1ExperimentTemplateStatusAtProviderAction
     [JsonPropertyName("target")]
     public V1beta1ExperimentTemplateStatusAtProviderActionTarget? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The experiment options for the experiment template. See experiment_options below for more details!</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateStatusAtProviderExperimentOptions
@@ -1146,7 +1277,9 @@ public partial class V1beta1ExperimentTemplateStatusAtProviderExperimentOptions
     [JsonPropertyName("emptyTargetResolutionMode")]
     public string? EmptyTargetResolutionMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateStatusAtProviderExperimentReportConfigurationDataSourcesCloudwatchDashboard
@@ -1155,7 +1288,9 @@ public partial class V1beta1ExperimentTemplateStatusAtProviderExperimentReportCo
     [JsonPropertyName("dashboardArn")]
     public string? DashboardArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The data sources for the experiment report. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateStatusAtProviderExperimentReportConfigurationDataSources
@@ -1164,7 +1299,9 @@ public partial class V1beta1ExperimentTemplateStatusAtProviderExperimentReportCo
     [JsonPropertyName("cloudwatchDashboard")]
     public IList<V1beta1ExperimentTemplateStatusAtProviderExperimentReportConfigurationDataSourcesCloudwatchDashboard>? CloudwatchDashboard { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The data sources for the experiment report. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateStatusAtProviderExperimentReportConfigurationOutputsS3Configuration
@@ -1177,7 +1314,9 @@ public partial class V1beta1ExperimentTemplateStatusAtProviderExperimentReportCo
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The outputs for the experiment report. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateStatusAtProviderExperimentReportConfigurationOutputs
@@ -1186,7 +1325,9 @@ public partial class V1beta1ExperimentTemplateStatusAtProviderExperimentReportCo
     [JsonPropertyName("s3Configuration")]
     public V1beta1ExperimentTemplateStatusAtProviderExperimentReportConfigurationOutputsS3Configuration? S3Configuration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for experiment reporting. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateStatusAtProviderExperimentReportConfiguration
@@ -1207,7 +1348,9 @@ public partial class V1beta1ExperimentTemplateStatusAtProviderExperimentReportCo
     [JsonPropertyName("preExperimentDuration")]
     public string? PreExperimentDuration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for experiment logging to Amazon CloudWatch Logs. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateStatusAtProviderLogConfigurationCloudwatchLogsConfiguration
@@ -1216,7 +1359,9 @@ public partial class V1beta1ExperimentTemplateStatusAtProviderLogConfigurationCl
     [JsonPropertyName("logGroupArn")]
     public string? LogGroupArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for experiment logging to Amazon S3. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateStatusAtProviderLogConfigurationS3Configuration
@@ -1229,7 +1374,9 @@ public partial class V1beta1ExperimentTemplateStatusAtProviderLogConfigurationS3
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for experiment logging. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateStatusAtProviderLogConfiguration
@@ -1246,7 +1393,9 @@ public partial class V1beta1ExperimentTemplateStatusAtProviderLogConfiguration
     [JsonPropertyName("s3Configuration")]
     public V1beta1ExperimentTemplateStatusAtProviderLogConfigurationS3Configuration? S3Configuration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateStatusAtProviderStopCondition
@@ -1259,7 +1408,9 @@ public partial class V1beta1ExperimentTemplateStatusAtProviderStopCondition
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateStatusAtProviderTargetFilter
@@ -1272,7 +1423,9 @@ public partial class V1beta1ExperimentTemplateStatusAtProviderTargetFilter
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateStatusAtProviderTargetResourceTag
@@ -1285,7 +1438,9 @@ public partial class V1beta1ExperimentTemplateStatusAtProviderTargetResourceTag
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateStatusAtProviderTarget
@@ -1318,7 +1473,9 @@ public partial class V1beta1ExperimentTemplateStatusAtProviderTarget
     [JsonPropertyName("selectionMode")]
     public string? SelectionMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateStatusAtProvider
@@ -1371,7 +1528,9 @@ public partial class V1beta1ExperimentTemplateStatusAtProvider
     [JsonPropertyName("target")]
     public IList<V1beta1ExperimentTemplateStatusAtProviderTarget>? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateStatusConditions
@@ -1400,7 +1559,9 @@ public partial class V1beta1ExperimentTemplateStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExperimentTemplateStatus defines the observed state of ExperimentTemplate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateStatus
@@ -1417,7 +1578,9 @@ public partial class V1beta1ExperimentTemplateStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExperimentTemplate is the Schema for the ExperimentTemplates API. Provides an FIS Experiment Template.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1447,3 +1610,4 @@ public partial class V1beta1ExperimentTemplate : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1ExperimentTemplateStatus? Status { get; set; }
 }
+#nullable disable

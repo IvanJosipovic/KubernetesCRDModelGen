@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20240301.NatGateway Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/natGateway.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/natGateways/{natGatewayName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20240301storageNatGatewayList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1api20240301storageNatGateway> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNatGatewaySpecOperatorSpecConfigMapExpressions
@@ -50,7 +53,9 @@ public partial class V1api20240301storageNatGatewaySpecOperatorSpecConfigMapExpr
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNatGatewaySpecOperatorSpecSecretExpressions
@@ -67,7 +72,9 @@ public partial class V1api20240301storageNatGatewaySpecOperatorSpecSecretExpress
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.NatGatewayOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNatGatewaySpecOperatorSpec
@@ -84,7 +91,9 @@ public partial class V1api20240301storageNatGatewaySpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20240301storageNatGatewaySpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNatGatewaySpecOwner
@@ -97,7 +106,9 @@ public partial class V1api20240301storageNatGatewaySpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNatGatewaySpecPublicIpAddressesReference
@@ -118,7 +129,9 @@ public partial class V1api20240301storageNatGatewaySpecPublicIpAddressesReferenc
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNatGatewaySpecPublicIpAddresses
@@ -131,7 +144,9 @@ public partial class V1api20240301storageNatGatewaySpecPublicIpAddresses
     [JsonPropertyName("reference")]
     public V1api20240301storageNatGatewaySpecPublicIpAddressesReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNatGatewaySpecPublicIpPrefixesReference
@@ -152,7 +167,9 @@ public partial class V1api20240301storageNatGatewaySpecPublicIpPrefixesReference
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNatGatewaySpecPublicIpPrefixes
@@ -165,7 +182,9 @@ public partial class V1api20240301storageNatGatewaySpecPublicIpPrefixes
     [JsonPropertyName("reference")]
     public V1api20240301storageNatGatewaySpecPublicIpPrefixesReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.NatGatewaySku SKU of nat gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNatGatewaySpecSku
@@ -178,7 +197,9 @@ public partial class V1api20240301storageNatGatewaySpecSku
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.NatGateway_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNatGatewaySpec
@@ -231,7 +252,9 @@ public partial class V1api20240301storageNatGatewaySpec
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNatGatewayStatusConditions
@@ -264,7 +287,9 @@ public partial class V1api20240301storageNatGatewayStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNatGatewayStatusPublicIpAddresses
@@ -277,7 +302,9 @@ public partial class V1api20240301storageNatGatewayStatusPublicIpAddresses
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNatGatewayStatusPublicIpPrefixes
@@ -290,7 +317,9 @@ public partial class V1api20240301storageNatGatewayStatusPublicIpPrefixes
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.NatGatewaySku_STATUS SKU of nat gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNatGatewayStatusSku
@@ -303,7 +332,9 @@ public partial class V1api20240301storageNatGatewayStatusSku
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNatGatewayStatusSubnets
@@ -316,7 +347,9 @@ public partial class V1api20240301storageNatGatewayStatusSubnets
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.NatGateway_STATUS Nat Gateway resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageNatGatewayStatus
@@ -385,7 +418,9 @@ public partial class V1api20240301storageNatGatewayStatus
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.NatGateway Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/natGateway.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/natGateways/{natGatewayName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -415,3 +450,4 @@ public partial class V1api20240301storageNatGateway : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1api20240301storageNatGatewayStatus? Status { get; set; }
 }
+#nullable disable

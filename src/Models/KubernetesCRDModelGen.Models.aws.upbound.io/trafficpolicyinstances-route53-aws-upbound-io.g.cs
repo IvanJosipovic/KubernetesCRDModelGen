@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.route53.aws.upbound.io;
+#nullable enable
 /// <summary>TrafficPolicyInstance is the Schema for the TrafficPolicyInstances API. Provides a Route53 traffic policy instance resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TrafficPolicyInstanceList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1TrafficPolicyInstance> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficPolicyInstanceSpecForProviderHostedZoneIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1TrafficPolicyInstanceSpecForProviderHostedZoneIdRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Zone in route53 to populate hostedZoneId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficPolicyInstanceSpecForProviderHostedZoneIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1TrafficPolicyInstanceSpecForProviderHostedZoneIdRef
     [JsonPropertyName("policy")]
     public V1beta1TrafficPolicyInstanceSpecForProviderHostedZoneIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficPolicyInstanceSpecForProviderHostedZoneIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1TrafficPolicyInstanceSpecForProviderHostedZoneIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Zone in route53 to populate hostedZoneId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficPolicyInstanceSpecForProviderHostedZoneIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1TrafficPolicyInstanceSpecForProviderHostedZoneIdSele
     [JsonPropertyName("policy")]
     public V1beta1TrafficPolicyInstanceSpecForProviderHostedZoneIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficPolicyInstanceSpecForProviderTrafficPolicyIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1TrafficPolicyInstanceSpecForProviderTrafficPolicyIdR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TrafficPolicy in route53 to populate trafficPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficPolicyInstanceSpecForProviderTrafficPolicyIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1TrafficPolicyInstanceSpecForProviderTrafficPolicyIdR
     [JsonPropertyName("policy")]
     public V1beta1TrafficPolicyInstanceSpecForProviderTrafficPolicyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficPolicyInstanceSpecForProviderTrafficPolicyIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1TrafficPolicyInstanceSpecForProviderTrafficPolicyIdS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TrafficPolicy in route53 to populate trafficPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficPolicyInstanceSpecForProviderTrafficPolicyIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1TrafficPolicyInstanceSpecForProviderTrafficPolicyIdS
     [JsonPropertyName("policy")]
     public V1beta1TrafficPolicyInstanceSpecForProviderTrafficPolicyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficPolicyInstanceSpecForProvider
@@ -186,7 +205,9 @@ public partial class V1beta1TrafficPolicyInstanceSpecForProvider
     [JsonPropertyName("ttl")]
     public double? Ttl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficPolicyInstanceSpecInitProviderHostedZoneIdRefPolicy
@@ -199,7 +220,9 @@ public partial class V1beta1TrafficPolicyInstanceSpecInitProviderHostedZoneIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Zone in route53 to populate hostedZoneId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficPolicyInstanceSpecInitProviderHostedZoneIdRef
@@ -212,7 +235,9 @@ public partial class V1beta1TrafficPolicyInstanceSpecInitProviderHostedZoneIdRef
     [JsonPropertyName("policy")]
     public V1beta1TrafficPolicyInstanceSpecInitProviderHostedZoneIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficPolicyInstanceSpecInitProviderHostedZoneIdSelectorPolicy
@@ -225,7 +250,9 @@ public partial class V1beta1TrafficPolicyInstanceSpecInitProviderHostedZoneIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Zone in route53 to populate hostedZoneId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficPolicyInstanceSpecInitProviderHostedZoneIdSelector
@@ -242,7 +269,9 @@ public partial class V1beta1TrafficPolicyInstanceSpecInitProviderHostedZoneIdSel
     [JsonPropertyName("policy")]
     public V1beta1TrafficPolicyInstanceSpecInitProviderHostedZoneIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficPolicyInstanceSpecInitProviderTrafficPolicyIdRefPolicy
@@ -255,7 +284,9 @@ public partial class V1beta1TrafficPolicyInstanceSpecInitProviderTrafficPolicyId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TrafficPolicy in route53 to populate trafficPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficPolicyInstanceSpecInitProviderTrafficPolicyIdRef
@@ -268,7 +299,9 @@ public partial class V1beta1TrafficPolicyInstanceSpecInitProviderTrafficPolicyId
     [JsonPropertyName("policy")]
     public V1beta1TrafficPolicyInstanceSpecInitProviderTrafficPolicyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficPolicyInstanceSpecInitProviderTrafficPolicyIdSelectorPolicy
@@ -281,7 +314,9 @@ public partial class V1beta1TrafficPolicyInstanceSpecInitProviderTrafficPolicyId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TrafficPolicy in route53 to populate trafficPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficPolicyInstanceSpecInitProviderTrafficPolicyIdSelector
@@ -298,7 +333,9 @@ public partial class V1beta1TrafficPolicyInstanceSpecInitProviderTrafficPolicyId
     [JsonPropertyName("policy")]
     public V1beta1TrafficPolicyInstanceSpecInitProviderTrafficPolicyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficPolicyInstanceSpecInitProvider
@@ -339,7 +376,9 @@ public partial class V1beta1TrafficPolicyInstanceSpecInitProvider
     [JsonPropertyName("ttl")]
     public double? Ttl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficPolicyInstanceSpecProviderConfigRefPolicy
@@ -352,7 +391,9 @@ public partial class V1beta1TrafficPolicyInstanceSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficPolicyInstanceSpecProviderConfigRef
@@ -365,7 +406,9 @@ public partial class V1beta1TrafficPolicyInstanceSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1TrafficPolicyInstanceSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficPolicyInstanceSpecWriteConnectionSecretToRef
@@ -378,7 +421,9 @@ public partial class V1beta1TrafficPolicyInstanceSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TrafficPolicyInstanceSpec defines the desired state of TrafficPolicyInstance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficPolicyInstanceSpec
@@ -407,7 +452,9 @@ public partial class V1beta1TrafficPolicyInstanceSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TrafficPolicyInstanceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficPolicyInstanceStatusAtProvider
@@ -440,7 +487,9 @@ public partial class V1beta1TrafficPolicyInstanceStatusAtProvider
     [JsonPropertyName("ttl")]
     public double? Ttl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficPolicyInstanceStatusConditions
@@ -469,7 +518,9 @@ public partial class V1beta1TrafficPolicyInstanceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TrafficPolicyInstanceStatus defines the observed state of TrafficPolicyInstance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficPolicyInstanceStatus
@@ -486,7 +537,9 @@ public partial class V1beta1TrafficPolicyInstanceStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TrafficPolicyInstance is the Schema for the TrafficPolicyInstances API. Provides a Route53 traffic policy instance resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -516,3 +569,4 @@ public partial class V1beta1TrafficPolicyInstance : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1TrafficPolicyInstanceStatus? Status { get; set; }
 }
+#nullable disable

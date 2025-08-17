@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.artifact.gcp.upbound.io;
+#nullable enable
 /// <summary>RegistryRepository is the Schema for the RegistryRepositorys API. A repository for storing artifacts</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RegistryRepositoryList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1RegistryRepository> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderCleanupPoliciesCondition
@@ -62,7 +65,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderCleanupPoliciesCond
     [JsonPropertyName("versionNamePrefixes")]
     public IList<string>? VersionNamePrefixes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderCleanupPoliciesMostRecentVersions
@@ -75,7 +80,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderCleanupPoliciesMost
     [JsonPropertyName("packageNamePrefixes")]
     public IList<string>? PackageNamePrefixes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderCleanupPolicies
@@ -96,7 +103,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderCleanupPolicies
     [JsonPropertyName("mostRecentVersions")]
     public IList<V1beta1RegistryRepositorySpecForProviderCleanupPoliciesMostRecentVersions>? MostRecentVersions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderDockerConfig
@@ -105,7 +114,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderDockerConfig
     [JsonPropertyName("immutableTags")]
     public bool? ImmutableTags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderMavenConfig
@@ -118,7 +129,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderMavenConfig
     [JsonPropertyName("versionPolicy")]
     public string? VersionPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigAptRepositoryPublicRepository
@@ -131,7 +144,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
     [JsonPropertyName("repositoryPath")]
     public string? RepositoryPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigAptRepository
@@ -140,7 +155,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
     [JsonPropertyName("publicRepository")]
     public IList<V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigAptRepositoryPublicRepository>? PublicRepository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigCommonRepositoryUriRefPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegistryRepository in artifact to populate uri.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigCommonRepositoryUriRef
@@ -166,7 +185,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
     [JsonPropertyName("policy")]
     public V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigCommonRepositoryUriRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigCommonRepositoryUriSelectorPolicy
@@ -179,7 +200,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegistryRepository in artifact to populate uri.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigCommonRepositoryUriSelector
@@ -196,7 +219,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
     [JsonPropertyName("policy")]
     public V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigCommonRepositoryUriSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigCommonRepository
@@ -213,7 +238,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
     [JsonPropertyName("uriSelector")]
     public V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigCommonRepositoryUriSelector? UriSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigDockerRepositoryCustomRepository
@@ -222,7 +249,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigDockerRepository
@@ -235,7 +264,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
     [JsonPropertyName("publicRepository")]
     public string? PublicRepository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigMavenRepositoryCustomRepository
@@ -244,7 +275,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigMavenRepository
@@ -257,7 +290,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
     [JsonPropertyName("publicRepository")]
     public string? PublicRepository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigNpmRepositoryCustomRepository
@@ -266,7 +301,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigNpmRepository
@@ -279,7 +316,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
     [JsonPropertyName("publicRepository")]
     public string? PublicRepository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigPythonRepositoryCustomRepository
@@ -288,7 +327,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigPythonRepository
@@ -301,7 +342,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
     [JsonPropertyName("publicRepository")]
     public string? PublicRepository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentialsPasswordSecretVersionRefPolicy
@@ -314,7 +357,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SecretVersion in secretmanager to populate passwordSecretVersion.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentialsPasswordSecretVersionRef
@@ -327,7 +372,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
     [JsonPropertyName("policy")]
     public V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentialsPasswordSecretVersionRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentialsPasswordSecretVersionSelectorPolicy
@@ -340,7 +387,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SecretVersion in secretmanager to populate passwordSecretVersion.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentialsPasswordSecretVersionSelector
@@ -357,7 +406,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
     [JsonPropertyName("policy")]
     public V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentialsPasswordSecretVersionSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentials
@@ -378,7 +429,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigUpstreamCredentials
@@ -387,7 +440,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
     [JsonPropertyName("usernamePasswordCredentials")]
     public IList<V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentials>? UsernamePasswordCredentials { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigYumRepositoryPublicRepository
@@ -400,7 +455,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
     [JsonPropertyName("repositoryPath")]
     public string? RepositoryPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigYumRepository
@@ -409,7 +466,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
     [JsonPropertyName("publicRepository")]
     public IList<V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigYumRepositoryPublicRepository>? PublicRepository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfig
@@ -454,7 +513,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
     [JsonPropertyName("yumRepository")]
     public IList<V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigYumRepository>? YumRepository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderVirtualRepositoryConfigUpstreamPoliciesRepositoryRefPolicy
@@ -467,7 +528,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderVirtualRepositoryCo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegistryRepository in artifact to populate repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderVirtualRepositoryConfigUpstreamPoliciesRepositoryRef
@@ -480,7 +543,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderVirtualRepositoryCo
     [JsonPropertyName("policy")]
     public V1beta1RegistryRepositorySpecForProviderVirtualRepositoryConfigUpstreamPoliciesRepositoryRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderVirtualRepositoryConfigUpstreamPoliciesRepositorySelectorPolicy
@@ -493,7 +558,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderVirtualRepositoryCo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegistryRepository in artifact to populate repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderVirtualRepositoryConfigUpstreamPoliciesRepositorySelector
@@ -510,7 +577,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderVirtualRepositoryCo
     [JsonPropertyName("policy")]
     public V1beta1RegistryRepositorySpecForProviderVirtualRepositoryConfigUpstreamPoliciesRepositorySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderVirtualRepositoryConfigUpstreamPolicies
@@ -535,7 +604,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderVirtualRepositoryCo
     [JsonPropertyName("repositorySelector")]
     public V1beta1RegistryRepositorySpecForProviderVirtualRepositoryConfigUpstreamPoliciesRepositorySelector? RepositorySelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderVirtualRepositoryConfig
@@ -544,7 +615,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderVirtualRepositoryCo
     [JsonPropertyName("upstreamPolicies")]
     public IList<V1beta1RegistryRepositorySpecForProviderVirtualRepositoryConfigUpstreamPolicies>? UpstreamPolicies { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderVulnerabilityScanningConfig
@@ -553,7 +626,9 @@ public partial class V1beta1RegistryRepositorySpecForProviderVulnerabilityScanni
     [JsonPropertyName("enablementConfig")]
     public string? EnablementConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProvider
@@ -614,7 +689,9 @@ public partial class V1beta1RegistryRepositorySpecForProvider
     [JsonPropertyName("vulnerabilityScanningConfig")]
     public IList<V1beta1RegistryRepositorySpecForProviderVulnerabilityScanningConfig>? VulnerabilityScanningConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderCleanupPoliciesCondition
@@ -643,7 +720,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderCleanupPoliciesCon
     [JsonPropertyName("versionNamePrefixes")]
     public IList<string>? VersionNamePrefixes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderCleanupPoliciesMostRecentVersions
@@ -656,7 +735,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderCleanupPoliciesMos
     [JsonPropertyName("packageNamePrefixes")]
     public IList<string>? PackageNamePrefixes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderCleanupPolicies
@@ -677,7 +758,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderCleanupPolicies
     [JsonPropertyName("mostRecentVersions")]
     public IList<V1beta1RegistryRepositorySpecInitProviderCleanupPoliciesMostRecentVersions>? MostRecentVersions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderDockerConfig
@@ -686,7 +769,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderDockerConfig
     [JsonPropertyName("immutableTags")]
     public bool? ImmutableTags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderMavenConfig
@@ -699,7 +784,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderMavenConfig
     [JsonPropertyName("versionPolicy")]
     public string? VersionPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigAptRepositoryPublicRepository
@@ -712,7 +799,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
     [JsonPropertyName("repositoryPath")]
     public string? RepositoryPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigAptRepository
@@ -721,7 +810,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
     [JsonPropertyName("publicRepository")]
     public IList<V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigAptRepositoryPublicRepository>? PublicRepository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigCommonRepositoryUriRefPolicy
@@ -734,7 +825,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegistryRepository in artifact to populate uri.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigCommonRepositoryUriRef
@@ -747,7 +840,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
     [JsonPropertyName("policy")]
     public V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigCommonRepositoryUriRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigCommonRepositoryUriSelectorPolicy
@@ -760,7 +855,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegistryRepository in artifact to populate uri.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigCommonRepositoryUriSelector
@@ -777,7 +874,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
     [JsonPropertyName("policy")]
     public V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigCommonRepositoryUriSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigCommonRepository
@@ -794,7 +893,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
     [JsonPropertyName("uriSelector")]
     public V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigCommonRepositoryUriSelector? UriSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigDockerRepositoryCustomRepository
@@ -803,7 +904,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigDockerRepository
@@ -816,7 +919,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
     [JsonPropertyName("publicRepository")]
     public string? PublicRepository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigMavenRepositoryCustomRepository
@@ -825,7 +930,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigMavenRepository
@@ -838,7 +945,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
     [JsonPropertyName("publicRepository")]
     public string? PublicRepository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigNpmRepositoryCustomRepository
@@ -847,7 +956,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigNpmRepository
@@ -860,7 +971,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
     [JsonPropertyName("publicRepository")]
     public string? PublicRepository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigPythonRepositoryCustomRepository
@@ -869,7 +982,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigPythonRepository
@@ -882,7 +997,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
     [JsonPropertyName("publicRepository")]
     public string? PublicRepository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentialsPasswordSecretVersionRefPolicy
@@ -895,7 +1012,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SecretVersion in secretmanager to populate passwordSecretVersion.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentialsPasswordSecretVersionRef
@@ -908,7 +1027,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
     [JsonPropertyName("policy")]
     public V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentialsPasswordSecretVersionRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentialsPasswordSecretVersionSelectorPolicy
@@ -921,7 +1042,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SecretVersion in secretmanager to populate passwordSecretVersion.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentialsPasswordSecretVersionSelector
@@ -938,7 +1061,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
     [JsonPropertyName("policy")]
     public V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentialsPasswordSecretVersionSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentials
@@ -959,7 +1084,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigUpstreamCredentials
@@ -968,7 +1095,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
     [JsonPropertyName("usernamePasswordCredentials")]
     public IList<V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentials>? UsernamePasswordCredentials { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigYumRepositoryPublicRepository
@@ -981,7 +1110,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
     [JsonPropertyName("repositoryPath")]
     public string? RepositoryPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigYumRepository
@@ -990,7 +1121,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
     [JsonPropertyName("publicRepository")]
     public IList<V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigYumRepositoryPublicRepository>? PublicRepository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfig
@@ -1035,7 +1168,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
     [JsonPropertyName("yumRepository")]
     public IList<V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigYumRepository>? YumRepository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryConfigUpstreamPoliciesRepositoryRefPolicy
@@ -1048,7 +1183,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryC
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegistryRepository in artifact to populate repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryConfigUpstreamPoliciesRepositoryRef
@@ -1061,7 +1198,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryC
     [JsonPropertyName("policy")]
     public V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryConfigUpstreamPoliciesRepositoryRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryConfigUpstreamPoliciesRepositorySelectorPolicy
@@ -1074,7 +1213,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryC
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegistryRepository in artifact to populate repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryConfigUpstreamPoliciesRepositorySelector
@@ -1091,7 +1232,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryC
     [JsonPropertyName("policy")]
     public V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryConfigUpstreamPoliciesRepositorySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryConfigUpstreamPolicies
@@ -1116,7 +1259,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryC
     [JsonPropertyName("repositorySelector")]
     public V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryConfigUpstreamPoliciesRepositorySelector? RepositorySelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryConfig
@@ -1125,7 +1270,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryC
     [JsonPropertyName("upstreamPolicies")]
     public IList<V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryConfigUpstreamPolicies>? UpstreamPolicies { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProviderVulnerabilityScanningConfig
@@ -1134,7 +1281,9 @@ public partial class V1beta1RegistryRepositorySpecInitProviderVulnerabilityScann
     [JsonPropertyName("enablementConfig")]
     public string? EnablementConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProvider
@@ -1191,7 +1340,9 @@ public partial class V1beta1RegistryRepositorySpecInitProvider
     [JsonPropertyName("vulnerabilityScanningConfig")]
     public IList<V1beta1RegistryRepositorySpecInitProviderVulnerabilityScanningConfig>? VulnerabilityScanningConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecProviderConfigRefPolicy
@@ -1204,7 +1355,9 @@ public partial class V1beta1RegistryRepositorySpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecProviderConfigRef
@@ -1217,7 +1370,9 @@ public partial class V1beta1RegistryRepositorySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1RegistryRepositorySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecWriteConnectionSecretToRef
@@ -1230,7 +1385,9 @@ public partial class V1beta1RegistryRepositorySpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegistryRepositorySpec defines the desired state of RegistryRepository</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpec
@@ -1259,7 +1416,9 @@ public partial class V1beta1RegistryRepositorySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RegistryRepositorySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderCleanupPoliciesCondition
@@ -1288,7 +1447,9 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderCleanupPoliciesCon
     [JsonPropertyName("versionNamePrefixes")]
     public IList<string>? VersionNamePrefixes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderCleanupPoliciesMostRecentVersions
@@ -1301,7 +1462,9 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderCleanupPoliciesMos
     [JsonPropertyName("packageNamePrefixes")]
     public IList<string>? PackageNamePrefixes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderCleanupPolicies
@@ -1322,7 +1485,9 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderCleanupPolicies
     [JsonPropertyName("mostRecentVersions")]
     public IList<V1beta1RegistryRepositoryStatusAtProviderCleanupPoliciesMostRecentVersions>? MostRecentVersions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderDockerConfig
@@ -1331,7 +1496,9 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderDockerConfig
     [JsonPropertyName("immutableTags")]
     public bool? ImmutableTags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderMavenConfig
@@ -1344,7 +1511,9 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderMavenConfig
     [JsonPropertyName("versionPolicy")]
     public string? VersionPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigAptRepositoryPublicRepository
@@ -1357,7 +1526,9 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
     [JsonPropertyName("repositoryPath")]
     public string? RepositoryPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigAptRepository
@@ -1366,7 +1537,9 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
     [JsonPropertyName("publicRepository")]
     public IList<V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigAptRepositoryPublicRepository>? PublicRepository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigCommonRepository
@@ -1375,7 +1548,9 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigDockerRepositoryCustomRepository
@@ -1384,7 +1559,9 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigDockerRepository
@@ -1397,7 +1574,9 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
     [JsonPropertyName("publicRepository")]
     public string? PublicRepository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigMavenRepositoryCustomRepository
@@ -1406,7 +1585,9 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigMavenRepository
@@ -1419,7 +1600,9 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
     [JsonPropertyName("publicRepository")]
     public string? PublicRepository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigNpmRepositoryCustomRepository
@@ -1428,7 +1611,9 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigNpmRepository
@@ -1441,7 +1626,9 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
     [JsonPropertyName("publicRepository")]
     public string? PublicRepository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigPythonRepositoryCustomRepository
@@ -1450,7 +1637,9 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigPythonRepository
@@ -1463,7 +1652,9 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
     [JsonPropertyName("publicRepository")]
     public string? PublicRepository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentials
@@ -1476,7 +1667,9 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigUpstreamCredentials
@@ -1485,7 +1678,9 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
     [JsonPropertyName("usernamePasswordCredentials")]
     public IList<V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentials>? UsernamePasswordCredentials { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigYumRepositoryPublicRepository
@@ -1498,7 +1693,9 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
     [JsonPropertyName("repositoryPath")]
     public string? RepositoryPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigYumRepository
@@ -1507,7 +1704,9 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
     [JsonPropertyName("publicRepository")]
     public IList<V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigYumRepositoryPublicRepository>? PublicRepository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfig
@@ -1552,7 +1751,9 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
     [JsonPropertyName("yumRepository")]
     public IList<V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigYumRepository>? YumRepository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderVirtualRepositoryConfigUpstreamPolicies
@@ -1569,7 +1770,9 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderVirtualRepositoryC
     [JsonPropertyName("repository")]
     public string? Repository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderVirtualRepositoryConfig
@@ -1578,7 +1781,9 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderVirtualRepositoryC
     [JsonPropertyName("upstreamPolicies")]
     public IList<V1beta1RegistryRepositoryStatusAtProviderVirtualRepositoryConfigUpstreamPolicies>? UpstreamPolicies { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderVulnerabilityScanningConfig
@@ -1595,7 +1800,9 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderVulnerabilityScann
     [JsonPropertyName("enablementStateReason")]
     public string? EnablementStateReason { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProvider
@@ -1680,7 +1887,9 @@ public partial class V1beta1RegistryRepositoryStatusAtProvider
     [JsonPropertyName("vulnerabilityScanningConfig")]
     public IList<V1beta1RegistryRepositoryStatusAtProviderVulnerabilityScanningConfig>? VulnerabilityScanningConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusConditions
@@ -1709,7 +1918,9 @@ public partial class V1beta1RegistryRepositoryStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegistryRepositoryStatus defines the observed state of RegistryRepository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatus
@@ -1726,7 +1937,9 @@ public partial class V1beta1RegistryRepositoryStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegistryRepository is the Schema for the RegistryRepositorys API. A repository for storing artifacts</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1756,3 +1969,4 @@ public partial class V1beta1RegistryRepository : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1RegistryRepositoryStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.accesscontextmanager.gcp.m.upbound.io;
+#nullable enable
 /// <summary>AccessLevelCondition is the Schema for the AccessLevelConditions API. Allows configuring a single access level condition to be appended to an access level's conditions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AccessLevelConditionList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1AccessLevelCondition> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelConditionSpecForProviderAccessLevelRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1AccessLevelConditionSpecForProviderAccessLevelRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a AccessLevel in accesscontextmanager to populate accessLevel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelConditionSpecForProviderAccessLevelRef
@@ -63,7 +68,9 @@ public partial class V1beta1AccessLevelConditionSpecForProviderAccessLevelRef
     [JsonPropertyName("policy")]
     public V1beta1AccessLevelConditionSpecForProviderAccessLevelRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelConditionSpecForProviderAccessLevelSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1AccessLevelConditionSpecForProviderAccessLevelSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a AccessLevel in accesscontextmanager to populate accessLevel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelConditionSpecForProviderAccessLevelSelector
@@ -97,7 +106,9 @@ public partial class V1beta1AccessLevelConditionSpecForProviderAccessLevelSelect
     [JsonPropertyName("policy")]
     public V1beta1AccessLevelConditionSpecForProviderAccessLevelSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelConditionSpecForProviderDevicePolicyOsConstraints
@@ -110,7 +121,9 @@ public partial class V1beta1AccessLevelConditionSpecForProviderDevicePolicyOsCon
     [JsonPropertyName("osType")]
     public string? OsType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelConditionSpecForProviderDevicePolicy
@@ -139,7 +152,9 @@ public partial class V1beta1AccessLevelConditionSpecForProviderDevicePolicy
     [JsonPropertyName("requireScreenLock")]
     public bool? RequireScreenLock { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sub networks within a VPC network. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelConditionSpecForProviderVpcNetworkSourcesVpcSubnetwork
@@ -152,7 +167,9 @@ public partial class V1beta1AccessLevelConditionSpecForProviderVpcNetworkSources
     [JsonPropertyName("vpcIpSubnetworks")]
     public IList<string>? VpcIpSubnetworks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelConditionSpecForProviderVpcNetworkSources
@@ -161,7 +178,9 @@ public partial class V1beta1AccessLevelConditionSpecForProviderVpcNetworkSources
     [JsonPropertyName("vpcSubnetwork")]
     public V1beta1AccessLevelConditionSpecForProviderVpcNetworkSourcesVpcSubnetwork? VpcSubnetwork { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelConditionSpecForProvider
@@ -206,7 +225,9 @@ public partial class V1beta1AccessLevelConditionSpecForProvider
     [JsonPropertyName("vpcNetworkSources")]
     public IList<V1beta1AccessLevelConditionSpecForProviderVpcNetworkSources>? VpcNetworkSources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelConditionSpecInitProviderAccessLevelRefPolicy
@@ -219,7 +240,9 @@ public partial class V1beta1AccessLevelConditionSpecInitProviderAccessLevelRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a AccessLevel in accesscontextmanager to populate accessLevel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelConditionSpecInitProviderAccessLevelRef
@@ -236,7 +259,9 @@ public partial class V1beta1AccessLevelConditionSpecInitProviderAccessLevelRef
     [JsonPropertyName("policy")]
     public V1beta1AccessLevelConditionSpecInitProviderAccessLevelRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelConditionSpecInitProviderAccessLevelSelectorPolicy
@@ -249,7 +274,9 @@ public partial class V1beta1AccessLevelConditionSpecInitProviderAccessLevelSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a AccessLevel in accesscontextmanager to populate accessLevel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelConditionSpecInitProviderAccessLevelSelector
@@ -270,7 +297,9 @@ public partial class V1beta1AccessLevelConditionSpecInitProviderAccessLevelSelec
     [JsonPropertyName("policy")]
     public V1beta1AccessLevelConditionSpecInitProviderAccessLevelSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelConditionSpecInitProviderDevicePolicyOsConstraints
@@ -283,7 +312,9 @@ public partial class V1beta1AccessLevelConditionSpecInitProviderDevicePolicyOsCo
     [JsonPropertyName("osType")]
     public string? OsType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelConditionSpecInitProviderDevicePolicy
@@ -312,7 +343,9 @@ public partial class V1beta1AccessLevelConditionSpecInitProviderDevicePolicy
     [JsonPropertyName("requireScreenLock")]
     public bool? RequireScreenLock { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sub networks within a VPC network. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelConditionSpecInitProviderVpcNetworkSourcesVpcSubnetwork
@@ -325,7 +358,9 @@ public partial class V1beta1AccessLevelConditionSpecInitProviderVpcNetworkSource
     [JsonPropertyName("vpcIpSubnetworks")]
     public IList<string>? VpcIpSubnetworks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelConditionSpecInitProviderVpcNetworkSources
@@ -334,7 +369,9 @@ public partial class V1beta1AccessLevelConditionSpecInitProviderVpcNetworkSource
     [JsonPropertyName("vpcSubnetwork")]
     public V1beta1AccessLevelConditionSpecInitProviderVpcNetworkSourcesVpcSubnetwork? VpcSubnetwork { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelConditionSpecInitProvider
@@ -379,7 +416,9 @@ public partial class V1beta1AccessLevelConditionSpecInitProvider
     [JsonPropertyName("vpcNetworkSources")]
     public IList<V1beta1AccessLevelConditionSpecInitProviderVpcNetworkSources>? VpcNetworkSources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelConditionSpecProviderConfigRef
@@ -392,7 +431,9 @@ public partial class V1beta1AccessLevelConditionSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelConditionSpecWriteConnectionSecretToRef
@@ -401,7 +442,9 @@ public partial class V1beta1AccessLevelConditionSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AccessLevelConditionSpec defines the desired state of AccessLevelCondition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelConditionSpec
@@ -426,7 +469,9 @@ public partial class V1beta1AccessLevelConditionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AccessLevelConditionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelConditionStatusAtProviderDevicePolicyOsConstraints
@@ -439,7 +484,9 @@ public partial class V1beta1AccessLevelConditionStatusAtProviderDevicePolicyOsCo
     [JsonPropertyName("osType")]
     public string? OsType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelConditionStatusAtProviderDevicePolicy
@@ -468,7 +515,9 @@ public partial class V1beta1AccessLevelConditionStatusAtProviderDevicePolicy
     [JsonPropertyName("requireScreenLock")]
     public bool? RequireScreenLock { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sub networks within a VPC network. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelConditionStatusAtProviderVpcNetworkSourcesVpcSubnetwork
@@ -481,7 +530,9 @@ public partial class V1beta1AccessLevelConditionStatusAtProviderVpcNetworkSource
     [JsonPropertyName("vpcIpSubnetworks")]
     public IList<string>? VpcIpSubnetworks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelConditionStatusAtProviderVpcNetworkSources
@@ -490,7 +541,9 @@ public partial class V1beta1AccessLevelConditionStatusAtProviderVpcNetworkSource
     [JsonPropertyName("vpcSubnetwork")]
     public V1beta1AccessLevelConditionStatusAtProviderVpcNetworkSourcesVpcSubnetwork? VpcSubnetwork { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelConditionStatusAtProvider
@@ -535,7 +588,9 @@ public partial class V1beta1AccessLevelConditionStatusAtProvider
     [JsonPropertyName("vpcNetworkSources")]
     public IList<V1beta1AccessLevelConditionStatusAtProviderVpcNetworkSources>? VpcNetworkSources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelConditionStatusConditions
@@ -564,7 +619,9 @@ public partial class V1beta1AccessLevelConditionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AccessLevelConditionStatus defines the observed state of AccessLevelCondition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelConditionStatus
@@ -581,7 +638,9 @@ public partial class V1beta1AccessLevelConditionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AccessLevelCondition is the Schema for the AccessLevelConditions API. Allows configuring a single access level condition to be appended to an access level's conditions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -611,3 +670,4 @@ public partial class V1beta1AccessLevelCondition : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1AccessLevelConditionStatus? Status { get; set; }
 }
+#nullable disable

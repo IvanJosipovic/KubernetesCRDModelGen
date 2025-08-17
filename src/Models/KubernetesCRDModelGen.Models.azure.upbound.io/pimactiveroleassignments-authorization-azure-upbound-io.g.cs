@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.authorization.azure.upbound.io;
+#nullable enable
 /// <summary>PimActiveRoleAssignment is the Schema for the PimActiveRoleAssignments API. Manages a PIM Active Role Assignment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PimActiveRoleAssignmentList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1PimActiveRoleAssignment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An expiration block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimActiveRoleAssignmentSpecForProviderScheduleExpiration
@@ -50,7 +53,9 @@ public partial class V1beta1PimActiveRoleAssignmentSpecForProviderScheduleExpira
     [JsonPropertyName("endDateTime")]
     public string? EndDateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A schedule block as defined below. Changing this forces a new resource to be created. The schedule details for this role assignment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimActiveRoleAssignmentSpecForProviderSchedule
@@ -63,7 +68,9 @@ public partial class V1beta1PimActiveRoleAssignmentSpecForProviderSchedule
     [JsonPropertyName("startDateTime")]
     public string? StartDateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimActiveRoleAssignmentSpecForProviderScopeRefPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1PimActiveRoleAssignmentSpecForProviderScopeRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ManagementGroup in management to populate scope.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimActiveRoleAssignmentSpecForProviderScopeRef
@@ -89,7 +98,9 @@ public partial class V1beta1PimActiveRoleAssignmentSpecForProviderScopeRef
     [JsonPropertyName("policy")]
     public V1beta1PimActiveRoleAssignmentSpecForProviderScopeRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimActiveRoleAssignmentSpecForProviderScopeSelectorPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1PimActiveRoleAssignmentSpecForProviderScopeSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ManagementGroup in management to populate scope.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimActiveRoleAssignmentSpecForProviderScopeSelector
@@ -119,7 +132,9 @@ public partial class V1beta1PimActiveRoleAssignmentSpecForProviderScopeSelector
     [JsonPropertyName("policy")]
     public V1beta1PimActiveRoleAssignmentSpecForProviderScopeSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ticket block as defined below. Changing this forces a new resource to be created. Ticket details relating to the assignment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimActiveRoleAssignmentSpecForProviderTicket
@@ -132,7 +147,9 @@ public partial class V1beta1PimActiveRoleAssignmentSpecForProviderTicket
     [JsonPropertyName("system")]
     public string? System { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimActiveRoleAssignmentSpecForProvider
@@ -169,7 +186,9 @@ public partial class V1beta1PimActiveRoleAssignmentSpecForProvider
     [JsonPropertyName("ticket")]
     public V1beta1PimActiveRoleAssignmentSpecForProviderTicket? Ticket { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An expiration block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimActiveRoleAssignmentSpecInitProviderScheduleExpiration
@@ -186,7 +205,9 @@ public partial class V1beta1PimActiveRoleAssignmentSpecInitProviderScheduleExpir
     [JsonPropertyName("endDateTime")]
     public string? EndDateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A schedule block as defined below. Changing this forces a new resource to be created. The schedule details for this role assignment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimActiveRoleAssignmentSpecInitProviderSchedule
@@ -199,7 +220,9 @@ public partial class V1beta1PimActiveRoleAssignmentSpecInitProviderSchedule
     [JsonPropertyName("startDateTime")]
     public string? StartDateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimActiveRoleAssignmentSpecInitProviderScopeRefPolicy
@@ -212,7 +235,9 @@ public partial class V1beta1PimActiveRoleAssignmentSpecInitProviderScopeRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ManagementGroup in management to populate scope.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimActiveRoleAssignmentSpecInitProviderScopeRef
@@ -225,7 +250,9 @@ public partial class V1beta1PimActiveRoleAssignmentSpecInitProviderScopeRef
     [JsonPropertyName("policy")]
     public V1beta1PimActiveRoleAssignmentSpecInitProviderScopeRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimActiveRoleAssignmentSpecInitProviderScopeSelectorPolicy
@@ -238,7 +265,9 @@ public partial class V1beta1PimActiveRoleAssignmentSpecInitProviderScopeSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ManagementGroup in management to populate scope.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimActiveRoleAssignmentSpecInitProviderScopeSelector
@@ -255,7 +284,9 @@ public partial class V1beta1PimActiveRoleAssignmentSpecInitProviderScopeSelector
     [JsonPropertyName("policy")]
     public V1beta1PimActiveRoleAssignmentSpecInitProviderScopeSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ticket block as defined below. Changing this forces a new resource to be created. Ticket details relating to the assignment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimActiveRoleAssignmentSpecInitProviderTicket
@@ -268,7 +299,9 @@ public partial class V1beta1PimActiveRoleAssignmentSpecInitProviderTicket
     [JsonPropertyName("system")]
     public string? System { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimActiveRoleAssignmentSpecInitProvider
@@ -305,7 +338,9 @@ public partial class V1beta1PimActiveRoleAssignmentSpecInitProvider
     [JsonPropertyName("ticket")]
     public V1beta1PimActiveRoleAssignmentSpecInitProviderTicket? Ticket { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimActiveRoleAssignmentSpecProviderConfigRefPolicy
@@ -318,7 +353,9 @@ public partial class V1beta1PimActiveRoleAssignmentSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimActiveRoleAssignmentSpecProviderConfigRef
@@ -331,7 +368,9 @@ public partial class V1beta1PimActiveRoleAssignmentSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1PimActiveRoleAssignmentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimActiveRoleAssignmentSpecWriteConnectionSecretToRef
@@ -344,7 +383,9 @@ public partial class V1beta1PimActiveRoleAssignmentSpecWriteConnectionSecretToRe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PimActiveRoleAssignmentSpec defines the desired state of PimActiveRoleAssignment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimActiveRoleAssignmentSpec
@@ -373,7 +414,9 @@ public partial class V1beta1PimActiveRoleAssignmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1PimActiveRoleAssignmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An expiration block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimActiveRoleAssignmentStatusAtProviderScheduleExpiration
@@ -390,7 +433,9 @@ public partial class V1beta1PimActiveRoleAssignmentStatusAtProviderScheduleExpir
     [JsonPropertyName("endDateTime")]
     public string? EndDateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A schedule block as defined below. Changing this forces a new resource to be created. The schedule details for this role assignment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimActiveRoleAssignmentStatusAtProviderSchedule
@@ -403,7 +448,9 @@ public partial class V1beta1PimActiveRoleAssignmentStatusAtProviderSchedule
     [JsonPropertyName("startDateTime")]
     public string? StartDateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ticket block as defined below. Changing this forces a new resource to be created. Ticket details relating to the assignment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimActiveRoleAssignmentStatusAtProviderTicket
@@ -416,7 +463,9 @@ public partial class V1beta1PimActiveRoleAssignmentStatusAtProviderTicket
     [JsonPropertyName("system")]
     public string? System { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimActiveRoleAssignmentStatusAtProvider
@@ -453,7 +502,9 @@ public partial class V1beta1PimActiveRoleAssignmentStatusAtProvider
     [JsonPropertyName("ticket")]
     public V1beta1PimActiveRoleAssignmentStatusAtProviderTicket? Ticket { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimActiveRoleAssignmentStatusConditions
@@ -482,7 +533,9 @@ public partial class V1beta1PimActiveRoleAssignmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PimActiveRoleAssignmentStatus defines the observed state of PimActiveRoleAssignment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimActiveRoleAssignmentStatus
@@ -499,7 +552,9 @@ public partial class V1beta1PimActiveRoleAssignmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PimActiveRoleAssignment is the Schema for the PimActiveRoleAssignments API. Manages a PIM Active Role Assignment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -529,3 +584,4 @@ public partial class V1beta1PimActiveRoleAssignment : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1PimActiveRoleAssignmentStatus? Status { get; set; }
 }
+#nullable disable

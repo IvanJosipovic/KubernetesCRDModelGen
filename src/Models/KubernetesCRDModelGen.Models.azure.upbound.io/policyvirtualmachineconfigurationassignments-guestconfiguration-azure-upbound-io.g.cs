@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.guestconfiguration.azure.upbound.io;
+#nullable enable
 /// <summary>PolicyVirtualMachineConfigurationAssignment is the Schema for the PolicyVirtualMachineConfigurationAssignments API. Applies a Guest Configuration Policy to a Virtual Machine.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentList : IK
     [JsonPropertyName("items")]
     public IList<V1beta1PolicyVirtualMachineConfigurationAssignment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForProviderConfigurationParameter
@@ -46,7 +49,9 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForPr
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForProviderConfiguration
@@ -71,7 +76,9 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForPr
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForProviderVirtualMachineIdRefPolicy
@@ -84,7 +91,9 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForPr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a WindowsVirtualMachine in compute to populate virtualMachineId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForProviderVirtualMachineIdRef
@@ -97,7 +106,9 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForPr
     [JsonPropertyName("policy")]
     public V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForProviderVirtualMachineIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForProviderVirtualMachineIdSelectorPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForPr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a WindowsVirtualMachine in compute to populate virtualMachineId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForProviderVirtualMachineIdSelector
@@ -127,7 +140,9 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForPr
     [JsonPropertyName("policy")]
     public V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForProviderVirtualMachineIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForProvider
@@ -152,7 +167,9 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForPr
     [JsonPropertyName("virtualMachineIdSelector")]
     public V1beta1PolicyVirtualMachineConfigurationAssignmentSpecForProviderVirtualMachineIdSelector? VirtualMachineIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecInitProviderConfigurationParameter
@@ -165,7 +182,9 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecInitP
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecInitProviderConfiguration
@@ -190,7 +209,9 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecInitP
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecInitProvider
@@ -203,7 +224,9 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecInitP
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecProviderConfigRefPolicy
@@ -216,7 +239,9 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecProvi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecProviderConfigRef
@@ -229,7 +254,9 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecProvi
     [JsonPropertyName("policy")]
     public V1beta1PolicyVirtualMachineConfigurationAssignmentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecWriteConnectionSecretToRef
@@ -242,7 +269,9 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpecWrite
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PolicyVirtualMachineConfigurationAssignmentSpec defines the desired state of PolicyVirtualMachineConfigurationAssignment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpec
@@ -271,7 +300,9 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1PolicyVirtualMachineConfigurationAssignmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentStatusAtProviderConfigurationParameter
@@ -284,7 +315,9 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentStatusAtP
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentStatusAtProviderConfiguration
@@ -309,7 +342,9 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentStatusAtP
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentStatusAtProvider
@@ -330,7 +365,9 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentStatusAtP
     [JsonPropertyName("virtualMachineId")]
     public string? VirtualMachineId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentStatusConditions
@@ -359,7 +396,9 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentStatusCon
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PolicyVirtualMachineConfigurationAssignmentStatus defines the observed state of PolicyVirtualMachineConfigurationAssignment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentStatus
@@ -376,7 +415,9 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PolicyVirtualMachineConfigurationAssignment is the Schema for the PolicyVirtualMachineConfigurationAssignments API. Applies a Guest Configuration Policy to a Virtual Machine.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -406,3 +447,4 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignment : IKuber
     [JsonPropertyName("status")]
     public V1beta1PolicyVirtualMachineConfigurationAssignmentStatus? Status { get; set; }
 }
+#nullable disable

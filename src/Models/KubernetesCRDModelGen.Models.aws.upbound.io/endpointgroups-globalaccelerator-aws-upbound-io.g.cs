@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.globalaccelerator.aws.upbound.io;
+#nullable enable
 /// <summary>EndpointGroup is the Schema for the EndpointGroups API. Provides a Global Accelerator endpoint group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1EndpointGroupList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1beta1EndpointGroup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointGroupSpecForProviderEndpointConfiguration
@@ -54,7 +57,9 @@ public partial class V1beta1EndpointGroupSpecForProviderEndpointConfiguration
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointGroupSpecForProviderListenerArnRefPolicy
@@ -67,7 +72,9 @@ public partial class V1beta1EndpointGroupSpecForProviderListenerArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Listener in globalaccelerator to populate listenerArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointGroupSpecForProviderListenerArnRef
@@ -80,7 +87,9 @@ public partial class V1beta1EndpointGroupSpecForProviderListenerArnRef
     [JsonPropertyName("policy")]
     public V1beta1EndpointGroupSpecForProviderListenerArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointGroupSpecForProviderListenerArnSelectorPolicy
@@ -93,7 +102,9 @@ public partial class V1beta1EndpointGroupSpecForProviderListenerArnSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Listener in globalaccelerator to populate listenerArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointGroupSpecForProviderListenerArnSelector
@@ -110,7 +121,9 @@ public partial class V1beta1EndpointGroupSpecForProviderListenerArnSelector
     [JsonPropertyName("policy")]
     public V1beta1EndpointGroupSpecForProviderListenerArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointGroupSpecForProviderPortOverride
@@ -123,7 +136,9 @@ public partial class V1beta1EndpointGroupSpecForProviderPortOverride
     [JsonPropertyName("listenerPort")]
     public double? ListenerPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointGroupSpecForProvider
@@ -176,7 +191,9 @@ public partial class V1beta1EndpointGroupSpecForProvider
     [JsonPropertyName("trafficDialPercentage")]
     public double? TrafficDialPercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointGroupSpecInitProviderEndpointConfiguration
@@ -197,7 +214,9 @@ public partial class V1beta1EndpointGroupSpecInitProviderEndpointConfiguration
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointGroupSpecInitProviderListenerArnRefPolicy
@@ -210,7 +229,9 @@ public partial class V1beta1EndpointGroupSpecInitProviderListenerArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Listener in globalaccelerator to populate listenerArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointGroupSpecInitProviderListenerArnRef
@@ -223,7 +244,9 @@ public partial class V1beta1EndpointGroupSpecInitProviderListenerArnRef
     [JsonPropertyName("policy")]
     public V1beta1EndpointGroupSpecInitProviderListenerArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointGroupSpecInitProviderListenerArnSelectorPolicy
@@ -236,7 +259,9 @@ public partial class V1beta1EndpointGroupSpecInitProviderListenerArnSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Listener in globalaccelerator to populate listenerArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointGroupSpecInitProviderListenerArnSelector
@@ -253,7 +278,9 @@ public partial class V1beta1EndpointGroupSpecInitProviderListenerArnSelector
     [JsonPropertyName("policy")]
     public V1beta1EndpointGroupSpecInitProviderListenerArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointGroupSpecInitProviderPortOverride
@@ -266,7 +293,9 @@ public partial class V1beta1EndpointGroupSpecInitProviderPortOverride
     [JsonPropertyName("listenerPort")]
     public double? ListenerPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointGroupSpecInitProvider
@@ -319,7 +348,9 @@ public partial class V1beta1EndpointGroupSpecInitProvider
     [JsonPropertyName("trafficDialPercentage")]
     public double? TrafficDialPercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointGroupSpecProviderConfigRefPolicy
@@ -332,7 +363,9 @@ public partial class V1beta1EndpointGroupSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointGroupSpecProviderConfigRef
@@ -345,7 +378,9 @@ public partial class V1beta1EndpointGroupSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1EndpointGroupSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointGroupSpecWriteConnectionSecretToRef
@@ -358,7 +393,9 @@ public partial class V1beta1EndpointGroupSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EndpointGroupSpec defines the desired state of EndpointGroup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointGroupSpec
@@ -387,7 +424,9 @@ public partial class V1beta1EndpointGroupSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1EndpointGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointGroupStatusAtProviderEndpointConfiguration
@@ -408,7 +447,9 @@ public partial class V1beta1EndpointGroupStatusAtProviderEndpointConfiguration
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointGroupStatusAtProviderPortOverride
@@ -421,7 +462,9 @@ public partial class V1beta1EndpointGroupStatusAtProviderPortOverride
     [JsonPropertyName("listenerPort")]
     public double? ListenerPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointGroupStatusAtProvider
@@ -474,7 +517,9 @@ public partial class V1beta1EndpointGroupStatusAtProvider
     [JsonPropertyName("trafficDialPercentage")]
     public double? TrafficDialPercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointGroupStatusConditions
@@ -503,7 +548,9 @@ public partial class V1beta1EndpointGroupStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EndpointGroupStatus defines the observed state of EndpointGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointGroupStatus
@@ -520,7 +567,9 @@ public partial class V1beta1EndpointGroupStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EndpointGroup is the Schema for the EndpointGroups API. Provides a Global Accelerator endpoint group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -550,3 +599,4 @@ public partial class V1beta1EndpointGroup : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1EndpointGroupStatus? Status { get; set; }
 }
+#nullable disable

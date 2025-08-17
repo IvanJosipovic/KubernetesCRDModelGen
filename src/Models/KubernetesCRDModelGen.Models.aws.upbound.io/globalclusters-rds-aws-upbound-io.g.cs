@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.rds.aws.upbound.io;
+#nullable enable
 /// <summary>GlobalCluster is the Schema for the GlobalClusters API. Manages an RDS Global Cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1GlobalClusterList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1beta1GlobalCluster> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalClusterSpecForProviderSourceDbClusterIdentifierRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1GlobalClusterSpecForProviderSourceDbClusterIdentifie
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in rds to populate sourceDbClusterIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalClusterSpecForProviderSourceDbClusterIdentifierRef
@@ -59,7 +64,9 @@ public partial class V1beta1GlobalClusterSpecForProviderSourceDbClusterIdentifie
     [JsonPropertyName("policy")]
     public V1beta1GlobalClusterSpecForProviderSourceDbClusterIdentifierRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalClusterSpecForProviderSourceDbClusterIdentifierSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1GlobalClusterSpecForProviderSourceDbClusterIdentifie
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in rds to populate sourceDbClusterIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalClusterSpecForProviderSourceDbClusterIdentifierSelector
@@ -89,7 +98,9 @@ public partial class V1beta1GlobalClusterSpecForProviderSourceDbClusterIdentifie
     [JsonPropertyName("policy")]
     public V1beta1GlobalClusterSpecForProviderSourceDbClusterIdentifierSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalClusterSpecForProvider
@@ -142,7 +153,9 @@ public partial class V1beta1GlobalClusterSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalClusterSpecInitProviderSourceDbClusterIdentifierRefPolicy
@@ -155,7 +168,9 @@ public partial class V1beta1GlobalClusterSpecInitProviderSourceDbClusterIdentifi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in rds to populate sourceDbClusterIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalClusterSpecInitProviderSourceDbClusterIdentifierRef
@@ -168,7 +183,9 @@ public partial class V1beta1GlobalClusterSpecInitProviderSourceDbClusterIdentifi
     [JsonPropertyName("policy")]
     public V1beta1GlobalClusterSpecInitProviderSourceDbClusterIdentifierRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalClusterSpecInitProviderSourceDbClusterIdentifierSelectorPolicy
@@ -181,7 +198,9 @@ public partial class V1beta1GlobalClusterSpecInitProviderSourceDbClusterIdentifi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in rds to populate sourceDbClusterIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalClusterSpecInitProviderSourceDbClusterIdentifierSelector
@@ -198,7 +217,9 @@ public partial class V1beta1GlobalClusterSpecInitProviderSourceDbClusterIdentifi
     [JsonPropertyName("policy")]
     public V1beta1GlobalClusterSpecInitProviderSourceDbClusterIdentifierSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalClusterSpecInitProvider
@@ -247,7 +268,9 @@ public partial class V1beta1GlobalClusterSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalClusterSpecProviderConfigRefPolicy
@@ -260,7 +283,9 @@ public partial class V1beta1GlobalClusterSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalClusterSpecProviderConfigRef
@@ -273,7 +298,9 @@ public partial class V1beta1GlobalClusterSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1GlobalClusterSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalClusterSpecWriteConnectionSecretToRef
@@ -286,7 +313,9 @@ public partial class V1beta1GlobalClusterSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GlobalClusterSpec defines the desired state of GlobalCluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalClusterSpec
@@ -315,7 +344,9 @@ public partial class V1beta1GlobalClusterSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1GlobalClusterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalClusterStatusAtProviderGlobalClusterMembers
@@ -328,7 +359,9 @@ public partial class V1beta1GlobalClusterStatusAtProviderGlobalClusterMembers
     [JsonPropertyName("isWriter")]
     public bool? IsWriter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalClusterStatusAtProvider
@@ -401,7 +434,9 @@ public partial class V1beta1GlobalClusterStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalClusterStatusConditions
@@ -430,7 +465,9 @@ public partial class V1beta1GlobalClusterStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GlobalClusterStatus defines the observed state of GlobalCluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalClusterStatus
@@ -447,7 +484,9 @@ public partial class V1beta1GlobalClusterStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GlobalCluster is the Schema for the GlobalClusters API. Manages an RDS Global Cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -477,3 +516,4 @@ public partial class V1beta1GlobalCluster : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1GlobalClusterStatus? Status { get; set; }
 }
+#nullable disable

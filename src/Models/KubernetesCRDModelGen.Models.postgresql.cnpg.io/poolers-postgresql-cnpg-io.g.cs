@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.postgresql.cnpg.io;
+#nullable enable
 /// <summary>Pooler is the Schema for the poolers API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1PoolerList : IKubernetesObject<V1ListMeta>, IItems<V1Pool
     [JsonPropertyName("items")]
     public IList<V1Pooler> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>This is the cluster reference on which the Pooler will work. Pooler name should never match with any cluster name within the same namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecCluster
@@ -42,7 +45,9 @@ public partial class V1PoolerSpecCluster
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Rolling update config params. Present only if DeploymentStrategyType = RollingUpdate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecDeploymentStrategyRollingUpdate
@@ -55,7 +60,9 @@ public partial class V1PoolerSpecDeploymentStrategyRollingUpdate
     [JsonPropertyName("maxUnavailable")]
     public IntstrIntOrString? MaxUnavailable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The deployment strategy to use for pgbouncer to replace existing pods with new ones</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecDeploymentStrategy
@@ -68,7 +75,9 @@ public partial class V1PoolerSpecDeploymentStrategy
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RelabelConfig allows dynamic rewriting of the label set for targets, alerts, scraped samples and remote write samples.  More info: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecMonitoringPodMonitorMetricRelabelings
@@ -101,7 +110,9 @@ public partial class V1PoolerSpecMonitoringPodMonitorMetricRelabelings
     [JsonPropertyName("targetLabel")]
     public string? TargetLabel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RelabelConfig allows dynamic rewriting of the label set for targets, alerts, scraped samples and remote write samples.  More info: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecMonitoringPodMonitorRelabelings
@@ -134,7 +145,9 @@ public partial class V1PoolerSpecMonitoringPodMonitorRelabelings
     [JsonPropertyName("targetLabel")]
     public string? TargetLabel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration of the monitoring infrastructure of this pooler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecMonitoring
@@ -151,7 +164,9 @@ public partial class V1PoolerSpecMonitoring
     [JsonPropertyName("podMonitorRelabelings")]
     public IList<V1PoolerSpecMonitoringPodMonitorRelabelings>? PodMonitorRelabelings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The credentials of the user that need to be used for the authentication query. In case it is specified, also an AuthQuery (e.g. "SELECT usename, passwd FROM pg_catalog.pg_shadow WHERE usename=$1") has to be specified and no automatic CNPG Cluster integration will be triggered.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecPgbouncerAuthQuerySecret
@@ -160,7 +175,9 @@ public partial class V1PoolerSpecPgbouncerAuthQuerySecret
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The PgBouncer configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecPgbouncer
@@ -189,7 +206,9 @@ public partial class V1PoolerSpecPgbouncer
     [JsonPropertyName("poolMode")]
     public string? PoolMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecServiceTemplateMetadata
@@ -206,7 +225,9 @@ public partial class V1PoolerSpecServiceTemplateMetadata
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServicePort contains information on service's port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecServiceTemplateSpecPorts
@@ -235,7 +256,9 @@ public partial class V1PoolerSpecServiceTemplateSpecPorts
     [JsonPropertyName("targetPort")]
     public IntstrIntOrString? TargetPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>clientIP contains the configurations of Client IP based session affinity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecServiceTemplateSpecSessionAffinityConfigClientIP
@@ -244,7 +267,9 @@ public partial class V1PoolerSpecServiceTemplateSpecSessionAffinityConfigClientI
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>sessionAffinityConfig contains the configurations of session affinity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecServiceTemplateSpecSessionAffinityConfig
@@ -253,7 +278,9 @@ public partial class V1PoolerSpecServiceTemplateSpecSessionAffinityConfig
     [JsonPropertyName("clientIP")]
     public V1PoolerSpecServiceTemplateSpecSessionAffinityConfigClientIP? ClientIP { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specification of the desired behavior of the service. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecServiceTemplateSpec
@@ -338,7 +365,9 @@ public partial class V1PoolerSpecServiceTemplateSpec
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Template for the Service to be created</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecServiceTemplate
@@ -351,7 +380,9 @@ public partial class V1PoolerSpecServiceTemplate
     [JsonPropertyName("spec")]
     public V1PoolerSpecServiceTemplateSpec? Spec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateMetadata
@@ -368,7 +399,9 @@ public partial class V1PoolerSpecTemplateMetadata
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchExpressions
@@ -385,7 +418,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityNodeAffinityPreferredDuring
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchFields
@@ -402,7 +437,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityNodeAffinityPreferredDuring
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A node selector term, associated with the corresponding weight.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreference
@@ -415,7 +452,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityNodeAffinityPreferredDuring
     [JsonPropertyName("matchFields")]
     public IList<V1PoolerSpecTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchFields>? MatchFields { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An empty preferred scheduling term matches all objects with implicit weight 0 (i.e. it's a no-op). A null preferred scheduling term matches no objects (i.e. is also a no-op).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecution
@@ -428,7 +467,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityNodeAffinityPreferredDuring
     [JsonPropertyName("weight")]
     public int Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchExpressions
@@ -445,7 +486,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityNodeAffinityRequiredDuringS
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchFields
@@ -462,7 +505,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityNodeAffinityRequiredDuringS
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A null or empty node selector term matches no objects. The requirements of them are ANDed. The TopologySelectorTerm type implements a subset of the NodeSelectorTerm.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTerms
@@ -475,7 +520,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityNodeAffinityRequiredDuringS
     [JsonPropertyName("matchFields")]
     public IList<V1PoolerSpecTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchFields>? MatchFields { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to an update), the system may or may not try to eventually evict the pod from its node.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution
@@ -484,7 +531,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityNodeAffinityRequiredDuringS
     [JsonPropertyName("nodeSelectorTerms")]
     public IList<V1PoolerSpecTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTerms> NodeSelectorTerms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes node affinity scheduling rules for the pod.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityNodeAffinity
@@ -497,7 +546,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityNodeAffinity
     [JsonPropertyName("requiredDuringSchedulingIgnoredDuringExecution")]
     public V1PoolerSpecTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
@@ -514,7 +565,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityPodAffinityPreferredDuringS
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
@@ -527,7 +580,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityPodAffinityPreferredDuringS
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
@@ -544,7 +599,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityPodAffinityPreferredDuringS
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
@@ -557,7 +614,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityPodAffinityPreferredDuringS
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
@@ -586,7 +645,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityPodAffinityPreferredDuringS
     [JsonPropertyName("topologyKey")]
     public string TopologyKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The weights of all of the matched WeightedPodAffinityTerm fields are added per-node to find the most preferred node(s)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecution
@@ -599,7 +660,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityPodAffinityPreferredDuringS
     [JsonPropertyName("weight")]
     public int Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
@@ -616,7 +679,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityPodAffinityRequiredDuringSc
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
@@ -629,7 +694,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityPodAffinityRequiredDuringSc
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
@@ -646,7 +713,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityPodAffinityRequiredDuringSc
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
@@ -659,7 +728,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityPodAffinityRequiredDuringSc
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines a set of pods (namely those matching the labelSelector relative to the given namespace(s)) that this pod should be co-located (affinity) or not co-located (anti-affinity) with, where co-located is defined as running on a node whose value of the label with key &lt;topologyKey&gt; matches that of any node on which a pod of the set of pods is running</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecution
@@ -688,7 +759,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityPodAffinityRequiredDuringSc
     [JsonPropertyName("topologyKey")]
     public string TopologyKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone, etc. as some other pod(s)).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityPodAffinity
@@ -701,7 +774,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityPodAffinity
     [JsonPropertyName("requiredDuringSchedulingIgnoredDuringExecution")]
     public IList<V1PoolerSpecTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecution>? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
@@ -718,7 +793,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityPodAntiAffinityPreferredDur
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
@@ -731,7 +808,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityPodAntiAffinityPreferredDur
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
@@ -748,7 +827,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityPodAntiAffinityPreferredDur
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
@@ -761,7 +842,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityPodAntiAffinityPreferredDur
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
@@ -790,7 +873,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityPodAntiAffinityPreferredDur
     [JsonPropertyName("topologyKey")]
     public string TopologyKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The weights of all of the matched WeightedPodAffinityTerm fields are added per-node to find the most preferred node(s)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecution
@@ -803,7 +888,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityPodAntiAffinityPreferredDur
     [JsonPropertyName("weight")]
     public int Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
@@ -820,7 +907,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityPodAntiAffinityRequiredDuri
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
@@ -833,7 +922,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityPodAntiAffinityRequiredDuri
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
@@ -850,7 +941,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityPodAntiAffinityRequiredDuri
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
@@ -863,7 +956,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityPodAntiAffinityRequiredDuri
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines a set of pods (namely those matching the labelSelector relative to the given namespace(s)) that this pod should be co-located (affinity) or not co-located (anti-affinity) with, where co-located is defined as running on a node whose value of the label with key &lt;topologyKey&gt; matches that of any node on which a pod of the set of pods is running</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecution
@@ -892,7 +987,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityPodAntiAffinityRequiredDuri
     [JsonPropertyName("topologyKey")]
     public string TopologyKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinityPodAntiAffinity
@@ -905,7 +1002,9 @@ public partial class V1PoolerSpecTemplateSpecAffinityPodAntiAffinity
     [JsonPropertyName("requiredDuringSchedulingIgnoredDuringExecution")]
     public IList<V1PoolerSpecTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecution>? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If specified, the pod's scheduling constraints</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecAffinity
@@ -922,7 +1021,9 @@ public partial class V1PoolerSpecTemplateSpecAffinity
     [JsonPropertyName("podAntiAffinity")]
     public V1PoolerSpecTemplateSpecAffinityPodAntiAffinity? PodAntiAffinity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a key of a ConfigMap.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersEnvValueFromConfigMapKeyRef
@@ -939,7 +1040,9 @@ public partial class V1PoolerSpecTemplateSpecContainersEnvValueFromConfigMapKeyR
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['&lt;KEY&gt;']`, `metadata.annotations['&lt;KEY&gt;']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersEnvValueFromFieldRef
@@ -952,7 +1055,9 @@ public partial class V1PoolerSpecTemplateSpecContainersEnvValueFromFieldRef
     [JsonPropertyName("fieldPath")]
     public string FieldPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersEnvValueFromResourceFieldRef
@@ -969,7 +1074,9 @@ public partial class V1PoolerSpecTemplateSpecContainersEnvValueFromResourceField
     [JsonPropertyName("resource")]
     public string Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a key of a secret in the pod's namespace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersEnvValueFromSecretKeyRef
@@ -986,7 +1093,9 @@ public partial class V1PoolerSpecTemplateSpecContainersEnvValueFromSecretKeyRef
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source for the environment variable's value. Cannot be used if value is not empty.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersEnvValueFrom
@@ -1007,7 +1116,9 @@ public partial class V1PoolerSpecTemplateSpecContainersEnvValueFrom
     [JsonPropertyName("secretKeyRef")]
     public V1PoolerSpecTemplateSpecContainersEnvValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnvVar represents an environment variable present in a Container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersEnv
@@ -1024,7 +1135,9 @@ public partial class V1PoolerSpecTemplateSpecContainersEnv
     [JsonPropertyName("valueFrom")]
     public V1PoolerSpecTemplateSpecContainersEnvValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ConfigMap to select from</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersEnvFromConfigMapRef
@@ -1037,7 +1150,9 @@ public partial class V1PoolerSpecTemplateSpecContainersEnvFromConfigMapRef
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Secret to select from</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersEnvFromSecretRef
@@ -1050,7 +1165,9 @@ public partial class V1PoolerSpecTemplateSpecContainersEnvFromSecretRef
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnvFromSource represents the source of a set of ConfigMaps or Secrets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersEnvFrom
@@ -1067,7 +1184,9 @@ public partial class V1PoolerSpecTemplateSpecContainersEnvFrom
     [JsonPropertyName("secretRef")]
     public V1PoolerSpecTemplateSpecContainersEnvFromSecretRef? SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersLifecyclePostStartExec
@@ -1076,7 +1195,9 @@ public partial class V1PoolerSpecTemplateSpecContainersLifecyclePostStartExec
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersLifecyclePostStartHttpGetHttpHeaders
@@ -1089,7 +1210,9 @@ public partial class V1PoolerSpecTemplateSpecContainersLifecyclePostStartHttpGet
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersLifecyclePostStartHttpGet
@@ -1114,7 +1237,9 @@ public partial class V1PoolerSpecTemplateSpecContainersLifecyclePostStartHttpGet
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sleep represents a duration that the container should sleep.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersLifecyclePostStartSleep
@@ -1123,7 +1248,9 @@ public partial class V1PoolerSpecTemplateSpecContainersLifecyclePostStartSleep
     [JsonPropertyName("seconds")]
     public long Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for backward compatibility. There is no validation of this field and lifecycle hooks will fail at runtime when it is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersLifecyclePostStartTcpSocket
@@ -1136,7 +1263,9 @@ public partial class V1PoolerSpecTemplateSpecContainersLifecyclePostStartTcpSock
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersLifecyclePostStart
@@ -1157,7 +1286,9 @@ public partial class V1PoolerSpecTemplateSpecContainersLifecyclePostStart
     [JsonPropertyName("tcpSocket")]
     public V1PoolerSpecTemplateSpecContainersLifecyclePostStartTcpSocket? TcpSocket { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersLifecyclePreStopExec
@@ -1166,7 +1297,9 @@ public partial class V1PoolerSpecTemplateSpecContainersLifecyclePreStopExec
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersLifecyclePreStopHttpGetHttpHeaders
@@ -1179,7 +1312,9 @@ public partial class V1PoolerSpecTemplateSpecContainersLifecyclePreStopHttpGetHt
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersLifecyclePreStopHttpGet
@@ -1204,7 +1339,9 @@ public partial class V1PoolerSpecTemplateSpecContainersLifecyclePreStopHttpGet
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sleep represents a duration that the container should sleep.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersLifecyclePreStopSleep
@@ -1213,7 +1350,9 @@ public partial class V1PoolerSpecTemplateSpecContainersLifecyclePreStopSleep
     [JsonPropertyName("seconds")]
     public long Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for backward compatibility. There is no validation of this field and lifecycle hooks will fail at runtime when it is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersLifecyclePreStopTcpSocket
@@ -1226,7 +1365,9 @@ public partial class V1PoolerSpecTemplateSpecContainersLifecyclePreStopTcpSocket
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PreStop is called immediately before a container is terminated due to an API request or management event such as liveness/startup probe failure, preemption, resource contention, etc. The handler is not called if the container crashes or exits. The Pod's termination grace period countdown begins before the PreStop hook is executed. Regardless of the outcome of the handler, the container will eventually terminate within the Pod's termination grace period (unless delayed by finalizers). Other management of the container blocks until the hook completes or until the termination grace period is reached. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersLifecyclePreStop
@@ -1247,7 +1388,9 @@ public partial class V1PoolerSpecTemplateSpecContainersLifecyclePreStop
     [JsonPropertyName("tcpSocket")]
     public V1PoolerSpecTemplateSpecContainersLifecyclePreStopTcpSocket? TcpSocket { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Actions that the management system should take in response to container lifecycle events. Cannot be updated.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersLifecycle
@@ -1264,7 +1407,9 @@ public partial class V1PoolerSpecTemplateSpecContainersLifecycle
     [JsonPropertyName("stopSignal")]
     public string? StopSignal { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersLivenessProbeExec
@@ -1273,7 +1418,9 @@ public partial class V1PoolerSpecTemplateSpecContainersLivenessProbeExec
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersLivenessProbeGrpc
@@ -1286,7 +1433,9 @@ public partial class V1PoolerSpecTemplateSpecContainersLivenessProbeGrpc
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersLivenessProbeHttpGetHttpHeaders
@@ -1299,7 +1448,9 @@ public partial class V1PoolerSpecTemplateSpecContainersLivenessProbeHttpGetHttpH
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersLivenessProbeHttpGet
@@ -1324,7 +1475,9 @@ public partial class V1PoolerSpecTemplateSpecContainersLivenessProbeHttpGet
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TCPSocket specifies a connection to a TCP port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersLivenessProbeTcpSocket
@@ -1337,7 +1490,9 @@ public partial class V1PoolerSpecTemplateSpecContainersLivenessProbeTcpSocket
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersLivenessProbe
@@ -1382,7 +1537,9 @@ public partial class V1PoolerSpecTemplateSpecContainersLivenessProbe
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerPort represents a network port in a single container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersPorts
@@ -1407,7 +1564,9 @@ public partial class V1PoolerSpecTemplateSpecContainersPorts
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersReadinessProbeExec
@@ -1416,7 +1575,9 @@ public partial class V1PoolerSpecTemplateSpecContainersReadinessProbeExec
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersReadinessProbeGrpc
@@ -1429,7 +1590,9 @@ public partial class V1PoolerSpecTemplateSpecContainersReadinessProbeGrpc
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersReadinessProbeHttpGetHttpHeaders
@@ -1442,7 +1605,9 @@ public partial class V1PoolerSpecTemplateSpecContainersReadinessProbeHttpGetHttp
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersReadinessProbeHttpGet
@@ -1467,7 +1632,9 @@ public partial class V1PoolerSpecTemplateSpecContainersReadinessProbeHttpGet
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TCPSocket specifies a connection to a TCP port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersReadinessProbeTcpSocket
@@ -1480,7 +1647,9 @@ public partial class V1PoolerSpecTemplateSpecContainersReadinessProbeTcpSocket
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersReadinessProbe
@@ -1525,7 +1694,9 @@ public partial class V1PoolerSpecTemplateSpecContainersReadinessProbe
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerResizePolicy represents resource resize policy for the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersResizePolicy
@@ -1538,7 +1709,9 @@ public partial class V1PoolerSpecTemplateSpecContainersResizePolicy
     [JsonPropertyName("restartPolicy")]
     public string RestartPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceClaim references one entry in PodSpec.ResourceClaims.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersResourcesClaims
@@ -1551,7 +1724,9 @@ public partial class V1PoolerSpecTemplateSpecContainersResourcesClaims
     [JsonPropertyName("request")]
     public string? Request { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersResources
@@ -1568,7 +1743,9 @@ public partial class V1PoolerSpecTemplateSpecContainersResources
     [JsonPropertyName("requests")]
     public IDictionary<string, IntstrIntOrString>? Requests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>appArmorProfile is the AppArmor options to use by this container. If set, this profile overrides the pod's appArmorProfile. Note that this field cannot be set when spec.os.name is windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersSecurityContextAppArmorProfile
@@ -1581,7 +1758,9 @@ public partial class V1PoolerSpecTemplateSpecContainersSecurityContextAppArmorPr
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime. Note that this field cannot be set when spec.os.name is windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersSecurityContextCapabilities
@@ -1594,7 +1773,9 @@ public partial class V1PoolerSpecTemplateSpecContainersSecurityContextCapabiliti
     [JsonPropertyName("drop")]
     public IList<string>? Drop { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersSecurityContextSeLinuxOptions
@@ -1615,7 +1796,9 @@ public partial class V1PoolerSpecTemplateSpecContainersSecurityContextSeLinuxOpt
     [JsonPropertyName("user")]
     public string? User { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The seccomp options to use by this container. If seccomp options are provided at both the pod &amp; container level, the container options override the pod options. Note that this field cannot be set when spec.os.name is windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersSecurityContextSeccompProfile
@@ -1628,7 +1811,9 @@ public partial class V1PoolerSpecTemplateSpecContainersSecurityContextSeccompPro
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Windows specific settings applied to all containers. If unspecified, the options from the PodSecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is linux.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersSecurityContextWindowsOptions
@@ -1649,7 +1834,9 @@ public partial class V1PoolerSpecTemplateSpecContainersSecurityContextWindowsOpt
     [JsonPropertyName("runAsUserName")]
     public string? RunAsUserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecurityContext defines the security options the container should be run with. If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext. More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersSecurityContext
@@ -1702,7 +1889,9 @@ public partial class V1PoolerSpecTemplateSpecContainersSecurityContext
     [JsonPropertyName("windowsOptions")]
     public V1PoolerSpecTemplateSpecContainersSecurityContextWindowsOptions? WindowsOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersStartupProbeExec
@@ -1711,7 +1900,9 @@ public partial class V1PoolerSpecTemplateSpecContainersStartupProbeExec
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersStartupProbeGrpc
@@ -1724,7 +1915,9 @@ public partial class V1PoolerSpecTemplateSpecContainersStartupProbeGrpc
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersStartupProbeHttpGetHttpHeaders
@@ -1737,7 +1930,9 @@ public partial class V1PoolerSpecTemplateSpecContainersStartupProbeHttpGetHttpHe
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersStartupProbeHttpGet
@@ -1762,7 +1957,9 @@ public partial class V1PoolerSpecTemplateSpecContainersStartupProbeHttpGet
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TCPSocket specifies a connection to a TCP port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersStartupProbeTcpSocket
@@ -1775,7 +1972,9 @@ public partial class V1PoolerSpecTemplateSpecContainersStartupProbeTcpSocket
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StartupProbe indicates that the Pod has successfully initialized. If specified, no other probes are executed until this completes successfully. If this probe fails, the Pod will be restarted, just as if the livenessProbe failed. This can be used to provide different probe parameters at the beginning of a Pod's lifecycle, when it might take a long time to load data or warm a cache, than during steady-state operation. This cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersStartupProbe
@@ -1820,7 +2019,9 @@ public partial class V1PoolerSpecTemplateSpecContainersStartupProbe
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>volumeDevice describes a mapping of a raw block device within a container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersVolumeDevices
@@ -1833,7 +2034,9 @@ public partial class V1PoolerSpecTemplateSpecContainersVolumeDevices
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VolumeMount describes a mounting of a Volume within a container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainersVolumeMounts
@@ -1866,7 +2069,9 @@ public partial class V1PoolerSpecTemplateSpecContainersVolumeMounts
     [JsonPropertyName("subPathExpr")]
     public string? SubPathExpr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A single application container that you want to run within a pod.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecContainers
@@ -1967,7 +2172,9 @@ public partial class V1PoolerSpecTemplateSpecContainers
     [JsonPropertyName("workingDir")]
     public string? WorkingDir { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PodDNSConfigOption defines DNS resolver options of a pod.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecDnsConfigOptions
@@ -1980,7 +2187,9 @@ public partial class V1PoolerSpecTemplateSpecDnsConfigOptions
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the DNS parameters of a pod. Parameters specified here will be merged to the generated DNS configuration based on DNSPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecDnsConfig
@@ -1997,7 +2206,9 @@ public partial class V1PoolerSpecTemplateSpecDnsConfig
     [JsonPropertyName("searches")]
     public IList<string>? Searches { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a key of a ConfigMap.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersEnvValueFromConfigMapKeyRef
@@ -2014,7 +2225,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersEnvValueFromConf
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['&lt;KEY&gt;']`, `metadata.annotations['&lt;KEY&gt;']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersEnvValueFromFieldRef
@@ -2027,7 +2240,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersEnvValueFromFiel
     [JsonPropertyName("fieldPath")]
     public string FieldPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersEnvValueFromResourceFieldRef
@@ -2044,7 +2259,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersEnvValueFromReso
     [JsonPropertyName("resource")]
     public string Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a key of a secret in the pod's namespace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersEnvValueFromSecretKeyRef
@@ -2061,7 +2278,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersEnvValueFromSecr
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source for the environment variable's value. Cannot be used if value is not empty.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersEnvValueFrom
@@ -2082,7 +2301,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersEnvValueFrom
     [JsonPropertyName("secretKeyRef")]
     public V1PoolerSpecTemplateSpecEphemeralContainersEnvValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnvVar represents an environment variable present in a Container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersEnv
@@ -2099,7 +2320,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersEnv
     [JsonPropertyName("valueFrom")]
     public V1PoolerSpecTemplateSpecEphemeralContainersEnvValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ConfigMap to select from</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersEnvFromConfigMapRef
@@ -2112,7 +2335,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersEnvFromConfigMap
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Secret to select from</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersEnvFromSecretRef
@@ -2125,7 +2350,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersEnvFromSecretRef
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnvFromSource represents the source of a set of ConfigMaps or Secrets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersEnvFrom
@@ -2142,7 +2369,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersEnvFrom
     [JsonPropertyName("secretRef")]
     public V1PoolerSpecTemplateSpecEphemeralContainersEnvFromSecretRef? SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersLifecyclePostStartExec
@@ -2151,7 +2380,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersLifecyclePostSta
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersLifecyclePostStartHttpGetHttpHeaders
@@ -2164,7 +2395,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersLifecyclePostSta
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersLifecyclePostStartHttpGet
@@ -2189,7 +2422,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersLifecyclePostSta
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sleep represents a duration that the container should sleep.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersLifecyclePostStartSleep
@@ -2198,7 +2433,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersLifecyclePostSta
     [JsonPropertyName("seconds")]
     public long Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for backward compatibility. There is no validation of this field and lifecycle hooks will fail at runtime when it is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersLifecyclePostStartTcpSocket
@@ -2211,7 +2448,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersLifecyclePostSta
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersLifecyclePostStart
@@ -2232,7 +2471,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersLifecyclePostSta
     [JsonPropertyName("tcpSocket")]
     public V1PoolerSpecTemplateSpecEphemeralContainersLifecyclePostStartTcpSocket? TcpSocket { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersLifecyclePreStopExec
@@ -2241,7 +2482,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersLifecyclePreStop
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersLifecyclePreStopHttpGetHttpHeaders
@@ -2254,7 +2497,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersLifecyclePreStop
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersLifecyclePreStopHttpGet
@@ -2279,7 +2524,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersLifecyclePreStop
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sleep represents a duration that the container should sleep.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersLifecyclePreStopSleep
@@ -2288,7 +2535,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersLifecyclePreStop
     [JsonPropertyName("seconds")]
     public long Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for backward compatibility. There is no validation of this field and lifecycle hooks will fail at runtime when it is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersLifecyclePreStopTcpSocket
@@ -2301,7 +2550,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersLifecyclePreStop
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PreStop is called immediately before a container is terminated due to an API request or management event such as liveness/startup probe failure, preemption, resource contention, etc. The handler is not called if the container crashes or exits. The Pod's termination grace period countdown begins before the PreStop hook is executed. Regardless of the outcome of the handler, the container will eventually terminate within the Pod's termination grace period (unless delayed by finalizers). Other management of the container blocks until the hook completes or until the termination grace period is reached. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersLifecyclePreStop
@@ -2322,7 +2573,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersLifecyclePreStop
     [JsonPropertyName("tcpSocket")]
     public V1PoolerSpecTemplateSpecEphemeralContainersLifecyclePreStopTcpSocket? TcpSocket { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Lifecycle is not allowed for ephemeral containers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersLifecycle
@@ -2339,7 +2592,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersLifecycle
     [JsonPropertyName("stopSignal")]
     public string? StopSignal { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersLivenessProbeExec
@@ -2348,7 +2603,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersLivenessProbeExe
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersLivenessProbeGrpc
@@ -2361,7 +2618,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersLivenessProbeGrp
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersLivenessProbeHttpGetHttpHeaders
@@ -2374,7 +2633,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersLivenessProbeHtt
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersLivenessProbeHttpGet
@@ -2399,7 +2660,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersLivenessProbeHtt
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TCPSocket specifies a connection to a TCP port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersLivenessProbeTcpSocket
@@ -2412,7 +2675,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersLivenessProbeTcp
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Probes are not allowed for ephemeral containers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersLivenessProbe
@@ -2457,7 +2722,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersLivenessProbe
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerPort represents a network port in a single container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersPorts
@@ -2482,7 +2749,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersPorts
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersReadinessProbeExec
@@ -2491,7 +2760,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersReadinessProbeEx
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersReadinessProbeGrpc
@@ -2504,7 +2775,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersReadinessProbeGr
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersReadinessProbeHttpGetHttpHeaders
@@ -2517,7 +2790,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersReadinessProbeHt
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersReadinessProbeHttpGet
@@ -2542,7 +2817,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersReadinessProbeHt
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TCPSocket specifies a connection to a TCP port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersReadinessProbeTcpSocket
@@ -2555,7 +2832,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersReadinessProbeTc
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Probes are not allowed for ephemeral containers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersReadinessProbe
@@ -2600,7 +2879,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersReadinessProbe
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerResizePolicy represents resource resize policy for the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersResizePolicy
@@ -2613,7 +2894,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersResizePolicy
     [JsonPropertyName("restartPolicy")]
     public string RestartPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceClaim references one entry in PodSpec.ResourceClaims.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersResourcesClaims
@@ -2626,7 +2909,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersResourcesClaims
     [JsonPropertyName("request")]
     public string? Request { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Resources are not allowed for ephemeral containers. Ephemeral containers use spare resources already allocated to the pod.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersResources
@@ -2643,7 +2928,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersResources
     [JsonPropertyName("requests")]
     public IDictionary<string, IntstrIntOrString>? Requests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>appArmorProfile is the AppArmor options to use by this container. If set, this profile overrides the pod's appArmorProfile. Note that this field cannot be set when spec.os.name is windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersSecurityContextAppArmorProfile
@@ -2656,7 +2943,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersSecurityContextA
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime. Note that this field cannot be set when spec.os.name is windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersSecurityContextCapabilities
@@ -2669,7 +2958,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersSecurityContextC
     [JsonPropertyName("drop")]
     public IList<string>? Drop { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersSecurityContextSeLinuxOptions
@@ -2690,7 +2981,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersSecurityContextS
     [JsonPropertyName("user")]
     public string? User { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The seccomp options to use by this container. If seccomp options are provided at both the pod &amp; container level, the container options override the pod options. Note that this field cannot be set when spec.os.name is windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersSecurityContextSeccompProfile
@@ -2703,7 +2996,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersSecurityContextS
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Windows specific settings applied to all containers. If unspecified, the options from the PodSecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is linux.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersSecurityContextWindowsOptions
@@ -2724,7 +3019,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersSecurityContextW
     [JsonPropertyName("runAsUserName")]
     public string? RunAsUserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional: SecurityContext defines the security options the ephemeral container should be run with. If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersSecurityContext
@@ -2777,7 +3074,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersSecurityContext
     [JsonPropertyName("windowsOptions")]
     public V1PoolerSpecTemplateSpecEphemeralContainersSecurityContextWindowsOptions? WindowsOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersStartupProbeExec
@@ -2786,7 +3085,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersStartupProbeExec
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersStartupProbeGrpc
@@ -2799,7 +3100,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersStartupProbeGrpc
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersStartupProbeHttpGetHttpHeaders
@@ -2812,7 +3115,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersStartupProbeHttp
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersStartupProbeHttpGet
@@ -2837,7 +3142,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersStartupProbeHttp
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TCPSocket specifies a connection to a TCP port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersStartupProbeTcpSocket
@@ -2850,7 +3157,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersStartupProbeTcpS
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Probes are not allowed for ephemeral containers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersStartupProbe
@@ -2895,7 +3204,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersStartupProbe
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>volumeDevice describes a mapping of a raw block device within a container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersVolumeDevices
@@ -2908,7 +3219,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersVolumeDevices
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VolumeMount describes a mounting of a Volume within a container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainersVolumeMounts
@@ -2941,7 +3254,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersVolumeMounts
     [JsonPropertyName("subPathExpr")]
     public string? SubPathExpr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An EphemeralContainer is a temporary container that you may add to an existing Pod for user-initiated activities such as debugging. Ephemeral containers have no resource or scheduling guarantees, and they will not be restarted when they exit or when a Pod is removed or restarted. The kubelet may evict a Pod if an ephemeral container causes the Pod to exceed its resource allocation.  To add an ephemeral container, use the ephemeralcontainers subresource of an existing Pod. Ephemeral containers may not be removed or restarted.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecEphemeralContainers
@@ -3046,7 +3361,9 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainers
     [JsonPropertyName("workingDir")]
     public string? WorkingDir { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HostAlias holds the mapping between IP and hostnames that will be injected as an entry in the pod's hosts file.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecHostAliases
@@ -3059,7 +3376,9 @@ public partial class V1PoolerSpecTemplateSpecHostAliases
     [JsonPropertyName("ip")]
     public string Ip { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecImagePullSecrets
@@ -3068,7 +3387,9 @@ public partial class V1PoolerSpecTemplateSpecImagePullSecrets
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a key of a ConfigMap.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersEnvValueFromConfigMapKeyRef
@@ -3085,7 +3406,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersEnvValueFromConfigMap
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['&lt;KEY&gt;']`, `metadata.annotations['&lt;KEY&gt;']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersEnvValueFromFieldRef
@@ -3098,7 +3421,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersEnvValueFromFieldRef
     [JsonPropertyName("fieldPath")]
     public string FieldPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersEnvValueFromResourceFieldRef
@@ -3115,7 +3440,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersEnvValueFromResourceF
     [JsonPropertyName("resource")]
     public string Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a key of a secret in the pod's namespace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersEnvValueFromSecretKeyRef
@@ -3132,7 +3459,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersEnvValueFromSecretKey
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source for the environment variable's value. Cannot be used if value is not empty.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersEnvValueFrom
@@ -3153,7 +3482,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersEnvValueFrom
     [JsonPropertyName("secretKeyRef")]
     public V1PoolerSpecTemplateSpecInitContainersEnvValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnvVar represents an environment variable present in a Container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersEnv
@@ -3170,7 +3501,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersEnv
     [JsonPropertyName("valueFrom")]
     public V1PoolerSpecTemplateSpecInitContainersEnvValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ConfigMap to select from</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersEnvFromConfigMapRef
@@ -3183,7 +3516,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersEnvFromConfigMapRef
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Secret to select from</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersEnvFromSecretRef
@@ -3196,7 +3531,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersEnvFromSecretRef
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnvFromSource represents the source of a set of ConfigMaps or Secrets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersEnvFrom
@@ -3213,7 +3550,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersEnvFrom
     [JsonPropertyName("secretRef")]
     public V1PoolerSpecTemplateSpecInitContainersEnvFromSecretRef? SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersLifecyclePostStartExec
@@ -3222,7 +3561,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersLifecyclePostStartExe
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersLifecyclePostStartHttpGetHttpHeaders
@@ -3235,7 +3576,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersLifecyclePostStartHtt
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersLifecyclePostStartHttpGet
@@ -3260,7 +3603,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersLifecyclePostStartHtt
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sleep represents a duration that the container should sleep.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersLifecyclePostStartSleep
@@ -3269,7 +3614,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersLifecyclePostStartSle
     [JsonPropertyName("seconds")]
     public long Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for backward compatibility. There is no validation of this field and lifecycle hooks will fail at runtime when it is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersLifecyclePostStartTcpSocket
@@ -3282,7 +3629,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersLifecyclePostStartTcp
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersLifecyclePostStart
@@ -3303,7 +3652,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersLifecyclePostStart
     [JsonPropertyName("tcpSocket")]
     public V1PoolerSpecTemplateSpecInitContainersLifecyclePostStartTcpSocket? TcpSocket { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersLifecyclePreStopExec
@@ -3312,7 +3663,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersLifecyclePreStopExec
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersLifecyclePreStopHttpGetHttpHeaders
@@ -3325,7 +3678,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersLifecyclePreStopHttpG
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersLifecyclePreStopHttpGet
@@ -3350,7 +3705,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersLifecyclePreStopHttpG
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sleep represents a duration that the container should sleep.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersLifecyclePreStopSleep
@@ -3359,7 +3716,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersLifecyclePreStopSleep
     [JsonPropertyName("seconds")]
     public long Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for backward compatibility. There is no validation of this field and lifecycle hooks will fail at runtime when it is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersLifecyclePreStopTcpSocket
@@ -3372,7 +3731,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersLifecyclePreStopTcpSo
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PreStop is called immediately before a container is terminated due to an API request or management event such as liveness/startup probe failure, preemption, resource contention, etc. The handler is not called if the container crashes or exits. The Pod's termination grace period countdown begins before the PreStop hook is executed. Regardless of the outcome of the handler, the container will eventually terminate within the Pod's termination grace period (unless delayed by finalizers). Other management of the container blocks until the hook completes or until the termination grace period is reached. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersLifecyclePreStop
@@ -3393,7 +3754,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersLifecyclePreStop
     [JsonPropertyName("tcpSocket")]
     public V1PoolerSpecTemplateSpecInitContainersLifecyclePreStopTcpSocket? TcpSocket { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Actions that the management system should take in response to container lifecycle events. Cannot be updated.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersLifecycle
@@ -3410,7 +3773,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersLifecycle
     [JsonPropertyName("stopSignal")]
     public string? StopSignal { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersLivenessProbeExec
@@ -3419,7 +3784,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersLivenessProbeExec
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersLivenessProbeGrpc
@@ -3432,7 +3799,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersLivenessProbeGrpc
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersLivenessProbeHttpGetHttpHeaders
@@ -3445,7 +3814,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersLivenessProbeHttpGetH
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersLivenessProbeHttpGet
@@ -3470,7 +3841,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersLivenessProbeHttpGet
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TCPSocket specifies a connection to a TCP port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersLivenessProbeTcpSocket
@@ -3483,7 +3856,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersLivenessProbeTcpSocke
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersLivenessProbe
@@ -3528,7 +3903,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersLivenessProbe
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerPort represents a network port in a single container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersPorts
@@ -3553,7 +3930,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersPorts
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersReadinessProbeExec
@@ -3562,7 +3941,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersReadinessProbeExec
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersReadinessProbeGrpc
@@ -3575,7 +3956,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersReadinessProbeGrpc
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersReadinessProbeHttpGetHttpHeaders
@@ -3588,7 +3971,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersReadinessProbeHttpGet
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersReadinessProbeHttpGet
@@ -3613,7 +3998,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersReadinessProbeHttpGet
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TCPSocket specifies a connection to a TCP port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersReadinessProbeTcpSocket
@@ -3626,7 +4013,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersReadinessProbeTcpSock
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersReadinessProbe
@@ -3671,7 +4060,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersReadinessProbe
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerResizePolicy represents resource resize policy for the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersResizePolicy
@@ -3684,7 +4075,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersResizePolicy
     [JsonPropertyName("restartPolicy")]
     public string RestartPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceClaim references one entry in PodSpec.ResourceClaims.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersResourcesClaims
@@ -3697,7 +4090,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersResourcesClaims
     [JsonPropertyName("request")]
     public string? Request { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersResources
@@ -3714,7 +4109,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersResources
     [JsonPropertyName("requests")]
     public IDictionary<string, IntstrIntOrString>? Requests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>appArmorProfile is the AppArmor options to use by this container. If set, this profile overrides the pod's appArmorProfile. Note that this field cannot be set when spec.os.name is windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersSecurityContextAppArmorProfile
@@ -3727,7 +4124,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersSecurityContextAppArm
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime. Note that this field cannot be set when spec.os.name is windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersSecurityContextCapabilities
@@ -3740,7 +4139,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersSecurityContextCapabi
     [JsonPropertyName("drop")]
     public IList<string>? Drop { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersSecurityContextSeLinuxOptions
@@ -3761,7 +4162,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersSecurityContextSeLinu
     [JsonPropertyName("user")]
     public string? User { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The seccomp options to use by this container. If seccomp options are provided at both the pod &amp; container level, the container options override the pod options. Note that this field cannot be set when spec.os.name is windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersSecurityContextSeccompProfile
@@ -3774,7 +4177,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersSecurityContextSeccom
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Windows specific settings applied to all containers. If unspecified, the options from the PodSecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is linux.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersSecurityContextWindowsOptions
@@ -3795,7 +4200,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersSecurityContextWindow
     [JsonPropertyName("runAsUserName")]
     public string? RunAsUserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecurityContext defines the security options the container should be run with. If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext. More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersSecurityContext
@@ -3848,7 +4255,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersSecurityContext
     [JsonPropertyName("windowsOptions")]
     public V1PoolerSpecTemplateSpecInitContainersSecurityContextWindowsOptions? WindowsOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersStartupProbeExec
@@ -3857,7 +4266,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersStartupProbeExec
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersStartupProbeGrpc
@@ -3870,7 +4281,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersStartupProbeGrpc
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersStartupProbeHttpGetHttpHeaders
@@ -3883,7 +4296,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersStartupProbeHttpGetHt
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersStartupProbeHttpGet
@@ -3908,7 +4323,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersStartupProbeHttpGet
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TCPSocket specifies a connection to a TCP port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersStartupProbeTcpSocket
@@ -3921,7 +4338,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersStartupProbeTcpSocket
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StartupProbe indicates that the Pod has successfully initialized. If specified, no other probes are executed until this completes successfully. If this probe fails, the Pod will be restarted, just as if the livenessProbe failed. This can be used to provide different probe parameters at the beginning of a Pod's lifecycle, when it might take a long time to load data or warm a cache, than during steady-state operation. This cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersStartupProbe
@@ -3966,7 +4385,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersStartupProbe
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>volumeDevice describes a mapping of a raw block device within a container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersVolumeDevices
@@ -3979,7 +4400,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersVolumeDevices
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VolumeMount describes a mounting of a Volume within a container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainersVolumeMounts
@@ -4012,7 +4435,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainersVolumeMounts
     [JsonPropertyName("subPathExpr")]
     public string? SubPathExpr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A single application container that you want to run within a pod.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecInitContainers
@@ -4113,7 +4538,9 @@ public partial class V1PoolerSpecTemplateSpecInitContainers
     [JsonPropertyName("workingDir")]
     public string? WorkingDir { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the OS of the containers in the pod. Some pod and container fields are restricted if this is set.  If the OS field is set to linux, the following fields must be unset: -securityContext.windowsOptions  If the OS field is set to windows, following fields must be unset: - spec.hostPID - spec.hostIPC - spec.hostUsers - spec.securityContext.appArmorProfile - spec.securityContext.seLinuxOptions - spec.securityContext.seccompProfile - spec.securityContext.fsGroup - spec.securityContext.fsGroupChangePolicy - spec.securityContext.sysctls - spec.shareProcessNamespace - spec.securityContext.runAsUser - spec.securityContext.runAsGroup - spec.securityContext.supplementalGroups - spec.securityContext.supplementalGroupsPolicy - spec.containers[*].securityContext.appArmorProfile - spec.containers[*].securityContext.seLinuxOptions - spec.containers[*].securityContext.seccompProfile - spec.containers[*].securityContext.capabilities - spec.containers[*].securityContext.readOnlyRootFilesystem - spec.containers[*].securityContext.privileged - spec.containers[*].securityContext.allowPrivilegeEscalation - spec.containers[*].securityContext.procMount - spec.containers[*].securityContext.runAsUser - spec.containers[*].securityContext.runAsGroup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecOs
@@ -4122,7 +4549,9 @@ public partial class V1PoolerSpecTemplateSpecOs
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PodReadinessGate contains the reference to a pod condition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecReadinessGates
@@ -4131,7 +4560,9 @@ public partial class V1PoolerSpecTemplateSpecReadinessGates
     [JsonPropertyName("conditionType")]
     public string ConditionType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PodResourceClaim references exactly one ResourceClaim, either directly or by naming a ResourceClaimTemplate which is then turned into a ResourceClaim for the pod.  It adds a name to it that uniquely identifies the ResourceClaim inside the Pod. Containers that need access to the ResourceClaim reference it with this name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecResourceClaims
@@ -4148,7 +4579,9 @@ public partial class V1PoolerSpecTemplateSpecResourceClaims
     [JsonPropertyName("resourceClaimTemplateName")]
     public string? ResourceClaimTemplateName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceClaim references one entry in PodSpec.ResourceClaims.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecResourcesClaims
@@ -4161,7 +4594,9 @@ public partial class V1PoolerSpecTemplateSpecResourcesClaims
     [JsonPropertyName("request")]
     public string? Request { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Resources is the total amount of CPU and Memory resources required by all containers in the pod. It supports specifying Requests and Limits for "cpu" and "memory" resource names only. ResourceClaims are not supported.  This field enables fine-grained control over resource allocation for the entire pod, allowing resource sharing among containers in a pod.  This is an alpha field and requires enabling the PodLevelResources feature gate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecResources
@@ -4178,7 +4613,9 @@ public partial class V1PoolerSpecTemplateSpecResources
     [JsonPropertyName("requests")]
     public IDictionary<string, IntstrIntOrString>? Requests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PodSchedulingGate is associated to a Pod to guard its scheduling.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecSchedulingGates
@@ -4187,7 +4624,9 @@ public partial class V1PoolerSpecTemplateSpecSchedulingGates
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>appArmorProfile is the AppArmor options to use by the containers in this pod. Note that this field cannot be set when spec.os.name is windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecSecurityContextAppArmorProfile
@@ -4200,7 +4639,9 @@ public partial class V1PoolerSpecTemplateSpecSecurityContextAppArmorProfile
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The SELinux context to be applied to all containers. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in SecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence for that container. Note that this field cannot be set when spec.os.name is windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecSecurityContextSeLinuxOptions
@@ -4221,7 +4662,9 @@ public partial class V1PoolerSpecTemplateSpecSecurityContextSeLinuxOptions
     [JsonPropertyName("user")]
     public string? User { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The seccomp options to use by the containers in this pod. Note that this field cannot be set when spec.os.name is windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecSecurityContextSeccompProfile
@@ -4234,7 +4677,9 @@ public partial class V1PoolerSpecTemplateSpecSecurityContextSeccompProfile
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sysctl defines a kernel parameter to be set</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecSecurityContextSysctls
@@ -4247,7 +4692,9 @@ public partial class V1PoolerSpecTemplateSpecSecurityContextSysctls
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Windows specific settings applied to all containers. If unspecified, the options within a container's SecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is linux.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecSecurityContextWindowsOptions
@@ -4268,7 +4715,9 @@ public partial class V1PoolerSpecTemplateSpecSecurityContextWindowsOptions
     [JsonPropertyName("runAsUserName")]
     public string? RunAsUserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecurityContext holds pod-level security attributes and common container settings. Optional: Defaults to empty.  See type description for default values of each field.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecSecurityContext
@@ -4325,7 +4774,9 @@ public partial class V1PoolerSpecTemplateSpecSecurityContext
     [JsonPropertyName("windowsOptions")]
     public V1PoolerSpecTemplateSpecSecurityContextWindowsOptions? WindowsOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The pod this Toleration is attached to tolerates any taint that matches the triple &lt;key,value,effect&gt; using the matching operator &lt;operator&gt;.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecTolerations
@@ -4350,7 +4801,9 @@ public partial class V1PoolerSpecTemplateSpecTolerations
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecTopologySpreadConstraintsLabelSelectorMatchExpressions
@@ -4367,7 +4820,9 @@ public partial class V1PoolerSpecTemplateSpecTopologySpreadConstraintsLabelSelec
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LabelSelector is used to find matching pods. Pods that match this label selector are counted to determine the number of pods in their corresponding topology domain.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecTopologySpreadConstraintsLabelSelector
@@ -4380,7 +4835,9 @@ public partial class V1PoolerSpecTemplateSpecTopologySpreadConstraintsLabelSelec
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TopologySpreadConstraint specifies how to spread matching pods among the given topology.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecTopologySpreadConstraints
@@ -4417,7 +4874,9 @@ public partial class V1PoolerSpecTemplateSpecTopologySpreadConstraints
     [JsonPropertyName("whenUnsatisfiable")]
     public string WhenUnsatisfiable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>awsElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. Deprecated: AWSElasticBlockStore is deprecated. All operations for the in-tree awsElasticBlockStore type are redirected to the ebs.csi.aws.com CSI driver. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesAwsElasticBlockStore
@@ -4438,7 +4897,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesAwsElasticBlockStore
     [JsonPropertyName("volumeID")]
     public string VolumeID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>azureDisk represents an Azure Data Disk mount on the host and bind mount to the pod. Deprecated: AzureDisk is deprecated. All operations for the in-tree azureDisk type are redirected to the disk.csi.azure.com CSI driver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesAzureDisk
@@ -4467,7 +4928,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesAzureDisk
     [JsonPropertyName("readOnly")]
     public bool? ReadOnly { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>azureFile represents an Azure File Service mount on the host and bind mount to the pod. Deprecated: AzureFile is deprecated. All operations for the in-tree azureFile type are redirected to the file.csi.azure.com CSI driver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesAzureFile
@@ -4484,7 +4947,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesAzureFile
     [JsonPropertyName("shareName")]
     public string ShareName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>secretRef is Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesCephfsSecretRef
@@ -4493,7 +4958,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesCephfsSecretRef
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>cephFS represents a Ceph FS mount on the host that shares a pod's lifetime. Deprecated: CephFS is deprecated and the in-tree cephfs type is no longer supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesCephfs
@@ -4522,7 +4989,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesCephfs
     [JsonPropertyName("user")]
     public string? User { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>secretRef is optional: points to a secret object containing parameters used to connect to OpenStack.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesCinderSecretRef
@@ -4531,7 +5000,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesCinderSecretRef
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>cinder represents a cinder volume attached and mounted on kubelets host machine. Deprecated: Cinder is deprecated. All operations for the in-tree cinder type are redirected to the cinder.csi.openstack.org CSI driver. More info: https://examples.k8s.io/mysql-cinder-pd/README.md</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesCinder
@@ -4552,7 +5023,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesCinder
     [JsonPropertyName("volumeID")]
     public string VolumeID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Maps a string key to a path within a volume.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesConfigMapItems
@@ -4569,7 +5042,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesConfigMapItems
     [JsonPropertyName("path")]
     public string Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>configMap represents a configMap that should populate this volume</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesConfigMap
@@ -4590,7 +5065,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesConfigMap
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>nodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and  may be empty if no secret is required. If the secret object contains more than one secret, all secret references are passed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesCsiNodePublishSecretRef
@@ -4599,7 +5076,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesCsiNodePublishSecretRef
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>csi (Container Storage Interface) represents ephemeral storage that is handled by certain external CSI drivers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesCsi
@@ -4624,7 +5103,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesCsi
     [JsonPropertyName("volumeAttributes")]
     public IDictionary<string, string>? VolumeAttributes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required: Selects a field of the pod: only annotations, labels, name, namespace and uid are supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesDownwardAPIItemsFieldRef
@@ -4637,7 +5118,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesDownwardAPIItemsFieldRef
     [JsonPropertyName("fieldPath")]
     public string FieldPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, requests.cpu and requests.memory) are currently supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesDownwardAPIItemsResourceFieldRef
@@ -4654,7 +5137,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesDownwardAPIItemsResourceFiel
     [JsonPropertyName("resource")]
     public string Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DownwardAPIVolumeFile represents information to create the file containing the pod field</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesDownwardAPIItems
@@ -4675,7 +5160,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesDownwardAPIItems
     [JsonPropertyName("resourceFieldRef")]
     public V1PoolerSpecTemplateSpecVolumesDownwardAPIItemsResourceFieldRef? ResourceFieldRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>downwardAPI represents downward API about the pod that should populate this volume</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesDownwardAPI
@@ -4688,7 +5175,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesDownwardAPI
     [JsonPropertyName("items")]
     public IList<V1PoolerSpecTemplateSpecVolumesDownwardAPIItems>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>emptyDir represents a temporary directory that shares a pod's lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesEmptyDir
@@ -4701,13 +5190,17 @@ public partial class V1PoolerSpecTemplateSpecVolumesEmptyDir
     [JsonPropertyName("sizeLimit")]
     public IntstrIntOrString? SizeLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>May contain labels and annotations that will be copied into the PVC when creating it. No other fields are allowed and will be rejected during validation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesEphemeralVolumeClaimTemplateMetadata
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>dataSource field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. When the AnyVolumeDataSource feature gate is enabled, dataSource contents will be copied to dataSourceRef, and dataSourceRef contents will be copied to dataSource when dataSourceRef.namespace is not specified. If the namespace is specified, then dataSourceRef will not be copied to dataSource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesEphemeralVolumeClaimTemplateSpecDataSource
@@ -4724,7 +5217,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesEphemeralVolumeClaimTemplate
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>dataSourceRef specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the dataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, when namespace isn't specified in dataSourceRef, both fields (dataSource and dataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. When namespace is specified in dataSourceRef, dataSource isn't set to the same value and must be empty. There are three important differences between dataSource and dataSourceRef: * While dataSource only allows two specific types of objects, dataSourceRef   allows any non-core object, as well as PersistentVolumeClaim objects. * While dataSource ignores disallowed values (dropping them), dataSourceRef   preserves all values, and generates an error if a disallowed value is   specified. * While dataSource only allows local objects, dataSourceRef allows objects   in any namespaces. (Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled. (Alpha) Using the namespace field of dataSourceRef requires the CrossNamespaceVolumeDataSource feature gate to be enabled.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesEphemeralVolumeClaimTemplateSpecDataSourceRef
@@ -4745,7 +5240,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesEphemeralVolumeClaimTemplate
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesEphemeralVolumeClaimTemplateSpecResources
@@ -4758,7 +5255,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesEphemeralVolumeClaimTemplate
     [JsonPropertyName("requests")]
     public IDictionary<string, IntstrIntOrString>? Requests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesEphemeralVolumeClaimTemplateSpecSelectorMatchExpressions
@@ -4775,7 +5274,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesEphemeralVolumeClaimTemplate
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>selector is a label query over volumes to consider for binding.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesEphemeralVolumeClaimTemplateSpecSelector
@@ -4788,7 +5289,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesEphemeralVolumeClaimTemplate
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for the PersistentVolumeClaim. The entire content is copied unchanged into the PVC that gets created from this template. The same fields as in a PersistentVolumeClaim are also valid here.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesEphemeralVolumeClaimTemplateSpec
@@ -4829,7 +5332,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesEphemeralVolumeClaimTemplate
     [JsonPropertyName("volumeName")]
     public string? VolumeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Will be used to create a stand-alone PVC to provision the volume. The pod in which this EphemeralVolumeSource is embedded will be the owner of the PVC, i.e. the PVC will be deleted together with the pod.  The name of the PVC will be `&lt;pod name&gt;-&lt;volume name&gt;` where `&lt;volume name&gt;` is the name from the `PodSpec.Volumes` array entry. Pod validation will reject the pod if the concatenated name is not valid for a PVC (for example, too long).  An existing PVC with that name that is not owned by the pod will *not* be used for the pod to avoid using an unrelated volume by mistake. Starting the pod is then blocked until the unrelated PVC is removed. If such a pre-created PVC is meant to be used by the pod, the PVC has to updated with an owner reference to the pod once the pod exists. Normally this should not be necessary, but it may be useful when manually reconstructing a broken cluster.  This field is read-only and no changes will be made by Kubernetes to the PVC after it has been created.  Required, must not be nil.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesEphemeralVolumeClaimTemplate
@@ -4842,7 +5347,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesEphemeralVolumeClaimTemplate
     [JsonPropertyName("spec")]
     public V1PoolerSpecTemplateSpecVolumesEphemeralVolumeClaimTemplateSpec Spec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ephemeral represents a volume that is handled by a cluster storage driver. The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.  Use this if: a) the volume is only needed while the pod runs, b) features of normal volumes like restoring from snapshot or capacity    tracking are needed, c) the storage driver is specified through a storage class, and d) the storage driver supports dynamic volume provisioning through    a PersistentVolumeClaim (see EphemeralVolumeSource for more    information on the connection between this volume type    and PersistentVolumeClaim).  Use PersistentVolumeClaim or one of the vendor-specific APIs for volumes that persist for longer than the lifecycle of an individual pod.  Use CSI for light-weight local ephemeral volumes if the CSI driver is meant to be used that way - see the documentation of the driver for more information.  A pod can use both types of ephemeral volumes and persistent volumes at the same time.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesEphemeral
@@ -4851,7 +5358,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesEphemeral
     [JsonPropertyName("volumeClaimTemplate")]
     public V1PoolerSpecTemplateSpecVolumesEphemeralVolumeClaimTemplate? VolumeClaimTemplate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>fc represents a Fibre Channel resource that is attached to a kubelet's host machine and then exposed to the pod.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesFc
@@ -4876,7 +5385,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesFc
     [JsonPropertyName("wwids")]
     public IList<string>? Wwids { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>secretRef is Optional: secretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesFlexVolumeSecretRef
@@ -4885,7 +5396,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesFlexVolumeSecretRef
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>flexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin. Deprecated: FlexVolume is deprecated. Consider using a CSIDriver instead.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesFlexVolume
@@ -4910,7 +5423,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesFlexVolume
     [JsonPropertyName("secretRef")]
     public V1PoolerSpecTemplateSpecVolumesFlexVolumeSecretRef? SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>flocker represents a Flocker volume attached to a kubelet's host machine. This depends on the Flocker control service being running. Deprecated: Flocker is deprecated and the in-tree flocker type is no longer supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesFlocker
@@ -4923,7 +5438,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesFlocker
     [JsonPropertyName("datasetUUID")]
     public string? DatasetUUID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>gcePersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. Deprecated: GCEPersistentDisk is deprecated. All operations for the in-tree gcePersistentDisk type are redirected to the pd.csi.storage.gke.io CSI driver. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesGcePersistentDisk
@@ -4944,7 +5461,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesGcePersistentDisk
     [JsonPropertyName("readOnly")]
     public bool? ReadOnly { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>gitRepo represents a git repository at a particular revision. Deprecated: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod's container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesGitRepo
@@ -4961,7 +5480,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesGitRepo
     [JsonPropertyName("revision")]
     public string? Revision { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime. Deprecated: Glusterfs is deprecated and the in-tree glusterfs type is no longer supported. More info: https://examples.k8s.io/volumes/glusterfs/README.md</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesGlusterfs
@@ -4978,7 +5499,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesGlusterfs
     [JsonPropertyName("readOnly")]
     public bool? ReadOnly { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>hostPath represents a pre-existing file or directory on the host machine that is directly exposed to the container. This is generally used for system agents or other privileged things that are allowed to see the host machine. Most containers will NOT need this. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesHostPath
@@ -4991,7 +5514,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesHostPath
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>image represents an OCI object (a container image or artifact) pulled and mounted on the kubelet's host machine. The volume is resolved at pod startup depending on which PullPolicy value is provided:  - Always: the kubelet always attempts to pull the reference. Container creation will fail If the pull fails. - Never: the kubelet never pulls the reference and only uses a local image or artifact. Container creation will fail if the reference isn't present. - IfNotPresent: the kubelet pulls if the reference isn't already present on disk. Container creation will fail if the reference isn't present and the pull fails.  The volume gets re-resolved if the pod gets deleted and recreated, which means that new remote content will become available on pod recreation. A failure to resolve or pull the image during pod startup will block containers from starting and may add significant latency. Failures will be retried using normal volume backoff and will be reported on the pod reason and message. The types of objects that may be mounted by this volume are defined by the container runtime implementation on a host machine and at minimum must include all valid types supported by the container image field. The OCI object gets mounted in a single directory (spec.containers[*].volumeMounts.mountPath) by merging the manifest layers in the same way as for container images. The volume will be mounted read-only (ro) and non-executable files (noexec). Sub path mounts for containers are not supported (spec.containers[*].volumeMounts.subpath) before 1.33. The field spec.securityContext.fsGroupChangePolicy has no effect on this volume type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesImage
@@ -5004,7 +5529,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesImage
     [JsonPropertyName("reference")]
     public string? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>secretRef is the CHAP Secret for iSCSI target and initiator authentication</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesIscsiSecretRef
@@ -5013,7 +5540,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesIscsiSecretRef
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>iscsi represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://examples.k8s.io/volumes/iscsi/README.md</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesIscsi
@@ -5062,7 +5591,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesIscsi
     [JsonPropertyName("targetPortal")]
     public string TargetPortal { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>nfs represents an NFS mount on the host that shares a pod's lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesNfs
@@ -5079,7 +5610,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesNfs
     [JsonPropertyName("server")]
     public string Server { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>persistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesPersistentVolumeClaim
@@ -5092,7 +5625,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesPersistentVolumeClaim
     [JsonPropertyName("readOnly")]
     public bool? ReadOnly { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>photonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine. Deprecated: PhotonPersistentDisk is deprecated and the in-tree photonPersistentDisk type is no longer supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesPhotonPersistentDisk
@@ -5105,7 +5640,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesPhotonPersistentDisk
     [JsonPropertyName("pdID")]
     public string PdID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>portworxVolume represents a portworx volume attached and mounted on kubelets host machine. Deprecated: PortworxVolume is deprecated. All operations for the in-tree portworxVolume type are redirected to the pxd.portworx.com CSI driver when the CSIMigrationPortworx feature-gate is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesPortworxVolume
@@ -5122,7 +5659,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesPortworxVolume
     [JsonPropertyName("volumeID")]
     public string VolumeID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesProjectedSourcesClusterTrustBundleLabelSelectorMatchExpressions
@@ -5139,7 +5678,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesProjectedSourcesClusterTrust
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Select all ClusterTrustBundles that match this label selector.  Only has effect if signerName is set.  Mutually-exclusive with name.  If unset, interpreted as "match nothing".  If set but empty, interpreted as "match everything".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesProjectedSourcesClusterTrustBundleLabelSelector
@@ -5152,7 +5693,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesProjectedSourcesClusterTrust
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClusterTrustBundle allows a pod to access the `.spec.trustBundle` field of ClusterTrustBundle objects in an auto-updating file.  Alpha, gated by the ClusterTrustBundleProjection feature gate.  ClusterTrustBundle objects can either be selected by name, or by the combination of signer name and a label selector.  Kubelet performs aggressive normalization of the PEM contents written into the pod filesystem.  Esoteric PEM features such as inter-block comments and block headers are stripped.  Certificates are deduplicated. The ordering of certificates within the file is arbitrary, and Kubelet may change the order over time.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesProjectedSourcesClusterTrustBundle
@@ -5177,7 +5720,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesProjectedSourcesClusterTrust
     [JsonPropertyName("signerName")]
     public string? SignerName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Maps a string key to a path within a volume.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesProjectedSourcesConfigMapItems
@@ -5194,7 +5739,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesProjectedSourcesConfigMapIte
     [JsonPropertyName("path")]
     public string Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>configMap information about the configMap data to project</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesProjectedSourcesConfigMap
@@ -5211,7 +5758,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesProjectedSourcesConfigMap
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required: Selects a field of the pod: only annotations, labels, name, namespace and uid are supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesProjectedSourcesDownwardAPIItemsFieldRef
@@ -5224,7 +5773,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesProjectedSourcesDownwardAPII
     [JsonPropertyName("fieldPath")]
     public string FieldPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, requests.cpu and requests.memory) are currently supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesProjectedSourcesDownwardAPIItemsResourceFieldRef
@@ -5241,7 +5792,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesProjectedSourcesDownwardAPII
     [JsonPropertyName("resource")]
     public string Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DownwardAPIVolumeFile represents information to create the file containing the pod field</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesProjectedSourcesDownwardAPIItems
@@ -5262,7 +5815,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesProjectedSourcesDownwardAPII
     [JsonPropertyName("resourceFieldRef")]
     public V1PoolerSpecTemplateSpecVolumesProjectedSourcesDownwardAPIItemsResourceFieldRef? ResourceFieldRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>downwardAPI information about the downwardAPI data to project</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesProjectedSourcesDownwardAPI
@@ -5271,7 +5826,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesProjectedSourcesDownwardAPI
     [JsonPropertyName("items")]
     public IList<V1PoolerSpecTemplateSpecVolumesProjectedSourcesDownwardAPIItems>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Maps a string key to a path within a volume.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesProjectedSourcesSecretItems
@@ -5288,7 +5845,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesProjectedSourcesSecretItems
     [JsonPropertyName("path")]
     public string Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>secret information about the secret data to project</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesProjectedSourcesSecret
@@ -5305,7 +5864,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesProjectedSourcesSecret
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>serviceAccountToken is information about the serviceAccountToken data to project</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesProjectedSourcesServiceAccountToken
@@ -5322,7 +5883,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesProjectedSourcesServiceAccou
     [JsonPropertyName("path")]
     public string Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Projection that may be projected along with other supported volume types. Exactly one of these fields must be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesProjectedSources
@@ -5347,7 +5910,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesProjectedSources
     [JsonPropertyName("serviceAccountToken")]
     public V1PoolerSpecTemplateSpecVolumesProjectedSourcesServiceAccountToken? ServiceAccountToken { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>projected items for all in one resources secrets, configmaps, and downward API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesProjected
@@ -5360,7 +5925,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesProjected
     [JsonPropertyName("sources")]
     public IList<V1PoolerSpecTemplateSpecVolumesProjectedSources>? Sources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>quobyte represents a Quobyte mount on the host that shares a pod's lifetime. Deprecated: Quobyte is deprecated and the in-tree quobyte type is no longer supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesQuobyte
@@ -5389,7 +5956,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesQuobyte
     [JsonPropertyName("volume")]
     public string Volume { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>secretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesRbdSecretRef
@@ -5398,7 +5967,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesRbdSecretRef
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>rbd represents a Rados Block Device mount on the host that shares a pod's lifetime. Deprecated: RBD is deprecated and the in-tree rbd type is no longer supported. More info: https://examples.k8s.io/volumes/rbd/README.md</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesRbd
@@ -5435,7 +6006,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesRbd
     [JsonPropertyName("user")]
     public string? User { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>secretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesScaleIOSecretRef
@@ -5444,7 +6017,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesScaleIOSecretRef
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>scaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes. Deprecated: ScaleIO is deprecated and the in-tree scaleIO type is no longer supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesScaleIO
@@ -5489,7 +6064,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesScaleIO
     [JsonPropertyName("volumeName")]
     public string? VolumeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Maps a string key to a path within a volume.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesSecretItems
@@ -5506,7 +6083,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesSecretItems
     [JsonPropertyName("path")]
     public string Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesSecret
@@ -5527,7 +6106,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesSecret
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>secretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not specified, default values will be attempted.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesStorageosSecretRef
@@ -5536,7 +6117,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesStorageosSecretRef
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>storageOS represents a StorageOS volume attached and mounted on Kubernetes nodes. Deprecated: StorageOS is deprecated and the in-tree storageos type is no longer supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesStorageos
@@ -5561,7 +6144,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesStorageos
     [JsonPropertyName("volumeNamespace")]
     public string? VolumeNamespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>vsphereVolume represents a vSphere volume attached and mounted on kubelets host machine. Deprecated: VsphereVolume is deprecated. All operations for the in-tree vsphereVolume type are redirected to the csi.vsphere.vmware.com CSI driver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumesVsphereVolume
@@ -5582,7 +6167,9 @@ public partial class V1PoolerSpecTemplateSpecVolumesVsphereVolume
     [JsonPropertyName("volumePath")]
     public string VolumePath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Volume represents a named volume in a pod that may be accessed by any container in the pod.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpecVolumes
@@ -5711,7 +6298,9 @@ public partial class V1PoolerSpecTemplateSpecVolumes
     [JsonPropertyName("vsphereVolume")]
     public V1PoolerSpecTemplateSpecVolumesVsphereVolume? VsphereVolume { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specification of the desired behavior of the pod. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplateSpec
@@ -5876,7 +6465,9 @@ public partial class V1PoolerSpecTemplateSpec
     [JsonPropertyName("volumes")]
     public IList<V1PoolerSpecTemplateSpecVolumes>? Volumes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The template of the Pod to be created</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecTemplate
@@ -5889,7 +6480,9 @@ public partial class V1PoolerSpecTemplate
     [JsonPropertyName("spec")]
     public V1PoolerSpecTemplateSpec? Spec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specification of the desired behavior of the Pooler. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpec
@@ -5926,7 +6519,9 @@ public partial class V1PoolerSpec
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The client CA secret version</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerStatusSecretsClientCA
@@ -5939,7 +6534,9 @@ public partial class V1PoolerStatusSecretsClientCA
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The auth query secret version</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerStatusSecretsPgBouncerSecretsAuthQuery
@@ -5952,7 +6549,9 @@ public partial class V1PoolerStatusSecretsPgBouncerSecretsAuthQuery
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The version of the secrets used by PgBouncer</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerStatusSecretsPgBouncerSecrets
@@ -5961,7 +6560,9 @@ public partial class V1PoolerStatusSecretsPgBouncerSecrets
     [JsonPropertyName("authQuery")]
     public V1PoolerStatusSecretsPgBouncerSecretsAuthQuery? AuthQuery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The server CA secret version</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerStatusSecretsServerCA
@@ -5974,7 +6575,9 @@ public partial class V1PoolerStatusSecretsServerCA
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The server TLS secret version</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerStatusSecretsServerTLS
@@ -5987,7 +6590,9 @@ public partial class V1PoolerStatusSecretsServerTLS
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The resource version of the config object</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerStatusSecrets
@@ -6008,7 +6613,9 @@ public partial class V1PoolerStatusSecrets
     [JsonPropertyName("serverTLS")]
     public V1PoolerStatusSecretsServerTLS? ServerTLS { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Most recently observed status of the Pooler. This data may not be up to date. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerStatus
@@ -6021,7 +6628,9 @@ public partial class V1PoolerStatus
     [JsonPropertyName("secrets")]
     public V1PoolerStatusSecrets? Secrets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Pooler is the Schema for the poolers API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -6051,3 +6660,4 @@ public partial class V1Pooler : IKubernetesObject<V1ObjectMeta>, ISpec<V1PoolerS
     [JsonPropertyName("status")]
     public V1PoolerStatus? Status { get; set; }
 }
+#nullable disable

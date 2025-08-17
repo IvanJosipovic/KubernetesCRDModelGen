@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.notificationhubs.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20230901.NotificationHub Generator information: - Generated from: /notificationhubs/resource-manager/Microsoft.NotificationHubs/stable/2023-09-01/notificationhubs.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NotificationHubs/namespaces/{namespaceName}/notificationHubs/{notificationHubName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20230901storageNotificationHubList : IKubernetesObject
     [JsonPropertyName("items")]
     public IList<V1api20230901storageNotificationHub> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecOperatorSpecConfigMapExpressions
@@ -50,7 +53,9 @@ public partial class V1api20230901storageNotificationHubSpecOperatorSpecConfigMa
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecOperatorSpecSecretExpressions
@@ -67,7 +72,9 @@ public partial class V1api20230901storageNotificationHubSpecOperatorSpecSecretEx
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecOperatorSpecSecretsPrimaryConnectionString
@@ -80,7 +87,9 @@ public partial class V1api20230901storageNotificationHubSpecOperatorSpecSecretsP
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecOperatorSpecSecretsPrimaryKey
@@ -93,7 +102,9 @@ public partial class V1api20230901storageNotificationHubSpecOperatorSpecSecretsP
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecOperatorSpecSecretsSecondaryConnectionString
@@ -106,7 +117,9 @@ public partial class V1api20230901storageNotificationHubSpecOperatorSpecSecretsS
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecOperatorSpecSecretsSecondaryKey
@@ -119,7 +132,9 @@ public partial class V1api20230901storageNotificationHubSpecOperatorSpecSecretsS
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.NotificationHubOperatorSecrets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecOperatorSpecSecrets
@@ -144,7 +159,9 @@ public partial class V1api20230901storageNotificationHubSpecOperatorSpecSecrets
     [JsonPropertyName("secondaryKey")]
     public V1api20230901storageNotificationHubSpecOperatorSpecSecretsSecondaryKey? SecondaryKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.NotificationHubOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecOperatorSpec
@@ -165,7 +182,9 @@ public partial class V1api20230901storageNotificationHubSpecOperatorSpec
     [JsonPropertyName("secrets")]
     public V1api20230901storageNotificationHubSpecOperatorSpecSecrets? Secrets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a notificationhubs.azure.com/Namespace resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecOwner
@@ -178,7 +197,9 @@ public partial class V1api20230901storageNotificationHubSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesAdmCredentialPropertiesAuthTokenUrl
@@ -191,7 +212,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesAdmCredent
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesAdmCredentialPropertiesClientId
@@ -204,7 +227,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesAdmCredent
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesAdmCredentialPropertiesClientSecret
@@ -217,7 +242,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesAdmCredent
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.AdmCredentialProperties Description of a NotificationHub AdmCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesAdmCredentialProperties
@@ -238,7 +265,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesAdmCredent
     [JsonPropertyName("clientSecret")]
     public V1api20230901storageNotificationHubSpecPropertiesAdmCredentialPropertiesClientSecret? ClientSecret { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.AdmCredential Description of a NotificationHub AdmCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesAdmCredential
@@ -251,7 +280,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesAdmCredent
     [JsonPropertyName("properties")]
     public V1api20230901storageNotificationHubSpecPropertiesAdmCredentialProperties? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesApnsCredentialPropertiesApnsCertificate
@@ -264,7 +295,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesApnsCreden
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesApnsCredentialPropertiesAppId
@@ -277,7 +310,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesApnsCreden
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesApnsCredentialPropertiesAppName
@@ -290,7 +325,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesApnsCreden
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesApnsCredentialPropertiesCertificateKey
@@ -303,7 +340,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesApnsCreden
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesApnsCredentialPropertiesEndpoint
@@ -316,7 +355,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesApnsCreden
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesApnsCredentialPropertiesKeyId
@@ -329,7 +370,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesApnsCreden
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesApnsCredentialPropertiesThumbprint
@@ -342,7 +385,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesApnsCreden
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesApnsCredentialPropertiesToken
@@ -355,7 +400,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesApnsCreden
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.ApnsCredentialProperties Description of a NotificationHub ApnsCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesApnsCredentialProperties
@@ -396,7 +443,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesApnsCreden
     [JsonPropertyName("token")]
     public V1api20230901storageNotificationHubSpecPropertiesApnsCredentialPropertiesToken? Token { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.ApnsCredential Description of a NotificationHub ApnsCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesApnsCredential
@@ -409,7 +458,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesApnsCreden
     [JsonPropertyName("properties")]
     public V1api20230901storageNotificationHubSpecPropertiesApnsCredentialProperties? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesBaiduCredentialPropertiesBaiduApiKey
@@ -422,7 +473,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesBaiduCrede
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesBaiduCredentialPropertiesBaiduEndPoint
@@ -435,7 +488,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesBaiduCrede
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesBaiduCredentialPropertiesBaiduSecretKey
@@ -448,7 +503,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesBaiduCrede
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.BaiduCredentialProperties Description of a NotificationHub BaiduCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesBaiduCredentialProperties
@@ -469,7 +526,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesBaiduCrede
     [JsonPropertyName("baiduSecretKey")]
     public V1api20230901storageNotificationHubSpecPropertiesBaiduCredentialPropertiesBaiduSecretKey? BaiduSecretKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.BaiduCredential Description of a NotificationHub BaiduCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesBaiduCredential
@@ -482,7 +541,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesBaiduCrede
     [JsonPropertyName("properties")]
     public V1api20230901storageNotificationHubSpecPropertiesBaiduCredentialProperties? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesBrowserCredentialPropertiesSubject
@@ -495,7 +556,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesBrowserCre
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesBrowserCredentialPropertiesVapidPrivateKey
@@ -508,7 +571,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesBrowserCre
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesBrowserCredentialPropertiesVapidPublicKey
@@ -521,7 +586,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesBrowserCre
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.BrowserCredentialProperties Description of a NotificationHub BrowserCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesBrowserCredentialProperties
@@ -542,7 +609,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesBrowserCre
     [JsonPropertyName("vapidPublicKey")]
     public V1api20230901storageNotificationHubSpecPropertiesBrowserCredentialPropertiesVapidPublicKey? VapidPublicKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.BrowserCredential Description of a NotificationHub BrowserCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesBrowserCredential
@@ -555,7 +624,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesBrowserCre
     [JsonPropertyName("properties")]
     public V1api20230901storageNotificationHubSpecPropertiesBrowserCredentialProperties? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesGcmCredentialPropertiesGcmEndpoint
@@ -568,7 +639,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesGcmCredent
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesGcmCredentialPropertiesGoogleApiKey
@@ -581,7 +654,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesGcmCredent
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.GcmCredentialProperties Description of a NotificationHub GcmCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesGcmCredentialProperties
@@ -598,7 +673,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesGcmCredent
     [JsonPropertyName("googleApiKey")]
     public V1api20230901storageNotificationHubSpecPropertiesGcmCredentialPropertiesGoogleApiKey? GoogleApiKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.GcmCredential Description of a NotificationHub GcmCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesGcmCredential
@@ -611,7 +688,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesGcmCredent
     [JsonPropertyName("properties")]
     public V1api20230901storageNotificationHubSpecPropertiesGcmCredentialProperties? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesMpnsCredentialPropertiesCertificateKey
@@ -624,7 +703,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesMpnsCreden
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesMpnsCredentialPropertiesMpnsCertificate
@@ -637,7 +718,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesMpnsCreden
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesMpnsCredentialPropertiesThumbprint
@@ -650,7 +733,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesMpnsCreden
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.MpnsCredentialProperties Description of a NotificationHub MpnsCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesMpnsCredentialProperties
@@ -671,7 +756,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesMpnsCreden
     [JsonPropertyName("thumbprint")]
     public V1api20230901storageNotificationHubSpecPropertiesMpnsCredentialPropertiesThumbprint? Thumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.MpnsCredential Description of a NotificationHub MpnsCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesMpnsCredential
@@ -684,7 +771,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesMpnsCreden
     [JsonPropertyName("properties")]
     public V1api20230901storageNotificationHubSpecPropertiesMpnsCredentialProperties? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesWnsCredentialPropertiesCertificateKey
@@ -697,7 +786,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesWnsCredent
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesWnsCredentialPropertiesPackageSid
@@ -710,7 +801,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesWnsCredent
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesWnsCredentialPropertiesSecretKey
@@ -723,7 +816,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesWnsCredent
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesWnsCredentialPropertiesWindowsLiveEndpoint
@@ -736,7 +831,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesWnsCredent
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesWnsCredentialPropertiesWnsCertificate
@@ -749,7 +846,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesWnsCredent
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.WnsCredentialProperties Description of a NotificationHub WnsCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesWnsCredentialProperties
@@ -778,7 +877,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesWnsCredent
     [JsonPropertyName("wnsCertificate")]
     public V1api20230901storageNotificationHubSpecPropertiesWnsCredentialPropertiesWnsCertificate? WnsCertificate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.WnsCredential Description of a NotificationHub WnsCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesWnsCredential
@@ -791,7 +892,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesWnsCredent
     [JsonPropertyName("properties")]
     public V1api20230901storageNotificationHubSpecPropertiesWnsCredentialProperties? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesXiaomiCredentialPropertiesAppSecret
@@ -804,7 +907,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesXiaomiCred
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesXiaomiCredentialPropertiesEndpoint
@@ -817,7 +922,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesXiaomiCred
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.XiaomiCredentialProperties Description of a NotificationHub XiaomiCredentialProperties.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesXiaomiCredentialProperties
@@ -834,7 +941,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesXiaomiCred
     [JsonPropertyName("endpoint")]
     public V1api20230901storageNotificationHubSpecPropertiesXiaomiCredentialPropertiesEndpoint? Endpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.XiaomiCredential Description of a NotificationHub XiaomiCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecPropertiesXiaomiCredential
@@ -847,7 +956,9 @@ public partial class V1api20230901storageNotificationHubSpecPropertiesXiaomiCred
     [JsonPropertyName("properties")]
     public V1api20230901storageNotificationHubSpecPropertiesXiaomiCredentialProperties? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.NotificationHubProperties NotificationHub properties.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecProperties
@@ -896,7 +1007,9 @@ public partial class V1api20230901storageNotificationHubSpecProperties
     [JsonPropertyName("xiaomiCredential")]
     public V1api20230901storageNotificationHubSpecPropertiesXiaomiCredential? XiaomiCredential { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.Sku The Sku description for a namespace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpecSku
@@ -925,7 +1038,9 @@ public partial class V1api20230901storageNotificationHubSpecSku
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.NotificationHub_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubSpec
@@ -966,7 +1081,9 @@ public partial class V1api20230901storageNotificationHubSpec
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubStatusConditions
@@ -999,7 +1116,9 @@ public partial class V1api20230901storageNotificationHubStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.AdmCredentialProperties_STATUS Description of a NotificationHub AdmCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubStatusPropertiesAdmCredentialProperties
@@ -1008,7 +1127,9 @@ public partial class V1api20230901storageNotificationHubStatusPropertiesAdmCrede
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.AdmCredential_STATUS Description of a NotificationHub AdmCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubStatusPropertiesAdmCredential
@@ -1021,7 +1142,9 @@ public partial class V1api20230901storageNotificationHubStatusPropertiesAdmCrede
     [JsonPropertyName("properties")]
     public V1api20230901storageNotificationHubStatusPropertiesAdmCredentialProperties? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.ApnsCredentialProperties_STATUS Description of a NotificationHub ApnsCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubStatusPropertiesApnsCredentialProperties
@@ -1030,7 +1153,9 @@ public partial class V1api20230901storageNotificationHubStatusPropertiesApnsCred
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.ApnsCredential_STATUS Description of a NotificationHub ApnsCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubStatusPropertiesApnsCredential
@@ -1043,7 +1168,9 @@ public partial class V1api20230901storageNotificationHubStatusPropertiesApnsCred
     [JsonPropertyName("properties")]
     public V1api20230901storageNotificationHubStatusPropertiesApnsCredentialProperties? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.SharedAccessAuthorizationRuleProperties_STATUS SharedAccessAuthorizationRule properties.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubStatusPropertiesAuthorizationRules
@@ -1080,7 +1207,9 @@ public partial class V1api20230901storageNotificationHubStatusPropertiesAuthoriz
     [JsonPropertyName("rights")]
     public IList<string>? Rights { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.BaiduCredentialProperties_STATUS Description of a NotificationHub BaiduCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubStatusPropertiesBaiduCredentialProperties
@@ -1089,7 +1218,9 @@ public partial class V1api20230901storageNotificationHubStatusPropertiesBaiduCre
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.BaiduCredential_STATUS Description of a NotificationHub BaiduCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubStatusPropertiesBaiduCredential
@@ -1102,7 +1233,9 @@ public partial class V1api20230901storageNotificationHubStatusPropertiesBaiduCre
     [JsonPropertyName("properties")]
     public V1api20230901storageNotificationHubStatusPropertiesBaiduCredentialProperties? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.BrowserCredentialProperties_STATUS Description of a NotificationHub BrowserCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubStatusPropertiesBrowserCredentialProperties
@@ -1111,7 +1244,9 @@ public partial class V1api20230901storageNotificationHubStatusPropertiesBrowserC
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.BrowserCredential_STATUS Description of a NotificationHub BrowserCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubStatusPropertiesBrowserCredential
@@ -1124,7 +1259,9 @@ public partial class V1api20230901storageNotificationHubStatusPropertiesBrowserC
     [JsonPropertyName("properties")]
     public V1api20230901storageNotificationHubStatusPropertiesBrowserCredentialProperties? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.GcmCredentialProperties_STATUS Description of a NotificationHub GcmCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubStatusPropertiesGcmCredentialProperties
@@ -1133,7 +1270,9 @@ public partial class V1api20230901storageNotificationHubStatusPropertiesGcmCrede
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.GcmCredential_STATUS Description of a NotificationHub GcmCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubStatusPropertiesGcmCredential
@@ -1146,7 +1285,9 @@ public partial class V1api20230901storageNotificationHubStatusPropertiesGcmCrede
     [JsonPropertyName("properties")]
     public V1api20230901storageNotificationHubStatusPropertiesGcmCredentialProperties? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.MpnsCredentialProperties_STATUS Description of a NotificationHub MpnsCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubStatusPropertiesMpnsCredentialProperties
@@ -1155,7 +1296,9 @@ public partial class V1api20230901storageNotificationHubStatusPropertiesMpnsCred
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.MpnsCredential_STATUS Description of a NotificationHub MpnsCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubStatusPropertiesMpnsCredential
@@ -1168,7 +1311,9 @@ public partial class V1api20230901storageNotificationHubStatusPropertiesMpnsCred
     [JsonPropertyName("properties")]
     public V1api20230901storageNotificationHubStatusPropertiesMpnsCredentialProperties? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.WnsCredentialProperties_STATUS Description of a NotificationHub WnsCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubStatusPropertiesWnsCredentialProperties
@@ -1177,7 +1322,9 @@ public partial class V1api20230901storageNotificationHubStatusPropertiesWnsCrede
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.WnsCredential_STATUS Description of a NotificationHub WnsCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubStatusPropertiesWnsCredential
@@ -1190,7 +1337,9 @@ public partial class V1api20230901storageNotificationHubStatusPropertiesWnsCrede
     [JsonPropertyName("properties")]
     public V1api20230901storageNotificationHubStatusPropertiesWnsCredentialProperties? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.XiaomiCredentialProperties_STATUS Description of a NotificationHub XiaomiCredentialProperties.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubStatusPropertiesXiaomiCredentialProperties
@@ -1199,7 +1348,9 @@ public partial class V1api20230901storageNotificationHubStatusPropertiesXiaomiCr
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.XiaomiCredential_STATUS Description of a NotificationHub XiaomiCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubStatusPropertiesXiaomiCredential
@@ -1212,7 +1363,9 @@ public partial class V1api20230901storageNotificationHubStatusPropertiesXiaomiCr
     [JsonPropertyName("properties")]
     public V1api20230901storageNotificationHubStatusPropertiesXiaomiCredentialProperties? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.NotificationHubProperties_STATUS NotificationHub properties.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubStatusProperties
@@ -1269,7 +1422,9 @@ public partial class V1api20230901storageNotificationHubStatusProperties
     [JsonPropertyName("xiaomiCredential")]
     public V1api20230901storageNotificationHubStatusPropertiesXiaomiCredential? XiaomiCredential { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.Sku_STATUS The Sku description for a namespace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubStatusSku
@@ -1298,7 +1453,9 @@ public partial class V1api20230901storageNotificationHubStatusSku
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubStatusSystemData
@@ -1331,7 +1488,9 @@ public partial class V1api20230901storageNotificationHubStatusSystemData
     [JsonPropertyName("lastModifiedByType")]
     public string? LastModifiedByType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.NotificationHub_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230901storageNotificationHubStatus
@@ -1376,7 +1535,9 @@ public partial class V1api20230901storageNotificationHubStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230901.NotificationHub Generator information: - Generated from: /notificationhubs/resource-manager/Microsoft.NotificationHubs/stable/2023-09-01/notificationhubs.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NotificationHubs/namespaces/{namespaceName}/notificationHubs/{notificationHubName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1406,3 +1567,4 @@ public partial class V1api20230901storageNotificationHub : IKubernetesObject<V1O
     [JsonPropertyName("status")]
     public V1api20230901storageNotificationHubStatus? Status { get; set; }
 }
+#nullable disable

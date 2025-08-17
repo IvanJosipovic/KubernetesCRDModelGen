@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.synapse.azure.m.upbound.io;
+#nullable enable
 /// <summary>WorkspaceSecurityAlertPolicy is the Schema for the WorkspaceSecurityAlertPolicys API. Manages a Security Alert Policy for a Synapse Workspace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1WorkspaceSecurityAlertPolicyList : IKubernetesObject
     [JsonPropertyName("items")]
     public IList<V1beta1WorkspaceSecurityAlertPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the identifier key of the Threat Detection audit storage account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSecurityAlertPolicySpecForProviderStorageAccountAccessKeySecretRef
@@ -46,7 +49,9 @@ public partial class V1beta1WorkspaceSecurityAlertPolicySpecForProviderStorageAc
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSecurityAlertPolicySpecForProviderStorageEndpointRefPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1WorkspaceSecurityAlertPolicySpecForProviderStorageEn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageEndpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSecurityAlertPolicySpecForProviderStorageEndpointRef
@@ -76,7 +83,9 @@ public partial class V1beta1WorkspaceSecurityAlertPolicySpecForProviderStorageEn
     [JsonPropertyName("policy")]
     public V1beta1WorkspaceSecurityAlertPolicySpecForProviderStorageEndpointRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSecurityAlertPolicySpecForProviderStorageEndpointSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1WorkspaceSecurityAlertPolicySpecForProviderStorageEn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageEndpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSecurityAlertPolicySpecForProviderStorageEndpointSelector
@@ -110,7 +121,9 @@ public partial class V1beta1WorkspaceSecurityAlertPolicySpecForProviderStorageEn
     [JsonPropertyName("policy")]
     public V1beta1WorkspaceSecurityAlertPolicySpecForProviderStorageEndpointSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSecurityAlertPolicySpecForProviderSynapseWorkspaceIdRefPolicy
@@ -123,7 +136,9 @@ public partial class V1beta1WorkspaceSecurityAlertPolicySpecForProviderSynapseWo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in synapse to populate synapseWorkspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSecurityAlertPolicySpecForProviderSynapseWorkspaceIdRef
@@ -140,7 +155,9 @@ public partial class V1beta1WorkspaceSecurityAlertPolicySpecForProviderSynapseWo
     [JsonPropertyName("policy")]
     public V1beta1WorkspaceSecurityAlertPolicySpecForProviderSynapseWorkspaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSecurityAlertPolicySpecForProviderSynapseWorkspaceIdSelectorPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1WorkspaceSecurityAlertPolicySpecForProviderSynapseWo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in synapse to populate synapseWorkspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSecurityAlertPolicySpecForProviderSynapseWorkspaceIdSelector
@@ -174,7 +193,9 @@ public partial class V1beta1WorkspaceSecurityAlertPolicySpecForProviderSynapseWo
     [JsonPropertyName("policy")]
     public V1beta1WorkspaceSecurityAlertPolicySpecForProviderSynapseWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSecurityAlertPolicySpecForProvider
@@ -227,7 +248,9 @@ public partial class V1beta1WorkspaceSecurityAlertPolicySpecForProvider
     [JsonPropertyName("synapseWorkspaceIdSelector")]
     public V1beta1WorkspaceSecurityAlertPolicySpecForProviderSynapseWorkspaceIdSelector? SynapseWorkspaceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the identifier key of the Threat Detection audit storage account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSecurityAlertPolicySpecInitProviderStorageAccountAccessKeySecretRef
@@ -240,7 +263,9 @@ public partial class V1beta1WorkspaceSecurityAlertPolicySpecInitProviderStorageA
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSecurityAlertPolicySpecInitProviderStorageEndpointRefPolicy
@@ -253,7 +278,9 @@ public partial class V1beta1WorkspaceSecurityAlertPolicySpecInitProviderStorageE
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageEndpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSecurityAlertPolicySpecInitProviderStorageEndpointRef
@@ -270,7 +297,9 @@ public partial class V1beta1WorkspaceSecurityAlertPolicySpecInitProviderStorageE
     [JsonPropertyName("policy")]
     public V1beta1WorkspaceSecurityAlertPolicySpecInitProviderStorageEndpointRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSecurityAlertPolicySpecInitProviderStorageEndpointSelectorPolicy
@@ -283,7 +312,9 @@ public partial class V1beta1WorkspaceSecurityAlertPolicySpecInitProviderStorageE
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageEndpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSecurityAlertPolicySpecInitProviderStorageEndpointSelector
@@ -304,7 +335,9 @@ public partial class V1beta1WorkspaceSecurityAlertPolicySpecInitProviderStorageE
     [JsonPropertyName("policy")]
     public V1beta1WorkspaceSecurityAlertPolicySpecInitProviderStorageEndpointSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSecurityAlertPolicySpecInitProvider
@@ -345,7 +378,9 @@ public partial class V1beta1WorkspaceSecurityAlertPolicySpecInitProvider
     [JsonPropertyName("storageEndpointSelector")]
     public V1beta1WorkspaceSecurityAlertPolicySpecInitProviderStorageEndpointSelector? StorageEndpointSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSecurityAlertPolicySpecProviderConfigRef
@@ -358,7 +393,9 @@ public partial class V1beta1WorkspaceSecurityAlertPolicySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSecurityAlertPolicySpecWriteConnectionSecretToRef
@@ -367,7 +404,9 @@ public partial class V1beta1WorkspaceSecurityAlertPolicySpecWriteConnectionSecre
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkspaceSecurityAlertPolicySpec defines the desired state of WorkspaceSecurityAlertPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSecurityAlertPolicySpec
@@ -392,7 +431,9 @@ public partial class V1beta1WorkspaceSecurityAlertPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1WorkspaceSecurityAlertPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSecurityAlertPolicyStatusAtProvider
@@ -429,7 +470,9 @@ public partial class V1beta1WorkspaceSecurityAlertPolicyStatusAtProvider
     [JsonPropertyName("synapseWorkspaceId")]
     public string? SynapseWorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSecurityAlertPolicyStatusConditions
@@ -458,7 +501,9 @@ public partial class V1beta1WorkspaceSecurityAlertPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkspaceSecurityAlertPolicyStatus defines the observed state of WorkspaceSecurityAlertPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSecurityAlertPolicyStatus
@@ -475,7 +520,9 @@ public partial class V1beta1WorkspaceSecurityAlertPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkspaceSecurityAlertPolicy is the Schema for the WorkspaceSecurityAlertPolicys API. Manages a Security Alert Policy for a Synapse Workspace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -505,3 +552,4 @@ public partial class V1beta1WorkspaceSecurityAlertPolicy : IKubernetesObject<V1O
     [JsonPropertyName("status")]
     public V1beta1WorkspaceSecurityAlertPolicyStatus? Status { get; set; }
 }
+#nullable disable

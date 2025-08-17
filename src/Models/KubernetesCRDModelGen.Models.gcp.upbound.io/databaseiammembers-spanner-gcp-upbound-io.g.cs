@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.spanner.gcp.upbound.io;
+#nullable enable
 /// <summary>DatabaseIAMMember is the Schema for the DatabaseIAMMembers API. &lt;no value&gt;</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DatabaseIAMMemberList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1DatabaseIAMMember> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseIAMMemberSpecForProviderCondition
@@ -50,7 +53,9 @@ public partial class V1beta1DatabaseIAMMemberSpecForProviderCondition
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseIAMMemberSpecForProviderDatabaseRefPolicy
@@ -63,7 +68,9 @@ public partial class V1beta1DatabaseIAMMemberSpecForProviderDatabaseRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Database in spanner to populate database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseIAMMemberSpecForProviderDatabaseRef
@@ -76,7 +83,9 @@ public partial class V1beta1DatabaseIAMMemberSpecForProviderDatabaseRef
     [JsonPropertyName("policy")]
     public V1beta1DatabaseIAMMemberSpecForProviderDatabaseRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseIAMMemberSpecForProviderDatabaseSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1DatabaseIAMMemberSpecForProviderDatabaseSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Database in spanner to populate database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseIAMMemberSpecForProviderDatabaseSelector
@@ -106,7 +117,9 @@ public partial class V1beta1DatabaseIAMMemberSpecForProviderDatabaseSelector
     [JsonPropertyName("policy")]
     public V1beta1DatabaseIAMMemberSpecForProviderDatabaseSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseIAMMemberSpecForProviderInstanceRefPolicy
@@ -119,7 +132,9 @@ public partial class V1beta1DatabaseIAMMemberSpecForProviderInstanceRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in spanner to populate instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseIAMMemberSpecForProviderInstanceRef
@@ -132,7 +147,9 @@ public partial class V1beta1DatabaseIAMMemberSpecForProviderInstanceRef
     [JsonPropertyName("policy")]
     public V1beta1DatabaseIAMMemberSpecForProviderInstanceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseIAMMemberSpecForProviderInstanceSelectorPolicy
@@ -145,7 +162,9 @@ public partial class V1beta1DatabaseIAMMemberSpecForProviderInstanceSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in spanner to populate instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseIAMMemberSpecForProviderInstanceSelector
@@ -162,7 +181,9 @@ public partial class V1beta1DatabaseIAMMemberSpecForProviderInstanceSelector
     [JsonPropertyName("policy")]
     public V1beta1DatabaseIAMMemberSpecForProviderInstanceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseIAMMemberSpecForProvider
@@ -207,7 +228,9 @@ public partial class V1beta1DatabaseIAMMemberSpecForProvider
     [JsonPropertyName("role")]
     public string? Role { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseIAMMemberSpecInitProviderCondition
@@ -224,7 +247,9 @@ public partial class V1beta1DatabaseIAMMemberSpecInitProviderCondition
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseIAMMemberSpecInitProviderDatabaseRefPolicy
@@ -237,7 +262,9 @@ public partial class V1beta1DatabaseIAMMemberSpecInitProviderDatabaseRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Database in spanner to populate database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseIAMMemberSpecInitProviderDatabaseRef
@@ -250,7 +277,9 @@ public partial class V1beta1DatabaseIAMMemberSpecInitProviderDatabaseRef
     [JsonPropertyName("policy")]
     public V1beta1DatabaseIAMMemberSpecInitProviderDatabaseRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseIAMMemberSpecInitProviderDatabaseSelectorPolicy
@@ -263,7 +292,9 @@ public partial class V1beta1DatabaseIAMMemberSpecInitProviderDatabaseSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Database in spanner to populate database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseIAMMemberSpecInitProviderDatabaseSelector
@@ -280,7 +311,9 @@ public partial class V1beta1DatabaseIAMMemberSpecInitProviderDatabaseSelector
     [JsonPropertyName("policy")]
     public V1beta1DatabaseIAMMemberSpecInitProviderDatabaseSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseIAMMemberSpecInitProviderInstanceRefPolicy
@@ -293,7 +326,9 @@ public partial class V1beta1DatabaseIAMMemberSpecInitProviderInstanceRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in spanner to populate instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseIAMMemberSpecInitProviderInstanceRef
@@ -306,7 +341,9 @@ public partial class V1beta1DatabaseIAMMemberSpecInitProviderInstanceRef
     [JsonPropertyName("policy")]
     public V1beta1DatabaseIAMMemberSpecInitProviderInstanceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseIAMMemberSpecInitProviderInstanceSelectorPolicy
@@ -319,7 +356,9 @@ public partial class V1beta1DatabaseIAMMemberSpecInitProviderInstanceSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in spanner to populate instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseIAMMemberSpecInitProviderInstanceSelector
@@ -336,7 +375,9 @@ public partial class V1beta1DatabaseIAMMemberSpecInitProviderInstanceSelector
     [JsonPropertyName("policy")]
     public V1beta1DatabaseIAMMemberSpecInitProviderInstanceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseIAMMemberSpecInitProvider
@@ -381,7 +422,9 @@ public partial class V1beta1DatabaseIAMMemberSpecInitProvider
     [JsonPropertyName("role")]
     public string? Role { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseIAMMemberSpecProviderConfigRefPolicy
@@ -394,7 +437,9 @@ public partial class V1beta1DatabaseIAMMemberSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseIAMMemberSpecProviderConfigRef
@@ -407,7 +452,9 @@ public partial class V1beta1DatabaseIAMMemberSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1DatabaseIAMMemberSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseIAMMemberSpecWriteConnectionSecretToRef
@@ -420,7 +467,9 @@ public partial class V1beta1DatabaseIAMMemberSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DatabaseIAMMemberSpec defines the desired state of DatabaseIAMMember</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseIAMMemberSpec
@@ -449,7 +498,9 @@ public partial class V1beta1DatabaseIAMMemberSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DatabaseIAMMemberSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseIAMMemberStatusAtProviderCondition
@@ -466,7 +517,9 @@ public partial class V1beta1DatabaseIAMMemberStatusAtProviderCondition
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseIAMMemberStatusAtProvider
@@ -503,7 +556,9 @@ public partial class V1beta1DatabaseIAMMemberStatusAtProvider
     [JsonPropertyName("role")]
     public string? Role { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseIAMMemberStatusConditions
@@ -532,7 +587,9 @@ public partial class V1beta1DatabaseIAMMemberStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DatabaseIAMMemberStatus defines the observed state of DatabaseIAMMember.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseIAMMemberStatus
@@ -549,7 +606,9 @@ public partial class V1beta1DatabaseIAMMemberStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DatabaseIAMMember is the Schema for the DatabaseIAMMembers API. &lt;no value&gt;</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -579,3 +638,4 @@ public partial class V1beta1DatabaseIAMMember : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1DatabaseIAMMemberStatus? Status { get; set; }
 }
+#nullable disable

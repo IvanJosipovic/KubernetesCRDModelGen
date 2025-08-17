@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.monitoring.gcp.m.upbound.io;
+#nullable enable
 /// <summary>UptimeCheckConfig is the Schema for the UptimeCheckConfigs API. This message configures which resources and services to monitor for availability.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1UptimeCheckConfigList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1UptimeCheckConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information needed to perform a JSONPath content match. Used for ContentMatcherOption::MATCHES_JSON_PATH and ContentMatcherOption::NOT_MATCHES_JSON_PATH. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecForProviderContentMatchersJsonPathMatcher
@@ -46,7 +49,9 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderContentMatchersJsonP
     [JsonPropertyName("jsonPath")]
     public string? JsonPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecForProviderContentMatchers
@@ -63,7 +68,9 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderContentMatchers
     [JsonPropertyName("matcher")]
     public string? Matcher { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecForProviderHttpCheckAcceptedResponseStatusCodes
@@ -76,7 +83,9 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderHttpCheckAcceptedRes
     [JsonPropertyName("statusValue")]
     public double? StatusValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A LocalSecretKeySelector is a reference to a secret key in the same namespace with the referencing object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecForProviderHttpCheckAuthInfoPasswordSecretRef
@@ -89,7 +98,9 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderHttpCheckAuthInfoPas
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The authentication information using username and password. Optional when creating an HTTP check; defaults to empty. Do not use with other authentication fields. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecForProviderHttpCheckAuthInfo
@@ -110,7 +121,9 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderHttpCheckAuthInfo
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contains information needed to add pings to an HTTP check. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecForProviderHttpCheckPingConfig
@@ -119,7 +132,9 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderHttpCheckPingConfig
     [JsonPropertyName("pingsCount")]
     public double? PingsCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The authentication information using the Monitoring Service Agent. Optional when creating an HTTPS check; defaults to empty. Do not use with other authentication fields. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecForProviderHttpCheckServiceAgentAuthentication
@@ -128,7 +143,9 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderHttpCheckServiceAgen
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contains information needed to make an HTTP or HTTPS check. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecForProviderHttpCheck
@@ -189,7 +206,9 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderHttpCheck
     [JsonPropertyName("validateSsl")]
     public bool? ValidateSsl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The [monitored resource] (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecForProviderMonitoredResource
@@ -202,7 +221,9 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderMonitoredResource
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecForProviderResourceGroupGroupIdRefPolicy
@@ -215,7 +236,9 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderResourceGroupGroupId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Group in monitoring to populate groupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecForProviderResourceGroupGroupIdRef
@@ -232,7 +255,9 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderResourceGroupGroupId
     [JsonPropertyName("policy")]
     public V1beta1UptimeCheckConfigSpecForProviderResourceGroupGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecForProviderResourceGroupGroupIdSelectorPolicy
@@ -245,7 +270,9 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderResourceGroupGroupId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Group in monitoring to populate groupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecForProviderResourceGroupGroupIdSelector
@@ -266,7 +293,9 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderResourceGroupGroupId
     [JsonPropertyName("policy")]
     public V1beta1UptimeCheckConfigSpecForProviderResourceGroupGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The group resource associated with the configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecForProviderResourceGroup
@@ -287,7 +316,9 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderResourceGroup
     [JsonPropertyName("resourceType")]
     public string? ResourceType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitorCloudFunctionV2NameRefPolicy
@@ -300,7 +331,9 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitorClou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in cloudfunctions2 to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitorCloudFunctionV2NameRef
@@ -317,7 +350,9 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitorClou
     [JsonPropertyName("policy")]
     public V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitorCloudFunctionV2NameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitorCloudFunctionV2NameSelectorPolicy
@@ -330,7 +365,9 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitorClou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in cloudfunctions2 to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitorCloudFunctionV2NameSelector
@@ -351,7 +388,9 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitorClou
     [JsonPropertyName("policy")]
     public V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitorCloudFunctionV2NameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Target a Synthetic Monitor GCFv2 Instance Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitorCloudFunctionV2
@@ -368,7 +407,9 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitorClou
     [JsonPropertyName("nameSelector")]
     public V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitorCloudFunctionV2NameSelector? NameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Synthetic Monitor deployed to a Cloud Functions V2 instance. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitor
@@ -377,7 +418,9 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitor
     [JsonPropertyName("cloudFunctionV2")]
     public V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitorCloudFunctionV2? CloudFunctionV2 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contains information needed to add pings to a TCP check. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecForProviderTcpCheckPingConfig
@@ -386,7 +429,9 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderTcpCheckPingConfig
     [JsonPropertyName("pingsCount")]
     public double? PingsCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contains information needed to make a TCP check. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecForProviderTcpCheck
@@ -399,7 +444,9 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderTcpCheck
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecForProvider
@@ -460,7 +507,9 @@ public partial class V1beta1UptimeCheckConfigSpecForProvider
     [JsonPropertyName("userLabels")]
     public IDictionary<string, string>? UserLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information needed to perform a JSONPath content match. Used for ContentMatcherOption::MATCHES_JSON_PATH and ContentMatcherOption::NOT_MATCHES_JSON_PATH. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecInitProviderContentMatchersJsonPathMatcher
@@ -473,7 +522,9 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderContentMatchersJson
     [JsonPropertyName("jsonPath")]
     public string? JsonPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecInitProviderContentMatchers
@@ -490,7 +541,9 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderContentMatchers
     [JsonPropertyName("matcher")]
     public string? Matcher { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecInitProviderHttpCheckAcceptedResponseStatusCodes
@@ -503,7 +556,9 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderHttpCheckAcceptedRe
     [JsonPropertyName("statusValue")]
     public double? StatusValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A LocalSecretKeySelector is a reference to a secret key in the same namespace with the referencing object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecInitProviderHttpCheckAuthInfoPasswordSecretRef
@@ -516,7 +571,9 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderHttpCheckAuthInfoPa
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The authentication information using username and password. Optional when creating an HTTP check; defaults to empty. Do not use with other authentication fields. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecInitProviderHttpCheckAuthInfo
@@ -537,7 +594,9 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderHttpCheckAuthInfo
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contains information needed to add pings to an HTTP check. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecInitProviderHttpCheckPingConfig
@@ -546,7 +605,9 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderHttpCheckPingConfig
     [JsonPropertyName("pingsCount")]
     public double? PingsCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The authentication information using the Monitoring Service Agent. Optional when creating an HTTPS check; defaults to empty. Do not use with other authentication fields. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecInitProviderHttpCheckServiceAgentAuthentication
@@ -555,7 +616,9 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderHttpCheckServiceAge
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contains information needed to make an HTTP or HTTPS check. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecInitProviderHttpCheck
@@ -616,7 +679,9 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderHttpCheck
     [JsonPropertyName("validateSsl")]
     public bool? ValidateSsl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The [monitored resource] (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecInitProviderMonitoredResource
@@ -629,7 +694,9 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderMonitoredResource
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecInitProviderResourceGroupGroupIdRefPolicy
@@ -642,7 +709,9 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderResourceGroupGroupI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Group in monitoring to populate groupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecInitProviderResourceGroupGroupIdRef
@@ -659,7 +728,9 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderResourceGroupGroupI
     [JsonPropertyName("policy")]
     public V1beta1UptimeCheckConfigSpecInitProviderResourceGroupGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecInitProviderResourceGroupGroupIdSelectorPolicy
@@ -672,7 +743,9 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderResourceGroupGroupI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Group in monitoring to populate groupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecInitProviderResourceGroupGroupIdSelector
@@ -693,7 +766,9 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderResourceGroupGroupI
     [JsonPropertyName("policy")]
     public V1beta1UptimeCheckConfigSpecInitProviderResourceGroupGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The group resource associated with the configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecInitProviderResourceGroup
@@ -714,7 +789,9 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderResourceGroup
     [JsonPropertyName("resourceType")]
     public string? ResourceType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitorCloudFunctionV2NameRefPolicy
@@ -727,7 +804,9 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitorClo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in cloudfunctions2 to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitorCloudFunctionV2NameRef
@@ -744,7 +823,9 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitorClo
     [JsonPropertyName("policy")]
     public V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitorCloudFunctionV2NameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitorCloudFunctionV2NameSelectorPolicy
@@ -757,7 +838,9 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitorClo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in cloudfunctions2 to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitorCloudFunctionV2NameSelector
@@ -778,7 +861,9 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitorClo
     [JsonPropertyName("policy")]
     public V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitorCloudFunctionV2NameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Target a Synthetic Monitor GCFv2 Instance Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitorCloudFunctionV2
@@ -795,7 +880,9 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitorClo
     [JsonPropertyName("nameSelector")]
     public V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitorCloudFunctionV2NameSelector? NameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Synthetic Monitor deployed to a Cloud Functions V2 instance. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitor
@@ -804,7 +891,9 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitor
     [JsonPropertyName("cloudFunctionV2")]
     public V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitorCloudFunctionV2? CloudFunctionV2 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contains information needed to add pings to a TCP check. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecInitProviderTcpCheckPingConfig
@@ -813,7 +902,9 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderTcpCheckPingConfig
     [JsonPropertyName("pingsCount")]
     public double? PingsCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contains information needed to make a TCP check. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecInitProviderTcpCheck
@@ -826,7 +917,9 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderTcpCheck
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecInitProvider
@@ -887,7 +980,9 @@ public partial class V1beta1UptimeCheckConfigSpecInitProvider
     [JsonPropertyName("userLabels")]
     public IDictionary<string, string>? UserLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecProviderConfigRef
@@ -900,7 +995,9 @@ public partial class V1beta1UptimeCheckConfigSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecWriteConnectionSecretToRef
@@ -909,7 +1006,9 @@ public partial class V1beta1UptimeCheckConfigSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UptimeCheckConfigSpec defines the desired state of UptimeCheckConfig</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpec
@@ -934,7 +1033,9 @@ public partial class V1beta1UptimeCheckConfigSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1UptimeCheckConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information needed to perform a JSONPath content match. Used for ContentMatcherOption::MATCHES_JSON_PATH and ContentMatcherOption::NOT_MATCHES_JSON_PATH. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigStatusAtProviderContentMatchersJsonPathMatcher
@@ -947,7 +1048,9 @@ public partial class V1beta1UptimeCheckConfigStatusAtProviderContentMatchersJson
     [JsonPropertyName("jsonPath")]
     public string? JsonPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigStatusAtProviderContentMatchers
@@ -964,7 +1067,9 @@ public partial class V1beta1UptimeCheckConfigStatusAtProviderContentMatchers
     [JsonPropertyName("matcher")]
     public string? Matcher { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigStatusAtProviderHttpCheckAcceptedResponseStatusCodes
@@ -977,7 +1082,9 @@ public partial class V1beta1UptimeCheckConfigStatusAtProviderHttpCheckAcceptedRe
     [JsonPropertyName("statusValue")]
     public double? StatusValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The authentication information using username and password. Optional when creating an HTTP check; defaults to empty. Do not use with other authentication fields. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigStatusAtProviderHttpCheckAuthInfo
@@ -994,7 +1101,9 @@ public partial class V1beta1UptimeCheckConfigStatusAtProviderHttpCheckAuthInfo
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contains information needed to add pings to an HTTP check. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigStatusAtProviderHttpCheckPingConfig
@@ -1003,7 +1112,9 @@ public partial class V1beta1UptimeCheckConfigStatusAtProviderHttpCheckPingConfig
     [JsonPropertyName("pingsCount")]
     public double? PingsCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The authentication information using the Monitoring Service Agent. Optional when creating an HTTPS check; defaults to empty. Do not use with other authentication fields. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigStatusAtProviderHttpCheckServiceAgentAuthentication
@@ -1012,7 +1123,9 @@ public partial class V1beta1UptimeCheckConfigStatusAtProviderHttpCheckServiceAge
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contains information needed to make an HTTP or HTTPS check. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigStatusAtProviderHttpCheck
@@ -1073,7 +1186,9 @@ public partial class V1beta1UptimeCheckConfigStatusAtProviderHttpCheck
     [JsonPropertyName("validateSsl")]
     public bool? ValidateSsl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The [monitored resource] (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigStatusAtProviderMonitoredResource
@@ -1086,7 +1201,9 @@ public partial class V1beta1UptimeCheckConfigStatusAtProviderMonitoredResource
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The group resource associated with the configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigStatusAtProviderResourceGroup
@@ -1099,7 +1216,9 @@ public partial class V1beta1UptimeCheckConfigStatusAtProviderResourceGroup
     [JsonPropertyName("resourceType")]
     public string? ResourceType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Target a Synthetic Monitor GCFv2 Instance Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigStatusAtProviderSyntheticMonitorCloudFunctionV2
@@ -1108,7 +1227,9 @@ public partial class V1beta1UptimeCheckConfigStatusAtProviderSyntheticMonitorClo
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Synthetic Monitor deployed to a Cloud Functions V2 instance. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigStatusAtProviderSyntheticMonitor
@@ -1117,7 +1238,9 @@ public partial class V1beta1UptimeCheckConfigStatusAtProviderSyntheticMonitor
     [JsonPropertyName("cloudFunctionV2")]
     public V1beta1UptimeCheckConfigStatusAtProviderSyntheticMonitorCloudFunctionV2? CloudFunctionV2 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contains information needed to add pings to a TCP check. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigStatusAtProviderTcpCheckPingConfig
@@ -1126,7 +1249,9 @@ public partial class V1beta1UptimeCheckConfigStatusAtProviderTcpCheckPingConfig
     [JsonPropertyName("pingsCount")]
     public double? PingsCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contains information needed to make a TCP check. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigStatusAtProviderTcpCheck
@@ -1139,7 +1264,9 @@ public partial class V1beta1UptimeCheckConfigStatusAtProviderTcpCheck
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigStatusAtProvider
@@ -1212,7 +1339,9 @@ public partial class V1beta1UptimeCheckConfigStatusAtProvider
     [JsonPropertyName("userLabels")]
     public IDictionary<string, string>? UserLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigStatusConditions
@@ -1241,7 +1370,9 @@ public partial class V1beta1UptimeCheckConfigStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UptimeCheckConfigStatus defines the observed state of UptimeCheckConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigStatus
@@ -1258,7 +1389,9 @@ public partial class V1beta1UptimeCheckConfigStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UptimeCheckConfig is the Schema for the UptimeCheckConfigs API. This message configures which resources and services to monitor for availability.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1288,3 +1421,4 @@ public partial class V1beta1UptimeCheckConfig : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1UptimeCheckConfigStatus? Status { get; set; }
 }
+#nullable disable

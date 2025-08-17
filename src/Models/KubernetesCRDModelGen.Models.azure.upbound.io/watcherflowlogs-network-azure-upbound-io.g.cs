@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+#nullable enable
 /// <summary>WatcherFlowLog is the Schema for the WatcherFlowLogs API. Manages a Network Watcher Flow Log.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1WatcherFlowLogList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1WatcherFlowLog> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderNetworkSecurityGroupIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1WatcherFlowLogSpecForProviderNetworkSecurityGroupIdR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SecurityGroup in network to populate networkSecurityGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderNetworkSecurityGroupIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1WatcherFlowLogSpecForProviderNetworkSecurityGroupIdR
     [JsonPropertyName("policy")]
     public V1beta1WatcherFlowLogSpecForProviderNetworkSecurityGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderNetworkSecurityGroupIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1WatcherFlowLogSpecForProviderNetworkSecurityGroupIdS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SecurityGroup in network to populate networkSecurityGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderNetworkSecurityGroupIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1WatcherFlowLogSpecForProviderNetworkSecurityGroupIdS
     [JsonPropertyName("policy")]
     public V1beta1WatcherFlowLogSpecForProviderNetworkSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderNetworkWatcherNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1WatcherFlowLogSpecForProviderNetworkWatcherNameRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Watcher in network to populate networkWatcherName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderNetworkWatcherNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1WatcherFlowLogSpecForProviderNetworkWatcherNameRef
     [JsonPropertyName("policy")]
     public V1beta1WatcherFlowLogSpecForProviderNetworkWatcherNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderNetworkWatcherNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1WatcherFlowLogSpecForProviderNetworkWatcherNameSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Watcher in network to populate networkWatcherName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderNetworkWatcherNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1WatcherFlowLogSpecForProviderNetworkWatcherNameSelec
     [JsonPropertyName("policy")]
     public V1beta1WatcherFlowLogSpecForProviderNetworkWatcherNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderResourceGroupNameRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1WatcherFlowLogSpecForProviderResourceGroupNameRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderResourceGroupNameRef
@@ -171,7 +192,9 @@ public partial class V1beta1WatcherFlowLogSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1WatcherFlowLogSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderResourceGroupNameSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1WatcherFlowLogSpecForProviderResourceGroupNameSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderResourceGroupNameSelector
@@ -201,7 +226,9 @@ public partial class V1beta1WatcherFlowLogSpecForProviderResourceGroupNameSelect
     [JsonPropertyName("policy")]
     public V1beta1WatcherFlowLogSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderRetentionPolicy
@@ -214,7 +241,9 @@ public partial class V1beta1WatcherFlowLogSpecForProviderRetentionPolicy
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderStorageAccountIdRefPolicy
@@ -227,7 +256,9 @@ public partial class V1beta1WatcherFlowLogSpecForProviderStorageAccountIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderStorageAccountIdRef
@@ -240,7 +271,9 @@ public partial class V1beta1WatcherFlowLogSpecForProviderStorageAccountIdRef
     [JsonPropertyName("policy")]
     public V1beta1WatcherFlowLogSpecForProviderStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderStorageAccountIdSelectorPolicy
@@ -253,7 +286,9 @@ public partial class V1beta1WatcherFlowLogSpecForProviderStorageAccountIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderStorageAccountIdSelector
@@ -270,7 +305,9 @@ public partial class V1beta1WatcherFlowLogSpecForProviderStorageAccountIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1WatcherFlowLogSpecForProviderStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderTargetResourceIdRefPolicy
@@ -283,7 +320,9 @@ public partial class V1beta1WatcherFlowLogSpecForProviderTargetResourceIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SecurityGroup in network to populate targetResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderTargetResourceIdRef
@@ -296,7 +335,9 @@ public partial class V1beta1WatcherFlowLogSpecForProviderTargetResourceIdRef
     [JsonPropertyName("policy")]
     public V1beta1WatcherFlowLogSpecForProviderTargetResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderTargetResourceIdSelectorPolicy
@@ -309,7 +350,9 @@ public partial class V1beta1WatcherFlowLogSpecForProviderTargetResourceIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SecurityGroup in network to populate targetResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderTargetResourceIdSelector
@@ -326,7 +369,9 @@ public partial class V1beta1WatcherFlowLogSpecForProviderTargetResourceIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1WatcherFlowLogSpecForProviderTargetResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceIdRefPolicy
@@ -339,7 +384,9 @@ public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in operationalinsights to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceIdRef
@@ -352,7 +399,9 @@ public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspa
     [JsonPropertyName("policy")]
     public V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceIdSelectorPolicy
@@ -365,7 +414,9 @@ public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in operationalinsights to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceIdSelector
@@ -382,7 +433,9 @@ public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspa
     [JsonPropertyName("policy")]
     public V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceResourceIdRefPolicy
@@ -395,7 +448,9 @@ public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in operationalinsights to populate workspaceResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceResourceIdRef
@@ -408,7 +463,9 @@ public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspa
     [JsonPropertyName("policy")]
     public V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceResourceIdSelectorPolicy
@@ -421,7 +478,9 @@ public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in operationalinsights to populate workspaceResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceResourceIdSelector
@@ -438,7 +497,9 @@ public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspa
     [JsonPropertyName("policy")]
     public V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalytics
@@ -479,7 +540,9 @@ public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalytics
     [JsonPropertyName("workspaceResourceIdSelector")]
     public V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceResourceIdSelector? WorkspaceResourceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProvider
@@ -568,7 +631,9 @@ public partial class V1beta1WatcherFlowLogSpecForProvider
     [JsonPropertyName("version")]
     public double? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecInitProviderNetworkSecurityGroupIdRefPolicy
@@ -581,7 +646,9 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderNetworkSecurityGroupId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SecurityGroup in network to populate networkSecurityGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecInitProviderNetworkSecurityGroupIdRef
@@ -594,7 +661,9 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderNetworkSecurityGroupId
     [JsonPropertyName("policy")]
     public V1beta1WatcherFlowLogSpecInitProviderNetworkSecurityGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecInitProviderNetworkSecurityGroupIdSelectorPolicy
@@ -607,7 +676,9 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderNetworkSecurityGroupId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SecurityGroup in network to populate networkSecurityGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecInitProviderNetworkSecurityGroupIdSelector
@@ -624,7 +695,9 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderNetworkSecurityGroupId
     [JsonPropertyName("policy")]
     public V1beta1WatcherFlowLogSpecInitProviderNetworkSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecInitProviderRetentionPolicy
@@ -637,7 +710,9 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderRetentionPolicy
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecInitProviderStorageAccountIdRefPolicy
@@ -650,7 +725,9 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderStorageAccountIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecInitProviderStorageAccountIdRef
@@ -663,7 +740,9 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderStorageAccountIdRef
     [JsonPropertyName("policy")]
     public V1beta1WatcherFlowLogSpecInitProviderStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecInitProviderStorageAccountIdSelectorPolicy
@@ -676,7 +755,9 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderStorageAccountIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecInitProviderStorageAccountIdSelector
@@ -693,7 +774,9 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderStorageAccountIdSelect
     [JsonPropertyName("policy")]
     public V1beta1WatcherFlowLogSpecInitProviderStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecInitProviderTargetResourceIdRefPolicy
@@ -706,7 +789,9 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderTargetResourceIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SecurityGroup in network to populate targetResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecInitProviderTargetResourceIdRef
@@ -719,7 +804,9 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderTargetResourceIdRef
     [JsonPropertyName("policy")]
     public V1beta1WatcherFlowLogSpecInitProviderTargetResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecInitProviderTargetResourceIdSelectorPolicy
@@ -732,7 +819,9 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderTargetResourceIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SecurityGroup in network to populate targetResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecInitProviderTargetResourceIdSelector
@@ -749,7 +838,9 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderTargetResourceIdSelect
     [JsonPropertyName("policy")]
     public V1beta1WatcherFlowLogSpecInitProviderTargetResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceIdRefPolicy
@@ -762,7 +853,9 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorksp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in operationalinsights to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceIdRef
@@ -775,7 +868,9 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorksp
     [JsonPropertyName("policy")]
     public V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceIdSelectorPolicy
@@ -788,7 +883,9 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorksp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in operationalinsights to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceIdSelector
@@ -805,7 +902,9 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorksp
     [JsonPropertyName("policy")]
     public V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceResourceIdRefPolicy
@@ -818,7 +917,9 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorksp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in operationalinsights to populate workspaceResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceResourceIdRef
@@ -831,7 +932,9 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorksp
     [JsonPropertyName("policy")]
     public V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceResourceIdSelectorPolicy
@@ -844,7 +947,9 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorksp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in operationalinsights to populate workspaceResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceResourceIdSelector
@@ -861,7 +966,9 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorksp
     [JsonPropertyName("policy")]
     public V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalytics
@@ -902,7 +1009,9 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalytics
     [JsonPropertyName("workspaceResourceIdSelector")]
     public V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceResourceIdSelector? WorkspaceResourceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecInitProvider
@@ -967,7 +1076,9 @@ public partial class V1beta1WatcherFlowLogSpecInitProvider
     [JsonPropertyName("version")]
     public double? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecProviderConfigRefPolicy
@@ -980,7 +1091,9 @@ public partial class V1beta1WatcherFlowLogSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecProviderConfigRef
@@ -993,7 +1106,9 @@ public partial class V1beta1WatcherFlowLogSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1WatcherFlowLogSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecWriteConnectionSecretToRef
@@ -1006,7 +1121,9 @@ public partial class V1beta1WatcherFlowLogSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WatcherFlowLogSpec defines the desired state of WatcherFlowLog</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpec
@@ -1035,7 +1152,9 @@ public partial class V1beta1WatcherFlowLogSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1WatcherFlowLogSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogStatusAtProviderRetentionPolicy
@@ -1048,7 +1167,9 @@ public partial class V1beta1WatcherFlowLogStatusAtProviderRetentionPolicy
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogStatusAtProviderTrafficAnalytics
@@ -1073,7 +1194,9 @@ public partial class V1beta1WatcherFlowLogStatusAtProviderTrafficAnalytics
     [JsonPropertyName("workspaceResourceId")]
     public string? WorkspaceResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogStatusAtProvider
@@ -1126,7 +1249,9 @@ public partial class V1beta1WatcherFlowLogStatusAtProvider
     [JsonPropertyName("version")]
     public double? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogStatusConditions
@@ -1155,7 +1280,9 @@ public partial class V1beta1WatcherFlowLogStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WatcherFlowLogStatus defines the observed state of WatcherFlowLog.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogStatus
@@ -1172,7 +1299,9 @@ public partial class V1beta1WatcherFlowLogStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WatcherFlowLog is the Schema for the WatcherFlowLogs API. Manages a Network Watcher Flow Log.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1202,3 +1331,4 @@ public partial class V1beta1WatcherFlowLog : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1WatcherFlowLogStatus? Status { get; set; }
 }
+#nullable disable

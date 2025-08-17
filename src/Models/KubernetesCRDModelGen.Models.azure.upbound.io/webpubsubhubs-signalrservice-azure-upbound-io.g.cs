@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.signalrservice.azure.upbound.io;
+#nullable enable
 /// <summary>WebPubsubHub is the Schema for the WebPubsubHubs API. Manages the hub settings for a Web Pubsub service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1WebPubsubHubList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1WebPubsubHub> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecForProviderEventHandlerAuthManagedIdentityIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1WebPubsubHubSpecForProviderEventHandlerAuthManagedId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UserAssignedIdentity in managedidentity to populate managedIdentityId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecForProviderEventHandlerAuthManagedIdentityIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1WebPubsubHubSpecForProviderEventHandlerAuthManagedId
     [JsonPropertyName("policy")]
     public V1beta1WebPubsubHubSpecForProviderEventHandlerAuthManagedIdentityIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecForProviderEventHandlerAuthManagedIdentityIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1WebPubsubHubSpecForProviderEventHandlerAuthManagedId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UserAssignedIdentity in managedidentity to populate managedIdentityId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecForProviderEventHandlerAuthManagedIdentityIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1WebPubsubHubSpecForProviderEventHandlerAuthManagedId
     [JsonPropertyName("policy")]
     public V1beta1WebPubsubHubSpecForProviderEventHandlerAuthManagedIdentityIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecForProviderEventHandlerAuth
@@ -106,7 +117,9 @@ public partial class V1beta1WebPubsubHubSpecForProviderEventHandlerAuth
     [JsonPropertyName("managedIdentityIdSelector")]
     public V1beta1WebPubsubHubSpecForProviderEventHandlerAuthManagedIdentityIdSelector? ManagedIdentityIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecForProviderEventHandler
@@ -127,7 +140,9 @@ public partial class V1beta1WebPubsubHubSpecForProviderEventHandler
     [JsonPropertyName("userEventPattern")]
     public string? UserEventPattern { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecForProviderEventListenerEventhubNameRefPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1WebPubsubHubSpecForProviderEventListenerEventhubName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EventHub in eventhub to populate eventhubName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecForProviderEventListenerEventhubNameRef
@@ -153,7 +170,9 @@ public partial class V1beta1WebPubsubHubSpecForProviderEventListenerEventhubName
     [JsonPropertyName("policy")]
     public V1beta1WebPubsubHubSpecForProviderEventListenerEventhubNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecForProviderEventListenerEventhubNameSelectorPolicy
@@ -166,7 +185,9 @@ public partial class V1beta1WebPubsubHubSpecForProviderEventListenerEventhubName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EventHub in eventhub to populate eventhubName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecForProviderEventListenerEventhubNameSelector
@@ -183,7 +204,9 @@ public partial class V1beta1WebPubsubHubSpecForProviderEventListenerEventhubName
     [JsonPropertyName("policy")]
     public V1beta1WebPubsubHubSpecForProviderEventListenerEventhubNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecForProviderEventListenerEventhubNamespaceNameRefPolicy
@@ -196,7 +219,9 @@ public partial class V1beta1WebPubsubHubSpecForProviderEventListenerEventhubName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EventHubNamespace in eventhub to populate eventhubNamespaceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecForProviderEventListenerEventhubNamespaceNameRef
@@ -209,7 +234,9 @@ public partial class V1beta1WebPubsubHubSpecForProviderEventListenerEventhubName
     [JsonPropertyName("policy")]
     public V1beta1WebPubsubHubSpecForProviderEventListenerEventhubNamespaceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecForProviderEventListenerEventhubNamespaceNameSelectorPolicy
@@ -222,7 +249,9 @@ public partial class V1beta1WebPubsubHubSpecForProviderEventListenerEventhubName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EventHubNamespace in eventhub to populate eventhubNamespaceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecForProviderEventListenerEventhubNamespaceNameSelector
@@ -239,7 +268,9 @@ public partial class V1beta1WebPubsubHubSpecForProviderEventListenerEventhubName
     [JsonPropertyName("policy")]
     public V1beta1WebPubsubHubSpecForProviderEventListenerEventhubNamespaceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecForProviderEventListener
@@ -276,7 +307,9 @@ public partial class V1beta1WebPubsubHubSpecForProviderEventListener
     [JsonPropertyName("userEventNameFilter")]
     public IList<string>? UserEventNameFilter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecForProviderWebPubsubIdRefPolicy
@@ -289,7 +322,9 @@ public partial class V1beta1WebPubsubHubSpecForProviderWebPubsubIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a WebPubsub in signalrservice to populate webPubsubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecForProviderWebPubsubIdRef
@@ -302,7 +337,9 @@ public partial class V1beta1WebPubsubHubSpecForProviderWebPubsubIdRef
     [JsonPropertyName("policy")]
     public V1beta1WebPubsubHubSpecForProviderWebPubsubIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecForProviderWebPubsubIdSelectorPolicy
@@ -315,7 +352,9 @@ public partial class V1beta1WebPubsubHubSpecForProviderWebPubsubIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a WebPubsub in signalrservice to populate webPubsubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecForProviderWebPubsubIdSelector
@@ -332,7 +371,9 @@ public partial class V1beta1WebPubsubHubSpecForProviderWebPubsubIdSelector
     [JsonPropertyName("policy")]
     public V1beta1WebPubsubHubSpecForProviderWebPubsubIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecForProvider
@@ -365,7 +406,9 @@ public partial class V1beta1WebPubsubHubSpecForProvider
     [JsonPropertyName("webPubsubIdSelector")]
     public V1beta1WebPubsubHubSpecForProviderWebPubsubIdSelector? WebPubsubIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecInitProviderEventHandlerAuthManagedIdentityIdRefPolicy
@@ -378,7 +421,9 @@ public partial class V1beta1WebPubsubHubSpecInitProviderEventHandlerAuthManagedI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UserAssignedIdentity in managedidentity to populate managedIdentityId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecInitProviderEventHandlerAuthManagedIdentityIdRef
@@ -391,7 +436,9 @@ public partial class V1beta1WebPubsubHubSpecInitProviderEventHandlerAuthManagedI
     [JsonPropertyName("policy")]
     public V1beta1WebPubsubHubSpecInitProviderEventHandlerAuthManagedIdentityIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecInitProviderEventHandlerAuthManagedIdentityIdSelectorPolicy
@@ -404,7 +451,9 @@ public partial class V1beta1WebPubsubHubSpecInitProviderEventHandlerAuthManagedI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UserAssignedIdentity in managedidentity to populate managedIdentityId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecInitProviderEventHandlerAuthManagedIdentityIdSelector
@@ -421,7 +470,9 @@ public partial class V1beta1WebPubsubHubSpecInitProviderEventHandlerAuthManagedI
     [JsonPropertyName("policy")]
     public V1beta1WebPubsubHubSpecInitProviderEventHandlerAuthManagedIdentityIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecInitProviderEventHandlerAuth
@@ -438,7 +489,9 @@ public partial class V1beta1WebPubsubHubSpecInitProviderEventHandlerAuth
     [JsonPropertyName("managedIdentityIdSelector")]
     public V1beta1WebPubsubHubSpecInitProviderEventHandlerAuthManagedIdentityIdSelector? ManagedIdentityIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecInitProviderEventHandler
@@ -459,7 +512,9 @@ public partial class V1beta1WebPubsubHubSpecInitProviderEventHandler
     [JsonPropertyName("userEventPattern")]
     public string? UserEventPattern { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNameRefPolicy
@@ -472,7 +527,9 @@ public partial class V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EventHub in eventhub to populate eventhubName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNameRef
@@ -485,7 +542,9 @@ public partial class V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNam
     [JsonPropertyName("policy")]
     public V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNameSelectorPolicy
@@ -498,7 +557,9 @@ public partial class V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EventHub in eventhub to populate eventhubName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNameSelector
@@ -515,7 +576,9 @@ public partial class V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNam
     [JsonPropertyName("policy")]
     public V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNamespaceNameRefPolicy
@@ -528,7 +591,9 @@ public partial class V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EventHubNamespace in eventhub to populate eventhubNamespaceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNamespaceNameRef
@@ -541,7 +606,9 @@ public partial class V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNam
     [JsonPropertyName("policy")]
     public V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNamespaceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNamespaceNameSelectorPolicy
@@ -554,7 +621,9 @@ public partial class V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EventHubNamespace in eventhub to populate eventhubNamespaceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNamespaceNameSelector
@@ -571,7 +640,9 @@ public partial class V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNam
     [JsonPropertyName("policy")]
     public V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNamespaceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecInitProviderEventListener
@@ -608,7 +679,9 @@ public partial class V1beta1WebPubsubHubSpecInitProviderEventListener
     [JsonPropertyName("userEventNameFilter")]
     public IList<string>? UserEventNameFilter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecInitProviderWebPubsubIdRefPolicy
@@ -621,7 +694,9 @@ public partial class V1beta1WebPubsubHubSpecInitProviderWebPubsubIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a WebPubsub in signalrservice to populate webPubsubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecInitProviderWebPubsubIdRef
@@ -634,7 +709,9 @@ public partial class V1beta1WebPubsubHubSpecInitProviderWebPubsubIdRef
     [JsonPropertyName("policy")]
     public V1beta1WebPubsubHubSpecInitProviderWebPubsubIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecInitProviderWebPubsubIdSelectorPolicy
@@ -647,7 +724,9 @@ public partial class V1beta1WebPubsubHubSpecInitProviderWebPubsubIdSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a WebPubsub in signalrservice to populate webPubsubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecInitProviderWebPubsubIdSelector
@@ -664,7 +743,9 @@ public partial class V1beta1WebPubsubHubSpecInitProviderWebPubsubIdSelector
     [JsonPropertyName("policy")]
     public V1beta1WebPubsubHubSpecInitProviderWebPubsubIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecInitProvider
@@ -697,7 +778,9 @@ public partial class V1beta1WebPubsubHubSpecInitProvider
     [JsonPropertyName("webPubsubIdSelector")]
     public V1beta1WebPubsubHubSpecInitProviderWebPubsubIdSelector? WebPubsubIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecProviderConfigRefPolicy
@@ -710,7 +793,9 @@ public partial class V1beta1WebPubsubHubSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecProviderConfigRef
@@ -723,7 +808,9 @@ public partial class V1beta1WebPubsubHubSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1WebPubsubHubSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpecWriteConnectionSecretToRef
@@ -736,7 +823,9 @@ public partial class V1beta1WebPubsubHubSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WebPubsubHubSpec defines the desired state of WebPubsubHub</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubSpec
@@ -765,7 +854,9 @@ public partial class V1beta1WebPubsubHubSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1WebPubsubHubSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubStatusAtProviderEventHandlerAuth
@@ -774,7 +865,9 @@ public partial class V1beta1WebPubsubHubStatusAtProviderEventHandlerAuth
     [JsonPropertyName("managedIdentityId")]
     public string? ManagedIdentityId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubStatusAtProviderEventHandler
@@ -795,7 +888,9 @@ public partial class V1beta1WebPubsubHubStatusAtProviderEventHandler
     [JsonPropertyName("userEventPattern")]
     public string? UserEventPattern { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubStatusAtProviderEventListener
@@ -816,7 +911,9 @@ public partial class V1beta1WebPubsubHubStatusAtProviderEventListener
     [JsonPropertyName("userEventNameFilter")]
     public IList<string>? UserEventNameFilter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubStatusAtProvider
@@ -845,7 +942,9 @@ public partial class V1beta1WebPubsubHubStatusAtProvider
     [JsonPropertyName("webPubsubId")]
     public string? WebPubsubId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubStatusConditions
@@ -874,7 +973,9 @@ public partial class V1beta1WebPubsubHubStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WebPubsubHubStatus defines the observed state of WebPubsubHub.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebPubsubHubStatus
@@ -891,7 +992,9 @@ public partial class V1beta1WebPubsubHubStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WebPubsubHub is the Schema for the WebPubsubHubs API. Manages the hub settings for a Web Pubsub service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -921,3 +1024,4 @@ public partial class V1beta1WebPubsubHub : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1WebPubsubHubStatus? Status { get; set; }
 }
+#nullable disable

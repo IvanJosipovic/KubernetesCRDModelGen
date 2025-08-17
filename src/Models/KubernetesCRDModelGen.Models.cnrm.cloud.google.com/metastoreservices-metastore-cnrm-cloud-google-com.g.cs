@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.metastore.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>MetastoreService is the Schema for the MetastoreService API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1MetastoreServiceList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1alpha1MetastoreService> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The fully qualified customer provided Cloud KMS key name to use for customer data encryption</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreServiceSpecEncryptionConfigKmsKeyRef
@@ -50,7 +53,9 @@ public partial class V1alpha1MetastoreServiceSpecEncryptionConfigKmsKeyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Information used to configure the Dataproc Metastore service to encrypt customer data at rest. Cannot be updated.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreServiceSpecEncryptionConfig
@@ -59,7 +64,9 @@ public partial class V1alpha1MetastoreServiceSpecEncryptionConfig
     [JsonPropertyName("kmsKeyRef")]
     public V1alpha1MetastoreServiceSpecEncryptionConfigKmsKeyRef? KmsKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The relative resource name of a Secret Manager secret version</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreServiceSpecHiveMetastoreConfigKerberosConfigKeytabSecretRef
@@ -76,7 +83,9 @@ public partial class V1alpha1MetastoreServiceSpecHiveMetastoreConfigKerberosConf
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key Distribution Center (KDC).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreServiceSpecHiveMetastoreConfigKerberosConfigKeytab
@@ -85,7 +94,9 @@ public partial class V1alpha1MetastoreServiceSpecHiveMetastoreConfigKerberosConf
     [JsonPropertyName("secretRef")]
     public V1alpha1MetastoreServiceSpecHiveMetastoreConfigKerberosConfigKeytabSecretRef? SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information used to configure the Hive metastore service as a service principal in a Kerberos realm. To disable Kerberos, use the `UpdateService` method and specify this field's path (`hive_metastore_config.kerberos_config`) in the request's `update_mask` while omitting this field from the request's `service`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreServiceSpecHiveMetastoreConfigKerberosConfig
@@ -102,7 +113,9 @@ public partial class V1alpha1MetastoreServiceSpecHiveMetastoreConfigKerberosConf
     [JsonPropertyName("principal")]
     public string? Principal { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration information specific to running Hive metastore software as the metastore service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreServiceSpecHiveMetastoreConfig
@@ -123,7 +136,9 @@ public partial class V1alpha1MetastoreServiceSpecHiveMetastoreConfig
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The hour of day (0-23) when the window starts.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreServiceSpecMaintenanceWindowHourOfDay
@@ -132,7 +147,9 @@ public partial class V1alpha1MetastoreServiceSpecMaintenanceWindowHourOfDay
     [JsonPropertyName("value")]
     public int? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The one hour maintenance window of the metastore service. This specifies when the service can be restarted for maintenance purposes in UTC time. Maintenance window is not needed for services with the SPANNER database type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreServiceSpecMaintenanceWindow
@@ -145,7 +162,9 @@ public partial class V1alpha1MetastoreServiceSpecMaintenanceWindow
     [JsonPropertyName("hourOfDay")]
     public V1alpha1MetastoreServiceSpecMaintenanceWindowHourOfDay? HourOfDay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The subnetwork of the customer project from which an IP address is reserved and used as the Dataproc Metastore service's endpoint. It is accessible to hosts in the subnet and to all hosts in a subnet in the same region and same network. There must be at least one IP address available in the subnet's primary range.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreServiceSpecNetworkConfigConsumersSubnetworkRef
@@ -162,7 +181,9 @@ public partial class V1alpha1MetastoreServiceSpecNetworkConfigConsumersSubnetwor
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreServiceSpecNetworkConfigConsumers
@@ -171,7 +192,9 @@ public partial class V1alpha1MetastoreServiceSpecNetworkConfigConsumers
     [JsonPropertyName("subnetworkRef")]
     public V1alpha1MetastoreServiceSpecNetworkConfigConsumersSubnetworkRef? SubnetworkRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration specifying the network settings for the Dataproc Metastore service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreServiceSpecNetworkConfig
@@ -180,7 +203,9 @@ public partial class V1alpha1MetastoreServiceSpecNetworkConfig
     [JsonPropertyName("consumers")]
     public IList<V1alpha1MetastoreServiceSpecNetworkConfigConsumers>? Consumers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The relative resource name of the VPC network on which the instance can be accessed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreServiceSpecNetworkRef
@@ -197,7 +222,9 @@ public partial class V1alpha1MetastoreServiceSpecNetworkRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreServiceSpecProjectRef
@@ -218,7 +245,9 @@ public partial class V1alpha1MetastoreServiceSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Scaling configuration of the metastore service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreServiceSpecScalingConfig
@@ -231,7 +260,9 @@ public partial class V1alpha1MetastoreServiceSpecScalingConfig
     [JsonPropertyName("scalingFactor")]
     public double? ScalingFactor { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration specifying telemetry settings for the Dataproc Metastore service. If unspecified defaults to `JSON`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreServiceSpecTelemetryConfig
@@ -240,7 +271,9 @@ public partial class V1alpha1MetastoreServiceSpecTelemetryConfig
     [JsonPropertyName("logFormat")]
     public string? LogFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MetastoreServiceSpec defines the desired state of MetastoreService</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreServiceSpec
@@ -305,7 +338,9 @@ public partial class V1alpha1MetastoreServiceSpec
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreServiceStatusConditions
@@ -330,7 +365,9 @@ public partial class V1alpha1MetastoreServiceStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreServiceStatusObservedStateMetadataManagementActivityMetadataExports
@@ -355,7 +392,9 @@ public partial class V1alpha1MetastoreServiceStatusObservedStateMetadataManageme
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreServiceStatusObservedStateMetadataManagementActivityRestores
@@ -384,7 +423,9 @@ public partial class V1alpha1MetastoreServiceStatusObservedStateMetadataManageme
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. The metadata management activities of the metastore service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreServiceStatusObservedStateMetadataManagementActivity
@@ -397,7 +438,9 @@ public partial class V1alpha1MetastoreServiceStatusObservedStateMetadataManageme
     [JsonPropertyName("restores")]
     public IList<V1alpha1MetastoreServiceStatusObservedStateMetadataManagementActivityRestores>? Restores { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreServiceStatusObservedStateNetworkConfigConsumers
@@ -410,7 +453,9 @@ public partial class V1alpha1MetastoreServiceStatusObservedStateNetworkConfigCon
     [JsonPropertyName("endpointURI")]
     public string? EndpointURI { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration specifying the network settings for the Dataproc Metastore service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreServiceStatusObservedStateNetworkConfig
@@ -419,7 +464,9 @@ public partial class V1alpha1MetastoreServiceStatusObservedStateNetworkConfig
     [JsonPropertyName("consumers")]
     public IList<V1alpha1MetastoreServiceStatusObservedStateNetworkConfigConsumers>? Consumers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreServiceStatusObservedState
@@ -460,7 +507,9 @@ public partial class V1alpha1MetastoreServiceStatusObservedState
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MetastoreServiceStatus defines the config connector machine state of MetastoreService</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreServiceStatus
@@ -481,7 +530,9 @@ public partial class V1alpha1MetastoreServiceStatus
     [JsonPropertyName("observedState")]
     public V1alpha1MetastoreServiceStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MetastoreService is the Schema for the MetastoreService API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -511,3 +562,4 @@ public partial class V1alpha1MetastoreService : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1alpha1MetastoreServiceStatus? Status { get; set; }
 }
+#nullable disable

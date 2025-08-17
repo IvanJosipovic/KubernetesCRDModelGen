@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appstream.aws.m.upbound.io;
+#nullable enable
 /// <summary>Stack is the Schema for the Stacks API. Provides an AppStream stack</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1StackList : IKubernetesObject<V1ListMeta>, IItems<V1
     [JsonPropertyName("items")]
     public IList<V1beta1Stack> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSpecForProviderAccessEndpoints
@@ -46,7 +49,9 @@ public partial class V1beta1StackSpecForProviderAccessEndpoints
     [JsonPropertyName("vpceId")]
     public string? VpceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings for application settings persistence. See application_settings below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSpecForProviderApplicationSettings
@@ -59,7 +64,9 @@ public partial class V1beta1StackSpecForProviderApplicationSettings
     [JsonPropertyName("settingsGroup")]
     public string? SettingsGroup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSpecForProviderStorageConnectors
@@ -76,7 +83,9 @@ public partial class V1beta1StackSpecForProviderStorageConnectors
     [JsonPropertyName("resourceIdentifier")]
     public string? ResourceIdentifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The streaming protocol you want your stack to prefer. This can be UDP or TCP. Currently, UDP is only supported in the Windows native client. See streaming_experience_settings below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSpecForProviderStreamingExperienceSettings
@@ -85,7 +94,9 @@ public partial class V1beta1StackSpecForProviderStreamingExperienceSettings
     [JsonPropertyName("preferredProtocol")]
     public string? PreferredProtocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSpecForProviderUserSettings
@@ -98,7 +109,9 @@ public partial class V1beta1StackSpecForProviderUserSettings
     [JsonPropertyName("permission")]
     public string? Permission { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSpecForProvider
@@ -155,7 +168,9 @@ public partial class V1beta1StackSpecForProvider
     [JsonPropertyName("userSettings")]
     public IList<V1beta1StackSpecForProviderUserSettings>? UserSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSpecInitProviderAccessEndpoints
@@ -168,7 +183,9 @@ public partial class V1beta1StackSpecInitProviderAccessEndpoints
     [JsonPropertyName("vpceId")]
     public string? VpceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings for application settings persistence. See application_settings below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSpecInitProviderApplicationSettings
@@ -181,7 +198,9 @@ public partial class V1beta1StackSpecInitProviderApplicationSettings
     [JsonPropertyName("settingsGroup")]
     public string? SettingsGroup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSpecInitProviderStorageConnectors
@@ -198,7 +217,9 @@ public partial class V1beta1StackSpecInitProviderStorageConnectors
     [JsonPropertyName("resourceIdentifier")]
     public string? ResourceIdentifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The streaming protocol you want your stack to prefer. This can be UDP or TCP. Currently, UDP is only supported in the Windows native client. See streaming_experience_settings below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSpecInitProviderStreamingExperienceSettings
@@ -207,7 +228,9 @@ public partial class V1beta1StackSpecInitProviderStreamingExperienceSettings
     [JsonPropertyName("preferredProtocol")]
     public string? PreferredProtocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSpecInitProviderUserSettings
@@ -220,7 +243,9 @@ public partial class V1beta1StackSpecInitProviderUserSettings
     [JsonPropertyName("permission")]
     public string? Permission { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSpecInitProvider
@@ -273,7 +298,9 @@ public partial class V1beta1StackSpecInitProvider
     [JsonPropertyName("userSettings")]
     public IList<V1beta1StackSpecInitProviderUserSettings>? UserSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSpecProviderConfigRef
@@ -286,7 +313,9 @@ public partial class V1beta1StackSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSpecWriteConnectionSecretToRef
@@ -295,7 +324,9 @@ public partial class V1beta1StackSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StackSpec defines the desired state of Stack</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSpec
@@ -320,7 +351,9 @@ public partial class V1beta1StackSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1StackSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackStatusAtProviderAccessEndpoints
@@ -333,7 +366,9 @@ public partial class V1beta1StackStatusAtProviderAccessEndpoints
     [JsonPropertyName("vpceId")]
     public string? VpceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings for application settings persistence. See application_settings below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackStatusAtProviderApplicationSettings
@@ -346,7 +381,9 @@ public partial class V1beta1StackStatusAtProviderApplicationSettings
     [JsonPropertyName("settingsGroup")]
     public string? SettingsGroup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackStatusAtProviderStorageConnectors
@@ -363,7 +400,9 @@ public partial class V1beta1StackStatusAtProviderStorageConnectors
     [JsonPropertyName("resourceIdentifier")]
     public string? ResourceIdentifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The streaming protocol you want your stack to prefer. This can be UDP or TCP. Currently, UDP is only supported in the Windows native client. See streaming_experience_settings below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackStatusAtProviderStreamingExperienceSettings
@@ -372,7 +411,9 @@ public partial class V1beta1StackStatusAtProviderStreamingExperienceSettings
     [JsonPropertyName("preferredProtocol")]
     public string? PreferredProtocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackStatusAtProviderUserSettings
@@ -385,7 +426,9 @@ public partial class V1beta1StackStatusAtProviderUserSettings
     [JsonPropertyName("permission")]
     public string? Permission { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackStatusAtProvider
@@ -458,7 +501,9 @@ public partial class V1beta1StackStatusAtProvider
     [JsonPropertyName("userSettings")]
     public IList<V1beta1StackStatusAtProviderUserSettings>? UserSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackStatusConditions
@@ -487,7 +532,9 @@ public partial class V1beta1StackStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StackStatus defines the observed state of Stack.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackStatus
@@ -504,7 +551,9 @@ public partial class V1beta1StackStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Stack is the Schema for the Stacks API. Provides an AppStream stack</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -534,3 +583,4 @@ public partial class V1beta1Stack : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     [JsonPropertyName("status")]
     public V1beta1StackStatus? Status { get; set; }
 }
+#nullable disable

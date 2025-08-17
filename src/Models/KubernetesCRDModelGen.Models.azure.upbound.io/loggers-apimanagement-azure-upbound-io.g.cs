@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.upbound.io;
+#nullable enable
 /// <summary>Logger is the Schema for the Loggers API. Manages a Logger within an API Management Service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LoggerList : IKubernetesObject<V1ListMeta>, IItems<V
     [JsonPropertyName("items")]
     public IList<V1beta1Logger> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecForProviderApiManagementNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1LoggerSpecForProviderApiManagementNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Management in apimanagement to populate apiManagementName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecForProviderApiManagementNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1LoggerSpecForProviderApiManagementNameRef
     [JsonPropertyName("policy")]
     public V1beta1LoggerSpecForProviderApiManagementNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecForProviderApiManagementNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1LoggerSpecForProviderApiManagementNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Management in apimanagement to populate apiManagementName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecForProviderApiManagementNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1LoggerSpecForProviderApiManagementNameSelector
     [JsonPropertyName("policy")]
     public V1beta1LoggerSpecForProviderApiManagementNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The connection string of Application Insights.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecForProviderApplicationInsightsConnectionStringSecretRef
@@ -106,7 +117,9 @@ public partial class V1beta1LoggerSpecForProviderApplicationInsightsConnectionSt
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The instrumentation key used to push data to Application Insights.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecForProviderApplicationInsightsInstrumentationKeySecretRef
@@ -123,7 +136,9 @@ public partial class V1beta1LoggerSpecForProviderApplicationInsightsInstrumentat
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecForProviderApplicationInsights
@@ -136,7 +151,9 @@ public partial class V1beta1LoggerSpecForProviderApplicationInsights
     [JsonPropertyName("instrumentationKeySecretRef")]
     public V1beta1LoggerSpecForProviderApplicationInsightsInstrumentationKeySecretRef? InstrumentationKeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The connection string of an EventHub Namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecForProviderEventhubConnectionStringSecretRef
@@ -153,7 +170,9 @@ public partial class V1beta1LoggerSpecForProviderEventhubConnectionStringSecretR
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecForProviderEventhub
@@ -174,7 +193,9 @@ public partial class V1beta1LoggerSpecForProviderEventhub
     [JsonPropertyName("userAssignedIdentityClientId")]
     public string? UserAssignedIdentityClientId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecForProviderResourceGroupNameRefPolicy
@@ -187,7 +208,9 @@ public partial class V1beta1LoggerSpecForProviderResourceGroupNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecForProviderResourceGroupNameRef
@@ -200,7 +223,9 @@ public partial class V1beta1LoggerSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1LoggerSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecForProviderResourceGroupNameSelectorPolicy
@@ -213,7 +238,9 @@ public partial class V1beta1LoggerSpecForProviderResourceGroupNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecForProviderResourceGroupNameSelector
@@ -230,7 +257,9 @@ public partial class V1beta1LoggerSpecForProviderResourceGroupNameSelector
     [JsonPropertyName("policy")]
     public V1beta1LoggerSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecForProviderResourceIdRefPolicy
@@ -243,7 +272,9 @@ public partial class V1beta1LoggerSpecForProviderResourceIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ApplicationInsights in insights to populate resourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecForProviderResourceIdRef
@@ -256,7 +287,9 @@ public partial class V1beta1LoggerSpecForProviderResourceIdRef
     [JsonPropertyName("policy")]
     public V1beta1LoggerSpecForProviderResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecForProviderResourceIdSelectorPolicy
@@ -269,7 +302,9 @@ public partial class V1beta1LoggerSpecForProviderResourceIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ApplicationInsights in insights to populate resourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecForProviderResourceIdSelector
@@ -286,7 +321,9 @@ public partial class V1beta1LoggerSpecForProviderResourceIdSelector
     [JsonPropertyName("policy")]
     public V1beta1LoggerSpecForProviderResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecForProvider
@@ -343,7 +380,9 @@ public partial class V1beta1LoggerSpecForProvider
     [JsonPropertyName("resourceIdSelector")]
     public V1beta1LoggerSpecForProviderResourceIdSelector? ResourceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The connection string of Application Insights.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecInitProviderApplicationInsightsConnectionStringSecretRef
@@ -360,7 +399,9 @@ public partial class V1beta1LoggerSpecInitProviderApplicationInsightsConnectionS
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The instrumentation key used to push data to Application Insights.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecInitProviderApplicationInsightsInstrumentationKeySecretRef
@@ -377,7 +418,9 @@ public partial class V1beta1LoggerSpecInitProviderApplicationInsightsInstrumenta
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecInitProviderApplicationInsights
@@ -390,7 +433,9 @@ public partial class V1beta1LoggerSpecInitProviderApplicationInsights
     [JsonPropertyName("instrumentationKeySecretRef")]
     public V1beta1LoggerSpecInitProviderApplicationInsightsInstrumentationKeySecretRef? InstrumentationKeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The connection string of an EventHub Namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecInitProviderEventhubConnectionStringSecretRef
@@ -407,7 +452,9 @@ public partial class V1beta1LoggerSpecInitProviderEventhubConnectionStringSecret
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecInitProviderEventhub
@@ -428,7 +475,9 @@ public partial class V1beta1LoggerSpecInitProviderEventhub
     [JsonPropertyName("userAssignedIdentityClientId")]
     public string? UserAssignedIdentityClientId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecInitProviderResourceIdRefPolicy
@@ -441,7 +490,9 @@ public partial class V1beta1LoggerSpecInitProviderResourceIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ApplicationInsights in insights to populate resourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecInitProviderResourceIdRef
@@ -454,7 +505,9 @@ public partial class V1beta1LoggerSpecInitProviderResourceIdRef
     [JsonPropertyName("policy")]
     public V1beta1LoggerSpecInitProviderResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecInitProviderResourceIdSelectorPolicy
@@ -467,7 +520,9 @@ public partial class V1beta1LoggerSpecInitProviderResourceIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ApplicationInsights in insights to populate resourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecInitProviderResourceIdSelector
@@ -484,7 +539,9 @@ public partial class V1beta1LoggerSpecInitProviderResourceIdSelector
     [JsonPropertyName("policy")]
     public V1beta1LoggerSpecInitProviderResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecInitProvider
@@ -517,7 +574,9 @@ public partial class V1beta1LoggerSpecInitProvider
     [JsonPropertyName("resourceIdSelector")]
     public V1beta1LoggerSpecInitProviderResourceIdSelector? ResourceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecProviderConfigRefPolicy
@@ -530,7 +589,9 @@ public partial class V1beta1LoggerSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecProviderConfigRef
@@ -543,7 +604,9 @@ public partial class V1beta1LoggerSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1LoggerSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecWriteConnectionSecretToRef
@@ -556,7 +619,9 @@ public partial class V1beta1LoggerSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LoggerSpec defines the desired state of Logger</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpec
@@ -585,7 +650,9 @@ public partial class V1beta1LoggerSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LoggerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The connection string of Application Insights.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerStatusAtProviderApplicationInsightsConnectionStringSecretRef
@@ -602,7 +669,9 @@ public partial class V1beta1LoggerStatusAtProviderApplicationInsightsConnectionS
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The instrumentation key used to push data to Application Insights.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerStatusAtProviderApplicationInsightsInstrumentationKeySecretRef
@@ -619,7 +688,9 @@ public partial class V1beta1LoggerStatusAtProviderApplicationInsightsInstrumenta
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerStatusAtProviderApplicationInsights
@@ -632,7 +703,9 @@ public partial class V1beta1LoggerStatusAtProviderApplicationInsights
     [JsonPropertyName("instrumentationKeySecretRef")]
     public V1beta1LoggerStatusAtProviderApplicationInsightsInstrumentationKeySecretRef? InstrumentationKeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerStatusAtProviderEventhub
@@ -649,7 +722,9 @@ public partial class V1beta1LoggerStatusAtProviderEventhub
     [JsonPropertyName("userAssignedIdentityClientId")]
     public string? UserAssignedIdentityClientId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerStatusAtProvider
@@ -686,7 +761,9 @@ public partial class V1beta1LoggerStatusAtProvider
     [JsonPropertyName("resourceId")]
     public string? ResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerStatusConditions
@@ -715,7 +792,9 @@ public partial class V1beta1LoggerStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LoggerStatus defines the observed state of Logger.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerStatus
@@ -732,7 +811,9 @@ public partial class V1beta1LoggerStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Logger is the Schema for the Loggers API. Manages a Logger within an API Management Service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -762,3 +843,4 @@ public partial class V1beta1Logger : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     [JsonPropertyName("status")]
     public V1beta1LoggerStatus? Status { get; set; }
 }
+#nullable disable

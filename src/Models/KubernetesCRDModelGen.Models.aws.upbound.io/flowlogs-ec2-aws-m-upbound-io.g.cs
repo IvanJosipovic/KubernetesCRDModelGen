@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.m.upbound.io;
+#nullable enable
 /// <summary>FlowLog is the Schema for the FlowLogs API. Provides a VPC/Subnet/ENI Flow Log</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FlowLogList : IKubernetesObject<V1ListMeta>, IItems<
     [JsonPropertyName("items")]
     public IList<V1beta1FlowLog> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the destination options for a flow log. More details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecForProviderDestinationOptions
@@ -50,7 +53,9 @@ public partial class V1beta1FlowLogSpecForProviderDestinationOptions
     [JsonPropertyName("perHourPartition")]
     public bool? PerHourPartition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecForProviderIamRoleArnRefPolicy
@@ -63,7 +68,9 @@ public partial class V1beta1FlowLogSpecForProviderIamRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate iamRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecForProviderIamRoleArnRef
@@ -80,7 +87,9 @@ public partial class V1beta1FlowLogSpecForProviderIamRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1FlowLogSpecForProviderIamRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecForProviderIamRoleArnSelectorPolicy
@@ -93,7 +102,9 @@ public partial class V1beta1FlowLogSpecForProviderIamRoleArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate iamRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecForProviderIamRoleArnSelector
@@ -114,7 +125,9 @@ public partial class V1beta1FlowLogSpecForProviderIamRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1FlowLogSpecForProviderIamRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecForProviderLogDestinationRefPolicy
@@ -127,7 +140,9 @@ public partial class V1beta1FlowLogSpecForProviderLogDestinationRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Group in cloudwatchlogs to populate logDestination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecForProviderLogDestinationRef
@@ -144,7 +159,9 @@ public partial class V1beta1FlowLogSpecForProviderLogDestinationRef
     [JsonPropertyName("policy")]
     public V1beta1FlowLogSpecForProviderLogDestinationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecForProviderLogDestinationSelectorPolicy
@@ -157,7 +174,9 @@ public partial class V1beta1FlowLogSpecForProviderLogDestinationSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Group in cloudwatchlogs to populate logDestination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecForProviderLogDestinationSelector
@@ -178,7 +197,9 @@ public partial class V1beta1FlowLogSpecForProviderLogDestinationSelector
     [JsonPropertyName("policy")]
     public V1beta1FlowLogSpecForProviderLogDestinationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecForProviderSubnetIdRefPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1FlowLogSpecForProviderSubnetIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecForProviderSubnetIdRef
@@ -208,7 +231,9 @@ public partial class V1beta1FlowLogSpecForProviderSubnetIdRef
     [JsonPropertyName("policy")]
     public V1beta1FlowLogSpecForProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecForProviderSubnetIdSelectorPolicy
@@ -221,7 +246,9 @@ public partial class V1beta1FlowLogSpecForProviderSubnetIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecForProviderSubnetIdSelector
@@ -242,7 +269,9 @@ public partial class V1beta1FlowLogSpecForProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1FlowLogSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecForProviderVpcIdRefPolicy
@@ -255,7 +284,9 @@ public partial class V1beta1FlowLogSpecForProviderVpcIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecForProviderVpcIdRef
@@ -272,7 +303,9 @@ public partial class V1beta1FlowLogSpecForProviderVpcIdRef
     [JsonPropertyName("policy")]
     public V1beta1FlowLogSpecForProviderVpcIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecForProviderVpcIdSelectorPolicy
@@ -285,7 +318,9 @@ public partial class V1beta1FlowLogSpecForProviderVpcIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecForProviderVpcIdSelector
@@ -306,7 +341,9 @@ public partial class V1beta1FlowLogSpecForProviderVpcIdSelector
     [JsonPropertyName("policy")]
     public V1beta1FlowLogSpecForProviderVpcIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecForProvider
@@ -403,7 +440,9 @@ public partial class V1beta1FlowLogSpecForProvider
     [JsonPropertyName("vpcIdSelector")]
     public V1beta1FlowLogSpecForProviderVpcIdSelector? VpcIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the destination options for a flow log. More details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecInitProviderDestinationOptions
@@ -420,7 +459,9 @@ public partial class V1beta1FlowLogSpecInitProviderDestinationOptions
     [JsonPropertyName("perHourPartition")]
     public bool? PerHourPartition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecInitProviderIamRoleArnRefPolicy
@@ -433,7 +474,9 @@ public partial class V1beta1FlowLogSpecInitProviderIamRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate iamRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecInitProviderIamRoleArnRef
@@ -450,7 +493,9 @@ public partial class V1beta1FlowLogSpecInitProviderIamRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1FlowLogSpecInitProviderIamRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecInitProviderIamRoleArnSelectorPolicy
@@ -463,7 +508,9 @@ public partial class V1beta1FlowLogSpecInitProviderIamRoleArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate iamRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecInitProviderIamRoleArnSelector
@@ -484,7 +531,9 @@ public partial class V1beta1FlowLogSpecInitProviderIamRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1FlowLogSpecInitProviderIamRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecInitProviderLogDestinationRefPolicy
@@ -497,7 +546,9 @@ public partial class V1beta1FlowLogSpecInitProviderLogDestinationRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Group in cloudwatchlogs to populate logDestination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecInitProviderLogDestinationRef
@@ -514,7 +565,9 @@ public partial class V1beta1FlowLogSpecInitProviderLogDestinationRef
     [JsonPropertyName("policy")]
     public V1beta1FlowLogSpecInitProviderLogDestinationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecInitProviderLogDestinationSelectorPolicy
@@ -527,7 +580,9 @@ public partial class V1beta1FlowLogSpecInitProviderLogDestinationSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Group in cloudwatchlogs to populate logDestination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecInitProviderLogDestinationSelector
@@ -548,7 +603,9 @@ public partial class V1beta1FlowLogSpecInitProviderLogDestinationSelector
     [JsonPropertyName("policy")]
     public V1beta1FlowLogSpecInitProviderLogDestinationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecInitProviderSubnetIdRefPolicy
@@ -561,7 +618,9 @@ public partial class V1beta1FlowLogSpecInitProviderSubnetIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecInitProviderSubnetIdRef
@@ -578,7 +637,9 @@ public partial class V1beta1FlowLogSpecInitProviderSubnetIdRef
     [JsonPropertyName("policy")]
     public V1beta1FlowLogSpecInitProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecInitProviderSubnetIdSelectorPolicy
@@ -591,7 +652,9 @@ public partial class V1beta1FlowLogSpecInitProviderSubnetIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecInitProviderSubnetIdSelector
@@ -612,7 +675,9 @@ public partial class V1beta1FlowLogSpecInitProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1FlowLogSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecInitProviderVpcIdRefPolicy
@@ -625,7 +690,9 @@ public partial class V1beta1FlowLogSpecInitProviderVpcIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecInitProviderVpcIdRef
@@ -642,7 +709,9 @@ public partial class V1beta1FlowLogSpecInitProviderVpcIdRef
     [JsonPropertyName("policy")]
     public V1beta1FlowLogSpecInitProviderVpcIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecInitProviderVpcIdSelectorPolicy
@@ -655,7 +724,9 @@ public partial class V1beta1FlowLogSpecInitProviderVpcIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecInitProviderVpcIdSelector
@@ -676,7 +747,9 @@ public partial class V1beta1FlowLogSpecInitProviderVpcIdSelector
     [JsonPropertyName("policy")]
     public V1beta1FlowLogSpecInitProviderVpcIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecInitProvider
@@ -769,7 +842,9 @@ public partial class V1beta1FlowLogSpecInitProvider
     [JsonPropertyName("vpcIdSelector")]
     public V1beta1FlowLogSpecInitProviderVpcIdSelector? VpcIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecProviderConfigRef
@@ -782,7 +857,9 @@ public partial class V1beta1FlowLogSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecWriteConnectionSecretToRef
@@ -791,7 +868,9 @@ public partial class V1beta1FlowLogSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FlowLogSpec defines the desired state of FlowLog</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpec
@@ -816,7 +895,9 @@ public partial class V1beta1FlowLogSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1FlowLogSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the destination options for a flow log. More details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogStatusAtProviderDestinationOptions
@@ -833,7 +914,9 @@ public partial class V1beta1FlowLogStatusAtProviderDestinationOptions
     [JsonPropertyName("perHourPartition")]
     public bool? PerHourPartition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogStatusAtProvider
@@ -910,7 +993,9 @@ public partial class V1beta1FlowLogStatusAtProvider
     [JsonPropertyName("vpcId")]
     public string? VpcId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogStatusConditions
@@ -939,7 +1024,9 @@ public partial class V1beta1FlowLogStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FlowLogStatus defines the observed state of FlowLog.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogStatus
@@ -956,7 +1043,9 @@ public partial class V1beta1FlowLogStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FlowLog is the Schema for the FlowLogs API. Provides a VPC/Subnet/ENI Flow Log</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -986,3 +1075,4 @@ public partial class V1beta1FlowLog : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     [JsonPropertyName("status")]
     public V1beta1FlowLogStatus? Status { get; set; }
 }
+#nullable disable

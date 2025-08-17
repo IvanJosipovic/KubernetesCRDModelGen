@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datacatalog.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>DataCatalogPolicyTag is the Schema for the DataCatalogPolicyTag API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DataCatalogPolicyTagList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1DataCatalogPolicyTag> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PolicyTagRef defines the resource reference to DataCatalogPolicyTag, which "External" field holds the GCP identifier for the KRM object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataCatalogPolicyTagSpecParentPolicyTagRef
@@ -50,7 +53,9 @@ public partial class V1beta1DataCatalogPolicyTagSpecParentPolicyTagRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TaxonomyRef defines the resource reference to DataCatalogTaxonomy, which "External" field holds the GCP identifier for the KRM object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataCatalogPolicyTagSpecTaxonomyRef
@@ -67,7 +72,9 @@ public partial class V1beta1DataCatalogPolicyTagSpecTaxonomyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataCatalogPolicyTagSpec defines the desired state of DataCatalogPolicyTag</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataCatalogPolicyTagSpec
@@ -92,7 +99,9 @@ public partial class V1beta1DataCatalogPolicyTagSpec
     [JsonPropertyName("taxonomyRef")]
     public V1beta1DataCatalogPolicyTagSpecTaxonomyRef TaxonomyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataCatalogPolicyTagStatusConditions
@@ -117,13 +126,17 @@ public partial class V1beta1DataCatalogPolicyTagStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataCatalogPolicyTagStatusObservedState
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataCatalogPolicyTagStatus defines the config connector machine state of DataCatalogPolicyTag</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataCatalogPolicyTagStatus
@@ -152,7 +165,9 @@ public partial class V1beta1DataCatalogPolicyTagStatus
     [JsonPropertyName("observedState")]
     public V1beta1DataCatalogPolicyTagStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataCatalogPolicyTag is the Schema for the DataCatalogPolicyTag API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -182,3 +197,4 @@ public partial class V1beta1DataCatalogPolicyTag : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1DataCatalogPolicyTagStatus? Status { get; set; }
 }
+#nullable disable

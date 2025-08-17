@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kendra.aws.m.upbound.io;
+#nullable enable
 /// <summary>Index is the Schema for the Indexs API. Provides an Amazon Kendra Index resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1IndexList : IKubernetesObject<V1ListMeta>, IItems<V1
     [JsonPropertyName("items")]
     public IList<V1beta1Index> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that sets the number of additional document storage and query capacity units that should be used by the index. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecForProviderCapacityUnits
@@ -46,7 +49,9 @@ public partial class V1beta1IndexSpecForProviderCapacityUnits
     [JsonPropertyName("storageCapacityUnits")]
     public double? StorageCapacityUnits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that provides manual tuning parameters to determine how the field affects the search results. Detailed below</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecForProviderDocumentMetadataConfigurationUpdatesRelevance
@@ -71,7 +76,9 @@ public partial class V1beta1IndexSpecForProviderDocumentMetadataConfigurationUpd
     [JsonPropertyName("valuesImportanceMap")]
     public IDictionary<string, double>? ValuesImportanceMap { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that provides information about how the field is used during a search. Documented below. Detailed below</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecForProviderDocumentMetadataConfigurationUpdatesSearch
@@ -92,7 +99,9 @@ public partial class V1beta1IndexSpecForProviderDocumentMetadataConfigurationUpd
     [JsonPropertyName("sortable")]
     public bool? Sortable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecForProviderDocumentMetadataConfigurationUpdates
@@ -113,7 +122,9 @@ public partial class V1beta1IndexSpecForProviderDocumentMetadataConfigurationUpd
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecForProviderRoleArnRefPolicy
@@ -126,7 +137,9 @@ public partial class V1beta1IndexSpecForProviderRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecForProviderRoleArnRef
@@ -143,7 +156,9 @@ public partial class V1beta1IndexSpecForProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1IndexSpecForProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecForProviderRoleArnSelectorPolicy
@@ -156,7 +171,9 @@ public partial class V1beta1IndexSpecForProviderRoleArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecForProviderRoleArnSelector
@@ -177,7 +194,9 @@ public partial class V1beta1IndexSpecForProviderRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1IndexSpecForProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that specifies the identifier of the AWS KMS customer managed key (CMK) that's used to encrypt data indexed by Amazon Kendra. Amazon Kendra doesn't support asymmetric CMKs. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecForProviderServerSideEncryptionConfiguration
@@ -186,7 +205,9 @@ public partial class V1beta1IndexSpecForProviderServerSideEncryptionConfiguratio
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that enables fetching access levels of groups and users from an AWS Single Sign-On identity source. To configure this, see UserGroupResolutionConfiguration. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecForProviderUserGroupResolutionConfiguration
@@ -195,7 +216,9 @@ public partial class V1beta1IndexSpecForProviderUserGroupResolutionConfiguration
     [JsonPropertyName("userGroupResolutionMode")]
     public string? UserGroupResolutionMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that specifies the information about the JSON token type configuration. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecForProviderUserTokenConfigurationsJsonTokenTypeConfiguration
@@ -208,7 +231,9 @@ public partial class V1beta1IndexSpecForProviderUserTokenConfigurationsJsonToken
     [JsonPropertyName("userNameAttributeField")]
     public string? UserNameAttributeField { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that specifies the information about the JWT token type configuration. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecForProviderUserTokenConfigurationsJwtTokenTypeConfiguration
@@ -241,7 +266,9 @@ public partial class V1beta1IndexSpecForProviderUserTokenConfigurationsJwtTokenT
     [JsonPropertyName("userNameAttributeField")]
     public string? UserNameAttributeField { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that specifies the user token configuration. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecForProviderUserTokenConfigurations
@@ -254,7 +281,9 @@ public partial class V1beta1IndexSpecForProviderUserTokenConfigurations
     [JsonPropertyName("jwtTokenTypeConfiguration")]
     public V1beta1IndexSpecForProviderUserTokenConfigurationsJwtTokenTypeConfiguration? JwtTokenTypeConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecForProvider
@@ -315,7 +344,9 @@ public partial class V1beta1IndexSpecForProvider
     [JsonPropertyName("userTokenConfigurations")]
     public V1beta1IndexSpecForProviderUserTokenConfigurations? UserTokenConfigurations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that sets the number of additional document storage and query capacity units that should be used by the index. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecInitProviderCapacityUnits
@@ -328,7 +359,9 @@ public partial class V1beta1IndexSpecInitProviderCapacityUnits
     [JsonPropertyName("storageCapacityUnits")]
     public double? StorageCapacityUnits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that provides manual tuning parameters to determine how the field affects the search results. Detailed below</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecInitProviderDocumentMetadataConfigurationUpdatesRelevance
@@ -353,7 +386,9 @@ public partial class V1beta1IndexSpecInitProviderDocumentMetadataConfigurationUp
     [JsonPropertyName("valuesImportanceMap")]
     public IDictionary<string, double>? ValuesImportanceMap { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that provides information about how the field is used during a search. Documented below. Detailed below</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecInitProviderDocumentMetadataConfigurationUpdatesSearch
@@ -374,7 +409,9 @@ public partial class V1beta1IndexSpecInitProviderDocumentMetadataConfigurationUp
     [JsonPropertyName("sortable")]
     public bool? Sortable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecInitProviderDocumentMetadataConfigurationUpdates
@@ -395,7 +432,9 @@ public partial class V1beta1IndexSpecInitProviderDocumentMetadataConfigurationUp
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecInitProviderRoleArnRefPolicy
@@ -408,7 +447,9 @@ public partial class V1beta1IndexSpecInitProviderRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecInitProviderRoleArnRef
@@ -425,7 +466,9 @@ public partial class V1beta1IndexSpecInitProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1IndexSpecInitProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecInitProviderRoleArnSelectorPolicy
@@ -438,7 +481,9 @@ public partial class V1beta1IndexSpecInitProviderRoleArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecInitProviderRoleArnSelector
@@ -459,7 +504,9 @@ public partial class V1beta1IndexSpecInitProviderRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1IndexSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that specifies the identifier of the AWS KMS customer managed key (CMK) that's used to encrypt data indexed by Amazon Kendra. Amazon Kendra doesn't support asymmetric CMKs. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecInitProviderServerSideEncryptionConfiguration
@@ -468,7 +515,9 @@ public partial class V1beta1IndexSpecInitProviderServerSideEncryptionConfigurati
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that enables fetching access levels of groups and users from an AWS Single Sign-On identity source. To configure this, see UserGroupResolutionConfiguration. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecInitProviderUserGroupResolutionConfiguration
@@ -477,7 +526,9 @@ public partial class V1beta1IndexSpecInitProviderUserGroupResolutionConfiguratio
     [JsonPropertyName("userGroupResolutionMode")]
     public string? UserGroupResolutionMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that specifies the information about the JSON token type configuration. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecInitProviderUserTokenConfigurationsJsonTokenTypeConfiguration
@@ -490,7 +541,9 @@ public partial class V1beta1IndexSpecInitProviderUserTokenConfigurationsJsonToke
     [JsonPropertyName("userNameAttributeField")]
     public string? UserNameAttributeField { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that specifies the information about the JWT token type configuration. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecInitProviderUserTokenConfigurationsJwtTokenTypeConfiguration
@@ -523,7 +576,9 @@ public partial class V1beta1IndexSpecInitProviderUserTokenConfigurationsJwtToken
     [JsonPropertyName("userNameAttributeField")]
     public string? UserNameAttributeField { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that specifies the user token configuration. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecInitProviderUserTokenConfigurations
@@ -536,7 +591,9 @@ public partial class V1beta1IndexSpecInitProviderUserTokenConfigurations
     [JsonPropertyName("jwtTokenTypeConfiguration")]
     public V1beta1IndexSpecInitProviderUserTokenConfigurationsJwtTokenTypeConfiguration? JwtTokenTypeConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecInitProvider
@@ -593,7 +650,9 @@ public partial class V1beta1IndexSpecInitProvider
     [JsonPropertyName("userTokenConfigurations")]
     public V1beta1IndexSpecInitProviderUserTokenConfigurations? UserTokenConfigurations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecProviderConfigRef
@@ -606,7 +665,9 @@ public partial class V1beta1IndexSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecWriteConnectionSecretToRef
@@ -615,7 +676,9 @@ public partial class V1beta1IndexSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IndexSpec defines the desired state of Index</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpec
@@ -640,7 +703,9 @@ public partial class V1beta1IndexSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1IndexSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that sets the number of additional document storage and query capacity units that should be used by the index. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexStatusAtProviderCapacityUnits
@@ -653,7 +718,9 @@ public partial class V1beta1IndexStatusAtProviderCapacityUnits
     [JsonPropertyName("storageCapacityUnits")]
     public double? StorageCapacityUnits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that provides manual tuning parameters to determine how the field affects the search results. Detailed below</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexStatusAtProviderDocumentMetadataConfigurationUpdatesRelevance
@@ -678,7 +745,9 @@ public partial class V1beta1IndexStatusAtProviderDocumentMetadataConfigurationUp
     [JsonPropertyName("valuesImportanceMap")]
     public IDictionary<string, double>? ValuesImportanceMap { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that provides information about how the field is used during a search. Documented below. Detailed below</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexStatusAtProviderDocumentMetadataConfigurationUpdatesSearch
@@ -699,7 +768,9 @@ public partial class V1beta1IndexStatusAtProviderDocumentMetadataConfigurationUp
     [JsonPropertyName("sortable")]
     public bool? Sortable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexStatusAtProviderDocumentMetadataConfigurationUpdates
@@ -720,7 +791,9 @@ public partial class V1beta1IndexStatusAtProviderDocumentMetadataConfigurationUp
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexStatusAtProviderIndexStatisticsFaqStatistics
@@ -729,7 +802,9 @@ public partial class V1beta1IndexStatusAtProviderIndexStatisticsFaqStatistics
     [JsonPropertyName("indexedQuestionAnswersCount")]
     public double? IndexedQuestionAnswersCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexStatusAtProviderIndexStatisticsTextDocumentStatistics
@@ -742,7 +817,9 @@ public partial class V1beta1IndexStatusAtProviderIndexStatisticsTextDocumentStat
     [JsonPropertyName("indexedTextDocumentsCount")]
     public double? IndexedTextDocumentsCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexStatusAtProviderIndexStatistics
@@ -755,7 +832,9 @@ public partial class V1beta1IndexStatusAtProviderIndexStatistics
     [JsonPropertyName("textDocumentStatistics")]
     public IList<V1beta1IndexStatusAtProviderIndexStatisticsTextDocumentStatistics>? TextDocumentStatistics { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that specifies the identifier of the AWS KMS customer managed key (CMK) that's used to encrypt data indexed by Amazon Kendra. Amazon Kendra doesn't support asymmetric CMKs. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexStatusAtProviderServerSideEncryptionConfiguration
@@ -764,7 +843,9 @@ public partial class V1beta1IndexStatusAtProviderServerSideEncryptionConfigurati
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that enables fetching access levels of groups and users from an AWS Single Sign-On identity source. To configure this, see UserGroupResolutionConfiguration. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexStatusAtProviderUserGroupResolutionConfiguration
@@ -773,7 +854,9 @@ public partial class V1beta1IndexStatusAtProviderUserGroupResolutionConfiguratio
     [JsonPropertyName("userGroupResolutionMode")]
     public string? UserGroupResolutionMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that specifies the information about the JSON token type configuration. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexStatusAtProviderUserTokenConfigurationsJsonTokenTypeConfiguration
@@ -786,7 +869,9 @@ public partial class V1beta1IndexStatusAtProviderUserTokenConfigurationsJsonToke
     [JsonPropertyName("userNameAttributeField")]
     public string? UserNameAttributeField { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that specifies the information about the JWT token type configuration. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexStatusAtProviderUserTokenConfigurationsJwtTokenTypeConfiguration
@@ -819,7 +904,9 @@ public partial class V1beta1IndexStatusAtProviderUserTokenConfigurationsJwtToken
     [JsonPropertyName("userNameAttributeField")]
     public string? UserNameAttributeField { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that specifies the user token configuration. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexStatusAtProviderUserTokenConfigurations
@@ -832,7 +919,9 @@ public partial class V1beta1IndexStatusAtProviderUserTokenConfigurations
     [JsonPropertyName("jwtTokenTypeConfiguration")]
     public V1beta1IndexStatusAtProviderUserTokenConfigurationsJwtTokenTypeConfiguration? JwtTokenTypeConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexStatusAtProvider
@@ -917,7 +1006,9 @@ public partial class V1beta1IndexStatusAtProvider
     [JsonPropertyName("userTokenConfigurations")]
     public V1beta1IndexStatusAtProviderUserTokenConfigurations? UserTokenConfigurations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexStatusConditions
@@ -946,7 +1037,9 @@ public partial class V1beta1IndexStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IndexStatus defines the observed state of Index.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexStatus
@@ -963,7 +1056,9 @@ public partial class V1beta1IndexStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Index is the Schema for the Indexs API. Provides an Amazon Kendra Index resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -993,3 +1088,4 @@ public partial class V1beta1Index : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     [JsonPropertyName("status")]
     public V1beta1IndexStatus? Status { get; set; }
 }
+#nullable disable

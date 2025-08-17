@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+#nullable enable
 /// <summary>PacketMirroring is the Schema for the PacketMirrorings API. Packet Mirroring mirrors traffic to and from particular VM instances.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PacketMirroringList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1PacketMirroring> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecForProviderCollectorIlbUrlRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1PacketMirroringSpecForProviderCollectorIlbUrlRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ForwardingRule in compute to populate url.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecForProviderCollectorIlbUrlRef
@@ -59,7 +64,9 @@ public partial class V1beta1PacketMirroringSpecForProviderCollectorIlbUrlRef
     [JsonPropertyName("policy")]
     public V1beta1PacketMirroringSpecForProviderCollectorIlbUrlRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecForProviderCollectorIlbUrlSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1PacketMirroringSpecForProviderCollectorIlbUrlSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ForwardingRule in compute to populate url.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecForProviderCollectorIlbUrlSelector
@@ -89,7 +98,9 @@ public partial class V1beta1PacketMirroringSpecForProviderCollectorIlbUrlSelecto
     [JsonPropertyName("policy")]
     public V1beta1PacketMirroringSpecForProviderCollectorIlbUrlSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecForProviderCollectorIlb
@@ -106,7 +117,9 @@ public partial class V1beta1PacketMirroringSpecForProviderCollectorIlb
     [JsonPropertyName("urlSelector")]
     public V1beta1PacketMirroringSpecForProviderCollectorIlbUrlSelector? UrlSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecForProviderFilter
@@ -123,7 +136,9 @@ public partial class V1beta1PacketMirroringSpecForProviderFilter
     [JsonPropertyName("ipProtocols")]
     public IList<string>? IpProtocols { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecForProviderMirroredResourcesInstancesUrlRefPolicy
@@ -136,7 +151,9 @@ public partial class V1beta1PacketMirroringSpecForProviderMirroredResourcesInsta
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in compute to populate url.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecForProviderMirroredResourcesInstancesUrlRef
@@ -149,7 +166,9 @@ public partial class V1beta1PacketMirroringSpecForProviderMirroredResourcesInsta
     [JsonPropertyName("policy")]
     public V1beta1PacketMirroringSpecForProviderMirroredResourcesInstancesUrlRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecForProviderMirroredResourcesInstancesUrlSelectorPolicy
@@ -162,7 +181,9 @@ public partial class V1beta1PacketMirroringSpecForProviderMirroredResourcesInsta
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in compute to populate url.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecForProviderMirroredResourcesInstancesUrlSelector
@@ -179,7 +200,9 @@ public partial class V1beta1PacketMirroringSpecForProviderMirroredResourcesInsta
     [JsonPropertyName("policy")]
     public V1beta1PacketMirroringSpecForProviderMirroredResourcesInstancesUrlSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecForProviderMirroredResourcesInstances
@@ -196,7 +219,9 @@ public partial class V1beta1PacketMirroringSpecForProviderMirroredResourcesInsta
     [JsonPropertyName("urlSelector")]
     public V1beta1PacketMirroringSpecForProviderMirroredResourcesInstancesUrlSelector? UrlSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecForProviderMirroredResourcesSubnetworks
@@ -205,7 +230,9 @@ public partial class V1beta1PacketMirroringSpecForProviderMirroredResourcesSubne
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecForProviderMirroredResources
@@ -222,7 +249,9 @@ public partial class V1beta1PacketMirroringSpecForProviderMirroredResources
     [JsonPropertyName("tags")]
     public IList<string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecForProviderNetworkUrlRefPolicy
@@ -235,7 +264,9 @@ public partial class V1beta1PacketMirroringSpecForProviderNetworkUrlRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate url.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecForProviderNetworkUrlRef
@@ -248,7 +279,9 @@ public partial class V1beta1PacketMirroringSpecForProviderNetworkUrlRef
     [JsonPropertyName("policy")]
     public V1beta1PacketMirroringSpecForProviderNetworkUrlRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecForProviderNetworkUrlSelectorPolicy
@@ -261,7 +294,9 @@ public partial class V1beta1PacketMirroringSpecForProviderNetworkUrlSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate url.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecForProviderNetworkUrlSelector
@@ -278,7 +313,9 @@ public partial class V1beta1PacketMirroringSpecForProviderNetworkUrlSelector
     [JsonPropertyName("policy")]
     public V1beta1PacketMirroringSpecForProviderNetworkUrlSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecForProviderNetwork
@@ -295,7 +332,9 @@ public partial class V1beta1PacketMirroringSpecForProviderNetwork
     [JsonPropertyName("urlSelector")]
     public V1beta1PacketMirroringSpecForProviderNetworkUrlSelector? UrlSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecForProvider
@@ -332,7 +371,9 @@ public partial class V1beta1PacketMirroringSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlRefPolicy
@@ -345,7 +386,9 @@ public partial class V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ForwardingRule in compute to populate url.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlRef
@@ -358,7 +401,9 @@ public partial class V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlRef
     [JsonPropertyName("policy")]
     public V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlSelectorPolicy
@@ -371,7 +416,9 @@ public partial class V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ForwardingRule in compute to populate url.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlSelector
@@ -388,7 +435,9 @@ public partial class V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlSelect
     [JsonPropertyName("policy")]
     public V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecInitProviderCollectorIlb
@@ -405,7 +454,9 @@ public partial class V1beta1PacketMirroringSpecInitProviderCollectorIlb
     [JsonPropertyName("urlSelector")]
     public V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlSelector? UrlSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecInitProviderFilter
@@ -422,7 +473,9 @@ public partial class V1beta1PacketMirroringSpecInitProviderFilter
     [JsonPropertyName("ipProtocols")]
     public IList<string>? IpProtocols { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecInitProviderMirroredResourcesInstancesUrlRefPolicy
@@ -435,7 +488,9 @@ public partial class V1beta1PacketMirroringSpecInitProviderMirroredResourcesInst
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in compute to populate url.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecInitProviderMirroredResourcesInstancesUrlRef
@@ -448,7 +503,9 @@ public partial class V1beta1PacketMirroringSpecInitProviderMirroredResourcesInst
     [JsonPropertyName("policy")]
     public V1beta1PacketMirroringSpecInitProviderMirroredResourcesInstancesUrlRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecInitProviderMirroredResourcesInstancesUrlSelectorPolicy
@@ -461,7 +518,9 @@ public partial class V1beta1PacketMirroringSpecInitProviderMirroredResourcesInst
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in compute to populate url.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecInitProviderMirroredResourcesInstancesUrlSelector
@@ -478,7 +537,9 @@ public partial class V1beta1PacketMirroringSpecInitProviderMirroredResourcesInst
     [JsonPropertyName("policy")]
     public V1beta1PacketMirroringSpecInitProviderMirroredResourcesInstancesUrlSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecInitProviderMirroredResourcesInstances
@@ -495,7 +556,9 @@ public partial class V1beta1PacketMirroringSpecInitProviderMirroredResourcesInst
     [JsonPropertyName("urlSelector")]
     public V1beta1PacketMirroringSpecInitProviderMirroredResourcesInstancesUrlSelector? UrlSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecInitProviderMirroredResourcesSubnetworks
@@ -504,7 +567,9 @@ public partial class V1beta1PacketMirroringSpecInitProviderMirroredResourcesSubn
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecInitProviderMirroredResources
@@ -521,7 +586,9 @@ public partial class V1beta1PacketMirroringSpecInitProviderMirroredResources
     [JsonPropertyName("tags")]
     public IList<string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecInitProviderNetworkUrlRefPolicy
@@ -534,7 +601,9 @@ public partial class V1beta1PacketMirroringSpecInitProviderNetworkUrlRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate url.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecInitProviderNetworkUrlRef
@@ -547,7 +616,9 @@ public partial class V1beta1PacketMirroringSpecInitProviderNetworkUrlRef
     [JsonPropertyName("policy")]
     public V1beta1PacketMirroringSpecInitProviderNetworkUrlRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecInitProviderNetworkUrlSelectorPolicy
@@ -560,7 +631,9 @@ public partial class V1beta1PacketMirroringSpecInitProviderNetworkUrlSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate url.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecInitProviderNetworkUrlSelector
@@ -577,7 +650,9 @@ public partial class V1beta1PacketMirroringSpecInitProviderNetworkUrlSelector
     [JsonPropertyName("policy")]
     public V1beta1PacketMirroringSpecInitProviderNetworkUrlSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecInitProviderNetwork
@@ -594,7 +669,9 @@ public partial class V1beta1PacketMirroringSpecInitProviderNetwork
     [JsonPropertyName("urlSelector")]
     public V1beta1PacketMirroringSpecInitProviderNetworkUrlSelector? UrlSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecInitProvider
@@ -627,7 +704,9 @@ public partial class V1beta1PacketMirroringSpecInitProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecProviderConfigRefPolicy
@@ -640,7 +719,9 @@ public partial class V1beta1PacketMirroringSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecProviderConfigRef
@@ -653,7 +734,9 @@ public partial class V1beta1PacketMirroringSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1PacketMirroringSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpecWriteConnectionSecretToRef
@@ -666,7 +749,9 @@ public partial class V1beta1PacketMirroringSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PacketMirroringSpec defines the desired state of PacketMirroring</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringSpec
@@ -695,7 +780,9 @@ public partial class V1beta1PacketMirroringSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1PacketMirroringSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringStatusAtProviderCollectorIlb
@@ -704,7 +791,9 @@ public partial class V1beta1PacketMirroringStatusAtProviderCollectorIlb
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringStatusAtProviderFilter
@@ -721,7 +810,9 @@ public partial class V1beta1PacketMirroringStatusAtProviderFilter
     [JsonPropertyName("ipProtocols")]
     public IList<string>? IpProtocols { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringStatusAtProviderMirroredResourcesInstances
@@ -730,7 +821,9 @@ public partial class V1beta1PacketMirroringStatusAtProviderMirroredResourcesInst
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringStatusAtProviderMirroredResourcesSubnetworks
@@ -739,7 +832,9 @@ public partial class V1beta1PacketMirroringStatusAtProviderMirroredResourcesSubn
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringStatusAtProviderMirroredResources
@@ -756,7 +851,9 @@ public partial class V1beta1PacketMirroringStatusAtProviderMirroredResources
     [JsonPropertyName("tags")]
     public IList<string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringStatusAtProviderNetwork
@@ -765,7 +862,9 @@ public partial class V1beta1PacketMirroringStatusAtProviderNetwork
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringStatusAtProvider
@@ -806,7 +905,9 @@ public partial class V1beta1PacketMirroringStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringStatusConditions
@@ -835,7 +936,9 @@ public partial class V1beta1PacketMirroringStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PacketMirroringStatus defines the observed state of PacketMirroring.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketMirroringStatus
@@ -852,7 +955,9 @@ public partial class V1beta1PacketMirroringStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PacketMirroring is the Schema for the PacketMirrorings API. Packet Mirroring mirrors traffic to and from particular VM instances.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -882,3 +987,4 @@ public partial class V1beta1PacketMirroring : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1PacketMirroringStatus? Status { get; set; }
 }
+#nullable disable

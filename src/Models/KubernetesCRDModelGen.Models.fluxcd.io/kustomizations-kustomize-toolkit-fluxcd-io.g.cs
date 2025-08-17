@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kustomize.toolkit.fluxcd.io;
+#nullable enable
 /// <summary>Kustomization is the Schema for the kustomizations API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1KustomizationList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1Kustomization> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CommonMetadata specifies the common labels and annotations that are applied to all resources. Any existing label or annotation will be overridden if its key matches a common one.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KustomizationSpecCommonMetadata
@@ -46,7 +49,9 @@ public partial class V1KustomizationSpecCommonMetadata
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The secret name containing the private OpenPGP keys used for decryption. A static credential for a cloud provider defined inside the Secret takes priority to secret-less authentication with the ServiceAccountName field.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KustomizationSpecDecryptionSecretRef
@@ -55,7 +60,9 @@ public partial class V1KustomizationSpecDecryptionSecretRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Decrypt Kubernetes secrets before applying them on the cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KustomizationSpecDecryption
@@ -72,7 +79,9 @@ public partial class V1KustomizationSpecDecryption
     [JsonPropertyName("serviceAccountName")]
     public string? ServiceAccountName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NamespacedObjectReference contains enough information to locate the referenced Kubernetes resource object in any namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KustomizationSpecDependsOn
@@ -85,7 +94,9 @@ public partial class V1KustomizationSpecDependsOn
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CustomHealthCheck defines the health check for custom resources.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KustomizationSpecHealthCheckExprs
@@ -110,7 +121,9 @@ public partial class V1KustomizationSpecHealthCheckExprs
     [JsonPropertyName("kind")]
     public string Kind { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NamespacedObjectKindReference contains enough information to locate the typed referenced Kubernetes resource object in any namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KustomizationSpecHealthChecks
@@ -131,7 +144,9 @@ public partial class V1KustomizationSpecHealthChecks
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Image contains an image name, a new name, a new tag or digest, which will replace the original name and tag.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KustomizationSpecImages
@@ -152,7 +167,9 @@ public partial class V1KustomizationSpecImages
     [JsonPropertyName("newTag")]
     public string? NewTag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretRef holds the name of a secret that contains a key with the kubeconfig file as the value. If no key is set, the key will default to 'value'. It is recommended that the kubeconfig is self-contained, and the secret is regularly updated if credentials such as a cloud-access-token expire. Cloud specific `cmd-path` auth helpers will not function without adding binaries and credentials to the Pod that is responsible for reconciling Kubernetes resources.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KustomizationSpecKubeConfigSecretRef
@@ -165,7 +182,9 @@ public partial class V1KustomizationSpecKubeConfigSecretRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The KubeConfig for reconciling the Kustomization on a remote cluster. When used in combination with KustomizationSpec.ServiceAccountName, forces the controller to act on behalf of that Service Account at the target cluster. If the --default-service-account flag is set, its value will be used as a controller level fallback for when KustomizationSpec.ServiceAccountName is empty.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KustomizationSpecKubeConfig
@@ -174,7 +193,9 @@ public partial class V1KustomizationSpecKubeConfig
     [JsonPropertyName("secretRef")]
     public V1KustomizationSpecKubeConfigSecretRef SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Target points to the resources that the patch document should be applied to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KustomizationSpecPatchesTarget
@@ -207,7 +228,9 @@ public partial class V1KustomizationSpecPatchesTarget
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Patch contains an inline StrategicMerge or JSON6902 patch, and the target the patch should be applied to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KustomizationSpecPatches
@@ -220,7 +243,9 @@ public partial class V1KustomizationSpecPatches
     [JsonPropertyName("target")]
     public V1KustomizationSpecPatchesTarget? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubstituteReference contains a reference to a resource containing the variables name and value.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KustomizationSpecPostBuildSubstituteFrom
@@ -237,7 +262,9 @@ public partial class V1KustomizationSpecPostBuildSubstituteFrom
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PostBuild describes which actions to perform on the YAML manifest generated by building the kustomize overlay.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KustomizationSpecPostBuild
@@ -250,7 +277,9 @@ public partial class V1KustomizationSpecPostBuild
     [JsonPropertyName("substituteFrom")]
     public IList<V1KustomizationSpecPostBuildSubstituteFrom>? SubstituteFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference of the source where the kustomization file is.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KustomizationSpecSourceRef
@@ -271,7 +300,9 @@ public partial class V1KustomizationSpecSourceRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KustomizationSpec defines the configuration to calculate the desired state from a Source using Kustomize.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KustomizationSpec
@@ -372,7 +403,9 @@ public partial class V1KustomizationSpec
     [JsonPropertyName("wait")]
     public bool? Wait { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition contains details for one aspect of the current state of this API Resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KustomizationStatusConditions
@@ -401,7 +434,9 @@ public partial class V1KustomizationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceRef contains the information necessary to locate a resource within a cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KustomizationStatusInventoryEntries
@@ -414,7 +449,9 @@ public partial class V1KustomizationStatusInventoryEntries
     [JsonPropertyName("v")]
     public string V { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Inventory contains the list of Kubernetes resource object references that have been successfully applied.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KustomizationStatusInventory
@@ -423,7 +460,9 @@ public partial class V1KustomizationStatusInventory
     [JsonPropertyName("entries")]
     public IList<V1KustomizationStatusInventoryEntries> Entries { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KustomizationStatus defines the observed state of a kustomization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KustomizationStatus
@@ -456,7 +495,9 @@ public partial class V1KustomizationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Kustomization is the Schema for the kustomizations API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -486,3 +527,4 @@ public partial class V1Kustomization : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1KustomizationStatus? Status { get; set; }
 }
+#nullable disable

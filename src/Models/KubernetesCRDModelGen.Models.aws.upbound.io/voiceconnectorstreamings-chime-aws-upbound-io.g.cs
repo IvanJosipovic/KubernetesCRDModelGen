@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.chime.aws.upbound.io;
+#nullable enable
 /// <summary>VoiceConnectorStreaming is the Schema for the VoiceConnectorStreamings API. The streaming configuration associated with an Amazon Chime Voice Connector. Specifies whether media streaming is enabled for sending to Amazon Kinesis, and shows the retention period for the Amazon Kinesis data, in hours.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VoiceConnectorStreamingList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1VoiceConnectorStreaming> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorStreamingSpecForProviderMediaInsightsConfiguration
@@ -46,7 +49,9 @@ public partial class V1beta1VoiceConnectorStreamingSpecForProviderMediaInsightsC
     [JsonPropertyName("disabled")]
     public bool? Disabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnectorIdRefPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VoiceConnector in chime to populate voiceConnectorId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnectorIdRef
@@ -72,7 +79,9 @@ public partial class V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnector
     [JsonPropertyName("policy")]
     public V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnectorIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnectorIdSelectorPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VoiceConnector in chime to populate voiceConnectorId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnectorIdSelector
@@ -102,7 +113,9 @@ public partial class V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnector
     [JsonPropertyName("policy")]
     public V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnectorIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorStreamingSpecForProvider
@@ -139,7 +152,9 @@ public partial class V1beta1VoiceConnectorStreamingSpecForProvider
     [JsonPropertyName("voiceConnectorIdSelector")]
     public V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnectorIdSelector? VoiceConnectorIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorStreamingSpecInitProviderMediaInsightsConfiguration
@@ -152,7 +167,9 @@ public partial class V1beta1VoiceConnectorStreamingSpecInitProviderMediaInsights
     [JsonPropertyName("disabled")]
     public bool? Disabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnectorIdRefPolicy
@@ -165,7 +182,9 @@ public partial class V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VoiceConnector in chime to populate voiceConnectorId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnectorIdRef
@@ -178,7 +197,9 @@ public partial class V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnecto
     [JsonPropertyName("policy")]
     public V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnectorIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnectorIdSelectorPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VoiceConnector in chime to populate voiceConnectorId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnectorIdSelector
@@ -208,7 +231,9 @@ public partial class V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnecto
     [JsonPropertyName("policy")]
     public V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnectorIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorStreamingSpecInitProvider
@@ -241,7 +266,9 @@ public partial class V1beta1VoiceConnectorStreamingSpecInitProvider
     [JsonPropertyName("voiceConnectorIdSelector")]
     public V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnectorIdSelector? VoiceConnectorIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorStreamingSpecProviderConfigRefPolicy
@@ -254,7 +281,9 @@ public partial class V1beta1VoiceConnectorStreamingSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorStreamingSpecProviderConfigRef
@@ -267,7 +296,9 @@ public partial class V1beta1VoiceConnectorStreamingSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1VoiceConnectorStreamingSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorStreamingSpecWriteConnectionSecretToRef
@@ -280,7 +311,9 @@ public partial class V1beta1VoiceConnectorStreamingSpecWriteConnectionSecretToRe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VoiceConnectorStreamingSpec defines the desired state of VoiceConnectorStreaming</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorStreamingSpec
@@ -309,7 +342,9 @@ public partial class V1beta1VoiceConnectorStreamingSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VoiceConnectorStreamingSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorStreamingStatusAtProviderMediaInsightsConfiguration
@@ -322,7 +357,9 @@ public partial class V1beta1VoiceConnectorStreamingStatusAtProviderMediaInsights
     [JsonPropertyName("disabled")]
     public bool? Disabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorStreamingStatusAtProvider
@@ -355,7 +392,9 @@ public partial class V1beta1VoiceConnectorStreamingStatusAtProvider
     [JsonPropertyName("voiceConnectorId")]
     public string? VoiceConnectorId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorStreamingStatusConditions
@@ -384,7 +423,9 @@ public partial class V1beta1VoiceConnectorStreamingStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VoiceConnectorStreamingStatus defines the observed state of VoiceConnectorStreaming.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorStreamingStatus
@@ -401,7 +442,9 @@ public partial class V1beta1VoiceConnectorStreamingStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VoiceConnectorStreaming is the Schema for the VoiceConnectorStreamings API. The streaming configuration associated with an Amazon Chime Voice Connector. Specifies whether media streaming is enabled for sending to Amazon Kinesis, and shows the retention period for the Amazon Kinesis data, in hours.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -431,3 +474,4 @@ public partial class V1beta1VoiceConnectorStreaming : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1VoiceConnectorStreamingStatus? Status { get; set; }
 }
+#nullable disable

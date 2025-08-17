@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.documentdb.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20240701.FirewallRule Generator information: - Generated from: /mongocluster/resource-manager/Microsoft.DocumentDB/stable/2024-07-01/mongoCluster.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/mongoClusters/{mongoClusterName}/firewallRules/{firewallRuleName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20240701storageFirewallRuleList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1api20240701storageFirewallRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240701storageFirewallRuleSpecOperatorSpecConfigMapExpressions
@@ -50,7 +53,9 @@ public partial class V1api20240701storageFirewallRuleSpecOperatorSpecConfigMapEx
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240701storageFirewallRuleSpecOperatorSpecSecretExpressions
@@ -67,7 +72,9 @@ public partial class V1api20240701storageFirewallRuleSpecOperatorSpecSecretExpre
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240701.FirewallRuleOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240701storageFirewallRuleSpecOperatorSpec
@@ -84,7 +91,9 @@ public partial class V1api20240701storageFirewallRuleSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20240701storageFirewallRuleSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a documentdb.azure.com/MongoCluster resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240701storageFirewallRuleSpecOwner
@@ -97,7 +106,9 @@ public partial class V1api20240701storageFirewallRuleSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240701.FirewallRuleProperties The properties of a mongo cluster firewall rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240701storageFirewallRuleSpecProperties
@@ -114,7 +125,9 @@ public partial class V1api20240701storageFirewallRuleSpecProperties
     [JsonPropertyName("startIpAddress")]
     public string? StartIpAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240701.FirewallRule_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240701storageFirewallRuleSpec
@@ -143,7 +156,9 @@ public partial class V1api20240701storageFirewallRuleSpec
     [JsonPropertyName("properties")]
     public V1api20240701storageFirewallRuleSpecProperties? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240701storageFirewallRuleStatusConditions
@@ -176,7 +191,9 @@ public partial class V1api20240701storageFirewallRuleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240701.FirewallRuleProperties_STATUS The properties of a mongo cluster firewall rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240701storageFirewallRuleStatusProperties
@@ -197,7 +214,9 @@ public partial class V1api20240701storageFirewallRuleStatusProperties
     [JsonPropertyName("startIpAddress")]
     public string? StartIpAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240701.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240701storageFirewallRuleStatusSystemData
@@ -230,7 +249,9 @@ public partial class V1api20240701storageFirewallRuleStatusSystemData
     [JsonPropertyName("lastModifiedByType")]
     public string? LastModifiedByType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240701.FirewallRule_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240701storageFirewallRuleStatus
@@ -263,7 +284,9 @@ public partial class V1api20240701storageFirewallRuleStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240701.FirewallRule Generator information: - Generated from: /mongocluster/resource-manager/Microsoft.DocumentDB/stable/2024-07-01/mongoCluster.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/mongoClusters/{mongoClusterName}/firewallRules/{firewallRuleName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -293,3 +316,4 @@ public partial class V1api20240701storageFirewallRule : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1api20240701storageFirewallRuleStatus? Status { get; set; }
 }
+#nullable disable

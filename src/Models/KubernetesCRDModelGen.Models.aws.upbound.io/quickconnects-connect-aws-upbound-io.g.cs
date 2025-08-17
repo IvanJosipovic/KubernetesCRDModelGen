@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.connect.aws.upbound.io;
+#nullable enable
 /// <summary>QuickConnect is the Schema for the QuickConnects API. Provides details about a specific Amazon Quick Connect</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1QuickConnectList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1QuickConnect> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuickConnectSpecForProviderInstanceIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1QuickConnectSpecForProviderInstanceIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in connect to populate instanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuickConnectSpecForProviderInstanceIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1QuickConnectSpecForProviderInstanceIdRef
     [JsonPropertyName("policy")]
     public V1beta1QuickConnectSpecForProviderInstanceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuickConnectSpecForProviderInstanceIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1QuickConnectSpecForProviderInstanceIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in connect to populate instanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuickConnectSpecForProviderInstanceIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1QuickConnectSpecForProviderInstanceIdSelector
     [JsonPropertyName("policy")]
     public V1beta1QuickConnectSpecForProviderInstanceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuickConnectSpecForProviderQuickConnectConfigPhoneConfig
@@ -98,7 +109,9 @@ public partial class V1beta1QuickConnectSpecForProviderQuickConnectConfigPhoneCo
     [JsonPropertyName("phoneNumber")]
     public string? PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuickConnectSpecForProviderQuickConnectConfigQueueConfig
@@ -111,7 +124,9 @@ public partial class V1beta1QuickConnectSpecForProviderQuickConnectConfigQueueCo
     [JsonPropertyName("queueId")]
     public string? QueueId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuickConnectSpecForProviderQuickConnectConfigUserConfig
@@ -124,7 +139,9 @@ public partial class V1beta1QuickConnectSpecForProviderQuickConnectConfigUserCon
     [JsonPropertyName("userId")]
     public string? UserId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuickConnectSpecForProviderQuickConnectConfig
@@ -145,7 +162,9 @@ public partial class V1beta1QuickConnectSpecForProviderQuickConnectConfig
     [JsonPropertyName("userConfig")]
     public IList<V1beta1QuickConnectSpecForProviderQuickConnectConfigUserConfig>? UserConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuickConnectSpecForProvider
@@ -182,7 +201,9 @@ public partial class V1beta1QuickConnectSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuickConnectSpecInitProviderInstanceIdRefPolicy
@@ -195,7 +216,9 @@ public partial class V1beta1QuickConnectSpecInitProviderInstanceIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in connect to populate instanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuickConnectSpecInitProviderInstanceIdRef
@@ -208,7 +231,9 @@ public partial class V1beta1QuickConnectSpecInitProviderInstanceIdRef
     [JsonPropertyName("policy")]
     public V1beta1QuickConnectSpecInitProviderInstanceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuickConnectSpecInitProviderInstanceIdSelectorPolicy
@@ -221,7 +246,9 @@ public partial class V1beta1QuickConnectSpecInitProviderInstanceIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in connect to populate instanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuickConnectSpecInitProviderInstanceIdSelector
@@ -238,7 +265,9 @@ public partial class V1beta1QuickConnectSpecInitProviderInstanceIdSelector
     [JsonPropertyName("policy")]
     public V1beta1QuickConnectSpecInitProviderInstanceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuickConnectSpecInitProviderQuickConnectConfigPhoneConfig
@@ -247,7 +276,9 @@ public partial class V1beta1QuickConnectSpecInitProviderQuickConnectConfigPhoneC
     [JsonPropertyName("phoneNumber")]
     public string? PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuickConnectSpecInitProviderQuickConnectConfigQueueConfig
@@ -260,7 +291,9 @@ public partial class V1beta1QuickConnectSpecInitProviderQuickConnectConfigQueueC
     [JsonPropertyName("queueId")]
     public string? QueueId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuickConnectSpecInitProviderQuickConnectConfigUserConfig
@@ -273,7 +306,9 @@ public partial class V1beta1QuickConnectSpecInitProviderQuickConnectConfigUserCo
     [JsonPropertyName("userId")]
     public string? UserId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuickConnectSpecInitProviderQuickConnectConfig
@@ -294,7 +329,9 @@ public partial class V1beta1QuickConnectSpecInitProviderQuickConnectConfig
     [JsonPropertyName("userConfig")]
     public IList<V1beta1QuickConnectSpecInitProviderQuickConnectConfigUserConfig>? UserConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuickConnectSpecInitProvider
@@ -327,7 +364,9 @@ public partial class V1beta1QuickConnectSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuickConnectSpecProviderConfigRefPolicy
@@ -340,7 +379,9 @@ public partial class V1beta1QuickConnectSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuickConnectSpecProviderConfigRef
@@ -353,7 +394,9 @@ public partial class V1beta1QuickConnectSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1QuickConnectSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuickConnectSpecWriteConnectionSecretToRef
@@ -366,7 +409,9 @@ public partial class V1beta1QuickConnectSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>QuickConnectSpec defines the desired state of QuickConnect</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuickConnectSpec
@@ -395,7 +440,9 @@ public partial class V1beta1QuickConnectSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1QuickConnectSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuickConnectStatusAtProviderQuickConnectConfigPhoneConfig
@@ -404,7 +451,9 @@ public partial class V1beta1QuickConnectStatusAtProviderQuickConnectConfigPhoneC
     [JsonPropertyName("phoneNumber")]
     public string? PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuickConnectStatusAtProviderQuickConnectConfigQueueConfig
@@ -417,7 +466,9 @@ public partial class V1beta1QuickConnectStatusAtProviderQuickConnectConfigQueueC
     [JsonPropertyName("queueId")]
     public string? QueueId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuickConnectStatusAtProviderQuickConnectConfigUserConfig
@@ -430,7 +481,9 @@ public partial class V1beta1QuickConnectStatusAtProviderQuickConnectConfigUserCo
     [JsonPropertyName("userId")]
     public string? UserId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuickConnectStatusAtProviderQuickConnectConfig
@@ -451,7 +504,9 @@ public partial class V1beta1QuickConnectStatusAtProviderQuickConnectConfig
     [JsonPropertyName("userConfig")]
     public IList<V1beta1QuickConnectStatusAtProviderQuickConnectConfigUserConfig>? UserConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuickConnectStatusAtProvider
@@ -496,7 +551,9 @@ public partial class V1beta1QuickConnectStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuickConnectStatusConditions
@@ -525,7 +582,9 @@ public partial class V1beta1QuickConnectStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>QuickConnectStatus defines the observed state of QuickConnect.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuickConnectStatus
@@ -542,7 +601,9 @@ public partial class V1beta1QuickConnectStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>QuickConnect is the Schema for the QuickConnects API. Provides details about a specific Amazon Quick Connect</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -572,3 +633,4 @@ public partial class V1beta1QuickConnect : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1QuickConnectStatus? Status { get; set; }
 }
+#nullable disable

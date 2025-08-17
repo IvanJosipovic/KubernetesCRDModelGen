@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.signer.aws.upbound.io;
+#nullable enable
 /// <summary>SigningJob is the Schema for the SigningJobs API. Creates a Signer Signing Job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SigningJobList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1beta1SigningJob> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobSpecForProviderDestinationS3
@@ -46,7 +49,9 @@ public partial class V1beta1SigningJobSpecForProviderDestinationS3
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobSpecForProviderDestination
@@ -55,7 +60,9 @@ public partial class V1beta1SigningJobSpecForProviderDestination
     [JsonPropertyName("s3")]
     public IList<V1beta1SigningJobSpecForProviderDestinationS3>? S3 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobSpecForProviderProfileNameRefPolicy
@@ -68,7 +75,9 @@ public partial class V1beta1SigningJobSpecForProviderProfileNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SigningProfile in signer to populate profileName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobSpecForProviderProfileNameRef
@@ -81,7 +90,9 @@ public partial class V1beta1SigningJobSpecForProviderProfileNameRef
     [JsonPropertyName("policy")]
     public V1beta1SigningJobSpecForProviderProfileNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobSpecForProviderProfileNameSelectorPolicy
@@ -94,7 +105,9 @@ public partial class V1beta1SigningJobSpecForProviderProfileNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SigningProfile in signer to populate profileName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobSpecForProviderProfileNameSelector
@@ -111,7 +124,9 @@ public partial class V1beta1SigningJobSpecForProviderProfileNameSelector
     [JsonPropertyName("policy")]
     public V1beta1SigningJobSpecForProviderProfileNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobSpecForProviderSourceS3
@@ -128,7 +143,9 @@ public partial class V1beta1SigningJobSpecForProviderSourceS3
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobSpecForProviderSource
@@ -137,7 +154,9 @@ public partial class V1beta1SigningJobSpecForProviderSource
     [JsonPropertyName("s3")]
     public IList<V1beta1SigningJobSpecForProviderSourceS3>? S3 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobSpecForProvider
@@ -170,7 +189,9 @@ public partial class V1beta1SigningJobSpecForProvider
     [JsonPropertyName("source")]
     public IList<V1beta1SigningJobSpecForProviderSource>? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobSpecInitProviderDestinationS3
@@ -183,7 +204,9 @@ public partial class V1beta1SigningJobSpecInitProviderDestinationS3
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobSpecInitProviderDestination
@@ -192,7 +215,9 @@ public partial class V1beta1SigningJobSpecInitProviderDestination
     [JsonPropertyName("s3")]
     public IList<V1beta1SigningJobSpecInitProviderDestinationS3>? S3 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobSpecInitProviderProfileNameRefPolicy
@@ -205,7 +230,9 @@ public partial class V1beta1SigningJobSpecInitProviderProfileNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SigningProfile in signer to populate profileName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobSpecInitProviderProfileNameRef
@@ -218,7 +245,9 @@ public partial class V1beta1SigningJobSpecInitProviderProfileNameRef
     [JsonPropertyName("policy")]
     public V1beta1SigningJobSpecInitProviderProfileNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobSpecInitProviderProfileNameSelectorPolicy
@@ -231,7 +260,9 @@ public partial class V1beta1SigningJobSpecInitProviderProfileNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SigningProfile in signer to populate profileName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobSpecInitProviderProfileNameSelector
@@ -248,7 +279,9 @@ public partial class V1beta1SigningJobSpecInitProviderProfileNameSelector
     [JsonPropertyName("policy")]
     public V1beta1SigningJobSpecInitProviderProfileNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobSpecInitProviderSourceS3
@@ -265,7 +298,9 @@ public partial class V1beta1SigningJobSpecInitProviderSourceS3
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobSpecInitProviderSource
@@ -274,7 +309,9 @@ public partial class V1beta1SigningJobSpecInitProviderSource
     [JsonPropertyName("s3")]
     public IList<V1beta1SigningJobSpecInitProviderSourceS3>? S3 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobSpecInitProvider
@@ -303,7 +340,9 @@ public partial class V1beta1SigningJobSpecInitProvider
     [JsonPropertyName("source")]
     public IList<V1beta1SigningJobSpecInitProviderSource>? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobSpecProviderConfigRefPolicy
@@ -316,7 +355,9 @@ public partial class V1beta1SigningJobSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobSpecProviderConfigRef
@@ -329,7 +370,9 @@ public partial class V1beta1SigningJobSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1SigningJobSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobSpecWriteConnectionSecretToRef
@@ -342,7 +385,9 @@ public partial class V1beta1SigningJobSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SigningJobSpec defines the desired state of SigningJob</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobSpec
@@ -371,7 +416,9 @@ public partial class V1beta1SigningJobSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SigningJobSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobStatusAtProviderDestinationS3
@@ -384,7 +431,9 @@ public partial class V1beta1SigningJobStatusAtProviderDestinationS3
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobStatusAtProviderDestination
@@ -393,7 +442,9 @@ public partial class V1beta1SigningJobStatusAtProviderDestination
     [JsonPropertyName("s3")]
     public IList<V1beta1SigningJobStatusAtProviderDestinationS3>? S3 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobStatusAtProviderRevocationRecord
@@ -410,7 +461,9 @@ public partial class V1beta1SigningJobStatusAtProviderRevocationRecord
     [JsonPropertyName("revokedBy")]
     public string? RevokedBy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobStatusAtProviderSignedObjectS3
@@ -423,7 +476,9 @@ public partial class V1beta1SigningJobStatusAtProviderSignedObjectS3
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobStatusAtProviderSignedObject
@@ -432,7 +487,9 @@ public partial class V1beta1SigningJobStatusAtProviderSignedObject
     [JsonPropertyName("s3")]
     public IList<V1beta1SigningJobStatusAtProviderSignedObjectS3>? S3 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobStatusAtProviderSourceS3
@@ -449,7 +506,9 @@ public partial class V1beta1SigningJobStatusAtProviderSourceS3
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobStatusAtProviderSource
@@ -458,7 +517,9 @@ public partial class V1beta1SigningJobStatusAtProviderSource
     [JsonPropertyName("s3")]
     public IList<V1beta1SigningJobStatusAtProviderSourceS3>? S3 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobStatusAtProvider
@@ -543,7 +604,9 @@ public partial class V1beta1SigningJobStatusAtProvider
     [JsonPropertyName("statusReason")]
     public string? StatusReason { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobStatusConditions
@@ -572,7 +635,9 @@ public partial class V1beta1SigningJobStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SigningJobStatus defines the observed state of SigningJob.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobStatus
@@ -589,7 +654,9 @@ public partial class V1beta1SigningJobStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SigningJob is the Schema for the SigningJobs API. Creates a Signer Signing Job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -619,3 +686,4 @@ public partial class V1beta1SigningJob : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1SigningJobStatus? Status { get; set; }
 }
+#nullable disable

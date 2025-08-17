@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appautoscaling.aws.m.upbound.io;
+#nullable enable
 /// <summary>ScheduledAction is the Schema for the ScheduledActions API. Provides an Application AutoScaling ScheduledAction resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ScheduledActionList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1ScheduledAction> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecForProviderResourceIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ScheduledActionSpecForProviderResourceIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Target in appautoscaling to populate resourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecForProviderResourceIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1ScheduledActionSpecForProviderResourceIdRef
     [JsonPropertyName("policy")]
     public V1beta1ScheduledActionSpecForProviderResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecForProviderResourceIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1ScheduledActionSpecForProviderResourceIdSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Target in appautoscaling to populate resourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecForProviderResourceIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1ScheduledActionSpecForProviderResourceIdSelector
     [JsonPropertyName("policy")]
     public V1beta1ScheduledActionSpecForProviderResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecForProviderScalableDimensionRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1ScheduledActionSpecForProviderScalableDimensionRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Target in appautoscaling to populate scalableDimension.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecForProviderScalableDimensionRef
@@ -127,7 +140,9 @@ public partial class V1beta1ScheduledActionSpecForProviderScalableDimensionRef
     [JsonPropertyName("policy")]
     public V1beta1ScheduledActionSpecForProviderScalableDimensionRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecForProviderScalableDimensionSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1ScheduledActionSpecForProviderScalableDimensionSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Target in appautoscaling to populate scalableDimension.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecForProviderScalableDimensionSelector
@@ -161,7 +178,9 @@ public partial class V1beta1ScheduledActionSpecForProviderScalableDimensionSelec
     [JsonPropertyName("policy")]
     public V1beta1ScheduledActionSpecForProviderScalableDimensionSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>New minimum and maximum capacity. You can set both values or just one. See below</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecForProviderScalableTargetAction
@@ -174,7 +193,9 @@ public partial class V1beta1ScheduledActionSpecForProviderScalableTargetAction
     [JsonPropertyName("minCapacity")]
     public string? MinCapacity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecForProviderServiceNamespaceRefPolicy
@@ -187,7 +208,9 @@ public partial class V1beta1ScheduledActionSpecForProviderServiceNamespaceRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Target in appautoscaling to populate serviceNamespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecForProviderServiceNamespaceRef
@@ -204,7 +227,9 @@ public partial class V1beta1ScheduledActionSpecForProviderServiceNamespaceRef
     [JsonPropertyName("policy")]
     public V1beta1ScheduledActionSpecForProviderServiceNamespaceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecForProviderServiceNamespaceSelectorPolicy
@@ -217,7 +242,9 @@ public partial class V1beta1ScheduledActionSpecForProviderServiceNamespaceSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Target in appautoscaling to populate serviceNamespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecForProviderServiceNamespaceSelector
@@ -238,7 +265,9 @@ public partial class V1beta1ScheduledActionSpecForProviderServiceNamespaceSelect
     [JsonPropertyName("policy")]
     public V1beta1ScheduledActionSpecForProviderServiceNamespaceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecForProvider
@@ -307,7 +336,9 @@ public partial class V1beta1ScheduledActionSpecForProvider
     [JsonPropertyName("timezone")]
     public string? Timezone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecInitProviderResourceIdRefPolicy
@@ -320,7 +351,9 @@ public partial class V1beta1ScheduledActionSpecInitProviderResourceIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Target in appautoscaling to populate resourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecInitProviderResourceIdRef
@@ -337,7 +370,9 @@ public partial class V1beta1ScheduledActionSpecInitProviderResourceIdRef
     [JsonPropertyName("policy")]
     public V1beta1ScheduledActionSpecInitProviderResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecInitProviderResourceIdSelectorPolicy
@@ -350,7 +385,9 @@ public partial class V1beta1ScheduledActionSpecInitProviderResourceIdSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Target in appautoscaling to populate resourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecInitProviderResourceIdSelector
@@ -371,7 +408,9 @@ public partial class V1beta1ScheduledActionSpecInitProviderResourceIdSelector
     [JsonPropertyName("policy")]
     public V1beta1ScheduledActionSpecInitProviderResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecInitProviderScalableDimensionRefPolicy
@@ -384,7 +423,9 @@ public partial class V1beta1ScheduledActionSpecInitProviderScalableDimensionRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Target in appautoscaling to populate scalableDimension.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecInitProviderScalableDimensionRef
@@ -401,7 +442,9 @@ public partial class V1beta1ScheduledActionSpecInitProviderScalableDimensionRef
     [JsonPropertyName("policy")]
     public V1beta1ScheduledActionSpecInitProviderScalableDimensionRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecInitProviderScalableDimensionSelectorPolicy
@@ -414,7 +457,9 @@ public partial class V1beta1ScheduledActionSpecInitProviderScalableDimensionSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Target in appautoscaling to populate scalableDimension.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecInitProviderScalableDimensionSelector
@@ -435,7 +480,9 @@ public partial class V1beta1ScheduledActionSpecInitProviderScalableDimensionSele
     [JsonPropertyName("policy")]
     public V1beta1ScheduledActionSpecInitProviderScalableDimensionSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>New minimum and maximum capacity. You can set both values or just one. See below</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecInitProviderScalableTargetAction
@@ -448,7 +495,9 @@ public partial class V1beta1ScheduledActionSpecInitProviderScalableTargetAction
     [JsonPropertyName("minCapacity")]
     public string? MinCapacity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecInitProviderServiceNamespaceRefPolicy
@@ -461,7 +510,9 @@ public partial class V1beta1ScheduledActionSpecInitProviderServiceNamespaceRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Target in appautoscaling to populate serviceNamespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecInitProviderServiceNamespaceRef
@@ -478,7 +529,9 @@ public partial class V1beta1ScheduledActionSpecInitProviderServiceNamespaceRef
     [JsonPropertyName("policy")]
     public V1beta1ScheduledActionSpecInitProviderServiceNamespaceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecInitProviderServiceNamespaceSelectorPolicy
@@ -491,7 +544,9 @@ public partial class V1beta1ScheduledActionSpecInitProviderServiceNamespaceSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Target in appautoscaling to populate serviceNamespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecInitProviderServiceNamespaceSelector
@@ -512,7 +567,9 @@ public partial class V1beta1ScheduledActionSpecInitProviderServiceNamespaceSelec
     [JsonPropertyName("policy")]
     public V1beta1ScheduledActionSpecInitProviderServiceNamespaceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecInitProvider
@@ -577,7 +634,9 @@ public partial class V1beta1ScheduledActionSpecInitProvider
     [JsonPropertyName("timezone")]
     public string? Timezone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecProviderConfigRef
@@ -590,7 +649,9 @@ public partial class V1beta1ScheduledActionSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecWriteConnectionSecretToRef
@@ -599,7 +660,9 @@ public partial class V1beta1ScheduledActionSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ScheduledActionSpec defines the desired state of ScheduledAction</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpec
@@ -624,7 +687,9 @@ public partial class V1beta1ScheduledActionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ScheduledActionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>New minimum and maximum capacity. You can set both values or just one. See below</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionStatusAtProviderScalableTargetAction
@@ -637,7 +702,9 @@ public partial class V1beta1ScheduledActionStatusAtProviderScalableTargetAction
     [JsonPropertyName("minCapacity")]
     public string? MinCapacity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionStatusAtProvider
@@ -690,7 +757,9 @@ public partial class V1beta1ScheduledActionStatusAtProvider
     [JsonPropertyName("timezone")]
     public string? Timezone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionStatusConditions
@@ -719,7 +788,9 @@ public partial class V1beta1ScheduledActionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ScheduledActionStatus defines the observed state of ScheduledAction.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionStatus
@@ -736,7 +807,9 @@ public partial class V1beta1ScheduledActionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ScheduledAction is the Schema for the ScheduledActions API. Provides an Application AutoScaling ScheduledAction resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -766,3 +839,4 @@ public partial class V1beta1ScheduledAction : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1ScheduledActionStatus? Status { get; set; }
 }
+#nullable disable

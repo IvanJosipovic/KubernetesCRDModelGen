@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudidentity.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>CloudIdentityGroup is the Schema for the CloudIdentityGroup API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1CloudIdentityGroupList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1CloudIdentityGroup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. EntityKey of the Group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityGroupSpecGroupKey
@@ -46,7 +49,9 @@ public partial class V1beta1CloudIdentityGroupSpecGroupKey
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CloudIdentityGroupSpec defines the desired state of CloudIdentityGroup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityGroupSpec
@@ -79,7 +84,9 @@ public partial class V1beta1CloudIdentityGroupSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityGroupStatusConditions
@@ -104,7 +111,9 @@ public partial class V1beta1CloudIdentityGroupStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityGroupStatusObservedStateAdditionalGroupKeys
@@ -117,7 +126,9 @@ public partial class V1beta1CloudIdentityGroupStatusObservedStateAdditionalGroup
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityGroupStatusObservedState
@@ -126,7 +137,9 @@ public partial class V1beta1CloudIdentityGroupStatusObservedState
     [JsonPropertyName("additionalGroupKeys")]
     public IList<V1beta1CloudIdentityGroupStatusObservedStateAdditionalGroupKeys>? AdditionalGroupKeys { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CloudIdentityGroupStatus defines the config connector machine state of CloudIdentityGroup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudIdentityGroupStatus
@@ -159,7 +172,9 @@ public partial class V1beta1CloudIdentityGroupStatus
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CloudIdentityGroup is the Schema for the CloudIdentityGroup API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -189,3 +204,4 @@ public partial class V1beta1CloudIdentityGroup : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1CloudIdentityGroupStatus? Status { get; set; }
 }
+#nullable disable

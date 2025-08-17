@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+#nullable enable
 /// <summary>ExpressRouteConnection is the Schema for the ExpressRouteConnections API. Manages an Express Route Connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ExpressRouteConnectionList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1ExpressRouteConnection> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteConnectionSpecForProviderExpressRouteCircuitPeeringIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ExpressRouteConnectionSpecForProviderExpressRouteCir
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ExpressRouteCircuitPeering in network to populate expressRouteCircuitPeeringId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteConnectionSpecForProviderExpressRouteCircuitPeeringIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1ExpressRouteConnectionSpecForProviderExpressRouteCir
     [JsonPropertyName("policy")]
     public V1beta1ExpressRouteConnectionSpecForProviderExpressRouteCircuitPeeringIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteConnectionSpecForProviderExpressRouteCircuitPeeringIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1ExpressRouteConnectionSpecForProviderExpressRouteCir
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ExpressRouteCircuitPeering in network to populate expressRouteCircuitPeeringId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteConnectionSpecForProviderExpressRouteCircuitPeeringIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1ExpressRouteConnectionSpecForProviderExpressRouteCir
     [JsonPropertyName("policy")]
     public V1beta1ExpressRouteConnectionSpecForProviderExpressRouteCircuitPeeringIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteConnectionSpecForProviderExpressRouteGatewayIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1ExpressRouteConnectionSpecForProviderExpressRouteGat
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ExpressRouteGateway in network to populate expressRouteGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteConnectionSpecForProviderExpressRouteGatewayIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1ExpressRouteConnectionSpecForProviderExpressRouteGat
     [JsonPropertyName("policy")]
     public V1beta1ExpressRouteConnectionSpecForProviderExpressRouteGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteConnectionSpecForProviderExpressRouteGatewayIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1ExpressRouteConnectionSpecForProviderExpressRouteGat
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ExpressRouteGateway in network to populate expressRouteGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteConnectionSpecForProviderExpressRouteGatewayIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1ExpressRouteConnectionSpecForProviderExpressRouteGat
     [JsonPropertyName("policy")]
     public V1beta1ExpressRouteConnectionSpecForProviderExpressRouteGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteConnectionSpecForProviderRoutingPropagatedRouteTable
@@ -158,7 +177,9 @@ public partial class V1beta1ExpressRouteConnectionSpecForProviderRoutingPropagat
     [JsonPropertyName("routeTableIds")]
     public IList<string>? RouteTableIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteConnectionSpecForProviderRouting
@@ -179,7 +200,9 @@ public partial class V1beta1ExpressRouteConnectionSpecForProviderRouting
     [JsonPropertyName("propagatedRouteTable")]
     public IList<V1beta1ExpressRouteConnectionSpecForProviderRoutingPropagatedRouteTable>? PropagatedRouteTable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteConnectionSpecForProvider
@@ -232,7 +255,9 @@ public partial class V1beta1ExpressRouteConnectionSpecForProvider
     [JsonPropertyName("routingWeight")]
     public double? RoutingWeight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteConnectionSpecInitProviderExpressRouteCircuitPeeringIdRefPolicy
@@ -245,7 +270,9 @@ public partial class V1beta1ExpressRouteConnectionSpecInitProviderExpressRouteCi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ExpressRouteCircuitPeering in network to populate expressRouteCircuitPeeringId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteConnectionSpecInitProviderExpressRouteCircuitPeeringIdRef
@@ -258,7 +285,9 @@ public partial class V1beta1ExpressRouteConnectionSpecInitProviderExpressRouteCi
     [JsonPropertyName("policy")]
     public V1beta1ExpressRouteConnectionSpecInitProviderExpressRouteCircuitPeeringIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteConnectionSpecInitProviderExpressRouteCircuitPeeringIdSelectorPolicy
@@ -271,7 +300,9 @@ public partial class V1beta1ExpressRouteConnectionSpecInitProviderExpressRouteCi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ExpressRouteCircuitPeering in network to populate expressRouteCircuitPeeringId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteConnectionSpecInitProviderExpressRouteCircuitPeeringIdSelector
@@ -288,7 +319,9 @@ public partial class V1beta1ExpressRouteConnectionSpecInitProviderExpressRouteCi
     [JsonPropertyName("policy")]
     public V1beta1ExpressRouteConnectionSpecInitProviderExpressRouteCircuitPeeringIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteConnectionSpecInitProviderRoutingPropagatedRouteTable
@@ -301,7 +334,9 @@ public partial class V1beta1ExpressRouteConnectionSpecInitProviderRoutingPropaga
     [JsonPropertyName("routeTableIds")]
     public IList<string>? RouteTableIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteConnectionSpecInitProviderRouting
@@ -322,7 +357,9 @@ public partial class V1beta1ExpressRouteConnectionSpecInitProviderRouting
     [JsonPropertyName("propagatedRouteTable")]
     public IList<V1beta1ExpressRouteConnectionSpecInitProviderRoutingPropagatedRouteTable>? PropagatedRouteTable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteConnectionSpecInitProvider
@@ -363,7 +400,9 @@ public partial class V1beta1ExpressRouteConnectionSpecInitProvider
     [JsonPropertyName("routingWeight")]
     public double? RoutingWeight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteConnectionSpecProviderConfigRefPolicy
@@ -376,7 +415,9 @@ public partial class V1beta1ExpressRouteConnectionSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteConnectionSpecProviderConfigRef
@@ -389,7 +430,9 @@ public partial class V1beta1ExpressRouteConnectionSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ExpressRouteConnectionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteConnectionSpecWriteConnectionSecretToRef
@@ -402,7 +445,9 @@ public partial class V1beta1ExpressRouteConnectionSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExpressRouteConnectionSpec defines the desired state of ExpressRouteConnection</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteConnectionSpec
@@ -431,7 +476,9 @@ public partial class V1beta1ExpressRouteConnectionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ExpressRouteConnectionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteConnectionStatusAtProviderRoutingPropagatedRouteTable
@@ -444,7 +491,9 @@ public partial class V1beta1ExpressRouteConnectionStatusAtProviderRoutingPropaga
     [JsonPropertyName("routeTableIds")]
     public IList<string>? RouteTableIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteConnectionStatusAtProviderRouting
@@ -465,7 +514,9 @@ public partial class V1beta1ExpressRouteConnectionStatusAtProviderRouting
     [JsonPropertyName("propagatedRouteTable")]
     public IList<V1beta1ExpressRouteConnectionStatusAtProviderRoutingPropagatedRouteTable>? PropagatedRouteTable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteConnectionStatusAtProvider
@@ -506,7 +557,9 @@ public partial class V1beta1ExpressRouteConnectionStatusAtProvider
     [JsonPropertyName("routingWeight")]
     public double? RoutingWeight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteConnectionStatusConditions
@@ -535,7 +588,9 @@ public partial class V1beta1ExpressRouteConnectionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExpressRouteConnectionStatus defines the observed state of ExpressRouteConnection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteConnectionStatus
@@ -552,7 +607,9 @@ public partial class V1beta1ExpressRouteConnectionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExpressRouteConnection is the Schema for the ExpressRouteConnections API. Manages an Express Route Connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -582,3 +639,4 @@ public partial class V1beta1ExpressRouteConnection : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1ExpressRouteConnectionStatus? Status { get; set; }
 }
+#nullable disable

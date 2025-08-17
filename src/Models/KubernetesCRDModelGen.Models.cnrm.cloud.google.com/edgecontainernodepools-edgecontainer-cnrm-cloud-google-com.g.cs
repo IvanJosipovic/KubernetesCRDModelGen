@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.edgecontainer.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1EdgeContainerNodePoolList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1EdgeContainerNodePool> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerNodePoolSpecClusterRef
@@ -50,7 +53,9 @@ public partial class V1beta1EdgeContainerNodePoolSpecClusterRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerNodePoolSpecLocalDiskEncryptionKmsKeyRef
@@ -67,7 +72,9 @@ public partial class V1beta1EdgeContainerNodePoolSpecLocalDiskEncryptionKmsKeyRe
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Local disk encryption options. This field is only used when enabling CMEK support.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerNodePoolSpecLocalDiskEncryption
@@ -84,7 +91,9 @@ public partial class V1beta1EdgeContainerNodePoolSpecLocalDiskEncryption
     [JsonPropertyName("kmsKeyState")]
     public string? KmsKeyState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for each node in the NodePool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerNodePoolSpecNodeConfig
@@ -93,7 +102,9 @@ public partial class V1beta1EdgeContainerNodePoolSpecNodeConfig
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerNodePoolSpecProjectRef
@@ -110,7 +121,9 @@ public partial class V1beta1EdgeContainerNodePoolSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerNodePoolSpec
@@ -151,7 +164,9 @@ public partial class V1beta1EdgeContainerNodePoolSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerNodePoolStatusConditions
@@ -176,7 +191,9 @@ public partial class V1beta1EdgeContainerNodePoolStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerNodePoolStatus
@@ -201,7 +218,9 @@ public partial class V1beta1EdgeContainerNodePoolStatus
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -231,3 +250,4 @@ public partial class V1beta1EdgeContainerNodePool : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1EdgeContainerNodePoolStatus? Status { get; set; }
 }
+#nullable disable

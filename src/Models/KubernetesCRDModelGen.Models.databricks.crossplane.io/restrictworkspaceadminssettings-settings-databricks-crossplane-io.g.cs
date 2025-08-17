@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.settings.databricks.crossplane.io;
+#nullable enable
 /// <summary>RestrictWorkspaceAdminsSetting is the Schema for the RestrictWorkspaceAdminsSettings API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1RestrictWorkspaceAdminsSettingList : IKubernetesObj
     [JsonPropertyName("items")]
     public IList<V1alpha1RestrictWorkspaceAdminsSetting> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RestrictWorkspaceAdminsSettingSpecForProviderRestrictWorkspaceAdmins
@@ -42,7 +45,9 @@ public partial class V1alpha1RestrictWorkspaceAdminsSettingSpecForProviderRestri
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RestrictWorkspaceAdminsSettingSpecForProvider
@@ -59,7 +64,9 @@ public partial class V1alpha1RestrictWorkspaceAdminsSettingSpecForProvider
     [JsonPropertyName("settingName")]
     public string? SettingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RestrictWorkspaceAdminsSettingSpecInitProviderRestrictWorkspaceAdmins
@@ -68,7 +75,9 @@ public partial class V1alpha1RestrictWorkspaceAdminsSettingSpecInitProviderRestr
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RestrictWorkspaceAdminsSettingSpecInitProvider
@@ -85,7 +94,9 @@ public partial class V1alpha1RestrictWorkspaceAdminsSettingSpecInitProvider
     [JsonPropertyName("settingName")]
     public string? SettingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RestrictWorkspaceAdminsSettingSpecProviderConfigRefPolicy
@@ -98,7 +109,9 @@ public partial class V1alpha1RestrictWorkspaceAdminsSettingSpecProviderConfigRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RestrictWorkspaceAdminsSettingSpecProviderConfigRef
@@ -111,7 +124,9 @@ public partial class V1alpha1RestrictWorkspaceAdminsSettingSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1RestrictWorkspaceAdminsSettingSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RestrictWorkspaceAdminsSettingSpecPublishConnectionDetailsToConfigRefPolicy
@@ -124,7 +139,9 @@ public partial class V1alpha1RestrictWorkspaceAdminsSettingSpecPublishConnection
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RestrictWorkspaceAdminsSettingSpecPublishConnectionDetailsToConfigRef
@@ -137,7 +154,9 @@ public partial class V1alpha1RestrictWorkspaceAdminsSettingSpecPublishConnection
     [JsonPropertyName("policy")]
     public V1alpha1RestrictWorkspaceAdminsSettingSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Metadata is the metadata for connection secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RestrictWorkspaceAdminsSettingSpecPublishConnectionDetailsToMetadata
@@ -154,7 +173,9 @@ public partial class V1alpha1RestrictWorkspaceAdminsSettingSpecPublishConnection
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RestrictWorkspaceAdminsSettingSpecPublishConnectionDetailsTo
@@ -171,7 +192,9 @@ public partial class V1alpha1RestrictWorkspaceAdminsSettingSpecPublishConnection
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RestrictWorkspaceAdminsSettingSpecWriteConnectionSecretToRef
@@ -184,7 +207,9 @@ public partial class V1alpha1RestrictWorkspaceAdminsSettingSpecWriteConnectionSe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RestrictWorkspaceAdminsSettingSpec defines the desired state of RestrictWorkspaceAdminsSetting</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RestrictWorkspaceAdminsSettingSpec
@@ -217,7 +242,9 @@ public partial class V1alpha1RestrictWorkspaceAdminsSettingSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1alpha1RestrictWorkspaceAdminsSettingSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RestrictWorkspaceAdminsSettingStatusAtProviderRestrictWorkspaceAdmins
@@ -226,7 +253,9 @@ public partial class V1alpha1RestrictWorkspaceAdminsSettingStatusAtProviderRestr
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RestrictWorkspaceAdminsSettingStatusAtProvider
@@ -247,7 +276,9 @@ public partial class V1alpha1RestrictWorkspaceAdminsSettingStatusAtProvider
     [JsonPropertyName("settingName")]
     public string? SettingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RestrictWorkspaceAdminsSettingStatusConditions
@@ -276,7 +307,9 @@ public partial class V1alpha1RestrictWorkspaceAdminsSettingStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RestrictWorkspaceAdminsSettingStatus defines the observed state of RestrictWorkspaceAdminsSetting.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RestrictWorkspaceAdminsSettingStatus
@@ -293,7 +326,9 @@ public partial class V1alpha1RestrictWorkspaceAdminsSettingStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RestrictWorkspaceAdminsSetting is the Schema for the RestrictWorkspaceAdminsSettings API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -323,3 +358,4 @@ public partial class V1alpha1RestrictWorkspaceAdminsSetting : IKubernetesObject<
     [JsonPropertyName("status")]
     public V1alpha1RestrictWorkspaceAdminsSettingStatus? Status { get; set; }
 }
+#nullable disable

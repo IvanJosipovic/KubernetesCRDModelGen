@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appplatform.azure.m.upbound.io;
+#nullable enable
 /// <summary>SpringCloudDevToolPortal is the Schema for the SpringCloudDevToolPortals API. Manages a Spring Cloud Dev Tool Portal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SpringCloudDevToolPortalList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1SpringCloudDevToolPortal> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudDevToolPortalSpecForProviderSpringCloudServiceIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SpringCloudDevToolPortalSpecForProviderSpringCloudSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SpringCloudService in appplatform to populate springCloudServiceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudDevToolPortalSpecForProviderSpringCloudServiceIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1SpringCloudDevToolPortalSpecForProviderSpringCloudSe
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudDevToolPortalSpecForProviderSpringCloudServiceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudDevToolPortalSpecForProviderSpringCloudServiceIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1SpringCloudDevToolPortalSpecForProviderSpringCloudSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SpringCloudService in appplatform to populate springCloudServiceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudDevToolPortalSpecForProviderSpringCloudServiceIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1SpringCloudDevToolPortalSpecForProviderSpringCloudSe
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudDevToolPortalSpecForProviderSpringCloudServiceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A sso block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudDevToolPortalSpecForProviderSso
@@ -118,7 +129,9 @@ public partial class V1beta1SpringCloudDevToolPortalSpecForProviderSso
     [JsonPropertyName("scope")]
     public IList<string>? Scope { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudDevToolPortalSpecForProvider
@@ -155,7 +168,9 @@ public partial class V1beta1SpringCloudDevToolPortalSpecForProvider
     [JsonPropertyName("sso")]
     public V1beta1SpringCloudDevToolPortalSpecForProviderSso? Sso { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudDevToolPortalSpecInitProviderSpringCloudServiceIdRefPolicy
@@ -168,7 +183,9 @@ public partial class V1beta1SpringCloudDevToolPortalSpecInitProviderSpringCloudS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SpringCloudService in appplatform to populate springCloudServiceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudDevToolPortalSpecInitProviderSpringCloudServiceIdRef
@@ -185,7 +202,9 @@ public partial class V1beta1SpringCloudDevToolPortalSpecInitProviderSpringCloudS
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudDevToolPortalSpecInitProviderSpringCloudServiceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudDevToolPortalSpecInitProviderSpringCloudServiceIdSelectorPolicy
@@ -198,7 +217,9 @@ public partial class V1beta1SpringCloudDevToolPortalSpecInitProviderSpringCloudS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SpringCloudService in appplatform to populate springCloudServiceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudDevToolPortalSpecInitProviderSpringCloudServiceIdSelector
@@ -219,7 +240,9 @@ public partial class V1beta1SpringCloudDevToolPortalSpecInitProviderSpringCloudS
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudDevToolPortalSpecInitProviderSpringCloudServiceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A sso block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudDevToolPortalSpecInitProviderSso
@@ -240,7 +263,9 @@ public partial class V1beta1SpringCloudDevToolPortalSpecInitProviderSso
     [JsonPropertyName("scope")]
     public IList<string>? Scope { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudDevToolPortalSpecInitProvider
@@ -277,7 +302,9 @@ public partial class V1beta1SpringCloudDevToolPortalSpecInitProvider
     [JsonPropertyName("sso")]
     public V1beta1SpringCloudDevToolPortalSpecInitProviderSso? Sso { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudDevToolPortalSpecProviderConfigRef
@@ -290,7 +317,9 @@ public partial class V1beta1SpringCloudDevToolPortalSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudDevToolPortalSpecWriteConnectionSecretToRef
@@ -299,7 +328,9 @@ public partial class V1beta1SpringCloudDevToolPortalSpecWriteConnectionSecretToR
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudDevToolPortalSpec defines the desired state of SpringCloudDevToolPortal</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudDevToolPortalSpec
@@ -324,7 +355,9 @@ public partial class V1beta1SpringCloudDevToolPortalSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SpringCloudDevToolPortalSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A sso block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudDevToolPortalStatusAtProviderSso
@@ -345,7 +378,9 @@ public partial class V1beta1SpringCloudDevToolPortalStatusAtProviderSso
     [JsonPropertyName("scope")]
     public IList<string>? Scope { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudDevToolPortalStatusAtProvider
@@ -378,7 +413,9 @@ public partial class V1beta1SpringCloudDevToolPortalStatusAtProvider
     [JsonPropertyName("sso")]
     public V1beta1SpringCloudDevToolPortalStatusAtProviderSso? Sso { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudDevToolPortalStatusConditions
@@ -407,7 +444,9 @@ public partial class V1beta1SpringCloudDevToolPortalStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudDevToolPortalStatus defines the observed state of SpringCloudDevToolPortal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudDevToolPortalStatus
@@ -424,7 +463,9 @@ public partial class V1beta1SpringCloudDevToolPortalStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudDevToolPortal is the Schema for the SpringCloudDevToolPortals API. Manages a Spring Cloud Dev Tool Portal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -454,3 +495,4 @@ public partial class V1beta1SpringCloudDevToolPortal : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1SpringCloudDevToolPortalStatus? Status { get; set; }
 }
+#nullable disable

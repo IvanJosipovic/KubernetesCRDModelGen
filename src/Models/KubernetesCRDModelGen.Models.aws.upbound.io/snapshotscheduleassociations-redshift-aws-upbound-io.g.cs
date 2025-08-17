@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.redshift.aws.upbound.io;
+#nullable enable
 /// <summary>SnapshotScheduleAssociation is the Schema for the SnapshotScheduleAssociations API. Provides an Association Redshift Cluster and Snapshot Schedule resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SnapshotScheduleAssociationList : IKubernetesObject<
     [JsonPropertyName("items")]
     public IList<V1beta1SnapshotScheduleAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecForProviderClusterIdentifierRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SnapshotScheduleAssociationSpecForProviderClusterIde
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in redshift to populate clusterIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecForProviderClusterIdentifierRef
@@ -59,7 +64,9 @@ public partial class V1beta1SnapshotScheduleAssociationSpecForProviderClusterIde
     [JsonPropertyName("policy")]
     public V1beta1SnapshotScheduleAssociationSpecForProviderClusterIdentifierRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecForProviderClusterIdentifierSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1SnapshotScheduleAssociationSpecForProviderClusterIde
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in redshift to populate clusterIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecForProviderClusterIdentifierSelector
@@ -89,7 +98,9 @@ public partial class V1beta1SnapshotScheduleAssociationSpecForProviderClusterIde
     [JsonPropertyName("policy")]
     public V1beta1SnapshotScheduleAssociationSpecForProviderClusterIdentifierSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecForProviderScheduleIdentifierRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1SnapshotScheduleAssociationSpecForProviderScheduleId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SnapshotSchedule in redshift to populate scheduleIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecForProviderScheduleIdentifierRef
@@ -115,7 +128,9 @@ public partial class V1beta1SnapshotScheduleAssociationSpecForProviderScheduleId
     [JsonPropertyName("policy")]
     public V1beta1SnapshotScheduleAssociationSpecForProviderScheduleIdentifierRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecForProviderScheduleIdentifierSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1SnapshotScheduleAssociationSpecForProviderScheduleId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SnapshotSchedule in redshift to populate scheduleIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecForProviderScheduleIdentifierSelector
@@ -145,7 +162,9 @@ public partial class V1beta1SnapshotScheduleAssociationSpecForProviderScheduleId
     [JsonPropertyName("policy")]
     public V1beta1SnapshotScheduleAssociationSpecForProviderScheduleIdentifierSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecForProvider
@@ -178,7 +197,9 @@ public partial class V1beta1SnapshotScheduleAssociationSpecForProvider
     [JsonPropertyName("scheduleIdentifierSelector")]
     public V1beta1SnapshotScheduleAssociationSpecForProviderScheduleIdentifierSelector? ScheduleIdentifierSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecInitProviderClusterIdentifierRefPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1SnapshotScheduleAssociationSpecInitProviderClusterId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in redshift to populate clusterIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecInitProviderClusterIdentifierRef
@@ -204,7 +227,9 @@ public partial class V1beta1SnapshotScheduleAssociationSpecInitProviderClusterId
     [JsonPropertyName("policy")]
     public V1beta1SnapshotScheduleAssociationSpecInitProviderClusterIdentifierRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecInitProviderClusterIdentifierSelectorPolicy
@@ -217,7 +242,9 @@ public partial class V1beta1SnapshotScheduleAssociationSpecInitProviderClusterId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in redshift to populate clusterIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecInitProviderClusterIdentifierSelector
@@ -234,7 +261,9 @@ public partial class V1beta1SnapshotScheduleAssociationSpecInitProviderClusterId
     [JsonPropertyName("policy")]
     public V1beta1SnapshotScheduleAssociationSpecInitProviderClusterIdentifierSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecInitProviderScheduleIdentifierRefPolicy
@@ -247,7 +276,9 @@ public partial class V1beta1SnapshotScheduleAssociationSpecInitProviderScheduleI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SnapshotSchedule in redshift to populate scheduleIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecInitProviderScheduleIdentifierRef
@@ -260,7 +291,9 @@ public partial class V1beta1SnapshotScheduleAssociationSpecInitProviderScheduleI
     [JsonPropertyName("policy")]
     public V1beta1SnapshotScheduleAssociationSpecInitProviderScheduleIdentifierRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecInitProviderScheduleIdentifierSelectorPolicy
@@ -273,7 +306,9 @@ public partial class V1beta1SnapshotScheduleAssociationSpecInitProviderScheduleI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SnapshotSchedule in redshift to populate scheduleIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecInitProviderScheduleIdentifierSelector
@@ -290,7 +325,9 @@ public partial class V1beta1SnapshotScheduleAssociationSpecInitProviderScheduleI
     [JsonPropertyName("policy")]
     public V1beta1SnapshotScheduleAssociationSpecInitProviderScheduleIdentifierSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecInitProvider
@@ -319,7 +356,9 @@ public partial class V1beta1SnapshotScheduleAssociationSpecInitProvider
     [JsonPropertyName("scheduleIdentifierSelector")]
     public V1beta1SnapshotScheduleAssociationSpecInitProviderScheduleIdentifierSelector? ScheduleIdentifierSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecProviderConfigRefPolicy
@@ -332,7 +371,9 @@ public partial class V1beta1SnapshotScheduleAssociationSpecProviderConfigRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecProviderConfigRef
@@ -345,7 +386,9 @@ public partial class V1beta1SnapshotScheduleAssociationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1SnapshotScheduleAssociationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecWriteConnectionSecretToRef
@@ -358,7 +401,9 @@ public partial class V1beta1SnapshotScheduleAssociationSpecWriteConnectionSecret
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SnapshotScheduleAssociationSpec defines the desired state of SnapshotScheduleAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpec
@@ -387,7 +432,9 @@ public partial class V1beta1SnapshotScheduleAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SnapshotScheduleAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationStatusAtProvider
@@ -408,7 +455,9 @@ public partial class V1beta1SnapshotScheduleAssociationStatusAtProvider
     [JsonPropertyName("scheduleIdentifier")]
     public string? ScheduleIdentifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationStatusConditions
@@ -437,7 +486,9 @@ public partial class V1beta1SnapshotScheduleAssociationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SnapshotScheduleAssociationStatus defines the observed state of SnapshotScheduleAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationStatus
@@ -454,7 +505,9 @@ public partial class V1beta1SnapshotScheduleAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SnapshotScheduleAssociation is the Schema for the SnapshotScheduleAssociations API. Provides an Association Redshift Cluster and Snapshot Schedule resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -484,3 +537,4 @@ public partial class V1beta1SnapshotScheduleAssociation : IKubernetesObject<V1Ob
     [JsonPropertyName("status")]
     public V1beta1SnapshotScheduleAssociationStatus? Status { get; set; }
 }
+#nullable disable

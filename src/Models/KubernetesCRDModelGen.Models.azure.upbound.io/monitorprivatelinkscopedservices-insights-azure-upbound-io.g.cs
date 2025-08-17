@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.upbound.io;
+#nullable enable
 /// <summary>MonitorPrivateLinkScopedService is the Schema for the MonitorPrivateLinkScopedServices API. Manages an Azure Monitor Private Link Scoped Service</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MonitorPrivateLinkScopedServiceList : IKubernetesObj
     [JsonPropertyName("items")]
     public IList<V1beta1MonitorPrivateLinkScopedService> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorPrivateLinkScopedServiceSpecForProviderLinkedResourceIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1MonitorPrivateLinkScopedServiceSpecForProviderLinked
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ApplicationInsights in insights to populate linkedResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorPrivateLinkScopedServiceSpecForProviderLinkedResourceIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1MonitorPrivateLinkScopedServiceSpecForProviderLinked
     [JsonPropertyName("policy")]
     public V1beta1MonitorPrivateLinkScopedServiceSpecForProviderLinkedResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorPrivateLinkScopedServiceSpecForProviderLinkedResourceIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1MonitorPrivateLinkScopedServiceSpecForProviderLinked
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ApplicationInsights in insights to populate linkedResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorPrivateLinkScopedServiceSpecForProviderLinkedResourceIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1MonitorPrivateLinkScopedServiceSpecForProviderLinked
     [JsonPropertyName("policy")]
     public V1beta1MonitorPrivateLinkScopedServiceSpecForProviderLinkedResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorPrivateLinkScopedServiceSpecForProviderResourceGroupNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1MonitorPrivateLinkScopedServiceSpecForProviderResour
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorPrivateLinkScopedServiceSpecForProviderResourceGroupNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1MonitorPrivateLinkScopedServiceSpecForProviderResour
     [JsonPropertyName("policy")]
     public V1beta1MonitorPrivateLinkScopedServiceSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorPrivateLinkScopedServiceSpecForProviderResourceGroupNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1MonitorPrivateLinkScopedServiceSpecForProviderResour
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorPrivateLinkScopedServiceSpecForProviderResourceGroupNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1MonitorPrivateLinkScopedServiceSpecForProviderResour
     [JsonPropertyName("policy")]
     public V1beta1MonitorPrivateLinkScopedServiceSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorPrivateLinkScopedServiceSpecForProviderScopeNameRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1MonitorPrivateLinkScopedServiceSpecForProviderScopeN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MonitorPrivateLinkScope in insights to populate scopeName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorPrivateLinkScopedServiceSpecForProviderScopeNameRef
@@ -171,7 +192,9 @@ public partial class V1beta1MonitorPrivateLinkScopedServiceSpecForProviderScopeN
     [JsonPropertyName("policy")]
     public V1beta1MonitorPrivateLinkScopedServiceSpecForProviderScopeNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorPrivateLinkScopedServiceSpecForProviderScopeNameSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1MonitorPrivateLinkScopedServiceSpecForProviderScopeN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MonitorPrivateLinkScope in insights to populate scopeName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorPrivateLinkScopedServiceSpecForProviderScopeNameSelector
@@ -201,7 +226,9 @@ public partial class V1beta1MonitorPrivateLinkScopedServiceSpecForProviderScopeN
     [JsonPropertyName("policy")]
     public V1beta1MonitorPrivateLinkScopedServiceSpecForProviderScopeNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorPrivateLinkScopedServiceSpecForProvider
@@ -242,7 +269,9 @@ public partial class V1beta1MonitorPrivateLinkScopedServiceSpecForProvider
     [JsonPropertyName("scopeNameSelector")]
     public V1beta1MonitorPrivateLinkScopedServiceSpecForProviderScopeNameSelector? ScopeNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorPrivateLinkScopedServiceSpecInitProviderLinkedResourceIdRefPolicy
@@ -255,7 +284,9 @@ public partial class V1beta1MonitorPrivateLinkScopedServiceSpecInitProviderLinke
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ApplicationInsights in insights to populate linkedResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorPrivateLinkScopedServiceSpecInitProviderLinkedResourceIdRef
@@ -268,7 +299,9 @@ public partial class V1beta1MonitorPrivateLinkScopedServiceSpecInitProviderLinke
     [JsonPropertyName("policy")]
     public V1beta1MonitorPrivateLinkScopedServiceSpecInitProviderLinkedResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorPrivateLinkScopedServiceSpecInitProviderLinkedResourceIdSelectorPolicy
@@ -281,7 +314,9 @@ public partial class V1beta1MonitorPrivateLinkScopedServiceSpecInitProviderLinke
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ApplicationInsights in insights to populate linkedResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorPrivateLinkScopedServiceSpecInitProviderLinkedResourceIdSelector
@@ -298,7 +333,9 @@ public partial class V1beta1MonitorPrivateLinkScopedServiceSpecInitProviderLinke
     [JsonPropertyName("policy")]
     public V1beta1MonitorPrivateLinkScopedServiceSpecInitProviderLinkedResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorPrivateLinkScopedServiceSpecInitProvider
@@ -315,7 +352,9 @@ public partial class V1beta1MonitorPrivateLinkScopedServiceSpecInitProvider
     [JsonPropertyName("linkedResourceIdSelector")]
     public V1beta1MonitorPrivateLinkScopedServiceSpecInitProviderLinkedResourceIdSelector? LinkedResourceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorPrivateLinkScopedServiceSpecProviderConfigRefPolicy
@@ -328,7 +367,9 @@ public partial class V1beta1MonitorPrivateLinkScopedServiceSpecProviderConfigRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorPrivateLinkScopedServiceSpecProviderConfigRef
@@ -341,7 +382,9 @@ public partial class V1beta1MonitorPrivateLinkScopedServiceSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1MonitorPrivateLinkScopedServiceSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorPrivateLinkScopedServiceSpecWriteConnectionSecretToRef
@@ -354,7 +397,9 @@ public partial class V1beta1MonitorPrivateLinkScopedServiceSpecWriteConnectionSe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitorPrivateLinkScopedServiceSpec defines the desired state of MonitorPrivateLinkScopedService</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorPrivateLinkScopedServiceSpec
@@ -383,7 +428,9 @@ public partial class V1beta1MonitorPrivateLinkScopedServiceSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MonitorPrivateLinkScopedServiceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorPrivateLinkScopedServiceStatusAtProvider
@@ -404,7 +451,9 @@ public partial class V1beta1MonitorPrivateLinkScopedServiceStatusAtProvider
     [JsonPropertyName("scopeName")]
     public string? ScopeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorPrivateLinkScopedServiceStatusConditions
@@ -433,7 +482,9 @@ public partial class V1beta1MonitorPrivateLinkScopedServiceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitorPrivateLinkScopedServiceStatus defines the observed state of MonitorPrivateLinkScopedService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorPrivateLinkScopedServiceStatus
@@ -450,7 +501,9 @@ public partial class V1beta1MonitorPrivateLinkScopedServiceStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitorPrivateLinkScopedService is the Schema for the MonitorPrivateLinkScopedServices API. Manages an Azure Monitor Private Link Scoped Service</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -480,3 +533,4 @@ public partial class V1beta1MonitorPrivateLinkScopedService : IKubernetesObject<
     [JsonPropertyName("status")]
     public V1beta1MonitorPrivateLinkScopedServiceStatus? Status { get; set; }
 }
+#nullable disable

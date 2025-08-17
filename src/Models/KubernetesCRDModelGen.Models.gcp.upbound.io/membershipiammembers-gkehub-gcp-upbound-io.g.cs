@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gkehub.gcp.upbound.io;
+#nullable enable
 /// <summary>MembershipIAMMember is the Schema for the MembershipIAMMembers API. &lt;no value&gt;</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MembershipIAMMemberList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1MembershipIAMMember> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipIAMMemberSpecForProviderCondition
@@ -50,7 +53,9 @@ public partial class V1beta1MembershipIAMMemberSpecForProviderCondition
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipIAMMemberSpecForProviderMembershipIdRefPolicy
@@ -63,7 +68,9 @@ public partial class V1beta1MembershipIAMMemberSpecForProviderMembershipIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Membership in gkehub to populate membershipId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipIAMMemberSpecForProviderMembershipIdRef
@@ -76,7 +83,9 @@ public partial class V1beta1MembershipIAMMemberSpecForProviderMembershipIdRef
     [JsonPropertyName("policy")]
     public V1beta1MembershipIAMMemberSpecForProviderMembershipIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipIAMMemberSpecForProviderMembershipIdSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1MembershipIAMMemberSpecForProviderMembershipIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Membership in gkehub to populate membershipId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipIAMMemberSpecForProviderMembershipIdSelector
@@ -106,7 +117,9 @@ public partial class V1beta1MembershipIAMMemberSpecForProviderMembershipIdSelect
     [JsonPropertyName("policy")]
     public V1beta1MembershipIAMMemberSpecForProviderMembershipIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipIAMMemberSpecForProvider
@@ -143,7 +156,9 @@ public partial class V1beta1MembershipIAMMemberSpecForProvider
     [JsonPropertyName("role")]
     public string? Role { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipIAMMemberSpecInitProviderCondition
@@ -160,7 +175,9 @@ public partial class V1beta1MembershipIAMMemberSpecInitProviderCondition
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipIAMMemberSpecInitProviderMembershipIdRefPolicy
@@ -173,7 +190,9 @@ public partial class V1beta1MembershipIAMMemberSpecInitProviderMembershipIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Membership in gkehub to populate membershipId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipIAMMemberSpecInitProviderMembershipIdRef
@@ -186,7 +205,9 @@ public partial class V1beta1MembershipIAMMemberSpecInitProviderMembershipIdRef
     [JsonPropertyName("policy")]
     public V1beta1MembershipIAMMemberSpecInitProviderMembershipIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipIAMMemberSpecInitProviderMembershipIdSelectorPolicy
@@ -199,7 +220,9 @@ public partial class V1beta1MembershipIAMMemberSpecInitProviderMembershipIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Membership in gkehub to populate membershipId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipIAMMemberSpecInitProviderMembershipIdSelector
@@ -216,7 +239,9 @@ public partial class V1beta1MembershipIAMMemberSpecInitProviderMembershipIdSelec
     [JsonPropertyName("policy")]
     public V1beta1MembershipIAMMemberSpecInitProviderMembershipIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipIAMMemberSpecInitProvider
@@ -253,7 +278,9 @@ public partial class V1beta1MembershipIAMMemberSpecInitProvider
     [JsonPropertyName("role")]
     public string? Role { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipIAMMemberSpecProviderConfigRefPolicy
@@ -266,7 +293,9 @@ public partial class V1beta1MembershipIAMMemberSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipIAMMemberSpecProviderConfigRef
@@ -279,7 +308,9 @@ public partial class V1beta1MembershipIAMMemberSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1MembershipIAMMemberSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipIAMMemberSpecWriteConnectionSecretToRef
@@ -292,7 +323,9 @@ public partial class V1beta1MembershipIAMMemberSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MembershipIAMMemberSpec defines the desired state of MembershipIAMMember</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipIAMMemberSpec
@@ -321,7 +354,9 @@ public partial class V1beta1MembershipIAMMemberSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MembershipIAMMemberSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipIAMMemberStatusAtProviderCondition
@@ -338,7 +373,9 @@ public partial class V1beta1MembershipIAMMemberStatusAtProviderCondition
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipIAMMemberStatusAtProvider
@@ -375,7 +412,9 @@ public partial class V1beta1MembershipIAMMemberStatusAtProvider
     [JsonPropertyName("role")]
     public string? Role { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipIAMMemberStatusConditions
@@ -404,7 +443,9 @@ public partial class V1beta1MembershipIAMMemberStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MembershipIAMMemberStatus defines the observed state of MembershipIAMMember.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MembershipIAMMemberStatus
@@ -421,7 +462,9 @@ public partial class V1beta1MembershipIAMMemberStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MembershipIAMMember is the Schema for the MembershipIAMMembers API. &lt;no value&gt;</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -451,3 +494,4 @@ public partial class V1beta1MembershipIAMMember : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1MembershipIAMMemberStatus? Status { get; set; }
 }
+#nullable disable

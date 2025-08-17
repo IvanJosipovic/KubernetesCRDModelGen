@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+#nullable enable
 /// <summary>SpotDatafeedSubscription is the Schema for the SpotDatafeedSubscriptions API. Provides a Spot Datafeed Subscription resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SpotDatafeedSubscriptionList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1SpotDatafeedSubscription> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotDatafeedSubscriptionSpecForProvider
@@ -50,7 +53,9 @@ public partial class V1beta1SpotDatafeedSubscriptionSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotDatafeedSubscriptionSpecInitProvider
@@ -63,7 +68,9 @@ public partial class V1beta1SpotDatafeedSubscriptionSpecInitProvider
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotDatafeedSubscriptionSpecProviderConfigRefPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1SpotDatafeedSubscriptionSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotDatafeedSubscriptionSpecProviderConfigRef
@@ -89,7 +98,9 @@ public partial class V1beta1SpotDatafeedSubscriptionSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1SpotDatafeedSubscriptionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotDatafeedSubscriptionSpecWriteConnectionSecretToRef
@@ -102,7 +113,9 @@ public partial class V1beta1SpotDatafeedSubscriptionSpecWriteConnectionSecretToR
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpotDatafeedSubscriptionSpec defines the desired state of SpotDatafeedSubscription</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotDatafeedSubscriptionSpec
@@ -131,7 +144,9 @@ public partial class V1beta1SpotDatafeedSubscriptionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SpotDatafeedSubscriptionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotDatafeedSubscriptionStatusAtProvider
@@ -152,7 +167,9 @@ public partial class V1beta1SpotDatafeedSubscriptionStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotDatafeedSubscriptionStatusConditions
@@ -181,7 +198,9 @@ public partial class V1beta1SpotDatafeedSubscriptionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpotDatafeedSubscriptionStatus defines the observed state of SpotDatafeedSubscription.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotDatafeedSubscriptionStatus
@@ -198,7 +217,9 @@ public partial class V1beta1SpotDatafeedSubscriptionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpotDatafeedSubscription is the Schema for the SpotDatafeedSubscriptions API. Provides a Spot Datafeed Subscription resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -228,3 +249,4 @@ public partial class V1beta1SpotDatafeedSubscription : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1SpotDatafeedSubscriptionStatus? Status { get; set; }
 }
+#nullable disable

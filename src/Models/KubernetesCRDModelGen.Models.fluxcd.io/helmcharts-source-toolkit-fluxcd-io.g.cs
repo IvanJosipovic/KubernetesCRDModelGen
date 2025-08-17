@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.source.toolkit.fluxcd.io;
+#nullable enable
 /// <summary>HelmChart is the Schema for the helmcharts API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1HelmChartList : IKubernetesObject<V1ListMeta>, IItems<V1H
     [JsonPropertyName("items")]
     public IList<V1HelmChart> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SourceRef is the reference to the Source the chart is available at.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HelmChartSpecSourceRef
@@ -50,7 +53,9 @@ public partial class V1HelmChartSpecSourceRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OIDCIdentityMatch specifies options for verifying the certificate identity, i.e. the issuer and the subject of the certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HelmChartSpecVerifyMatchOIDCIdentity
@@ -63,7 +68,9 @@ public partial class V1HelmChartSpecVerifyMatchOIDCIdentity
     [JsonPropertyName("subject")]
     public string Subject { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretRef specifies the Kubernetes Secret containing the trusted public keys.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HelmChartSpecVerifySecretRef
@@ -72,7 +79,9 @@ public partial class V1HelmChartSpecVerifySecretRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Verify contains the secret name containing the trusted public keys used to verify the signature and specifies which provider to use to check whether OCI image is authentic. This field is only supported when using HelmRepository source with spec.type 'oci'. Chart dependencies, which are not bundled in the umbrella chart artifact, are not verified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HelmChartSpecVerify
@@ -89,7 +98,9 @@ public partial class V1HelmChartSpecVerify
     [JsonPropertyName("secretRef")]
     public V1HelmChartSpecVerifySecretRef? SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HelmChartSpec specifies the desired state of a Helm chart.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HelmChartSpec
@@ -130,7 +141,9 @@ public partial class V1HelmChartSpec
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Artifact represents the output of the last successful reconciliation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HelmChartStatusArtifact
@@ -163,7 +176,9 @@ public partial class V1HelmChartStatusArtifact
     [JsonPropertyName("url")]
     public string Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition contains details for one aspect of the current state of this API Resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HelmChartStatusConditions
@@ -192,7 +207,9 @@ public partial class V1HelmChartStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HelmChartStatus records the observed state of the HelmChart.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HelmChartStatus
@@ -229,7 +246,9 @@ public partial class V1HelmChartStatus
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HelmChart is the Schema for the helmcharts API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -259,3 +278,4 @@ public partial class V1HelmChart : IKubernetesObject<V1ObjectMeta>, ISpec<V1Helm
     [JsonPropertyName("status")]
     public V1HelmChartStatus? Status { get; set; }
 }
+#nullable disable

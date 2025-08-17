@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.postgresql.cnpg.io;
+#nullable enable
 /// <summary>ScheduledBackup is the Schema for the scheduledbackups API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1ScheduledBackupList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1ScheduledBackup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The cluster to backup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ScheduledBackupSpecCluster
@@ -42,7 +45,9 @@ public partial class V1ScheduledBackupSpecCluster
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration parameters to control the online/hot backup with volume snapshots Overrides the default settings specified in the cluster '.backup.volumeSnapshot.onlineConfiguration' stanza</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ScheduledBackupSpecOnlineConfiguration
@@ -55,7 +60,9 @@ public partial class V1ScheduledBackupSpecOnlineConfiguration
     [JsonPropertyName("waitForArchive")]
     public bool? WaitForArchive { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration parameters passed to the plugin managing this backup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ScheduledBackupSpecPluginConfiguration
@@ -68,7 +75,9 @@ public partial class V1ScheduledBackupSpecPluginConfiguration
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specification of the desired behavior of the ScheduledBackup. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ScheduledBackupSpec
@@ -113,7 +122,9 @@ public partial class V1ScheduledBackupSpec
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Most recently observed status of the ScheduledBackup. This data may not be up to date. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ScheduledBackupStatus
@@ -130,7 +141,9 @@ public partial class V1ScheduledBackupStatus
     [JsonPropertyName("nextScheduleTime")]
     public string? NextScheduleTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ScheduledBackup is the Schema for the scheduledbackups API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -160,3 +173,4 @@ public partial class V1ScheduledBackup : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1ScheduledBackupStatus? Status { get; set; }
 }
+#nullable disable

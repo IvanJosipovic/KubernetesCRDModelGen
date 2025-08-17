@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.medialive.aws.upbound.io;
+#nullable enable
 /// <summary>InputSecurityGroup is the Schema for the InputSecurityGroups API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1InputSecurityGroupList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1InputSecurityGroup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InputSecurityGroupSpecForProviderWhitelistRules
@@ -42,7 +45,9 @@ public partial class V1beta1InputSecurityGroupSpecForProviderWhitelistRules
     [JsonPropertyName("cidr")]
     public string? Cidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InputSecurityGroupSpecForProvider
@@ -59,7 +64,9 @@ public partial class V1beta1InputSecurityGroupSpecForProvider
     [JsonPropertyName("whitelistRules")]
     public IList<V1beta1InputSecurityGroupSpecForProviderWhitelistRules>? WhitelistRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InputSecurityGroupSpecInitProviderWhitelistRules
@@ -68,7 +75,9 @@ public partial class V1beta1InputSecurityGroupSpecInitProviderWhitelistRules
     [JsonPropertyName("cidr")]
     public string? Cidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InputSecurityGroupSpecInitProvider
@@ -81,7 +90,9 @@ public partial class V1beta1InputSecurityGroupSpecInitProvider
     [JsonPropertyName("whitelistRules")]
     public IList<V1beta1InputSecurityGroupSpecInitProviderWhitelistRules>? WhitelistRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InputSecurityGroupSpecProviderConfigRefPolicy
@@ -94,7 +105,9 @@ public partial class V1beta1InputSecurityGroupSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InputSecurityGroupSpecProviderConfigRef
@@ -107,7 +120,9 @@ public partial class V1beta1InputSecurityGroupSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1InputSecurityGroupSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InputSecurityGroupSpecWriteConnectionSecretToRef
@@ -120,7 +135,9 @@ public partial class V1beta1InputSecurityGroupSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InputSecurityGroupSpec defines the desired state of InputSecurityGroup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InputSecurityGroupSpec
@@ -149,7 +166,9 @@ public partial class V1beta1InputSecurityGroupSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1InputSecurityGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InputSecurityGroupStatusAtProviderWhitelistRules
@@ -158,7 +177,9 @@ public partial class V1beta1InputSecurityGroupStatusAtProviderWhitelistRules
     [JsonPropertyName("cidr")]
     public string? Cidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InputSecurityGroupStatusAtProvider
@@ -191,7 +212,9 @@ public partial class V1beta1InputSecurityGroupStatusAtProvider
     [JsonPropertyName("whitelistRules")]
     public IList<V1beta1InputSecurityGroupStatusAtProviderWhitelistRules>? WhitelistRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InputSecurityGroupStatusConditions
@@ -220,7 +243,9 @@ public partial class V1beta1InputSecurityGroupStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InputSecurityGroupStatus defines the observed state of InputSecurityGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InputSecurityGroupStatus
@@ -237,7 +262,9 @@ public partial class V1beta1InputSecurityGroupStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InputSecurityGroup is the Schema for the InputSecurityGroups API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -267,3 +294,4 @@ public partial class V1beta1InputSecurityGroup : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1InputSecurityGroupStatus? Status { get; set; }
 }
+#nullable disable

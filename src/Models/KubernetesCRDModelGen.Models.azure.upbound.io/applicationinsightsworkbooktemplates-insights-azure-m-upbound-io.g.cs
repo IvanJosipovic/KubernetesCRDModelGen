@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.m.upbound.io;
+#nullable enable
 /// <summary>ApplicationInsightsWorkbookTemplate is the Schema for the ApplicationInsightsWorkbookTemplates API. Manages an Application Insights Workbook Template.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ApplicationInsightsWorkbookTemplateList : IKubernete
     [JsonPropertyName("items")]
     public IList<V1beta1ApplicationInsightsWorkbookTemplate> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecForProviderGalleries
@@ -58,7 +61,9 @@ public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecForProviderGa
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecForProviderResourceGroupNameRefPolicy
@@ -71,7 +76,9 @@ public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecForProviderRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecForProviderResourceGroupNameRef
@@ -88,7 +95,9 @@ public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecForProviderRe
     [JsonPropertyName("policy")]
     public V1beta1ApplicationInsightsWorkbookTemplateSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecForProviderResourceGroupNameSelectorPolicy
@@ -101,7 +110,9 @@ public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecForProviderRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecForProviderResourceGroupNameSelector
@@ -122,7 +133,9 @@ public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecForProviderRe
     [JsonPropertyName("policy")]
     public V1beta1ApplicationInsightsWorkbookTemplateSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecForProvider
@@ -171,7 +184,9 @@ public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecForProvider
     [JsonPropertyName("templateData")]
     public string? TemplateData { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecInitProviderGalleries
@@ -196,7 +211,9 @@ public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecInitProviderG
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecInitProviderResourceGroupNameRefPolicy
@@ -209,7 +226,9 @@ public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecInitProviderR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecInitProviderResourceGroupNameRef
@@ -226,7 +245,9 @@ public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecInitProviderR
     [JsonPropertyName("policy")]
     public V1beta1ApplicationInsightsWorkbookTemplateSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecInitProviderResourceGroupNameSelectorPolicy
@@ -239,7 +260,9 @@ public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecInitProviderR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecInitProviderResourceGroupNameSelector
@@ -260,7 +283,9 @@ public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecInitProviderR
     [JsonPropertyName("policy")]
     public V1beta1ApplicationInsightsWorkbookTemplateSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecInitProvider
@@ -309,7 +334,9 @@ public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecInitProvider
     [JsonPropertyName("templateData")]
     public string? TemplateData { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecProviderConfigRef
@@ -322,7 +349,9 @@ public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecProviderConfi
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecWriteConnectionSecretToRef
@@ -331,7 +360,9 @@ public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecWriteConnecti
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApplicationInsightsWorkbookTemplateSpec defines the desired state of ApplicationInsightsWorkbookTemplate</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsWorkbookTemplateSpec
@@ -356,7 +387,9 @@ public partial class V1beta1ApplicationInsightsWorkbookTemplateSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ApplicationInsightsWorkbookTemplateSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsWorkbookTemplateStatusAtProviderGalleries
@@ -381,7 +414,9 @@ public partial class V1beta1ApplicationInsightsWorkbookTemplateStatusAtProviderG
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsWorkbookTemplateStatusAtProvider
@@ -426,7 +461,9 @@ public partial class V1beta1ApplicationInsightsWorkbookTemplateStatusAtProvider
     [JsonPropertyName("templateData")]
     public string? TemplateData { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsWorkbookTemplateStatusConditions
@@ -455,7 +492,9 @@ public partial class V1beta1ApplicationInsightsWorkbookTemplateStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApplicationInsightsWorkbookTemplateStatus defines the observed state of ApplicationInsightsWorkbookTemplate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsWorkbookTemplateStatus
@@ -472,7 +511,9 @@ public partial class V1beta1ApplicationInsightsWorkbookTemplateStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApplicationInsightsWorkbookTemplate is the Schema for the ApplicationInsightsWorkbookTemplates API. Manages an Application Insights Workbook Template.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -502,3 +543,4 @@ public partial class V1beta1ApplicationInsightsWorkbookTemplate : IKubernetesObj
     [JsonPropertyName("status")]
     public V1beta1ApplicationInsightsWorkbookTemplateStatus? Status { get; set; }
 }
+#nullable disable

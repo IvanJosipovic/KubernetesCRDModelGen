@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.servicebus.azure.m.upbound.io;
+#nullable enable
 /// <summary>QueueAuthorizationRule is the Schema for the QueueAuthorizationRules API. Manages an Authorization Rule for a ServiceBus Queue.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1QueueAuthorizationRuleList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1QueueAuthorizationRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueAuthorizationRuleSpecForProviderQueueIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1QueueAuthorizationRuleSpecForProviderQueueIdRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Queue in servicebus to populate queueId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueAuthorizationRuleSpecForProviderQueueIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1QueueAuthorizationRuleSpecForProviderQueueIdRef
     [JsonPropertyName("policy")]
     public V1beta1QueueAuthorizationRuleSpecForProviderQueueIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueAuthorizationRuleSpecForProviderQueueIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1QueueAuthorizationRuleSpecForProviderQueueIdSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Queue in servicebus to populate queueId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueAuthorizationRuleSpecForProviderQueueIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1QueueAuthorizationRuleSpecForProviderQueueIdSelector
     [JsonPropertyName("policy")]
     public V1beta1QueueAuthorizationRuleSpecForProviderQueueIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueAuthorizationRuleSpecForProvider
@@ -126,7 +137,9 @@ public partial class V1beta1QueueAuthorizationRuleSpecForProvider
     [JsonPropertyName("send")]
     public bool? Send { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueAuthorizationRuleSpecInitProvider
@@ -143,7 +156,9 @@ public partial class V1beta1QueueAuthorizationRuleSpecInitProvider
     [JsonPropertyName("send")]
     public bool? Send { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueAuthorizationRuleSpecProviderConfigRef
@@ -156,7 +171,9 @@ public partial class V1beta1QueueAuthorizationRuleSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueAuthorizationRuleSpecWriteConnectionSecretToRef
@@ -165,7 +182,9 @@ public partial class V1beta1QueueAuthorizationRuleSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>QueueAuthorizationRuleSpec defines the desired state of QueueAuthorizationRule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueAuthorizationRuleSpec
@@ -190,7 +209,9 @@ public partial class V1beta1QueueAuthorizationRuleSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1QueueAuthorizationRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueAuthorizationRuleStatusAtProvider
@@ -215,7 +236,9 @@ public partial class V1beta1QueueAuthorizationRuleStatusAtProvider
     [JsonPropertyName("send")]
     public bool? Send { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueAuthorizationRuleStatusConditions
@@ -244,7 +267,9 @@ public partial class V1beta1QueueAuthorizationRuleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>QueueAuthorizationRuleStatus defines the observed state of QueueAuthorizationRule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueAuthorizationRuleStatus
@@ -261,7 +286,9 @@ public partial class V1beta1QueueAuthorizationRuleStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>QueueAuthorizationRule is the Schema for the QueueAuthorizationRules API. Manages an Authorization Rule for a ServiceBus Queue.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -291,3 +318,4 @@ public partial class V1beta1QueueAuthorizationRule : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1QueueAuthorizationRuleStatus? Status { get; set; }
 }
+#nullable disable

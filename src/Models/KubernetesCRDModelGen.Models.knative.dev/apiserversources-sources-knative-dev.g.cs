@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sources.knative.dev;
+#nullable enable
 /// <summary>ApiServerSource is an event source that brings Kubernetes API server events into Knative.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1ApiServerSourceList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1ApiServerSource> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ApiServerSourceStatusAuth
@@ -46,7 +49,9 @@ public partial class V1ApiServerSourceStatusAuth
     [JsonPropertyName("serviceAccountNames")]
     public IList<string>? ServiceAccountNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ApiServerSourceStatusCeAttributes
@@ -59,7 +64,9 @@ public partial class V1ApiServerSourceStatusCeAttributes
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ApiServerSourceStatusConditions
@@ -88,7 +95,9 @@ public partial class V1ApiServerSourceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ApiServerSourceStatus
@@ -129,7 +138,9 @@ public partial class V1ApiServerSourceStatus
     [JsonPropertyName("namespaces")]
     public IList<string>? Namespaces { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApiServerSource is an event source that brings Kubernetes API server events into Knative.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -159,3 +170,4 @@ public partial class V1ApiServerSource : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1ApiServerSourceStatus? Status { get; set; }
 }
+#nullable disable

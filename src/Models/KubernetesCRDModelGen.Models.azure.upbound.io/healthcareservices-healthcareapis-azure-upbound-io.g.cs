@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.healthcareapis.azure.upbound.io;
+#nullable enable
 /// <summary>HealthcareService is the Schema for the HealthcareServices API. Manages a Healthcare Service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1HealthcareServiceList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1HealthcareService> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareServiceSpecForProviderAuthenticationConfiguration
@@ -50,7 +53,9 @@ public partial class V1beta1HealthcareServiceSpecForProviderAuthenticationConfig
     [JsonPropertyName("smartProxyEnabled")]
     public bool? SmartProxyEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareServiceSpecForProviderCorsConfiguration
@@ -75,7 +80,9 @@ public partial class V1beta1HealthcareServiceSpecForProviderCorsConfiguration
     [JsonPropertyName("maxAgeInSeconds")]
     public double? MaxAgeInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareServiceSpecForProviderIdentity
@@ -84,7 +91,9 @@ public partial class V1beta1HealthcareServiceSpecForProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareServiceSpecForProviderResourceGroupNameRefPolicy
@@ -97,7 +106,9 @@ public partial class V1beta1HealthcareServiceSpecForProviderResourceGroupNameRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareServiceSpecForProviderResourceGroupNameRef
@@ -110,7 +121,9 @@ public partial class V1beta1HealthcareServiceSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1HealthcareServiceSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareServiceSpecForProviderResourceGroupNameSelectorPolicy
@@ -123,7 +136,9 @@ public partial class V1beta1HealthcareServiceSpecForProviderResourceGroupNameSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareServiceSpecForProviderResourceGroupNameSelector
@@ -140,7 +155,9 @@ public partial class V1beta1HealthcareServiceSpecForProviderResourceGroupNameSel
     [JsonPropertyName("policy")]
     public V1beta1HealthcareServiceSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareServiceSpecForProvider
@@ -201,7 +218,9 @@ public partial class V1beta1HealthcareServiceSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareServiceSpecInitProviderAuthenticationConfiguration
@@ -218,7 +237,9 @@ public partial class V1beta1HealthcareServiceSpecInitProviderAuthenticationConfi
     [JsonPropertyName("smartProxyEnabled")]
     public bool? SmartProxyEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareServiceSpecInitProviderCorsConfiguration
@@ -243,7 +264,9 @@ public partial class V1beta1HealthcareServiceSpecInitProviderCorsConfiguration
     [JsonPropertyName("maxAgeInSeconds")]
     public double? MaxAgeInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareServiceSpecInitProviderIdentity
@@ -252,7 +275,9 @@ public partial class V1beta1HealthcareServiceSpecInitProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareServiceSpecInitProvider
@@ -301,7 +326,9 @@ public partial class V1beta1HealthcareServiceSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareServiceSpecProviderConfigRefPolicy
@@ -314,7 +341,9 @@ public partial class V1beta1HealthcareServiceSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareServiceSpecProviderConfigRef
@@ -327,7 +356,9 @@ public partial class V1beta1HealthcareServiceSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1HealthcareServiceSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareServiceSpecWriteConnectionSecretToRef
@@ -340,7 +371,9 @@ public partial class V1beta1HealthcareServiceSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HealthcareServiceSpec defines the desired state of HealthcareService</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareServiceSpec
@@ -369,7 +402,9 @@ public partial class V1beta1HealthcareServiceSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1HealthcareServiceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareServiceStatusAtProviderAuthenticationConfiguration
@@ -386,7 +421,9 @@ public partial class V1beta1HealthcareServiceStatusAtProviderAuthenticationConfi
     [JsonPropertyName("smartProxyEnabled")]
     public bool? SmartProxyEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareServiceStatusAtProviderCorsConfiguration
@@ -411,7 +448,9 @@ public partial class V1beta1HealthcareServiceStatusAtProviderCorsConfiguration
     [JsonPropertyName("maxAgeInSeconds")]
     public double? MaxAgeInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareServiceStatusAtProviderIdentity
@@ -428,7 +467,9 @@ public partial class V1beta1HealthcareServiceStatusAtProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareServiceStatusAtProvider
@@ -485,7 +526,9 @@ public partial class V1beta1HealthcareServiceStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareServiceStatusConditions
@@ -514,7 +557,9 @@ public partial class V1beta1HealthcareServiceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HealthcareServiceStatus defines the observed state of HealthcareService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareServiceStatus
@@ -531,7 +576,9 @@ public partial class V1beta1HealthcareServiceStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HealthcareService is the Schema for the HealthcareServices API. Manages a Healthcare Service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -561,3 +608,4 @@ public partial class V1beta1HealthcareService : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1HealthcareServiceStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.elasticache.aws.m.upbound.io;
+#nullable enable
 /// <summary>ReplicationGroup is the Schema for the ReplicationGroups API. Provides an ElastiCache Replication Group resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ReplicationGroupList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1ReplicationGroup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Password used to access a password protected server. Can be specified only if transit_encryption_enabled = true. If you set autoGenerateAuthToken to true, the Secret referenced here will be created or updated with generated auth token if it does not already contain one.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecForProviderAuthTokenSecretRef
@@ -46,7 +49,9 @@ public partial class V1beta1ReplicationGroupSpecForProviderAuthTokenSecretRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecForProviderGlobalReplicationGroupIdRefPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1ReplicationGroupSpecForProviderGlobalReplicationGrou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a GlobalReplicationGroup in elasticache to populate globalReplicationGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecForProviderGlobalReplicationGroupIdRef
@@ -76,7 +83,9 @@ public partial class V1beta1ReplicationGroupSpecForProviderGlobalReplicationGrou
     [JsonPropertyName("policy")]
     public V1beta1ReplicationGroupSpecForProviderGlobalReplicationGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecForProviderGlobalReplicationGroupIdSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1ReplicationGroupSpecForProviderGlobalReplicationGrou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a GlobalReplicationGroup in elasticache to populate globalReplicationGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecForProviderGlobalReplicationGroupIdSelector
@@ -110,7 +121,9 @@ public partial class V1beta1ReplicationGroupSpecForProviderGlobalReplicationGrou
     [JsonPropertyName("policy")]
     public V1beta1ReplicationGroupSpecForProviderGlobalReplicationGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecForProviderKmsKeyIdRefPolicy
@@ -123,7 +136,9 @@ public partial class V1beta1ReplicationGroupSpecForProviderKmsKeyIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecForProviderKmsKeyIdRef
@@ -140,7 +155,9 @@ public partial class V1beta1ReplicationGroupSpecForProviderKmsKeyIdRef
     [JsonPropertyName("policy")]
     public V1beta1ReplicationGroupSpecForProviderKmsKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecForProviderKmsKeyIdSelectorPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1ReplicationGroupSpecForProviderKmsKeyIdSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecForProviderKmsKeyIdSelector
@@ -174,7 +193,9 @@ public partial class V1beta1ReplicationGroupSpecForProviderKmsKeyIdSelector
     [JsonPropertyName("policy")]
     public V1beta1ReplicationGroupSpecForProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecForProviderLogDeliveryConfiguration
@@ -195,7 +216,9 @@ public partial class V1beta1ReplicationGroupSpecForProviderLogDeliveryConfigurat
     [JsonPropertyName("logType")]
     public string? LogType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecForProviderSecurityGroupIdRefsPolicy
@@ -208,7 +231,9 @@ public partial class V1beta1ReplicationGroupSpecForProviderSecurityGroupIdRefsPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecForProviderSecurityGroupIdRefs
@@ -225,7 +250,9 @@ public partial class V1beta1ReplicationGroupSpecForProviderSecurityGroupIdRefs
     [JsonPropertyName("policy")]
     public V1beta1ReplicationGroupSpecForProviderSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecForProviderSecurityGroupIdSelectorPolicy
@@ -238,7 +265,9 @@ public partial class V1beta1ReplicationGroupSpecForProviderSecurityGroupIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecForProviderSecurityGroupIdSelector
@@ -259,7 +288,9 @@ public partial class V1beta1ReplicationGroupSpecForProviderSecurityGroupIdSelect
     [JsonPropertyName("policy")]
     public V1beta1ReplicationGroupSpecForProviderSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecForProviderSubnetGroupNameRefPolicy
@@ -272,7 +303,9 @@ public partial class V1beta1ReplicationGroupSpecForProviderSubnetGroupNameRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SubnetGroup in elasticache to populate subnetGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecForProviderSubnetGroupNameRef
@@ -289,7 +322,9 @@ public partial class V1beta1ReplicationGroupSpecForProviderSubnetGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1ReplicationGroupSpecForProviderSubnetGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecForProviderSubnetGroupNameSelectorPolicy
@@ -302,7 +337,9 @@ public partial class V1beta1ReplicationGroupSpecForProviderSubnetGroupNameSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SubnetGroup in elasticache to populate subnetGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecForProviderSubnetGroupNameSelector
@@ -323,7 +360,9 @@ public partial class V1beta1ReplicationGroupSpecForProviderSubnetGroupNameSelect
     [JsonPropertyName("policy")]
     public V1beta1ReplicationGroupSpecForProviderSubnetGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecForProvider
@@ -520,7 +559,9 @@ public partial class V1beta1ReplicationGroupSpecForProvider
     [JsonPropertyName("userGroupIds")]
     public IList<string>? UserGroupIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Password used to access a password protected server. Can be specified only if transit_encryption_enabled = true. If you set autoGenerateAuthToken to true, the Secret referenced here will be created or updated with generated auth token if it does not already contain one.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecInitProviderAuthTokenSecretRef
@@ -533,7 +574,9 @@ public partial class V1beta1ReplicationGroupSpecInitProviderAuthTokenSecretRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecInitProviderGlobalReplicationGroupIdRefPolicy
@@ -546,7 +589,9 @@ public partial class V1beta1ReplicationGroupSpecInitProviderGlobalReplicationGro
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a GlobalReplicationGroup in elasticache to populate globalReplicationGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecInitProviderGlobalReplicationGroupIdRef
@@ -563,7 +608,9 @@ public partial class V1beta1ReplicationGroupSpecInitProviderGlobalReplicationGro
     [JsonPropertyName("policy")]
     public V1beta1ReplicationGroupSpecInitProviderGlobalReplicationGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecInitProviderGlobalReplicationGroupIdSelectorPolicy
@@ -576,7 +623,9 @@ public partial class V1beta1ReplicationGroupSpecInitProviderGlobalReplicationGro
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a GlobalReplicationGroup in elasticache to populate globalReplicationGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecInitProviderGlobalReplicationGroupIdSelector
@@ -597,7 +646,9 @@ public partial class V1beta1ReplicationGroupSpecInitProviderGlobalReplicationGro
     [JsonPropertyName("policy")]
     public V1beta1ReplicationGroupSpecInitProviderGlobalReplicationGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecInitProviderKmsKeyIdRefPolicy
@@ -610,7 +661,9 @@ public partial class V1beta1ReplicationGroupSpecInitProviderKmsKeyIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecInitProviderKmsKeyIdRef
@@ -627,7 +680,9 @@ public partial class V1beta1ReplicationGroupSpecInitProviderKmsKeyIdRef
     [JsonPropertyName("policy")]
     public V1beta1ReplicationGroupSpecInitProviderKmsKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecInitProviderKmsKeyIdSelectorPolicy
@@ -640,7 +695,9 @@ public partial class V1beta1ReplicationGroupSpecInitProviderKmsKeyIdSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecInitProviderKmsKeyIdSelector
@@ -661,7 +718,9 @@ public partial class V1beta1ReplicationGroupSpecInitProviderKmsKeyIdSelector
     [JsonPropertyName("policy")]
     public V1beta1ReplicationGroupSpecInitProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecInitProviderLogDeliveryConfiguration
@@ -682,7 +741,9 @@ public partial class V1beta1ReplicationGroupSpecInitProviderLogDeliveryConfigura
     [JsonPropertyName("logType")]
     public string? LogType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecInitProviderSecurityGroupIdRefsPolicy
@@ -695,7 +756,9 @@ public partial class V1beta1ReplicationGroupSpecInitProviderSecurityGroupIdRefsP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecInitProviderSecurityGroupIdRefs
@@ -712,7 +775,9 @@ public partial class V1beta1ReplicationGroupSpecInitProviderSecurityGroupIdRefs
     [JsonPropertyName("policy")]
     public V1beta1ReplicationGroupSpecInitProviderSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecInitProviderSecurityGroupIdSelectorPolicy
@@ -725,7 +790,9 @@ public partial class V1beta1ReplicationGroupSpecInitProviderSecurityGroupIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecInitProviderSecurityGroupIdSelector
@@ -746,7 +813,9 @@ public partial class V1beta1ReplicationGroupSpecInitProviderSecurityGroupIdSelec
     [JsonPropertyName("policy")]
     public V1beta1ReplicationGroupSpecInitProviderSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecInitProviderSubnetGroupNameRefPolicy
@@ -759,7 +828,9 @@ public partial class V1beta1ReplicationGroupSpecInitProviderSubnetGroupNameRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SubnetGroup in elasticache to populate subnetGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecInitProviderSubnetGroupNameRef
@@ -776,7 +847,9 @@ public partial class V1beta1ReplicationGroupSpecInitProviderSubnetGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1ReplicationGroupSpecInitProviderSubnetGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecInitProviderSubnetGroupNameSelectorPolicy
@@ -789,7 +862,9 @@ public partial class V1beta1ReplicationGroupSpecInitProviderSubnetGroupNameSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SubnetGroup in elasticache to populate subnetGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecInitProviderSubnetGroupNameSelector
@@ -810,7 +885,9 @@ public partial class V1beta1ReplicationGroupSpecInitProviderSubnetGroupNameSelec
     [JsonPropertyName("policy")]
     public V1beta1ReplicationGroupSpecInitProviderSubnetGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecInitProvider
@@ -999,7 +1076,9 @@ public partial class V1beta1ReplicationGroupSpecInitProvider
     [JsonPropertyName("userGroupIds")]
     public IList<string>? UserGroupIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecProviderConfigRef
@@ -1012,7 +1091,9 @@ public partial class V1beta1ReplicationGroupSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpecWriteConnectionSecretToRef
@@ -1021,7 +1102,9 @@ public partial class V1beta1ReplicationGroupSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ReplicationGroupSpec defines the desired state of ReplicationGroup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupSpec
@@ -1046,7 +1129,9 @@ public partial class V1beta1ReplicationGroupSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ReplicationGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupStatusAtProviderLogDeliveryConfiguration
@@ -1067,7 +1152,9 @@ public partial class V1beta1ReplicationGroupStatusAtProviderLogDeliveryConfigura
     [JsonPropertyName("logType")]
     public string? LogType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupStatusAtProvider
@@ -1260,7 +1347,9 @@ public partial class V1beta1ReplicationGroupStatusAtProvider
     [JsonPropertyName("userGroupIds")]
     public IList<string>? UserGroupIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupStatusConditions
@@ -1289,7 +1378,9 @@ public partial class V1beta1ReplicationGroupStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ReplicationGroupStatus defines the observed state of ReplicationGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationGroupStatus
@@ -1306,7 +1397,9 @@ public partial class V1beta1ReplicationGroupStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ReplicationGroup is the Schema for the ReplicationGroups API. Provides an ElastiCache Replication Group resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1336,3 +1429,4 @@ public partial class V1beta1ReplicationGroup : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1ReplicationGroupStatus? Status { get; set; }
 }
+#nullable disable

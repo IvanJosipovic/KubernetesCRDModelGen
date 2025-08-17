@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.source.toolkit.fluxcd.io;
+#nullable enable
 /// <summary>GitRepository is the Schema for the gitrepositories API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1GitRepositoryList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1GitRepository> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GitRepositoryRef specifies the GitRepository which Artifact contents must be included.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositorySpecIncludeRepository
@@ -42,7 +45,9 @@ public partial class V1GitRepositorySpecIncludeRepository
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GitRepositoryInclude specifies a local reference to a GitRepository which Artifact (sub-)contents must be included, and where they should be placed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositorySpecInclude
@@ -59,7 +64,9 @@ public partial class V1GitRepositorySpecInclude
     [JsonPropertyName("toPath")]
     public string? ToPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProxySecretRef specifies the Secret containing the proxy configuration to use while communicating with the Git server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositorySpecProxySecretRef
@@ -68,7 +75,9 @@ public partial class V1GitRepositorySpecProxySecretRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference specifies the Git reference to resolve and monitor for changes, defaults to the 'master' branch.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositorySpecRef
@@ -93,7 +102,9 @@ public partial class V1GitRepositorySpecRef
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretRef specifies the Secret containing authentication credentials for the GitRepository. For HTTPS repositories the Secret must contain 'username' and 'password' fields for basic auth or 'bearerToken' field for token auth. For SSH repositories the Secret must contain 'identity' and 'known_hosts' fields.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositorySpecSecretRef
@@ -102,7 +113,9 @@ public partial class V1GitRepositorySpecSecretRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretRef specifies the Secret containing the public keys of trusted Git authors.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositorySpecVerifySecretRef
@@ -111,7 +124,9 @@ public partial class V1GitRepositorySpecVerifySecretRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Verification specifies the configuration to verify the Git commit signature(s).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositorySpecVerify
@@ -124,7 +139,9 @@ public partial class V1GitRepositorySpecVerify
     [JsonPropertyName("secretRef")]
     public V1GitRepositorySpecVerifySecretRef SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GitRepositorySpec specifies the required configuration to produce an Artifact for a Git repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositorySpec
@@ -181,7 +198,9 @@ public partial class V1GitRepositorySpec
     [JsonPropertyName("verify")]
     public V1GitRepositorySpecVerify? Verify { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Artifact represents the last successful GitRepository reconciliation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositoryStatusArtifact
@@ -214,7 +233,9 @@ public partial class V1GitRepositoryStatusArtifact
     [JsonPropertyName("url")]
     public string Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition contains details for one aspect of the current state of this API Resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositoryStatusConditions
@@ -243,7 +264,9 @@ public partial class V1GitRepositoryStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Artifact represents the output of a Source reconciliation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositoryStatusIncludedArtifacts
@@ -276,7 +299,9 @@ public partial class V1GitRepositoryStatusIncludedArtifacts
     [JsonPropertyName("url")]
     public string Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GitRepositoryRef specifies the GitRepository which Artifact contents must be included.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositoryStatusObservedIncludeRepository
@@ -285,7 +310,9 @@ public partial class V1GitRepositoryStatusObservedIncludeRepository
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GitRepositoryInclude specifies a local reference to a GitRepository which Artifact (sub-)contents must be included, and where they should be placed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositoryStatusObservedInclude
@@ -302,7 +329,9 @@ public partial class V1GitRepositoryStatusObservedInclude
     [JsonPropertyName("toPath")]
     public string? ToPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GitRepositoryStatus records the observed state of a Git repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositoryStatus
@@ -347,7 +376,9 @@ public partial class V1GitRepositoryStatus
     [JsonPropertyName("sourceVerificationMode")]
     public string? SourceVerificationMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GitRepository is the Schema for the gitrepositories API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -377,3 +408,4 @@ public partial class V1GitRepository : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1GitRepositoryStatus? Status { get; set; }
 }
+#nullable disable

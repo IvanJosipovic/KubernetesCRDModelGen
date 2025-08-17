@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+#nullable enable
 /// <summary>SubnetNATGatewayAssociation is the Schema for the SubnetNATGatewayAssociations API. Associates a</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SubnetNATGatewayAssociationList : IKubernetesObject<
     [JsonPropertyName("items")]
     public IList<V1beta1SubnetNATGatewayAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNATGatewayAssociationSpecForProviderNatGatewayIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SubnetNATGatewayAssociationSpecForProviderNatGateway
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a NATGateway in network to populate natGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNATGatewayAssociationSpecForProviderNatGatewayIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1SubnetNATGatewayAssociationSpecForProviderNatGateway
     [JsonPropertyName("policy")]
     public V1beta1SubnetNATGatewayAssociationSpecForProviderNatGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNATGatewayAssociationSpecForProviderNatGatewayIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1SubnetNATGatewayAssociationSpecForProviderNatGateway
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a NATGateway in network to populate natGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNATGatewayAssociationSpecForProviderNatGatewayIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1SubnetNATGatewayAssociationSpecForProviderNatGateway
     [JsonPropertyName("policy")]
     public V1beta1SubnetNATGatewayAssociationSpecForProviderNatGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNATGatewayAssociationSpecForProviderSubnetIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1SubnetNATGatewayAssociationSpecForProviderSubnetIdRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNATGatewayAssociationSpecForProviderSubnetIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1SubnetNATGatewayAssociationSpecForProviderSubnetIdRe
     [JsonPropertyName("policy")]
     public V1beta1SubnetNATGatewayAssociationSpecForProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNATGatewayAssociationSpecForProviderSubnetIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1SubnetNATGatewayAssociationSpecForProviderSubnetIdSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNATGatewayAssociationSpecForProviderSubnetIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1SubnetNATGatewayAssociationSpecForProviderSubnetIdSe
     [JsonPropertyName("policy")]
     public V1beta1SubnetNATGatewayAssociationSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNATGatewayAssociationSpecForProvider
@@ -190,7 +209,9 @@ public partial class V1beta1SubnetNATGatewayAssociationSpecForProvider
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1SubnetNATGatewayAssociationSpecForProviderSubnetIdSelector? SubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNATGatewayAssociationSpecInitProviderNatGatewayIdRefPolicy
@@ -203,7 +224,9 @@ public partial class V1beta1SubnetNATGatewayAssociationSpecInitProviderNatGatewa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a NATGateway in network to populate natGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNATGatewayAssociationSpecInitProviderNatGatewayIdRef
@@ -220,7 +243,9 @@ public partial class V1beta1SubnetNATGatewayAssociationSpecInitProviderNatGatewa
     [JsonPropertyName("policy")]
     public V1beta1SubnetNATGatewayAssociationSpecInitProviderNatGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNATGatewayAssociationSpecInitProviderNatGatewayIdSelectorPolicy
@@ -233,7 +258,9 @@ public partial class V1beta1SubnetNATGatewayAssociationSpecInitProviderNatGatewa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a NATGateway in network to populate natGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNATGatewayAssociationSpecInitProviderNatGatewayIdSelector
@@ -254,7 +281,9 @@ public partial class V1beta1SubnetNATGatewayAssociationSpecInitProviderNatGatewa
     [JsonPropertyName("policy")]
     public V1beta1SubnetNATGatewayAssociationSpecInitProviderNatGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNATGatewayAssociationSpecInitProviderSubnetIdRefPolicy
@@ -267,7 +296,9 @@ public partial class V1beta1SubnetNATGatewayAssociationSpecInitProviderSubnetIdR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNATGatewayAssociationSpecInitProviderSubnetIdRef
@@ -284,7 +315,9 @@ public partial class V1beta1SubnetNATGatewayAssociationSpecInitProviderSubnetIdR
     [JsonPropertyName("policy")]
     public V1beta1SubnetNATGatewayAssociationSpecInitProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNATGatewayAssociationSpecInitProviderSubnetIdSelectorPolicy
@@ -297,7 +330,9 @@ public partial class V1beta1SubnetNATGatewayAssociationSpecInitProviderSubnetIdS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNATGatewayAssociationSpecInitProviderSubnetIdSelector
@@ -318,7 +353,9 @@ public partial class V1beta1SubnetNATGatewayAssociationSpecInitProviderSubnetIdS
     [JsonPropertyName("policy")]
     public V1beta1SubnetNATGatewayAssociationSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNATGatewayAssociationSpecInitProvider
@@ -347,7 +384,9 @@ public partial class V1beta1SubnetNATGatewayAssociationSpecInitProvider
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1SubnetNATGatewayAssociationSpecInitProviderSubnetIdSelector? SubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNATGatewayAssociationSpecProviderConfigRef
@@ -360,7 +399,9 @@ public partial class V1beta1SubnetNATGatewayAssociationSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNATGatewayAssociationSpecWriteConnectionSecretToRef
@@ -369,7 +410,9 @@ public partial class V1beta1SubnetNATGatewayAssociationSpecWriteConnectionSecret
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubnetNATGatewayAssociationSpec defines the desired state of SubnetNATGatewayAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNATGatewayAssociationSpec
@@ -394,7 +437,9 @@ public partial class V1beta1SubnetNATGatewayAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SubnetNATGatewayAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNATGatewayAssociationStatusAtProvider
@@ -411,7 +456,9 @@ public partial class V1beta1SubnetNATGatewayAssociationStatusAtProvider
     [JsonPropertyName("subnetId")]
     public string? SubnetId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNATGatewayAssociationStatusConditions
@@ -440,7 +487,9 @@ public partial class V1beta1SubnetNATGatewayAssociationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubnetNATGatewayAssociationStatus defines the observed state of SubnetNATGatewayAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNATGatewayAssociationStatus
@@ -457,7 +506,9 @@ public partial class V1beta1SubnetNATGatewayAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubnetNATGatewayAssociation is the Schema for the SubnetNATGatewayAssociations API. Associates a</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -487,3 +538,4 @@ public partial class V1beta1SubnetNATGatewayAssociation : IKubernetesObject<V1Ob
     [JsonPropertyName("status")]
     public V1beta1SubnetNATGatewayAssociationStatus? Status { get; set; }
 }
+#nullable disable

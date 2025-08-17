@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.rds.aws.upbound.io;
+#nullable enable
 /// <summary>DBInstanceAutomatedBackupsReplication is the Schema for the DBInstanceAutomatedBackupsReplications API. Enables replication of automated backups to a different AWS Region.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DBInstanceAutomatedBackupsReplicationList : IKuberne
     [JsonPropertyName("items")]
     public IList<V1beta1DBInstanceAutomatedBackupsReplication> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecForProviderKmsKeyIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecForProvider
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecForProviderKmsKeyIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecForProvider
     [JsonPropertyName("policy")]
     public V1beta1DBInstanceAutomatedBackupsReplicationSpecForProviderKmsKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecForProviderKmsKeyIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecForProvider
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecForProviderKmsKeyIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecForProvider
     [JsonPropertyName("policy")]
     public V1beta1DBInstanceAutomatedBackupsReplicationSpecForProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecForProviderSourceDbInstanceArnRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecForProvider
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in rds to populate sourceDbInstanceArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecForProviderSourceDbInstanceArnRef
@@ -115,7 +128,9 @@ public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecForProvider
     [JsonPropertyName("policy")]
     public V1beta1DBInstanceAutomatedBackupsReplicationSpecForProviderSourceDbInstanceArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecForProviderSourceDbInstanceArnSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecForProvider
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in rds to populate sourceDbInstanceArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecForProviderSourceDbInstanceArnSelector
@@ -145,7 +162,9 @@ public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecForProvider
     [JsonPropertyName("policy")]
     public V1beta1DBInstanceAutomatedBackupsReplicationSpecForProviderSourceDbInstanceArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecForProvider
@@ -186,7 +205,9 @@ public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecForProvider
     [JsonPropertyName("sourceDbInstanceArnSelector")]
     public V1beta1DBInstanceAutomatedBackupsReplicationSpecForProviderSourceDbInstanceArnSelector? SourceDbInstanceArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecInitProviderKmsKeyIdRefPolicy
@@ -199,7 +220,9 @@ public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecInitProvide
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecInitProviderKmsKeyIdRef
@@ -212,7 +235,9 @@ public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecInitProvide
     [JsonPropertyName("policy")]
     public V1beta1DBInstanceAutomatedBackupsReplicationSpecInitProviderKmsKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecInitProviderKmsKeyIdSelectorPolicy
@@ -225,7 +250,9 @@ public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecInitProvide
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecInitProviderKmsKeyIdSelector
@@ -242,7 +269,9 @@ public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecInitProvide
     [JsonPropertyName("policy")]
     public V1beta1DBInstanceAutomatedBackupsReplicationSpecInitProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecInitProviderSourceDbInstanceArnRefPolicy
@@ -255,7 +284,9 @@ public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecInitProvide
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in rds to populate sourceDbInstanceArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecInitProviderSourceDbInstanceArnRef
@@ -268,7 +299,9 @@ public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecInitProvide
     [JsonPropertyName("policy")]
     public V1beta1DBInstanceAutomatedBackupsReplicationSpecInitProviderSourceDbInstanceArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecInitProviderSourceDbInstanceArnSelectorPolicy
@@ -281,7 +314,9 @@ public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecInitProvide
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in rds to populate sourceDbInstanceArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecInitProviderSourceDbInstanceArnSelector
@@ -298,7 +333,9 @@ public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecInitProvide
     [JsonPropertyName("policy")]
     public V1beta1DBInstanceAutomatedBackupsReplicationSpecInitProviderSourceDbInstanceArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecInitProvider
@@ -335,7 +372,9 @@ public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecInitProvide
     [JsonPropertyName("sourceDbInstanceArnSelector")]
     public V1beta1DBInstanceAutomatedBackupsReplicationSpecInitProviderSourceDbInstanceArnSelector? SourceDbInstanceArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecProviderConfigRefPolicy
@@ -348,7 +387,9 @@ public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecProviderCon
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecProviderConfigRef
@@ -361,7 +402,9 @@ public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecProviderCon
     [JsonPropertyName("policy")]
     public V1beta1DBInstanceAutomatedBackupsReplicationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecWriteConnectionSecretToRef
@@ -374,7 +417,9 @@ public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecWriteConnec
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DBInstanceAutomatedBackupsReplicationSpec defines the desired state of DBInstanceAutomatedBackupsReplication</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpec
@@ -403,7 +448,9 @@ public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DBInstanceAutomatedBackupsReplicationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DBInstanceAutomatedBackupsReplicationStatusAtProvider
@@ -432,7 +479,9 @@ public partial class V1beta1DBInstanceAutomatedBackupsReplicationStatusAtProvide
     [JsonPropertyName("sourceDbInstanceArn")]
     public string? SourceDbInstanceArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DBInstanceAutomatedBackupsReplicationStatusConditions
@@ -461,7 +510,9 @@ public partial class V1beta1DBInstanceAutomatedBackupsReplicationStatusCondition
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DBInstanceAutomatedBackupsReplicationStatus defines the observed state of DBInstanceAutomatedBackupsReplication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DBInstanceAutomatedBackupsReplicationStatus
@@ -478,7 +529,9 @@ public partial class V1beta1DBInstanceAutomatedBackupsReplicationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DBInstanceAutomatedBackupsReplication is the Schema for the DBInstanceAutomatedBackupsReplications API. Enables replication of automated backups to a different AWS Region.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -508,3 +561,4 @@ public partial class V1beta1DBInstanceAutomatedBackupsReplication : IKubernetesO
     [JsonPropertyName("status")]
     public V1beta1DBInstanceAutomatedBackupsReplicationStatus? Status { get; set; }
 }
+#nullable disable

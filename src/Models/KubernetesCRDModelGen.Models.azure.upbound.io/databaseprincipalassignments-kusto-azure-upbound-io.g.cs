@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kusto.azure.upbound.io;
+#nullable enable
 /// <summary>DatabasePrincipalAssignment is the Schema for the DatabasePrincipalAssignments API. Manages a Kusto / Data Explorer Database Principal Assignment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DatabasePrincipalAssignmentList : IKubernetesObject<
     [JsonPropertyName("items")]
     public IList<V1beta1DatabasePrincipalAssignment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderClusterNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderClusterNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in kusto to populate clusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderClusterNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderClusterNam
     [JsonPropertyName("policy")]
     public V1beta1DatabasePrincipalAssignmentSpecForProviderClusterNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderClusterNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderClusterNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in kusto to populate clusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderClusterNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderClusterNam
     [JsonPropertyName("policy")]
     public V1beta1DatabasePrincipalAssignmentSpecForProviderClusterNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderDatabaseNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderDatabaseNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Database in kusto to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderDatabaseNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderDatabaseNa
     [JsonPropertyName("policy")]
     public V1beta1DatabasePrincipalAssignmentSpecForProviderDatabaseNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderDatabaseNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderDatabaseNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Database in kusto to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderDatabaseNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderDatabaseNa
     [JsonPropertyName("policy")]
     public V1beta1DatabasePrincipalAssignmentSpecForProviderDatabaseNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderResourceGroupNameRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderResourceGr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderResourceGroupNameRef
@@ -171,7 +192,9 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderResourceGr
     [JsonPropertyName("policy")]
     public V1beta1DatabasePrincipalAssignmentSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderResourceGroupNameSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderResourceGr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderResourceGroupNameSelector
@@ -201,7 +226,9 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderResourceGr
     [JsonPropertyName("policy")]
     public V1beta1DatabasePrincipalAssignmentSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabasePrincipalAssignmentSpecForProvider
@@ -258,7 +285,9 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecForProvider
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabasePrincipalAssignmentSpecInitProvider
@@ -279,7 +308,9 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecInitProvider
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabasePrincipalAssignmentSpecProviderConfigRefPolicy
@@ -292,7 +323,9 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecProviderConfigRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabasePrincipalAssignmentSpecProviderConfigRef
@@ -305,7 +338,9 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1DatabasePrincipalAssignmentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabasePrincipalAssignmentSpecWriteConnectionSecretToRef
@@ -318,7 +353,9 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecWriteConnectionSecret
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DatabasePrincipalAssignmentSpec defines the desired state of DatabasePrincipalAssignment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabasePrincipalAssignmentSpec
@@ -347,7 +384,9 @@ public partial class V1beta1DatabasePrincipalAssignmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DatabasePrincipalAssignmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabasePrincipalAssignmentStatusAtProvider
@@ -392,7 +431,9 @@ public partial class V1beta1DatabasePrincipalAssignmentStatusAtProvider
     [JsonPropertyName("tenantName")]
     public string? TenantName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabasePrincipalAssignmentStatusConditions
@@ -421,7 +462,9 @@ public partial class V1beta1DatabasePrincipalAssignmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DatabasePrincipalAssignmentStatus defines the observed state of DatabasePrincipalAssignment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabasePrincipalAssignmentStatus
@@ -438,7 +481,9 @@ public partial class V1beta1DatabasePrincipalAssignmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DatabasePrincipalAssignment is the Schema for the DatabasePrincipalAssignments API. Manages a Kusto / Data Explorer Database Principal Assignment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -468,3 +513,4 @@ public partial class V1beta1DatabasePrincipalAssignment : IKubernetesObject<V1Ob
     [JsonPropertyName("status")]
     public V1beta1DatabasePrincipalAssignmentStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.databricks.crossplane.io;
+#nullable enable
 /// <summary>Job is the Schema for the Jobs API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1JobList : IKubernetesObject<V1ListMeta>, IItems<V1a
     [JsonPropertyName("items")]
     public IList<V1alpha1Job> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderContinuous
@@ -42,7 +45,9 @@ public partial class V1alpha1JobSpecForProviderContinuous
     [JsonPropertyName("pauseStatus")]
     public string? PauseStatus { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderDbtTask
@@ -75,7 +80,9 @@ public partial class V1alpha1JobSpecForProviderDbtTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderDeployment
@@ -88,7 +95,9 @@ public partial class V1alpha1JobSpecForProviderDeployment
     [JsonPropertyName("metadataFilePath")]
     public string? MetadataFilePath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderEmailNotifications
@@ -117,7 +126,9 @@ public partial class V1alpha1JobSpecForProviderEmailNotifications
     [JsonPropertyName("onSuccess")]
     public IList<string>? OnSuccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderEnvironmentSpec
@@ -138,7 +149,9 @@ public partial class V1alpha1JobSpecForProviderEnvironmentSpec
     [JsonPropertyName("jarDependencies")]
     public IList<string>? JarDependencies { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderEnvironment
@@ -151,7 +164,9 @@ public partial class V1alpha1JobSpecForProviderEnvironment
     [JsonPropertyName("spec")]
     public IList<V1alpha1JobSpecForProviderEnvironmentSpec>? Spec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderGitSourceGitSnapshot
@@ -160,7 +175,9 @@ public partial class V1alpha1JobSpecForProviderGitSourceGitSnapshot
     [JsonPropertyName("usedCommit")]
     public string? UsedCommit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderGitSourceJobSource
@@ -177,7 +194,9 @@ public partial class V1alpha1JobSpecForProviderGitSourceJobSource
     [JsonPropertyName("jobConfigPath")]
     public string? JobConfigPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderGitSource
@@ -210,7 +229,9 @@ public partial class V1alpha1JobSpecForProviderGitSource
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderHealthRules
@@ -227,7 +248,9 @@ public partial class V1alpha1JobSpecForProviderHealthRules
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderHealth
@@ -236,7 +259,9 @@ public partial class V1alpha1JobSpecForProviderHealth
     [JsonPropertyName("rules")]
     public IList<V1alpha1JobSpecForProviderHealthRules>? Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderJobClusterNewClusterAutoscale
@@ -249,7 +274,9 @@ public partial class V1alpha1JobSpecForProviderJobClusterNewClusterAutoscale
     [JsonPropertyName("minWorkers")]
     public double? MinWorkers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderJobClusterNewClusterAwsAttributes
@@ -294,7 +321,9 @@ public partial class V1alpha1JobSpecForProviderJobClusterNewClusterAwsAttributes
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderJobClusterNewClusterAzureAttributesLogAnalyticsInfo
@@ -307,7 +336,9 @@ public partial class V1alpha1JobSpecForProviderJobClusterNewClusterAzureAttribut
     [JsonPropertyName("logAnalyticsWorkspaceId")]
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderJobClusterNewClusterAzureAttributes
@@ -328,7 +359,9 @@ public partial class V1alpha1JobSpecForProviderJobClusterNewClusterAzureAttribut
     [JsonPropertyName("spotBidMaxPrice")]
     public double? SpotBidMaxPrice { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderJobClusterNewClusterClusterLogConfDbfs
@@ -337,7 +370,9 @@ public partial class V1alpha1JobSpecForProviderJobClusterNewClusterClusterLogCon
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderJobClusterNewClusterClusterLogConfS3
@@ -370,7 +405,9 @@ public partial class V1alpha1JobSpecForProviderJobClusterNewClusterClusterLogCon
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderJobClusterNewClusterClusterLogConfVolumes
@@ -379,7 +416,9 @@ public partial class V1alpha1JobSpecForProviderJobClusterNewClusterClusterLogCon
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderJobClusterNewClusterClusterLogConf
@@ -396,7 +435,9 @@ public partial class V1alpha1JobSpecForProviderJobClusterNewClusterClusterLogCon
     [JsonPropertyName("volumes")]
     public IList<V1alpha1JobSpecForProviderJobClusterNewClusterClusterLogConfVolumes>? Volumes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderJobClusterNewClusterClusterMountInfoNetworkFilesystemInfo
@@ -409,7 +450,9 @@ public partial class V1alpha1JobSpecForProviderJobClusterNewClusterClusterMountI
     [JsonPropertyName("serverAddress")]
     public string? ServerAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderJobClusterNewClusterClusterMountInfo
@@ -426,7 +469,9 @@ public partial class V1alpha1JobSpecForProviderJobClusterNewClusterClusterMountI
     [JsonPropertyName("remoteMountDirPath")]
     public string? RemoteMountDirPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderJobClusterNewClusterDockerImageBasicAuthPasswordSecretRef
@@ -443,7 +488,9 @@ public partial class V1alpha1JobSpecForProviderJobClusterNewClusterDockerImageBa
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderJobClusterNewClusterDockerImageBasicAuth
@@ -456,7 +503,9 @@ public partial class V1alpha1JobSpecForProviderJobClusterNewClusterDockerImageBa
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderJobClusterNewClusterDockerImage
@@ -469,7 +518,9 @@ public partial class V1alpha1JobSpecForProviderJobClusterNewClusterDockerImage
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderJobClusterNewClusterGcpAttributes
@@ -498,7 +549,9 @@ public partial class V1alpha1JobSpecForProviderJobClusterNewClusterGcpAttributes
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderJobClusterNewClusterInitScriptsAbfss
@@ -507,7 +560,9 @@ public partial class V1alpha1JobSpecForProviderJobClusterNewClusterInitScriptsAb
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderJobClusterNewClusterInitScriptsDbfs
@@ -516,7 +571,9 @@ public partial class V1alpha1JobSpecForProviderJobClusterNewClusterInitScriptsDb
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderJobClusterNewClusterInitScriptsFile
@@ -525,7 +582,9 @@ public partial class V1alpha1JobSpecForProviderJobClusterNewClusterInitScriptsFi
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderJobClusterNewClusterInitScriptsGcs
@@ -534,7 +593,9 @@ public partial class V1alpha1JobSpecForProviderJobClusterNewClusterInitScriptsGc
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderJobClusterNewClusterInitScriptsS3
@@ -567,7 +628,9 @@ public partial class V1alpha1JobSpecForProviderJobClusterNewClusterInitScriptsS3
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderJobClusterNewClusterInitScriptsVolumes
@@ -576,7 +639,9 @@ public partial class V1alpha1JobSpecForProviderJobClusterNewClusterInitScriptsVo
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderJobClusterNewClusterInitScriptsWorkspace
@@ -585,7 +650,9 @@ public partial class V1alpha1JobSpecForProviderJobClusterNewClusterInitScriptsWo
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderJobClusterNewClusterInitScripts
@@ -618,7 +685,9 @@ public partial class V1alpha1JobSpecForProviderJobClusterNewClusterInitScripts
     [JsonPropertyName("workspace")]
     public IList<V1alpha1JobSpecForProviderJobClusterNewClusterInitScriptsWorkspace>? Workspace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderJobClusterNewClusterLibraryCran
@@ -631,7 +700,9 @@ public partial class V1alpha1JobSpecForProviderJobClusterNewClusterLibraryCran
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderJobClusterNewClusterLibraryMaven
@@ -648,7 +719,9 @@ public partial class V1alpha1JobSpecForProviderJobClusterNewClusterLibraryMaven
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderJobClusterNewClusterLibraryPypi
@@ -661,7 +734,9 @@ public partial class V1alpha1JobSpecForProviderJobClusterNewClusterLibraryPypi
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderJobClusterNewClusterLibrary
@@ -694,7 +769,9 @@ public partial class V1alpha1JobSpecForProviderJobClusterNewClusterLibrary
     [JsonPropertyName("whl")]
     public string? Whl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderJobClusterNewClusterWorkloadTypeClients
@@ -707,7 +784,9 @@ public partial class V1alpha1JobSpecForProviderJobClusterNewClusterWorkloadTypeC
     [JsonPropertyName("notebooks")]
     public bool? Notebooks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderJobClusterNewClusterWorkloadType
@@ -716,7 +795,9 @@ public partial class V1alpha1JobSpecForProviderJobClusterNewClusterWorkloadType
     [JsonPropertyName("clients")]
     public IList<V1alpha1JobSpecForProviderJobClusterNewClusterWorkloadTypeClients>? Clients { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderJobClusterNewCluster
@@ -865,7 +946,9 @@ public partial class V1alpha1JobSpecForProviderJobClusterNewCluster
     [JsonPropertyName("workloadType")]
     public IList<V1alpha1JobSpecForProviderJobClusterNewClusterWorkloadType>? WorkloadType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderJobCluster
@@ -878,7 +961,9 @@ public partial class V1alpha1JobSpecForProviderJobCluster
     [JsonPropertyName("newCluster")]
     public IList<V1alpha1JobSpecForProviderJobClusterNewCluster>? NewCluster { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderLibraryCran
@@ -891,7 +976,9 @@ public partial class V1alpha1JobSpecForProviderLibraryCran
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderLibraryMaven
@@ -908,7 +995,9 @@ public partial class V1alpha1JobSpecForProviderLibraryMaven
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderLibraryPypi
@@ -921,7 +1010,9 @@ public partial class V1alpha1JobSpecForProviderLibraryPypi
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderLibrary
@@ -954,7 +1045,9 @@ public partial class V1alpha1JobSpecForProviderLibrary
     [JsonPropertyName("whl")]
     public string? Whl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNewClusterAutoscale
@@ -967,7 +1060,9 @@ public partial class V1alpha1JobSpecForProviderNewClusterAutoscale
     [JsonPropertyName("minWorkers")]
     public double? MinWorkers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNewClusterAwsAttributes
@@ -1012,7 +1107,9 @@ public partial class V1alpha1JobSpecForProviderNewClusterAwsAttributes
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNewClusterAzureAttributesLogAnalyticsInfo
@@ -1025,7 +1122,9 @@ public partial class V1alpha1JobSpecForProviderNewClusterAzureAttributesLogAnaly
     [JsonPropertyName("logAnalyticsWorkspaceId")]
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNewClusterAzureAttributes
@@ -1046,7 +1145,9 @@ public partial class V1alpha1JobSpecForProviderNewClusterAzureAttributes
     [JsonPropertyName("spotBidMaxPrice")]
     public double? SpotBidMaxPrice { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNewClusterClusterLogConfDbfs
@@ -1055,7 +1156,9 @@ public partial class V1alpha1JobSpecForProviderNewClusterClusterLogConfDbfs
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNewClusterClusterLogConfS3
@@ -1088,7 +1191,9 @@ public partial class V1alpha1JobSpecForProviderNewClusterClusterLogConfS3
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNewClusterClusterLogConfVolumes
@@ -1097,7 +1202,9 @@ public partial class V1alpha1JobSpecForProviderNewClusterClusterLogConfVolumes
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNewClusterClusterLogConf
@@ -1114,7 +1221,9 @@ public partial class V1alpha1JobSpecForProviderNewClusterClusterLogConf
     [JsonPropertyName("volumes")]
     public IList<V1alpha1JobSpecForProviderNewClusterClusterLogConfVolumes>? Volumes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNewClusterClusterMountInfoNetworkFilesystemInfo
@@ -1127,7 +1236,9 @@ public partial class V1alpha1JobSpecForProviderNewClusterClusterMountInfoNetwork
     [JsonPropertyName("serverAddress")]
     public string? ServerAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNewClusterClusterMountInfo
@@ -1144,7 +1255,9 @@ public partial class V1alpha1JobSpecForProviderNewClusterClusterMountInfo
     [JsonPropertyName("remoteMountDirPath")]
     public string? RemoteMountDirPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNewClusterDockerImageBasicAuthPasswordSecretRef
@@ -1161,7 +1274,9 @@ public partial class V1alpha1JobSpecForProviderNewClusterDockerImageBasicAuthPas
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNewClusterDockerImageBasicAuth
@@ -1174,7 +1289,9 @@ public partial class V1alpha1JobSpecForProviderNewClusterDockerImageBasicAuth
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNewClusterDockerImage
@@ -1187,7 +1304,9 @@ public partial class V1alpha1JobSpecForProviderNewClusterDockerImage
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNewClusterGcpAttributes
@@ -1216,7 +1335,9 @@ public partial class V1alpha1JobSpecForProviderNewClusterGcpAttributes
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNewClusterInitScriptsAbfss
@@ -1225,7 +1346,9 @@ public partial class V1alpha1JobSpecForProviderNewClusterInitScriptsAbfss
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNewClusterInitScriptsDbfs
@@ -1234,7 +1357,9 @@ public partial class V1alpha1JobSpecForProviderNewClusterInitScriptsDbfs
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNewClusterInitScriptsFile
@@ -1243,7 +1368,9 @@ public partial class V1alpha1JobSpecForProviderNewClusterInitScriptsFile
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNewClusterInitScriptsGcs
@@ -1252,7 +1379,9 @@ public partial class V1alpha1JobSpecForProviderNewClusterInitScriptsGcs
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNewClusterInitScriptsS3
@@ -1285,7 +1414,9 @@ public partial class V1alpha1JobSpecForProviderNewClusterInitScriptsS3
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNewClusterInitScriptsVolumes
@@ -1294,7 +1425,9 @@ public partial class V1alpha1JobSpecForProviderNewClusterInitScriptsVolumes
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNewClusterInitScriptsWorkspace
@@ -1303,7 +1436,9 @@ public partial class V1alpha1JobSpecForProviderNewClusterInitScriptsWorkspace
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNewClusterInitScripts
@@ -1336,7 +1471,9 @@ public partial class V1alpha1JobSpecForProviderNewClusterInitScripts
     [JsonPropertyName("workspace")]
     public IList<V1alpha1JobSpecForProviderNewClusterInitScriptsWorkspace>? Workspace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNewClusterLibraryCran
@@ -1349,7 +1486,9 @@ public partial class V1alpha1JobSpecForProviderNewClusterLibraryCran
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNewClusterLibraryMaven
@@ -1366,7 +1505,9 @@ public partial class V1alpha1JobSpecForProviderNewClusterLibraryMaven
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNewClusterLibraryPypi
@@ -1379,7 +1520,9 @@ public partial class V1alpha1JobSpecForProviderNewClusterLibraryPypi
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNewClusterLibrary
@@ -1412,7 +1555,9 @@ public partial class V1alpha1JobSpecForProviderNewClusterLibrary
     [JsonPropertyName("whl")]
     public string? Whl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNewClusterWorkloadTypeClients
@@ -1425,7 +1570,9 @@ public partial class V1alpha1JobSpecForProviderNewClusterWorkloadTypeClients
     [JsonPropertyName("notebooks")]
     public bool? Notebooks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNewClusterWorkloadType
@@ -1434,7 +1581,9 @@ public partial class V1alpha1JobSpecForProviderNewClusterWorkloadType
     [JsonPropertyName("clients")]
     public IList<V1alpha1JobSpecForProviderNewClusterWorkloadTypeClients>? Clients { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNewCluster
@@ -1579,7 +1728,9 @@ public partial class V1alpha1JobSpecForProviderNewCluster
     [JsonPropertyName("workloadType")]
     public IList<V1alpha1JobSpecForProviderNewClusterWorkloadType>? WorkloadType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNotebookTask
@@ -1600,7 +1751,9 @@ public partial class V1alpha1JobSpecForProviderNotebookTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderNotificationSettings
@@ -1613,7 +1766,9 @@ public partial class V1alpha1JobSpecForProviderNotificationSettings
     [JsonPropertyName("noAlertForSkippedRuns")]
     public bool? NoAlertForSkippedRuns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderParameter
@@ -1626,7 +1781,9 @@ public partial class V1alpha1JobSpecForProviderParameter
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderPipelineTask
@@ -1639,7 +1796,9 @@ public partial class V1alpha1JobSpecForProviderPipelineTask
     [JsonPropertyName("pipelineId")]
     public string? PipelineId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderPythonWheelTask
@@ -1660,7 +1819,9 @@ public partial class V1alpha1JobSpecForProviderPythonWheelTask
     [JsonPropertyName("parameters")]
     public IList<string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderQueue
@@ -1669,7 +1830,9 @@ public partial class V1alpha1JobSpecForProviderQueue
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderRunAs
@@ -1682,7 +1845,9 @@ public partial class V1alpha1JobSpecForProviderRunAs
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderRunJobTask
@@ -1695,7 +1860,9 @@ public partial class V1alpha1JobSpecForProviderRunJobTask
     [JsonPropertyName("jobParameters")]
     public IDictionary<string, string>? JobParameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderSchedule
@@ -1712,7 +1879,9 @@ public partial class V1alpha1JobSpecForProviderSchedule
     [JsonPropertyName("timezoneId")]
     public string? TimezoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderSparkJarTask
@@ -1729,7 +1898,9 @@ public partial class V1alpha1JobSpecForProviderSparkJarTask
     [JsonPropertyName("parameters")]
     public IList<string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderSparkPythonTask
@@ -1746,7 +1917,9 @@ public partial class V1alpha1JobSpecForProviderSparkPythonTask
     [JsonPropertyName("source")]
     public string? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderSparkSubmitTask
@@ -1755,7 +1928,9 @@ public partial class V1alpha1JobSpecForProviderSparkSubmitTask
     [JsonPropertyName("parameters")]
     public IList<string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskCleanRoomsNotebookTask
@@ -1776,7 +1951,9 @@ public partial class V1alpha1JobSpecForProviderTaskCleanRoomsNotebookTask
     [JsonPropertyName("notebookName")]
     public string? NotebookName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskConditionTask
@@ -1793,7 +1970,9 @@ public partial class V1alpha1JobSpecForProviderTaskConditionTask
     [JsonPropertyName("right")]
     public string? Right { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskDashboardTaskSubscriptionSubscribers
@@ -1806,7 +1985,9 @@ public partial class V1alpha1JobSpecForProviderTaskDashboardTaskSubscriptionSubs
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskDashboardTaskSubscription
@@ -1823,7 +2004,9 @@ public partial class V1alpha1JobSpecForProviderTaskDashboardTaskSubscription
     [JsonPropertyName("subscribers")]
     public IList<V1alpha1JobSpecForProviderTaskDashboardTaskSubscriptionSubscribers>? Subscribers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskDashboardTask
@@ -1840,7 +2023,9 @@ public partial class V1alpha1JobSpecForProviderTaskDashboardTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskDbtCloudTask
@@ -1853,7 +2038,9 @@ public partial class V1alpha1JobSpecForProviderTaskDbtCloudTask
     [JsonPropertyName("dbtCloudJobId")]
     public double? DbtCloudJobId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskDbtPlatformTask
@@ -1866,7 +2053,9 @@ public partial class V1alpha1JobSpecForProviderTaskDbtPlatformTask
     [JsonPropertyName("dbtPlatformJobId")]
     public string? DbtPlatformJobId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskDbtTask
@@ -1899,7 +2088,9 @@ public partial class V1alpha1JobSpecForProviderTaskDbtTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskDependsOn
@@ -1912,7 +2103,9 @@ public partial class V1alpha1JobSpecForProviderTaskDependsOn
     [JsonPropertyName("taskKey")]
     public string? TaskKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskEmailNotifications
@@ -1941,7 +2134,9 @@ public partial class V1alpha1JobSpecForProviderTaskEmailNotifications
     [JsonPropertyName("onSuccess")]
     public IList<string>? OnSuccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskCleanRoomsNotebookTask
@@ -1962,7 +2157,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskCleanRoomsNote
     [JsonPropertyName("notebookName")]
     public string? NotebookName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskConditionTask
@@ -1979,7 +2176,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskConditionTask
     [JsonPropertyName("right")]
     public string? Right { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskDashboardTaskSubscriptionSubscribers
@@ -1992,7 +2191,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskDashboardTaskS
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskDashboardTaskSubscription
@@ -2009,7 +2210,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskDashboardTaskS
     [JsonPropertyName("subscribers")]
     public IList<V1alpha1JobSpecForProviderTaskForEachTaskTaskDashboardTaskSubscriptionSubscribers>? Subscribers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskDashboardTask
@@ -2026,7 +2229,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskDashboardTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskDbtCloudTask
@@ -2039,7 +2244,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskDbtCloudTask
     [JsonPropertyName("dbtCloudJobId")]
     public double? DbtCloudJobId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskDbtPlatformTask
@@ -2052,7 +2259,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskDbtPlatformTas
     [JsonPropertyName("dbtPlatformJobId")]
     public string? DbtPlatformJobId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskDbtTask
@@ -2085,7 +2294,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskDbtTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskDependsOn
@@ -2098,7 +2309,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskDependsOn
     [JsonPropertyName("taskKey")]
     public string? TaskKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskEmailNotifications
@@ -2127,7 +2340,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskEmailNotificat
     [JsonPropertyName("onSuccess")]
     public IList<string>? OnSuccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskGenAiComputeTaskCompute
@@ -2144,7 +2359,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskGenAiComputeTa
     [JsonPropertyName("numGpus")]
     public double? NumGpus { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskGenAiComputeTask
@@ -2181,7 +2398,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskGenAiComputeTa
     [JsonPropertyName("yamlParametersFilePath")]
     public string? YamlParametersFilePath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskHealthRules
@@ -2198,7 +2417,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskHealthRules
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskHealth
@@ -2207,7 +2428,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskHealth
     [JsonPropertyName("rules")]
     public IList<V1alpha1JobSpecForProviderTaskForEachTaskTaskHealthRules>? Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskLibraryCran
@@ -2220,7 +2443,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskLibraryCran
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskLibraryMaven
@@ -2237,7 +2462,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskLibraryMaven
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskLibraryPypi
@@ -2250,7 +2477,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskLibraryPypi
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskLibrary
@@ -2283,7 +2512,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskLibrary
     [JsonPropertyName("whl")]
     public string? Whl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterAutoscale
@@ -2296,7 +2527,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterAuto
     [JsonPropertyName("minWorkers")]
     public double? MinWorkers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterAwsAttributes
@@ -2341,7 +2574,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterAwsA
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterAzureAttributesLogAnalyticsInfo
@@ -2354,7 +2589,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterAzur
     [JsonPropertyName("logAnalyticsWorkspaceId")]
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterAzureAttributes
@@ -2375,7 +2612,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterAzur
     [JsonPropertyName("spotBidMaxPrice")]
     public double? SpotBidMaxPrice { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterClusterLogConfDbfs
@@ -2384,7 +2623,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterClus
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterClusterLogConfS3
@@ -2417,7 +2658,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterClus
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterClusterLogConfVolumes
@@ -2426,7 +2669,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterClus
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterClusterLogConf
@@ -2443,7 +2688,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterClus
     [JsonPropertyName("volumes")]
     public IList<V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterClusterLogConfVolumes>? Volumes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterClusterMountInfoNetworkFilesystemInfo
@@ -2456,7 +2703,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterClus
     [JsonPropertyName("serverAddress")]
     public string? ServerAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterClusterMountInfo
@@ -2473,7 +2722,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterClus
     [JsonPropertyName("remoteMountDirPath")]
     public string? RemoteMountDirPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterDockerImageBasicAuthPasswordSecretRef
@@ -2490,7 +2741,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterDock
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterDockerImageBasicAuth
@@ -2503,7 +2756,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterDock
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterDockerImage
@@ -2516,7 +2771,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterDock
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterGcpAttributes
@@ -2545,7 +2802,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterGcpA
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterInitScriptsAbfss
@@ -2554,7 +2813,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterInit
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterInitScriptsDbfs
@@ -2563,7 +2824,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterInit
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterInitScriptsFile
@@ -2572,7 +2835,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterInit
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterInitScriptsGcs
@@ -2581,7 +2846,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterInit
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterInitScriptsS3
@@ -2614,7 +2881,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterInit
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterInitScriptsVolumes
@@ -2623,7 +2892,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterInit
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterInitScriptsWorkspace
@@ -2632,7 +2903,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterInit
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterInitScripts
@@ -2665,7 +2938,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterInit
     [JsonPropertyName("workspace")]
     public IList<V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterInitScriptsWorkspace>? Workspace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterLibraryCran
@@ -2678,7 +2953,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterLibr
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterLibraryMaven
@@ -2695,7 +2972,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterLibr
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterLibraryPypi
@@ -2708,7 +2987,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterLibr
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterLibrary
@@ -2741,7 +3022,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterLibr
     [JsonPropertyName("whl")]
     public string? Whl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterWorkloadTypeClients
@@ -2754,7 +3037,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterWork
     [JsonPropertyName("notebooks")]
     public bool? Notebooks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterWorkloadType
@@ -2763,7 +3048,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterWork
     [JsonPropertyName("clients")]
     public IList<V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterWorkloadTypeClients>? Clients { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewCluster
@@ -2908,7 +3195,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNewCluster
     [JsonPropertyName("workloadType")]
     public IList<V1alpha1JobSpecForProviderTaskForEachTaskTaskNewClusterWorkloadType>? WorkloadType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNotebookTask
@@ -2929,7 +3218,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNotebookTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNotificationSettings
@@ -2946,7 +3237,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskNotificationSe
     [JsonPropertyName("noAlertForSkippedRuns")]
     public bool? NoAlertForSkippedRuns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskPipelineTask
@@ -2959,7 +3252,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskPipelineTask
     [JsonPropertyName("pipelineId")]
     public string? PipelineId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskPowerBiTaskPowerBiModel
@@ -2984,7 +3279,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskPowerBiTaskPow
     [JsonPropertyName("workspaceName")]
     public string? WorkspaceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskPowerBiTaskTables
@@ -3005,7 +3302,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskPowerBiTaskTab
     [JsonPropertyName("storageMode")]
     public string? StorageMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskPowerBiTask
@@ -3030,7 +3329,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskPowerBiTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskPythonWheelTask
@@ -3051,7 +3352,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskPythonWheelTas
     [JsonPropertyName("parameters")]
     public IList<string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskRunJobTaskPipelineParams
@@ -3060,7 +3363,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskRunJobTaskPipe
     [JsonPropertyName("fullRefresh")]
     public bool? FullRefresh { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskRunJobTask
@@ -3105,7 +3410,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskRunJobTask
     [JsonPropertyName("sqlParams")]
     public IDictionary<string, string>? SqlParams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskSparkJarTask
@@ -3126,7 +3433,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskSparkJarTask
     [JsonPropertyName("runAsRepl")]
     public bool? RunAsRepl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskSparkPythonTask
@@ -3143,7 +3452,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskSparkPythonTas
     [JsonPropertyName("source")]
     public string? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskSparkSubmitTask
@@ -3152,7 +3463,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskSparkSubmitTas
     [JsonPropertyName("parameters")]
     public IList<string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskSqlTaskAlertSubscriptions
@@ -3165,7 +3478,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskSqlTaskAlertSu
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskSqlTaskAlert
@@ -3182,7 +3497,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskSqlTaskAlert
     [JsonPropertyName("subscriptions")]
     public IList<V1alpha1JobSpecForProviderTaskForEachTaskTaskSqlTaskAlertSubscriptions>? Subscriptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskSqlTaskDashboardSubscriptions
@@ -3195,7 +3512,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskSqlTaskDashboa
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskSqlTaskDashboard
@@ -3216,7 +3535,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskSqlTaskDashboa
     [JsonPropertyName("subscriptions")]
     public IList<V1alpha1JobSpecForProviderTaskForEachTaskTaskSqlTaskDashboardSubscriptions>? Subscriptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskSqlTaskFile
@@ -3229,7 +3550,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskSqlTaskFile
     [JsonPropertyName("source")]
     public string? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskSqlTaskQuery
@@ -3238,7 +3561,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskSqlTaskQuery
     [JsonPropertyName("queryId")]
     public string? QueryId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskSqlTask
@@ -3267,7 +3592,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskSqlTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskWebhookNotificationsOnDurationWarningThresholdExceeded
@@ -3276,7 +3603,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskWebhookNotific
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskWebhookNotificationsOnFailure
@@ -3285,7 +3614,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskWebhookNotific
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskWebhookNotificationsOnStart
@@ -3294,7 +3625,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskWebhookNotific
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskWebhookNotificationsOnStreamingBacklogExceeded
@@ -3303,7 +3636,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskWebhookNotific
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskWebhookNotificationsOnSuccess
@@ -3312,7 +3647,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskWebhookNotific
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskWebhookNotifications
@@ -3337,7 +3674,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTaskWebhookNotific
     [JsonPropertyName("onSuccess")]
     public IList<V1alpha1JobSpecForProviderTaskForEachTaskTaskWebhookNotificationsOnSuccess>? OnSuccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTaskTask
@@ -3478,7 +3817,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTaskTask
     [JsonPropertyName("webhookNotifications")]
     public IList<V1alpha1JobSpecForProviderTaskForEachTaskTaskWebhookNotifications>? WebhookNotifications { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskForEachTask
@@ -3495,7 +3836,9 @@ public partial class V1alpha1JobSpecForProviderTaskForEachTask
     [JsonPropertyName("task")]
     public IList<V1alpha1JobSpecForProviderTaskForEachTaskTask>? Task { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskGenAiComputeTaskCompute
@@ -3512,7 +3855,9 @@ public partial class V1alpha1JobSpecForProviderTaskGenAiComputeTaskCompute
     [JsonPropertyName("numGpus")]
     public double? NumGpus { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskGenAiComputeTask
@@ -3549,7 +3894,9 @@ public partial class V1alpha1JobSpecForProviderTaskGenAiComputeTask
     [JsonPropertyName("yamlParametersFilePath")]
     public string? YamlParametersFilePath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskHealthRules
@@ -3566,7 +3913,9 @@ public partial class V1alpha1JobSpecForProviderTaskHealthRules
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskHealth
@@ -3575,7 +3924,9 @@ public partial class V1alpha1JobSpecForProviderTaskHealth
     [JsonPropertyName("rules")]
     public IList<V1alpha1JobSpecForProviderTaskHealthRules>? Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskLibraryCran
@@ -3588,7 +3939,9 @@ public partial class V1alpha1JobSpecForProviderTaskLibraryCran
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskLibraryMaven
@@ -3605,7 +3958,9 @@ public partial class V1alpha1JobSpecForProviderTaskLibraryMaven
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskLibraryPypi
@@ -3618,7 +3973,9 @@ public partial class V1alpha1JobSpecForProviderTaskLibraryPypi
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskLibrary
@@ -3651,7 +4008,9 @@ public partial class V1alpha1JobSpecForProviderTaskLibrary
     [JsonPropertyName("whl")]
     public string? Whl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNewClusterAutoscale
@@ -3664,7 +4023,9 @@ public partial class V1alpha1JobSpecForProviderTaskNewClusterAutoscale
     [JsonPropertyName("minWorkers")]
     public double? MinWorkers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNewClusterAwsAttributes
@@ -3709,7 +4070,9 @@ public partial class V1alpha1JobSpecForProviderTaskNewClusterAwsAttributes
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNewClusterAzureAttributesLogAnalyticsInfo
@@ -3722,7 +4085,9 @@ public partial class V1alpha1JobSpecForProviderTaskNewClusterAzureAttributesLogA
     [JsonPropertyName("logAnalyticsWorkspaceId")]
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNewClusterAzureAttributes
@@ -3743,7 +4108,9 @@ public partial class V1alpha1JobSpecForProviderTaskNewClusterAzureAttributes
     [JsonPropertyName("spotBidMaxPrice")]
     public double? SpotBidMaxPrice { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNewClusterClusterLogConfDbfs
@@ -3752,7 +4119,9 @@ public partial class V1alpha1JobSpecForProviderTaskNewClusterClusterLogConfDbfs
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNewClusterClusterLogConfS3
@@ -3785,7 +4154,9 @@ public partial class V1alpha1JobSpecForProviderTaskNewClusterClusterLogConfS3
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNewClusterClusterLogConfVolumes
@@ -3794,7 +4165,9 @@ public partial class V1alpha1JobSpecForProviderTaskNewClusterClusterLogConfVolum
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNewClusterClusterLogConf
@@ -3811,7 +4184,9 @@ public partial class V1alpha1JobSpecForProviderTaskNewClusterClusterLogConf
     [JsonPropertyName("volumes")]
     public IList<V1alpha1JobSpecForProviderTaskNewClusterClusterLogConfVolumes>? Volumes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNewClusterClusterMountInfoNetworkFilesystemInfo
@@ -3824,7 +4199,9 @@ public partial class V1alpha1JobSpecForProviderTaskNewClusterClusterMountInfoNet
     [JsonPropertyName("serverAddress")]
     public string? ServerAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNewClusterClusterMountInfo
@@ -3841,7 +4218,9 @@ public partial class V1alpha1JobSpecForProviderTaskNewClusterClusterMountInfo
     [JsonPropertyName("remoteMountDirPath")]
     public string? RemoteMountDirPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNewClusterDockerImageBasicAuthPasswordSecretRef
@@ -3858,7 +4237,9 @@ public partial class V1alpha1JobSpecForProviderTaskNewClusterDockerImageBasicAut
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNewClusterDockerImageBasicAuth
@@ -3871,7 +4252,9 @@ public partial class V1alpha1JobSpecForProviderTaskNewClusterDockerImageBasicAut
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNewClusterDockerImage
@@ -3884,7 +4267,9 @@ public partial class V1alpha1JobSpecForProviderTaskNewClusterDockerImage
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNewClusterGcpAttributes
@@ -3913,7 +4298,9 @@ public partial class V1alpha1JobSpecForProviderTaskNewClusterGcpAttributes
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNewClusterInitScriptsAbfss
@@ -3922,7 +4309,9 @@ public partial class V1alpha1JobSpecForProviderTaskNewClusterInitScriptsAbfss
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNewClusterInitScriptsDbfs
@@ -3931,7 +4320,9 @@ public partial class V1alpha1JobSpecForProviderTaskNewClusterInitScriptsDbfs
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNewClusterInitScriptsFile
@@ -3940,7 +4331,9 @@ public partial class V1alpha1JobSpecForProviderTaskNewClusterInitScriptsFile
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNewClusterInitScriptsGcs
@@ -3949,7 +4342,9 @@ public partial class V1alpha1JobSpecForProviderTaskNewClusterInitScriptsGcs
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNewClusterInitScriptsS3
@@ -3982,7 +4377,9 @@ public partial class V1alpha1JobSpecForProviderTaskNewClusterInitScriptsS3
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNewClusterInitScriptsVolumes
@@ -3991,7 +4388,9 @@ public partial class V1alpha1JobSpecForProviderTaskNewClusterInitScriptsVolumes
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNewClusterInitScriptsWorkspace
@@ -4000,7 +4399,9 @@ public partial class V1alpha1JobSpecForProviderTaskNewClusterInitScriptsWorkspac
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNewClusterInitScripts
@@ -4033,7 +4434,9 @@ public partial class V1alpha1JobSpecForProviderTaskNewClusterInitScripts
     [JsonPropertyName("workspace")]
     public IList<V1alpha1JobSpecForProviderTaskNewClusterInitScriptsWorkspace>? Workspace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNewClusterLibraryCran
@@ -4046,7 +4449,9 @@ public partial class V1alpha1JobSpecForProviderTaskNewClusterLibraryCran
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNewClusterLibraryMaven
@@ -4063,7 +4468,9 @@ public partial class V1alpha1JobSpecForProviderTaskNewClusterLibraryMaven
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNewClusterLibraryPypi
@@ -4076,7 +4483,9 @@ public partial class V1alpha1JobSpecForProviderTaskNewClusterLibraryPypi
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNewClusterLibrary
@@ -4109,7 +4518,9 @@ public partial class V1alpha1JobSpecForProviderTaskNewClusterLibrary
     [JsonPropertyName("whl")]
     public string? Whl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNewClusterWorkloadTypeClients
@@ -4122,7 +4533,9 @@ public partial class V1alpha1JobSpecForProviderTaskNewClusterWorkloadTypeClients
     [JsonPropertyName("notebooks")]
     public bool? Notebooks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNewClusterWorkloadType
@@ -4131,7 +4544,9 @@ public partial class V1alpha1JobSpecForProviderTaskNewClusterWorkloadType
     [JsonPropertyName("clients")]
     public IList<V1alpha1JobSpecForProviderTaskNewClusterWorkloadTypeClients>? Clients { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNewCluster
@@ -4280,7 +4695,9 @@ public partial class V1alpha1JobSpecForProviderTaskNewCluster
     [JsonPropertyName("workloadType")]
     public IList<V1alpha1JobSpecForProviderTaskNewClusterWorkloadType>? WorkloadType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNotebookTask
@@ -4301,7 +4718,9 @@ public partial class V1alpha1JobSpecForProviderTaskNotebookTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskNotificationSettings
@@ -4318,7 +4737,9 @@ public partial class V1alpha1JobSpecForProviderTaskNotificationSettings
     [JsonPropertyName("noAlertForSkippedRuns")]
     public bool? NoAlertForSkippedRuns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskPipelineTask
@@ -4331,7 +4752,9 @@ public partial class V1alpha1JobSpecForProviderTaskPipelineTask
     [JsonPropertyName("pipelineId")]
     public string? PipelineId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskPowerBiTaskPowerBiModel
@@ -4356,7 +4779,9 @@ public partial class V1alpha1JobSpecForProviderTaskPowerBiTaskPowerBiModel
     [JsonPropertyName("workspaceName")]
     public string? WorkspaceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskPowerBiTaskTables
@@ -4377,7 +4802,9 @@ public partial class V1alpha1JobSpecForProviderTaskPowerBiTaskTables
     [JsonPropertyName("storageMode")]
     public string? StorageMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskPowerBiTask
@@ -4402,7 +4829,9 @@ public partial class V1alpha1JobSpecForProviderTaskPowerBiTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskPythonWheelTask
@@ -4423,7 +4852,9 @@ public partial class V1alpha1JobSpecForProviderTaskPythonWheelTask
     [JsonPropertyName("parameters")]
     public IList<string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskRunJobTaskPipelineParams
@@ -4432,7 +4863,9 @@ public partial class V1alpha1JobSpecForProviderTaskRunJobTaskPipelineParams
     [JsonPropertyName("fullRefresh")]
     public bool? FullRefresh { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskRunJobTask
@@ -4477,7 +4910,9 @@ public partial class V1alpha1JobSpecForProviderTaskRunJobTask
     [JsonPropertyName("sqlParams")]
     public IDictionary<string, string>? SqlParams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskSparkJarTask
@@ -4498,7 +4933,9 @@ public partial class V1alpha1JobSpecForProviderTaskSparkJarTask
     [JsonPropertyName("runAsRepl")]
     public bool? RunAsRepl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskSparkPythonTask
@@ -4515,7 +4952,9 @@ public partial class V1alpha1JobSpecForProviderTaskSparkPythonTask
     [JsonPropertyName("source")]
     public string? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskSparkSubmitTask
@@ -4524,7 +4963,9 @@ public partial class V1alpha1JobSpecForProviderTaskSparkSubmitTask
     [JsonPropertyName("parameters")]
     public IList<string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskSqlTaskAlertSubscriptions
@@ -4537,7 +4978,9 @@ public partial class V1alpha1JobSpecForProviderTaskSqlTaskAlertSubscriptions
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskSqlTaskAlert
@@ -4554,7 +4997,9 @@ public partial class V1alpha1JobSpecForProviderTaskSqlTaskAlert
     [JsonPropertyName("subscriptions")]
     public IList<V1alpha1JobSpecForProviderTaskSqlTaskAlertSubscriptions>? Subscriptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskSqlTaskDashboardSubscriptions
@@ -4567,7 +5012,9 @@ public partial class V1alpha1JobSpecForProviderTaskSqlTaskDashboardSubscriptions
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskSqlTaskDashboard
@@ -4588,7 +5035,9 @@ public partial class V1alpha1JobSpecForProviderTaskSqlTaskDashboard
     [JsonPropertyName("subscriptions")]
     public IList<V1alpha1JobSpecForProviderTaskSqlTaskDashboardSubscriptions>? Subscriptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskSqlTaskFile
@@ -4601,7 +5050,9 @@ public partial class V1alpha1JobSpecForProviderTaskSqlTaskFile
     [JsonPropertyName("source")]
     public string? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskSqlTaskQuery
@@ -4610,7 +5061,9 @@ public partial class V1alpha1JobSpecForProviderTaskSqlTaskQuery
     [JsonPropertyName("queryId")]
     public string? QueryId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskSqlTask
@@ -4639,7 +5092,9 @@ public partial class V1alpha1JobSpecForProviderTaskSqlTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskWebhookNotificationsOnDurationWarningThresholdExceeded
@@ -4648,7 +5103,9 @@ public partial class V1alpha1JobSpecForProviderTaskWebhookNotificationsOnDuratio
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskWebhookNotificationsOnFailure
@@ -4657,7 +5114,9 @@ public partial class V1alpha1JobSpecForProviderTaskWebhookNotificationsOnFailure
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskWebhookNotificationsOnStart
@@ -4666,7 +5125,9 @@ public partial class V1alpha1JobSpecForProviderTaskWebhookNotificationsOnStart
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskWebhookNotificationsOnStreamingBacklogExceeded
@@ -4675,7 +5136,9 @@ public partial class V1alpha1JobSpecForProviderTaskWebhookNotificationsOnStreami
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskWebhookNotificationsOnSuccess
@@ -4684,7 +5147,9 @@ public partial class V1alpha1JobSpecForProviderTaskWebhookNotificationsOnSuccess
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTaskWebhookNotifications
@@ -4709,7 +5174,9 @@ public partial class V1alpha1JobSpecForProviderTaskWebhookNotifications
     [JsonPropertyName("onSuccess")]
     public IList<V1alpha1JobSpecForProviderTaskWebhookNotificationsOnSuccess>? OnSuccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTask
@@ -4854,7 +5321,9 @@ public partial class V1alpha1JobSpecForProviderTask
     [JsonPropertyName("webhookNotifications")]
     public IList<V1alpha1JobSpecForProviderTaskWebhookNotifications>? WebhookNotifications { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTriggerFileArrival
@@ -4871,7 +5340,9 @@ public partial class V1alpha1JobSpecForProviderTriggerFileArrival
     [JsonPropertyName("waitAfterLastChangeSeconds")]
     public double? WaitAfterLastChangeSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTriggerPeriodic
@@ -4884,7 +5355,9 @@ public partial class V1alpha1JobSpecForProviderTriggerPeriodic
     [JsonPropertyName("unit")]
     public string? Unit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTriggerTable
@@ -4905,7 +5378,9 @@ public partial class V1alpha1JobSpecForProviderTriggerTable
     [JsonPropertyName("waitAfterLastChangeSeconds")]
     public double? WaitAfterLastChangeSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTriggerTableUpdate
@@ -4926,7 +5401,9 @@ public partial class V1alpha1JobSpecForProviderTriggerTableUpdate
     [JsonPropertyName("waitAfterLastChangeSeconds")]
     public double? WaitAfterLastChangeSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderTrigger
@@ -4951,7 +5428,9 @@ public partial class V1alpha1JobSpecForProviderTrigger
     [JsonPropertyName("tableUpdate")]
     public IList<V1alpha1JobSpecForProviderTriggerTableUpdate>? TableUpdate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderWebhookNotificationsOnDurationWarningThresholdExceeded
@@ -4960,7 +5439,9 @@ public partial class V1alpha1JobSpecForProviderWebhookNotificationsOnDurationWar
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderWebhookNotificationsOnFailure
@@ -4969,7 +5450,9 @@ public partial class V1alpha1JobSpecForProviderWebhookNotificationsOnFailure
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderWebhookNotificationsOnStart
@@ -4978,7 +5461,9 @@ public partial class V1alpha1JobSpecForProviderWebhookNotificationsOnStart
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderWebhookNotificationsOnStreamingBacklogExceeded
@@ -4987,7 +5472,9 @@ public partial class V1alpha1JobSpecForProviderWebhookNotificationsOnStreamingBa
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderWebhookNotificationsOnSuccess
@@ -4996,7 +5483,9 @@ public partial class V1alpha1JobSpecForProviderWebhookNotificationsOnSuccess
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProviderWebhookNotifications
@@ -5021,7 +5510,9 @@ public partial class V1alpha1JobSpecForProviderWebhookNotifications
     [JsonPropertyName("onSuccess")]
     public IList<V1alpha1JobSpecForProviderWebhookNotificationsOnSuccess>? OnSuccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecForProvider
@@ -5186,7 +5677,9 @@ public partial class V1alpha1JobSpecForProvider
     [JsonPropertyName("webhookNotifications")]
     public IList<V1alpha1JobSpecForProviderWebhookNotifications>? WebhookNotifications { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderContinuous
@@ -5195,7 +5688,9 @@ public partial class V1alpha1JobSpecInitProviderContinuous
     [JsonPropertyName("pauseStatus")]
     public string? PauseStatus { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderDbtTask
@@ -5228,7 +5723,9 @@ public partial class V1alpha1JobSpecInitProviderDbtTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderDeployment
@@ -5241,7 +5738,9 @@ public partial class V1alpha1JobSpecInitProviderDeployment
     [JsonPropertyName("metadataFilePath")]
     public string? MetadataFilePath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderEmailNotifications
@@ -5270,7 +5769,9 @@ public partial class V1alpha1JobSpecInitProviderEmailNotifications
     [JsonPropertyName("onSuccess")]
     public IList<string>? OnSuccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderEnvironmentSpec
@@ -5291,7 +5792,9 @@ public partial class V1alpha1JobSpecInitProviderEnvironmentSpec
     [JsonPropertyName("jarDependencies")]
     public IList<string>? JarDependencies { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderEnvironment
@@ -5304,7 +5807,9 @@ public partial class V1alpha1JobSpecInitProviderEnvironment
     [JsonPropertyName("spec")]
     public IList<V1alpha1JobSpecInitProviderEnvironmentSpec>? Spec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderGitSourceGitSnapshot
@@ -5313,7 +5818,9 @@ public partial class V1alpha1JobSpecInitProviderGitSourceGitSnapshot
     [JsonPropertyName("usedCommit")]
     public string? UsedCommit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderGitSourceJobSource
@@ -5330,7 +5837,9 @@ public partial class V1alpha1JobSpecInitProviderGitSourceJobSource
     [JsonPropertyName("jobConfigPath")]
     public string? JobConfigPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderGitSource
@@ -5363,7 +5872,9 @@ public partial class V1alpha1JobSpecInitProviderGitSource
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderHealthRules
@@ -5380,7 +5891,9 @@ public partial class V1alpha1JobSpecInitProviderHealthRules
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderHealth
@@ -5389,7 +5902,9 @@ public partial class V1alpha1JobSpecInitProviderHealth
     [JsonPropertyName("rules")]
     public IList<V1alpha1JobSpecInitProviderHealthRules>? Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterAutoscale
@@ -5402,7 +5917,9 @@ public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterAutoscale
     [JsonPropertyName("minWorkers")]
     public double? MinWorkers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterAwsAttributes
@@ -5447,7 +5964,9 @@ public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterAwsAttribute
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterAzureAttributesLogAnalyticsInfo
@@ -5460,7 +5979,9 @@ public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterAzureAttribu
     [JsonPropertyName("logAnalyticsWorkspaceId")]
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterAzureAttributes
@@ -5481,7 +6002,9 @@ public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterAzureAttribu
     [JsonPropertyName("spotBidMaxPrice")]
     public double? SpotBidMaxPrice { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterClusterLogConfDbfs
@@ -5490,7 +6013,9 @@ public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterClusterLogCo
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterClusterLogConfS3
@@ -5523,7 +6048,9 @@ public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterClusterLogCo
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterClusterLogConfVolumes
@@ -5532,7 +6059,9 @@ public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterClusterLogCo
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterClusterLogConf
@@ -5549,7 +6078,9 @@ public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterClusterLogCo
     [JsonPropertyName("volumes")]
     public IList<V1alpha1JobSpecInitProviderJobClusterNewClusterClusterLogConfVolumes>? Volumes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterClusterMountInfoNetworkFilesystemInfo
@@ -5562,7 +6093,9 @@ public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterClusterMount
     [JsonPropertyName("serverAddress")]
     public string? ServerAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterClusterMountInfo
@@ -5579,7 +6112,9 @@ public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterClusterMount
     [JsonPropertyName("remoteMountDirPath")]
     public string? RemoteMountDirPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterDockerImageBasicAuthPasswordSecretRef
@@ -5596,7 +6131,9 @@ public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterDockerImageB
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterDockerImageBasicAuth
@@ -5609,7 +6146,9 @@ public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterDockerImageB
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterDockerImage
@@ -5622,7 +6161,9 @@ public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterDockerImage
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterGcpAttributes
@@ -5651,7 +6192,9 @@ public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterGcpAttribute
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterInitScriptsAbfss
@@ -5660,7 +6203,9 @@ public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterInitScriptsA
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterInitScriptsDbfs
@@ -5669,7 +6214,9 @@ public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterInitScriptsD
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterInitScriptsFile
@@ -5678,7 +6225,9 @@ public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterInitScriptsF
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterInitScriptsGcs
@@ -5687,7 +6236,9 @@ public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterInitScriptsG
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterInitScriptsS3
@@ -5720,7 +6271,9 @@ public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterInitScriptsS
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterInitScriptsVolumes
@@ -5729,7 +6282,9 @@ public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterInitScriptsV
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterInitScriptsWorkspace
@@ -5738,7 +6293,9 @@ public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterInitScriptsW
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterInitScripts
@@ -5771,7 +6328,9 @@ public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterInitScripts
     [JsonPropertyName("workspace")]
     public IList<V1alpha1JobSpecInitProviderJobClusterNewClusterInitScriptsWorkspace>? Workspace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterLibraryCran
@@ -5784,7 +6343,9 @@ public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterLibraryCran
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterLibraryMaven
@@ -5801,7 +6362,9 @@ public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterLibraryMaven
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterLibraryPypi
@@ -5814,7 +6377,9 @@ public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterLibraryPypi
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterLibrary
@@ -5847,7 +6412,9 @@ public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterLibrary
     [JsonPropertyName("whl")]
     public string? Whl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterWorkloadTypeClients
@@ -5860,7 +6427,9 @@ public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterWorkloadType
     [JsonPropertyName("notebooks")]
     public bool? Notebooks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterWorkloadType
@@ -5869,7 +6438,9 @@ public partial class V1alpha1JobSpecInitProviderJobClusterNewClusterWorkloadType
     [JsonPropertyName("clients")]
     public IList<V1alpha1JobSpecInitProviderJobClusterNewClusterWorkloadTypeClients>? Clients { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderJobClusterNewCluster
@@ -6018,7 +6589,9 @@ public partial class V1alpha1JobSpecInitProviderJobClusterNewCluster
     [JsonPropertyName("workloadType")]
     public IList<V1alpha1JobSpecInitProviderJobClusterNewClusterWorkloadType>? WorkloadType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderJobCluster
@@ -6031,7 +6604,9 @@ public partial class V1alpha1JobSpecInitProviderJobCluster
     [JsonPropertyName("newCluster")]
     public IList<V1alpha1JobSpecInitProviderJobClusterNewCluster>? NewCluster { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderLibraryCran
@@ -6044,7 +6619,9 @@ public partial class V1alpha1JobSpecInitProviderLibraryCran
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderLibraryMaven
@@ -6061,7 +6638,9 @@ public partial class V1alpha1JobSpecInitProviderLibraryMaven
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderLibraryPypi
@@ -6074,7 +6653,9 @@ public partial class V1alpha1JobSpecInitProviderLibraryPypi
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderLibrary
@@ -6107,7 +6688,9 @@ public partial class V1alpha1JobSpecInitProviderLibrary
     [JsonPropertyName("whl")]
     public string? Whl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNewClusterAutoscale
@@ -6120,7 +6703,9 @@ public partial class V1alpha1JobSpecInitProviderNewClusterAutoscale
     [JsonPropertyName("minWorkers")]
     public double? MinWorkers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNewClusterAwsAttributes
@@ -6165,7 +6750,9 @@ public partial class V1alpha1JobSpecInitProviderNewClusterAwsAttributes
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNewClusterAzureAttributesLogAnalyticsInfo
@@ -6178,7 +6765,9 @@ public partial class V1alpha1JobSpecInitProviderNewClusterAzureAttributesLogAnal
     [JsonPropertyName("logAnalyticsWorkspaceId")]
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNewClusterAzureAttributes
@@ -6199,7 +6788,9 @@ public partial class V1alpha1JobSpecInitProviderNewClusterAzureAttributes
     [JsonPropertyName("spotBidMaxPrice")]
     public double? SpotBidMaxPrice { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNewClusterClusterLogConfDbfs
@@ -6208,7 +6799,9 @@ public partial class V1alpha1JobSpecInitProviderNewClusterClusterLogConfDbfs
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNewClusterClusterLogConfS3
@@ -6241,7 +6834,9 @@ public partial class V1alpha1JobSpecInitProviderNewClusterClusterLogConfS3
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNewClusterClusterLogConfVolumes
@@ -6250,7 +6845,9 @@ public partial class V1alpha1JobSpecInitProviderNewClusterClusterLogConfVolumes
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNewClusterClusterLogConf
@@ -6267,7 +6864,9 @@ public partial class V1alpha1JobSpecInitProviderNewClusterClusterLogConf
     [JsonPropertyName("volumes")]
     public IList<V1alpha1JobSpecInitProviderNewClusterClusterLogConfVolumes>? Volumes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNewClusterClusterMountInfoNetworkFilesystemInfo
@@ -6280,7 +6879,9 @@ public partial class V1alpha1JobSpecInitProviderNewClusterClusterMountInfoNetwor
     [JsonPropertyName("serverAddress")]
     public string? ServerAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNewClusterClusterMountInfo
@@ -6297,7 +6898,9 @@ public partial class V1alpha1JobSpecInitProviderNewClusterClusterMountInfo
     [JsonPropertyName("remoteMountDirPath")]
     public string? RemoteMountDirPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNewClusterDockerImageBasicAuthPasswordSecretRef
@@ -6314,7 +6917,9 @@ public partial class V1alpha1JobSpecInitProviderNewClusterDockerImageBasicAuthPa
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNewClusterDockerImageBasicAuth
@@ -6327,7 +6932,9 @@ public partial class V1alpha1JobSpecInitProviderNewClusterDockerImageBasicAuth
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNewClusterDockerImage
@@ -6340,7 +6947,9 @@ public partial class V1alpha1JobSpecInitProviderNewClusterDockerImage
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNewClusterGcpAttributes
@@ -6369,7 +6978,9 @@ public partial class V1alpha1JobSpecInitProviderNewClusterGcpAttributes
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNewClusterInitScriptsAbfss
@@ -6378,7 +6989,9 @@ public partial class V1alpha1JobSpecInitProviderNewClusterInitScriptsAbfss
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNewClusterInitScriptsDbfs
@@ -6387,7 +7000,9 @@ public partial class V1alpha1JobSpecInitProviderNewClusterInitScriptsDbfs
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNewClusterInitScriptsFile
@@ -6396,7 +7011,9 @@ public partial class V1alpha1JobSpecInitProviderNewClusterInitScriptsFile
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNewClusterInitScriptsGcs
@@ -6405,7 +7022,9 @@ public partial class V1alpha1JobSpecInitProviderNewClusterInitScriptsGcs
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNewClusterInitScriptsS3
@@ -6438,7 +7057,9 @@ public partial class V1alpha1JobSpecInitProviderNewClusterInitScriptsS3
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNewClusterInitScriptsVolumes
@@ -6447,7 +7068,9 @@ public partial class V1alpha1JobSpecInitProviderNewClusterInitScriptsVolumes
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNewClusterInitScriptsWorkspace
@@ -6456,7 +7079,9 @@ public partial class V1alpha1JobSpecInitProviderNewClusterInitScriptsWorkspace
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNewClusterInitScripts
@@ -6489,7 +7114,9 @@ public partial class V1alpha1JobSpecInitProviderNewClusterInitScripts
     [JsonPropertyName("workspace")]
     public IList<V1alpha1JobSpecInitProviderNewClusterInitScriptsWorkspace>? Workspace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNewClusterLibraryCran
@@ -6502,7 +7129,9 @@ public partial class V1alpha1JobSpecInitProviderNewClusterLibraryCran
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNewClusterLibraryMaven
@@ -6519,7 +7148,9 @@ public partial class V1alpha1JobSpecInitProviderNewClusterLibraryMaven
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNewClusterLibraryPypi
@@ -6532,7 +7163,9 @@ public partial class V1alpha1JobSpecInitProviderNewClusterLibraryPypi
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNewClusterLibrary
@@ -6565,7 +7198,9 @@ public partial class V1alpha1JobSpecInitProviderNewClusterLibrary
     [JsonPropertyName("whl")]
     public string? Whl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNewClusterWorkloadTypeClients
@@ -6578,7 +7213,9 @@ public partial class V1alpha1JobSpecInitProviderNewClusterWorkloadTypeClients
     [JsonPropertyName("notebooks")]
     public bool? Notebooks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNewClusterWorkloadType
@@ -6587,7 +7224,9 @@ public partial class V1alpha1JobSpecInitProviderNewClusterWorkloadType
     [JsonPropertyName("clients")]
     public IList<V1alpha1JobSpecInitProviderNewClusterWorkloadTypeClients>? Clients { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNewCluster
@@ -6732,7 +7371,9 @@ public partial class V1alpha1JobSpecInitProviderNewCluster
     [JsonPropertyName("workloadType")]
     public IList<V1alpha1JobSpecInitProviderNewClusterWorkloadType>? WorkloadType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNotebookTask
@@ -6753,7 +7394,9 @@ public partial class V1alpha1JobSpecInitProviderNotebookTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderNotificationSettings
@@ -6766,7 +7409,9 @@ public partial class V1alpha1JobSpecInitProviderNotificationSettings
     [JsonPropertyName("noAlertForSkippedRuns")]
     public bool? NoAlertForSkippedRuns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderParameter
@@ -6779,7 +7424,9 @@ public partial class V1alpha1JobSpecInitProviderParameter
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderPipelineTask
@@ -6792,7 +7439,9 @@ public partial class V1alpha1JobSpecInitProviderPipelineTask
     [JsonPropertyName("pipelineId")]
     public string? PipelineId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderPythonWheelTask
@@ -6813,7 +7462,9 @@ public partial class V1alpha1JobSpecInitProviderPythonWheelTask
     [JsonPropertyName("parameters")]
     public IList<string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderQueue
@@ -6822,7 +7473,9 @@ public partial class V1alpha1JobSpecInitProviderQueue
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderRunAs
@@ -6835,7 +7488,9 @@ public partial class V1alpha1JobSpecInitProviderRunAs
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderRunJobTask
@@ -6848,7 +7503,9 @@ public partial class V1alpha1JobSpecInitProviderRunJobTask
     [JsonPropertyName("jobParameters")]
     public IDictionary<string, string>? JobParameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderSchedule
@@ -6865,7 +7522,9 @@ public partial class V1alpha1JobSpecInitProviderSchedule
     [JsonPropertyName("timezoneId")]
     public string? TimezoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderSparkJarTask
@@ -6882,7 +7541,9 @@ public partial class V1alpha1JobSpecInitProviderSparkJarTask
     [JsonPropertyName("parameters")]
     public IList<string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderSparkPythonTask
@@ -6899,7 +7560,9 @@ public partial class V1alpha1JobSpecInitProviderSparkPythonTask
     [JsonPropertyName("source")]
     public string? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderSparkSubmitTask
@@ -6908,7 +7571,9 @@ public partial class V1alpha1JobSpecInitProviderSparkSubmitTask
     [JsonPropertyName("parameters")]
     public IList<string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskCleanRoomsNotebookTask
@@ -6929,7 +7594,9 @@ public partial class V1alpha1JobSpecInitProviderTaskCleanRoomsNotebookTask
     [JsonPropertyName("notebookName")]
     public string? NotebookName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskConditionTask
@@ -6946,7 +7613,9 @@ public partial class V1alpha1JobSpecInitProviderTaskConditionTask
     [JsonPropertyName("right")]
     public string? Right { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskDashboardTaskSubscriptionSubscribers
@@ -6959,7 +7628,9 @@ public partial class V1alpha1JobSpecInitProviderTaskDashboardTaskSubscriptionSub
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskDashboardTaskSubscription
@@ -6976,7 +7647,9 @@ public partial class V1alpha1JobSpecInitProviderTaskDashboardTaskSubscription
     [JsonPropertyName("subscribers")]
     public IList<V1alpha1JobSpecInitProviderTaskDashboardTaskSubscriptionSubscribers>? Subscribers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskDashboardTask
@@ -6993,7 +7666,9 @@ public partial class V1alpha1JobSpecInitProviderTaskDashboardTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskDbtCloudTask
@@ -7006,7 +7681,9 @@ public partial class V1alpha1JobSpecInitProviderTaskDbtCloudTask
     [JsonPropertyName("dbtCloudJobId")]
     public double? DbtCloudJobId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskDbtPlatformTask
@@ -7019,7 +7696,9 @@ public partial class V1alpha1JobSpecInitProviderTaskDbtPlatformTask
     [JsonPropertyName("dbtPlatformJobId")]
     public string? DbtPlatformJobId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskDbtTask
@@ -7052,7 +7731,9 @@ public partial class V1alpha1JobSpecInitProviderTaskDbtTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskDependsOn
@@ -7065,7 +7746,9 @@ public partial class V1alpha1JobSpecInitProviderTaskDependsOn
     [JsonPropertyName("taskKey")]
     public string? TaskKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskEmailNotifications
@@ -7094,7 +7777,9 @@ public partial class V1alpha1JobSpecInitProviderTaskEmailNotifications
     [JsonPropertyName("onSuccess")]
     public IList<string>? OnSuccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskCleanRoomsNotebookTask
@@ -7115,7 +7800,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskCleanRoomsNot
     [JsonPropertyName("notebookName")]
     public string? NotebookName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskConditionTask
@@ -7132,7 +7819,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskConditionTask
     [JsonPropertyName("right")]
     public string? Right { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskDashboardTaskSubscriptionSubscribers
@@ -7145,7 +7834,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskDashboardTask
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskDashboardTaskSubscription
@@ -7162,7 +7853,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskDashboardTask
     [JsonPropertyName("subscribers")]
     public IList<V1alpha1JobSpecInitProviderTaskForEachTaskTaskDashboardTaskSubscriptionSubscribers>? Subscribers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskDashboardTask
@@ -7179,7 +7872,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskDashboardTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskDbtCloudTask
@@ -7192,7 +7887,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskDbtCloudTask
     [JsonPropertyName("dbtCloudJobId")]
     public double? DbtCloudJobId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskDbtPlatformTask
@@ -7205,7 +7902,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskDbtPlatformTa
     [JsonPropertyName("dbtPlatformJobId")]
     public string? DbtPlatformJobId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskDbtTask
@@ -7238,7 +7937,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskDbtTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskDependsOn
@@ -7251,7 +7952,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskDependsOn
     [JsonPropertyName("taskKey")]
     public string? TaskKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskEmailNotifications
@@ -7280,7 +7983,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskEmailNotifica
     [JsonPropertyName("onSuccess")]
     public IList<string>? OnSuccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskGenAiComputeTaskCompute
@@ -7297,7 +8002,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskGenAiComputeT
     [JsonPropertyName("numGpus")]
     public double? NumGpus { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskGenAiComputeTask
@@ -7334,7 +8041,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskGenAiComputeT
     [JsonPropertyName("yamlParametersFilePath")]
     public string? YamlParametersFilePath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskHealthRules
@@ -7351,7 +8060,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskHealthRules
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskHealth
@@ -7360,7 +8071,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskHealth
     [JsonPropertyName("rules")]
     public IList<V1alpha1JobSpecInitProviderTaskForEachTaskTaskHealthRules>? Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskLibraryCran
@@ -7373,7 +8086,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskLibraryCran
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskLibraryMaven
@@ -7390,7 +8105,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskLibraryMaven
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskLibraryPypi
@@ -7403,7 +8120,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskLibraryPypi
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskLibrary
@@ -7436,7 +8155,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskLibrary
     [JsonPropertyName("whl")]
     public string? Whl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterAutoscale
@@ -7449,7 +8170,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterAut
     [JsonPropertyName("minWorkers")]
     public double? MinWorkers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterAwsAttributes
@@ -7494,7 +8217,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterAws
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterAzureAttributesLogAnalyticsInfo
@@ -7507,7 +8232,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterAzu
     [JsonPropertyName("logAnalyticsWorkspaceId")]
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterAzureAttributes
@@ -7528,7 +8255,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterAzu
     [JsonPropertyName("spotBidMaxPrice")]
     public double? SpotBidMaxPrice { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterClusterLogConfDbfs
@@ -7537,7 +8266,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterClu
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterClusterLogConfS3
@@ -7570,7 +8301,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterClu
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterClusterLogConfVolumes
@@ -7579,7 +8312,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterClu
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterClusterLogConf
@@ -7596,7 +8331,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterClu
     [JsonPropertyName("volumes")]
     public IList<V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterClusterLogConfVolumes>? Volumes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterClusterMountInfoNetworkFilesystemInfo
@@ -7609,7 +8346,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterClu
     [JsonPropertyName("serverAddress")]
     public string? ServerAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterClusterMountInfo
@@ -7626,7 +8365,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterClu
     [JsonPropertyName("remoteMountDirPath")]
     public string? RemoteMountDirPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterDockerImageBasicAuthPasswordSecretRef
@@ -7643,7 +8384,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterDoc
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterDockerImageBasicAuth
@@ -7656,7 +8399,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterDoc
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterDockerImage
@@ -7669,7 +8414,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterDoc
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterGcpAttributes
@@ -7698,7 +8445,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterGcp
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterInitScriptsAbfss
@@ -7707,7 +8456,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterIni
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterInitScriptsDbfs
@@ -7716,7 +8467,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterIni
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterInitScriptsFile
@@ -7725,7 +8478,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterIni
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterInitScriptsGcs
@@ -7734,7 +8489,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterIni
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterInitScriptsS3
@@ -7767,7 +8524,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterIni
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterInitScriptsVolumes
@@ -7776,7 +8535,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterIni
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterInitScriptsWorkspace
@@ -7785,7 +8546,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterIni
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterInitScripts
@@ -7818,7 +8581,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterIni
     [JsonPropertyName("workspace")]
     public IList<V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterInitScriptsWorkspace>? Workspace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterLibraryCran
@@ -7831,7 +8596,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterLib
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterLibraryMaven
@@ -7848,7 +8615,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterLib
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterLibraryPypi
@@ -7861,7 +8630,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterLib
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterLibrary
@@ -7894,7 +8665,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterLib
     [JsonPropertyName("whl")]
     public string? Whl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterWorkloadTypeClients
@@ -7907,7 +8680,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterWor
     [JsonPropertyName("notebooks")]
     public bool? Notebooks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterWorkloadType
@@ -7916,7 +8691,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterWor
     [JsonPropertyName("clients")]
     public IList<V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterWorkloadTypeClients>? Clients { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewCluster
@@ -8061,7 +8838,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewCluster
     [JsonPropertyName("workloadType")]
     public IList<V1alpha1JobSpecInitProviderTaskForEachTaskTaskNewClusterWorkloadType>? WorkloadType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNotebookTask
@@ -8082,7 +8861,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNotebookTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNotificationSettings
@@ -8099,7 +8880,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskNotificationS
     [JsonPropertyName("noAlertForSkippedRuns")]
     public bool? NoAlertForSkippedRuns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskPipelineTask
@@ -8112,7 +8895,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskPipelineTask
     [JsonPropertyName("pipelineId")]
     public string? PipelineId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskPowerBiTaskPowerBiModel
@@ -8137,7 +8922,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskPowerBiTaskPo
     [JsonPropertyName("workspaceName")]
     public string? WorkspaceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskPowerBiTaskTables
@@ -8158,7 +8945,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskPowerBiTaskTa
     [JsonPropertyName("storageMode")]
     public string? StorageMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskPowerBiTask
@@ -8183,7 +8972,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskPowerBiTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskPythonWheelTask
@@ -8204,7 +8995,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskPythonWheelTa
     [JsonPropertyName("parameters")]
     public IList<string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskRunJobTaskPipelineParams
@@ -8213,7 +9006,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskRunJobTaskPip
     [JsonPropertyName("fullRefresh")]
     public bool? FullRefresh { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskRunJobTask
@@ -8258,7 +9053,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskRunJobTask
     [JsonPropertyName("sqlParams")]
     public IDictionary<string, string>? SqlParams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskSparkJarTask
@@ -8279,7 +9076,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskSparkJarTask
     [JsonPropertyName("runAsRepl")]
     public bool? RunAsRepl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskSparkPythonTask
@@ -8296,7 +9095,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskSparkPythonTa
     [JsonPropertyName("source")]
     public string? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskSparkSubmitTask
@@ -8305,7 +9106,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskSparkSubmitTa
     [JsonPropertyName("parameters")]
     public IList<string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskSqlTaskAlertSubscriptions
@@ -8318,7 +9121,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskSqlTaskAlertS
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskSqlTaskAlert
@@ -8335,7 +9140,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskSqlTaskAlert
     [JsonPropertyName("subscriptions")]
     public IList<V1alpha1JobSpecInitProviderTaskForEachTaskTaskSqlTaskAlertSubscriptions>? Subscriptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskSqlTaskDashboardSubscriptions
@@ -8348,7 +9155,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskSqlTaskDashbo
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskSqlTaskDashboard
@@ -8369,7 +9178,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskSqlTaskDashbo
     [JsonPropertyName("subscriptions")]
     public IList<V1alpha1JobSpecInitProviderTaskForEachTaskTaskSqlTaskDashboardSubscriptions>? Subscriptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskSqlTaskFile
@@ -8382,7 +9193,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskSqlTaskFile
     [JsonPropertyName("source")]
     public string? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskSqlTaskQuery
@@ -8391,7 +9204,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskSqlTaskQuery
     [JsonPropertyName("queryId")]
     public string? QueryId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskSqlTask
@@ -8420,7 +9235,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskSqlTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskWebhookNotificationsOnDurationWarningThresholdExceeded
@@ -8429,7 +9246,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskWebhookNotifi
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskWebhookNotificationsOnFailure
@@ -8438,7 +9257,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskWebhookNotifi
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskWebhookNotificationsOnStart
@@ -8447,7 +9268,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskWebhookNotifi
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskWebhookNotificationsOnStreamingBacklogExceeded
@@ -8456,7 +9279,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskWebhookNotifi
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskWebhookNotificationsOnSuccess
@@ -8465,7 +9290,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskWebhookNotifi
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskWebhookNotifications
@@ -8490,7 +9317,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTaskWebhookNotifi
     [JsonPropertyName("onSuccess")]
     public IList<V1alpha1JobSpecInitProviderTaskForEachTaskTaskWebhookNotificationsOnSuccess>? OnSuccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTask
@@ -8631,7 +9460,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTaskTask
     [JsonPropertyName("webhookNotifications")]
     public IList<V1alpha1JobSpecInitProviderTaskForEachTaskTaskWebhookNotifications>? WebhookNotifications { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskForEachTask
@@ -8648,7 +9479,9 @@ public partial class V1alpha1JobSpecInitProviderTaskForEachTask
     [JsonPropertyName("task")]
     public IList<V1alpha1JobSpecInitProviderTaskForEachTaskTask>? Task { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskGenAiComputeTaskCompute
@@ -8665,7 +9498,9 @@ public partial class V1alpha1JobSpecInitProviderTaskGenAiComputeTaskCompute
     [JsonPropertyName("numGpus")]
     public double? NumGpus { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskGenAiComputeTask
@@ -8702,7 +9537,9 @@ public partial class V1alpha1JobSpecInitProviderTaskGenAiComputeTask
     [JsonPropertyName("yamlParametersFilePath")]
     public string? YamlParametersFilePath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskHealthRules
@@ -8719,7 +9556,9 @@ public partial class V1alpha1JobSpecInitProviderTaskHealthRules
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskHealth
@@ -8728,7 +9567,9 @@ public partial class V1alpha1JobSpecInitProviderTaskHealth
     [JsonPropertyName("rules")]
     public IList<V1alpha1JobSpecInitProviderTaskHealthRules>? Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskLibraryCran
@@ -8741,7 +9582,9 @@ public partial class V1alpha1JobSpecInitProviderTaskLibraryCran
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskLibraryMaven
@@ -8758,7 +9601,9 @@ public partial class V1alpha1JobSpecInitProviderTaskLibraryMaven
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskLibraryPypi
@@ -8771,7 +9616,9 @@ public partial class V1alpha1JobSpecInitProviderTaskLibraryPypi
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskLibrary
@@ -8804,7 +9651,9 @@ public partial class V1alpha1JobSpecInitProviderTaskLibrary
     [JsonPropertyName("whl")]
     public string? Whl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNewClusterAutoscale
@@ -8817,7 +9666,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNewClusterAutoscale
     [JsonPropertyName("minWorkers")]
     public double? MinWorkers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNewClusterAwsAttributes
@@ -8862,7 +9713,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNewClusterAwsAttributes
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNewClusterAzureAttributesLogAnalyticsInfo
@@ -8875,7 +9728,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNewClusterAzureAttributesLog
     [JsonPropertyName("logAnalyticsWorkspaceId")]
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNewClusterAzureAttributes
@@ -8896,7 +9751,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNewClusterAzureAttributes
     [JsonPropertyName("spotBidMaxPrice")]
     public double? SpotBidMaxPrice { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNewClusterClusterLogConfDbfs
@@ -8905,7 +9762,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNewClusterClusterLogConfDbfs
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNewClusterClusterLogConfS3
@@ -8938,7 +9797,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNewClusterClusterLogConfS3
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNewClusterClusterLogConfVolumes
@@ -8947,7 +9808,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNewClusterClusterLogConfVolu
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNewClusterClusterLogConf
@@ -8964,7 +9827,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNewClusterClusterLogConf
     [JsonPropertyName("volumes")]
     public IList<V1alpha1JobSpecInitProviderTaskNewClusterClusterLogConfVolumes>? Volumes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNewClusterClusterMountInfoNetworkFilesystemInfo
@@ -8977,7 +9842,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNewClusterClusterMountInfoNe
     [JsonPropertyName("serverAddress")]
     public string? ServerAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNewClusterClusterMountInfo
@@ -8994,7 +9861,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNewClusterClusterMountInfo
     [JsonPropertyName("remoteMountDirPath")]
     public string? RemoteMountDirPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNewClusterDockerImageBasicAuthPasswordSecretRef
@@ -9011,7 +9880,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNewClusterDockerImageBasicAu
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNewClusterDockerImageBasicAuth
@@ -9024,7 +9895,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNewClusterDockerImageBasicAu
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNewClusterDockerImage
@@ -9037,7 +9910,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNewClusterDockerImage
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNewClusterGcpAttributes
@@ -9066,7 +9941,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNewClusterGcpAttributes
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNewClusterInitScriptsAbfss
@@ -9075,7 +9952,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNewClusterInitScriptsAbfss
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNewClusterInitScriptsDbfs
@@ -9084,7 +9963,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNewClusterInitScriptsDbfs
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNewClusterInitScriptsFile
@@ -9093,7 +9974,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNewClusterInitScriptsFile
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNewClusterInitScriptsGcs
@@ -9102,7 +9985,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNewClusterInitScriptsGcs
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNewClusterInitScriptsS3
@@ -9135,7 +10020,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNewClusterInitScriptsS3
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNewClusterInitScriptsVolumes
@@ -9144,7 +10031,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNewClusterInitScriptsVolumes
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNewClusterInitScriptsWorkspace
@@ -9153,7 +10042,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNewClusterInitScriptsWorkspa
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNewClusterInitScripts
@@ -9186,7 +10077,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNewClusterInitScripts
     [JsonPropertyName("workspace")]
     public IList<V1alpha1JobSpecInitProviderTaskNewClusterInitScriptsWorkspace>? Workspace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNewClusterLibraryCran
@@ -9199,7 +10092,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNewClusterLibraryCran
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNewClusterLibraryMaven
@@ -9216,7 +10111,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNewClusterLibraryMaven
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNewClusterLibraryPypi
@@ -9229,7 +10126,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNewClusterLibraryPypi
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNewClusterLibrary
@@ -9262,7 +10161,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNewClusterLibrary
     [JsonPropertyName("whl")]
     public string? Whl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNewClusterWorkloadTypeClients
@@ -9275,7 +10176,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNewClusterWorkloadTypeClient
     [JsonPropertyName("notebooks")]
     public bool? Notebooks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNewClusterWorkloadType
@@ -9284,7 +10187,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNewClusterWorkloadType
     [JsonPropertyName("clients")]
     public IList<V1alpha1JobSpecInitProviderTaskNewClusterWorkloadTypeClients>? Clients { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNewCluster
@@ -9433,7 +10338,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNewCluster
     [JsonPropertyName("workloadType")]
     public IList<V1alpha1JobSpecInitProviderTaskNewClusterWorkloadType>? WorkloadType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNotebookTask
@@ -9454,7 +10361,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNotebookTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskNotificationSettings
@@ -9471,7 +10380,9 @@ public partial class V1alpha1JobSpecInitProviderTaskNotificationSettings
     [JsonPropertyName("noAlertForSkippedRuns")]
     public bool? NoAlertForSkippedRuns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskPipelineTask
@@ -9484,7 +10395,9 @@ public partial class V1alpha1JobSpecInitProviderTaskPipelineTask
     [JsonPropertyName("pipelineId")]
     public string? PipelineId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskPowerBiTaskPowerBiModel
@@ -9509,7 +10422,9 @@ public partial class V1alpha1JobSpecInitProviderTaskPowerBiTaskPowerBiModel
     [JsonPropertyName("workspaceName")]
     public string? WorkspaceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskPowerBiTaskTables
@@ -9530,7 +10445,9 @@ public partial class V1alpha1JobSpecInitProviderTaskPowerBiTaskTables
     [JsonPropertyName("storageMode")]
     public string? StorageMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskPowerBiTask
@@ -9555,7 +10472,9 @@ public partial class V1alpha1JobSpecInitProviderTaskPowerBiTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskPythonWheelTask
@@ -9576,7 +10495,9 @@ public partial class V1alpha1JobSpecInitProviderTaskPythonWheelTask
     [JsonPropertyName("parameters")]
     public IList<string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskRunJobTaskPipelineParams
@@ -9585,7 +10506,9 @@ public partial class V1alpha1JobSpecInitProviderTaskRunJobTaskPipelineParams
     [JsonPropertyName("fullRefresh")]
     public bool? FullRefresh { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskRunJobTask
@@ -9630,7 +10553,9 @@ public partial class V1alpha1JobSpecInitProviderTaskRunJobTask
     [JsonPropertyName("sqlParams")]
     public IDictionary<string, string>? SqlParams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskSparkJarTask
@@ -9651,7 +10576,9 @@ public partial class V1alpha1JobSpecInitProviderTaskSparkJarTask
     [JsonPropertyName("runAsRepl")]
     public bool? RunAsRepl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskSparkPythonTask
@@ -9668,7 +10595,9 @@ public partial class V1alpha1JobSpecInitProviderTaskSparkPythonTask
     [JsonPropertyName("source")]
     public string? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskSparkSubmitTask
@@ -9677,7 +10606,9 @@ public partial class V1alpha1JobSpecInitProviderTaskSparkSubmitTask
     [JsonPropertyName("parameters")]
     public IList<string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskSqlTaskAlertSubscriptions
@@ -9690,7 +10621,9 @@ public partial class V1alpha1JobSpecInitProviderTaskSqlTaskAlertSubscriptions
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskSqlTaskAlert
@@ -9707,7 +10640,9 @@ public partial class V1alpha1JobSpecInitProviderTaskSqlTaskAlert
     [JsonPropertyName("subscriptions")]
     public IList<V1alpha1JobSpecInitProviderTaskSqlTaskAlertSubscriptions>? Subscriptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskSqlTaskDashboardSubscriptions
@@ -9720,7 +10655,9 @@ public partial class V1alpha1JobSpecInitProviderTaskSqlTaskDashboardSubscription
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskSqlTaskDashboard
@@ -9741,7 +10678,9 @@ public partial class V1alpha1JobSpecInitProviderTaskSqlTaskDashboard
     [JsonPropertyName("subscriptions")]
     public IList<V1alpha1JobSpecInitProviderTaskSqlTaskDashboardSubscriptions>? Subscriptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskSqlTaskFile
@@ -9754,7 +10693,9 @@ public partial class V1alpha1JobSpecInitProviderTaskSqlTaskFile
     [JsonPropertyName("source")]
     public string? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskSqlTaskQuery
@@ -9763,7 +10704,9 @@ public partial class V1alpha1JobSpecInitProviderTaskSqlTaskQuery
     [JsonPropertyName("queryId")]
     public string? QueryId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskSqlTask
@@ -9792,7 +10735,9 @@ public partial class V1alpha1JobSpecInitProviderTaskSqlTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskWebhookNotificationsOnDurationWarningThresholdExceeded
@@ -9801,7 +10746,9 @@ public partial class V1alpha1JobSpecInitProviderTaskWebhookNotificationsOnDurati
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskWebhookNotificationsOnFailure
@@ -9810,7 +10757,9 @@ public partial class V1alpha1JobSpecInitProviderTaskWebhookNotificationsOnFailur
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskWebhookNotificationsOnStart
@@ -9819,7 +10768,9 @@ public partial class V1alpha1JobSpecInitProviderTaskWebhookNotificationsOnStart
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskWebhookNotificationsOnStreamingBacklogExceeded
@@ -9828,7 +10779,9 @@ public partial class V1alpha1JobSpecInitProviderTaskWebhookNotificationsOnStream
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskWebhookNotificationsOnSuccess
@@ -9837,7 +10790,9 @@ public partial class V1alpha1JobSpecInitProviderTaskWebhookNotificationsOnSucces
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTaskWebhookNotifications
@@ -9862,7 +10817,9 @@ public partial class V1alpha1JobSpecInitProviderTaskWebhookNotifications
     [JsonPropertyName("onSuccess")]
     public IList<V1alpha1JobSpecInitProviderTaskWebhookNotificationsOnSuccess>? OnSuccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTask
@@ -10007,7 +10964,9 @@ public partial class V1alpha1JobSpecInitProviderTask
     [JsonPropertyName("webhookNotifications")]
     public IList<V1alpha1JobSpecInitProviderTaskWebhookNotifications>? WebhookNotifications { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTriggerFileArrival
@@ -10024,7 +10983,9 @@ public partial class V1alpha1JobSpecInitProviderTriggerFileArrival
     [JsonPropertyName("waitAfterLastChangeSeconds")]
     public double? WaitAfterLastChangeSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTriggerPeriodic
@@ -10037,7 +10998,9 @@ public partial class V1alpha1JobSpecInitProviderTriggerPeriodic
     [JsonPropertyName("unit")]
     public string? Unit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTriggerTable
@@ -10058,7 +11021,9 @@ public partial class V1alpha1JobSpecInitProviderTriggerTable
     [JsonPropertyName("waitAfterLastChangeSeconds")]
     public double? WaitAfterLastChangeSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTriggerTableUpdate
@@ -10079,7 +11044,9 @@ public partial class V1alpha1JobSpecInitProviderTriggerTableUpdate
     [JsonPropertyName("waitAfterLastChangeSeconds")]
     public double? WaitAfterLastChangeSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderTrigger
@@ -10104,7 +11071,9 @@ public partial class V1alpha1JobSpecInitProviderTrigger
     [JsonPropertyName("tableUpdate")]
     public IList<V1alpha1JobSpecInitProviderTriggerTableUpdate>? TableUpdate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderWebhookNotificationsOnDurationWarningThresholdExceeded
@@ -10113,7 +11082,9 @@ public partial class V1alpha1JobSpecInitProviderWebhookNotificationsOnDurationWa
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderWebhookNotificationsOnFailure
@@ -10122,7 +11093,9 @@ public partial class V1alpha1JobSpecInitProviderWebhookNotificationsOnFailure
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderWebhookNotificationsOnStart
@@ -10131,7 +11104,9 @@ public partial class V1alpha1JobSpecInitProviderWebhookNotificationsOnStart
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderWebhookNotificationsOnStreamingBacklogExceeded
@@ -10140,7 +11115,9 @@ public partial class V1alpha1JobSpecInitProviderWebhookNotificationsOnStreamingB
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderWebhookNotificationsOnSuccess
@@ -10149,7 +11126,9 @@ public partial class V1alpha1JobSpecInitProviderWebhookNotificationsOnSuccess
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProviderWebhookNotifications
@@ -10174,7 +11153,9 @@ public partial class V1alpha1JobSpecInitProviderWebhookNotifications
     [JsonPropertyName("onSuccess")]
     public IList<V1alpha1JobSpecInitProviderWebhookNotificationsOnSuccess>? OnSuccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecInitProvider
@@ -10339,7 +11320,9 @@ public partial class V1alpha1JobSpecInitProvider
     [JsonPropertyName("webhookNotifications")]
     public IList<V1alpha1JobSpecInitProviderWebhookNotifications>? WebhookNotifications { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecProviderConfigRefPolicy
@@ -10352,7 +11335,9 @@ public partial class V1alpha1JobSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecProviderConfigRef
@@ -10365,7 +11350,9 @@ public partial class V1alpha1JobSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1JobSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecPublishConnectionDetailsToConfigRefPolicy
@@ -10378,7 +11365,9 @@ public partial class V1alpha1JobSpecPublishConnectionDetailsToConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecPublishConnectionDetailsToConfigRef
@@ -10391,7 +11380,9 @@ public partial class V1alpha1JobSpecPublishConnectionDetailsToConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1JobSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Metadata is the metadata for connection secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecPublishConnectionDetailsToMetadata
@@ -10408,7 +11399,9 @@ public partial class V1alpha1JobSpecPublishConnectionDetailsToMetadata
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecPublishConnectionDetailsTo
@@ -10425,7 +11418,9 @@ public partial class V1alpha1JobSpecPublishConnectionDetailsTo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpecWriteConnectionSecretToRef
@@ -10438,7 +11433,9 @@ public partial class V1alpha1JobSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>JobSpec defines the desired state of Job</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobSpec
@@ -10471,7 +11468,9 @@ public partial class V1alpha1JobSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1alpha1JobSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderContinuous
@@ -10480,7 +11479,9 @@ public partial class V1alpha1JobStatusAtProviderContinuous
     [JsonPropertyName("pauseStatus")]
     public string? PauseStatus { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderDbtTask
@@ -10513,7 +11514,9 @@ public partial class V1alpha1JobStatusAtProviderDbtTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderDeployment
@@ -10526,7 +11529,9 @@ public partial class V1alpha1JobStatusAtProviderDeployment
     [JsonPropertyName("metadataFilePath")]
     public string? MetadataFilePath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderEmailNotifications
@@ -10555,7 +11560,9 @@ public partial class V1alpha1JobStatusAtProviderEmailNotifications
     [JsonPropertyName("onSuccess")]
     public IList<string>? OnSuccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderEnvironmentSpec
@@ -10576,7 +11583,9 @@ public partial class V1alpha1JobStatusAtProviderEnvironmentSpec
     [JsonPropertyName("jarDependencies")]
     public IList<string>? JarDependencies { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderEnvironment
@@ -10589,7 +11598,9 @@ public partial class V1alpha1JobStatusAtProviderEnvironment
     [JsonPropertyName("spec")]
     public IList<V1alpha1JobStatusAtProviderEnvironmentSpec>? Spec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderGitSourceGitSnapshot
@@ -10598,7 +11609,9 @@ public partial class V1alpha1JobStatusAtProviderGitSourceGitSnapshot
     [JsonPropertyName("usedCommit")]
     public string? UsedCommit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderGitSourceJobSource
@@ -10615,7 +11628,9 @@ public partial class V1alpha1JobStatusAtProviderGitSourceJobSource
     [JsonPropertyName("jobConfigPath")]
     public string? JobConfigPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderGitSource
@@ -10648,7 +11663,9 @@ public partial class V1alpha1JobStatusAtProviderGitSource
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderHealthRules
@@ -10665,7 +11682,9 @@ public partial class V1alpha1JobStatusAtProviderHealthRules
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderHealth
@@ -10674,7 +11693,9 @@ public partial class V1alpha1JobStatusAtProviderHealth
     [JsonPropertyName("rules")]
     public IList<V1alpha1JobStatusAtProviderHealthRules>? Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterAutoscale
@@ -10687,7 +11708,9 @@ public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterAutoscale
     [JsonPropertyName("minWorkers")]
     public double? MinWorkers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterAwsAttributes
@@ -10732,7 +11755,9 @@ public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterAwsAttribute
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterAzureAttributesLogAnalyticsInfo
@@ -10745,7 +11770,9 @@ public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterAzureAttribu
     [JsonPropertyName("logAnalyticsWorkspaceId")]
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterAzureAttributes
@@ -10766,7 +11793,9 @@ public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterAzureAttribu
     [JsonPropertyName("spotBidMaxPrice")]
     public double? SpotBidMaxPrice { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterClusterLogConfDbfs
@@ -10775,7 +11804,9 @@ public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterClusterLogCo
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterClusterLogConfS3
@@ -10808,7 +11839,9 @@ public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterClusterLogCo
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterClusterLogConfVolumes
@@ -10817,7 +11850,9 @@ public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterClusterLogCo
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterClusterLogConf
@@ -10834,7 +11869,9 @@ public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterClusterLogCo
     [JsonPropertyName("volumes")]
     public IList<V1alpha1JobStatusAtProviderJobClusterNewClusterClusterLogConfVolumes>? Volumes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterClusterMountInfoNetworkFilesystemInfo
@@ -10847,7 +11884,9 @@ public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterClusterMount
     [JsonPropertyName("serverAddress")]
     public string? ServerAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterClusterMountInfo
@@ -10864,7 +11903,9 @@ public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterClusterMount
     [JsonPropertyName("remoteMountDirPath")]
     public string? RemoteMountDirPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterDockerImageBasicAuth
@@ -10873,7 +11914,9 @@ public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterDockerImageB
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterDockerImage
@@ -10886,7 +11929,9 @@ public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterDockerImage
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterGcpAttributes
@@ -10915,7 +11960,9 @@ public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterGcpAttribute
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterInitScriptsAbfss
@@ -10924,7 +11971,9 @@ public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterInitScriptsA
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterInitScriptsDbfs
@@ -10933,7 +11982,9 @@ public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterInitScriptsD
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterInitScriptsFile
@@ -10942,7 +11993,9 @@ public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterInitScriptsF
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterInitScriptsGcs
@@ -10951,7 +12004,9 @@ public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterInitScriptsG
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterInitScriptsS3
@@ -10984,7 +12039,9 @@ public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterInitScriptsS
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterInitScriptsVolumes
@@ -10993,7 +12050,9 @@ public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterInitScriptsV
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterInitScriptsWorkspace
@@ -11002,7 +12061,9 @@ public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterInitScriptsW
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterInitScripts
@@ -11035,7 +12096,9 @@ public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterInitScripts
     [JsonPropertyName("workspace")]
     public IList<V1alpha1JobStatusAtProviderJobClusterNewClusterInitScriptsWorkspace>? Workspace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterLibraryCran
@@ -11048,7 +12111,9 @@ public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterLibraryCran
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterLibraryMaven
@@ -11065,7 +12130,9 @@ public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterLibraryMaven
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterLibraryPypi
@@ -11078,7 +12145,9 @@ public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterLibraryPypi
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterLibrary
@@ -11111,7 +12180,9 @@ public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterLibrary
     [JsonPropertyName("whl")]
     public string? Whl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterWorkloadTypeClients
@@ -11124,7 +12195,9 @@ public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterWorkloadType
     [JsonPropertyName("notebooks")]
     public bool? Notebooks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterWorkloadType
@@ -11133,7 +12206,9 @@ public partial class V1alpha1JobStatusAtProviderJobClusterNewClusterWorkloadType
     [JsonPropertyName("clients")]
     public IList<V1alpha1JobStatusAtProviderJobClusterNewClusterWorkloadTypeClients>? Clients { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderJobClusterNewCluster
@@ -11282,7 +12357,9 @@ public partial class V1alpha1JobStatusAtProviderJobClusterNewCluster
     [JsonPropertyName("workloadType")]
     public IList<V1alpha1JobStatusAtProviderJobClusterNewClusterWorkloadType>? WorkloadType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderJobCluster
@@ -11295,7 +12372,9 @@ public partial class V1alpha1JobStatusAtProviderJobCluster
     [JsonPropertyName("newCluster")]
     public IList<V1alpha1JobStatusAtProviderJobClusterNewCluster>? NewCluster { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderLibraryCran
@@ -11308,7 +12387,9 @@ public partial class V1alpha1JobStatusAtProviderLibraryCran
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderLibraryMaven
@@ -11325,7 +12406,9 @@ public partial class V1alpha1JobStatusAtProviderLibraryMaven
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderLibraryPypi
@@ -11338,7 +12421,9 @@ public partial class V1alpha1JobStatusAtProviderLibraryPypi
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderLibrary
@@ -11371,7 +12456,9 @@ public partial class V1alpha1JobStatusAtProviderLibrary
     [JsonPropertyName("whl")]
     public string? Whl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderNewClusterAutoscale
@@ -11384,7 +12471,9 @@ public partial class V1alpha1JobStatusAtProviderNewClusterAutoscale
     [JsonPropertyName("minWorkers")]
     public double? MinWorkers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderNewClusterAwsAttributes
@@ -11429,7 +12518,9 @@ public partial class V1alpha1JobStatusAtProviderNewClusterAwsAttributes
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderNewClusterAzureAttributesLogAnalyticsInfo
@@ -11442,7 +12533,9 @@ public partial class V1alpha1JobStatusAtProviderNewClusterAzureAttributesLogAnal
     [JsonPropertyName("logAnalyticsWorkspaceId")]
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderNewClusterAzureAttributes
@@ -11463,7 +12556,9 @@ public partial class V1alpha1JobStatusAtProviderNewClusterAzureAttributes
     [JsonPropertyName("spotBidMaxPrice")]
     public double? SpotBidMaxPrice { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderNewClusterClusterLogConfDbfs
@@ -11472,7 +12567,9 @@ public partial class V1alpha1JobStatusAtProviderNewClusterClusterLogConfDbfs
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderNewClusterClusterLogConfS3
@@ -11505,7 +12602,9 @@ public partial class V1alpha1JobStatusAtProviderNewClusterClusterLogConfS3
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderNewClusterClusterLogConfVolumes
@@ -11514,7 +12613,9 @@ public partial class V1alpha1JobStatusAtProviderNewClusterClusterLogConfVolumes
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderNewClusterClusterLogConf
@@ -11531,7 +12632,9 @@ public partial class V1alpha1JobStatusAtProviderNewClusterClusterLogConf
     [JsonPropertyName("volumes")]
     public IList<V1alpha1JobStatusAtProviderNewClusterClusterLogConfVolumes>? Volumes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderNewClusterClusterMountInfoNetworkFilesystemInfo
@@ -11544,7 +12647,9 @@ public partial class V1alpha1JobStatusAtProviderNewClusterClusterMountInfoNetwor
     [JsonPropertyName("serverAddress")]
     public string? ServerAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderNewClusterClusterMountInfo
@@ -11561,7 +12666,9 @@ public partial class V1alpha1JobStatusAtProviderNewClusterClusterMountInfo
     [JsonPropertyName("remoteMountDirPath")]
     public string? RemoteMountDirPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderNewClusterDockerImageBasicAuth
@@ -11570,7 +12677,9 @@ public partial class V1alpha1JobStatusAtProviderNewClusterDockerImageBasicAuth
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderNewClusterDockerImage
@@ -11583,7 +12692,9 @@ public partial class V1alpha1JobStatusAtProviderNewClusterDockerImage
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderNewClusterGcpAttributes
@@ -11612,7 +12723,9 @@ public partial class V1alpha1JobStatusAtProviderNewClusterGcpAttributes
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderNewClusterInitScriptsAbfss
@@ -11621,7 +12734,9 @@ public partial class V1alpha1JobStatusAtProviderNewClusterInitScriptsAbfss
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderNewClusterInitScriptsDbfs
@@ -11630,7 +12745,9 @@ public partial class V1alpha1JobStatusAtProviderNewClusterInitScriptsDbfs
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderNewClusterInitScriptsFile
@@ -11639,7 +12756,9 @@ public partial class V1alpha1JobStatusAtProviderNewClusterInitScriptsFile
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderNewClusterInitScriptsGcs
@@ -11648,7 +12767,9 @@ public partial class V1alpha1JobStatusAtProviderNewClusterInitScriptsGcs
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderNewClusterInitScriptsS3
@@ -11681,7 +12802,9 @@ public partial class V1alpha1JobStatusAtProviderNewClusterInitScriptsS3
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderNewClusterInitScriptsVolumes
@@ -11690,7 +12813,9 @@ public partial class V1alpha1JobStatusAtProviderNewClusterInitScriptsVolumes
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderNewClusterInitScriptsWorkspace
@@ -11699,7 +12824,9 @@ public partial class V1alpha1JobStatusAtProviderNewClusterInitScriptsWorkspace
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderNewClusterInitScripts
@@ -11732,7 +12859,9 @@ public partial class V1alpha1JobStatusAtProviderNewClusterInitScripts
     [JsonPropertyName("workspace")]
     public IList<V1alpha1JobStatusAtProviderNewClusterInitScriptsWorkspace>? Workspace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderNewClusterLibraryCran
@@ -11745,7 +12874,9 @@ public partial class V1alpha1JobStatusAtProviderNewClusterLibraryCran
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderNewClusterLibraryMaven
@@ -11762,7 +12893,9 @@ public partial class V1alpha1JobStatusAtProviderNewClusterLibraryMaven
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderNewClusterLibraryPypi
@@ -11775,7 +12908,9 @@ public partial class V1alpha1JobStatusAtProviderNewClusterLibraryPypi
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderNewClusterLibrary
@@ -11808,7 +12943,9 @@ public partial class V1alpha1JobStatusAtProviderNewClusterLibrary
     [JsonPropertyName("whl")]
     public string? Whl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderNewClusterWorkloadTypeClients
@@ -11821,7 +12958,9 @@ public partial class V1alpha1JobStatusAtProviderNewClusterWorkloadTypeClients
     [JsonPropertyName("notebooks")]
     public bool? Notebooks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderNewClusterWorkloadType
@@ -11830,7 +12969,9 @@ public partial class V1alpha1JobStatusAtProviderNewClusterWorkloadType
     [JsonPropertyName("clients")]
     public IList<V1alpha1JobStatusAtProviderNewClusterWorkloadTypeClients>? Clients { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderNewCluster
@@ -11975,7 +13116,9 @@ public partial class V1alpha1JobStatusAtProviderNewCluster
     [JsonPropertyName("workloadType")]
     public IList<V1alpha1JobStatusAtProviderNewClusterWorkloadType>? WorkloadType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderNotebookTask
@@ -11996,7 +13139,9 @@ public partial class V1alpha1JobStatusAtProviderNotebookTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderNotificationSettings
@@ -12009,7 +13154,9 @@ public partial class V1alpha1JobStatusAtProviderNotificationSettings
     [JsonPropertyName("noAlertForSkippedRuns")]
     public bool? NoAlertForSkippedRuns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderParameter
@@ -12022,7 +13169,9 @@ public partial class V1alpha1JobStatusAtProviderParameter
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderPipelineTask
@@ -12035,7 +13184,9 @@ public partial class V1alpha1JobStatusAtProviderPipelineTask
     [JsonPropertyName("pipelineId")]
     public string? PipelineId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderPythonWheelTask
@@ -12056,7 +13207,9 @@ public partial class V1alpha1JobStatusAtProviderPythonWheelTask
     [JsonPropertyName("parameters")]
     public IList<string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderQueue
@@ -12065,7 +13218,9 @@ public partial class V1alpha1JobStatusAtProviderQueue
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderRunAs
@@ -12078,7 +13233,9 @@ public partial class V1alpha1JobStatusAtProviderRunAs
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderRunJobTask
@@ -12091,7 +13248,9 @@ public partial class V1alpha1JobStatusAtProviderRunJobTask
     [JsonPropertyName("jobParameters")]
     public IDictionary<string, string>? JobParameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderSchedule
@@ -12108,7 +13267,9 @@ public partial class V1alpha1JobStatusAtProviderSchedule
     [JsonPropertyName("timezoneId")]
     public string? TimezoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderSparkJarTask
@@ -12125,7 +13286,9 @@ public partial class V1alpha1JobStatusAtProviderSparkJarTask
     [JsonPropertyName("parameters")]
     public IList<string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderSparkPythonTask
@@ -12142,7 +13305,9 @@ public partial class V1alpha1JobStatusAtProviderSparkPythonTask
     [JsonPropertyName("source")]
     public string? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderSparkSubmitTask
@@ -12151,7 +13316,9 @@ public partial class V1alpha1JobStatusAtProviderSparkSubmitTask
     [JsonPropertyName("parameters")]
     public IList<string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskCleanRoomsNotebookTask
@@ -12172,7 +13339,9 @@ public partial class V1alpha1JobStatusAtProviderTaskCleanRoomsNotebookTask
     [JsonPropertyName("notebookName")]
     public string? NotebookName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskConditionTask
@@ -12189,7 +13358,9 @@ public partial class V1alpha1JobStatusAtProviderTaskConditionTask
     [JsonPropertyName("right")]
     public string? Right { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskDashboardTaskSubscriptionSubscribers
@@ -12202,7 +13373,9 @@ public partial class V1alpha1JobStatusAtProviderTaskDashboardTaskSubscriptionSub
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskDashboardTaskSubscription
@@ -12219,7 +13392,9 @@ public partial class V1alpha1JobStatusAtProviderTaskDashboardTaskSubscription
     [JsonPropertyName("subscribers")]
     public IList<V1alpha1JobStatusAtProviderTaskDashboardTaskSubscriptionSubscribers>? Subscribers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskDashboardTask
@@ -12236,7 +13411,9 @@ public partial class V1alpha1JobStatusAtProviderTaskDashboardTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskDbtCloudTask
@@ -12249,7 +13426,9 @@ public partial class V1alpha1JobStatusAtProviderTaskDbtCloudTask
     [JsonPropertyName("dbtCloudJobId")]
     public double? DbtCloudJobId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskDbtPlatformTask
@@ -12262,7 +13441,9 @@ public partial class V1alpha1JobStatusAtProviderTaskDbtPlatformTask
     [JsonPropertyName("dbtPlatformJobId")]
     public string? DbtPlatformJobId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskDbtTask
@@ -12295,7 +13476,9 @@ public partial class V1alpha1JobStatusAtProviderTaskDbtTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskDependsOn
@@ -12308,7 +13491,9 @@ public partial class V1alpha1JobStatusAtProviderTaskDependsOn
     [JsonPropertyName("taskKey")]
     public string? TaskKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskEmailNotifications
@@ -12337,7 +13522,9 @@ public partial class V1alpha1JobStatusAtProviderTaskEmailNotifications
     [JsonPropertyName("onSuccess")]
     public IList<string>? OnSuccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskCleanRoomsNotebookTask
@@ -12358,7 +13545,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskCleanRoomsNot
     [JsonPropertyName("notebookName")]
     public string? NotebookName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskConditionTask
@@ -12375,7 +13564,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskConditionTask
     [JsonPropertyName("right")]
     public string? Right { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskDashboardTaskSubscriptionSubscribers
@@ -12388,7 +13579,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskDashboardTask
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskDashboardTaskSubscription
@@ -12405,7 +13598,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskDashboardTask
     [JsonPropertyName("subscribers")]
     public IList<V1alpha1JobStatusAtProviderTaskForEachTaskTaskDashboardTaskSubscriptionSubscribers>? Subscribers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskDashboardTask
@@ -12422,7 +13617,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskDashboardTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskDbtCloudTask
@@ -12435,7 +13632,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskDbtCloudTask
     [JsonPropertyName("dbtCloudJobId")]
     public double? DbtCloudJobId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskDbtPlatformTask
@@ -12448,7 +13647,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskDbtPlatformTa
     [JsonPropertyName("dbtPlatformJobId")]
     public string? DbtPlatformJobId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskDbtTask
@@ -12481,7 +13682,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskDbtTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskDependsOn
@@ -12494,7 +13697,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskDependsOn
     [JsonPropertyName("taskKey")]
     public string? TaskKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskEmailNotifications
@@ -12523,7 +13728,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskEmailNotifica
     [JsonPropertyName("onSuccess")]
     public IList<string>? OnSuccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskGenAiComputeTaskCompute
@@ -12540,7 +13747,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskGenAiComputeT
     [JsonPropertyName("numGpus")]
     public double? NumGpus { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskGenAiComputeTask
@@ -12577,7 +13786,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskGenAiComputeT
     [JsonPropertyName("yamlParametersFilePath")]
     public string? YamlParametersFilePath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskHealthRules
@@ -12594,7 +13805,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskHealthRules
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskHealth
@@ -12603,7 +13816,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskHealth
     [JsonPropertyName("rules")]
     public IList<V1alpha1JobStatusAtProviderTaskForEachTaskTaskHealthRules>? Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskLibraryCran
@@ -12616,7 +13831,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskLibraryCran
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskLibraryMaven
@@ -12633,7 +13850,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskLibraryMaven
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskLibraryPypi
@@ -12646,7 +13865,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskLibraryPypi
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskLibrary
@@ -12679,7 +13900,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskLibrary
     [JsonPropertyName("whl")]
     public string? Whl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterAutoscale
@@ -12692,7 +13915,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterAut
     [JsonPropertyName("minWorkers")]
     public double? MinWorkers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterAwsAttributes
@@ -12737,7 +13962,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterAws
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterAzureAttributesLogAnalyticsInfo
@@ -12750,7 +13977,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterAzu
     [JsonPropertyName("logAnalyticsWorkspaceId")]
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterAzureAttributes
@@ -12771,7 +14000,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterAzu
     [JsonPropertyName("spotBidMaxPrice")]
     public double? SpotBidMaxPrice { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterClusterLogConfDbfs
@@ -12780,7 +14011,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterClu
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterClusterLogConfS3
@@ -12813,7 +14046,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterClu
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterClusterLogConfVolumes
@@ -12822,7 +14057,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterClu
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterClusterLogConf
@@ -12839,7 +14076,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterClu
     [JsonPropertyName("volumes")]
     public IList<V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterClusterLogConfVolumes>? Volumes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterClusterMountInfoNetworkFilesystemInfo
@@ -12852,7 +14091,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterClu
     [JsonPropertyName("serverAddress")]
     public string? ServerAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterClusterMountInfo
@@ -12869,7 +14110,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterClu
     [JsonPropertyName("remoteMountDirPath")]
     public string? RemoteMountDirPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterDockerImageBasicAuth
@@ -12878,7 +14121,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterDoc
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterDockerImage
@@ -12891,7 +14136,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterDoc
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterGcpAttributes
@@ -12920,7 +14167,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterGcp
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterInitScriptsAbfss
@@ -12929,7 +14178,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterIni
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterInitScriptsDbfs
@@ -12938,7 +14189,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterIni
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterInitScriptsFile
@@ -12947,7 +14200,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterIni
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterInitScriptsGcs
@@ -12956,7 +14211,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterIni
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterInitScriptsS3
@@ -12989,7 +14246,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterIni
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterInitScriptsVolumes
@@ -12998,7 +14257,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterIni
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterInitScriptsWorkspace
@@ -13007,7 +14268,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterIni
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterInitScripts
@@ -13040,7 +14303,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterIni
     [JsonPropertyName("workspace")]
     public IList<V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterInitScriptsWorkspace>? Workspace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterLibraryCran
@@ -13053,7 +14318,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterLib
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterLibraryMaven
@@ -13070,7 +14337,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterLib
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterLibraryPypi
@@ -13083,7 +14352,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterLib
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterLibrary
@@ -13116,7 +14387,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterLib
     [JsonPropertyName("whl")]
     public string? Whl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterWorkloadTypeClients
@@ -13129,7 +14402,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterWor
     [JsonPropertyName("notebooks")]
     public bool? Notebooks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterWorkloadType
@@ -13138,7 +14413,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterWor
     [JsonPropertyName("clients")]
     public IList<V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterWorkloadTypeClients>? Clients { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewCluster
@@ -13283,7 +14560,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewCluster
     [JsonPropertyName("workloadType")]
     public IList<V1alpha1JobStatusAtProviderTaskForEachTaskTaskNewClusterWorkloadType>? WorkloadType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNotebookTask
@@ -13304,7 +14583,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNotebookTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNotificationSettings
@@ -13321,7 +14602,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskNotificationS
     [JsonPropertyName("noAlertForSkippedRuns")]
     public bool? NoAlertForSkippedRuns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskPipelineTask
@@ -13334,7 +14617,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskPipelineTask
     [JsonPropertyName("pipelineId")]
     public string? PipelineId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskPowerBiTaskPowerBiModel
@@ -13359,7 +14644,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskPowerBiTaskPo
     [JsonPropertyName("workspaceName")]
     public string? WorkspaceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskPowerBiTaskTables
@@ -13380,7 +14667,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskPowerBiTaskTa
     [JsonPropertyName("storageMode")]
     public string? StorageMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskPowerBiTask
@@ -13405,7 +14694,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskPowerBiTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskPythonWheelTask
@@ -13426,7 +14717,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskPythonWheelTa
     [JsonPropertyName("parameters")]
     public IList<string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskRunJobTaskPipelineParams
@@ -13435,7 +14728,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskRunJobTaskPip
     [JsonPropertyName("fullRefresh")]
     public bool? FullRefresh { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskRunJobTask
@@ -13480,7 +14775,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskRunJobTask
     [JsonPropertyName("sqlParams")]
     public IDictionary<string, string>? SqlParams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskSparkJarTask
@@ -13501,7 +14798,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskSparkJarTask
     [JsonPropertyName("runAsRepl")]
     public bool? RunAsRepl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskSparkPythonTask
@@ -13518,7 +14817,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskSparkPythonTa
     [JsonPropertyName("source")]
     public string? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskSparkSubmitTask
@@ -13527,7 +14828,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskSparkSubmitTa
     [JsonPropertyName("parameters")]
     public IList<string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskSqlTaskAlertSubscriptions
@@ -13540,7 +14843,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskSqlTaskAlertS
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskSqlTaskAlert
@@ -13557,7 +14862,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskSqlTaskAlert
     [JsonPropertyName("subscriptions")]
     public IList<V1alpha1JobStatusAtProviderTaskForEachTaskTaskSqlTaskAlertSubscriptions>? Subscriptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskSqlTaskDashboardSubscriptions
@@ -13570,7 +14877,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskSqlTaskDashbo
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskSqlTaskDashboard
@@ -13591,7 +14900,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskSqlTaskDashbo
     [JsonPropertyName("subscriptions")]
     public IList<V1alpha1JobStatusAtProviderTaskForEachTaskTaskSqlTaskDashboardSubscriptions>? Subscriptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskSqlTaskFile
@@ -13604,7 +14915,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskSqlTaskFile
     [JsonPropertyName("source")]
     public string? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskSqlTaskQuery
@@ -13613,7 +14926,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskSqlTaskQuery
     [JsonPropertyName("queryId")]
     public string? QueryId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskSqlTask
@@ -13642,7 +14957,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskSqlTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskWebhookNotificationsOnDurationWarningThresholdExceeded
@@ -13651,7 +14968,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskWebhookNotifi
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskWebhookNotificationsOnFailure
@@ -13660,7 +14979,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskWebhookNotifi
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskWebhookNotificationsOnStart
@@ -13669,7 +14990,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskWebhookNotifi
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskWebhookNotificationsOnStreamingBacklogExceeded
@@ -13678,7 +15001,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskWebhookNotifi
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskWebhookNotificationsOnSuccess
@@ -13687,7 +15012,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskWebhookNotifi
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskWebhookNotifications
@@ -13712,7 +15039,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTaskWebhookNotifi
     [JsonPropertyName("onSuccess")]
     public IList<V1alpha1JobStatusAtProviderTaskForEachTaskTaskWebhookNotificationsOnSuccess>? OnSuccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTask
@@ -13853,7 +15182,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTaskTask
     [JsonPropertyName("webhookNotifications")]
     public IList<V1alpha1JobStatusAtProviderTaskForEachTaskTaskWebhookNotifications>? WebhookNotifications { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskForEachTask
@@ -13870,7 +15201,9 @@ public partial class V1alpha1JobStatusAtProviderTaskForEachTask
     [JsonPropertyName("task")]
     public IList<V1alpha1JobStatusAtProviderTaskForEachTaskTask>? Task { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskGenAiComputeTaskCompute
@@ -13887,7 +15220,9 @@ public partial class V1alpha1JobStatusAtProviderTaskGenAiComputeTaskCompute
     [JsonPropertyName("numGpus")]
     public double? NumGpus { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskGenAiComputeTask
@@ -13924,7 +15259,9 @@ public partial class V1alpha1JobStatusAtProviderTaskGenAiComputeTask
     [JsonPropertyName("yamlParametersFilePath")]
     public string? YamlParametersFilePath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskHealthRules
@@ -13941,7 +15278,9 @@ public partial class V1alpha1JobStatusAtProviderTaskHealthRules
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskHealth
@@ -13950,7 +15289,9 @@ public partial class V1alpha1JobStatusAtProviderTaskHealth
     [JsonPropertyName("rules")]
     public IList<V1alpha1JobStatusAtProviderTaskHealthRules>? Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskLibraryCran
@@ -13963,7 +15304,9 @@ public partial class V1alpha1JobStatusAtProviderTaskLibraryCran
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskLibraryMaven
@@ -13980,7 +15323,9 @@ public partial class V1alpha1JobStatusAtProviderTaskLibraryMaven
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskLibraryPypi
@@ -13993,7 +15338,9 @@ public partial class V1alpha1JobStatusAtProviderTaskLibraryPypi
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskLibrary
@@ -14026,7 +15373,9 @@ public partial class V1alpha1JobStatusAtProviderTaskLibrary
     [JsonPropertyName("whl")]
     public string? Whl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskNewClusterAutoscale
@@ -14039,7 +15388,9 @@ public partial class V1alpha1JobStatusAtProviderTaskNewClusterAutoscale
     [JsonPropertyName("minWorkers")]
     public double? MinWorkers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskNewClusterAwsAttributes
@@ -14084,7 +15435,9 @@ public partial class V1alpha1JobStatusAtProviderTaskNewClusterAwsAttributes
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskNewClusterAzureAttributesLogAnalyticsInfo
@@ -14097,7 +15450,9 @@ public partial class V1alpha1JobStatusAtProviderTaskNewClusterAzureAttributesLog
     [JsonPropertyName("logAnalyticsWorkspaceId")]
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskNewClusterAzureAttributes
@@ -14118,7 +15473,9 @@ public partial class V1alpha1JobStatusAtProviderTaskNewClusterAzureAttributes
     [JsonPropertyName("spotBidMaxPrice")]
     public double? SpotBidMaxPrice { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskNewClusterClusterLogConfDbfs
@@ -14127,7 +15484,9 @@ public partial class V1alpha1JobStatusAtProviderTaskNewClusterClusterLogConfDbfs
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskNewClusterClusterLogConfS3
@@ -14160,7 +15519,9 @@ public partial class V1alpha1JobStatusAtProviderTaskNewClusterClusterLogConfS3
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskNewClusterClusterLogConfVolumes
@@ -14169,7 +15530,9 @@ public partial class V1alpha1JobStatusAtProviderTaskNewClusterClusterLogConfVolu
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskNewClusterClusterLogConf
@@ -14186,7 +15549,9 @@ public partial class V1alpha1JobStatusAtProviderTaskNewClusterClusterLogConf
     [JsonPropertyName("volumes")]
     public IList<V1alpha1JobStatusAtProviderTaskNewClusterClusterLogConfVolumes>? Volumes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskNewClusterClusterMountInfoNetworkFilesystemInfo
@@ -14199,7 +15564,9 @@ public partial class V1alpha1JobStatusAtProviderTaskNewClusterClusterMountInfoNe
     [JsonPropertyName("serverAddress")]
     public string? ServerAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskNewClusterClusterMountInfo
@@ -14216,7 +15583,9 @@ public partial class V1alpha1JobStatusAtProviderTaskNewClusterClusterMountInfo
     [JsonPropertyName("remoteMountDirPath")]
     public string? RemoteMountDirPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskNewClusterDockerImageBasicAuth
@@ -14225,7 +15594,9 @@ public partial class V1alpha1JobStatusAtProviderTaskNewClusterDockerImageBasicAu
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskNewClusterDockerImage
@@ -14238,7 +15609,9 @@ public partial class V1alpha1JobStatusAtProviderTaskNewClusterDockerImage
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskNewClusterGcpAttributes
@@ -14267,7 +15640,9 @@ public partial class V1alpha1JobStatusAtProviderTaskNewClusterGcpAttributes
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskNewClusterInitScriptsAbfss
@@ -14276,7 +15651,9 @@ public partial class V1alpha1JobStatusAtProviderTaskNewClusterInitScriptsAbfss
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskNewClusterInitScriptsDbfs
@@ -14285,7 +15662,9 @@ public partial class V1alpha1JobStatusAtProviderTaskNewClusterInitScriptsDbfs
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskNewClusterInitScriptsFile
@@ -14294,7 +15673,9 @@ public partial class V1alpha1JobStatusAtProviderTaskNewClusterInitScriptsFile
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskNewClusterInitScriptsGcs
@@ -14303,7 +15684,9 @@ public partial class V1alpha1JobStatusAtProviderTaskNewClusterInitScriptsGcs
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskNewClusterInitScriptsS3
@@ -14336,7 +15719,9 @@ public partial class V1alpha1JobStatusAtProviderTaskNewClusterInitScriptsS3
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskNewClusterInitScriptsVolumes
@@ -14345,7 +15730,9 @@ public partial class V1alpha1JobStatusAtProviderTaskNewClusterInitScriptsVolumes
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskNewClusterInitScriptsWorkspace
@@ -14354,7 +15741,9 @@ public partial class V1alpha1JobStatusAtProviderTaskNewClusterInitScriptsWorkspa
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskNewClusterInitScripts
@@ -14387,7 +15776,9 @@ public partial class V1alpha1JobStatusAtProviderTaskNewClusterInitScripts
     [JsonPropertyName("workspace")]
     public IList<V1alpha1JobStatusAtProviderTaskNewClusterInitScriptsWorkspace>? Workspace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskNewClusterLibraryCran
@@ -14400,7 +15791,9 @@ public partial class V1alpha1JobStatusAtProviderTaskNewClusterLibraryCran
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskNewClusterLibraryMaven
@@ -14417,7 +15810,9 @@ public partial class V1alpha1JobStatusAtProviderTaskNewClusterLibraryMaven
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskNewClusterLibraryPypi
@@ -14430,7 +15825,9 @@ public partial class V1alpha1JobStatusAtProviderTaskNewClusterLibraryPypi
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskNewClusterLibrary
@@ -14463,7 +15860,9 @@ public partial class V1alpha1JobStatusAtProviderTaskNewClusterLibrary
     [JsonPropertyName("whl")]
     public string? Whl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskNewClusterWorkloadTypeClients
@@ -14476,7 +15875,9 @@ public partial class V1alpha1JobStatusAtProviderTaskNewClusterWorkloadTypeClient
     [JsonPropertyName("notebooks")]
     public bool? Notebooks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskNewClusterWorkloadType
@@ -14485,7 +15886,9 @@ public partial class V1alpha1JobStatusAtProviderTaskNewClusterWorkloadType
     [JsonPropertyName("clients")]
     public IList<V1alpha1JobStatusAtProviderTaskNewClusterWorkloadTypeClients>? Clients { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskNewCluster
@@ -14634,7 +16037,9 @@ public partial class V1alpha1JobStatusAtProviderTaskNewCluster
     [JsonPropertyName("workloadType")]
     public IList<V1alpha1JobStatusAtProviderTaskNewClusterWorkloadType>? WorkloadType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskNotebookTask
@@ -14655,7 +16060,9 @@ public partial class V1alpha1JobStatusAtProviderTaskNotebookTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskNotificationSettings
@@ -14672,7 +16079,9 @@ public partial class V1alpha1JobStatusAtProviderTaskNotificationSettings
     [JsonPropertyName("noAlertForSkippedRuns")]
     public bool? NoAlertForSkippedRuns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskPipelineTask
@@ -14685,7 +16094,9 @@ public partial class V1alpha1JobStatusAtProviderTaskPipelineTask
     [JsonPropertyName("pipelineId")]
     public string? PipelineId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskPowerBiTaskPowerBiModel
@@ -14710,7 +16121,9 @@ public partial class V1alpha1JobStatusAtProviderTaskPowerBiTaskPowerBiModel
     [JsonPropertyName("workspaceName")]
     public string? WorkspaceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskPowerBiTaskTables
@@ -14731,7 +16144,9 @@ public partial class V1alpha1JobStatusAtProviderTaskPowerBiTaskTables
     [JsonPropertyName("storageMode")]
     public string? StorageMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskPowerBiTask
@@ -14756,7 +16171,9 @@ public partial class V1alpha1JobStatusAtProviderTaskPowerBiTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskPythonWheelTask
@@ -14777,7 +16194,9 @@ public partial class V1alpha1JobStatusAtProviderTaskPythonWheelTask
     [JsonPropertyName("parameters")]
     public IList<string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskRunJobTaskPipelineParams
@@ -14786,7 +16205,9 @@ public partial class V1alpha1JobStatusAtProviderTaskRunJobTaskPipelineParams
     [JsonPropertyName("fullRefresh")]
     public bool? FullRefresh { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskRunJobTask
@@ -14831,7 +16252,9 @@ public partial class V1alpha1JobStatusAtProviderTaskRunJobTask
     [JsonPropertyName("sqlParams")]
     public IDictionary<string, string>? SqlParams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskSparkJarTask
@@ -14852,7 +16275,9 @@ public partial class V1alpha1JobStatusAtProviderTaskSparkJarTask
     [JsonPropertyName("runAsRepl")]
     public bool? RunAsRepl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskSparkPythonTask
@@ -14869,7 +16294,9 @@ public partial class V1alpha1JobStatusAtProviderTaskSparkPythonTask
     [JsonPropertyName("source")]
     public string? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskSparkSubmitTask
@@ -14878,7 +16305,9 @@ public partial class V1alpha1JobStatusAtProviderTaskSparkSubmitTask
     [JsonPropertyName("parameters")]
     public IList<string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskSqlTaskAlertSubscriptions
@@ -14891,7 +16320,9 @@ public partial class V1alpha1JobStatusAtProviderTaskSqlTaskAlertSubscriptions
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskSqlTaskAlert
@@ -14908,7 +16339,9 @@ public partial class V1alpha1JobStatusAtProviderTaskSqlTaskAlert
     [JsonPropertyName("subscriptions")]
     public IList<V1alpha1JobStatusAtProviderTaskSqlTaskAlertSubscriptions>? Subscriptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskSqlTaskDashboardSubscriptions
@@ -14921,7 +16354,9 @@ public partial class V1alpha1JobStatusAtProviderTaskSqlTaskDashboardSubscription
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskSqlTaskDashboard
@@ -14942,7 +16377,9 @@ public partial class V1alpha1JobStatusAtProviderTaskSqlTaskDashboard
     [JsonPropertyName("subscriptions")]
     public IList<V1alpha1JobStatusAtProviderTaskSqlTaskDashboardSubscriptions>? Subscriptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskSqlTaskFile
@@ -14955,7 +16392,9 @@ public partial class V1alpha1JobStatusAtProviderTaskSqlTaskFile
     [JsonPropertyName("source")]
     public string? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskSqlTaskQuery
@@ -14964,7 +16403,9 @@ public partial class V1alpha1JobStatusAtProviderTaskSqlTaskQuery
     [JsonPropertyName("queryId")]
     public string? QueryId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskSqlTask
@@ -14993,7 +16434,9 @@ public partial class V1alpha1JobStatusAtProviderTaskSqlTask
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskWebhookNotificationsOnDurationWarningThresholdExceeded
@@ -15002,7 +16445,9 @@ public partial class V1alpha1JobStatusAtProviderTaskWebhookNotificationsOnDurati
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskWebhookNotificationsOnFailure
@@ -15011,7 +16456,9 @@ public partial class V1alpha1JobStatusAtProviderTaskWebhookNotificationsOnFailur
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskWebhookNotificationsOnStart
@@ -15020,7 +16467,9 @@ public partial class V1alpha1JobStatusAtProviderTaskWebhookNotificationsOnStart
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskWebhookNotificationsOnStreamingBacklogExceeded
@@ -15029,7 +16478,9 @@ public partial class V1alpha1JobStatusAtProviderTaskWebhookNotificationsOnStream
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskWebhookNotificationsOnSuccess
@@ -15038,7 +16489,9 @@ public partial class V1alpha1JobStatusAtProviderTaskWebhookNotificationsOnSucces
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTaskWebhookNotifications
@@ -15063,7 +16516,9 @@ public partial class V1alpha1JobStatusAtProviderTaskWebhookNotifications
     [JsonPropertyName("onSuccess")]
     public IList<V1alpha1JobStatusAtProviderTaskWebhookNotificationsOnSuccess>? OnSuccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTask
@@ -15208,7 +16663,9 @@ public partial class V1alpha1JobStatusAtProviderTask
     [JsonPropertyName("webhookNotifications")]
     public IList<V1alpha1JobStatusAtProviderTaskWebhookNotifications>? WebhookNotifications { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTriggerFileArrival
@@ -15225,7 +16682,9 @@ public partial class V1alpha1JobStatusAtProviderTriggerFileArrival
     [JsonPropertyName("waitAfterLastChangeSeconds")]
     public double? WaitAfterLastChangeSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTriggerPeriodic
@@ -15238,7 +16697,9 @@ public partial class V1alpha1JobStatusAtProviderTriggerPeriodic
     [JsonPropertyName("unit")]
     public string? Unit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTriggerTable
@@ -15259,7 +16720,9 @@ public partial class V1alpha1JobStatusAtProviderTriggerTable
     [JsonPropertyName("waitAfterLastChangeSeconds")]
     public double? WaitAfterLastChangeSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTriggerTableUpdate
@@ -15280,7 +16743,9 @@ public partial class V1alpha1JobStatusAtProviderTriggerTableUpdate
     [JsonPropertyName("waitAfterLastChangeSeconds")]
     public double? WaitAfterLastChangeSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderTrigger
@@ -15305,7 +16770,9 @@ public partial class V1alpha1JobStatusAtProviderTrigger
     [JsonPropertyName("tableUpdate")]
     public IList<V1alpha1JobStatusAtProviderTriggerTableUpdate>? TableUpdate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderWebhookNotificationsOnDurationWarningThresholdExceeded
@@ -15314,7 +16781,9 @@ public partial class V1alpha1JobStatusAtProviderWebhookNotificationsOnDurationWa
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderWebhookNotificationsOnFailure
@@ -15323,7 +16792,9 @@ public partial class V1alpha1JobStatusAtProviderWebhookNotificationsOnFailure
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderWebhookNotificationsOnStart
@@ -15332,7 +16803,9 @@ public partial class V1alpha1JobStatusAtProviderWebhookNotificationsOnStart
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderWebhookNotificationsOnStreamingBacklogExceeded
@@ -15341,7 +16814,9 @@ public partial class V1alpha1JobStatusAtProviderWebhookNotificationsOnStreamingB
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderWebhookNotificationsOnSuccess
@@ -15350,7 +16825,9 @@ public partial class V1alpha1JobStatusAtProviderWebhookNotificationsOnSuccess
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProviderWebhookNotifications
@@ -15375,7 +16852,9 @@ public partial class V1alpha1JobStatusAtProviderWebhookNotifications
     [JsonPropertyName("onSuccess")]
     public IList<V1alpha1JobStatusAtProviderWebhookNotificationsOnSuccess>? OnSuccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusAtProvider
@@ -15548,7 +17027,9 @@ public partial class V1alpha1JobStatusAtProvider
     [JsonPropertyName("webhookNotifications")]
     public IList<V1alpha1JobStatusAtProviderWebhookNotifications>? WebhookNotifications { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatusConditions
@@ -15577,7 +17058,9 @@ public partial class V1alpha1JobStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>JobStatus defines the observed state of Job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1JobStatus
@@ -15594,7 +17077,9 @@ public partial class V1alpha1JobStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Job is the Schema for the Jobs API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -15624,3 +17109,4 @@ public partial class V1alpha1Job : IKubernetesObject<V1ObjectMeta>, ISpec<V1alph
     [JsonPropertyName("status")]
     public V1alpha1JobStatus? Status { get; set; }
 }
+#nullable disable

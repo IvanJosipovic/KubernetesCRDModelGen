@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.acmpca.aws.upbound.io;
+#nullable enable
 /// <summary>CertificateAuthority is the Schema for the CertificateAuthoritys API. Provides a resource to manage AWS Certificate Manager Private Certificate Authorities</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1CertificateAuthorityList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1CertificateAuthority> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderCertificateAuthorityConfigurationSubject
@@ -90,7 +93,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderCertificateAuthor
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderCertificateAuthorityConfiguration
@@ -107,7 +112,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderCertificateAuthor
     [JsonPropertyName("subject")]
     public IList<V1beta1CertificateAuthoritySpecForProviderCertificateAuthorityConfigurationSubject>? Subject { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderRevocationConfigurationCrlConfiguration
@@ -132,7 +139,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderRevocationConfigu
     [JsonPropertyName("s3ObjectAcl")]
     public string? S3ObjectAcl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderRevocationConfigurationOcspConfiguration
@@ -145,7 +154,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderRevocationConfigu
     [JsonPropertyName("ocspCustomCname")]
     public string? OcspCustomCname { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProviderRevocationConfiguration
@@ -158,7 +169,9 @@ public partial class V1beta1CertificateAuthoritySpecForProviderRevocationConfigu
     [JsonPropertyName("ocspConfiguration")]
     public IList<V1beta1CertificateAuthoritySpecForProviderRevocationConfigurationOcspConfiguration>? OcspConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProvider
@@ -199,7 +212,9 @@ public partial class V1beta1CertificateAuthoritySpecForProvider
     [JsonPropertyName("usageMode")]
     public string? UsageMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProviderCertificateAuthorityConfigurationSubject
@@ -256,7 +271,9 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderCertificateAutho
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProviderCertificateAuthorityConfiguration
@@ -273,7 +290,9 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderCertificateAutho
     [JsonPropertyName("subject")]
     public IList<V1beta1CertificateAuthoritySpecInitProviderCertificateAuthorityConfigurationSubject>? Subject { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProviderRevocationConfigurationCrlConfiguration
@@ -298,7 +317,9 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderRevocationConfig
     [JsonPropertyName("s3ObjectAcl")]
     public string? S3ObjectAcl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProviderRevocationConfigurationOcspConfiguration
@@ -311,7 +332,9 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderRevocationConfig
     [JsonPropertyName("ocspCustomCname")]
     public string? OcspCustomCname { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProviderRevocationConfiguration
@@ -324,7 +347,9 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderRevocationConfig
     [JsonPropertyName("ocspConfiguration")]
     public IList<V1beta1CertificateAuthoritySpecInitProviderRevocationConfigurationOcspConfiguration>? OcspConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProvider
@@ -361,7 +386,9 @@ public partial class V1beta1CertificateAuthoritySpecInitProvider
     [JsonPropertyName("usageMode")]
     public string? UsageMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecProviderConfigRefPolicy
@@ -374,7 +401,9 @@ public partial class V1beta1CertificateAuthoritySpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecProviderConfigRef
@@ -387,7 +416,9 @@ public partial class V1beta1CertificateAuthoritySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1CertificateAuthoritySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecWriteConnectionSecretToRef
@@ -400,7 +431,9 @@ public partial class V1beta1CertificateAuthoritySpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CertificateAuthoritySpec defines the desired state of CertificateAuthority</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpec
@@ -429,7 +462,9 @@ public partial class V1beta1CertificateAuthoritySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1CertificateAuthoritySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatusAtProviderCertificateAuthorityConfigurationSubject
@@ -486,7 +521,9 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderCertificateAutho
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatusAtProviderCertificateAuthorityConfiguration
@@ -503,7 +540,9 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderCertificateAutho
     [JsonPropertyName("subject")]
     public IList<V1beta1CertificateAuthorityStatusAtProviderCertificateAuthorityConfigurationSubject>? Subject { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatusAtProviderRevocationConfigurationCrlConfiguration
@@ -528,7 +567,9 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderRevocationConfig
     [JsonPropertyName("s3ObjectAcl")]
     public string? S3ObjectAcl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatusAtProviderRevocationConfigurationOcspConfiguration
@@ -541,7 +582,9 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderRevocationConfig
     [JsonPropertyName("ocspCustomCname")]
     public string? OcspCustomCname { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatusAtProviderRevocationConfiguration
@@ -554,7 +597,9 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderRevocationConfig
     [JsonPropertyName("ocspConfiguration")]
     public IList<V1beta1CertificateAuthorityStatusAtProviderRevocationConfigurationOcspConfiguration>? OcspConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatusAtProvider
@@ -631,7 +676,9 @@ public partial class V1beta1CertificateAuthorityStatusAtProvider
     [JsonPropertyName("usageMode")]
     public string? UsageMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatusConditions
@@ -660,7 +707,9 @@ public partial class V1beta1CertificateAuthorityStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CertificateAuthorityStatus defines the observed state of CertificateAuthority.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatus
@@ -677,7 +726,9 @@ public partial class V1beta1CertificateAuthorityStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CertificateAuthority is the Schema for the CertificateAuthoritys API. Provides a resource to manage AWS Certificate Manager Private Certificate Authorities</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -707,3 +758,4 @@ public partial class V1beta1CertificateAuthority : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1CertificateAuthorityStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerservice.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20240901.ManagedClustersAgentPool Generator information: - Generated from: /containerservice/resource-manager/Microsoft.ContainerService/aks/stable/2024-09-01/managedClusters.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{resourceName}/agentPools/{agentPoolName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolList : IKuberne
     [JsonPropertyName("items")]
     public IList<V1api20240901storageManagedClustersAgentPool> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CapacityReservationGroupReference: AKS will associate the specified agent pool with the Capacity Reservation Group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolSpecCapacityReservationGroupReference
@@ -54,7 +57,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolSpecCapacityRes
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SourceResourceReference: This is the ARM ID of the source object to be used to create the target object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolSpecCreationDataSourceResourceReference
@@ -75,7 +80,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolSpecCreationDat
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.CreationData Data used when creating a target resource from a source resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolSpecCreationData
@@ -88,7 +95,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolSpecCreationDat
     [JsonPropertyName("sourceResourceReference")]
     public V1api20240901storageManagedClustersAgentPoolSpecCreationDataSourceResourceReference? SourceResourceReference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HostGroupReference: This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/hostGroups/{hostGroupName}. For more information see [Azure dedicated hosts](https://docs.microsoft.com/azure/virtual-machines/dedicated-hosts).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolSpecHostGroupReference
@@ -109,7 +118,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolSpecHostGroupRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.KubeletConfig See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolSpecKubeletConfig
@@ -162,7 +173,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolSpecKubeletConf
     [JsonPropertyName("topologyManagerPolicy")]
     public string? TopologyManagerPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.SysctlConfig Sysctl settings for Linux agent nodes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolSpecLinuxOSConfigSysctls
@@ -283,7 +296,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolSpecLinuxOSConf
     [JsonPropertyName("vmVfsCachePressure")]
     public int? VmVfsCachePressure { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.LinuxOSConfig See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolSpecLinuxOSConfig
@@ -308,7 +323,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolSpecLinuxOSConf
     [JsonPropertyName("transparentHugePageEnabled")]
     public string? TransparentHugePageEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.PortRange The port range.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolSpecNetworkProfileAllowedHostPorts
@@ -329,7 +346,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolSpecNetworkProf
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolSpecNetworkProfileApplicationSecurityGroupsReferences
@@ -350,7 +369,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolSpecNetworkProf
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.IPTag Contains the IPTag associated with the object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolSpecNetworkProfileNodePublicIPTags
@@ -367,7 +388,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolSpecNetworkProf
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.AgentPoolNetworkProfile Network settings of an agent pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolSpecNetworkProfile
@@ -388,7 +411,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolSpecNetworkProf
     [JsonPropertyName("nodePublicIPTags")]
     public IList<V1api20240901storageManagedClustersAgentPoolSpecNetworkProfileNodePublicIPTags>? NodePublicIPTags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NodePublicIPPrefixReference: This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPPrefixes/{publicIPPrefixName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolSpecNodePublicIPPrefixReference
@@ -409,7 +434,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolSpecNodePublicI
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolSpecOperatorSpecConfigMapExpressions
@@ -426,7 +453,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolSpecOperatorSpe
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolSpecOperatorSpecSecretExpressions
@@ -443,7 +472,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolSpecOperatorSpe
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.ManagedClustersAgentPoolOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolSpecOperatorSpec
@@ -460,7 +491,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolSpecOperatorSpe
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20240901storageManagedClustersAgentPoolSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a containerservice.azure.com/ManagedCluster resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolSpecOwner
@@ -473,7 +506,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PodSubnetReference: If omitted, pod IPs are statically assigned on the node subnet (see vnetSubnetID for more details). This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolSpecPodSubnetReference
@@ -494,7 +529,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolSpecPodSubnetRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.PowerState Describes the Power State of the cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolSpecPowerState
@@ -507,7 +544,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolSpecPowerState
     [JsonPropertyName("code")]
     public string? Code { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProximityPlacementGroupReference: The ID for Proximity Placement Group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolSpecProximityPlacementGroupReference
@@ -528,7 +567,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolSpecProximityPl
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.AgentPoolSecurityProfile The security settings of an agent pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolSpecSecurityProfile
@@ -545,7 +586,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolSpecSecurityPro
     [JsonPropertyName("enableVTPM")]
     public bool? EnableVTPM { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.AgentPoolUpgradeSettings Settings for upgrading an agentpool</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolSpecUpgradeSettings
@@ -566,7 +609,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolSpecUpgradeSett
     [JsonPropertyName("nodeSoakDurationInMinutes")]
     public int? NodeSoakDurationInMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VnetSubnetReference: If this is not specified, a VNET and subnet will be generated and used. If no podSubnetID is specified, this applies to nodes and pods, otherwise it applies to just nodes. This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolSpecVnetSubnetReference
@@ -587,7 +632,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolSpecVnetSubnetR
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.AgentPoolWindowsProfile The Windows agent pool's specific profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolSpecWindowsProfile
@@ -600,7 +647,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolSpecWindowsProf
     [JsonPropertyName("disableOutboundNat")]
     public bool? DisableOutboundNat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.ManagedClustersAgentPool_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolSpec
@@ -793,7 +842,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolSpec
     [JsonPropertyName("workloadRuntime")]
     public string? WorkloadRuntime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolStatusConditions
@@ -826,7 +877,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolStatusCondition
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.CreationData_STATUS Data used when creating a target resource from a source resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolStatusCreationData
@@ -839,7 +892,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolStatusCreationD
     [JsonPropertyName("sourceResourceId")]
     public string? SourceResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.KubeletConfig_STATUS See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolStatusKubeletConfig
@@ -892,7 +947,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolStatusKubeletCo
     [JsonPropertyName("topologyManagerPolicy")]
     public string? TopologyManagerPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.SysctlConfig_STATUS Sysctl settings for Linux agent nodes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolStatusLinuxOSConfigSysctls
@@ -1013,7 +1070,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolStatusLinuxOSCo
     [JsonPropertyName("vmVfsCachePressure")]
     public int? VmVfsCachePressure { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.LinuxOSConfig_STATUS See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolStatusLinuxOSConfig
@@ -1038,7 +1097,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolStatusLinuxOSCo
     [JsonPropertyName("transparentHugePageEnabled")]
     public string? TransparentHugePageEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.PortRange_STATUS The port range.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolStatusNetworkProfileAllowedHostPorts
@@ -1059,7 +1120,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolStatusNetworkPr
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.IPTag_STATUS Contains the IPTag associated with the object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolStatusNetworkProfileNodePublicIPTags
@@ -1076,7 +1139,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolStatusNetworkPr
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.AgentPoolNetworkProfile_STATUS Network settings of an agent pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolStatusNetworkProfile
@@ -1097,7 +1162,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolStatusNetworkPr
     [JsonPropertyName("nodePublicIPTags")]
     public IList<V1api20240901storageManagedClustersAgentPoolStatusNetworkProfileNodePublicIPTags>? NodePublicIPTags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.PowerState_STATUS Describes the Power State of the cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolStatusPowerState
@@ -1110,7 +1177,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolStatusPowerStat
     [JsonPropertyName("code")]
     public string? Code { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.AgentPoolSecurityProfile_STATUS The security settings of an agent pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolStatusSecurityProfile
@@ -1127,7 +1196,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolStatusSecurityP
     [JsonPropertyName("enableVTPM")]
     public bool? EnableVTPM { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.AgentPoolUpgradeSettings_STATUS Settings for upgrading an agentpool</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolStatusUpgradeSettings
@@ -1148,7 +1219,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolStatusUpgradeSe
     [JsonPropertyName("nodeSoakDurationInMinutes")]
     public int? NodeSoakDurationInMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.AgentPoolWindowsProfile_STATUS The Windows agent pool's specific profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolStatusWindowsProfile
@@ -1161,7 +1234,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolStatusWindowsPr
     [JsonPropertyName("disableOutboundNat")]
     public bool? DisableOutboundNat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.ManagedClustersAgentPool_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClustersAgentPoolStatus
@@ -1370,7 +1445,9 @@ public partial class V1api20240901storageManagedClustersAgentPoolStatus
     [JsonPropertyName("workloadRuntime")]
     public string? WorkloadRuntime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240901.ManagedClustersAgentPool Generator information: - Generated from: /containerservice/resource-manager/Microsoft.ContainerService/aks/stable/2024-09-01/managedClusters.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{resourceName}/agentPools/{agentPoolName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1400,3 +1477,4 @@ public partial class V1api20240901storageManagedClustersAgentPool : IKubernetesO
     [JsonPropertyName("status")]
     public V1api20240901storageManagedClustersAgentPoolStatus? Status { get; set; }
 }
+#nullable disable

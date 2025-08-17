@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.flows.knative.dev;
+#nullable enable
 /// <summary>Parallel defines conditional branches that will be wired in series through Channels and Subscriptions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1ParallelList : IKubernetesObject<V1ListMeta>, IItems<V1Pa
     [JsonPropertyName("items")]
     public IList<V1Parallel> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ChannelTemplate specifies which Channel CRD to use. If left unspecified, it is set to the default Channel CRD for the namespace (or cluster, in case there are no defaults for the namespace).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ParallelSpecChannelTemplate
@@ -50,7 +53,9 @@ public partial class V1ParallelSpecChannelTemplate
     [JsonPropertyName("spec")]
     public JsonNode? Spec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Ref points to an Addressable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ParallelSpecReplyRef
@@ -71,7 +76,9 @@ public partial class V1ParallelSpecReplyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reply is a Reference to where the result of a case Subscriber gets sent to when the case does not have a Reply</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ParallelSpecReply
@@ -92,7 +99,9 @@ public partial class V1ParallelSpecReply
     [JsonPropertyName("audience")]
     public string? Audience { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Spec defines the desired state of the Parallel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ParallelSpec
@@ -109,7 +118,9 @@ public partial class V1ParallelSpec
     [JsonPropertyName("reply")]
     public V1ParallelSpecReply? Reply { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Parallel is Addressable. It exposes the endpoint as an URI to get events delivered into the Parallel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ParallelStatusAddress
@@ -130,7 +141,9 @@ public partial class V1ParallelStatusAddress
     [JsonPropertyName("audience")]
     public string? Audience { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ParallelStatusAddresses
@@ -151,7 +164,9 @@ public partial class V1ParallelStatusAddresses
     [JsonPropertyName("audience")]
     public string? Audience { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ParallelStatusAuth
@@ -164,7 +179,9 @@ public partial class V1ParallelStatusAuth
     [JsonPropertyName("serviceAccountNames")]
     public IList<string>? ServiceAccountNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Channel is the reference to the underlying channel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ParallelStatusBranchStatusesFilterChannelStatusChannel
@@ -197,7 +214,9 @@ public partial class V1ParallelStatusBranchStatusesFilterChannelStatusChannel
     [JsonPropertyName("uid")]
     public string? Uid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FilterChannelStatus corresponds to the filter channel status.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ParallelStatusBranchStatusesFilterChannelStatus
@@ -210,7 +229,9 @@ public partial class V1ParallelStatusBranchStatusesFilterChannelStatus
     [JsonPropertyName("ready")]
     public JsonNode? Ready { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ReadyCondition indicates whether the Subscription is ready or not.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ParallelStatusBranchStatusesFilterSubscriptionStatusReady
@@ -235,7 +256,9 @@ public partial class V1ParallelStatusBranchStatusesFilterSubscriptionStatusReady
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Subscription is the reference to the underlying Subscription.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ParallelStatusBranchStatusesFilterSubscriptionStatusSubscription
@@ -268,7 +291,9 @@ public partial class V1ParallelStatusBranchStatusesFilterSubscriptionStatusSubsc
     [JsonPropertyName("uid")]
     public string? Uid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FilterSubscriptionStatus corresponds to the filter subscription status.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ParallelStatusBranchStatusesFilterSubscriptionStatus
@@ -281,7 +306,9 @@ public partial class V1ParallelStatusBranchStatusesFilterSubscriptionStatus
     [JsonPropertyName("subscription")]
     public V1ParallelStatusBranchStatusesFilterSubscriptionStatusSubscription? Subscription { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ReadyCondition indicates whether the Subscription is ready or not.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ParallelStatusBranchStatusesSubscriberSubscriptionStatusReady
@@ -306,7 +333,9 @@ public partial class V1ParallelStatusBranchStatusesSubscriberSubscriptionStatusR
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Subscription is the reference to the underlying Subscription.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ParallelStatusBranchStatusesSubscriberSubscriptionStatusSubscription
@@ -339,7 +368,9 @@ public partial class V1ParallelStatusBranchStatusesSubscriberSubscriptionStatusS
     [JsonPropertyName("uid")]
     public string? Uid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubscriptionStatus corresponds to the subscriber subscription status.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ParallelStatusBranchStatusesSubscriberSubscriptionStatus
@@ -352,7 +383,9 @@ public partial class V1ParallelStatusBranchStatusesSubscriberSubscriptionStatus
     [JsonPropertyName("subscription")]
     public V1ParallelStatusBranchStatusesSubscriberSubscriptionStatusSubscription? Subscription { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ParallelStatusBranchStatuses
@@ -369,7 +402,9 @@ public partial class V1ParallelStatusBranchStatuses
     [JsonPropertyName("subscriberSubscriptionStatus")]
     public V1ParallelStatusBranchStatusesSubscriberSubscriptionStatus? SubscriberSubscriptionStatus { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ParallelStatusPolicies
@@ -382,7 +417,9 @@ public partial class V1ParallelStatusPolicies
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ParallelStatusConditions
@@ -407,7 +444,9 @@ public partial class V1ParallelStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Channel is the reference to the underlying channel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ParallelStatusIngressChannelStatusChannel
@@ -440,7 +479,9 @@ public partial class V1ParallelStatusIngressChannelStatusChannel
     [JsonPropertyName("uid")]
     public string? Uid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IngressChannelStatus corresponds to the ingress channel status.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ParallelStatusIngressChannelStatus
@@ -453,7 +494,9 @@ public partial class V1ParallelStatusIngressChannelStatus
     [JsonPropertyName("ready")]
     public JsonNode? Ready { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Status represents the current state of the Parallel. This data may be out of date.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ParallelStatus
@@ -494,7 +537,9 @@ public partial class V1ParallelStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Parallel defines conditional branches that will be wired in series through Channels and Subscriptions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -524,3 +569,4 @@ public partial class V1Parallel : IKubernetesObject<V1ObjectMeta>, ISpec<V1Paral
     [JsonPropertyName("status")]
     public V1ParallelStatus? Status { get; set; }
 }
+#nullable disable

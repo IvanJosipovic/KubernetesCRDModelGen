@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataproc.gcp.m.upbound.io;
+#nullable enable
 /// <summary>Cluster is the Schema for the Clusters API. Manages a Cloud Dataproc cluster resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ClusterList : IKubernetesObject<V1ListMeta>, IItems<
     [JsonPropertyName("items")]
     public IList<V1beta1Cluster> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The autoscaling policy config associated with the cluster. Note that once set, if autoscaling_config is the only field set in cluster_config, it can only be removed by setting policy_uri = "", rather than removing the whole block. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigAutoscalingConfig
@@ -42,7 +45,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigAutoscalingConfig
     [JsonPropertyName("policyUri")]
     public string? PolicyUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators
@@ -55,7 +60,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigAuxiliaryNodeGrou
     [JsonPropertyName("acceleratorType")]
     public string? AcceleratorType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Disk Config</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigDiskConfig
@@ -76,7 +83,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigAuxiliaryNodeGrou
     [JsonPropertyName("numLocalSsds")]
     public double? NumLocalSsds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The node group instance group configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfig
@@ -101,7 +110,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigAuxiliaryNodeGrou
     [JsonPropertyName("numInstances")]
     public double? NumInstances { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigAuxiliaryNodeGroupsNodeGroup
@@ -114,7 +125,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigAuxiliaryNodeGrou
     [JsonPropertyName("roles")]
     public IList<string>? Roles { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigAuxiliaryNodeGroups
@@ -127,7 +140,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigAuxiliaryNodeGrou
     [JsonPropertyName("nodeGroupId")]
     public string? NodeGroupId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigDataprocMetricConfigMetrics
@@ -140,7 +155,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigDataprocMetricCon
     [JsonPropertyName("metricSource")]
     public string? MetricSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Compute Engine accelerator (GPU) configuration for these instances. Can be specified multiple times. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigDataprocMetricConfig
@@ -149,7 +166,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigDataprocMetricCon
     [JsonPropertyName("metrics")]
     public IList<V1beta1ClusterSpecForProviderClusterConfigDataprocMetricConfigMetrics>? Metrics { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Customer managed encryption keys settings for the cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigEncryptionConfig
@@ -158,7 +177,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigEncryptionConfig
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The config settings for port access on the cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigEndpointConfig
@@ -167,7 +188,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigEndpointConfig
     [JsonPropertyName("enableHttpPortAccess")]
     public bool? EnableHttpPortAccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Confidential Instance Config for clusters using Confidential VMs</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigConfidentialInstanceConfig
@@ -176,7 +199,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigC
     [JsonPropertyName("enableConfidentialCompute")]
     public bool? EnableConfidentialCompute { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Node Group Affinity for sole-tenant clusters.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigNodeGroupAffinity
@@ -185,7 +210,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigN
     [JsonPropertyName("nodeGroupUri")]
     public string? NodeGroupUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reservation Affinity for consuming zonal reservation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigReservationAffinity
@@ -202,7 +229,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigR
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigServiceAccountRefPolicy
@@ -215,7 +244,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigServiceAccountRef
@@ -232,7 +263,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigS
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigServiceAccountRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigServiceAccountSelectorPolicy
@@ -245,7 +278,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigServiceAccountSelector
@@ -266,7 +301,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigS
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigServiceAccountSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Shielded Instance Config for clusters using Compute Engine Shielded VMs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigShieldedInstanceConfig
@@ -283,7 +320,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigS
     [JsonPropertyName("enableVtpm")]
     public bool? EnableVtpm { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Common config settings for resources of Google Compute Engine cluster instances, applicable to all instances in the cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfig
@@ -344,7 +383,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfig
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigInitializationAction
@@ -357,7 +398,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigInitializationAct
     [JsonPropertyName("timeoutSec")]
     public double? TimeoutSec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The settings for auto deletion cluster schedule. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigLifecycleConfig
@@ -370,7 +413,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigLifecycleConfig
     [JsonPropertyName("idleDeleteTtl")]
     public string? IdleDeleteTtl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigMasterConfigAccelerators
@@ -383,7 +428,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigMasterConfigAccel
     [JsonPropertyName("acceleratorType")]
     public string? AcceleratorType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Disk Config</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigMasterConfigDiskConfig
@@ -404,7 +451,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigMasterConfigDiskC
     [JsonPropertyName("numLocalSsds")]
     public double? NumLocalSsds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Google Compute Engine config settings for the master instances in a cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigMasterConfig
@@ -433,7 +482,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigMasterConfig
     [JsonPropertyName("numInstances")]
     public double? NumInstances { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The config setting for metastore service with the cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigMetastoreConfig
@@ -442,7 +493,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigMetastoreConfig
     [JsonPropertyName("dataprocMetastoreService")]
     public string? DataprocMetastoreService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Disk Config</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigPreemptibleWorkerConfigDiskConfig
@@ -463,7 +516,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigPreemptibleWorker
     [JsonPropertyName("numLocalSsds")]
     public double? NumLocalSsds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionList
@@ -476,7 +531,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigPreemptibleWorker
     [JsonPropertyName("rank")]
     public double? Rank { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines how the Group selects the provisioning model to ensure required reliability.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyProvisioningModelMix
@@ -489,7 +546,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigPreemptibleWorker
     [JsonPropertyName("standardCapacityPercentAboveBase")]
     public double? StandardCapacityPercentAboveBase { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Instance flexibility Policy allowing a mixture of VM shapes and provisioning models.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicy
@@ -502,7 +561,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigPreemptibleWorker
     [JsonPropertyName("provisioningModelMix")]
     public V1beta1ClusterSpecForProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyProvisioningModelMix? ProvisioningModelMix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Google Compute Engine config settings for the additional instances in a cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigPreemptibleWorkerConfig
@@ -523,7 +584,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigPreemptibleWorker
     [JsonPropertyName("preemptibility")]
     public string? Preemptibility { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Kerberos Configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigSecurityConfigKerberosConfig
@@ -588,7 +651,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigSecurityConfigKer
     [JsonPropertyName("truststoreUri")]
     public string? TruststoreUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Security related configuration. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigSecurityConfig
@@ -597,7 +662,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigSecurityConfig
     [JsonPropertyName("kerberosConfig")]
     public V1beta1ClusterSpecForProviderClusterConfigSecurityConfigKerberosConfig? KerberosConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The config settings for software inside the cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigSoftwareConfig
@@ -614,7 +681,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigSoftwareConfig
     [JsonPropertyName("overrideProperties")]
     public IDictionary<string, string>? OverrideProperties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigWorkerConfigAccelerators
@@ -627,7 +696,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigWorkerConfigAccel
     [JsonPropertyName("acceleratorType")]
     public string? AcceleratorType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Disk Config</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigWorkerConfigDiskConfig
@@ -648,7 +719,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigWorkerConfigDiskC
     [JsonPropertyName("numLocalSsds")]
     public double? NumLocalSsds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Google Compute Engine config settings for the worker instances in a cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigWorkerConfig
@@ -681,7 +754,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigWorkerConfig
     [JsonPropertyName("numInstances")]
     public double? NumInstances { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Allows you to configure various aspects of the cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfig
@@ -750,7 +825,9 @@ public partial class V1beta1ClusterSpecForProviderClusterConfig
     [JsonPropertyName("workerConfig")]
     public V1beta1ClusterSpecForProviderClusterConfigWorkerConfig? WorkerConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The config setting for metastore service with the cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigAuxiliaryServicesConfigMetastoreConfig
@@ -759,7 +836,9 @@ public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigAuxiliaryS
     [JsonPropertyName("dataprocMetastoreService")]
     public string? DataprocMetastoreService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Spark History Server configuration for the workload.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigAuxiliaryServicesConfigSparkHistoryServerConfig
@@ -768,7 +847,9 @@ public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigAuxiliaryS
     [JsonPropertyName("dataprocCluster")]
     public string? DataprocCluster { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration of auxiliary services used by this cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigAuxiliaryServicesConfig
@@ -781,7 +862,9 @@ public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigAuxiliaryS
     [JsonPropertyName("sparkHistoryServerConfig")]
     public V1beta1ClusterSpecForProviderVirtualClusterConfigAuxiliaryServicesConfigSparkHistoryServerConfig? SparkHistoryServerConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The autoscaler configuration for this node pool. The autoscaler is enabled only when a valid configuration is present.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigAutoscaling
@@ -794,7 +877,9 @@ public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetes
     [JsonPropertyName("minNodeCount")]
     public double? MinNodeCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The node pool configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfig
@@ -819,7 +904,9 @@ public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetes
     [JsonPropertyName("spot")]
     public bool? Spot { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>(Input only) The configuration for the GKE node pool. If specified, Dataproc attempts to create a node pool with the specified shape. If one with the same name already exists, it is verified against all specified fields. If a field differs, the virtual cluster creation will fail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfig
@@ -836,7 +923,9 @@ public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetes
     [JsonPropertyName("locations")]
     public IList<string>? Locations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget
@@ -853,7 +942,9 @@ public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetes
     [JsonPropertyName("roles")]
     public IList<string>? Roles { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for running the Dataproc cluster on GKE.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfig
@@ -866,7 +957,9 @@ public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetes
     [JsonPropertyName("nodePoolTarget")]
     public IList<V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget>? NodePoolTarget { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The software configuration for this Dataproc cluster running on Kubernetes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetesClusterConfigKubernetesSoftwareConfig
@@ -879,7 +972,9 @@ public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetes
     [JsonPropertyName("properties")]
     public IDictionary<string, string>? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for running the Dataproc cluster on Kubernetes. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetesClusterConfig
@@ -896,7 +991,9 @@ public partial class V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetes
     [JsonPropertyName("kubernetesSoftwareConfig")]
     public V1beta1ClusterSpecForProviderVirtualClusterConfigKubernetesClusterConfigKubernetesSoftwareConfig? KubernetesSoftwareConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Allows you to configure a virtual Dataproc on GKE cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVirtualClusterConfig
@@ -913,7 +1010,9 @@ public partial class V1beta1ClusterSpecForProviderVirtualClusterConfig
     [JsonPropertyName("stagingBucket")]
     public string? StagingBucket { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProvider
@@ -946,7 +1045,9 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("virtualClusterConfig")]
     public V1beta1ClusterSpecForProviderVirtualClusterConfig? VirtualClusterConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The autoscaling policy config associated with the cluster. Note that once set, if autoscaling_config is the only field set in cluster_config, it can only be removed by setting policy_uri = "", rather than removing the whole block. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigAutoscalingConfig
@@ -955,7 +1056,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigAutoscalingConfi
     [JsonPropertyName("policyUri")]
     public string? PolicyUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators
@@ -968,7 +1071,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigAuxiliaryNodeGro
     [JsonPropertyName("acceleratorType")]
     public string? AcceleratorType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Disk Config</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigDiskConfig
@@ -989,7 +1094,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigAuxiliaryNodeGro
     [JsonPropertyName("numLocalSsds")]
     public double? NumLocalSsds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The node group instance group configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfig
@@ -1014,7 +1121,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigAuxiliaryNodeGro
     [JsonPropertyName("numInstances")]
     public double? NumInstances { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigAuxiliaryNodeGroupsNodeGroup
@@ -1027,7 +1136,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigAuxiliaryNodeGro
     [JsonPropertyName("roles")]
     public IList<string>? Roles { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigAuxiliaryNodeGroups
@@ -1040,7 +1151,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigAuxiliaryNodeGro
     [JsonPropertyName("nodeGroupId")]
     public string? NodeGroupId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigDataprocMetricConfigMetrics
@@ -1053,7 +1166,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigDataprocMetricCo
     [JsonPropertyName("metricSource")]
     public string? MetricSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Compute Engine accelerator (GPU) configuration for these instances. Can be specified multiple times. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigDataprocMetricConfig
@@ -1062,7 +1177,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigDataprocMetricCo
     [JsonPropertyName("metrics")]
     public IList<V1beta1ClusterSpecInitProviderClusterConfigDataprocMetricConfigMetrics>? Metrics { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Customer managed encryption keys settings for the cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigEncryptionConfig
@@ -1071,7 +1188,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigEncryptionConfig
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The config settings for port access on the cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigEndpointConfig
@@ -1080,7 +1199,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigEndpointConfig
     [JsonPropertyName("enableHttpPortAccess")]
     public bool? EnableHttpPortAccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Confidential Instance Config for clusters using Confidential VMs</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfigConfidentialInstanceConfig
@@ -1089,7 +1210,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfig
     [JsonPropertyName("enableConfidentialCompute")]
     public bool? EnableConfidentialCompute { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Node Group Affinity for sole-tenant clusters.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfigNodeGroupAffinity
@@ -1098,7 +1221,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfig
     [JsonPropertyName("nodeGroupUri")]
     public string? NodeGroupUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reservation Affinity for consuming zonal reservation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfigReservationAffinity
@@ -1115,7 +1240,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfig
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfigServiceAccountRefPolicy
@@ -1128,7 +1255,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfig
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfigServiceAccountRef
@@ -1145,7 +1274,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfig
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfigServiceAccountRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfigServiceAccountSelectorPolicy
@@ -1158,7 +1289,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfig
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfigServiceAccountSelector
@@ -1179,7 +1312,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfig
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfigServiceAccountSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Shielded Instance Config for clusters using Compute Engine Shielded VMs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfigShieldedInstanceConfig
@@ -1196,7 +1331,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfig
     [JsonPropertyName("enableVtpm")]
     public bool? EnableVtpm { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Common config settings for resources of Google Compute Engine cluster instances, applicable to all instances in the cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfig
@@ -1257,7 +1394,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfig
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigInitializationAction
@@ -1270,7 +1409,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigInitializationAc
     [JsonPropertyName("timeoutSec")]
     public double? TimeoutSec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The settings for auto deletion cluster schedule. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigLifecycleConfig
@@ -1283,7 +1424,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigLifecycleConfig
     [JsonPropertyName("idleDeleteTtl")]
     public string? IdleDeleteTtl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigMasterConfigAccelerators
@@ -1296,7 +1439,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigMasterConfigAcce
     [JsonPropertyName("acceleratorType")]
     public string? AcceleratorType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Disk Config</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigMasterConfigDiskConfig
@@ -1317,7 +1462,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigMasterConfigDisk
     [JsonPropertyName("numLocalSsds")]
     public double? NumLocalSsds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Google Compute Engine config settings for the master instances in a cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigMasterConfig
@@ -1346,7 +1493,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigMasterConfig
     [JsonPropertyName("numInstances")]
     public double? NumInstances { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The config setting for metastore service with the cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigMetastoreConfig
@@ -1355,7 +1504,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigMetastoreConfig
     [JsonPropertyName("dataprocMetastoreService")]
     public string? DataprocMetastoreService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Disk Config</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigPreemptibleWorkerConfigDiskConfig
@@ -1376,7 +1527,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigPreemptibleWorke
     [JsonPropertyName("numLocalSsds")]
     public double? NumLocalSsds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionList
@@ -1389,7 +1542,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigPreemptibleWorke
     [JsonPropertyName("rank")]
     public double? Rank { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines how the Group selects the provisioning model to ensure required reliability.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyProvisioningModelMix
@@ -1402,7 +1557,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigPreemptibleWorke
     [JsonPropertyName("standardCapacityPercentAboveBase")]
     public double? StandardCapacityPercentAboveBase { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Instance flexibility Policy allowing a mixture of VM shapes and provisioning models.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicy
@@ -1415,7 +1572,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigPreemptibleWorke
     [JsonPropertyName("provisioningModelMix")]
     public V1beta1ClusterSpecInitProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyProvisioningModelMix? ProvisioningModelMix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Google Compute Engine config settings for the additional instances in a cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigPreemptibleWorkerConfig
@@ -1436,7 +1595,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigPreemptibleWorke
     [JsonPropertyName("preemptibility")]
     public string? Preemptibility { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Kerberos Configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigSecurityConfigKerberosConfig
@@ -1501,7 +1662,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigSecurityConfigKe
     [JsonPropertyName("truststoreUri")]
     public string? TruststoreUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Security related configuration. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigSecurityConfig
@@ -1510,7 +1673,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigSecurityConfig
     [JsonPropertyName("kerberosConfig")]
     public V1beta1ClusterSpecInitProviderClusterConfigSecurityConfigKerberosConfig? KerberosConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The config settings for software inside the cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigSoftwareConfig
@@ -1527,7 +1692,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigSoftwareConfig
     [JsonPropertyName("overrideProperties")]
     public IDictionary<string, string>? OverrideProperties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigWorkerConfigAccelerators
@@ -1540,7 +1707,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigWorkerConfigAcce
     [JsonPropertyName("acceleratorType")]
     public string? AcceleratorType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Disk Config</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigWorkerConfigDiskConfig
@@ -1561,7 +1730,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigWorkerConfigDisk
     [JsonPropertyName("numLocalSsds")]
     public double? NumLocalSsds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Google Compute Engine config settings for the worker instances in a cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigWorkerConfig
@@ -1594,7 +1765,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigWorkerConfig
     [JsonPropertyName("numInstances")]
     public double? NumInstances { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Allows you to configure various aspects of the cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfig
@@ -1663,7 +1836,9 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfig
     [JsonPropertyName("workerConfig")]
     public V1beta1ClusterSpecInitProviderClusterConfigWorkerConfig? WorkerConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The config setting for metastore service with the cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigAuxiliaryServicesConfigMetastoreConfig
@@ -1672,7 +1847,9 @@ public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigAuxiliary
     [JsonPropertyName("dataprocMetastoreService")]
     public string? DataprocMetastoreService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Spark History Server configuration for the workload.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigAuxiliaryServicesConfigSparkHistoryServerConfig
@@ -1681,7 +1858,9 @@ public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigAuxiliary
     [JsonPropertyName("dataprocCluster")]
     public string? DataprocCluster { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration of auxiliary services used by this cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigAuxiliaryServicesConfig
@@ -1694,7 +1873,9 @@ public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigAuxiliary
     [JsonPropertyName("sparkHistoryServerConfig")]
     public V1beta1ClusterSpecInitProviderVirtualClusterConfigAuxiliaryServicesConfigSparkHistoryServerConfig? SparkHistoryServerConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The autoscaler configuration for this node pool. The autoscaler is enabled only when a valid configuration is present.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigAutoscaling
@@ -1707,7 +1888,9 @@ public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernete
     [JsonPropertyName("minNodeCount")]
     public double? MinNodeCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The node pool configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfig
@@ -1732,7 +1915,9 @@ public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernete
     [JsonPropertyName("spot")]
     public bool? Spot { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>(Input only) The configuration for the GKE node pool. If specified, Dataproc attempts to create a node pool with the specified shape. If one with the same name already exists, it is verified against all specified fields. If a field differs, the virtual cluster creation will fail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfig
@@ -1749,7 +1934,9 @@ public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernete
     [JsonPropertyName("locations")]
     public IList<string>? Locations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget
@@ -1766,7 +1953,9 @@ public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernete
     [JsonPropertyName("roles")]
     public IList<string>? Roles { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for running the Dataproc cluster on GKE.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfig
@@ -1779,7 +1968,9 @@ public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernete
     [JsonPropertyName("nodePoolTarget")]
     public IList<V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget>? NodePoolTarget { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The software configuration for this Dataproc cluster running on Kubernetes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernetesClusterConfigKubernetesSoftwareConfig
@@ -1792,7 +1983,9 @@ public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernete
     [JsonPropertyName("properties")]
     public IDictionary<string, string>? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for running the Dataproc cluster on Kubernetes. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernetesClusterConfig
@@ -1809,7 +2002,9 @@ public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernete
     [JsonPropertyName("kubernetesSoftwareConfig")]
     public V1beta1ClusterSpecInitProviderVirtualClusterConfigKubernetesClusterConfigKubernetesSoftwareConfig? KubernetesSoftwareConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Allows you to configure a virtual Dataproc on GKE cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfig
@@ -1826,7 +2021,9 @@ public partial class V1beta1ClusterSpecInitProviderVirtualClusterConfig
     [JsonPropertyName("stagingBucket")]
     public string? StagingBucket { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProvider
@@ -1859,7 +2056,9 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("virtualClusterConfig")]
     public V1beta1ClusterSpecInitProviderVirtualClusterConfig? VirtualClusterConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecProviderConfigRef
@@ -1872,7 +2071,9 @@ public partial class V1beta1ClusterSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecWriteConnectionSecretToRef
@@ -1881,7 +2082,9 @@ public partial class V1beta1ClusterSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClusterSpec defines the desired state of Cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpec
@@ -1906,7 +2109,9 @@ public partial class V1beta1ClusterSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ClusterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The autoscaling policy config associated with the cluster. Note that once set, if autoscaling_config is the only field set in cluster_config, it can only be removed by setting policy_uri = "", rather than removing the whole block. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigAutoscalingConfig
@@ -1915,7 +2120,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigAutoscalingConfi
     [JsonPropertyName("policyUri")]
     public string? PolicyUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigAccelerators
@@ -1928,7 +2135,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigAuxiliaryNodeGro
     [JsonPropertyName("acceleratorType")]
     public string? AcceleratorType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Disk Config</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigDiskConfig
@@ -1949,7 +2158,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigAuxiliaryNodeGro
     [JsonPropertyName("numLocalSsds")]
     public double? NumLocalSsds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The node group instance group configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfig
@@ -1978,7 +2189,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigAuxiliaryNodeGro
     [JsonPropertyName("numInstances")]
     public double? NumInstances { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigAuxiliaryNodeGroupsNodeGroup
@@ -1995,7 +2208,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigAuxiliaryNodeGro
     [JsonPropertyName("roles")]
     public IList<string>? Roles { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigAuxiliaryNodeGroups
@@ -2008,7 +2223,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigAuxiliaryNodeGro
     [JsonPropertyName("nodeGroupId")]
     public string? NodeGroupId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigDataprocMetricConfigMetrics
@@ -2021,7 +2238,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigDataprocMetricCo
     [JsonPropertyName("metricSource")]
     public string? MetricSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Compute Engine accelerator (GPU) configuration for these instances. Can be specified multiple times. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigDataprocMetricConfig
@@ -2030,7 +2249,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigDataprocMetricCo
     [JsonPropertyName("metrics")]
     public IList<V1beta1ClusterStatusAtProviderClusterConfigDataprocMetricConfigMetrics>? Metrics { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Customer managed encryption keys settings for the cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigEncryptionConfig
@@ -2039,7 +2260,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigEncryptionConfig
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The config settings for port access on the cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigEndpointConfig
@@ -2052,7 +2275,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigEndpointConfig
     [JsonPropertyName("httpPorts")]
     public IDictionary<string, string>? HttpPorts { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Confidential Instance Config for clusters using Confidential VMs</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigGceClusterConfigConfidentialInstanceConfig
@@ -2061,7 +2286,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigGceClusterConfig
     [JsonPropertyName("enableConfidentialCompute")]
     public bool? EnableConfidentialCompute { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Node Group Affinity for sole-tenant clusters.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigGceClusterConfigNodeGroupAffinity
@@ -2070,7 +2297,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigGceClusterConfig
     [JsonPropertyName("nodeGroupUri")]
     public string? NodeGroupUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reservation Affinity for consuming zonal reservation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigGceClusterConfigReservationAffinity
@@ -2087,7 +2316,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigGceClusterConfig
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Shielded Instance Config for clusters using Compute Engine Shielded VMs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigGceClusterConfigShieldedInstanceConfig
@@ -2104,7 +2335,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigGceClusterConfig
     [JsonPropertyName("enableVtpm")]
     public bool? EnableVtpm { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Common config settings for resources of Google Compute Engine cluster instances, applicable to all instances in the cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigGceClusterConfig
@@ -2157,7 +2390,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigGceClusterConfig
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigInitializationAction
@@ -2170,7 +2405,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigInitializationAc
     [JsonPropertyName("timeoutSec")]
     public double? TimeoutSec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The settings for auto deletion cluster schedule. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigLifecycleConfig
@@ -2187,7 +2424,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigLifecycleConfig
     [JsonPropertyName("idleStartTime")]
     public string? IdleStartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigMasterConfigAccelerators
@@ -2200,7 +2439,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigMasterConfigAcce
     [JsonPropertyName("acceleratorType")]
     public string? AcceleratorType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Disk Config</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigMasterConfigDiskConfig
@@ -2221,7 +2462,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigMasterConfigDisk
     [JsonPropertyName("numLocalSsds")]
     public double? NumLocalSsds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Google Compute Engine config settings for the master instances in a cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigMasterConfig
@@ -2254,7 +2497,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigMasterConfig
     [JsonPropertyName("numInstances")]
     public double? NumInstances { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The config setting for metastore service with the cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigMetastoreConfig
@@ -2263,7 +2508,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigMetastoreConfig
     [JsonPropertyName("dataprocMetastoreService")]
     public string? DataprocMetastoreService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Disk Config</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigPreemptibleWorkerConfigDiskConfig
@@ -2284,7 +2531,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigPreemptibleWorke
     [JsonPropertyName("numLocalSsds")]
     public double? NumLocalSsds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionList
@@ -2297,7 +2546,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigPreemptibleWorke
     [JsonPropertyName("rank")]
     public double? Rank { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionResults
@@ -2310,7 +2561,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigPreemptibleWorke
     [JsonPropertyName("vmCount")]
     public double? VmCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines how the Group selects the provisioning model to ensure required reliability.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyProvisioningModelMix
@@ -2323,7 +2576,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigPreemptibleWorke
     [JsonPropertyName("standardCapacityPercentAboveBase")]
     public double? StandardCapacityPercentAboveBase { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Instance flexibility Policy allowing a mixture of VM shapes and provisioning models.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicy
@@ -2340,7 +2595,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigPreemptibleWorke
     [JsonPropertyName("provisioningModelMix")]
     public V1beta1ClusterStatusAtProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyProvisioningModelMix? ProvisioningModelMix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Google Compute Engine config settings for the additional instances in a cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigPreemptibleWorkerConfig
@@ -2365,7 +2622,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigPreemptibleWorke
     [JsonPropertyName("preemptibility")]
     public string? Preemptibility { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Kerberos Configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigSecurityConfigKerberosConfig
@@ -2430,7 +2689,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigSecurityConfigKe
     [JsonPropertyName("truststoreUri")]
     public string? TruststoreUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Security related configuration. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigSecurityConfig
@@ -2439,7 +2700,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigSecurityConfig
     [JsonPropertyName("kerberosConfig")]
     public V1beta1ClusterStatusAtProviderClusterConfigSecurityConfigKerberosConfig? KerberosConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The config settings for software inside the cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigSoftwareConfig
@@ -2460,7 +2723,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigSoftwareConfig
     [JsonPropertyName("properties")]
     public IDictionary<string, string>? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigWorkerConfigAccelerators
@@ -2473,7 +2738,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigWorkerConfigAcce
     [JsonPropertyName("acceleratorType")]
     public string? AcceleratorType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Disk Config</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigWorkerConfigDiskConfig
@@ -2494,7 +2761,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigWorkerConfigDisk
     [JsonPropertyName("numLocalSsds")]
     public double? NumLocalSsds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Google Compute Engine config settings for the worker instances in a cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigWorkerConfig
@@ -2531,7 +2800,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigWorkerConfig
     [JsonPropertyName("numInstances")]
     public double? NumInstances { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Allows you to configure various aspects of the cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfig
@@ -2604,7 +2875,9 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfig
     [JsonPropertyName("workerConfig")]
     public V1beta1ClusterStatusAtProviderClusterConfigWorkerConfig? WorkerConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The config setting for metastore service with the cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigAuxiliaryServicesConfigMetastoreConfig
@@ -2613,7 +2886,9 @@ public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigAuxiliary
     [JsonPropertyName("dataprocMetastoreService")]
     public string? DataprocMetastoreService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Spark History Server configuration for the workload.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigAuxiliaryServicesConfigSparkHistoryServerConfig
@@ -2622,7 +2897,9 @@ public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigAuxiliary
     [JsonPropertyName("dataprocCluster")]
     public string? DataprocCluster { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration of auxiliary services used by this cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigAuxiliaryServicesConfig
@@ -2635,7 +2912,9 @@ public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigAuxiliary
     [JsonPropertyName("sparkHistoryServerConfig")]
     public V1beta1ClusterStatusAtProviderVirtualClusterConfigAuxiliaryServicesConfigSparkHistoryServerConfig? SparkHistoryServerConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The autoscaler configuration for this node pool. The autoscaler is enabled only when a valid configuration is present.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigAutoscaling
@@ -2648,7 +2927,9 @@ public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernete
     [JsonPropertyName("minNodeCount")]
     public double? MinNodeCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The node pool configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfig
@@ -2673,7 +2954,9 @@ public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernete
     [JsonPropertyName("spot")]
     public bool? Spot { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>(Input only) The configuration for the GKE node pool. If specified, Dataproc attempts to create a node pool with the specified shape. If one with the same name already exists, it is verified against all specified fields. If a field differs, the virtual cluster creation will fail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfig
@@ -2690,7 +2973,9 @@ public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernete
     [JsonPropertyName("locations")]
     public IList<string>? Locations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget
@@ -2707,7 +2992,9 @@ public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernete
     [JsonPropertyName("roles")]
     public IList<string>? Roles { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for running the Dataproc cluster on GKE.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfig
@@ -2720,7 +3007,9 @@ public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernete
     [JsonPropertyName("nodePoolTarget")]
     public IList<V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget>? NodePoolTarget { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The software configuration for this Dataproc cluster running on Kubernetes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernetesClusterConfigKubernetesSoftwareConfig
@@ -2733,7 +3022,9 @@ public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernete
     [JsonPropertyName("properties")]
     public IDictionary<string, string>? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for running the Dataproc cluster on Kubernetes. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernetesClusterConfig
@@ -2750,7 +3041,9 @@ public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernete
     [JsonPropertyName("kubernetesSoftwareConfig")]
     public V1beta1ClusterStatusAtProviderVirtualClusterConfigKubernetesClusterConfigKubernetesSoftwareConfig? KubernetesSoftwareConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Allows you to configure a virtual Dataproc on GKE cluster. Structure defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfig
@@ -2767,7 +3060,9 @@ public partial class V1beta1ClusterStatusAtProviderVirtualClusterConfig
     [JsonPropertyName("stagingBucket")]
     public string? StagingBucket { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProvider
@@ -2812,7 +3107,9 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("virtualClusterConfig")]
     public V1beta1ClusterStatusAtProviderVirtualClusterConfig? VirtualClusterConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusConditions
@@ -2841,7 +3138,9 @@ public partial class V1beta1ClusterStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClusterStatus defines the observed state of Cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatus
@@ -2858,7 +3157,9 @@ public partial class V1beta1ClusterStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cluster is the Schema for the Clusters API. Manages a Cloud Dataproc cluster resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -2888,3 +3189,4 @@ public partial class V1beta1Cluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     [JsonPropertyName("status")]
     public V1beta1ClusterStatus? Status { get; set; }
 }
+#nullable disable

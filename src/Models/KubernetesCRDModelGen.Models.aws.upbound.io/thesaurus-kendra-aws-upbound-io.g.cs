@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kendra.aws.upbound.io;
+#nullable enable
 /// <summary>Thesaurus is the Schema for the Thesauruss API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ThesaurusList : IKubernetesObject<V1ListMeta>, IItem
     [JsonPropertyName("items")]
     public IList<V1beta1Thesaurus> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecForProviderIndexIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ThesaurusSpecForProviderIndexIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Index in kendra to populate indexId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecForProviderIndexIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1ThesaurusSpecForProviderIndexIdRef
     [JsonPropertyName("policy")]
     public V1beta1ThesaurusSpecForProviderIndexIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecForProviderIndexIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1ThesaurusSpecForProviderIndexIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Index in kendra to populate indexId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecForProviderIndexIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1ThesaurusSpecForProviderIndexIdSelector
     [JsonPropertyName("policy")]
     public V1beta1ThesaurusSpecForProviderIndexIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecForProviderRoleArnRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1ThesaurusSpecForProviderRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecForProviderRoleArnRef
@@ -115,7 +128,9 @@ public partial class V1beta1ThesaurusSpecForProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1ThesaurusSpecForProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecForProviderRoleArnSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1ThesaurusSpecForProviderRoleArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecForProviderRoleArnSelector
@@ -145,7 +162,9 @@ public partial class V1beta1ThesaurusSpecForProviderRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1ThesaurusSpecForProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecForProviderSourceS3PathBucketRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1ThesaurusSpecForProviderSourceS3PathBucketRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecForProviderSourceS3PathBucketRef
@@ -171,7 +192,9 @@ public partial class V1beta1ThesaurusSpecForProviderSourceS3PathBucketRef
     [JsonPropertyName("policy")]
     public V1beta1ThesaurusSpecForProviderSourceS3PathBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecForProviderSourceS3PathBucketSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1ThesaurusSpecForProviderSourceS3PathBucketSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecForProviderSourceS3PathBucketSelector
@@ -201,7 +226,9 @@ public partial class V1beta1ThesaurusSpecForProviderSourceS3PathBucketSelector
     [JsonPropertyName("policy")]
     public V1beta1ThesaurusSpecForProviderSourceS3PathBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecForProviderSourceS3PathKeyRefPolicy
@@ -214,7 +241,9 @@ public partial class V1beta1ThesaurusSpecForProviderSourceS3PathKeyRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Object in s3 to populate key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecForProviderSourceS3PathKeyRef
@@ -227,7 +256,9 @@ public partial class V1beta1ThesaurusSpecForProviderSourceS3PathKeyRef
     [JsonPropertyName("policy")]
     public V1beta1ThesaurusSpecForProviderSourceS3PathKeyRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecForProviderSourceS3PathKeySelectorPolicy
@@ -240,7 +271,9 @@ public partial class V1beta1ThesaurusSpecForProviderSourceS3PathKeySelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Object in s3 to populate key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecForProviderSourceS3PathKeySelector
@@ -257,7 +290,9 @@ public partial class V1beta1ThesaurusSpecForProviderSourceS3PathKeySelector
     [JsonPropertyName("policy")]
     public V1beta1ThesaurusSpecForProviderSourceS3PathKeySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecForProviderSourceS3Path
@@ -286,7 +321,9 @@ public partial class V1beta1ThesaurusSpecForProviderSourceS3Path
     [JsonPropertyName("keySelector")]
     public V1beta1ThesaurusSpecForProviderSourceS3PathKeySelector? KeySelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecForProvider
@@ -335,7 +372,9 @@ public partial class V1beta1ThesaurusSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecInitProviderIndexIdRefPolicy
@@ -348,7 +387,9 @@ public partial class V1beta1ThesaurusSpecInitProviderIndexIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Index in kendra to populate indexId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecInitProviderIndexIdRef
@@ -361,7 +402,9 @@ public partial class V1beta1ThesaurusSpecInitProviderIndexIdRef
     [JsonPropertyName("policy")]
     public V1beta1ThesaurusSpecInitProviderIndexIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecInitProviderIndexIdSelectorPolicy
@@ -374,7 +417,9 @@ public partial class V1beta1ThesaurusSpecInitProviderIndexIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Index in kendra to populate indexId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecInitProviderIndexIdSelector
@@ -391,7 +436,9 @@ public partial class V1beta1ThesaurusSpecInitProviderIndexIdSelector
     [JsonPropertyName("policy")]
     public V1beta1ThesaurusSpecInitProviderIndexIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecInitProviderRoleArnRefPolicy
@@ -404,7 +451,9 @@ public partial class V1beta1ThesaurusSpecInitProviderRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecInitProviderRoleArnRef
@@ -417,7 +466,9 @@ public partial class V1beta1ThesaurusSpecInitProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1ThesaurusSpecInitProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecInitProviderRoleArnSelectorPolicy
@@ -430,7 +481,9 @@ public partial class V1beta1ThesaurusSpecInitProviderRoleArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecInitProviderRoleArnSelector
@@ -447,7 +500,9 @@ public partial class V1beta1ThesaurusSpecInitProviderRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1ThesaurusSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecInitProviderSourceS3PathBucketRefPolicy
@@ -460,7 +515,9 @@ public partial class V1beta1ThesaurusSpecInitProviderSourceS3PathBucketRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecInitProviderSourceS3PathBucketRef
@@ -473,7 +530,9 @@ public partial class V1beta1ThesaurusSpecInitProviderSourceS3PathBucketRef
     [JsonPropertyName("policy")]
     public V1beta1ThesaurusSpecInitProviderSourceS3PathBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecInitProviderSourceS3PathBucketSelectorPolicy
@@ -486,7 +545,9 @@ public partial class V1beta1ThesaurusSpecInitProviderSourceS3PathBucketSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecInitProviderSourceS3PathBucketSelector
@@ -503,7 +564,9 @@ public partial class V1beta1ThesaurusSpecInitProviderSourceS3PathBucketSelector
     [JsonPropertyName("policy")]
     public V1beta1ThesaurusSpecInitProviderSourceS3PathBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecInitProviderSourceS3PathKeyRefPolicy
@@ -516,7 +579,9 @@ public partial class V1beta1ThesaurusSpecInitProviderSourceS3PathKeyRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Object in s3 to populate key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecInitProviderSourceS3PathKeyRef
@@ -529,7 +594,9 @@ public partial class V1beta1ThesaurusSpecInitProviderSourceS3PathKeyRef
     [JsonPropertyName("policy")]
     public V1beta1ThesaurusSpecInitProviderSourceS3PathKeyRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecInitProviderSourceS3PathKeySelectorPolicy
@@ -542,7 +609,9 @@ public partial class V1beta1ThesaurusSpecInitProviderSourceS3PathKeySelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Object in s3 to populate key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecInitProviderSourceS3PathKeySelector
@@ -559,7 +628,9 @@ public partial class V1beta1ThesaurusSpecInitProviderSourceS3PathKeySelector
     [JsonPropertyName("policy")]
     public V1beta1ThesaurusSpecInitProviderSourceS3PathKeySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecInitProviderSourceS3Path
@@ -588,7 +659,9 @@ public partial class V1beta1ThesaurusSpecInitProviderSourceS3Path
     [JsonPropertyName("keySelector")]
     public V1beta1ThesaurusSpecInitProviderSourceS3PathKeySelector? KeySelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecInitProvider
@@ -633,7 +706,9 @@ public partial class V1beta1ThesaurusSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecProviderConfigRefPolicy
@@ -646,7 +721,9 @@ public partial class V1beta1ThesaurusSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecProviderConfigRef
@@ -659,7 +736,9 @@ public partial class V1beta1ThesaurusSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ThesaurusSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecWriteConnectionSecretToRef
@@ -672,7 +751,9 @@ public partial class V1beta1ThesaurusSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ThesaurusSpec defines the desired state of Thesaurus</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpec
@@ -701,7 +782,9 @@ public partial class V1beta1ThesaurusSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ThesaurusSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusStatusAtProviderSourceS3Path
@@ -714,7 +797,9 @@ public partial class V1beta1ThesaurusStatusAtProviderSourceS3Path
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusStatusAtProvider
@@ -767,7 +852,9 @@ public partial class V1beta1ThesaurusStatusAtProvider
     [JsonPropertyName("thesaurusId")]
     public string? ThesaurusId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusStatusConditions
@@ -796,7 +883,9 @@ public partial class V1beta1ThesaurusStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ThesaurusStatus defines the observed state of Thesaurus.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusStatus
@@ -813,7 +902,9 @@ public partial class V1beta1ThesaurusStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Thesaurus is the Schema for the Thesauruss API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -843,3 +934,4 @@ public partial class V1beta1Thesaurus : IKubernetesObject<V1ObjectMeta>, ISpec<V
     [JsonPropertyName("status")]
     public V1beta1ThesaurusStatus? Status { get; set; }
 }
+#nullable disable

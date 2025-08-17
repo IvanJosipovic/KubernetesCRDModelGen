@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+#nullable enable
 /// <summary>FirewallPolicy is the Schema for the FirewallPolicys API. Manages a Firewall Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FirewallPolicyList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1FirewallPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A dns block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpecForProviderDns
@@ -46,7 +49,9 @@ public partial class V1beta1FirewallPolicySpecForProviderDns
     [JsonPropertyName("servers")]
     public IList<string>? Servers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A explicit_proxy block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpecForProviderExplicitProxy
@@ -75,7 +80,9 @@ public partial class V1beta1FirewallPolicySpecForProviderExplicitProxy
     [JsonPropertyName("pacFilePort")]
     public double? PacFilePort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpecForProviderIdentity
@@ -88,7 +95,9 @@ public partial class V1beta1FirewallPolicySpecForProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpecForProviderInsightsLogAnalyticsWorkspace
@@ -101,7 +110,9 @@ public partial class V1beta1FirewallPolicySpecForProviderInsightsLogAnalyticsWor
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An insights block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpecForProviderInsights
@@ -122,7 +133,9 @@ public partial class V1beta1FirewallPolicySpecForProviderInsights
     [JsonPropertyName("retentionInDays")]
     public double? RetentionInDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpecForProviderIntrusionDetectionSignatureOverrides
@@ -135,7 +148,9 @@ public partial class V1beta1FirewallPolicySpecForProviderIntrusionDetectionSigna
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpecForProviderIntrusionDetectionTrafficBypass
@@ -172,7 +187,9 @@ public partial class V1beta1FirewallPolicySpecForProviderIntrusionDetectionTraff
     [JsonPropertyName("sourceIpGroups")]
     public IList<string>? SourceIpGroups { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A intrusion_detection block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpecForProviderIntrusionDetection
@@ -193,7 +210,9 @@ public partial class V1beta1FirewallPolicySpecForProviderIntrusionDetection
     [JsonPropertyName("trafficBypass")]
     public IList<V1beta1FirewallPolicySpecForProviderIntrusionDetectionTrafficBypass>? TrafficBypass { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpecForProviderResourceGroupNameRefPolicy
@@ -206,7 +225,9 @@ public partial class V1beta1FirewallPolicySpecForProviderResourceGroupNameRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpecForProviderResourceGroupNameRef
@@ -223,7 +244,9 @@ public partial class V1beta1FirewallPolicySpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1FirewallPolicySpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpecForProviderResourceGroupNameSelectorPolicy
@@ -236,7 +259,9 @@ public partial class V1beta1FirewallPolicySpecForProviderResourceGroupNameSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpecForProviderResourceGroupNameSelector
@@ -257,7 +282,9 @@ public partial class V1beta1FirewallPolicySpecForProviderResourceGroupNameSelect
     [JsonPropertyName("policy")]
     public V1beta1FirewallPolicySpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A threat_intelligence_allowlist block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpecForProviderThreatIntelligenceAllowlist
@@ -270,7 +297,9 @@ public partial class V1beta1FirewallPolicySpecForProviderThreatIntelligenceAllow
     [JsonPropertyName("ipAddresses")]
     public IList<string>? IpAddresses { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A tls_certificate block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpecForProviderTlsCertificate
@@ -283,7 +312,9 @@ public partial class V1beta1FirewallPolicySpecForProviderTlsCertificate
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpecForProvider
@@ -360,7 +391,9 @@ public partial class V1beta1FirewallPolicySpecForProvider
     [JsonPropertyName("tlsCertificate")]
     public V1beta1FirewallPolicySpecForProviderTlsCertificate? TlsCertificate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A dns block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpecInitProviderDns
@@ -373,7 +406,9 @@ public partial class V1beta1FirewallPolicySpecInitProviderDns
     [JsonPropertyName("servers")]
     public IList<string>? Servers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A explicit_proxy block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpecInitProviderExplicitProxy
@@ -402,7 +437,9 @@ public partial class V1beta1FirewallPolicySpecInitProviderExplicitProxy
     [JsonPropertyName("pacFilePort")]
     public double? PacFilePort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpecInitProviderIdentity
@@ -415,7 +452,9 @@ public partial class V1beta1FirewallPolicySpecInitProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpecInitProviderInsightsLogAnalyticsWorkspace
@@ -428,7 +467,9 @@ public partial class V1beta1FirewallPolicySpecInitProviderInsightsLogAnalyticsWo
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An insights block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpecInitProviderInsights
@@ -449,7 +490,9 @@ public partial class V1beta1FirewallPolicySpecInitProviderInsights
     [JsonPropertyName("retentionInDays")]
     public double? RetentionInDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpecInitProviderIntrusionDetectionSignatureOverrides
@@ -462,7 +505,9 @@ public partial class V1beta1FirewallPolicySpecInitProviderIntrusionDetectionSign
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpecInitProviderIntrusionDetectionTrafficBypass
@@ -499,7 +544,9 @@ public partial class V1beta1FirewallPolicySpecInitProviderIntrusionDetectionTraf
     [JsonPropertyName("sourceIpGroups")]
     public IList<string>? SourceIpGroups { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A intrusion_detection block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpecInitProviderIntrusionDetection
@@ -520,7 +567,9 @@ public partial class V1beta1FirewallPolicySpecInitProviderIntrusionDetection
     [JsonPropertyName("trafficBypass")]
     public IList<V1beta1FirewallPolicySpecInitProviderIntrusionDetectionTrafficBypass>? TrafficBypass { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A threat_intelligence_allowlist block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpecInitProviderThreatIntelligenceAllowlist
@@ -533,7 +582,9 @@ public partial class V1beta1FirewallPolicySpecInitProviderThreatIntelligenceAllo
     [JsonPropertyName("ipAddresses")]
     public IList<string>? IpAddresses { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A tls_certificate block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpecInitProviderTlsCertificate
@@ -546,7 +597,9 @@ public partial class V1beta1FirewallPolicySpecInitProviderTlsCertificate
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpecInitProvider
@@ -611,7 +664,9 @@ public partial class V1beta1FirewallPolicySpecInitProvider
     [JsonPropertyName("tlsCertificate")]
     public V1beta1FirewallPolicySpecInitProviderTlsCertificate? TlsCertificate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpecProviderConfigRef
@@ -624,7 +679,9 @@ public partial class V1beta1FirewallPolicySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpecWriteConnectionSecretToRef
@@ -633,7 +690,9 @@ public partial class V1beta1FirewallPolicySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FirewallPolicySpec defines the desired state of FirewallPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpec
@@ -658,7 +717,9 @@ public partial class V1beta1FirewallPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1FirewallPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A dns block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicyStatusAtProviderDns
@@ -671,7 +732,9 @@ public partial class V1beta1FirewallPolicyStatusAtProviderDns
     [JsonPropertyName("servers")]
     public IList<string>? Servers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A explicit_proxy block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicyStatusAtProviderExplicitProxy
@@ -700,7 +763,9 @@ public partial class V1beta1FirewallPolicyStatusAtProviderExplicitProxy
     [JsonPropertyName("pacFilePort")]
     public double? PacFilePort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicyStatusAtProviderIdentity
@@ -721,7 +786,9 @@ public partial class V1beta1FirewallPolicyStatusAtProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicyStatusAtProviderInsightsLogAnalyticsWorkspace
@@ -734,7 +801,9 @@ public partial class V1beta1FirewallPolicyStatusAtProviderInsightsLogAnalyticsWo
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An insights block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicyStatusAtProviderInsights
@@ -755,7 +824,9 @@ public partial class V1beta1FirewallPolicyStatusAtProviderInsights
     [JsonPropertyName("retentionInDays")]
     public double? RetentionInDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicyStatusAtProviderIntrusionDetectionSignatureOverrides
@@ -768,7 +839,9 @@ public partial class V1beta1FirewallPolicyStatusAtProviderIntrusionDetectionSign
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicyStatusAtProviderIntrusionDetectionTrafficBypass
@@ -805,7 +878,9 @@ public partial class V1beta1FirewallPolicyStatusAtProviderIntrusionDetectionTraf
     [JsonPropertyName("sourceIpGroups")]
     public IList<string>? SourceIpGroups { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A intrusion_detection block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicyStatusAtProviderIntrusionDetection
@@ -826,7 +901,9 @@ public partial class V1beta1FirewallPolicyStatusAtProviderIntrusionDetection
     [JsonPropertyName("trafficBypass")]
     public IList<V1beta1FirewallPolicyStatusAtProviderIntrusionDetectionTrafficBypass>? TrafficBypass { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A threat_intelligence_allowlist block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicyStatusAtProviderThreatIntelligenceAllowlist
@@ -839,7 +916,9 @@ public partial class V1beta1FirewallPolicyStatusAtProviderThreatIntelligenceAllo
     [JsonPropertyName("ipAddresses")]
     public IList<string>? IpAddresses { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A tls_certificate block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicyStatusAtProviderTlsCertificate
@@ -852,7 +931,9 @@ public partial class V1beta1FirewallPolicyStatusAtProviderTlsCertificate
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicyStatusAtProvider
@@ -937,7 +1018,9 @@ public partial class V1beta1FirewallPolicyStatusAtProvider
     [JsonPropertyName("tlsCertificate")]
     public V1beta1FirewallPolicyStatusAtProviderTlsCertificate? TlsCertificate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicyStatusConditions
@@ -966,7 +1049,9 @@ public partial class V1beta1FirewallPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FirewallPolicyStatus defines the observed state of FirewallPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicyStatus
@@ -983,7 +1068,9 @@ public partial class V1beta1FirewallPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FirewallPolicy is the Schema for the FirewallPolicys API. Manages a Firewall Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1013,3 +1100,4 @@ public partial class V1beta1FirewallPolicy : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1FirewallPolicyStatus? Status { get; set; }
 }
+#nullable disable

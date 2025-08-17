@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.athena.aws.upbound.io;
+#nullable enable
 /// <summary>NamedQuery is the Schema for the NamedQuerys API. Provides an Athena Named Query resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1NamedQueryList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1beta1NamedQuery> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamedQuerySpecForProviderDatabaseRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1NamedQuerySpecForProviderDatabaseRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Database in athena to populate database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamedQuerySpecForProviderDatabaseRef
@@ -59,7 +64,9 @@ public partial class V1beta1NamedQuerySpecForProviderDatabaseRef
     [JsonPropertyName("policy")]
     public V1beta1NamedQuerySpecForProviderDatabaseRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamedQuerySpecForProviderDatabaseSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1NamedQuerySpecForProviderDatabaseSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Database in athena to populate database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamedQuerySpecForProviderDatabaseSelector
@@ -89,7 +98,9 @@ public partial class V1beta1NamedQuerySpecForProviderDatabaseSelector
     [JsonPropertyName("policy")]
     public V1beta1NamedQuerySpecForProviderDatabaseSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamedQuerySpecForProviderWorkgroupRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1NamedQuerySpecForProviderWorkgroupRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workgroup in athena to populate workgroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamedQuerySpecForProviderWorkgroupRef
@@ -115,7 +128,9 @@ public partial class V1beta1NamedQuerySpecForProviderWorkgroupRef
     [JsonPropertyName("policy")]
     public V1beta1NamedQuerySpecForProviderWorkgroupRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamedQuerySpecForProviderWorkgroupSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1NamedQuerySpecForProviderWorkgroupSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workgroup in athena to populate workgroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamedQuerySpecForProviderWorkgroupSelector
@@ -145,7 +162,9 @@ public partial class V1beta1NamedQuerySpecForProviderWorkgroupSelector
     [JsonPropertyName("policy")]
     public V1beta1NamedQuerySpecForProviderWorkgroupSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamedQuerySpecForProvider
@@ -190,7 +209,9 @@ public partial class V1beta1NamedQuerySpecForProvider
     [JsonPropertyName("workgroupSelector")]
     public V1beta1NamedQuerySpecForProviderWorkgroupSelector? WorkgroupSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamedQuerySpecInitProviderDatabaseRefPolicy
@@ -203,7 +224,9 @@ public partial class V1beta1NamedQuerySpecInitProviderDatabaseRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Database in athena to populate database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamedQuerySpecInitProviderDatabaseRef
@@ -216,7 +239,9 @@ public partial class V1beta1NamedQuerySpecInitProviderDatabaseRef
     [JsonPropertyName("policy")]
     public V1beta1NamedQuerySpecInitProviderDatabaseRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamedQuerySpecInitProviderDatabaseSelectorPolicy
@@ -229,7 +254,9 @@ public partial class V1beta1NamedQuerySpecInitProviderDatabaseSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Database in athena to populate database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamedQuerySpecInitProviderDatabaseSelector
@@ -246,7 +273,9 @@ public partial class V1beta1NamedQuerySpecInitProviderDatabaseSelector
     [JsonPropertyName("policy")]
     public V1beta1NamedQuerySpecInitProviderDatabaseSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamedQuerySpecInitProviderWorkgroupRefPolicy
@@ -259,7 +288,9 @@ public partial class V1beta1NamedQuerySpecInitProviderWorkgroupRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workgroup in athena to populate workgroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamedQuerySpecInitProviderWorkgroupRef
@@ -272,7 +303,9 @@ public partial class V1beta1NamedQuerySpecInitProviderWorkgroupRef
     [JsonPropertyName("policy")]
     public V1beta1NamedQuerySpecInitProviderWorkgroupRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamedQuerySpecInitProviderWorkgroupSelectorPolicy
@@ -285,7 +318,9 @@ public partial class V1beta1NamedQuerySpecInitProviderWorkgroupSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workgroup in athena to populate workgroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamedQuerySpecInitProviderWorkgroupSelector
@@ -302,7 +337,9 @@ public partial class V1beta1NamedQuerySpecInitProviderWorkgroupSelector
     [JsonPropertyName("policy")]
     public V1beta1NamedQuerySpecInitProviderWorkgroupSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamedQuerySpecInitProvider
@@ -343,7 +380,9 @@ public partial class V1beta1NamedQuerySpecInitProvider
     [JsonPropertyName("workgroupSelector")]
     public V1beta1NamedQuerySpecInitProviderWorkgroupSelector? WorkgroupSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamedQuerySpecProviderConfigRefPolicy
@@ -356,7 +395,9 @@ public partial class V1beta1NamedQuerySpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamedQuerySpecProviderConfigRef
@@ -369,7 +410,9 @@ public partial class V1beta1NamedQuerySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1NamedQuerySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamedQuerySpecWriteConnectionSecretToRef
@@ -382,7 +425,9 @@ public partial class V1beta1NamedQuerySpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NamedQuerySpec defines the desired state of NamedQuery</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamedQuerySpec
@@ -411,7 +456,9 @@ public partial class V1beta1NamedQuerySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1NamedQuerySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamedQueryStatusAtProvider
@@ -444,7 +491,9 @@ public partial class V1beta1NamedQueryStatusAtProvider
     [JsonPropertyName("workgroup")]
     public string? Workgroup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamedQueryStatusConditions
@@ -473,7 +522,9 @@ public partial class V1beta1NamedQueryStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NamedQueryStatus defines the observed state of NamedQuery.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamedQueryStatus
@@ -490,7 +541,9 @@ public partial class V1beta1NamedQueryStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NamedQuery is the Schema for the NamedQuerys API. Provides an Athena Named Query resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -520,3 +573,4 @@ public partial class V1beta1NamedQuery : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1NamedQueryStatus? Status { get; set; }
 }
+#nullable disable

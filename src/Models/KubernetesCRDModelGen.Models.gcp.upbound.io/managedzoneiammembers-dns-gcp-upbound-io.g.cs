@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dns.gcp.upbound.io;
+#nullable enable
 /// <summary>ManagedZoneIAMMember is the Schema for the ManagedZoneIAMMembers API. &lt;no value&gt;</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ManagedZoneIAMMemberList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1ManagedZoneIAMMember> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneIAMMemberSpecForProviderCondition
@@ -50,7 +53,9 @@ public partial class V1beta1ManagedZoneIAMMemberSpecForProviderCondition
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneIAMMemberSpecForProvider
@@ -75,7 +80,9 @@ public partial class V1beta1ManagedZoneIAMMemberSpecForProvider
     [JsonPropertyName("role")]
     public string? Role { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneIAMMemberSpecInitProviderCondition
@@ -92,7 +99,9 @@ public partial class V1beta1ManagedZoneIAMMemberSpecInitProviderCondition
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneIAMMemberSpecInitProvider
@@ -117,7 +126,9 @@ public partial class V1beta1ManagedZoneIAMMemberSpecInitProvider
     [JsonPropertyName("role")]
     public string? Role { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneIAMMemberSpecProviderConfigRefPolicy
@@ -130,7 +141,9 @@ public partial class V1beta1ManagedZoneIAMMemberSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneIAMMemberSpecProviderConfigRef
@@ -143,7 +156,9 @@ public partial class V1beta1ManagedZoneIAMMemberSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ManagedZoneIAMMemberSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneIAMMemberSpecWriteConnectionSecretToRef
@@ -156,7 +171,9 @@ public partial class V1beta1ManagedZoneIAMMemberSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedZoneIAMMemberSpec defines the desired state of ManagedZoneIAMMember</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneIAMMemberSpec
@@ -185,7 +202,9 @@ public partial class V1beta1ManagedZoneIAMMemberSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ManagedZoneIAMMemberSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneIAMMemberStatusAtProviderCondition
@@ -202,7 +221,9 @@ public partial class V1beta1ManagedZoneIAMMemberStatusAtProviderCondition
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneIAMMemberStatusAtProvider
@@ -235,7 +256,9 @@ public partial class V1beta1ManagedZoneIAMMemberStatusAtProvider
     [JsonPropertyName("role")]
     public string? Role { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneIAMMemberStatusConditions
@@ -264,7 +287,9 @@ public partial class V1beta1ManagedZoneIAMMemberStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedZoneIAMMemberStatus defines the observed state of ManagedZoneIAMMember.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneIAMMemberStatus
@@ -281,7 +306,9 @@ public partial class V1beta1ManagedZoneIAMMemberStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedZoneIAMMember is the Schema for the ManagedZoneIAMMembers API. &lt;no value&gt;</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -311,3 +338,4 @@ public partial class V1beta1ManagedZoneIAMMember : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1ManagedZoneIAMMemberStatus? Status { get; set; }
 }
+#nullable disable

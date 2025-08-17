@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafactory.azure.upbound.io;
+#nullable enable
 /// <summary>TriggerBlobEvent is the Schema for the TriggerBlobEvents API. Manages a Blob Event Trigger inside an Azure Data Factory.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TriggerBlobEventList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1TriggerBlobEvent> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventSpecForProviderDataFactoryIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1TriggerBlobEventSpecForProviderDataFactoryIdRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Factory in datafactory to populate dataFactoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventSpecForProviderDataFactoryIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1TriggerBlobEventSpecForProviderDataFactoryIdRef
     [JsonPropertyName("policy")]
     public V1beta1TriggerBlobEventSpecForProviderDataFactoryIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventSpecForProviderDataFactoryIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1TriggerBlobEventSpecForProviderDataFactoryIdSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Factory in datafactory to populate dataFactoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventSpecForProviderDataFactoryIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1TriggerBlobEventSpecForProviderDataFactoryIdSelector
     [JsonPropertyName("policy")]
     public V1beta1TriggerBlobEventSpecForProviderDataFactoryIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventSpecForProviderPipelineNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1TriggerBlobEventSpecForProviderPipelineNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Pipeline in datafactory to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventSpecForProviderPipelineNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1TriggerBlobEventSpecForProviderPipelineNameRef
     [JsonPropertyName("policy")]
     public V1beta1TriggerBlobEventSpecForProviderPipelineNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventSpecForProviderPipelineNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1TriggerBlobEventSpecForProviderPipelineNameSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Pipeline in datafactory to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventSpecForProviderPipelineNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1TriggerBlobEventSpecForProviderPipelineNameSelector
     [JsonPropertyName("policy")]
     public V1beta1TriggerBlobEventSpecForProviderPipelineNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventSpecForProviderPipeline
@@ -166,7 +185,9 @@ public partial class V1beta1TriggerBlobEventSpecForProviderPipeline
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventSpecForProviderStorageAccountIdRefPolicy
@@ -179,7 +200,9 @@ public partial class V1beta1TriggerBlobEventSpecForProviderStorageAccountIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventSpecForProviderStorageAccountIdRef
@@ -192,7 +215,9 @@ public partial class V1beta1TriggerBlobEventSpecForProviderStorageAccountIdRef
     [JsonPropertyName("policy")]
     public V1beta1TriggerBlobEventSpecForProviderStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventSpecForProviderStorageAccountIdSelectorPolicy
@@ -205,7 +230,9 @@ public partial class V1beta1TriggerBlobEventSpecForProviderStorageAccountIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventSpecForProviderStorageAccountIdSelector
@@ -222,7 +249,9 @@ public partial class V1beta1TriggerBlobEventSpecForProviderStorageAccountIdSelec
     [JsonPropertyName("policy")]
     public V1beta1TriggerBlobEventSpecForProviderStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventSpecForProvider
@@ -287,7 +316,9 @@ public partial class V1beta1TriggerBlobEventSpecForProvider
     [JsonPropertyName("storageAccountIdSelector")]
     public V1beta1TriggerBlobEventSpecForProviderStorageAccountIdSelector? StorageAccountIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventSpecInitProviderPipelineNameRefPolicy
@@ -300,7 +331,9 @@ public partial class V1beta1TriggerBlobEventSpecInitProviderPipelineNameRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Pipeline in datafactory to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventSpecInitProviderPipelineNameRef
@@ -313,7 +346,9 @@ public partial class V1beta1TriggerBlobEventSpecInitProviderPipelineNameRef
     [JsonPropertyName("policy")]
     public V1beta1TriggerBlobEventSpecInitProviderPipelineNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventSpecInitProviderPipelineNameSelectorPolicy
@@ -326,7 +361,9 @@ public partial class V1beta1TriggerBlobEventSpecInitProviderPipelineNameSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Pipeline in datafactory to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventSpecInitProviderPipelineNameSelector
@@ -343,7 +380,9 @@ public partial class V1beta1TriggerBlobEventSpecInitProviderPipelineNameSelector
     [JsonPropertyName("policy")]
     public V1beta1TriggerBlobEventSpecInitProviderPipelineNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventSpecInitProviderPipeline
@@ -364,7 +403,9 @@ public partial class V1beta1TriggerBlobEventSpecInitProviderPipeline
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventSpecInitProviderStorageAccountIdRefPolicy
@@ -377,7 +418,9 @@ public partial class V1beta1TriggerBlobEventSpecInitProviderStorageAccountIdRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventSpecInitProviderStorageAccountIdRef
@@ -390,7 +433,9 @@ public partial class V1beta1TriggerBlobEventSpecInitProviderStorageAccountIdRef
     [JsonPropertyName("policy")]
     public V1beta1TriggerBlobEventSpecInitProviderStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventSpecInitProviderStorageAccountIdSelectorPolicy
@@ -403,7 +448,9 @@ public partial class V1beta1TriggerBlobEventSpecInitProviderStorageAccountIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventSpecInitProviderStorageAccountIdSelector
@@ -420,7 +467,9 @@ public partial class V1beta1TriggerBlobEventSpecInitProviderStorageAccountIdSele
     [JsonPropertyName("policy")]
     public V1beta1TriggerBlobEventSpecInitProviderStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventSpecInitProvider
@@ -473,7 +522,9 @@ public partial class V1beta1TriggerBlobEventSpecInitProvider
     [JsonPropertyName("storageAccountIdSelector")]
     public V1beta1TriggerBlobEventSpecInitProviderStorageAccountIdSelector? StorageAccountIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventSpecProviderConfigRefPolicy
@@ -486,7 +537,9 @@ public partial class V1beta1TriggerBlobEventSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventSpecProviderConfigRef
@@ -499,7 +552,9 @@ public partial class V1beta1TriggerBlobEventSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1TriggerBlobEventSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventSpecWriteConnectionSecretToRef
@@ -512,7 +567,9 @@ public partial class V1beta1TriggerBlobEventSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TriggerBlobEventSpec defines the desired state of TriggerBlobEvent</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventSpec
@@ -541,7 +598,9 @@ public partial class V1beta1TriggerBlobEventSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TriggerBlobEventSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventStatusAtProviderPipeline
@@ -554,7 +613,9 @@ public partial class V1beta1TriggerBlobEventStatusAtProviderPipeline
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventStatusAtProvider
@@ -607,7 +668,9 @@ public partial class V1beta1TriggerBlobEventStatusAtProvider
     [JsonPropertyName("storageAccountId")]
     public string? StorageAccountId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventStatusConditions
@@ -636,7 +699,9 @@ public partial class V1beta1TriggerBlobEventStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TriggerBlobEventStatus defines the observed state of TriggerBlobEvent.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerBlobEventStatus
@@ -653,7 +718,9 @@ public partial class V1beta1TriggerBlobEventStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TriggerBlobEvent is the Schema for the TriggerBlobEvents API. Manages a Blob Event Trigger inside an Azure Data Factory.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -683,3 +750,4 @@ public partial class V1beta1TriggerBlobEvent : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1TriggerBlobEventStatus? Status { get; set; }
 }
+#nullable disable

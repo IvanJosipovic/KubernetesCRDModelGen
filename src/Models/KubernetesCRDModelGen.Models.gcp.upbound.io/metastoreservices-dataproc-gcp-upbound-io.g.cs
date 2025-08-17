@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataproc.gcp.upbound.io;
+#nullable enable
 /// <summary>MetastoreService is the Schema for the MetastoreServices API. A managed metastore service that serves metadata queries.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MetastoreServiceList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1MetastoreService> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKeyRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CryptoKey in kms to populate kmsKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKeyRef
@@ -59,7 +64,9 @@ public partial class V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKe
     [JsonPropertyName("policy")]
     public V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKeyRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKeySelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CryptoKey in kms to populate kmsKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKeySelector
@@ -89,7 +98,9 @@ public partial class V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKe
     [JsonPropertyName("policy")]
     public V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKeySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecForProviderEncryptionConfig
@@ -106,7 +117,9 @@ public partial class V1beta1MetastoreServiceSpecForProviderEncryptionConfig
     [JsonPropertyName("kmsKeySelector")]
     public V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKeySelector? KmsKeySelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecForProviderHiveMetastoreConfigAuxiliaryVersions
@@ -123,7 +136,9 @@ public partial class V1beta1MetastoreServiceSpecForProviderHiveMetastoreConfigAu
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecForProviderHiveMetastoreConfigKerberosConfigKeytab
@@ -132,7 +147,9 @@ public partial class V1beta1MetastoreServiceSpecForProviderHiveMetastoreConfigKe
     [JsonPropertyName("cloudSecret")]
     public string? CloudSecret { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecForProviderHiveMetastoreConfigKerberosConfig
@@ -149,7 +166,9 @@ public partial class V1beta1MetastoreServiceSpecForProviderHiveMetastoreConfigKe
     [JsonPropertyName("principal")]
     public string? Principal { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecForProviderHiveMetastoreConfig
@@ -174,7 +193,9 @@ public partial class V1beta1MetastoreServiceSpecForProviderHiveMetastoreConfig
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecForProviderMaintenanceWindow
@@ -187,7 +208,9 @@ public partial class V1beta1MetastoreServiceSpecForProviderMaintenanceWindow
     [JsonPropertyName("hourOfDay")]
     public double? HourOfDay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecForProviderMetadataIntegrationDataCatalogConfig
@@ -196,7 +219,9 @@ public partial class V1beta1MetastoreServiceSpecForProviderMetadataIntegrationDa
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecForProviderMetadataIntegration
@@ -205,7 +230,9 @@ public partial class V1beta1MetastoreServiceSpecForProviderMetadataIntegration
     [JsonPropertyName("dataCatalogConfig")]
     public IList<V1beta1MetastoreServiceSpecForProviderMetadataIntegrationDataCatalogConfig>? DataCatalogConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumersSubnetworkRefPolicy
@@ -218,7 +245,9 @@ public partial class V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumer
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnetwork in compute to populate subnetwork.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumersSubnetworkRef
@@ -231,7 +260,9 @@ public partial class V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumer
     [JsonPropertyName("policy")]
     public V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumersSubnetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumersSubnetworkSelectorPolicy
@@ -244,7 +275,9 @@ public partial class V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumer
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnetwork in compute to populate subnetwork.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumersSubnetworkSelector
@@ -261,7 +294,9 @@ public partial class V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumer
     [JsonPropertyName("policy")]
     public V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumersSubnetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumers
@@ -278,7 +313,9 @@ public partial class V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumer
     [JsonPropertyName("subnetworkSelector")]
     public V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumersSubnetworkSelector? SubnetworkSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecForProviderNetworkConfig
@@ -287,7 +324,9 @@ public partial class V1beta1MetastoreServiceSpecForProviderNetworkConfig
     [JsonPropertyName("consumers")]
     public IList<V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumers>? Consumers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecForProviderScalingConfigAutoscalingConfigLimitConfig
@@ -300,7 +339,9 @@ public partial class V1beta1MetastoreServiceSpecForProviderScalingConfigAutoscal
     [JsonPropertyName("minScalingFactor")]
     public double? MinScalingFactor { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecForProviderScalingConfigAutoscalingConfig
@@ -313,7 +354,9 @@ public partial class V1beta1MetastoreServiceSpecForProviderScalingConfigAutoscal
     [JsonPropertyName("limitConfig")]
     public IList<V1beta1MetastoreServiceSpecForProviderScalingConfigAutoscalingConfigLimitConfig>? LimitConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecForProviderScalingConfig
@@ -330,7 +373,9 @@ public partial class V1beta1MetastoreServiceSpecForProviderScalingConfig
     [JsonPropertyName("scalingFactor")]
     public double? ScalingFactor { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecForProviderScheduledBackup
@@ -351,7 +396,9 @@ public partial class V1beta1MetastoreServiceSpecForProviderScheduledBackup
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecForProviderTelemetryConfig
@@ -360,7 +407,9 @@ public partial class V1beta1MetastoreServiceSpecForProviderTelemetryConfig
     [JsonPropertyName("logFormat")]
     public string? LogFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecForProvider
@@ -433,7 +482,9 @@ public partial class V1beta1MetastoreServiceSpecForProvider
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsKeyRefPolicy
@@ -446,7 +497,9 @@ public partial class V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsK
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CryptoKey in kms to populate kmsKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsKeyRef
@@ -459,7 +512,9 @@ public partial class V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsK
     [JsonPropertyName("policy")]
     public V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsKeyRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsKeySelectorPolicy
@@ -472,7 +527,9 @@ public partial class V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsK
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CryptoKey in kms to populate kmsKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsKeySelector
@@ -489,7 +546,9 @@ public partial class V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsK
     [JsonPropertyName("policy")]
     public V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsKeySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecInitProviderEncryptionConfig
@@ -506,7 +565,9 @@ public partial class V1beta1MetastoreServiceSpecInitProviderEncryptionConfig
     [JsonPropertyName("kmsKeySelector")]
     public V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsKeySelector? KmsKeySelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecInitProviderHiveMetastoreConfigAuxiliaryVersions
@@ -523,7 +584,9 @@ public partial class V1beta1MetastoreServiceSpecInitProviderHiveMetastoreConfigA
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecInitProviderHiveMetastoreConfigKerberosConfigKeytab
@@ -532,7 +595,9 @@ public partial class V1beta1MetastoreServiceSpecInitProviderHiveMetastoreConfigK
     [JsonPropertyName("cloudSecret")]
     public string? CloudSecret { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecInitProviderHiveMetastoreConfigKerberosConfig
@@ -549,7 +614,9 @@ public partial class V1beta1MetastoreServiceSpecInitProviderHiveMetastoreConfigK
     [JsonPropertyName("principal")]
     public string? Principal { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecInitProviderHiveMetastoreConfig
@@ -574,7 +641,9 @@ public partial class V1beta1MetastoreServiceSpecInitProviderHiveMetastoreConfig
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecInitProviderMaintenanceWindow
@@ -587,7 +656,9 @@ public partial class V1beta1MetastoreServiceSpecInitProviderMaintenanceWindow
     [JsonPropertyName("hourOfDay")]
     public double? HourOfDay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecInitProviderMetadataIntegrationDataCatalogConfig
@@ -596,7 +667,9 @@ public partial class V1beta1MetastoreServiceSpecInitProviderMetadataIntegrationD
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecInitProviderMetadataIntegration
@@ -605,7 +678,9 @@ public partial class V1beta1MetastoreServiceSpecInitProviderMetadataIntegration
     [JsonPropertyName("dataCatalogConfig")]
     public IList<V1beta1MetastoreServiceSpecInitProviderMetadataIntegrationDataCatalogConfig>? DataCatalogConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsumersSubnetworkRefPolicy
@@ -618,7 +693,9 @@ public partial class V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsume
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnetwork in compute to populate subnetwork.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsumersSubnetworkRef
@@ -631,7 +708,9 @@ public partial class V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsume
     [JsonPropertyName("policy")]
     public V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsumersSubnetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsumersSubnetworkSelectorPolicy
@@ -644,7 +723,9 @@ public partial class V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsume
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnetwork in compute to populate subnetwork.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsumersSubnetworkSelector
@@ -661,7 +742,9 @@ public partial class V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsume
     [JsonPropertyName("policy")]
     public V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsumersSubnetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsumers
@@ -678,7 +761,9 @@ public partial class V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsume
     [JsonPropertyName("subnetworkSelector")]
     public V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsumersSubnetworkSelector? SubnetworkSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecInitProviderNetworkConfig
@@ -687,7 +772,9 @@ public partial class V1beta1MetastoreServiceSpecInitProviderNetworkConfig
     [JsonPropertyName("consumers")]
     public IList<V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsumers>? Consumers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecInitProviderScalingConfigAutoscalingConfigLimitConfig
@@ -700,7 +787,9 @@ public partial class V1beta1MetastoreServiceSpecInitProviderScalingConfigAutosca
     [JsonPropertyName("minScalingFactor")]
     public double? MinScalingFactor { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecInitProviderScalingConfigAutoscalingConfig
@@ -713,7 +802,9 @@ public partial class V1beta1MetastoreServiceSpecInitProviderScalingConfigAutosca
     [JsonPropertyName("limitConfig")]
     public IList<V1beta1MetastoreServiceSpecInitProviderScalingConfigAutoscalingConfigLimitConfig>? LimitConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecInitProviderScalingConfig
@@ -730,7 +821,9 @@ public partial class V1beta1MetastoreServiceSpecInitProviderScalingConfig
     [JsonPropertyName("scalingFactor")]
     public double? ScalingFactor { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecInitProviderScheduledBackup
@@ -751,7 +844,9 @@ public partial class V1beta1MetastoreServiceSpecInitProviderScheduledBackup
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecInitProviderTelemetryConfig
@@ -760,7 +855,9 @@ public partial class V1beta1MetastoreServiceSpecInitProviderTelemetryConfig
     [JsonPropertyName("logFormat")]
     public string? LogFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecInitProvider
@@ -829,7 +926,9 @@ public partial class V1beta1MetastoreServiceSpecInitProvider
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecProviderConfigRefPolicy
@@ -842,7 +941,9 @@ public partial class V1beta1MetastoreServiceSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecProviderConfigRef
@@ -855,7 +956,9 @@ public partial class V1beta1MetastoreServiceSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1MetastoreServiceSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecWriteConnectionSecretToRef
@@ -868,7 +971,9 @@ public partial class V1beta1MetastoreServiceSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MetastoreServiceSpec defines the desired state of MetastoreService</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpec
@@ -897,7 +1002,9 @@ public partial class V1beta1MetastoreServiceSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MetastoreServiceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceStatusAtProviderEncryptionConfig
@@ -906,7 +1013,9 @@ public partial class V1beta1MetastoreServiceStatusAtProviderEncryptionConfig
     [JsonPropertyName("kmsKey")]
     public string? KmsKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceStatusAtProviderHiveMetastoreConfigAuxiliaryVersions
@@ -923,7 +1032,9 @@ public partial class V1beta1MetastoreServiceStatusAtProviderHiveMetastoreConfigA
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceStatusAtProviderHiveMetastoreConfigKerberosConfigKeytab
@@ -932,7 +1043,9 @@ public partial class V1beta1MetastoreServiceStatusAtProviderHiveMetastoreConfigK
     [JsonPropertyName("cloudSecret")]
     public string? CloudSecret { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceStatusAtProviderHiveMetastoreConfigKerberosConfig
@@ -949,7 +1062,9 @@ public partial class V1beta1MetastoreServiceStatusAtProviderHiveMetastoreConfigK
     [JsonPropertyName("principal")]
     public string? Principal { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceStatusAtProviderHiveMetastoreConfig
@@ -974,7 +1089,9 @@ public partial class V1beta1MetastoreServiceStatusAtProviderHiveMetastoreConfig
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceStatusAtProviderMaintenanceWindow
@@ -987,7 +1104,9 @@ public partial class V1beta1MetastoreServiceStatusAtProviderMaintenanceWindow
     [JsonPropertyName("hourOfDay")]
     public double? HourOfDay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceStatusAtProviderMetadataIntegrationDataCatalogConfig
@@ -996,7 +1115,9 @@ public partial class V1beta1MetastoreServiceStatusAtProviderMetadataIntegrationD
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceStatusAtProviderMetadataIntegration
@@ -1005,7 +1126,9 @@ public partial class V1beta1MetastoreServiceStatusAtProviderMetadataIntegration
     [JsonPropertyName("dataCatalogConfig")]
     public IList<V1beta1MetastoreServiceStatusAtProviderMetadataIntegrationDataCatalogConfig>? DataCatalogConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceStatusAtProviderNetworkConfigConsumers
@@ -1018,7 +1141,9 @@ public partial class V1beta1MetastoreServiceStatusAtProviderNetworkConfigConsume
     [JsonPropertyName("subnetwork")]
     public string? Subnetwork { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceStatusAtProviderNetworkConfig
@@ -1027,7 +1152,9 @@ public partial class V1beta1MetastoreServiceStatusAtProviderNetworkConfig
     [JsonPropertyName("consumers")]
     public IList<V1beta1MetastoreServiceStatusAtProviderNetworkConfigConsumers>? Consumers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceStatusAtProviderScalingConfigAutoscalingConfigLimitConfig
@@ -1040,7 +1167,9 @@ public partial class V1beta1MetastoreServiceStatusAtProviderScalingConfigAutosca
     [JsonPropertyName("minScalingFactor")]
     public double? MinScalingFactor { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceStatusAtProviderScalingConfigAutoscalingConfig
@@ -1057,7 +1186,9 @@ public partial class V1beta1MetastoreServiceStatusAtProviderScalingConfigAutosca
     [JsonPropertyName("limitConfig")]
     public IList<V1beta1MetastoreServiceStatusAtProviderScalingConfigAutoscalingConfigLimitConfig>? LimitConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceStatusAtProviderScalingConfig
@@ -1074,7 +1205,9 @@ public partial class V1beta1MetastoreServiceStatusAtProviderScalingConfig
     [JsonPropertyName("scalingFactor")]
     public double? ScalingFactor { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceStatusAtProviderScheduledBackup
@@ -1095,7 +1228,9 @@ public partial class V1beta1MetastoreServiceStatusAtProviderScheduledBackup
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceStatusAtProviderTelemetryConfig
@@ -1104,7 +1239,9 @@ public partial class V1beta1MetastoreServiceStatusAtProviderTelemetryConfig
     [JsonPropertyName("logFormat")]
     public string? LogFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceStatusAtProvider
@@ -1221,7 +1358,9 @@ public partial class V1beta1MetastoreServiceStatusAtProvider
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceStatusConditions
@@ -1250,7 +1389,9 @@ public partial class V1beta1MetastoreServiceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MetastoreServiceStatus defines the observed state of MetastoreService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceStatus
@@ -1267,7 +1408,9 @@ public partial class V1beta1MetastoreServiceStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MetastoreService is the Schema for the MetastoreServices API. A managed metastore service that serves metadata queries.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1297,3 +1440,4 @@ public partial class V1beta1MetastoreService : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1MetastoreServiceStatus? Status { get; set; }
 }
+#nullable disable

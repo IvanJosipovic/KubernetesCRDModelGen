@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.vertexai.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,13 +34,17 @@ public partial class V1alpha1VertexAIIndexList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1alpha1VertexAIIndex> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration options for using brute force search, which simply implements the standard linear search in the database for each query.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIIndexSpecMetadataConfigAlgorithmConfigBruteForceConfig
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration options for using the tree-AH algorithm (Shallow tree + Asymmetric Hashing). Please refer to this paper for more details: https://arxiv.org/abs/1908.10396.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIIndexSpecMetadataConfigAlgorithmConfigTreeAhConfig
@@ -52,7 +57,9 @@ public partial class V1alpha1VertexAIIndexSpecMetadataConfigAlgorithmConfigTreeA
     [JsonPropertyName("leafNodesToSearchPercent")]
     public int? LeafNodesToSearchPercent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration with regard to the algorithms used for efficient search.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIIndexSpecMetadataConfigAlgorithmConfig
@@ -65,7 +72,9 @@ public partial class V1alpha1VertexAIIndexSpecMetadataConfigAlgorithmConfig
     [JsonPropertyName("treeAhConfig")]
     public V1alpha1VertexAIIndexSpecMetadataConfigAlgorithmConfigTreeAhConfig? TreeAhConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The configuration of the Matching Engine Index.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIIndexSpecMetadataConfig
@@ -94,7 +103,9 @@ public partial class V1alpha1VertexAIIndexSpecMetadataConfig
     [JsonPropertyName("shardSize")]
     public string? ShardSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An additional information about the Index.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIIndexSpecMetadata
@@ -107,7 +118,9 @@ public partial class V1alpha1VertexAIIndexSpecMetadata
     [JsonPropertyName("contentsDeltaUri")]
     public string? ContentsDeltaUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIIndexSpecProjectRef
@@ -124,7 +137,9 @@ public partial class V1alpha1VertexAIIndexSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIIndexSpec
@@ -157,7 +172,9 @@ public partial class V1alpha1VertexAIIndexSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIIndexStatusConditions
@@ -182,7 +199,9 @@ public partial class V1alpha1VertexAIIndexStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIIndexStatusObservedStateIndexStats
@@ -195,7 +214,9 @@ public partial class V1alpha1VertexAIIndexStatusObservedStateIndexStats
     [JsonPropertyName("vectorsCount")]
     public string? VectorsCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The observed state of the underlying GCP resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIIndexStatusObservedState
@@ -216,7 +237,9 @@ public partial class V1alpha1VertexAIIndexStatusObservedState
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIIndexStatus
@@ -233,7 +256,9 @@ public partial class V1alpha1VertexAIIndexStatus
     [JsonPropertyName("observedState")]
     public V1alpha1VertexAIIndexStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -263,3 +288,4 @@ public partial class V1alpha1VertexAIIndex : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1alpha1VertexAIIndexStatus? Status { get; set; }
 }
+#nullable disable

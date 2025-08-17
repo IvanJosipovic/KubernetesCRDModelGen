@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigatewayv2.aws.m.upbound.io;
+#nullable enable
 /// <summary>Integration is the Schema for the Integrations API. Manages an Amazon API Gateway Version 2 integration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1IntegrationList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1Integration> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecForProviderApiIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1IntegrationSpecForProviderApiIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a API in apigatewayv2 to populate apiId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecForProviderApiIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1IntegrationSpecForProviderApiIdRef
     [JsonPropertyName("policy")]
     public V1beta1IntegrationSpecForProviderApiIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecForProviderApiIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1IntegrationSpecForProviderApiIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a API in apigatewayv2 to populate apiId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecForProviderApiIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1IntegrationSpecForProviderApiIdSelector
     [JsonPropertyName("policy")]
     public V1beta1IntegrationSpecForProviderApiIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecForProviderConnectionIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1IntegrationSpecForProviderConnectionIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPCLink in apigatewayv2 to populate connectionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecForProviderConnectionIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1IntegrationSpecForProviderConnectionIdRef
     [JsonPropertyName("policy")]
     public V1beta1IntegrationSpecForProviderConnectionIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecForProviderConnectionIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1IntegrationSpecForProviderConnectionIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPCLink in apigatewayv2 to populate connectionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecForProviderConnectionIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1IntegrationSpecForProviderConnectionIdSelector
     [JsonPropertyName("policy")]
     public V1beta1IntegrationSpecForProviderConnectionIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecForProviderCredentialsArnRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1IntegrationSpecForProviderCredentialsArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate credentialsArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecForProviderCredentialsArnRef
@@ -191,7 +212,9 @@ public partial class V1beta1IntegrationSpecForProviderCredentialsArnRef
     [JsonPropertyName("policy")]
     public V1beta1IntegrationSpecForProviderCredentialsArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecForProviderCredentialsArnSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1IntegrationSpecForProviderCredentialsArnSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate credentialsArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecForProviderCredentialsArnSelector
@@ -225,7 +250,9 @@ public partial class V1beta1IntegrationSpecForProviderCredentialsArnSelector
     [JsonPropertyName("policy")]
     public V1beta1IntegrationSpecForProviderCredentialsArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecForProviderIntegrationUriRefPolicy
@@ -238,7 +265,9 @@ public partial class V1beta1IntegrationSpecForProviderIntegrationUriRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate integrationUri.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecForProviderIntegrationUriRef
@@ -255,7 +284,9 @@ public partial class V1beta1IntegrationSpecForProviderIntegrationUriRef
     [JsonPropertyName("policy")]
     public V1beta1IntegrationSpecForProviderIntegrationUriRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecForProviderIntegrationUriSelectorPolicy
@@ -268,7 +299,9 @@ public partial class V1beta1IntegrationSpecForProviderIntegrationUriSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate integrationUri.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecForProviderIntegrationUriSelector
@@ -289,7 +322,9 @@ public partial class V1beta1IntegrationSpecForProviderIntegrationUriSelector
     [JsonPropertyName("policy")]
     public V1beta1IntegrationSpecForProviderIntegrationUriSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecForProviderResponseParameters
@@ -302,7 +337,9 @@ public partial class V1beta1IntegrationSpecForProviderResponseParameters
     [JsonPropertyName("statusCode")]
     public string? StatusCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TLS configuration for a private integration. Supported only for HTTP APIs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecForProviderTlsConfig
@@ -311,7 +348,9 @@ public partial class V1beta1IntegrationSpecForProviderTlsConfig
     [JsonPropertyName("serverNameToVerify")]
     public string? ServerNameToVerify { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecForProvider
@@ -424,7 +463,9 @@ public partial class V1beta1IntegrationSpecForProvider
     [JsonPropertyName("tlsConfig")]
     public V1beta1IntegrationSpecForProviderTlsConfig? TlsConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecInitProviderApiIdRefPolicy
@@ -437,7 +478,9 @@ public partial class V1beta1IntegrationSpecInitProviderApiIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a API in apigatewayv2 to populate apiId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecInitProviderApiIdRef
@@ -454,7 +497,9 @@ public partial class V1beta1IntegrationSpecInitProviderApiIdRef
     [JsonPropertyName("policy")]
     public V1beta1IntegrationSpecInitProviderApiIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecInitProviderApiIdSelectorPolicy
@@ -467,7 +512,9 @@ public partial class V1beta1IntegrationSpecInitProviderApiIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a API in apigatewayv2 to populate apiId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecInitProviderApiIdSelector
@@ -488,7 +535,9 @@ public partial class V1beta1IntegrationSpecInitProviderApiIdSelector
     [JsonPropertyName("policy")]
     public V1beta1IntegrationSpecInitProviderApiIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecInitProviderConnectionIdRefPolicy
@@ -501,7 +550,9 @@ public partial class V1beta1IntegrationSpecInitProviderConnectionIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPCLink in apigatewayv2 to populate connectionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecInitProviderConnectionIdRef
@@ -518,7 +569,9 @@ public partial class V1beta1IntegrationSpecInitProviderConnectionIdRef
     [JsonPropertyName("policy")]
     public V1beta1IntegrationSpecInitProviderConnectionIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecInitProviderConnectionIdSelectorPolicy
@@ -531,7 +584,9 @@ public partial class V1beta1IntegrationSpecInitProviderConnectionIdSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPCLink in apigatewayv2 to populate connectionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecInitProviderConnectionIdSelector
@@ -552,7 +607,9 @@ public partial class V1beta1IntegrationSpecInitProviderConnectionIdSelector
     [JsonPropertyName("policy")]
     public V1beta1IntegrationSpecInitProviderConnectionIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecInitProviderCredentialsArnRefPolicy
@@ -565,7 +622,9 @@ public partial class V1beta1IntegrationSpecInitProviderCredentialsArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate credentialsArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecInitProviderCredentialsArnRef
@@ -582,7 +641,9 @@ public partial class V1beta1IntegrationSpecInitProviderCredentialsArnRef
     [JsonPropertyName("policy")]
     public V1beta1IntegrationSpecInitProviderCredentialsArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecInitProviderCredentialsArnSelectorPolicy
@@ -595,7 +656,9 @@ public partial class V1beta1IntegrationSpecInitProviderCredentialsArnSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate credentialsArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecInitProviderCredentialsArnSelector
@@ -616,7 +679,9 @@ public partial class V1beta1IntegrationSpecInitProviderCredentialsArnSelector
     [JsonPropertyName("policy")]
     public V1beta1IntegrationSpecInitProviderCredentialsArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecInitProviderIntegrationUriRefPolicy
@@ -629,7 +694,9 @@ public partial class V1beta1IntegrationSpecInitProviderIntegrationUriRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate integrationUri.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecInitProviderIntegrationUriRef
@@ -646,7 +713,9 @@ public partial class V1beta1IntegrationSpecInitProviderIntegrationUriRef
     [JsonPropertyName("policy")]
     public V1beta1IntegrationSpecInitProviderIntegrationUriRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecInitProviderIntegrationUriSelectorPolicy
@@ -659,7 +728,9 @@ public partial class V1beta1IntegrationSpecInitProviderIntegrationUriSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate integrationUri.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecInitProviderIntegrationUriSelector
@@ -680,7 +751,9 @@ public partial class V1beta1IntegrationSpecInitProviderIntegrationUriSelector
     [JsonPropertyName("policy")]
     public V1beta1IntegrationSpecInitProviderIntegrationUriSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecInitProviderResponseParameters
@@ -693,7 +766,9 @@ public partial class V1beta1IntegrationSpecInitProviderResponseParameters
     [JsonPropertyName("statusCode")]
     public string? StatusCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TLS configuration for a private integration. Supported only for HTTP APIs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecInitProviderTlsConfig
@@ -702,7 +777,9 @@ public partial class V1beta1IntegrationSpecInitProviderTlsConfig
     [JsonPropertyName("serverNameToVerify")]
     public string? ServerNameToVerify { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecInitProvider
@@ -811,7 +888,9 @@ public partial class V1beta1IntegrationSpecInitProvider
     [JsonPropertyName("tlsConfig")]
     public V1beta1IntegrationSpecInitProviderTlsConfig? TlsConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecProviderConfigRef
@@ -824,7 +903,9 @@ public partial class V1beta1IntegrationSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecWriteConnectionSecretToRef
@@ -833,7 +914,9 @@ public partial class V1beta1IntegrationSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IntegrationSpec defines the desired state of Integration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpec
@@ -858,7 +941,9 @@ public partial class V1beta1IntegrationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1IntegrationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationStatusAtProviderResponseParameters
@@ -871,7 +956,9 @@ public partial class V1beta1IntegrationStatusAtProviderResponseParameters
     [JsonPropertyName("statusCode")]
     public string? StatusCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TLS configuration for a private integration. Supported only for HTTP APIs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationStatusAtProviderTlsConfig
@@ -880,7 +967,9 @@ public partial class V1beta1IntegrationStatusAtProviderTlsConfig
     [JsonPropertyName("serverNameToVerify")]
     public string? ServerNameToVerify { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationStatusAtProvider
@@ -969,7 +1058,9 @@ public partial class V1beta1IntegrationStatusAtProvider
     [JsonPropertyName("tlsConfig")]
     public V1beta1IntegrationStatusAtProviderTlsConfig? TlsConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationStatusConditions
@@ -998,7 +1089,9 @@ public partial class V1beta1IntegrationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IntegrationStatus defines the observed state of Integration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationStatus
@@ -1015,7 +1108,9 @@ public partial class V1beta1IntegrationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Integration is the Schema for the Integrations API. Manages an Amazon API Gateway Version 2 integration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1045,3 +1140,4 @@ public partial class V1beta1Integration : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1IntegrationStatus? Status { get; set; }
 }
+#nullable disable

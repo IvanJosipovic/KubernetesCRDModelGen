@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.filestore.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FilestoreInstanceList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1FilestoreInstance> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilestoreInstanceSpecFileSharesNfsExportOptions
@@ -58,7 +61,9 @@ public partial class V1beta1FilestoreInstanceSpecFileSharesNfsExportOptions
     [JsonPropertyName("squashMode")]
     public string? SquashMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilestoreInstanceSpecFileSharesSourceBackupRef
@@ -75,7 +80,9 @@ public partial class V1beta1FilestoreInstanceSpecFileSharesSourceBackupRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilestoreInstanceSpecFileShares
@@ -96,7 +103,9 @@ public partial class V1beta1FilestoreInstanceSpecFileShares
     [JsonPropertyName("sourceBackupRef")]
     public V1beta1FilestoreInstanceSpecFileSharesSourceBackupRef? SourceBackupRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilestoreInstanceSpecNetworksNetworkRef
@@ -113,7 +122,9 @@ public partial class V1beta1FilestoreInstanceSpecNetworksNetworkRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilestoreInstanceSpecNetworks
@@ -134,7 +145,9 @@ public partial class V1beta1FilestoreInstanceSpecNetworks
     [JsonPropertyName("reservedIPRange")]
     public string? ReservedIPRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilestoreInstanceSpecProjectRef
@@ -151,7 +164,9 @@ public partial class V1beta1FilestoreInstanceSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilestoreInstanceSpec
@@ -184,7 +199,9 @@ public partial class V1beta1FilestoreInstanceSpec
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilestoreInstanceStatusConditions
@@ -209,7 +226,9 @@ public partial class V1beta1FilestoreInstanceStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FilestoreInstanceStatus
@@ -238,7 +257,9 @@ public partial class V1beta1FilestoreInstanceStatus
     [JsonPropertyName("statusMessage")]
     public string? StatusMessage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -268,3 +289,4 @@ public partial class V1beta1FilestoreInstance : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1FilestoreInstanceStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.synapse.azure.m.upbound.io;
+#nullable enable
 /// <summary>SQLPoolExtendedAuditingPolicy is the Schema for the SQLPoolExtendedAuditingPolicys API. Manages a Synapse SQL Pool Extended Auditing Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicyList : IKubernetesObjec
     [JsonPropertyName("items")]
     public IList<V1beta1SQLPoolExtendedAuditingPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderSqlPoolIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderSqlPoolI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SQLPool in synapse to populate sqlPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderSqlPoolIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderSqlPoolI
     [JsonPropertyName("policy")]
     public V1beta1SQLPoolExtendedAuditingPolicySpecForProviderSqlPoolIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderSqlPoolIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderSqlPoolI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SQLPool in synapse to populate sqlPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderSqlPoolIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderSqlPoolI
     [JsonPropertyName("policy")]
     public V1beta1SQLPoolExtendedAuditingPolicySpecForProviderSqlPoolIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The access key to use for the auditing storage account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageAccountAccessKeySecretRef
@@ -110,7 +121,9 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageA
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageEndpointRefPolicy
@@ -123,7 +136,9 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageE
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageEndpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageEndpointRef
@@ -140,7 +155,9 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageE
     [JsonPropertyName("policy")]
     public V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageEndpointRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageEndpointSelectorPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageE
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageEndpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageEndpointSelector
@@ -174,7 +193,9 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageE
     [JsonPropertyName("policy")]
     public V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageEndpointSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProvider
@@ -219,7 +240,9 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProvider
     [JsonPropertyName("storageEndpointSelector")]
     public V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageEndpointSelector? StorageEndpointSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The access key to use for the auditing storage account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorageAccountAccessKeySecretRef
@@ -232,7 +255,9 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorage
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorageEndpointRefPolicy
@@ -245,7 +270,9 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorage
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageEndpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorageEndpointRef
@@ -262,7 +289,9 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorage
     [JsonPropertyName("policy")]
     public V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorageEndpointRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorageEndpointSelectorPolicy
@@ -275,7 +304,9 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorage
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageEndpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorageEndpointSelector
@@ -296,7 +327,9 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorage
     [JsonPropertyName("policy")]
     public V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorageEndpointSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecInitProvider
@@ -329,7 +362,9 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecInitProvider
     [JsonPropertyName("storageEndpointSelector")]
     public V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorageEndpointSelector? StorageEndpointSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecProviderConfigRef
@@ -342,7 +377,9 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecWriteConnectionSecretToRef
@@ -351,7 +388,9 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecWriteConnectionSecr
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SQLPoolExtendedAuditingPolicySpec defines the desired state of SQLPoolExtendedAuditingPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpec
@@ -376,7 +415,9 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SQLPoolExtendedAuditingPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolExtendedAuditingPolicyStatusAtProvider
@@ -405,7 +446,9 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicyStatusAtProvider
     [JsonPropertyName("storageEndpoint")]
     public string? StorageEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolExtendedAuditingPolicyStatusConditions
@@ -434,7 +477,9 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SQLPoolExtendedAuditingPolicyStatus defines the observed state of SQLPoolExtendedAuditingPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolExtendedAuditingPolicyStatus
@@ -451,7 +496,9 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SQLPoolExtendedAuditingPolicy is the Schema for the SQLPoolExtendedAuditingPolicys API. Manages a Synapse SQL Pool Extended Auditing Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -481,3 +528,4 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicy : IKubernetesObject<V1
     [JsonPropertyName("status")]
     public V1beta1SQLPoolExtendedAuditingPolicyStatus? Status { get; set; }
 }
+#nullable disable

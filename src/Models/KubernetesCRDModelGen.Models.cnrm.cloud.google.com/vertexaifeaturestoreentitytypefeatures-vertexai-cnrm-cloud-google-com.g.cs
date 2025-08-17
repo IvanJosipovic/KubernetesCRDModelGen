@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.vertexai.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1VertexAIFeaturestoreEntityTypeFeatureList : IKubern
     [JsonPropertyName("items")]
     public IList<V1alpha1VertexAIFeaturestoreEntityTypeFeature> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIFeaturestoreEntityTypeFeatureSpec
@@ -54,7 +57,9 @@ public partial class V1alpha1VertexAIFeaturestoreEntityTypeFeatureSpec
     [JsonPropertyName("valueType")]
     public string ValueType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIFeaturestoreEntityTypeFeatureStatusConditions
@@ -79,7 +84,9 @@ public partial class V1alpha1VertexAIFeaturestoreEntityTypeFeatureStatusConditio
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIFeaturestoreEntityTypeFeatureStatus
@@ -108,7 +115,9 @@ public partial class V1alpha1VertexAIFeaturestoreEntityTypeFeatureStatus
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -138,3 +147,4 @@ public partial class V1alpha1VertexAIFeaturestoreEntityTypeFeature : IKubernetes
     [JsonPropertyName("status")]
     public V1alpha1VertexAIFeaturestoreEntityTypeFeatureStatus? Status { get; set; }
 }
+#nullable disable

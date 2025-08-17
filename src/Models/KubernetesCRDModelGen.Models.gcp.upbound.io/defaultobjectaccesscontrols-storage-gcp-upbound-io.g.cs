@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.gcp.upbound.io;
+#nullable enable
 /// <summary>DefaultObjectAccessControl is the Schema for the DefaultObjectAccessControls API. The DefaultObjectAccessControls resources represent the Access Control Lists (ACLs) applied to a new object within a Google Cloud Storage bucket when no ACL was provided for that object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DefaultObjectAccessControlList : IKubernetesObject<V
     [JsonPropertyName("items")]
     public IList<V1beta1DefaultObjectAccessControl> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultObjectAccessControlSpecForProviderBucketRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1DefaultObjectAccessControlSpecForProviderBucketRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in storage to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultObjectAccessControlSpecForProviderBucketRef
@@ -59,7 +64,9 @@ public partial class V1beta1DefaultObjectAccessControlSpecForProviderBucketRef
     [JsonPropertyName("policy")]
     public V1beta1DefaultObjectAccessControlSpecForProviderBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultObjectAccessControlSpecForProviderBucketSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1DefaultObjectAccessControlSpecForProviderBucketSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in storage to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultObjectAccessControlSpecForProviderBucketSelector
@@ -89,7 +98,9 @@ public partial class V1beta1DefaultObjectAccessControlSpecForProviderBucketSelec
     [JsonPropertyName("policy")]
     public V1beta1DefaultObjectAccessControlSpecForProviderBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultObjectAccessControlSpecForProvider
@@ -118,7 +129,9 @@ public partial class V1beta1DefaultObjectAccessControlSpecForProvider
     [JsonPropertyName("role")]
     public string? Role { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultObjectAccessControlSpecInitProviderBucketRefPolicy
@@ -131,7 +144,9 @@ public partial class V1beta1DefaultObjectAccessControlSpecInitProviderBucketRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in storage to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultObjectAccessControlSpecInitProviderBucketRef
@@ -144,7 +159,9 @@ public partial class V1beta1DefaultObjectAccessControlSpecInitProviderBucketRef
     [JsonPropertyName("policy")]
     public V1beta1DefaultObjectAccessControlSpecInitProviderBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultObjectAccessControlSpecInitProviderBucketSelectorPolicy
@@ -157,7 +174,9 @@ public partial class V1beta1DefaultObjectAccessControlSpecInitProviderBucketSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in storage to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultObjectAccessControlSpecInitProviderBucketSelector
@@ -174,7 +193,9 @@ public partial class V1beta1DefaultObjectAccessControlSpecInitProviderBucketSele
     [JsonPropertyName("policy")]
     public V1beta1DefaultObjectAccessControlSpecInitProviderBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultObjectAccessControlSpecInitProvider
@@ -203,7 +224,9 @@ public partial class V1beta1DefaultObjectAccessControlSpecInitProvider
     [JsonPropertyName("role")]
     public string? Role { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultObjectAccessControlSpecProviderConfigRefPolicy
@@ -216,7 +239,9 @@ public partial class V1beta1DefaultObjectAccessControlSpecProviderConfigRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultObjectAccessControlSpecProviderConfigRef
@@ -229,7 +254,9 @@ public partial class V1beta1DefaultObjectAccessControlSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1DefaultObjectAccessControlSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultObjectAccessControlSpecWriteConnectionSecretToRef
@@ -242,7 +269,9 @@ public partial class V1beta1DefaultObjectAccessControlSpecWriteConnectionSecretT
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DefaultObjectAccessControlSpec defines the desired state of DefaultObjectAccessControl</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultObjectAccessControlSpec
@@ -271,7 +300,9 @@ public partial class V1beta1DefaultObjectAccessControlSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DefaultObjectAccessControlSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultObjectAccessControlStatusAtProviderProjectTeam
@@ -284,7 +315,9 @@ public partial class V1beta1DefaultObjectAccessControlStatusAtProviderProjectTea
     [JsonPropertyName("team")]
     public string? Team { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultObjectAccessControlStatusAtProvider
@@ -329,7 +362,9 @@ public partial class V1beta1DefaultObjectAccessControlStatusAtProvider
     [JsonPropertyName("role")]
     public string? Role { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultObjectAccessControlStatusConditions
@@ -358,7 +393,9 @@ public partial class V1beta1DefaultObjectAccessControlStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DefaultObjectAccessControlStatus defines the observed state of DefaultObjectAccessControl.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultObjectAccessControlStatus
@@ -375,7 +412,9 @@ public partial class V1beta1DefaultObjectAccessControlStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DefaultObjectAccessControl is the Schema for the DefaultObjectAccessControls API. The DefaultObjectAccessControls resources represent the Access Control Lists (ACLs) applied to a new object within a Google Cloud Storage bucket when no ACL was provided for that object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -405,3 +444,4 @@ public partial class V1beta1DefaultObjectAccessControl : IKubernetesObject<V1Obj
     [JsonPropertyName("status")]
     public V1beta1DefaultObjectAccessControlStatus? Status { get; set; }
 }
+#nullable disable

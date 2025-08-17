@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafactory.azure.m.upbound.io;
+#nullable enable
 /// <summary>IntegrationRuntimeSelfHosted is the Schema for the IntegrationRuntimeSelfHosteds API. Manages a Data Factory Self-hosted Integration Runtime.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1IntegrationRuntimeSelfHostedList : IKubernetesObject
     [JsonPropertyName("items")]
     public IList<V1beta1IntegrationRuntimeSelfHosted> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationRuntimeSelfHostedSpecForProviderDataFactoryIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1IntegrationRuntimeSelfHostedSpecForProviderDataFacto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Factory in datafactory to populate dataFactoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationRuntimeSelfHostedSpecForProviderDataFactoryIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1IntegrationRuntimeSelfHostedSpecForProviderDataFacto
     [JsonPropertyName("policy")]
     public V1beta1IntegrationRuntimeSelfHostedSpecForProviderDataFactoryIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationRuntimeSelfHostedSpecForProviderDataFactoryIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1IntegrationRuntimeSelfHostedSpecForProviderDataFacto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Factory in datafactory to populate dataFactoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationRuntimeSelfHostedSpecForProviderDataFactoryIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1IntegrationRuntimeSelfHostedSpecForProviderDataFacto
     [JsonPropertyName("policy")]
     public V1beta1IntegrationRuntimeSelfHostedSpecForProviderDataFactoryIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationRuntimeSelfHostedSpecForProviderRbacAuthorization
@@ -106,7 +117,9 @@ public partial class V1beta1IntegrationRuntimeSelfHostedSpecForProviderRbacAutho
     [JsonPropertyName("resourceId")]
     public string? ResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationRuntimeSelfHostedSpecForProvider
@@ -135,7 +148,9 @@ public partial class V1beta1IntegrationRuntimeSelfHostedSpecForProvider
     [JsonPropertyName("selfContainedInteractiveAuthoringEnabled")]
     public bool? SelfContainedInteractiveAuthoringEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationRuntimeSelfHostedSpecInitProviderRbacAuthorization
@@ -144,7 +159,9 @@ public partial class V1beta1IntegrationRuntimeSelfHostedSpecInitProviderRbacAuth
     [JsonPropertyName("resourceId")]
     public string? ResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationRuntimeSelfHostedSpecInitProvider
@@ -161,7 +178,9 @@ public partial class V1beta1IntegrationRuntimeSelfHostedSpecInitProvider
     [JsonPropertyName("selfContainedInteractiveAuthoringEnabled")]
     public bool? SelfContainedInteractiveAuthoringEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationRuntimeSelfHostedSpecProviderConfigRef
@@ -174,7 +193,9 @@ public partial class V1beta1IntegrationRuntimeSelfHostedSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationRuntimeSelfHostedSpecWriteConnectionSecretToRef
@@ -183,7 +204,9 @@ public partial class V1beta1IntegrationRuntimeSelfHostedSpecWriteConnectionSecre
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IntegrationRuntimeSelfHostedSpec defines the desired state of IntegrationRuntimeSelfHosted</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationRuntimeSelfHostedSpec
@@ -208,7 +231,9 @@ public partial class V1beta1IntegrationRuntimeSelfHostedSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1IntegrationRuntimeSelfHostedSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationRuntimeSelfHostedStatusAtProviderRbacAuthorization
@@ -217,7 +242,9 @@ public partial class V1beta1IntegrationRuntimeSelfHostedStatusAtProviderRbacAuth
     [JsonPropertyName("resourceId")]
     public string? ResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationRuntimeSelfHostedStatusAtProvider
@@ -250,7 +277,9 @@ public partial class V1beta1IntegrationRuntimeSelfHostedStatusAtProvider
     [JsonPropertyName("selfContainedInteractiveAuthoringEnabled")]
     public bool? SelfContainedInteractiveAuthoringEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationRuntimeSelfHostedStatusConditions
@@ -279,7 +308,9 @@ public partial class V1beta1IntegrationRuntimeSelfHostedStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IntegrationRuntimeSelfHostedStatus defines the observed state of IntegrationRuntimeSelfHosted.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationRuntimeSelfHostedStatus
@@ -296,7 +327,9 @@ public partial class V1beta1IntegrationRuntimeSelfHostedStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IntegrationRuntimeSelfHosted is the Schema for the IntegrationRuntimeSelfHosteds API. Manages a Data Factory Self-hosted Integration Runtime.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -326,3 +359,4 @@ public partial class V1beta1IntegrationRuntimeSelfHosted : IKubernetesObject<V1O
     [JsonPropertyName("status")]
     public V1beta1IntegrationRuntimeSelfHostedStatus? Status { get; set; }
 }
+#nullable disable

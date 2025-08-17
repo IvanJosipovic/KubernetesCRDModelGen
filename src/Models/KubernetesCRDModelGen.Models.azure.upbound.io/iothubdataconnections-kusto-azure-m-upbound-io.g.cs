@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kusto.azure.m.upbound.io;
+#nullable enable
 /// <summary>IOTHubDataConnection is the Schema for the IOTHubDataConnections API. Manages Kusto / Data Explorer IotHub Data Connection</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1IOTHubDataConnectionList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1IOTHubDataConnection> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecForProviderClusterNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderClusterNameRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in kusto to populate clusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecForProviderClusterNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderClusterNameRef
     [JsonPropertyName("policy")]
     public V1beta1IOTHubDataConnectionSpecForProviderClusterNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecForProviderClusterNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderClusterNameSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in kusto to populate clusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecForProviderClusterNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderClusterNameSelect
     [JsonPropertyName("policy")]
     public V1beta1IOTHubDataConnectionSpecForProviderClusterNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecForProviderConsumerGroupRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderConsumerGroupRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a IOTHubConsumerGroup in devices to populate consumerGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecForProviderConsumerGroupRef
@@ -127,7 +140,9 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderConsumerGroupRef
     [JsonPropertyName("policy")]
     public V1beta1IOTHubDataConnectionSpecForProviderConsumerGroupRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecForProviderConsumerGroupSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderConsumerGroupSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a IOTHubConsumerGroup in devices to populate consumerGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecForProviderConsumerGroupSelector
@@ -161,7 +178,9 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderConsumerGroupSele
     [JsonPropertyName("policy")]
     public V1beta1IOTHubDataConnectionSpecForProviderConsumerGroupSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecForProviderDatabaseNameRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderDatabaseNameRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Database in kusto to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecForProviderDatabaseNameRef
@@ -191,7 +212,9 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderDatabaseNameRef
     [JsonPropertyName("policy")]
     public V1beta1IOTHubDataConnectionSpecForProviderDatabaseNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecForProviderDatabaseNameSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderDatabaseNameSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Database in kusto to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecForProviderDatabaseNameSelector
@@ -225,7 +250,9 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderDatabaseNameSelec
     [JsonPropertyName("policy")]
     public V1beta1IOTHubDataConnectionSpecForProviderDatabaseNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecForProviderIothubIdRefPolicy
@@ -238,7 +265,9 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderIothubIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a IOTHub in devices to populate iothubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecForProviderIothubIdRef
@@ -255,7 +284,9 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderIothubIdRef
     [JsonPropertyName("policy")]
     public V1beta1IOTHubDataConnectionSpecForProviderIothubIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecForProviderIothubIdSelectorPolicy
@@ -268,7 +299,9 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderIothubIdSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a IOTHub in devices to populate iothubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecForProviderIothubIdSelector
@@ -289,7 +322,9 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderIothubIdSelector
     [JsonPropertyName("policy")]
     public V1beta1IOTHubDataConnectionSpecForProviderIothubIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecForProviderResourceGroupNameRefPolicy
@@ -302,7 +337,9 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderResourceGroupName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecForProviderResourceGroupNameRef
@@ -319,7 +356,9 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderResourceGroupName
     [JsonPropertyName("policy")]
     public V1beta1IOTHubDataConnectionSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecForProviderResourceGroupNameSelectorPolicy
@@ -332,7 +371,9 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderResourceGroupName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecForProviderResourceGroupNameSelector
@@ -353,7 +394,9 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderResourceGroupName
     [JsonPropertyName("policy")]
     public V1beta1IOTHubDataConnectionSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecForProviderSharedAccessPolicyNameRefPolicy
@@ -366,7 +409,9 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderSharedAccessPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a IOTHubSharedAccessPolicy in devices to populate sharedAccessPolicyName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecForProviderSharedAccessPolicyNameRef
@@ -383,7 +428,9 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderSharedAccessPolic
     [JsonPropertyName("policy")]
     public V1beta1IOTHubDataConnectionSpecForProviderSharedAccessPolicyNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecForProviderSharedAccessPolicyNameSelectorPolicy
@@ -396,7 +443,9 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderSharedAccessPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a IOTHubSharedAccessPolicy in devices to populate sharedAccessPolicyName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecForProviderSharedAccessPolicyNameSelector
@@ -417,7 +466,9 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderSharedAccessPolic
     [JsonPropertyName("policy")]
     public V1beta1IOTHubDataConnectionSpecForProviderSharedAccessPolicyNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecForProvider
@@ -522,7 +573,9 @@ public partial class V1beta1IOTHubDataConnectionSpecForProvider
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderClusterNameRefPolicy
@@ -535,7 +588,9 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderClusterNameRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in kusto to populate clusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderClusterNameRef
@@ -552,7 +607,9 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderClusterNameRef
     [JsonPropertyName("policy")]
     public V1beta1IOTHubDataConnectionSpecInitProviderClusterNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderClusterNameSelectorPolicy
@@ -565,7 +622,9 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderClusterNameSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in kusto to populate clusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderClusterNameSelector
@@ -586,7 +645,9 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderClusterNameSelec
     [JsonPropertyName("policy")]
     public V1beta1IOTHubDataConnectionSpecInitProviderClusterNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderConsumerGroupRefPolicy
@@ -599,7 +660,9 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderConsumerGroupRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a IOTHubConsumerGroup in devices to populate consumerGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderConsumerGroupRef
@@ -616,7 +679,9 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderConsumerGroupRef
     [JsonPropertyName("policy")]
     public V1beta1IOTHubDataConnectionSpecInitProviderConsumerGroupRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderConsumerGroupSelectorPolicy
@@ -629,7 +694,9 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderConsumerGroupSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a IOTHubConsumerGroup in devices to populate consumerGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderConsumerGroupSelector
@@ -650,7 +717,9 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderConsumerGroupSel
     [JsonPropertyName("policy")]
     public V1beta1IOTHubDataConnectionSpecInitProviderConsumerGroupSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderDatabaseNameRefPolicy
@@ -663,7 +732,9 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderDatabaseNameRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Database in kusto to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderDatabaseNameRef
@@ -680,7 +751,9 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderDatabaseNameRef
     [JsonPropertyName("policy")]
     public V1beta1IOTHubDataConnectionSpecInitProviderDatabaseNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderDatabaseNameSelectorPolicy
@@ -693,7 +766,9 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderDatabaseNameSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Database in kusto to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderDatabaseNameSelector
@@ -714,7 +789,9 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderDatabaseNameSele
     [JsonPropertyName("policy")]
     public V1beta1IOTHubDataConnectionSpecInitProviderDatabaseNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderIothubIdRefPolicy
@@ -727,7 +804,9 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderIothubIdRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a IOTHub in devices to populate iothubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderIothubIdRef
@@ -744,7 +823,9 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderIothubIdRef
     [JsonPropertyName("policy")]
     public V1beta1IOTHubDataConnectionSpecInitProviderIothubIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderIothubIdSelectorPolicy
@@ -757,7 +838,9 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderIothubIdSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a IOTHub in devices to populate iothubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderIothubIdSelector
@@ -778,7 +861,9 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderIothubIdSelector
     [JsonPropertyName("policy")]
     public V1beta1IOTHubDataConnectionSpecInitProviderIothubIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderResourceGroupNameRefPolicy
@@ -791,7 +876,9 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderResourceGroupNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderResourceGroupNameRef
@@ -808,7 +895,9 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderResourceGroupNam
     [JsonPropertyName("policy")]
     public V1beta1IOTHubDataConnectionSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderResourceGroupNameSelectorPolicy
@@ -821,7 +910,9 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderResourceGroupNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderResourceGroupNameSelector
@@ -842,7 +933,9 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderResourceGroupNam
     [JsonPropertyName("policy")]
     public V1beta1IOTHubDataConnectionSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderSharedAccessPolicyNameRefPolicy
@@ -855,7 +948,9 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderSharedAccessPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a IOTHubSharedAccessPolicy in devices to populate sharedAccessPolicyName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderSharedAccessPolicyNameRef
@@ -872,7 +967,9 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderSharedAccessPoli
     [JsonPropertyName("policy")]
     public V1beta1IOTHubDataConnectionSpecInitProviderSharedAccessPolicyNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderSharedAccessPolicyNameSelectorPolicy
@@ -885,7 +982,9 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderSharedAccessPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a IOTHubSharedAccessPolicy in devices to populate sharedAccessPolicyName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderSharedAccessPolicyNameSelector
@@ -906,7 +1005,9 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderSharedAccessPoli
     [JsonPropertyName("policy")]
     public V1beta1IOTHubDataConnectionSpecInitProviderSharedAccessPolicyNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecInitProvider
@@ -1011,7 +1112,9 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProvider
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecProviderConfigRef
@@ -1024,7 +1127,9 @@ public partial class V1beta1IOTHubDataConnectionSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpecWriteConnectionSecretToRef
@@ -1033,7 +1138,9 @@ public partial class V1beta1IOTHubDataConnectionSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IOTHubDataConnectionSpec defines the desired state of IOTHubDataConnection</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionSpec
@@ -1058,7 +1165,9 @@ public partial class V1beta1IOTHubDataConnectionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1IOTHubDataConnectionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionStatusAtProvider
@@ -1119,7 +1228,9 @@ public partial class V1beta1IOTHubDataConnectionStatusAtProvider
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionStatusConditions
@@ -1148,7 +1259,9 @@ public partial class V1beta1IOTHubDataConnectionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IOTHubDataConnectionStatus defines the observed state of IOTHubDataConnection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDataConnectionStatus
@@ -1165,7 +1278,9 @@ public partial class V1beta1IOTHubDataConnectionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IOTHubDataConnection is the Schema for the IOTHubDataConnections API. Manages Kusto / Data Explorer IotHub Data Connection</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1195,3 +1310,4 @@ public partial class V1beta1IOTHubDataConnection : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1IOTHubDataConnectionStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networksecurity.gcp.m.upbound.io;
+#nullable enable
 /// <summary>TLSInspectionPolicy is the Schema for the TLSInspectionPolicys API. The TlsInspectionPolicy resource contains references to CA pools in Certificate Authority Service and associated metadata.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TLSInspectionPolicyList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1TLSInspectionPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TLSInspectionPolicySpecForProviderCaPoolRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1TLSInspectionPolicySpecForProviderCaPoolRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CAPool in privateca to populate caPool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TLSInspectionPolicySpecForProviderCaPoolRef
@@ -63,7 +68,9 @@ public partial class V1beta1TLSInspectionPolicySpecForProviderCaPoolRef
     [JsonPropertyName("policy")]
     public V1beta1TLSInspectionPolicySpecForProviderCaPoolRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TLSInspectionPolicySpecForProviderCaPoolSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1TLSInspectionPolicySpecForProviderCaPoolSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CAPool in privateca to populate caPool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TLSInspectionPolicySpecForProviderCaPoolSelector
@@ -97,7 +106,9 @@ public partial class V1beta1TLSInspectionPolicySpecForProviderCaPoolSelector
     [JsonPropertyName("policy")]
     public V1beta1TLSInspectionPolicySpecForProviderCaPoolSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TLSInspectionPolicySpecForProviderTrustConfigRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1TLSInspectionPolicySpecForProviderTrustConfigRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TrustConfig in certificatemanager to populate trustConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TLSInspectionPolicySpecForProviderTrustConfigRef
@@ -127,7 +140,9 @@ public partial class V1beta1TLSInspectionPolicySpecForProviderTrustConfigRef
     [JsonPropertyName("policy")]
     public V1beta1TLSInspectionPolicySpecForProviderTrustConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TLSInspectionPolicySpecForProviderTrustConfigSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1TLSInspectionPolicySpecForProviderTrustConfigSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TrustConfig in certificatemanager to populate trustConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TLSInspectionPolicySpecForProviderTrustConfigSelector
@@ -161,7 +178,9 @@ public partial class V1beta1TLSInspectionPolicySpecForProviderTrustConfigSelecto
     [JsonPropertyName("policy")]
     public V1beta1TLSInspectionPolicySpecForProviderTrustConfigSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TLSInspectionPolicySpecForProvider
@@ -218,7 +237,9 @@ public partial class V1beta1TLSInspectionPolicySpecForProvider
     [JsonPropertyName("trustConfigSelector")]
     public V1beta1TLSInspectionPolicySpecForProviderTrustConfigSelector? TrustConfigSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TLSInspectionPolicySpecInitProviderCaPoolRefPolicy
@@ -231,7 +252,9 @@ public partial class V1beta1TLSInspectionPolicySpecInitProviderCaPoolRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CAPool in privateca to populate caPool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TLSInspectionPolicySpecInitProviderCaPoolRef
@@ -248,7 +271,9 @@ public partial class V1beta1TLSInspectionPolicySpecInitProviderCaPoolRef
     [JsonPropertyName("policy")]
     public V1beta1TLSInspectionPolicySpecInitProviderCaPoolRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TLSInspectionPolicySpecInitProviderCaPoolSelectorPolicy
@@ -261,7 +286,9 @@ public partial class V1beta1TLSInspectionPolicySpecInitProviderCaPoolSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CAPool in privateca to populate caPool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TLSInspectionPolicySpecInitProviderCaPoolSelector
@@ -282,7 +309,9 @@ public partial class V1beta1TLSInspectionPolicySpecInitProviderCaPoolSelector
     [JsonPropertyName("policy")]
     public V1beta1TLSInspectionPolicySpecInitProviderCaPoolSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TLSInspectionPolicySpecInitProviderTrustConfigRefPolicy
@@ -295,7 +324,9 @@ public partial class V1beta1TLSInspectionPolicySpecInitProviderTrustConfigRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TrustConfig in certificatemanager to populate trustConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TLSInspectionPolicySpecInitProviderTrustConfigRef
@@ -312,7 +343,9 @@ public partial class V1beta1TLSInspectionPolicySpecInitProviderTrustConfigRef
     [JsonPropertyName("policy")]
     public V1beta1TLSInspectionPolicySpecInitProviderTrustConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TLSInspectionPolicySpecInitProviderTrustConfigSelectorPolicy
@@ -325,7 +358,9 @@ public partial class V1beta1TLSInspectionPolicySpecInitProviderTrustConfigSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TrustConfig in certificatemanager to populate trustConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TLSInspectionPolicySpecInitProviderTrustConfigSelector
@@ -346,7 +381,9 @@ public partial class V1beta1TLSInspectionPolicySpecInitProviderTrustConfigSelect
     [JsonPropertyName("policy")]
     public V1beta1TLSInspectionPolicySpecInitProviderTrustConfigSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TLSInspectionPolicySpecInitProvider
@@ -399,7 +436,9 @@ public partial class V1beta1TLSInspectionPolicySpecInitProvider
     [JsonPropertyName("trustConfigSelector")]
     public V1beta1TLSInspectionPolicySpecInitProviderTrustConfigSelector? TrustConfigSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TLSInspectionPolicySpecProviderConfigRef
@@ -412,7 +451,9 @@ public partial class V1beta1TLSInspectionPolicySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TLSInspectionPolicySpecWriteConnectionSecretToRef
@@ -421,7 +462,9 @@ public partial class V1beta1TLSInspectionPolicySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TLSInspectionPolicySpec defines the desired state of TLSInspectionPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TLSInspectionPolicySpec
@@ -446,7 +489,9 @@ public partial class V1beta1TLSInspectionPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TLSInspectionPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TLSInspectionPolicyStatusAtProvider
@@ -499,7 +544,9 @@ public partial class V1beta1TLSInspectionPolicyStatusAtProvider
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TLSInspectionPolicyStatusConditions
@@ -528,7 +575,9 @@ public partial class V1beta1TLSInspectionPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TLSInspectionPolicyStatus defines the observed state of TLSInspectionPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TLSInspectionPolicyStatus
@@ -545,7 +594,9 @@ public partial class V1beta1TLSInspectionPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TLSInspectionPolicy is the Schema for the TLSInspectionPolicys API. The TlsInspectionPolicy resource contains references to CA pools in Certificate Authority Service and associated metadata.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -575,3 +626,4 @@ public partial class V1beta1TLSInspectionPolicy : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1TLSInspectionPolicyStatus? Status { get; set; }
 }
+#nullable disable

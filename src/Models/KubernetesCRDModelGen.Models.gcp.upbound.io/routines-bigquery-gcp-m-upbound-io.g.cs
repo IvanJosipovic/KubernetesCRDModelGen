@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigquery.gcp.m.upbound.io;
+#nullable enable
 /// <summary>Routine is the Schema for the Routines API. A user-defined function or a stored procedure that belongs to a Dataset</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RoutineList : IKubernetesObject<V1ListMeta>, IItems<
     [JsonPropertyName("items")]
     public IList<V1beta1Routine> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpecForProviderArguments
@@ -54,7 +57,9 @@ public partial class V1beta1RoutineSpecForProviderArguments
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpecForProviderDatasetIdRefPolicy
@@ -67,7 +72,9 @@ public partial class V1beta1RoutineSpecForProviderDatasetIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpecForProviderDatasetIdRef
@@ -84,7 +91,9 @@ public partial class V1beta1RoutineSpecForProviderDatasetIdRef
     [JsonPropertyName("policy")]
     public V1beta1RoutineSpecForProviderDatasetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpecForProviderDatasetIdSelectorPolicy
@@ -97,7 +106,9 @@ public partial class V1beta1RoutineSpecForProviderDatasetIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpecForProviderDatasetIdSelector
@@ -118,7 +129,9 @@ public partial class V1beta1RoutineSpecForProviderDatasetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1RoutineSpecForProviderDatasetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpecForProviderRemoteFunctionOptionsConnectionRefPolicy
@@ -131,7 +144,9 @@ public partial class V1beta1RoutineSpecForProviderRemoteFunctionOptionsConnectio
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Connection in bigquery to populate connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpecForProviderRemoteFunctionOptionsConnectionRef
@@ -148,7 +163,9 @@ public partial class V1beta1RoutineSpecForProviderRemoteFunctionOptionsConnectio
     [JsonPropertyName("policy")]
     public V1beta1RoutineSpecForProviderRemoteFunctionOptionsConnectionRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpecForProviderRemoteFunctionOptionsConnectionSelectorPolicy
@@ -161,7 +178,9 @@ public partial class V1beta1RoutineSpecForProviderRemoteFunctionOptionsConnectio
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Connection in bigquery to populate connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpecForProviderRemoteFunctionOptionsConnectionSelector
@@ -182,7 +201,9 @@ public partial class V1beta1RoutineSpecForProviderRemoteFunctionOptionsConnectio
     [JsonPropertyName("policy")]
     public V1beta1RoutineSpecForProviderRemoteFunctionOptionsConnectionSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Remote function specific options. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpecForProviderRemoteFunctionOptions
@@ -211,7 +232,9 @@ public partial class V1beta1RoutineSpecForProviderRemoteFunctionOptions
     [JsonPropertyName("userDefinedContext")]
     public IDictionary<string, string>? UserDefinedContext { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpecForProviderSparkOptionsConnectionRefPolicy
@@ -224,7 +247,9 @@ public partial class V1beta1RoutineSpecForProviderSparkOptionsConnectionRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Connection in bigquery to populate connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpecForProviderSparkOptionsConnectionRef
@@ -241,7 +266,9 @@ public partial class V1beta1RoutineSpecForProviderSparkOptionsConnectionRef
     [JsonPropertyName("policy")]
     public V1beta1RoutineSpecForProviderSparkOptionsConnectionRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpecForProviderSparkOptionsConnectionSelectorPolicy
@@ -254,7 +281,9 @@ public partial class V1beta1RoutineSpecForProviderSparkOptionsConnectionSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Connection in bigquery to populate connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpecForProviderSparkOptionsConnectionSelector
@@ -275,7 +304,9 @@ public partial class V1beta1RoutineSpecForProviderSparkOptionsConnectionSelector
     [JsonPropertyName("policy")]
     public V1beta1RoutineSpecForProviderSparkOptionsConnectionSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. If language is one of "PYTHON", "JAVA", "SCALA", this field stores the options for spark stored procedure. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpecForProviderSparkOptions
@@ -328,7 +359,9 @@ public partial class V1beta1RoutineSpecForProviderSparkOptions
     [JsonPropertyName("runtimeVersion")]
     public string? RuntimeVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpecForProvider
@@ -401,7 +434,9 @@ public partial class V1beta1RoutineSpecForProvider
     [JsonPropertyName("sparkOptions")]
     public V1beta1RoutineSpecForProviderSparkOptions? SparkOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpecInitProviderArguments
@@ -422,7 +457,9 @@ public partial class V1beta1RoutineSpecInitProviderArguments
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpecInitProviderRemoteFunctionOptionsConnectionRefPolicy
@@ -435,7 +472,9 @@ public partial class V1beta1RoutineSpecInitProviderRemoteFunctionOptionsConnecti
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Connection in bigquery to populate connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpecInitProviderRemoteFunctionOptionsConnectionRef
@@ -452,7 +491,9 @@ public partial class V1beta1RoutineSpecInitProviderRemoteFunctionOptionsConnecti
     [JsonPropertyName("policy")]
     public V1beta1RoutineSpecInitProviderRemoteFunctionOptionsConnectionRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpecInitProviderRemoteFunctionOptionsConnectionSelectorPolicy
@@ -465,7 +506,9 @@ public partial class V1beta1RoutineSpecInitProviderRemoteFunctionOptionsConnecti
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Connection in bigquery to populate connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpecInitProviderRemoteFunctionOptionsConnectionSelector
@@ -486,7 +529,9 @@ public partial class V1beta1RoutineSpecInitProviderRemoteFunctionOptionsConnecti
     [JsonPropertyName("policy")]
     public V1beta1RoutineSpecInitProviderRemoteFunctionOptionsConnectionSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Remote function specific options. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpecInitProviderRemoteFunctionOptions
@@ -515,7 +560,9 @@ public partial class V1beta1RoutineSpecInitProviderRemoteFunctionOptions
     [JsonPropertyName("userDefinedContext")]
     public IDictionary<string, string>? UserDefinedContext { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpecInitProviderSparkOptionsConnectionRefPolicy
@@ -528,7 +575,9 @@ public partial class V1beta1RoutineSpecInitProviderSparkOptionsConnectionRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Connection in bigquery to populate connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpecInitProviderSparkOptionsConnectionRef
@@ -545,7 +594,9 @@ public partial class V1beta1RoutineSpecInitProviderSparkOptionsConnectionRef
     [JsonPropertyName("policy")]
     public V1beta1RoutineSpecInitProviderSparkOptionsConnectionRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpecInitProviderSparkOptionsConnectionSelectorPolicy
@@ -558,7 +609,9 @@ public partial class V1beta1RoutineSpecInitProviderSparkOptionsConnectionSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Connection in bigquery to populate connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpecInitProviderSparkOptionsConnectionSelector
@@ -579,7 +632,9 @@ public partial class V1beta1RoutineSpecInitProviderSparkOptionsConnectionSelecto
     [JsonPropertyName("policy")]
     public V1beta1RoutineSpecInitProviderSparkOptionsConnectionSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. If language is one of "PYTHON", "JAVA", "SCALA", this field stores the options for spark stored procedure. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpecInitProviderSparkOptions
@@ -632,7 +687,9 @@ public partial class V1beta1RoutineSpecInitProviderSparkOptions
     [JsonPropertyName("runtimeVersion")]
     public string? RuntimeVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpecInitProvider
@@ -693,7 +750,9 @@ public partial class V1beta1RoutineSpecInitProvider
     [JsonPropertyName("sparkOptions")]
     public V1beta1RoutineSpecInitProviderSparkOptions? SparkOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpecProviderConfigRef
@@ -706,7 +765,9 @@ public partial class V1beta1RoutineSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpecWriteConnectionSecretToRef
@@ -715,7 +776,9 @@ public partial class V1beta1RoutineSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RoutineSpec defines the desired state of Routine</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineSpec
@@ -740,7 +803,9 @@ public partial class V1beta1RoutineSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RoutineSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineStatusAtProviderArguments
@@ -761,7 +826,9 @@ public partial class V1beta1RoutineStatusAtProviderArguments
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Remote function specific options. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineStatusAtProviderRemoteFunctionOptions
@@ -782,7 +849,9 @@ public partial class V1beta1RoutineStatusAtProviderRemoteFunctionOptions
     [JsonPropertyName("userDefinedContext")]
     public IDictionary<string, string>? UserDefinedContext { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. If language is one of "PYTHON", "JAVA", "SCALA", this field stores the options for spark stored procedure. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineStatusAtProviderSparkOptions
@@ -827,7 +896,9 @@ public partial class V1beta1RoutineStatusAtProviderSparkOptions
     [JsonPropertyName("runtimeVersion")]
     public string? RuntimeVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineStatusAtProvider
@@ -904,7 +975,9 @@ public partial class V1beta1RoutineStatusAtProvider
     [JsonPropertyName("sparkOptions")]
     public V1beta1RoutineStatusAtProviderSparkOptions? SparkOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineStatusConditions
@@ -933,7 +1006,9 @@ public partial class V1beta1RoutineStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RoutineStatus defines the observed state of Routine.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutineStatus
@@ -950,7 +1025,9 @@ public partial class V1beta1RoutineStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Routine is the Schema for the Routines API. A user-defined function or a stored procedure that belongs to a Dataset</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -980,3 +1057,4 @@ public partial class V1beta1Routine : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     [JsonPropertyName("status")]
     public V1beta1RoutineStatus? Status { get; set; }
 }
+#nullable disable

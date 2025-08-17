@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>IAMPolicyMember is the Schema for the iampolicies API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1IAMPolicyMemberList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1IAMPolicyMember> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. The condition under which the binding applies.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPolicyMemberSpecCondition
@@ -50,7 +53,9 @@ public partial class V1beta1IAMPolicyMemberSpecCondition
     [JsonPropertyName("title")]
     public string Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigQueryConnectionConnection whose service account is to be bound to the role. Use the Type field to specifie the connection type. For "spark" connetion, the service account is in `status.observedState.spark.serviceAccountID`. For "cloudSQL" connection, the service account is in `status.observedState.cloudSQL.serviceAccountID`. For "cloudResource" connection, the service account is in `status.observedState.cloudResource.serviceAccountID`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPolicyMemberSpecMemberFromBigQueryConnectionConnectionRef
@@ -67,7 +72,9 @@ public partial class V1beta1IAMPolicyMemberSpecMemberFromBigQueryConnectionConne
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The LoggingLogSink whose writer identity (i.e. its 'status.writerIdentity') is to be bound to the role.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPolicyMemberSpecMemberFromLogSinkRef
@@ -80,7 +87,9 @@ public partial class V1beta1IAMPolicyMemberSpecMemberFromLogSinkRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The IAMServiceAccount to be bound to the role.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPolicyMemberSpecMemberFromServiceAccountRef
@@ -93,7 +102,9 @@ public partial class V1beta1IAMPolicyMemberSpecMemberFromServiceAccountRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ServiceIdentity whose service account (i.e., its 'status.email') is to be bound to the role.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPolicyMemberSpecMemberFromServiceIdentityRef
@@ -106,7 +117,9 @@ public partial class V1beta1IAMPolicyMemberSpecMemberFromServiceIdentityRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The SQLInstance whose service account (i.e. its 'status.serviceAccountEmailAddress') is to be bound to the role.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPolicyMemberSpecMemberFromSqlInstanceRef
@@ -119,7 +132,9 @@ public partial class V1beta1IAMPolicyMemberSpecMemberFromSqlInstanceRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The IAM identity to be bound to the role. Exactly one of 'member' or 'memberFrom' must be used, and only one subfield within 'memberFrom' can be used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPolicyMemberSpecMemberFrom
@@ -144,7 +159,9 @@ public partial class V1beta1IAMPolicyMemberSpecMemberFrom
     [JsonPropertyName("sqlInstanceRef")]
     public V1beta1IAMPolicyMemberSpecMemberFromSqlInstanceRef? SqlInstanceRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Required. The GCP resource to set the IAM policy on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPolicyMemberSpecResourceRef
@@ -169,7 +186,9 @@ public partial class V1beta1IAMPolicyMemberSpecResourceRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IAMPolicyMemberSpec defines the desired state of IAMPolicyMember</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPolicyMemberSpec
@@ -194,7 +213,9 @@ public partial class V1beta1IAMPolicyMemberSpec
     [JsonPropertyName("role")]
     public string Role { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPolicyMemberStatusConditions
@@ -219,7 +240,9 @@ public partial class V1beta1IAMPolicyMemberStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IAMPolicyMemberStatus defines the observed state of IAMPolicyMember</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPolicyMemberStatus
@@ -232,7 +255,9 @@ public partial class V1beta1IAMPolicyMemberStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IAMPolicyMember is the Schema for the iampolicies API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -262,3 +287,4 @@ public partial class V1beta1IAMPolicyMember : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1IAMPolicyMemberStatus? Status { get; set; }
 }
+#nullable disable

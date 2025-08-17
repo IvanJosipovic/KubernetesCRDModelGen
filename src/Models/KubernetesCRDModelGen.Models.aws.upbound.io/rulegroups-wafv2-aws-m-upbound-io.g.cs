@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.wafv2.aws.m.upbound.io;
+#nullable enable
 /// <summary>RuleGroup is the Schema for the RuleGroups API. Creates a WAFv2 rule group resource. The 'rule' field is not supported due to Kubernetes CRD size limitations with deeply nested fields. Please use the 'ruleJson' field to define rules.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RuleGroupList : IKubernetesObject<V1ListMeta>, IItem
     [JsonPropertyName("items")]
     public IList<V1beta1RuleGroup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuleGroupSpecForProviderCustomResponseBody
@@ -50,7 +53,9 @@ public partial class V1beta1RuleGroupSpecForProviderCustomResponseBody
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines and enables Amazon CloudWatch metrics and web request sample collection. See Visibility Configuration below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuleGroupSpecForProviderVisibilityConfig
@@ -67,7 +72,9 @@ public partial class V1beta1RuleGroupSpecForProviderVisibilityConfig
     [JsonPropertyName("sampledRequestsEnabled")]
     public bool? SampledRequestsEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuleGroupSpecForProvider
@@ -108,7 +115,9 @@ public partial class V1beta1RuleGroupSpecForProvider
     [JsonPropertyName("visibilityConfig")]
     public V1beta1RuleGroupSpecForProviderVisibilityConfig? VisibilityConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuleGroupSpecInitProviderCustomResponseBody
@@ -125,7 +134,9 @@ public partial class V1beta1RuleGroupSpecInitProviderCustomResponseBody
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines and enables Amazon CloudWatch metrics and web request sample collection. See Visibility Configuration below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuleGroupSpecInitProviderVisibilityConfig
@@ -142,7 +153,9 @@ public partial class V1beta1RuleGroupSpecInitProviderVisibilityConfig
     [JsonPropertyName("sampledRequestsEnabled")]
     public bool? SampledRequestsEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuleGroupSpecInitProvider
@@ -179,7 +192,9 @@ public partial class V1beta1RuleGroupSpecInitProvider
     [JsonPropertyName("visibilityConfig")]
     public V1beta1RuleGroupSpecInitProviderVisibilityConfig? VisibilityConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuleGroupSpecProviderConfigRef
@@ -192,7 +207,9 @@ public partial class V1beta1RuleGroupSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuleGroupSpecWriteConnectionSecretToRef
@@ -201,7 +218,9 @@ public partial class V1beta1RuleGroupSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RuleGroupSpec defines the desired state of RuleGroup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuleGroupSpec
@@ -226,7 +245,9 @@ public partial class V1beta1RuleGroupSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RuleGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuleGroupStatusAtProviderCustomResponseBody
@@ -243,7 +264,9 @@ public partial class V1beta1RuleGroupStatusAtProviderCustomResponseBody
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines and enables Amazon CloudWatch metrics and web request sample collection. See Visibility Configuration below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuleGroupStatusAtProviderVisibilityConfig
@@ -260,7 +283,9 @@ public partial class V1beta1RuleGroupStatusAtProviderVisibilityConfig
     [JsonPropertyName("sampledRequestsEnabled")]
     public bool? SampledRequestsEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuleGroupStatusAtProvider
@@ -317,7 +342,9 @@ public partial class V1beta1RuleGroupStatusAtProvider
     [JsonPropertyName("visibilityConfig")]
     public V1beta1RuleGroupStatusAtProviderVisibilityConfig? VisibilityConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuleGroupStatusConditions
@@ -346,7 +373,9 @@ public partial class V1beta1RuleGroupStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RuleGroupStatus defines the observed state of RuleGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuleGroupStatus
@@ -363,7 +392,9 @@ public partial class V1beta1RuleGroupStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RuleGroup is the Schema for the RuleGroups API. Creates a WAFv2 rule group resource. The 'rule' field is not supported due to Kubernetes CRD size limitations with deeply nested fields. Please use the 'ruleJson' field to define rules.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -393,3 +424,4 @@ public partial class V1beta1RuleGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V
     [JsonPropertyName("status")]
     public V1beta1RuleGroupStatus? Status { get; set; }
 }
+#nullable disable

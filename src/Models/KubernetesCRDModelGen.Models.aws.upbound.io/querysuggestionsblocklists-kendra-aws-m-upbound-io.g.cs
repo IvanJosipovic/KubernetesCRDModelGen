@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kendra.aws.m.upbound.io;
+#nullable enable
 /// <summary>QuerySuggestionsBlockList is the Schema for the QuerySuggestionsBlockLists API. provider resource for managing an aws kendra block list used for query suggestions for an index</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1QuerySuggestionsBlockListList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1beta1QuerySuggestionsBlockList> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpecForProviderIndexIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpecForProviderIndexIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Index in kendra to populate indexId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpecForProviderIndexIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpecForProviderIndexIdRef
     [JsonPropertyName("policy")]
     public V1beta1QuerySuggestionsBlockListSpecForProviderIndexIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpecForProviderIndexIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpecForProviderIndexIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Index in kendra to populate indexId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpecForProviderIndexIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpecForProviderIndexIdSelec
     [JsonPropertyName("policy")]
     public V1beta1QuerySuggestionsBlockListSpecForProviderIndexIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpecForProviderRoleArnRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpecForProviderRoleArnRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpecForProviderRoleArnRef
@@ -127,7 +140,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpecForProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1QuerySuggestionsBlockListSpecForProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpecForProviderRoleArnSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpecForProviderRoleArnSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpecForProviderRoleArnSelector
@@ -161,7 +178,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpecForProviderRoleArnSelec
     [JsonPropertyName("policy")]
     public V1beta1QuerySuggestionsBlockListSpecForProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpecForProviderSourceS3PathBucketRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpecForProviderSourceS3Path
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpecForProviderSourceS3PathBucketRef
@@ -191,7 +212,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpecForProviderSourceS3Path
     [JsonPropertyName("policy")]
     public V1beta1QuerySuggestionsBlockListSpecForProviderSourceS3PathBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpecForProviderSourceS3PathBucketSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpecForProviderSourceS3Path
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpecForProviderSourceS3PathBucketSelector
@@ -225,7 +250,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpecForProviderSourceS3Path
     [JsonPropertyName("policy")]
     public V1beta1QuerySuggestionsBlockListSpecForProviderSourceS3PathBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>S3 path where your block list text file is located. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpecForProviderSourceS3Path
@@ -246,7 +273,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpecForProviderSourceS3Path
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpecForProvider
@@ -295,7 +324,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpecInitProviderIndexIdRefPolicy
@@ -308,7 +339,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpecInitProviderIndexIdRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Index in kendra to populate indexId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpecInitProviderIndexIdRef
@@ -325,7 +358,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpecInitProviderIndexIdRef
     [JsonPropertyName("policy")]
     public V1beta1QuerySuggestionsBlockListSpecInitProviderIndexIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpecInitProviderIndexIdSelectorPolicy
@@ -338,7 +373,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpecInitProviderIndexIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Index in kendra to populate indexId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpecInitProviderIndexIdSelector
@@ -359,7 +396,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpecInitProviderIndexIdSele
     [JsonPropertyName("policy")]
     public V1beta1QuerySuggestionsBlockListSpecInitProviderIndexIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpecInitProviderRoleArnRefPolicy
@@ -372,7 +411,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpecInitProviderRoleArnRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpecInitProviderRoleArnRef
@@ -389,7 +430,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpecInitProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1QuerySuggestionsBlockListSpecInitProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpecInitProviderRoleArnSelectorPolicy
@@ -402,7 +445,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpecInitProviderRoleArnSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpecInitProviderRoleArnSelector
@@ -423,7 +468,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpecInitProviderRoleArnSele
     [JsonPropertyName("policy")]
     public V1beta1QuerySuggestionsBlockListSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpecInitProviderSourceS3PathBucketRefPolicy
@@ -436,7 +483,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpecInitProviderSourceS3Pat
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpecInitProviderSourceS3PathBucketRef
@@ -453,7 +502,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpecInitProviderSourceS3Pat
     [JsonPropertyName("policy")]
     public V1beta1QuerySuggestionsBlockListSpecInitProviderSourceS3PathBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpecInitProviderSourceS3PathBucketSelectorPolicy
@@ -466,7 +517,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpecInitProviderSourceS3Pat
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpecInitProviderSourceS3PathBucketSelector
@@ -487,7 +540,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpecInitProviderSourceS3Pat
     [JsonPropertyName("policy")]
     public V1beta1QuerySuggestionsBlockListSpecInitProviderSourceS3PathBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>S3 path where your block list text file is located. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpecInitProviderSourceS3Path
@@ -508,7 +563,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpecInitProviderSourceS3Pat
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpecInitProvider
@@ -553,7 +610,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpecProviderConfigRef
@@ -566,7 +625,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpecWriteConnectionSecretToRef
@@ -575,7 +636,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpecWriteConnectionSecretTo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>QuerySuggestionsBlockListSpec defines the desired state of QuerySuggestionsBlockList</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListSpec
@@ -600,7 +663,9 @@ public partial class V1beta1QuerySuggestionsBlockListSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1QuerySuggestionsBlockListSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>S3 path where your block list text file is located. See details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListStatusAtProviderSourceS3Path
@@ -613,7 +678,9 @@ public partial class V1beta1QuerySuggestionsBlockListStatusAtProviderSourceS3Pat
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListStatusAtProvider
@@ -666,7 +733,9 @@ public partial class V1beta1QuerySuggestionsBlockListStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListStatusConditions
@@ -695,7 +764,9 @@ public partial class V1beta1QuerySuggestionsBlockListStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>QuerySuggestionsBlockListStatus defines the observed state of QuerySuggestionsBlockList.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QuerySuggestionsBlockListStatus
@@ -712,7 +783,9 @@ public partial class V1beta1QuerySuggestionsBlockListStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>QuerySuggestionsBlockList is the Schema for the QuerySuggestionsBlockLists API. provider resource for managing an aws kendra block list used for query suggestions for an index</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -742,3 +815,4 @@ public partial class V1beta1QuerySuggestionsBlockList : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1beta1QuerySuggestionsBlockListStatus? Status { get; set; }
 }
+#nullable disable

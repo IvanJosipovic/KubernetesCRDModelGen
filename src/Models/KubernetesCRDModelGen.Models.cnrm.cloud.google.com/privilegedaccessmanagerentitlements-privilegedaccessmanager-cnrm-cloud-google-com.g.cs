@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.privilegedaccessmanager.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>PrivilegedAccessManagerEntitlement is the Schema for the PrivilegedAccessManagerEntitlement API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PrivilegedAccessManagerEntitlementList : IKubernetes
     [JsonPropertyName("items")]
     public IList<V1beta1PrivilegedAccessManagerEntitlement> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Additional email addresses to be notified based on actions taken.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessManagerEntitlementSpecAdditionalNotificationTargets
@@ -46,7 +49,9 @@ public partial class V1beta1PrivilegedAccessManagerEntitlementSpecAdditionalNoti
     [JsonPropertyName("requesterEmailRecipients")]
     public IList<string>? RequesterEmailRecipients { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AccessControlEntry is used to control who can do some operation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessManagerEntitlementSpecApprovalWorkflowManualApprovalsStepsApprovers
@@ -55,7 +60,9 @@ public partial class V1beta1PrivilegedAccessManagerEntitlementSpecApprovalWorkfl
     [JsonPropertyName("principals")]
     public IList<string> Principals { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Step represents a logical step in a manual approval workflow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessManagerEntitlementSpecApprovalWorkflowManualApprovalsSteps
@@ -72,7 +79,9 @@ public partial class V1beta1PrivilegedAccessManagerEntitlementSpecApprovalWorkfl
     [JsonPropertyName("approvers")]
     public IList<V1beta1PrivilegedAccessManagerEntitlementSpecApprovalWorkflowManualApprovalsStepsApprovers>? Approvers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An approval workflow where users designated as approvers review and act on the grants.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessManagerEntitlementSpecApprovalWorkflowManualApprovals
@@ -85,7 +94,9 @@ public partial class V1beta1PrivilegedAccessManagerEntitlementSpecApprovalWorkfl
     [JsonPropertyName("steps")]
     public IList<V1beta1PrivilegedAccessManagerEntitlementSpecApprovalWorkflowManualApprovalsSteps>? Steps { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The approvals needed before access are granted to a requester. No approvals are needed if this field is null.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessManagerEntitlementSpecApprovalWorkflow
@@ -94,7 +105,9 @@ public partial class V1beta1PrivilegedAccessManagerEntitlementSpecApprovalWorkfl
     [JsonPropertyName("manualApprovals")]
     public V1beta1PrivilegedAccessManagerEntitlementSpecApprovalWorkflowManualApprovals ManualApprovals { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AccessControlEntry is used to control who can do some operation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessManagerEntitlementSpecEligibleUsers
@@ -103,7 +116,9 @@ public partial class V1beta1PrivilegedAccessManagerEntitlementSpecEligibleUsers
     [JsonPropertyName("principals")]
     public IList<string> Principals { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Folder that this resource belongs to. One and only one of 'projectRef', 'folderRef', or 'organizationRef' must be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessManagerEntitlementSpecFolderRef
@@ -120,7 +135,9 @@ public partial class V1beta1PrivilegedAccessManagerEntitlementSpecFolderRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Organization that this resource belongs to. One and only one of 'projectRef', 'folderRef', or 'organizationRef' must be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessManagerEntitlementSpecOrganizationRef
@@ -129,7 +146,9 @@ public partial class V1beta1PrivilegedAccessManagerEntitlementSpecOrganizationRe
     [JsonPropertyName("external")]
     public string External { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RoleBinding represents IAM role bindings that are created after a successful grant.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessManagerEntitlementSpecPrivilegedAccessGcpIAMAccessRoleBindings
@@ -142,7 +161,9 @@ public partial class V1beta1PrivilegedAccessManagerEntitlementSpecPrivilegedAcce
     [JsonPropertyName("role")]
     public string Role { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Access to a Google Cloud resource through IAM.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessManagerEntitlementSpecPrivilegedAccessGcpIAMAccess
@@ -151,7 +172,9 @@ public partial class V1beta1PrivilegedAccessManagerEntitlementSpecPrivilegedAcce
     [JsonPropertyName("roleBindings")]
     public IList<V1beta1PrivilegedAccessManagerEntitlementSpecPrivilegedAccessGcpIAMAccessRoleBindings> RoleBindings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The access granted to a requester on successful approval.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessManagerEntitlementSpecPrivilegedAccess
@@ -160,7 +183,9 @@ public partial class V1beta1PrivilegedAccessManagerEntitlementSpecPrivilegedAcce
     [JsonPropertyName("gcpIAMAccess")]
     public V1beta1PrivilegedAccessManagerEntitlementSpecPrivilegedAccessGcpIAMAccess GcpIAMAccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to. One and only one of 'projectRef', 'folderRef', or 'organizationRef' must be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessManagerEntitlementSpecProjectRef
@@ -181,7 +206,9 @@ public partial class V1beta1PrivilegedAccessManagerEntitlementSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The manner in which the requester should provide a justification for requesting access.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessManagerEntitlementSpecRequesterJustificationConfig
@@ -194,7 +221,9 @@ public partial class V1beta1PrivilegedAccessManagerEntitlementSpecRequesterJusti
     [JsonPropertyName("unstructured")]
     public JsonNode? Unstructured { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivilegedAccessManagerEntitlementSpec defines the desired state of PrivilegedAccessManagerEntitlement.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessManagerEntitlementSpec
@@ -243,7 +272,9 @@ public partial class V1beta1PrivilegedAccessManagerEntitlementSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessManagerEntitlementStatusConditions
@@ -268,7 +299,9 @@ public partial class V1beta1PrivilegedAccessManagerEntitlementStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessManagerEntitlementStatusObservedState
@@ -289,7 +322,9 @@ public partial class V1beta1PrivilegedAccessManagerEntitlementStatusObservedStat
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivilegedAccessManagerEntitlementStatus defines the config connector machine state of PrivilegedAccessManagerEntitlement.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessManagerEntitlementStatus
@@ -310,7 +345,9 @@ public partial class V1beta1PrivilegedAccessManagerEntitlementStatus
     [JsonPropertyName("observedState")]
     public V1beta1PrivilegedAccessManagerEntitlementStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivilegedAccessManagerEntitlement is the Schema for the PrivilegedAccessManagerEntitlement API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -340,3 +377,4 @@ public partial class V1beta1PrivilegedAccessManagerEntitlement : IKubernetesObje
     [JsonPropertyName("status")]
     public V1beta1PrivilegedAccessManagerEntitlementStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kafkaconnect.aws.upbound.io;
+#nullable enable
 /// <summary>Connector is the Schema for the Connectors API. Provides an Amazon MSK Connect Connector resource. Changes to any parameter besides "scaling" will be rejected. Instead you must create a new resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ConnectorList : IKubernetesObject<V1ListMeta>, IItem
     [JsonPropertyName("items")]
     public IList<V1beta1Connector> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderCapacityAutoscalingScaleInPolicy
@@ -42,7 +45,9 @@ public partial class V1beta1ConnectorSpecForProviderCapacityAutoscalingScaleInPo
     [JsonPropertyName("cpuUtilizationPercentage")]
     public double? CpuUtilizationPercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderCapacityAutoscalingScaleOutPolicy
@@ -51,7 +56,9 @@ public partial class V1beta1ConnectorSpecForProviderCapacityAutoscalingScaleOutP
     [JsonPropertyName("cpuUtilizationPercentage")]
     public double? CpuUtilizationPercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderCapacityAutoscaling
@@ -76,7 +83,9 @@ public partial class V1beta1ConnectorSpecForProviderCapacityAutoscaling
     [JsonPropertyName("scaleOutPolicy")]
     public IList<V1beta1ConnectorSpecForProviderCapacityAutoscalingScaleOutPolicy>? ScaleOutPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderCapacityProvisionedCapacity
@@ -89,7 +98,9 @@ public partial class V1beta1ConnectorSpecForProviderCapacityProvisionedCapacity
     [JsonPropertyName("workerCount")]
     public double? WorkerCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderCapacity
@@ -102,7 +113,9 @@ public partial class V1beta1ConnectorSpecForProviderCapacity
     [JsonPropertyName("provisionedCapacity")]
     public IList<V1beta1ConnectorSpecForProviderCapacityProvisionedCapacity>? ProvisionedCapacity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpcSecurityGroupRefsPolicy
@@ -115,7 +128,9 @@ public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClust
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpcSecurityGroupRefs
@@ -128,7 +143,9 @@ public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClust
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpcSecurityGroupRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpcSecurityGroupSelectorPolicy
@@ -141,7 +158,9 @@ public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClust
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpcSecurityGroupSelector
@@ -158,7 +177,9 @@ public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClust
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpcSecurityGroupSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpcSubnetRefsPolicy
@@ -171,7 +192,9 @@ public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClust
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpcSubnetRefs
@@ -184,7 +207,9 @@ public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClust
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpcSubnetRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpcSubnetSelectorPolicy
@@ -197,7 +222,9 @@ public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClust
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnets.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpcSubnetSelector
@@ -214,7 +241,9 @@ public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClust
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpcSubnetSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpc
@@ -243,7 +272,9 @@ public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClust
     [JsonPropertyName("subnets")]
     public IList<string>? Subnets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaCluster
@@ -256,7 +287,9 @@ public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClust
     [JsonPropertyName("vpc")]
     public IList<V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpc>? Vpc { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderKafkaCluster
@@ -265,7 +298,9 @@ public partial class V1beta1ConnectorSpecForProviderKafkaCluster
     [JsonPropertyName("apacheKafkaCluster")]
     public IList<V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaCluster>? ApacheKafkaCluster { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderKafkaClusterClientAuthentication
@@ -274,7 +309,9 @@ public partial class V1beta1ConnectorSpecForProviderKafkaClusterClientAuthentica
     [JsonPropertyName("authenticationType")]
     public string? AuthenticationType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderKafkaClusterEncryptionInTransit
@@ -283,7 +320,9 @@ public partial class V1beta1ConnectorSpecForProviderKafkaClusterEncryptionInTran
     [JsonPropertyName("encryptionType")]
     public string? EncryptionType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryCloudwatchLogsLogGroupRefPolicy
@@ -296,7 +335,9 @@ public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDelivery
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Group in cloudwatchlogs to populate logGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryCloudwatchLogsLogGroupRef
@@ -309,7 +350,9 @@ public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDelivery
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryCloudwatchLogsLogGroupRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryCloudwatchLogsLogGroupSelectorPolicy
@@ -322,7 +365,9 @@ public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDelivery
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Group in cloudwatchlogs to populate logGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryCloudwatchLogsLogGroupSelector
@@ -339,7 +384,9 @@ public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDelivery
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryCloudwatchLogsLogGroupSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryCloudwatchLogs
@@ -360,7 +407,9 @@ public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDelivery
     [JsonPropertyName("logGroupSelector")]
     public V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryCloudwatchLogsLogGroupSelector? LogGroupSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryFirehoseDeliveryStreamRefPolicy
@@ -373,7 +422,9 @@ public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDelivery
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DeliveryStream in firehose to populate deliveryStream.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryFirehoseDeliveryStreamRef
@@ -386,7 +437,9 @@ public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDelivery
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryFirehoseDeliveryStreamRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryFirehoseDeliveryStreamSelectorPolicy
@@ -399,7 +452,9 @@ public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDelivery
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DeliveryStream in firehose to populate deliveryStream.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryFirehoseDeliveryStreamSelector
@@ -416,7 +471,9 @@ public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDelivery
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryFirehoseDeliveryStreamSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryFirehose
@@ -437,7 +494,9 @@ public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDelivery
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryS3BucketRefPolicy
@@ -450,7 +509,9 @@ public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDelivery
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryS3BucketRef
@@ -463,7 +524,9 @@ public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDelivery
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryS3BucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryS3BucketSelectorPolicy
@@ -476,7 +539,9 @@ public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDelivery
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryS3BucketSelector
@@ -493,7 +558,9 @@ public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDelivery
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryS3BucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryS3
@@ -518,7 +585,9 @@ public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDelivery
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDelivery
@@ -535,7 +604,9 @@ public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDelivery
     [JsonPropertyName("s3")]
     public IList<V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryS3>? S3 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderLogDelivery
@@ -544,7 +615,9 @@ public partial class V1beta1ConnectorSpecForProviderLogDelivery
     [JsonPropertyName("workerLogDelivery")]
     public IList<V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDelivery>? WorkerLogDelivery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderPluginCustomPluginArnRefPolicy
@@ -557,7 +630,9 @@ public partial class V1beta1ConnectorSpecForProviderPluginCustomPluginArnRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CustomPlugin in kafkaconnect to populate arn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderPluginCustomPluginArnRef
@@ -570,7 +645,9 @@ public partial class V1beta1ConnectorSpecForProviderPluginCustomPluginArnRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecForProviderPluginCustomPluginArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderPluginCustomPluginArnSelectorPolicy
@@ -583,7 +660,9 @@ public partial class V1beta1ConnectorSpecForProviderPluginCustomPluginArnSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CustomPlugin in kafkaconnect to populate arn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderPluginCustomPluginArnSelector
@@ -600,7 +679,9 @@ public partial class V1beta1ConnectorSpecForProviderPluginCustomPluginArnSelecto
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecForProviderPluginCustomPluginArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderPluginCustomPlugin
@@ -621,7 +702,9 @@ public partial class V1beta1ConnectorSpecForProviderPluginCustomPlugin
     [JsonPropertyName("revision")]
     public double? Revision { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderPlugin
@@ -630,7 +713,9 @@ public partial class V1beta1ConnectorSpecForProviderPlugin
     [JsonPropertyName("customPlugin")]
     public IList<V1beta1ConnectorSpecForProviderPluginCustomPlugin>? CustomPlugin { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderServiceExecutionRoleArnRefPolicy
@@ -643,7 +728,9 @@ public partial class V1beta1ConnectorSpecForProviderServiceExecutionRoleArnRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate serviceExecutionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderServiceExecutionRoleArnRef
@@ -656,7 +743,9 @@ public partial class V1beta1ConnectorSpecForProviderServiceExecutionRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecForProviderServiceExecutionRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderServiceExecutionRoleArnSelectorPolicy
@@ -669,7 +758,9 @@ public partial class V1beta1ConnectorSpecForProviderServiceExecutionRoleArnSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate serviceExecutionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderServiceExecutionRoleArnSelector
@@ -686,7 +777,9 @@ public partial class V1beta1ConnectorSpecForProviderServiceExecutionRoleArnSelec
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecForProviderServiceExecutionRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderWorkerConfigurationArnRefPolicy
@@ -699,7 +792,9 @@ public partial class V1beta1ConnectorSpecForProviderWorkerConfigurationArnRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a WorkerConfiguration in kafkaconnect to populate arn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderWorkerConfigurationArnRef
@@ -712,7 +807,9 @@ public partial class V1beta1ConnectorSpecForProviderWorkerConfigurationArnRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecForProviderWorkerConfigurationArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderWorkerConfigurationArnSelectorPolicy
@@ -725,7 +822,9 @@ public partial class V1beta1ConnectorSpecForProviderWorkerConfigurationArnSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a WorkerConfiguration in kafkaconnect to populate arn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderWorkerConfigurationArnSelector
@@ -742,7 +841,9 @@ public partial class V1beta1ConnectorSpecForProviderWorkerConfigurationArnSelect
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecForProviderWorkerConfigurationArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProviderWorkerConfiguration
@@ -763,7 +864,9 @@ public partial class V1beta1ConnectorSpecForProviderWorkerConfiguration
     [JsonPropertyName("revision")]
     public double? Revision { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecForProvider
@@ -832,7 +935,9 @@ public partial class V1beta1ConnectorSpecForProvider
     [JsonPropertyName("workerConfiguration")]
     public IList<V1beta1ConnectorSpecForProviderWorkerConfiguration>? WorkerConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderCapacityAutoscalingScaleInPolicy
@@ -841,7 +946,9 @@ public partial class V1beta1ConnectorSpecInitProviderCapacityAutoscalingScaleInP
     [JsonPropertyName("cpuUtilizationPercentage")]
     public double? CpuUtilizationPercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderCapacityAutoscalingScaleOutPolicy
@@ -850,7 +957,9 @@ public partial class V1beta1ConnectorSpecInitProviderCapacityAutoscalingScaleOut
     [JsonPropertyName("cpuUtilizationPercentage")]
     public double? CpuUtilizationPercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderCapacityAutoscaling
@@ -875,7 +984,9 @@ public partial class V1beta1ConnectorSpecInitProviderCapacityAutoscaling
     [JsonPropertyName("scaleOutPolicy")]
     public IList<V1beta1ConnectorSpecInitProviderCapacityAutoscalingScaleOutPolicy>? ScaleOutPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderCapacityProvisionedCapacity
@@ -888,7 +999,9 @@ public partial class V1beta1ConnectorSpecInitProviderCapacityProvisionedCapacity
     [JsonPropertyName("workerCount")]
     public double? WorkerCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderCapacity
@@ -901,7 +1014,9 @@ public partial class V1beta1ConnectorSpecInitProviderCapacity
     [JsonPropertyName("provisionedCapacity")]
     public IList<V1beta1ConnectorSpecInitProviderCapacityProvisionedCapacity>? ProvisionedCapacity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpcSecurityGroupRefsPolicy
@@ -914,7 +1029,9 @@ public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClus
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpcSecurityGroupRefs
@@ -927,7 +1044,9 @@ public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClus
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpcSecurityGroupRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpcSecurityGroupSelectorPolicy
@@ -940,7 +1059,9 @@ public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClus
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpcSecurityGroupSelector
@@ -957,7 +1078,9 @@ public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClus
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpcSecurityGroupSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpcSubnetRefsPolicy
@@ -970,7 +1093,9 @@ public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClus
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpcSubnetRefs
@@ -983,7 +1108,9 @@ public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClus
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpcSubnetRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpcSubnetSelectorPolicy
@@ -996,7 +1123,9 @@ public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClus
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnets.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpcSubnetSelector
@@ -1013,7 +1142,9 @@ public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClus
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpcSubnetSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpc
@@ -1042,7 +1173,9 @@ public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClus
     [JsonPropertyName("subnets")]
     public IList<string>? Subnets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaCluster
@@ -1055,7 +1188,9 @@ public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClus
     [JsonPropertyName("vpc")]
     public IList<V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpc>? Vpc { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderKafkaCluster
@@ -1064,7 +1199,9 @@ public partial class V1beta1ConnectorSpecInitProviderKafkaCluster
     [JsonPropertyName("apacheKafkaCluster")]
     public IList<V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaCluster>? ApacheKafkaCluster { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderKafkaClusterClientAuthentication
@@ -1073,7 +1210,9 @@ public partial class V1beta1ConnectorSpecInitProviderKafkaClusterClientAuthentic
     [JsonPropertyName("authenticationType")]
     public string? AuthenticationType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderKafkaClusterEncryptionInTransit
@@ -1082,7 +1221,9 @@ public partial class V1beta1ConnectorSpecInitProviderKafkaClusterEncryptionInTra
     [JsonPropertyName("encryptionType")]
     public string? EncryptionType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryCloudwatchLogsLogGroupRefPolicy
@@ -1095,7 +1236,9 @@ public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliver
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Group in cloudwatchlogs to populate logGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryCloudwatchLogsLogGroupRef
@@ -1108,7 +1251,9 @@ public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliver
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryCloudwatchLogsLogGroupRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryCloudwatchLogsLogGroupSelectorPolicy
@@ -1121,7 +1266,9 @@ public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliver
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Group in cloudwatchlogs to populate logGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryCloudwatchLogsLogGroupSelector
@@ -1138,7 +1285,9 @@ public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliver
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryCloudwatchLogsLogGroupSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryCloudwatchLogs
@@ -1159,7 +1308,9 @@ public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliver
     [JsonPropertyName("logGroupSelector")]
     public V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryCloudwatchLogsLogGroupSelector? LogGroupSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryFirehoseDeliveryStreamRefPolicy
@@ -1172,7 +1323,9 @@ public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliver
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DeliveryStream in firehose to populate deliveryStream.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryFirehoseDeliveryStreamRef
@@ -1185,7 +1338,9 @@ public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliver
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryFirehoseDeliveryStreamRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryFirehoseDeliveryStreamSelectorPolicy
@@ -1198,7 +1353,9 @@ public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliver
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DeliveryStream in firehose to populate deliveryStream.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryFirehoseDeliveryStreamSelector
@@ -1215,7 +1372,9 @@ public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliver
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryFirehoseDeliveryStreamSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryFirehose
@@ -1236,7 +1395,9 @@ public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliver
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryS3BucketRefPolicy
@@ -1249,7 +1410,9 @@ public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliver
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryS3BucketRef
@@ -1262,7 +1425,9 @@ public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliver
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryS3BucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryS3BucketSelectorPolicy
@@ -1275,7 +1440,9 @@ public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliver
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryS3BucketSelector
@@ -1292,7 +1459,9 @@ public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliver
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryS3BucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryS3
@@ -1317,7 +1486,9 @@ public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliver
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDelivery
@@ -1334,7 +1505,9 @@ public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliver
     [JsonPropertyName("s3")]
     public IList<V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryS3>? S3 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderLogDelivery
@@ -1343,7 +1516,9 @@ public partial class V1beta1ConnectorSpecInitProviderLogDelivery
     [JsonPropertyName("workerLogDelivery")]
     public IList<V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDelivery>? WorkerLogDelivery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderPluginCustomPluginArnRefPolicy
@@ -1356,7 +1531,9 @@ public partial class V1beta1ConnectorSpecInitProviderPluginCustomPluginArnRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CustomPlugin in kafkaconnect to populate arn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderPluginCustomPluginArnRef
@@ -1369,7 +1546,9 @@ public partial class V1beta1ConnectorSpecInitProviderPluginCustomPluginArnRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecInitProviderPluginCustomPluginArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderPluginCustomPluginArnSelectorPolicy
@@ -1382,7 +1561,9 @@ public partial class V1beta1ConnectorSpecInitProviderPluginCustomPluginArnSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CustomPlugin in kafkaconnect to populate arn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderPluginCustomPluginArnSelector
@@ -1399,7 +1580,9 @@ public partial class V1beta1ConnectorSpecInitProviderPluginCustomPluginArnSelect
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecInitProviderPluginCustomPluginArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderPluginCustomPlugin
@@ -1420,7 +1603,9 @@ public partial class V1beta1ConnectorSpecInitProviderPluginCustomPlugin
     [JsonPropertyName("revision")]
     public double? Revision { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderPlugin
@@ -1429,7 +1614,9 @@ public partial class V1beta1ConnectorSpecInitProviderPlugin
     [JsonPropertyName("customPlugin")]
     public IList<V1beta1ConnectorSpecInitProviderPluginCustomPlugin>? CustomPlugin { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderServiceExecutionRoleArnRefPolicy
@@ -1442,7 +1629,9 @@ public partial class V1beta1ConnectorSpecInitProviderServiceExecutionRoleArnRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate serviceExecutionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderServiceExecutionRoleArnRef
@@ -1455,7 +1644,9 @@ public partial class V1beta1ConnectorSpecInitProviderServiceExecutionRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecInitProviderServiceExecutionRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderServiceExecutionRoleArnSelectorPolicy
@@ -1468,7 +1659,9 @@ public partial class V1beta1ConnectorSpecInitProviderServiceExecutionRoleArnSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate serviceExecutionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderServiceExecutionRoleArnSelector
@@ -1485,7 +1678,9 @@ public partial class V1beta1ConnectorSpecInitProviderServiceExecutionRoleArnSele
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecInitProviderServiceExecutionRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderWorkerConfigurationArnRefPolicy
@@ -1498,7 +1693,9 @@ public partial class V1beta1ConnectorSpecInitProviderWorkerConfigurationArnRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a WorkerConfiguration in kafkaconnect to populate arn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderWorkerConfigurationArnRef
@@ -1511,7 +1708,9 @@ public partial class V1beta1ConnectorSpecInitProviderWorkerConfigurationArnRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecInitProviderWorkerConfigurationArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderWorkerConfigurationArnSelectorPolicy
@@ -1524,7 +1723,9 @@ public partial class V1beta1ConnectorSpecInitProviderWorkerConfigurationArnSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a WorkerConfiguration in kafkaconnect to populate arn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderWorkerConfigurationArnSelector
@@ -1541,7 +1742,9 @@ public partial class V1beta1ConnectorSpecInitProviderWorkerConfigurationArnSelec
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecInitProviderWorkerConfigurationArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProviderWorkerConfiguration
@@ -1562,7 +1765,9 @@ public partial class V1beta1ConnectorSpecInitProviderWorkerConfiguration
     [JsonPropertyName("revision")]
     public double? Revision { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecInitProvider
@@ -1623,7 +1828,9 @@ public partial class V1beta1ConnectorSpecInitProvider
     [JsonPropertyName("workerConfiguration")]
     public IList<V1beta1ConnectorSpecInitProviderWorkerConfiguration>? WorkerConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecProviderConfigRefPolicy
@@ -1636,7 +1843,9 @@ public partial class V1beta1ConnectorSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecProviderConfigRef
@@ -1649,7 +1858,9 @@ public partial class V1beta1ConnectorSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectorSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpecWriteConnectionSecretToRef
@@ -1662,7 +1873,9 @@ public partial class V1beta1ConnectorSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConnectorSpec defines the desired state of Connector</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorSpec
@@ -1691,7 +1904,9 @@ public partial class V1beta1ConnectorSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ConnectorSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorStatusAtProviderCapacityAutoscalingScaleInPolicy
@@ -1700,7 +1915,9 @@ public partial class V1beta1ConnectorStatusAtProviderCapacityAutoscalingScaleInP
     [JsonPropertyName("cpuUtilizationPercentage")]
     public double? CpuUtilizationPercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorStatusAtProviderCapacityAutoscalingScaleOutPolicy
@@ -1709,7 +1926,9 @@ public partial class V1beta1ConnectorStatusAtProviderCapacityAutoscalingScaleOut
     [JsonPropertyName("cpuUtilizationPercentage")]
     public double? CpuUtilizationPercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorStatusAtProviderCapacityAutoscaling
@@ -1734,7 +1953,9 @@ public partial class V1beta1ConnectorStatusAtProviderCapacityAutoscaling
     [JsonPropertyName("scaleOutPolicy")]
     public IList<V1beta1ConnectorStatusAtProviderCapacityAutoscalingScaleOutPolicy>? ScaleOutPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorStatusAtProviderCapacityProvisionedCapacity
@@ -1747,7 +1968,9 @@ public partial class V1beta1ConnectorStatusAtProviderCapacityProvisionedCapacity
     [JsonPropertyName("workerCount")]
     public double? WorkerCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorStatusAtProviderCapacity
@@ -1760,7 +1983,9 @@ public partial class V1beta1ConnectorStatusAtProviderCapacity
     [JsonPropertyName("provisionedCapacity")]
     public IList<V1beta1ConnectorStatusAtProviderCapacityProvisionedCapacity>? ProvisionedCapacity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorStatusAtProviderKafkaClusterApacheKafkaClusterVpc
@@ -1773,7 +1998,9 @@ public partial class V1beta1ConnectorStatusAtProviderKafkaClusterApacheKafkaClus
     [JsonPropertyName("subnets")]
     public IList<string>? Subnets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorStatusAtProviderKafkaClusterApacheKafkaCluster
@@ -1786,7 +2013,9 @@ public partial class V1beta1ConnectorStatusAtProviderKafkaClusterApacheKafkaClus
     [JsonPropertyName("vpc")]
     public IList<V1beta1ConnectorStatusAtProviderKafkaClusterApacheKafkaClusterVpc>? Vpc { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorStatusAtProviderKafkaCluster
@@ -1795,7 +2024,9 @@ public partial class V1beta1ConnectorStatusAtProviderKafkaCluster
     [JsonPropertyName("apacheKafkaCluster")]
     public IList<V1beta1ConnectorStatusAtProviderKafkaClusterApacheKafkaCluster>? ApacheKafkaCluster { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorStatusAtProviderKafkaClusterClientAuthentication
@@ -1804,7 +2035,9 @@ public partial class V1beta1ConnectorStatusAtProviderKafkaClusterClientAuthentic
     [JsonPropertyName("authenticationType")]
     public string? AuthenticationType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorStatusAtProviderKafkaClusterEncryptionInTransit
@@ -1813,7 +2046,9 @@ public partial class V1beta1ConnectorStatusAtProviderKafkaClusterEncryptionInTra
     [JsonPropertyName("encryptionType")]
     public string? EncryptionType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorStatusAtProviderLogDeliveryWorkerLogDeliveryCloudwatchLogs
@@ -1826,7 +2061,9 @@ public partial class V1beta1ConnectorStatusAtProviderLogDeliveryWorkerLogDeliver
     [JsonPropertyName("logGroup")]
     public string? LogGroup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorStatusAtProviderLogDeliveryWorkerLogDeliveryFirehose
@@ -1839,7 +2076,9 @@ public partial class V1beta1ConnectorStatusAtProviderLogDeliveryWorkerLogDeliver
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorStatusAtProviderLogDeliveryWorkerLogDeliveryS3
@@ -1856,7 +2095,9 @@ public partial class V1beta1ConnectorStatusAtProviderLogDeliveryWorkerLogDeliver
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorStatusAtProviderLogDeliveryWorkerLogDelivery
@@ -1873,7 +2114,9 @@ public partial class V1beta1ConnectorStatusAtProviderLogDeliveryWorkerLogDeliver
     [JsonPropertyName("s3")]
     public IList<V1beta1ConnectorStatusAtProviderLogDeliveryWorkerLogDeliveryS3>? S3 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorStatusAtProviderLogDelivery
@@ -1882,7 +2125,9 @@ public partial class V1beta1ConnectorStatusAtProviderLogDelivery
     [JsonPropertyName("workerLogDelivery")]
     public IList<V1beta1ConnectorStatusAtProviderLogDeliveryWorkerLogDelivery>? WorkerLogDelivery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorStatusAtProviderPluginCustomPlugin
@@ -1895,7 +2140,9 @@ public partial class V1beta1ConnectorStatusAtProviderPluginCustomPlugin
     [JsonPropertyName("revision")]
     public double? Revision { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorStatusAtProviderPlugin
@@ -1904,7 +2151,9 @@ public partial class V1beta1ConnectorStatusAtProviderPlugin
     [JsonPropertyName("customPlugin")]
     public IList<V1beta1ConnectorStatusAtProviderPluginCustomPlugin>? CustomPlugin { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorStatusAtProviderWorkerConfiguration
@@ -1917,7 +2166,9 @@ public partial class V1beta1ConnectorStatusAtProviderWorkerConfiguration
     [JsonPropertyName("revision")]
     public double? Revision { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorStatusAtProvider
@@ -1994,7 +2245,9 @@ public partial class V1beta1ConnectorStatusAtProvider
     [JsonPropertyName("workerConfiguration")]
     public IList<V1beta1ConnectorStatusAtProviderWorkerConfiguration>? WorkerConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorStatusConditions
@@ -2023,7 +2276,9 @@ public partial class V1beta1ConnectorStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConnectorStatus defines the observed state of Connector.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectorStatus
@@ -2040,7 +2295,9 @@ public partial class V1beta1ConnectorStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Connector is the Schema for the Connectors API. Provides an Amazon MSK Connect Connector resource. Changes to any parameter besides "scaling" will be rejected. Instead you must create a new resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -2070,3 +2327,4 @@ public partial class V1beta1Connector : IKubernetesObject<V1ObjectMeta>, ISpec<V
     [JsonPropertyName("status")]
     public V1beta1ConnectorStatus? Status { get; set; }
 }
+#nullable disable

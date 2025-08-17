@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20211101.Server Generator information: - Generated from: /sql/resource-manager/Microsoft.Sql/stable/2021-11-01/Servers.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20211101storageServerList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1api20211101storageServer> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServerSpecAdministratorLoginPassword
@@ -46,7 +49,9 @@ public partial class V1api20211101storageServerSpecAdministratorLoginPassword
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211101.ServerExternalAdministrator Properties of a active directory administrator.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServerSpecAdministrators
@@ -79,7 +84,9 @@ public partial class V1api20211101storageServerSpecAdministrators
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServerSpecIdentityUserAssignedIdentitiesReference
@@ -100,7 +107,9 @@ public partial class V1api20211101storageServerSpecIdentityUserAssignedIdentitie
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211101.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServerSpecIdentityUserAssignedIdentities
@@ -113,7 +122,9 @@ public partial class V1api20211101storageServerSpecIdentityUserAssignedIdentitie
     [JsonPropertyName("reference")]
     public V1api20211101storageServerSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211101.ResourceIdentity Azure Active Directory identity configuration for a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServerSpecIdentity
@@ -130,7 +141,9 @@ public partial class V1api20211101storageServerSpecIdentity
     [JsonPropertyName("userAssignedIdentities")]
     public IList<V1api20211101storageServerSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServerSpecOperatorSpecConfigMapExpressions
@@ -147,7 +160,9 @@ public partial class V1api20211101storageServerSpecOperatorSpecConfigMapExpressi
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to: SecretDestination in secrets.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServerSpecOperatorSpecConfigMapsFullyQualifiedDomainName
@@ -160,7 +175,9 @@ public partial class V1api20211101storageServerSpecOperatorSpecConfigMapsFullyQu
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211101.ServerOperatorConfigMaps</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServerSpecOperatorSpecConfigMaps
@@ -173,7 +190,9 @@ public partial class V1api20211101storageServerSpecOperatorSpecConfigMaps
     [JsonPropertyName("fullyQualifiedDomainName")]
     public V1api20211101storageServerSpecOperatorSpecConfigMapsFullyQualifiedDomainName? FullyQualifiedDomainName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServerSpecOperatorSpecSecretExpressions
@@ -190,7 +209,9 @@ public partial class V1api20211101storageServerSpecOperatorSpecSecretExpressions
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211101.ServerOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServerSpecOperatorSpec
@@ -211,7 +232,9 @@ public partial class V1api20211101storageServerSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20211101storageServerSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServerSpecOwner
@@ -224,7 +247,9 @@ public partial class V1api20211101storageServerSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrimaryUserAssignedIdentityReference: The resource id of a user assigned identity to be used by default.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServerSpecPrimaryUserAssignedIdentityReference
@@ -245,7 +270,9 @@ public partial class V1api20211101storageServerSpecPrimaryUserAssignedIdentityRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211101.Server_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServerSpec
@@ -322,7 +349,9 @@ public partial class V1api20211101storageServerSpec
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211101.ServerExternalAdministrator_STATUS Properties of a active directory administrator.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServerStatusAdministrators
@@ -355,7 +384,9 @@ public partial class V1api20211101storageServerStatusAdministrators
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServerStatusConditions
@@ -388,7 +419,9 @@ public partial class V1api20211101storageServerStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211101.UserIdentity_STATUS Azure Active Directory identity configuration for a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServerStatusIdentityUserAssignedIdentities
@@ -405,7 +438,9 @@ public partial class V1api20211101storageServerStatusIdentityUserAssignedIdentit
     [JsonPropertyName("principalId")]
     public string? PrincipalId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211101.ResourceIdentity_STATUS Azure Active Directory identity configuration for a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServerStatusIdentity
@@ -430,7 +465,9 @@ public partial class V1api20211101storageServerStatusIdentity
     [JsonPropertyName("userAssignedIdentities")]
     public IDictionary<string, V1api20211101storageServerStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211101.PrivateEndpointProperty_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServerStatusPrivateEndpointConnectionsPropertiesPrivateEndpoint
@@ -443,7 +480,9 @@ public partial class V1api20211101storageServerStatusPrivateEndpointConnectionsP
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211101.PrivateLinkServiceConnectionStateProperty_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServerStatusPrivateEndpointConnectionsPropertiesPrivateLinkServiceConnectionState
@@ -464,7 +503,9 @@ public partial class V1api20211101storageServerStatusPrivateEndpointConnectionsP
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211101.PrivateEndpointConnectionProperties_STATUS Properties of a private endpoint connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServerStatusPrivateEndpointConnectionsProperties
@@ -489,7 +530,9 @@ public partial class V1api20211101storageServerStatusPrivateEndpointConnectionsP
     [JsonPropertyName("provisioningState")]
     public string? ProvisioningState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211101.ServerPrivateEndpointConnection_STATUS A private endpoint connection under a server</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServerStatusPrivateEndpointConnections
@@ -506,7 +549,9 @@ public partial class V1api20211101storageServerStatusPrivateEndpointConnections
     [JsonPropertyName("properties")]
     public V1api20211101storageServerStatusPrivateEndpointConnectionsProperties? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211101.Server_STATUS An Azure SQL Database server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServerStatus
@@ -599,7 +644,9 @@ public partial class V1api20211101storageServerStatus
     [JsonPropertyName("workspaceFeature")]
     public string? WorkspaceFeature { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211101.Server Generator information: - Generated from: /sql/resource-manager/Microsoft.Sql/stable/2021-11-01/Servers.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -629,3 +676,4 @@ public partial class V1api20211101storageServer : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1api20211101storageServerStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudiot.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1CloudIOTDeviceList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1alpha1CloudIOTDevice> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A public key used to verify the signature of JSON Web Tokens (JWTs).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudIOTDeviceSpecCredentialsPublicKey
@@ -46,7 +49,9 @@ public partial class V1alpha1CloudIOTDeviceSpecCredentialsPublicKey
     [JsonPropertyName("key")]
     public string Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudIOTDeviceSpecCredentials
@@ -59,7 +64,9 @@ public partial class V1alpha1CloudIOTDeviceSpecCredentials
     [JsonPropertyName("publicKey")]
     public V1alpha1CloudIOTDeviceSpecCredentialsPublicKey PublicKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Gateway-related configuration and state.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudIOTDeviceSpecGatewayConfig
@@ -80,7 +87,9 @@ public partial class V1alpha1CloudIOTDeviceSpecGatewayConfig
     [JsonPropertyName("lastAccessedGatewayTime")]
     public string? LastAccessedGatewayTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudIOTDeviceSpec
@@ -113,7 +122,9 @@ public partial class V1alpha1CloudIOTDeviceSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudIOTDeviceStatusConditions
@@ -138,7 +149,9 @@ public partial class V1alpha1CloudIOTDeviceStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudIOTDeviceStatusConfig
@@ -159,7 +172,9 @@ public partial class V1alpha1CloudIOTDeviceStatusConfig
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudIOTDeviceStatusLastErrorStatus
@@ -176,7 +191,9 @@ public partial class V1alpha1CloudIOTDeviceStatusLastErrorStatus
     [JsonPropertyName("number")]
     public int? Number { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudIOTDeviceStatusState
@@ -189,7 +206,9 @@ public partial class V1alpha1CloudIOTDeviceStatusState
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudIOTDeviceStatus
@@ -242,7 +261,9 @@ public partial class V1alpha1CloudIOTDeviceStatus
     [JsonPropertyName("state")]
     public IList<V1alpha1CloudIOTDeviceStatusState>? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -272,3 +293,4 @@ public partial class V1alpha1CloudIOTDevice : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1alpha1CloudIOTDeviceStatus? Status { get; set; }
 }
+#nullable disable

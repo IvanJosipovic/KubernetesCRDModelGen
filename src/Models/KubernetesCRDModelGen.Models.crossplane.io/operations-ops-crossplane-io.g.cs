@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ops.crossplane.io;
+#nullable enable
 /// <summary>An Operation defines a pipeline of functions that together constitute a day two operation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1OperationList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1alpha1Operation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SecretRef is a reference to a secret containing credentials that should be supplied to the function.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1OperationSpecPipelineCredentialsSecretRef
@@ -46,7 +49,9 @@ public partial class V1alpha1OperationSpecPipelineCredentialsSecretRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FunctionCredentials are optional credentials that a function needs to run.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1OperationSpecPipelineCredentials
@@ -63,7 +68,9 @@ public partial class V1alpha1OperationSpecPipelineCredentials
     [JsonPropertyName("source")]
     public string Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FunctionRef is a reference to the function this step should execute.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1OperationSpecPipelineFunctionRef
@@ -72,7 +79,9 @@ public partial class V1alpha1OperationSpecPipelineFunctionRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RequiredResourceSelector selects resources that should be fetched before a pipeline step runs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1OperationSpecPipelineRequirementsRequiredResources
@@ -101,7 +110,9 @@ public partial class V1alpha1OperationSpecPipelineRequirementsRequiredResources
     [JsonPropertyName("requirementName")]
     public string RequirementName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Requirements are resource requirements that will be satisfied before this pipeline step is called for the first time. This allows pre-populating required resources without requiring a function to request them first.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1OperationSpecPipelineRequirements
@@ -110,7 +121,9 @@ public partial class V1alpha1OperationSpecPipelineRequirements
     [JsonPropertyName("requiredResources")]
     public IList<V1alpha1OperationSpecPipelineRequirementsRequiredResources>? RequiredResources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A PipelineStep in an operation function pipeline.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1OperationSpecPipeline
@@ -135,7 +148,9 @@ public partial class V1alpha1OperationSpecPipeline
     [JsonPropertyName("step")]
     public string Step { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OperationSpec specifies desired state of an operation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1OperationSpec
@@ -152,7 +167,9 @@ public partial class V1alpha1OperationSpec
     [JsonPropertyName("retryLimit")]
     public long? RetryLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An AppliedResourceRef is a reference to a resource an Operation applied.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1OperationStatusAppliedResourceRefs
@@ -173,7 +190,9 @@ public partial class V1alpha1OperationStatusAppliedResourceRefs
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1OperationStatusConditions
@@ -202,7 +221,9 @@ public partial class V1alpha1OperationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PipelineStepStatus represents the status of an individual pipeline step.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1OperationStatusPipeline
@@ -215,7 +236,9 @@ public partial class V1alpha1OperationStatusPipeline
     [JsonPropertyName("step")]
     public string Step { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OperationStatus represents the observed state of an operation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1OperationStatus
@@ -236,7 +259,9 @@ public partial class V1alpha1OperationStatus
     [JsonPropertyName("pipeline")]
     public IList<V1alpha1OperationStatusPipeline>? Pipeline { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An Operation defines a pipeline of functions that together constitute a day two operation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -266,3 +291,4 @@ public partial class V1alpha1Operation : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1alpha1OperationStatus? Status { get; set; }
 }
+#nullable disable

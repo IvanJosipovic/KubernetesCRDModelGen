@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkservices.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginList : IKubernetesObj
     [JsonPropertyName("items")]
     public IList<V1alpha1NetworkServicesEdgeCacheOrigin> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Enable AWS Signature Version 4 origin authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecAwsV4Authentication
@@ -50,7 +53,9 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecAwsV4Authenticati
     [JsonPropertyName("secretAccessKeyVersion")]
     public string SecretAccessKeyVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecOriginOverrideActionHeaderActionRequestHeadersToAdd
@@ -67,7 +72,9 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecOriginOverrideAct
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The header actions, including adding and removing headers, for request handled by this origin.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecOriginOverrideActionHeaderAction
@@ -76,7 +83,9 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecOriginOverrideAct
     [JsonPropertyName("requestHeadersToAdd")]
     public IList<V1alpha1NetworkServicesEdgeCacheOriginSpecOriginOverrideActionHeaderActionRequestHeadersToAdd>? RequestHeadersToAdd { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The URL rewrite configuration for request that are handled by this origin.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecOriginOverrideActionUrlRewrite
@@ -85,7 +94,9 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecOriginOverrideAct
     [JsonPropertyName("hostRewrite")]
     public string? HostRewrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The override actions, including url rewrites and header additions, for requests that use this origin.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecOriginOverrideAction
@@ -98,7 +109,9 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecOriginOverrideAct
     [JsonPropertyName("urlRewrite")]
     public V1alpha1NetworkServicesEdgeCacheOriginSpecOriginOverrideActionUrlRewrite? UrlRewrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Follow redirects from this origin.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecOriginRedirect
@@ -107,7 +120,9 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecOriginRedirect
     [JsonPropertyName("redirectConditions")]
     public IList<string>? RedirectConditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecProjectRef
@@ -124,7 +139,9 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The connection and HTTP timeout configuration for this origin.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecTimeout
@@ -145,7 +162,9 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecTimeout
     [JsonPropertyName("responseTimeout")]
     public string? ResponseTimeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheOriginSpec
@@ -202,7 +221,9 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginSpec
     [JsonPropertyName("timeout")]
     public V1alpha1NetworkServicesEdgeCacheOriginSpecTimeout? Timeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheOriginStatusConditions
@@ -227,7 +248,9 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesEdgeCacheOriginStatus
@@ -240,7 +263,9 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -270,3 +295,4 @@ public partial class V1alpha1NetworkServicesEdgeCacheOrigin : IKubernetesObject<
     [JsonPropertyName("status")]
     public V1alpha1NetworkServicesEdgeCacheOriginStatus? Status { get; set; }
 }
+#nullable disable

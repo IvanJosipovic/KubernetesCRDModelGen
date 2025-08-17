@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigquery.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>BigQueryTable is the Schema for the BigQueryTable API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BigQueryTableList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1beta1BigQueryTable> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DatasetRef defines the resource reference to BigQueryDataset, which "External" field holds the GCP identifier for the KRM object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryTableSpecDatasetRef
@@ -50,7 +53,9 @@ public partial class V1beta1BigQueryTableSpecDatasetRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryTableSpecEncryptionConfigurationKmsKeyRef
@@ -67,7 +72,9 @@ public partial class V1beta1BigQueryTableSpecEncryptionConfigurationKmsKeyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Custom encryption configuration (e.g., Cloud KMS keys).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryTableSpecEncryptionConfiguration
@@ -80,7 +87,9 @@ public partial class V1beta1BigQueryTableSpecEncryptionConfiguration
     [JsonPropertyName("kmsKeyVersion")]
     public string? KmsKeyVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Additional properties to set if sourceFormat is set to AVRO.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryTableSpecExternalDataConfigurationAvroOptions
@@ -89,7 +98,9 @@ public partial class V1beta1BigQueryTableSpecExternalDataConfigurationAvroOption
     [JsonPropertyName("useAvroLogicalTypes")]
     public bool UseAvroLogicalTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Additional properties to set if sourceFormat is set to CSV.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryTableSpecExternalDataConfigurationCsvOptions
@@ -118,7 +129,9 @@ public partial class V1beta1BigQueryTableSpecExternalDataConfigurationCsvOptions
     [JsonPropertyName("skipLeadingRows")]
     public long? SkipLeadingRows { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Additional options if sourceFormat is set to GOOGLE_SHEETS.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryTableSpecExternalDataConfigurationGoogleSheetsOptions
@@ -131,7 +144,9 @@ public partial class V1beta1BigQueryTableSpecExternalDataConfigurationGoogleShee
     [JsonPropertyName("skipLeadingRows")]
     public long? SkipLeadingRows { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>When set, configures hive partitioning support. Not all storage formats support hive partitioning -- requesting hive partitioning on an unsupported format will lead to an error, as will providing an invalid specification.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryTableSpecExternalDataConfigurationHivePartitioningOptions
@@ -148,7 +163,9 @@ public partial class V1beta1BigQueryTableSpecExternalDataConfigurationHivePartit
     [JsonPropertyName("sourceUriPrefix")]
     public string? SourceUriPrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Additional properties to set if sourceFormat is set to JSON.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryTableSpecExternalDataConfigurationJsonOptions
@@ -157,7 +174,9 @@ public partial class V1beta1BigQueryTableSpecExternalDataConfigurationJsonOption
     [JsonPropertyName("encoding")]
     public string? Encoding { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Additional properties to set if sourceFormat is set to PARQUET.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryTableSpecExternalDataConfigurationParquetOptions
@@ -170,7 +189,9 @@ public partial class V1beta1BigQueryTableSpecExternalDataConfigurationParquetOpt
     [JsonPropertyName("enumAsString")]
     public bool? EnumAsString { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the data format, location, and other properties of a table stored outside of BigQuery. By defining these properties, the data source can then be queried as if it were a standard BigQuery table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryTableSpecExternalDataConfiguration
@@ -247,7 +268,9 @@ public partial class V1beta1BigQueryTableSpecExternalDataConfiguration
     [JsonPropertyName("sourceUris")]
     public IList<string> SourceUris { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The materialized view definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryTableSpecMaterializedView
@@ -268,7 +291,9 @@ public partial class V1beta1BigQueryTableSpecMaterializedView
     [JsonPropertyName("refreshIntervalMs")]
     public long? RefreshIntervalMs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines the ranges for range partitioning.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryTableSpecRangePartitioningRange
@@ -285,7 +310,9 @@ public partial class V1beta1BigQueryTableSpecRangePartitioningRange
     [JsonPropertyName("start")]
     public long Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If specified, configures range partitioning for this table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryTableSpecRangePartitioning
@@ -298,7 +325,9 @@ public partial class V1beta1BigQueryTableSpecRangePartitioning
     [JsonPropertyName("range")]
     public V1beta1BigQueryTableSpecRangePartitioningRange Range { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The columns that compose the foreign key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryTableSpecTableConstraintsForeignKeysColumnReferences
@@ -311,7 +340,9 @@ public partial class V1beta1BigQueryTableSpecTableConstraintsForeignKeysColumnRe
     [JsonPropertyName("referencingColumn")]
     public string ReferencingColumn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The table that holds the primary key and is referenced by this foreign key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryTableSpecTableConstraintsForeignKeysReferencedTable
@@ -328,7 +359,9 @@ public partial class V1beta1BigQueryTableSpecTableConstraintsForeignKeysReferenc
     [JsonPropertyName("tableId")]
     public string TableId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryTableSpecTableConstraintsForeignKeys
@@ -345,7 +378,9 @@ public partial class V1beta1BigQueryTableSpecTableConstraintsForeignKeys
     [JsonPropertyName("referencedTable")]
     public V1beta1BigQueryTableSpecTableConstraintsForeignKeysReferencedTable ReferencedTable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a primary key constraint on a table's columns. Present only if the table has a primary key. The primary key is not enforced.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryTableSpecTableConstraintsPrimaryKey
@@ -354,7 +389,9 @@ public partial class V1beta1BigQueryTableSpecTableConstraintsPrimaryKey
     [JsonPropertyName("columns")]
     public IList<string> Columns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Tables Primary Key and Foreign Key information</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryTableSpecTableConstraints
@@ -367,7 +404,9 @@ public partial class V1beta1BigQueryTableSpecTableConstraints
     [JsonPropertyName("primaryKey")]
     public V1beta1BigQueryTableSpecTableConstraintsPrimaryKey? PrimaryKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If specified, configures time-based partitioning for this table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryTableSpecTimePartitioning
@@ -388,7 +427,9 @@ public partial class V1beta1BigQueryTableSpecTimePartitioning
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The view definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryTableSpecView
@@ -401,7 +442,9 @@ public partial class V1beta1BigQueryTableSpecView
     [JsonPropertyName("useLegacySql")]
     public bool? UseLegacySql { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigQueryTableSpec defines the desired state of BigQueryTable</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryTableSpec
@@ -474,7 +517,9 @@ public partial class V1beta1BigQueryTableSpec
     [JsonPropertyName("view")]
     public V1beta1BigQueryTableSpecView? View { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryTableStatusConditions
@@ -499,13 +544,17 @@ public partial class V1beta1BigQueryTableStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryTableStatusObservedState
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigQueryTableStatus defines the config connector machine state of BigQueryTable</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryTableStatus
@@ -562,7 +611,9 @@ public partial class V1beta1BigQueryTableStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigQueryTable is the Schema for the BigQueryTable API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -592,3 +643,4 @@ public partial class V1beta1BigQueryTable : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1BigQueryTableStatus? Status { get; set; }
 }
+#nullable disable

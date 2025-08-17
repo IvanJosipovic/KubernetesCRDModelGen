@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.azure.upbound.io;
+#nullable enable
 /// <summary>Snapshot is the Schema for the Snapshots API. Manages a Disk Snapshot.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SnapshotList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1beta1Snapshot> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotSpecForProviderEncryptionSettingsDiskEncryptionKey
@@ -46,7 +49,9 @@ public partial class V1beta1SnapshotSpecForProviderEncryptionSettingsDiskEncrypt
     [JsonPropertyName("sourceVaultId")]
     public string? SourceVaultId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotSpecForProviderEncryptionSettingsKeyEncryptionKey
@@ -59,7 +64,9 @@ public partial class V1beta1SnapshotSpecForProviderEncryptionSettingsKeyEncrypti
     [JsonPropertyName("sourceVaultId")]
     public string? SourceVaultId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotSpecForProviderEncryptionSettings
@@ -72,7 +79,9 @@ public partial class V1beta1SnapshotSpecForProviderEncryptionSettings
     [JsonPropertyName("keyEncryptionKey")]
     public IList<V1beta1SnapshotSpecForProviderEncryptionSettingsKeyEncryptionKey>? KeyEncryptionKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotSpecForProviderResourceGroupNameRefPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1SnapshotSpecForProviderResourceGroupNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotSpecForProviderResourceGroupNameRef
@@ -98,7 +109,9 @@ public partial class V1beta1SnapshotSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1SnapshotSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotSpecForProviderResourceGroupNameSelectorPolicy
@@ -111,7 +124,9 @@ public partial class V1beta1SnapshotSpecForProviderResourceGroupNameSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotSpecForProviderResourceGroupNameSelector
@@ -128,7 +143,9 @@ public partial class V1beta1SnapshotSpecForProviderResourceGroupNameSelector
     [JsonPropertyName("policy")]
     public V1beta1SnapshotSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotSpecForProviderSourceUriRefPolicy
@@ -141,7 +158,9 @@ public partial class V1beta1SnapshotSpecForProviderSourceUriRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ManagedDisk in compute to populate sourceUri.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotSpecForProviderSourceUriRef
@@ -154,7 +173,9 @@ public partial class V1beta1SnapshotSpecForProviderSourceUriRef
     [JsonPropertyName("policy")]
     public V1beta1SnapshotSpecForProviderSourceUriRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotSpecForProviderSourceUriSelectorPolicy
@@ -167,7 +188,9 @@ public partial class V1beta1SnapshotSpecForProviderSourceUriSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ManagedDisk in compute to populate sourceUri.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotSpecForProviderSourceUriSelector
@@ -184,7 +207,9 @@ public partial class V1beta1SnapshotSpecForProviderSourceUriSelector
     [JsonPropertyName("policy")]
     public V1beta1SnapshotSpecForProviderSourceUriSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotSpecForProvider
@@ -257,7 +282,9 @@ public partial class V1beta1SnapshotSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotSpecInitProviderEncryptionSettingsDiskEncryptionKey
@@ -270,7 +297,9 @@ public partial class V1beta1SnapshotSpecInitProviderEncryptionSettingsDiskEncryp
     [JsonPropertyName("sourceVaultId")]
     public string? SourceVaultId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotSpecInitProviderEncryptionSettingsKeyEncryptionKey
@@ -283,7 +312,9 @@ public partial class V1beta1SnapshotSpecInitProviderEncryptionSettingsKeyEncrypt
     [JsonPropertyName("sourceVaultId")]
     public string? SourceVaultId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotSpecInitProviderEncryptionSettings
@@ -296,7 +327,9 @@ public partial class V1beta1SnapshotSpecInitProviderEncryptionSettings
     [JsonPropertyName("keyEncryptionKey")]
     public IList<V1beta1SnapshotSpecInitProviderEncryptionSettingsKeyEncryptionKey>? KeyEncryptionKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotSpecInitProviderSourceUriRefPolicy
@@ -309,7 +342,9 @@ public partial class V1beta1SnapshotSpecInitProviderSourceUriRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ManagedDisk in compute to populate sourceUri.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotSpecInitProviderSourceUriRef
@@ -322,7 +357,9 @@ public partial class V1beta1SnapshotSpecInitProviderSourceUriRef
     [JsonPropertyName("policy")]
     public V1beta1SnapshotSpecInitProviderSourceUriRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotSpecInitProviderSourceUriSelectorPolicy
@@ -335,7 +372,9 @@ public partial class V1beta1SnapshotSpecInitProviderSourceUriSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ManagedDisk in compute to populate sourceUri.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotSpecInitProviderSourceUriSelector
@@ -352,7 +391,9 @@ public partial class V1beta1SnapshotSpecInitProviderSourceUriSelector
     [JsonPropertyName("policy")]
     public V1beta1SnapshotSpecInitProviderSourceUriSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotSpecInitProvider
@@ -413,7 +454,9 @@ public partial class V1beta1SnapshotSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotSpecProviderConfigRefPolicy
@@ -426,7 +469,9 @@ public partial class V1beta1SnapshotSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotSpecProviderConfigRef
@@ -439,7 +484,9 @@ public partial class V1beta1SnapshotSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1SnapshotSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotSpecWriteConnectionSecretToRef
@@ -452,7 +499,9 @@ public partial class V1beta1SnapshotSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SnapshotSpec defines the desired state of Snapshot</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotSpec
@@ -481,7 +530,9 @@ public partial class V1beta1SnapshotSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SnapshotSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotStatusAtProviderEncryptionSettingsDiskEncryptionKey
@@ -494,7 +545,9 @@ public partial class V1beta1SnapshotStatusAtProviderEncryptionSettingsDiskEncryp
     [JsonPropertyName("sourceVaultId")]
     public string? SourceVaultId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotStatusAtProviderEncryptionSettingsKeyEncryptionKey
@@ -507,7 +560,9 @@ public partial class V1beta1SnapshotStatusAtProviderEncryptionSettingsKeyEncrypt
     [JsonPropertyName("sourceVaultId")]
     public string? SourceVaultId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotStatusAtProviderEncryptionSettings
@@ -520,7 +575,9 @@ public partial class V1beta1SnapshotStatusAtProviderEncryptionSettings
     [JsonPropertyName("keyEncryptionKey")]
     public IList<V1beta1SnapshotStatusAtProviderEncryptionSettingsKeyEncryptionKey>? KeyEncryptionKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotStatusAtProvider
@@ -585,7 +642,9 @@ public partial class V1beta1SnapshotStatusAtProvider
     [JsonPropertyName("trustedLaunchEnabled")]
     public bool? TrustedLaunchEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotStatusConditions
@@ -614,7 +673,9 @@ public partial class V1beta1SnapshotStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SnapshotStatus defines the observed state of Snapshot.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotStatus
@@ -631,7 +692,9 @@ public partial class V1beta1SnapshotStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Snapshot is the Schema for the Snapshots API. Manages a Disk Snapshot.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -661,3 +724,4 @@ public partial class V1beta1Snapshot : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1beta1SnapshotStatus? Status { get; set; }
 }
+#nullable disable

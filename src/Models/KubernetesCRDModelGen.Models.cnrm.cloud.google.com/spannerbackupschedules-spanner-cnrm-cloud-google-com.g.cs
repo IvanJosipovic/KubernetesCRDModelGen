@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.spanner.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>SpannerBackupSchedule is the Schema for the SpannerBackupSchedule API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1SpannerBackupScheduleList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1alpha1SpannerBackupSchedule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The Cloud KMS key that will be used to protect the backup. This field should be set only when [encryption_type][google.spanner.admin.database.v1.CreateBackupEncryptionConfig.encryption_type] is `CUSTOMER_MANAGED_ENCRYPTION`. Values are of the form `projects/&lt;project&gt;/locations/&lt;location&gt;/keyRings/&lt;key_ring&gt;/cryptoKeys/&lt;kms_key_name&gt;`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SpannerBackupScheduleSpecEncryptionConfigKmsKeyRef
@@ -50,7 +53,9 @@ public partial class V1alpha1SpannerBackupScheduleSpecEncryptionConfigKmsKeyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SpannerBackupScheduleSpecEncryptionConfigKmsKeyRefs
@@ -67,7 +72,9 @@ public partial class V1alpha1SpannerBackupScheduleSpecEncryptionConfigKmsKeyRefs
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The encryption configuration that will be used to encrypt the backup. If this field is not specified, the backup will use the same encryption configuration as the database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SpannerBackupScheduleSpecEncryptionConfig
@@ -84,19 +91,25 @@ public partial class V1alpha1SpannerBackupScheduleSpecEncryptionConfig
     [JsonPropertyName("kmsKeyRefs")]
     public IList<V1alpha1SpannerBackupScheduleSpecEncryptionConfigKmsKeyRefs>? KmsKeyRefs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The schedule creates only full backups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SpannerBackupScheduleSpecFullBackupSpec
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The schedule creates incremental backup chains.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SpannerBackupScheduleSpecIncrementalBackupSpec
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The spanner database that this backup applies to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SpannerBackupScheduleSpecSpannerDatabaseRef
@@ -113,7 +126,9 @@ public partial class V1alpha1SpannerBackupScheduleSpecSpannerDatabaseRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cron style schedule specification.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SpannerBackupScheduleSpecSpecCronSpec
@@ -122,7 +137,9 @@ public partial class V1alpha1SpannerBackupScheduleSpecSpecCronSpec
     [JsonPropertyName("text")]
     public string? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The schedule specification based on which the backup creations are triggered.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SpannerBackupScheduleSpecSpec
@@ -131,7 +148,9 @@ public partial class V1alpha1SpannerBackupScheduleSpecSpec
     [JsonPropertyName("cronSpec")]
     public V1alpha1SpannerBackupScheduleSpecSpecCronSpec? CronSpec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpannerBackupScheduleSpec defines the desired state of SpannerBackupSchedule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SpannerBackupScheduleSpec
@@ -164,7 +183,9 @@ public partial class V1alpha1SpannerBackupScheduleSpec
     [JsonPropertyName("spec")]
     public V1alpha1SpannerBackupScheduleSpecSpec? Spec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SpannerBackupScheduleStatusConditions
@@ -189,7 +210,9 @@ public partial class V1alpha1SpannerBackupScheduleStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cron style schedule specification.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SpannerBackupScheduleStatusObservedStateCronSpec
@@ -202,7 +225,9 @@ public partial class V1alpha1SpannerBackupScheduleStatusObservedStateCronSpec
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SpannerBackupScheduleStatusObservedState
@@ -215,7 +240,9 @@ public partial class V1alpha1SpannerBackupScheduleStatusObservedState
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpannerBackupScheduleStatus defines the config connector machine state of SpannerBackupSchedule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SpannerBackupScheduleStatus
@@ -236,7 +263,9 @@ public partial class V1alpha1SpannerBackupScheduleStatus
     [JsonPropertyName("observedState")]
     public V1alpha1SpannerBackupScheduleStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpannerBackupSchedule is the Schema for the SpannerBackupSchedule API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -266,3 +295,4 @@ public partial class V1alpha1SpannerBackupSchedule : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1alpha1SpannerBackupScheduleStatus? Status { get; set; }
 }
+#nullable disable

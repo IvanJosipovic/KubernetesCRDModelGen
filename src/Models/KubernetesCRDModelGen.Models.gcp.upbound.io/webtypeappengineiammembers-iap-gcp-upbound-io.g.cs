@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iap.gcp.upbound.io;
+#nullable enable
 /// <summary>WebTypeAppEngineIAMMember is the Schema for the WebTypeAppEngineIAMMembers API. &lt;no value&gt;</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1WebTypeAppEngineIAMMemberList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1beta1WebTypeAppEngineIAMMember> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebTypeAppEngineIAMMemberSpecForProviderAppIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1WebTypeAppEngineIAMMemberSpecForProviderAppIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Application in appengine to populate appId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebTypeAppEngineIAMMemberSpecForProviderAppIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1WebTypeAppEngineIAMMemberSpecForProviderAppIdRef
     [JsonPropertyName("policy")]
     public V1beta1WebTypeAppEngineIAMMemberSpecForProviderAppIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebTypeAppEngineIAMMemberSpecForProviderAppIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1WebTypeAppEngineIAMMemberSpecForProviderAppIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Application in appengine to populate appId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebTypeAppEngineIAMMemberSpecForProviderAppIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1WebTypeAppEngineIAMMemberSpecForProviderAppIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1WebTypeAppEngineIAMMemberSpecForProviderAppIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebTypeAppEngineIAMMemberSpecForProviderCondition
@@ -106,7 +117,9 @@ public partial class V1beta1WebTypeAppEngineIAMMemberSpecForProviderCondition
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebTypeAppEngineIAMMemberSpecForProvider
@@ -139,7 +152,9 @@ public partial class V1beta1WebTypeAppEngineIAMMemberSpecForProvider
     [JsonPropertyName("role")]
     public string? Role { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebTypeAppEngineIAMMemberSpecInitProviderAppIdRefPolicy
@@ -152,7 +167,9 @@ public partial class V1beta1WebTypeAppEngineIAMMemberSpecInitProviderAppIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Application in appengine to populate appId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebTypeAppEngineIAMMemberSpecInitProviderAppIdRef
@@ -165,7 +182,9 @@ public partial class V1beta1WebTypeAppEngineIAMMemberSpecInitProviderAppIdRef
     [JsonPropertyName("policy")]
     public V1beta1WebTypeAppEngineIAMMemberSpecInitProviderAppIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebTypeAppEngineIAMMemberSpecInitProviderAppIdSelectorPolicy
@@ -178,7 +197,9 @@ public partial class V1beta1WebTypeAppEngineIAMMemberSpecInitProviderAppIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Application in appengine to populate appId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebTypeAppEngineIAMMemberSpecInitProviderAppIdSelector
@@ -195,7 +216,9 @@ public partial class V1beta1WebTypeAppEngineIAMMemberSpecInitProviderAppIdSelect
     [JsonPropertyName("policy")]
     public V1beta1WebTypeAppEngineIAMMemberSpecInitProviderAppIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebTypeAppEngineIAMMemberSpecInitProviderCondition
@@ -212,7 +235,9 @@ public partial class V1beta1WebTypeAppEngineIAMMemberSpecInitProviderCondition
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebTypeAppEngineIAMMemberSpecInitProvider
@@ -245,7 +270,9 @@ public partial class V1beta1WebTypeAppEngineIAMMemberSpecInitProvider
     [JsonPropertyName("role")]
     public string? Role { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebTypeAppEngineIAMMemberSpecProviderConfigRefPolicy
@@ -258,7 +285,9 @@ public partial class V1beta1WebTypeAppEngineIAMMemberSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebTypeAppEngineIAMMemberSpecProviderConfigRef
@@ -271,7 +300,9 @@ public partial class V1beta1WebTypeAppEngineIAMMemberSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1WebTypeAppEngineIAMMemberSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebTypeAppEngineIAMMemberSpecWriteConnectionSecretToRef
@@ -284,7 +315,9 @@ public partial class V1beta1WebTypeAppEngineIAMMemberSpecWriteConnectionSecretTo
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WebTypeAppEngineIAMMemberSpec defines the desired state of WebTypeAppEngineIAMMember</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebTypeAppEngineIAMMemberSpec
@@ -313,7 +346,9 @@ public partial class V1beta1WebTypeAppEngineIAMMemberSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1WebTypeAppEngineIAMMemberSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebTypeAppEngineIAMMemberStatusAtProviderCondition
@@ -330,7 +365,9 @@ public partial class V1beta1WebTypeAppEngineIAMMemberStatusAtProviderCondition
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebTypeAppEngineIAMMemberStatusAtProvider
@@ -363,7 +400,9 @@ public partial class V1beta1WebTypeAppEngineIAMMemberStatusAtProvider
     [JsonPropertyName("role")]
     public string? Role { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebTypeAppEngineIAMMemberStatusConditions
@@ -392,7 +431,9 @@ public partial class V1beta1WebTypeAppEngineIAMMemberStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WebTypeAppEngineIAMMemberStatus defines the observed state of WebTypeAppEngineIAMMember.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebTypeAppEngineIAMMemberStatus
@@ -409,7 +450,9 @@ public partial class V1beta1WebTypeAppEngineIAMMemberStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WebTypeAppEngineIAMMember is the Schema for the WebTypeAppEngineIAMMembers API. &lt;no value&gt;</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -439,3 +482,4 @@ public partial class V1beta1WebTypeAppEngineIAMMember : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1beta1WebTypeAppEngineIAMMemberStatus? Status { get; set; }
 }
+#nullable disable

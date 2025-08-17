@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datacatalog.gcp.m.upbound.io;
+#nullable enable
 /// <summary>Tag is the Schema for the Tags API. Tags are used to attach custom metadata to Data Catalog resources.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TagList : IKubernetesObject<V1ListMeta>, IItems<V1be
     [JsonPropertyName("items")]
     public IList<V1beta1Tag> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagSpecForProviderFields
@@ -62,7 +65,9 @@ public partial class V1beta1TagSpecForProviderFields
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagSpecForProviderParentRefPolicy
@@ -75,7 +80,9 @@ public partial class V1beta1TagSpecForProviderParentRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Entry in datacatalog to populate parent.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagSpecForProviderParentRef
@@ -92,7 +99,9 @@ public partial class V1beta1TagSpecForProviderParentRef
     [JsonPropertyName("policy")]
     public V1beta1TagSpecForProviderParentRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagSpecForProviderParentSelectorPolicy
@@ -105,7 +114,9 @@ public partial class V1beta1TagSpecForProviderParentSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Entry in datacatalog to populate parent.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagSpecForProviderParentSelector
@@ -126,7 +137,9 @@ public partial class V1beta1TagSpecForProviderParentSelector
     [JsonPropertyName("policy")]
     public V1beta1TagSpecForProviderParentSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagSpecForProviderTemplateRefPolicy
@@ -139,7 +152,9 @@ public partial class V1beta1TagSpecForProviderTemplateRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TagTemplate in datacatalog to populate template.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagSpecForProviderTemplateRef
@@ -156,7 +171,9 @@ public partial class V1beta1TagSpecForProviderTemplateRef
     [JsonPropertyName("policy")]
     public V1beta1TagSpecForProviderTemplateRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagSpecForProviderTemplateSelectorPolicy
@@ -169,7 +186,9 @@ public partial class V1beta1TagSpecForProviderTemplateSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TagTemplate in datacatalog to populate template.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagSpecForProviderTemplateSelector
@@ -190,7 +209,9 @@ public partial class V1beta1TagSpecForProviderTemplateSelector
     [JsonPropertyName("policy")]
     public V1beta1TagSpecForProviderTemplateSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagSpecForProvider
@@ -227,7 +248,9 @@ public partial class V1beta1TagSpecForProvider
     [JsonPropertyName("templateSelector")]
     public V1beta1TagSpecForProviderTemplateSelector? TemplateSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagSpecInitProviderFields
@@ -256,7 +279,9 @@ public partial class V1beta1TagSpecInitProviderFields
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagSpecInitProviderParentRefPolicy
@@ -269,7 +294,9 @@ public partial class V1beta1TagSpecInitProviderParentRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Entry in datacatalog to populate parent.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagSpecInitProviderParentRef
@@ -286,7 +313,9 @@ public partial class V1beta1TagSpecInitProviderParentRef
     [JsonPropertyName("policy")]
     public V1beta1TagSpecInitProviderParentRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagSpecInitProviderParentSelectorPolicy
@@ -299,7 +328,9 @@ public partial class V1beta1TagSpecInitProviderParentSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Entry in datacatalog to populate parent.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagSpecInitProviderParentSelector
@@ -320,7 +351,9 @@ public partial class V1beta1TagSpecInitProviderParentSelector
     [JsonPropertyName("policy")]
     public V1beta1TagSpecInitProviderParentSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagSpecInitProviderTemplateRefPolicy
@@ -333,7 +366,9 @@ public partial class V1beta1TagSpecInitProviderTemplateRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TagTemplate in datacatalog to populate template.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagSpecInitProviderTemplateRef
@@ -350,7 +385,9 @@ public partial class V1beta1TagSpecInitProviderTemplateRef
     [JsonPropertyName("policy")]
     public V1beta1TagSpecInitProviderTemplateRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagSpecInitProviderTemplateSelectorPolicy
@@ -363,7 +400,9 @@ public partial class V1beta1TagSpecInitProviderTemplateSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TagTemplate in datacatalog to populate template.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagSpecInitProviderTemplateSelector
@@ -384,7 +423,9 @@ public partial class V1beta1TagSpecInitProviderTemplateSelector
     [JsonPropertyName("policy")]
     public V1beta1TagSpecInitProviderTemplateSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagSpecInitProvider
@@ -421,7 +462,9 @@ public partial class V1beta1TagSpecInitProvider
     [JsonPropertyName("templateSelector")]
     public V1beta1TagSpecInitProviderTemplateSelector? TemplateSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagSpecProviderConfigRef
@@ -434,7 +477,9 @@ public partial class V1beta1TagSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagSpecWriteConnectionSecretToRef
@@ -443,7 +488,9 @@ public partial class V1beta1TagSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TagSpec defines the desired state of Tag</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagSpec
@@ -468,7 +515,9 @@ public partial class V1beta1TagSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TagSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagStatusAtProviderFields
@@ -505,7 +554,9 @@ public partial class V1beta1TagStatusAtProviderFields
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagStatusAtProvider
@@ -538,7 +589,9 @@ public partial class V1beta1TagStatusAtProvider
     [JsonPropertyName("templateDisplayname")]
     public string? TemplateDisplayname { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagStatusConditions
@@ -567,7 +620,9 @@ public partial class V1beta1TagStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TagStatus defines the observed state of Tag.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagStatus
@@ -584,7 +639,9 @@ public partial class V1beta1TagStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Tag is the Schema for the Tags API. Tags are used to attach custom metadata to Data Catalog resources.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -614,3 +671,4 @@ public partial class V1beta1Tag : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1
     [JsonPropertyName("status")]
     public V1beta1TagStatus? Status { get; set; }
 }
+#nullable disable

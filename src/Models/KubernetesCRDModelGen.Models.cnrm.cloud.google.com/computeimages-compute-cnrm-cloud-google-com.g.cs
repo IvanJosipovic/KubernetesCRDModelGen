@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ComputeImageList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1ComputeImage> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The source disk to create this image based on. You must provide either this property or the rawDisk.source property but not both to create an image.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeImageSpecDiskRef
@@ -50,7 +53,9 @@ public partial class V1beta1ComputeImageSpecDiskRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeImageSpecGuestOsFeatures
@@ -59,7 +64,9 @@ public partial class V1beta1ComputeImageSpecGuestOsFeatures
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The self link of the encryption key that is stored in Google Cloud KMS.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeImageSpecImageEncryptionKeyKmsKeySelfLinkRef
@@ -76,7 +83,9 @@ public partial class V1beta1ComputeImageSpecImageEncryptionKeyKmsKeySelfLinkRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeImageSpecImageEncryptionKeyKmsKeyServiceAccountRef
@@ -93,7 +102,9 @@ public partial class V1beta1ComputeImageSpecImageEncryptionKeyKmsKeyServiceAccou
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Encrypts the image using a customer-supplied encryption key.  After you encrypt an image with a customer-supplied key, you must provide the same key if you use the image later (e.g. to create a disk from the image).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeImageSpecImageEncryptionKey
@@ -106,7 +117,9 @@ public partial class V1beta1ComputeImageSpecImageEncryptionKey
     [JsonPropertyName("kmsKeyServiceAccountRef")]
     public V1beta1ComputeImageSpecImageEncryptionKeyKmsKeyServiceAccountRef? KmsKeyServiceAccountRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The parameters of the raw disk image.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeImageSpecRawDisk
@@ -123,7 +136,9 @@ public partial class V1beta1ComputeImageSpecRawDisk
     [JsonPropertyName("source")]
     public string Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The source image used to create this image.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeImageSpecSourceImageRef
@@ -140,7 +155,9 @@ public partial class V1beta1ComputeImageSpecSourceImageRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The source snapshot used to create this image.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeImageSpecSourceSnapshotRef
@@ -157,7 +174,9 @@ public partial class V1beta1ComputeImageSpecSourceSnapshotRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeImageSpec
@@ -210,7 +229,9 @@ public partial class V1beta1ComputeImageSpec
     [JsonPropertyName("storageLocations")]
     public IList<string>? StorageLocations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeImageStatusConditions
@@ -235,7 +256,9 @@ public partial class V1beta1ComputeImageStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeImageStatus
@@ -264,7 +287,9 @@ public partial class V1beta1ComputeImageStatus
     [JsonPropertyName("selfLink")]
     public string? SelfLink { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -294,3 +319,4 @@ public partial class V1beta1ComputeImage : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1ComputeImageStatus? Status { get; set; }
 }
+#nullable disable

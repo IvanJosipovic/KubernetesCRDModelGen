@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ses.aws.m.upbound.io;
+#nullable enable
 /// <summary>ReceiptRule is the Schema for the ReceiptRules API. Provides an SES receipt rule resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ReceiptRuleList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1ReceiptRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReceiptRuleSpecForProviderAddHeaderAction
@@ -50,7 +53,9 @@ public partial class V1beta1ReceiptRuleSpecForProviderAddHeaderAction
     [JsonPropertyName("position")]
     public double? Position { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReceiptRuleSpecForProviderBounceAction
@@ -79,7 +84,9 @@ public partial class V1beta1ReceiptRuleSpecForProviderBounceAction
     [JsonPropertyName("topicArn")]
     public string? TopicArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReceiptRuleSpecForProviderLambdaAction
@@ -100,7 +107,9 @@ public partial class V1beta1ReceiptRuleSpecForProviderLambdaAction
     [JsonPropertyName("topicArn")]
     public string? TopicArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReceiptRuleSpecForProviderS3Action
@@ -129,7 +138,9 @@ public partial class V1beta1ReceiptRuleSpecForProviderS3Action
     [JsonPropertyName("topicArn")]
     public string? TopicArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReceiptRuleSpecForProviderSnsAction
@@ -146,7 +157,9 @@ public partial class V1beta1ReceiptRuleSpecForProviderSnsAction
     [JsonPropertyName("topicArn")]
     public string? TopicArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReceiptRuleSpecForProviderStopAction
@@ -163,7 +176,9 @@ public partial class V1beta1ReceiptRuleSpecForProviderStopAction
     [JsonPropertyName("topicArn")]
     public string? TopicArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReceiptRuleSpecForProviderWorkmailAction
@@ -180,7 +195,9 @@ public partial class V1beta1ReceiptRuleSpecForProviderWorkmailAction
     [JsonPropertyName("topicArn")]
     public string? TopicArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReceiptRuleSpecForProvider
@@ -245,7 +262,9 @@ public partial class V1beta1ReceiptRuleSpecForProvider
     [JsonPropertyName("workmailAction")]
     public IList<V1beta1ReceiptRuleSpecForProviderWorkmailAction>? WorkmailAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReceiptRuleSpecInitProviderAddHeaderAction
@@ -262,7 +281,9 @@ public partial class V1beta1ReceiptRuleSpecInitProviderAddHeaderAction
     [JsonPropertyName("position")]
     public double? Position { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReceiptRuleSpecInitProviderBounceAction
@@ -291,7 +312,9 @@ public partial class V1beta1ReceiptRuleSpecInitProviderBounceAction
     [JsonPropertyName("topicArn")]
     public string? TopicArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReceiptRuleSpecInitProviderLambdaAction
@@ -312,7 +335,9 @@ public partial class V1beta1ReceiptRuleSpecInitProviderLambdaAction
     [JsonPropertyName("topicArn")]
     public string? TopicArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReceiptRuleSpecInitProviderS3Action
@@ -341,7 +366,9 @@ public partial class V1beta1ReceiptRuleSpecInitProviderS3Action
     [JsonPropertyName("topicArn")]
     public string? TopicArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReceiptRuleSpecInitProviderSnsAction
@@ -358,7 +385,9 @@ public partial class V1beta1ReceiptRuleSpecInitProviderSnsAction
     [JsonPropertyName("topicArn")]
     public string? TopicArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReceiptRuleSpecInitProviderStopAction
@@ -375,7 +404,9 @@ public partial class V1beta1ReceiptRuleSpecInitProviderStopAction
     [JsonPropertyName("topicArn")]
     public string? TopicArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReceiptRuleSpecInitProviderWorkmailAction
@@ -392,7 +423,9 @@ public partial class V1beta1ReceiptRuleSpecInitProviderWorkmailAction
     [JsonPropertyName("topicArn")]
     public string? TopicArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReceiptRuleSpecInitProvider
@@ -453,7 +486,9 @@ public partial class V1beta1ReceiptRuleSpecInitProvider
     [JsonPropertyName("workmailAction")]
     public IList<V1beta1ReceiptRuleSpecInitProviderWorkmailAction>? WorkmailAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReceiptRuleSpecProviderConfigRef
@@ -466,7 +501,9 @@ public partial class V1beta1ReceiptRuleSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReceiptRuleSpecWriteConnectionSecretToRef
@@ -475,7 +512,9 @@ public partial class V1beta1ReceiptRuleSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ReceiptRuleSpec defines the desired state of ReceiptRule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReceiptRuleSpec
@@ -500,7 +539,9 @@ public partial class V1beta1ReceiptRuleSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ReceiptRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReceiptRuleStatusAtProviderAddHeaderAction
@@ -517,7 +558,9 @@ public partial class V1beta1ReceiptRuleStatusAtProviderAddHeaderAction
     [JsonPropertyName("position")]
     public double? Position { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReceiptRuleStatusAtProviderBounceAction
@@ -546,7 +589,9 @@ public partial class V1beta1ReceiptRuleStatusAtProviderBounceAction
     [JsonPropertyName("topicArn")]
     public string? TopicArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReceiptRuleStatusAtProviderLambdaAction
@@ -567,7 +612,9 @@ public partial class V1beta1ReceiptRuleStatusAtProviderLambdaAction
     [JsonPropertyName("topicArn")]
     public string? TopicArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReceiptRuleStatusAtProviderS3Action
@@ -596,7 +643,9 @@ public partial class V1beta1ReceiptRuleStatusAtProviderS3Action
     [JsonPropertyName("topicArn")]
     public string? TopicArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReceiptRuleStatusAtProviderSnsAction
@@ -613,7 +662,9 @@ public partial class V1beta1ReceiptRuleStatusAtProviderSnsAction
     [JsonPropertyName("topicArn")]
     public string? TopicArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReceiptRuleStatusAtProviderStopAction
@@ -630,7 +681,9 @@ public partial class V1beta1ReceiptRuleStatusAtProviderStopAction
     [JsonPropertyName("topicArn")]
     public string? TopicArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReceiptRuleStatusAtProviderWorkmailAction
@@ -647,7 +700,9 @@ public partial class V1beta1ReceiptRuleStatusAtProviderWorkmailAction
     [JsonPropertyName("topicArn")]
     public string? TopicArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReceiptRuleStatusAtProvider
@@ -720,7 +775,9 @@ public partial class V1beta1ReceiptRuleStatusAtProvider
     [JsonPropertyName("workmailAction")]
     public IList<V1beta1ReceiptRuleStatusAtProviderWorkmailAction>? WorkmailAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReceiptRuleStatusConditions
@@ -749,7 +806,9 @@ public partial class V1beta1ReceiptRuleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ReceiptRuleStatus defines the observed state of ReceiptRule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReceiptRuleStatus
@@ -766,7 +825,9 @@ public partial class V1beta1ReceiptRuleStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ReceiptRule is the Schema for the ReceiptRules API. Provides an SES receipt rule resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -796,3 +857,4 @@ public partial class V1beta1ReceiptRule : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1ReceiptRuleStatus? Status { get; set; }
 }
+#nullable disable

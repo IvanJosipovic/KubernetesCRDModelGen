@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.streamanalytics.azure.upbound.io;
+#nullable enable
 /// <summary>OutputTable is the Schema for the OutputTables API. Manages a Stream Analytics Output Table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1OutputTableList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1OutputTable> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableSpecForProviderResourceGroupNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1OutputTableSpecForProviderResourceGroupNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableSpecForProviderResourceGroupNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1OutputTableSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1OutputTableSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableSpecForProviderResourceGroupNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1OutputTableSpecForProviderResourceGroupNameSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableSpecForProviderResourceGroupNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1OutputTableSpecForProviderResourceGroupNameSelector
     [JsonPropertyName("policy")]
     public V1beta1OutputTableSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Access Key which should be used to connect to this Storage Account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableSpecForProviderStorageAccountKeySecretRef
@@ -106,7 +117,9 @@ public partial class V1beta1OutputTableSpecForProviderStorageAccountKeySecretRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableSpecForProviderStorageAccountNameRefPolicy
@@ -119,7 +132,9 @@ public partial class V1beta1OutputTableSpecForProviderStorageAccountNameRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableSpecForProviderStorageAccountNameRef
@@ -132,7 +147,9 @@ public partial class V1beta1OutputTableSpecForProviderStorageAccountNameRef
     [JsonPropertyName("policy")]
     public V1beta1OutputTableSpecForProviderStorageAccountNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableSpecForProviderStorageAccountNameSelectorPolicy
@@ -145,7 +162,9 @@ public partial class V1beta1OutputTableSpecForProviderStorageAccountNameSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableSpecForProviderStorageAccountNameSelector
@@ -162,7 +181,9 @@ public partial class V1beta1OutputTableSpecForProviderStorageAccountNameSelector
     [JsonPropertyName("policy")]
     public V1beta1OutputTableSpecForProviderStorageAccountNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableSpecForProviderTableRefPolicy
@@ -175,7 +196,9 @@ public partial class V1beta1OutputTableSpecForProviderTableRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Table in storage to populate table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableSpecForProviderTableRef
@@ -188,7 +211,9 @@ public partial class V1beta1OutputTableSpecForProviderTableRef
     [JsonPropertyName("policy")]
     public V1beta1OutputTableSpecForProviderTableRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableSpecForProviderTableSelectorPolicy
@@ -201,7 +226,9 @@ public partial class V1beta1OutputTableSpecForProviderTableSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Table in storage to populate table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableSpecForProviderTableSelector
@@ -218,7 +245,9 @@ public partial class V1beta1OutputTableSpecForProviderTableSelector
     [JsonPropertyName("policy")]
     public V1beta1OutputTableSpecForProviderTableSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableSpecForProvider
@@ -283,7 +312,9 @@ public partial class V1beta1OutputTableSpecForProvider
     [JsonPropertyName("tableSelector")]
     public V1beta1OutputTableSpecForProviderTableSelector? TableSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Access Key which should be used to connect to this Storage Account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableSpecInitProviderStorageAccountKeySecretRef
@@ -300,7 +331,9 @@ public partial class V1beta1OutputTableSpecInitProviderStorageAccountKeySecretRe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableSpecInitProviderStorageAccountNameRefPolicy
@@ -313,7 +346,9 @@ public partial class V1beta1OutputTableSpecInitProviderStorageAccountNameRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableSpecInitProviderStorageAccountNameRef
@@ -326,7 +361,9 @@ public partial class V1beta1OutputTableSpecInitProviderStorageAccountNameRef
     [JsonPropertyName("policy")]
     public V1beta1OutputTableSpecInitProviderStorageAccountNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableSpecInitProviderStorageAccountNameSelectorPolicy
@@ -339,7 +376,9 @@ public partial class V1beta1OutputTableSpecInitProviderStorageAccountNameSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableSpecInitProviderStorageAccountNameSelector
@@ -356,7 +395,9 @@ public partial class V1beta1OutputTableSpecInitProviderStorageAccountNameSelecto
     [JsonPropertyName("policy")]
     public V1beta1OutputTableSpecInitProviderStorageAccountNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableSpecInitProviderTableRefPolicy
@@ -369,7 +410,9 @@ public partial class V1beta1OutputTableSpecInitProviderTableRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Table in storage to populate table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableSpecInitProviderTableRef
@@ -382,7 +425,9 @@ public partial class V1beta1OutputTableSpecInitProviderTableRef
     [JsonPropertyName("policy")]
     public V1beta1OutputTableSpecInitProviderTableRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableSpecInitProviderTableSelectorPolicy
@@ -395,7 +440,9 @@ public partial class V1beta1OutputTableSpecInitProviderTableSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Table in storage to populate table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableSpecInitProviderTableSelector
@@ -412,7 +459,9 @@ public partial class V1beta1OutputTableSpecInitProviderTableSelector
     [JsonPropertyName("policy")]
     public V1beta1OutputTableSpecInitProviderTableSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableSpecInitProvider
@@ -461,7 +510,9 @@ public partial class V1beta1OutputTableSpecInitProvider
     [JsonPropertyName("tableSelector")]
     public V1beta1OutputTableSpecInitProviderTableSelector? TableSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableSpecProviderConfigRefPolicy
@@ -474,7 +525,9 @@ public partial class V1beta1OutputTableSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableSpecProviderConfigRef
@@ -487,7 +540,9 @@ public partial class V1beta1OutputTableSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1OutputTableSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableSpecWriteConnectionSecretToRef
@@ -500,7 +555,9 @@ public partial class V1beta1OutputTableSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OutputTableSpec defines the desired state of OutputTable</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableSpec
@@ -529,7 +586,9 @@ public partial class V1beta1OutputTableSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1OutputTableSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableStatusAtProvider
@@ -570,7 +629,9 @@ public partial class V1beta1OutputTableStatusAtProvider
     [JsonPropertyName("table")]
     public string? Table { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableStatusConditions
@@ -599,7 +660,9 @@ public partial class V1beta1OutputTableStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OutputTableStatus defines the observed state of OutputTable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputTableStatus
@@ -616,7 +679,9 @@ public partial class V1beta1OutputTableStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OutputTable is the Schema for the OutputTables API. Manages a Stream Analytics Output Table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -646,3 +711,4 @@ public partial class V1beta1OutputTable : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1OutputTableStatus? Status { get; set; }
 }
+#nullable disable

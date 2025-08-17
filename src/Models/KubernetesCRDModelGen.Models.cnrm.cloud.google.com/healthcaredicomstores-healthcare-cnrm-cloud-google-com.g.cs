@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.healthcare.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1HealthcareDICOMStoreList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1alpha1HealthcareDICOMStore> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareDICOMStoreSpecNotificationConfig
@@ -42,7 +45,9 @@ public partial class V1alpha1HealthcareDICOMStoreSpecNotificationConfig
     [JsonPropertyName("pubsubTopic")]
     public string PubsubTopic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigQueryDestination to include a fully qualified BigQuery table URI where DICOM instance metadata will be streamed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareDICOMStoreSpecStreamConfigsBigqueryDestination
@@ -51,7 +56,9 @@ public partial class V1alpha1HealthcareDICOMStoreSpecStreamConfigsBigqueryDestin
     [JsonPropertyName("tableUri")]
     public string TableUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareDICOMStoreSpecStreamConfigs
@@ -60,7 +67,9 @@ public partial class V1alpha1HealthcareDICOMStoreSpecStreamConfigs
     [JsonPropertyName("bigqueryDestination")]
     public V1alpha1HealthcareDICOMStoreSpecStreamConfigsBigqueryDestination BigqueryDestination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareDICOMStoreSpec
@@ -81,7 +90,9 @@ public partial class V1alpha1HealthcareDICOMStoreSpec
     [JsonPropertyName("streamConfigs")]
     public IList<V1alpha1HealthcareDICOMStoreSpecStreamConfigs>? StreamConfigs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareDICOMStoreStatusConditions
@@ -106,7 +117,9 @@ public partial class V1alpha1HealthcareDICOMStoreStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareDICOMStoreStatus
@@ -123,7 +136,9 @@ public partial class V1alpha1HealthcareDICOMStoreStatus
     [JsonPropertyName("selfLink")]
     public string? SelfLink { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -153,3 +168,4 @@ public partial class V1alpha1HealthcareDICOMStore : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1alpha1HealthcareDICOMStoreStatus? Status { get; set; }
 }
+#nullable disable

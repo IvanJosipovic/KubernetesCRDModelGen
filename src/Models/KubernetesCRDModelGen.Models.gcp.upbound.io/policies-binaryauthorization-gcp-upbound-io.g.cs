@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.binaryauthorization.gcp.upbound.io;
+#nullable enable
 /// <summary>Policy is the Schema for the Policys API. A policy for container image binary authorization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PolicyList : IKubernetesObject<V1ListMeta>, IItems<V
     [JsonPropertyName("items")]
     public IList<V1beta1Policy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderAdmissionWhitelistPatterns
@@ -42,7 +45,9 @@ public partial class V1beta1PolicySpecForProviderAdmissionWhitelistPatterns
     [JsonPropertyName("namePattern")]
     public string? NamePattern { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderClusterAdmissionRulesRequireAttestationsByRefsPolicy
@@ -55,7 +60,9 @@ public partial class V1beta1PolicySpecForProviderClusterAdmissionRulesRequireAtt
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderClusterAdmissionRulesRequireAttestationsByRefs
@@ -68,7 +75,9 @@ public partial class V1beta1PolicySpecForProviderClusterAdmissionRulesRequireAtt
     [JsonPropertyName("policy")]
     public V1beta1PolicySpecForProviderClusterAdmissionRulesRequireAttestationsByRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderClusterAdmissionRulesRequireAttestationsBySelectorPolicy
@@ -81,7 +90,9 @@ public partial class V1beta1PolicySpecForProviderClusterAdmissionRulesRequireAtt
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Attestor in binaryauthorization to populate requireAttestationsBy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderClusterAdmissionRulesRequireAttestationsBySelector
@@ -98,7 +109,9 @@ public partial class V1beta1PolicySpecForProviderClusterAdmissionRulesRequireAtt
     [JsonPropertyName("policy")]
     public V1beta1PolicySpecForProviderClusterAdmissionRulesRequireAttestationsBySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderClusterAdmissionRules
@@ -127,7 +140,9 @@ public partial class V1beta1PolicySpecForProviderClusterAdmissionRules
     [JsonPropertyName("requireAttestationsBySelector")]
     public V1beta1PolicySpecForProviderClusterAdmissionRulesRequireAttestationsBySelector? RequireAttestationsBySelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderDefaultAdmissionRuleRequireAttestationsByRefsPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1PolicySpecForProviderDefaultAdmissionRuleRequireAtte
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderDefaultAdmissionRuleRequireAttestationsByRefs
@@ -153,7 +170,9 @@ public partial class V1beta1PolicySpecForProviderDefaultAdmissionRuleRequireAtte
     [JsonPropertyName("policy")]
     public V1beta1PolicySpecForProviderDefaultAdmissionRuleRequireAttestationsByRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderDefaultAdmissionRuleRequireAttestationsBySelectorPolicy
@@ -166,7 +185,9 @@ public partial class V1beta1PolicySpecForProviderDefaultAdmissionRuleRequireAtte
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Attestor in binaryauthorization to populate requireAttestationsBy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderDefaultAdmissionRuleRequireAttestationsBySelector
@@ -183,7 +204,9 @@ public partial class V1beta1PolicySpecForProviderDefaultAdmissionRuleRequireAtte
     [JsonPropertyName("policy")]
     public V1beta1PolicySpecForProviderDefaultAdmissionRuleRequireAttestationsBySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderDefaultAdmissionRule
@@ -208,7 +231,9 @@ public partial class V1beta1PolicySpecForProviderDefaultAdmissionRule
     [JsonPropertyName("requireAttestationsBySelector")]
     public V1beta1PolicySpecForProviderDefaultAdmissionRuleRequireAttestationsBySelector? RequireAttestationsBySelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProvider
@@ -237,7 +262,9 @@ public partial class V1beta1PolicySpecForProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProviderAdmissionWhitelistPatterns
@@ -246,7 +273,9 @@ public partial class V1beta1PolicySpecInitProviderAdmissionWhitelistPatterns
     [JsonPropertyName("namePattern")]
     public string? NamePattern { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProviderClusterAdmissionRulesRequireAttestationsByRefsPolicy
@@ -259,7 +288,9 @@ public partial class V1beta1PolicySpecInitProviderClusterAdmissionRulesRequireAt
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProviderClusterAdmissionRulesRequireAttestationsByRefs
@@ -272,7 +303,9 @@ public partial class V1beta1PolicySpecInitProviderClusterAdmissionRulesRequireAt
     [JsonPropertyName("policy")]
     public V1beta1PolicySpecInitProviderClusterAdmissionRulesRequireAttestationsByRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProviderClusterAdmissionRulesRequireAttestationsBySelectorPolicy
@@ -285,7 +318,9 @@ public partial class V1beta1PolicySpecInitProviderClusterAdmissionRulesRequireAt
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Attestor in binaryauthorization to populate requireAttestationsBy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProviderClusterAdmissionRulesRequireAttestationsBySelector
@@ -302,7 +337,9 @@ public partial class V1beta1PolicySpecInitProviderClusterAdmissionRulesRequireAt
     [JsonPropertyName("policy")]
     public V1beta1PolicySpecInitProviderClusterAdmissionRulesRequireAttestationsBySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProviderClusterAdmissionRules
@@ -331,7 +368,9 @@ public partial class V1beta1PolicySpecInitProviderClusterAdmissionRules
     [JsonPropertyName("requireAttestationsBySelector")]
     public V1beta1PolicySpecInitProviderClusterAdmissionRulesRequireAttestationsBySelector? RequireAttestationsBySelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProviderDefaultAdmissionRuleRequireAttestationsByRefsPolicy
@@ -344,7 +383,9 @@ public partial class V1beta1PolicySpecInitProviderDefaultAdmissionRuleRequireAtt
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProviderDefaultAdmissionRuleRequireAttestationsByRefs
@@ -357,7 +398,9 @@ public partial class V1beta1PolicySpecInitProviderDefaultAdmissionRuleRequireAtt
     [JsonPropertyName("policy")]
     public V1beta1PolicySpecInitProviderDefaultAdmissionRuleRequireAttestationsByRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProviderDefaultAdmissionRuleRequireAttestationsBySelectorPolicy
@@ -370,7 +413,9 @@ public partial class V1beta1PolicySpecInitProviderDefaultAdmissionRuleRequireAtt
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Attestor in binaryauthorization to populate requireAttestationsBy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProviderDefaultAdmissionRuleRequireAttestationsBySelector
@@ -387,7 +432,9 @@ public partial class V1beta1PolicySpecInitProviderDefaultAdmissionRuleRequireAtt
     [JsonPropertyName("policy")]
     public V1beta1PolicySpecInitProviderDefaultAdmissionRuleRequireAttestationsBySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProviderDefaultAdmissionRule
@@ -412,7 +459,9 @@ public partial class V1beta1PolicySpecInitProviderDefaultAdmissionRule
     [JsonPropertyName("requireAttestationsBySelector")]
     public V1beta1PolicySpecInitProviderDefaultAdmissionRuleRequireAttestationsBySelector? RequireAttestationsBySelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProvider
@@ -441,7 +490,9 @@ public partial class V1beta1PolicySpecInitProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecProviderConfigRefPolicy
@@ -454,7 +505,9 @@ public partial class V1beta1PolicySpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecProviderConfigRef
@@ -467,7 +520,9 @@ public partial class V1beta1PolicySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1PolicySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecWriteConnectionSecretToRef
@@ -480,7 +535,9 @@ public partial class V1beta1PolicySpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PolicySpec defines the desired state of Policy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpec
@@ -509,7 +566,9 @@ public partial class V1beta1PolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1PolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyStatusAtProviderAdmissionWhitelistPatterns
@@ -518,7 +577,9 @@ public partial class V1beta1PolicyStatusAtProviderAdmissionWhitelistPatterns
     [JsonPropertyName("namePattern")]
     public string? NamePattern { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyStatusAtProviderClusterAdmissionRules
@@ -539,7 +600,9 @@ public partial class V1beta1PolicyStatusAtProviderClusterAdmissionRules
     [JsonPropertyName("requireAttestationsBy")]
     public IList<string>? RequireAttestationsBy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyStatusAtProviderDefaultAdmissionRule
@@ -556,7 +619,9 @@ public partial class V1beta1PolicyStatusAtProviderDefaultAdmissionRule
     [JsonPropertyName("requireAttestationsBy")]
     public IList<string>? RequireAttestationsBy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyStatusAtProvider
@@ -589,7 +654,9 @@ public partial class V1beta1PolicyStatusAtProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyStatusConditions
@@ -618,7 +685,9 @@ public partial class V1beta1PolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PolicyStatus defines the observed state of Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyStatus
@@ -635,7 +704,9 @@ public partial class V1beta1PolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policy is the Schema for the Policys API. A policy for container image binary authorization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -665,3 +736,4 @@ public partial class V1beta1Policy : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     [JsonPropertyName("status")]
     public V1beta1PolicyStatus? Status { get; set; }
 }
+#nullable disable

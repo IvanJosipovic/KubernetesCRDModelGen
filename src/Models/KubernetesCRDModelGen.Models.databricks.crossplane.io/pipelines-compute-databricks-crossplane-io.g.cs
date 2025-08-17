@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.databricks.crossplane.io;
+#nullable enable
 /// <summary>Pipeline is the Schema for the Pipelines API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1PipelineList : IKubernetesObject<V1ListMeta>, IItem
     [JsonPropertyName("items")]
     public IList<V1alpha1Pipeline> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderClusterAutoscale
@@ -50,7 +53,9 @@ public partial class V1alpha1PipelineSpecForProviderClusterAutoscale
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderClusterAwsAttributes
@@ -95,7 +100,9 @@ public partial class V1alpha1PipelineSpecForProviderClusterAwsAttributes
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderClusterAzureAttributesLogAnalyticsInfo
@@ -108,7 +115,9 @@ public partial class V1alpha1PipelineSpecForProviderClusterAzureAttributesLogAna
     [JsonPropertyName("logAnalyticsWorkspaceId")]
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderClusterAzureAttributes
@@ -129,7 +138,9 @@ public partial class V1alpha1PipelineSpecForProviderClusterAzureAttributes
     [JsonPropertyName("spotBidMaxPrice")]
     public double? SpotBidMaxPrice { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderClusterClusterLogConfDbfs
@@ -138,7 +149,9 @@ public partial class V1alpha1PipelineSpecForProviderClusterClusterLogConfDbfs
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderClusterClusterLogConfS3
@@ -171,7 +184,9 @@ public partial class V1alpha1PipelineSpecForProviderClusterClusterLogConfS3
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderClusterClusterLogConfVolumes
@@ -180,7 +195,9 @@ public partial class V1alpha1PipelineSpecForProviderClusterClusterLogConfVolumes
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderClusterClusterLogConf
@@ -197,7 +214,9 @@ public partial class V1alpha1PipelineSpecForProviderClusterClusterLogConf
     [JsonPropertyName("volumes")]
     public IList<V1alpha1PipelineSpecForProviderClusterClusterLogConfVolumes>? Volumes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderClusterGcpAttributes
@@ -218,7 +237,9 @@ public partial class V1alpha1PipelineSpecForProviderClusterGcpAttributes
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderClusterInitScriptsAbfss
@@ -227,7 +248,9 @@ public partial class V1alpha1PipelineSpecForProviderClusterInitScriptsAbfss
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderClusterInitScriptsDbfs
@@ -236,7 +259,9 @@ public partial class V1alpha1PipelineSpecForProviderClusterInitScriptsDbfs
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderClusterInitScriptsFile
@@ -245,7 +270,9 @@ public partial class V1alpha1PipelineSpecForProviderClusterInitScriptsFile
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderClusterInitScriptsGcs
@@ -254,7 +281,9 @@ public partial class V1alpha1PipelineSpecForProviderClusterInitScriptsGcs
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderClusterInitScriptsS3
@@ -287,7 +316,9 @@ public partial class V1alpha1PipelineSpecForProviderClusterInitScriptsS3
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderClusterInitScriptsVolumes
@@ -296,7 +327,9 @@ public partial class V1alpha1PipelineSpecForProviderClusterInitScriptsVolumes
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderClusterInitScriptsWorkspace
@@ -305,7 +338,9 @@ public partial class V1alpha1PipelineSpecForProviderClusterInitScriptsWorkspace
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderClusterInitScripts
@@ -338,7 +373,9 @@ public partial class V1alpha1PipelineSpecForProviderClusterInitScripts
     [JsonPropertyName("workspace")]
     public IList<V1alpha1PipelineSpecForProviderClusterInitScriptsWorkspace>? Workspace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderCluster
@@ -419,7 +456,9 @@ public partial class V1alpha1PipelineSpecForProviderCluster
     [JsonPropertyName("sshPublicKeys")]
     public IList<string>? SshPublicKeys { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderDeployment
@@ -432,7 +471,9 @@ public partial class V1alpha1PipelineSpecForProviderDeployment
     [JsonPropertyName("metadataFilePath")]
     public string? MetadataFilePath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderEnvironment
@@ -441,7 +482,9 @@ public partial class V1alpha1PipelineSpecForProviderEnvironment
     [JsonPropertyName("dependencies")]
     public IList<string>? Dependencies { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderEventLog
@@ -458,7 +501,9 @@ public partial class V1alpha1PipelineSpecForProviderEventLog
     [JsonPropertyName("schema")]
     public string? Schema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderFilters
@@ -471,7 +516,9 @@ public partial class V1alpha1PipelineSpecForProviderFilters
     [JsonPropertyName("include")]
     public IList<string>? Include { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderGatewayDefinition
@@ -496,7 +543,9 @@ public partial class V1alpha1PipelineSpecForProviderGatewayDefinition
     [JsonPropertyName("gatewayStorageSchema")]
     public string? GatewayStorageSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderIngestionDefinitionObjectsReportTableConfiguration
@@ -525,7 +574,9 @@ public partial class V1alpha1PipelineSpecForProviderIngestionDefinitionObjectsRe
     [JsonPropertyName("sequenceBy")]
     public IList<string>? SequenceBy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderIngestionDefinitionObjectsReport
@@ -550,7 +601,9 @@ public partial class V1alpha1PipelineSpecForProviderIngestionDefinitionObjectsRe
     [JsonPropertyName("tableConfiguration")]
     public IList<V1alpha1PipelineSpecForProviderIngestionDefinitionObjectsReportTableConfiguration>? TableConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderIngestionDefinitionObjectsSchemaTableConfiguration
@@ -579,7 +632,9 @@ public partial class V1alpha1PipelineSpecForProviderIngestionDefinitionObjectsSc
     [JsonPropertyName("sequenceBy")]
     public IList<string>? SequenceBy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderIngestionDefinitionObjectsSchema
@@ -604,7 +659,9 @@ public partial class V1alpha1PipelineSpecForProviderIngestionDefinitionObjectsSc
     [JsonPropertyName("tableConfiguration")]
     public IList<V1alpha1PipelineSpecForProviderIngestionDefinitionObjectsSchemaTableConfiguration>? TableConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderIngestionDefinitionObjectsTableTableConfiguration
@@ -633,7 +690,9 @@ public partial class V1alpha1PipelineSpecForProviderIngestionDefinitionObjectsTa
     [JsonPropertyName("sequenceBy")]
     public IList<string>? SequenceBy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderIngestionDefinitionObjectsTable
@@ -666,7 +725,9 @@ public partial class V1alpha1PipelineSpecForProviderIngestionDefinitionObjectsTa
     [JsonPropertyName("tableConfiguration")]
     public IList<V1alpha1PipelineSpecForProviderIngestionDefinitionObjectsTableTableConfiguration>? TableConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderIngestionDefinitionObjects
@@ -683,7 +744,9 @@ public partial class V1alpha1PipelineSpecForProviderIngestionDefinitionObjects
     [JsonPropertyName("table")]
     public IList<V1alpha1PipelineSpecForProviderIngestionDefinitionObjectsTable>? Table { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderIngestionDefinitionTableConfiguration
@@ -712,7 +775,9 @@ public partial class V1alpha1PipelineSpecForProviderIngestionDefinitionTableConf
     [JsonPropertyName("sequenceBy")]
     public IList<string>? SequenceBy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderIngestionDefinition
@@ -737,7 +802,9 @@ public partial class V1alpha1PipelineSpecForProviderIngestionDefinition
     [JsonPropertyName("tableConfiguration")]
     public IList<V1alpha1PipelineSpecForProviderIngestionDefinitionTableConfiguration>? TableConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderLatestUpdates
@@ -754,7 +821,9 @@ public partial class V1alpha1PipelineSpecForProviderLatestUpdates
     [JsonPropertyName("updateId")]
     public string? UpdateId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderLibraryFile
@@ -763,7 +832,9 @@ public partial class V1alpha1PipelineSpecForProviderLibraryFile
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderLibraryGlob
@@ -772,7 +843,9 @@ public partial class V1alpha1PipelineSpecForProviderLibraryGlob
     [JsonPropertyName("include")]
     public string? Include { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderLibraryMaven
@@ -789,7 +862,9 @@ public partial class V1alpha1PipelineSpecForProviderLibraryMaven
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderLibraryNotebook
@@ -798,7 +873,9 @@ public partial class V1alpha1PipelineSpecForProviderLibraryNotebook
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderLibrary
@@ -827,7 +904,9 @@ public partial class V1alpha1PipelineSpecForProviderLibrary
     [JsonPropertyName("whl")]
     public string? Whl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderNotification
@@ -840,7 +919,9 @@ public partial class V1alpha1PipelineSpecForProviderNotification
     [JsonPropertyName("emailRecipients")]
     public IList<string>? EmailRecipients { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderRestartWindow
@@ -857,7 +938,9 @@ public partial class V1alpha1PipelineSpecForProviderRestartWindow
     [JsonPropertyName("timeZoneId")]
     public string? TimeZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderRunAs
@@ -870,7 +953,9 @@ public partial class V1alpha1PipelineSpecForProviderRunAs
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderTriggerCron
@@ -883,13 +968,17 @@ public partial class V1alpha1PipelineSpecForProviderTriggerCron
     [JsonPropertyName("timezoneId")]
     public string? TimezoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderTriggerManual
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProviderTrigger
@@ -902,7 +991,9 @@ public partial class V1alpha1PipelineSpecForProviderTrigger
     [JsonPropertyName("manual")]
     public IList<V1alpha1PipelineSpecForProviderTriggerManual>? Manual { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecForProvider
@@ -1059,7 +1150,9 @@ public partial class V1alpha1PipelineSpecForProvider
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderClusterAutoscale
@@ -1076,7 +1169,9 @@ public partial class V1alpha1PipelineSpecInitProviderClusterAutoscale
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderClusterAwsAttributes
@@ -1121,7 +1216,9 @@ public partial class V1alpha1PipelineSpecInitProviderClusterAwsAttributes
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderClusterAzureAttributesLogAnalyticsInfo
@@ -1134,7 +1231,9 @@ public partial class V1alpha1PipelineSpecInitProviderClusterAzureAttributesLogAn
     [JsonPropertyName("logAnalyticsWorkspaceId")]
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderClusterAzureAttributes
@@ -1155,7 +1254,9 @@ public partial class V1alpha1PipelineSpecInitProviderClusterAzureAttributes
     [JsonPropertyName("spotBidMaxPrice")]
     public double? SpotBidMaxPrice { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderClusterClusterLogConfDbfs
@@ -1164,7 +1265,9 @@ public partial class V1alpha1PipelineSpecInitProviderClusterClusterLogConfDbfs
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderClusterClusterLogConfS3
@@ -1197,7 +1300,9 @@ public partial class V1alpha1PipelineSpecInitProviderClusterClusterLogConfS3
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderClusterClusterLogConfVolumes
@@ -1206,7 +1311,9 @@ public partial class V1alpha1PipelineSpecInitProviderClusterClusterLogConfVolume
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderClusterClusterLogConf
@@ -1223,7 +1330,9 @@ public partial class V1alpha1PipelineSpecInitProviderClusterClusterLogConf
     [JsonPropertyName("volumes")]
     public IList<V1alpha1PipelineSpecInitProviderClusterClusterLogConfVolumes>? Volumes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderClusterGcpAttributes
@@ -1244,7 +1353,9 @@ public partial class V1alpha1PipelineSpecInitProviderClusterGcpAttributes
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderClusterInitScriptsAbfss
@@ -1253,7 +1364,9 @@ public partial class V1alpha1PipelineSpecInitProviderClusterInitScriptsAbfss
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderClusterInitScriptsDbfs
@@ -1262,7 +1375,9 @@ public partial class V1alpha1PipelineSpecInitProviderClusterInitScriptsDbfs
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderClusterInitScriptsFile
@@ -1271,7 +1386,9 @@ public partial class V1alpha1PipelineSpecInitProviderClusterInitScriptsFile
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderClusterInitScriptsGcs
@@ -1280,7 +1397,9 @@ public partial class V1alpha1PipelineSpecInitProviderClusterInitScriptsGcs
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderClusterInitScriptsS3
@@ -1313,7 +1432,9 @@ public partial class V1alpha1PipelineSpecInitProviderClusterInitScriptsS3
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderClusterInitScriptsVolumes
@@ -1322,7 +1443,9 @@ public partial class V1alpha1PipelineSpecInitProviderClusterInitScriptsVolumes
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderClusterInitScriptsWorkspace
@@ -1331,7 +1454,9 @@ public partial class V1alpha1PipelineSpecInitProviderClusterInitScriptsWorkspace
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderClusterInitScripts
@@ -1364,7 +1489,9 @@ public partial class V1alpha1PipelineSpecInitProviderClusterInitScripts
     [JsonPropertyName("workspace")]
     public IList<V1alpha1PipelineSpecInitProviderClusterInitScriptsWorkspace>? Workspace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderCluster
@@ -1445,7 +1572,9 @@ public partial class V1alpha1PipelineSpecInitProviderCluster
     [JsonPropertyName("sshPublicKeys")]
     public IList<string>? SshPublicKeys { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderDeployment
@@ -1458,7 +1587,9 @@ public partial class V1alpha1PipelineSpecInitProviderDeployment
     [JsonPropertyName("metadataFilePath")]
     public string? MetadataFilePath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderEnvironment
@@ -1467,7 +1598,9 @@ public partial class V1alpha1PipelineSpecInitProviderEnvironment
     [JsonPropertyName("dependencies")]
     public IList<string>? Dependencies { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderEventLog
@@ -1484,7 +1617,9 @@ public partial class V1alpha1PipelineSpecInitProviderEventLog
     [JsonPropertyName("schema")]
     public string? Schema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderFilters
@@ -1497,7 +1632,9 @@ public partial class V1alpha1PipelineSpecInitProviderFilters
     [JsonPropertyName("include")]
     public IList<string>? Include { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderGatewayDefinition
@@ -1522,7 +1659,9 @@ public partial class V1alpha1PipelineSpecInitProviderGatewayDefinition
     [JsonPropertyName("gatewayStorageSchema")]
     public string? GatewayStorageSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderIngestionDefinitionObjectsReportTableConfiguration
@@ -1551,7 +1690,9 @@ public partial class V1alpha1PipelineSpecInitProviderIngestionDefinitionObjectsR
     [JsonPropertyName("sequenceBy")]
     public IList<string>? SequenceBy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderIngestionDefinitionObjectsReport
@@ -1576,7 +1717,9 @@ public partial class V1alpha1PipelineSpecInitProviderIngestionDefinitionObjectsR
     [JsonPropertyName("tableConfiguration")]
     public IList<V1alpha1PipelineSpecInitProviderIngestionDefinitionObjectsReportTableConfiguration>? TableConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderIngestionDefinitionObjectsSchemaTableConfiguration
@@ -1605,7 +1748,9 @@ public partial class V1alpha1PipelineSpecInitProviderIngestionDefinitionObjectsS
     [JsonPropertyName("sequenceBy")]
     public IList<string>? SequenceBy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderIngestionDefinitionObjectsSchema
@@ -1630,7 +1775,9 @@ public partial class V1alpha1PipelineSpecInitProviderIngestionDefinitionObjectsS
     [JsonPropertyName("tableConfiguration")]
     public IList<V1alpha1PipelineSpecInitProviderIngestionDefinitionObjectsSchemaTableConfiguration>? TableConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderIngestionDefinitionObjectsTableTableConfiguration
@@ -1659,7 +1806,9 @@ public partial class V1alpha1PipelineSpecInitProviderIngestionDefinitionObjectsT
     [JsonPropertyName("sequenceBy")]
     public IList<string>? SequenceBy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderIngestionDefinitionObjectsTable
@@ -1692,7 +1841,9 @@ public partial class V1alpha1PipelineSpecInitProviderIngestionDefinitionObjectsT
     [JsonPropertyName("tableConfiguration")]
     public IList<V1alpha1PipelineSpecInitProviderIngestionDefinitionObjectsTableTableConfiguration>? TableConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderIngestionDefinitionObjects
@@ -1709,7 +1860,9 @@ public partial class V1alpha1PipelineSpecInitProviderIngestionDefinitionObjects
     [JsonPropertyName("table")]
     public IList<V1alpha1PipelineSpecInitProviderIngestionDefinitionObjectsTable>? Table { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderIngestionDefinitionTableConfiguration
@@ -1738,7 +1891,9 @@ public partial class V1alpha1PipelineSpecInitProviderIngestionDefinitionTableCon
     [JsonPropertyName("sequenceBy")]
     public IList<string>? SequenceBy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderIngestionDefinition
@@ -1763,7 +1918,9 @@ public partial class V1alpha1PipelineSpecInitProviderIngestionDefinition
     [JsonPropertyName("tableConfiguration")]
     public IList<V1alpha1PipelineSpecInitProviderIngestionDefinitionTableConfiguration>? TableConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderLatestUpdates
@@ -1780,7 +1937,9 @@ public partial class V1alpha1PipelineSpecInitProviderLatestUpdates
     [JsonPropertyName("updateId")]
     public string? UpdateId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderLibraryFile
@@ -1789,7 +1948,9 @@ public partial class V1alpha1PipelineSpecInitProviderLibraryFile
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderLibraryGlob
@@ -1798,7 +1959,9 @@ public partial class V1alpha1PipelineSpecInitProviderLibraryGlob
     [JsonPropertyName("include")]
     public string? Include { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderLibraryMaven
@@ -1815,7 +1978,9 @@ public partial class V1alpha1PipelineSpecInitProviderLibraryMaven
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderLibraryNotebook
@@ -1824,7 +1989,9 @@ public partial class V1alpha1PipelineSpecInitProviderLibraryNotebook
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderLibrary
@@ -1853,7 +2020,9 @@ public partial class V1alpha1PipelineSpecInitProviderLibrary
     [JsonPropertyName("whl")]
     public string? Whl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderNotification
@@ -1866,7 +2035,9 @@ public partial class V1alpha1PipelineSpecInitProviderNotification
     [JsonPropertyName("emailRecipients")]
     public IList<string>? EmailRecipients { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderRestartWindow
@@ -1883,7 +2054,9 @@ public partial class V1alpha1PipelineSpecInitProviderRestartWindow
     [JsonPropertyName("timeZoneId")]
     public string? TimeZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderRunAs
@@ -1896,7 +2069,9 @@ public partial class V1alpha1PipelineSpecInitProviderRunAs
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderTriggerCron
@@ -1909,13 +2084,17 @@ public partial class V1alpha1PipelineSpecInitProviderTriggerCron
     [JsonPropertyName("timezoneId")]
     public string? TimezoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderTriggerManual
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProviderTrigger
@@ -1928,7 +2107,9 @@ public partial class V1alpha1PipelineSpecInitProviderTrigger
     [JsonPropertyName("manual")]
     public IList<V1alpha1PipelineSpecInitProviderTriggerManual>? Manual { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecInitProvider
@@ -2085,7 +2266,9 @@ public partial class V1alpha1PipelineSpecInitProvider
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecProviderConfigRefPolicy
@@ -2098,7 +2281,9 @@ public partial class V1alpha1PipelineSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecProviderConfigRef
@@ -2111,7 +2296,9 @@ public partial class V1alpha1PipelineSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1PipelineSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecPublishConnectionDetailsToConfigRefPolicy
@@ -2124,7 +2311,9 @@ public partial class V1alpha1PipelineSpecPublishConnectionDetailsToConfigRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecPublishConnectionDetailsToConfigRef
@@ -2137,7 +2326,9 @@ public partial class V1alpha1PipelineSpecPublishConnectionDetailsToConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1PipelineSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Metadata is the metadata for connection secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecPublishConnectionDetailsToMetadata
@@ -2154,7 +2345,9 @@ public partial class V1alpha1PipelineSpecPublishConnectionDetailsToMetadata
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecPublishConnectionDetailsTo
@@ -2171,7 +2364,9 @@ public partial class V1alpha1PipelineSpecPublishConnectionDetailsTo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpecWriteConnectionSecretToRef
@@ -2184,7 +2379,9 @@ public partial class V1alpha1PipelineSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PipelineSpec defines the desired state of Pipeline</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineSpec
@@ -2217,7 +2414,9 @@ public partial class V1alpha1PipelineSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1alpha1PipelineSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderClusterAutoscale
@@ -2234,7 +2433,9 @@ public partial class V1alpha1PipelineStatusAtProviderClusterAutoscale
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderClusterAwsAttributes
@@ -2279,7 +2480,9 @@ public partial class V1alpha1PipelineStatusAtProviderClusterAwsAttributes
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderClusterAzureAttributesLogAnalyticsInfo
@@ -2292,7 +2495,9 @@ public partial class V1alpha1PipelineStatusAtProviderClusterAzureAttributesLogAn
     [JsonPropertyName("logAnalyticsWorkspaceId")]
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderClusterAzureAttributes
@@ -2313,7 +2518,9 @@ public partial class V1alpha1PipelineStatusAtProviderClusterAzureAttributes
     [JsonPropertyName("spotBidMaxPrice")]
     public double? SpotBidMaxPrice { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderClusterClusterLogConfDbfs
@@ -2322,7 +2529,9 @@ public partial class V1alpha1PipelineStatusAtProviderClusterClusterLogConfDbfs
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderClusterClusterLogConfS3
@@ -2355,7 +2564,9 @@ public partial class V1alpha1PipelineStatusAtProviderClusterClusterLogConfS3
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderClusterClusterLogConfVolumes
@@ -2364,7 +2575,9 @@ public partial class V1alpha1PipelineStatusAtProviderClusterClusterLogConfVolume
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderClusterClusterLogConf
@@ -2381,7 +2594,9 @@ public partial class V1alpha1PipelineStatusAtProviderClusterClusterLogConf
     [JsonPropertyName("volumes")]
     public IList<V1alpha1PipelineStatusAtProviderClusterClusterLogConfVolumes>? Volumes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderClusterGcpAttributes
@@ -2402,7 +2617,9 @@ public partial class V1alpha1PipelineStatusAtProviderClusterGcpAttributes
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderClusterInitScriptsAbfss
@@ -2411,7 +2628,9 @@ public partial class V1alpha1PipelineStatusAtProviderClusterInitScriptsAbfss
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderClusterInitScriptsDbfs
@@ -2420,7 +2639,9 @@ public partial class V1alpha1PipelineStatusAtProviderClusterInitScriptsDbfs
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderClusterInitScriptsFile
@@ -2429,7 +2650,9 @@ public partial class V1alpha1PipelineStatusAtProviderClusterInitScriptsFile
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderClusterInitScriptsGcs
@@ -2438,7 +2661,9 @@ public partial class V1alpha1PipelineStatusAtProviderClusterInitScriptsGcs
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderClusterInitScriptsS3
@@ -2471,7 +2696,9 @@ public partial class V1alpha1PipelineStatusAtProviderClusterInitScriptsS3
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderClusterInitScriptsVolumes
@@ -2480,7 +2707,9 @@ public partial class V1alpha1PipelineStatusAtProviderClusterInitScriptsVolumes
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderClusterInitScriptsWorkspace
@@ -2489,7 +2718,9 @@ public partial class V1alpha1PipelineStatusAtProviderClusterInitScriptsWorkspace
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderClusterInitScripts
@@ -2522,7 +2753,9 @@ public partial class V1alpha1PipelineStatusAtProviderClusterInitScripts
     [JsonPropertyName("workspace")]
     public IList<V1alpha1PipelineStatusAtProviderClusterInitScriptsWorkspace>? Workspace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderCluster
@@ -2603,7 +2836,9 @@ public partial class V1alpha1PipelineStatusAtProviderCluster
     [JsonPropertyName("sshPublicKeys")]
     public IList<string>? SshPublicKeys { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderDeployment
@@ -2616,7 +2851,9 @@ public partial class V1alpha1PipelineStatusAtProviderDeployment
     [JsonPropertyName("metadataFilePath")]
     public string? MetadataFilePath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderEnvironment
@@ -2625,7 +2862,9 @@ public partial class V1alpha1PipelineStatusAtProviderEnvironment
     [JsonPropertyName("dependencies")]
     public IList<string>? Dependencies { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderEventLog
@@ -2642,7 +2881,9 @@ public partial class V1alpha1PipelineStatusAtProviderEventLog
     [JsonPropertyName("schema")]
     public string? Schema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderFilters
@@ -2655,7 +2896,9 @@ public partial class V1alpha1PipelineStatusAtProviderFilters
     [JsonPropertyName("include")]
     public IList<string>? Include { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderGatewayDefinition
@@ -2680,7 +2923,9 @@ public partial class V1alpha1PipelineStatusAtProviderGatewayDefinition
     [JsonPropertyName("gatewayStorageSchema")]
     public string? GatewayStorageSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderIngestionDefinitionObjectsReportTableConfiguration
@@ -2709,7 +2954,9 @@ public partial class V1alpha1PipelineStatusAtProviderIngestionDefinitionObjectsR
     [JsonPropertyName("sequenceBy")]
     public IList<string>? SequenceBy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderIngestionDefinitionObjectsReport
@@ -2734,7 +2981,9 @@ public partial class V1alpha1PipelineStatusAtProviderIngestionDefinitionObjectsR
     [JsonPropertyName("tableConfiguration")]
     public IList<V1alpha1PipelineStatusAtProviderIngestionDefinitionObjectsReportTableConfiguration>? TableConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderIngestionDefinitionObjectsSchemaTableConfiguration
@@ -2763,7 +3012,9 @@ public partial class V1alpha1PipelineStatusAtProviderIngestionDefinitionObjectsS
     [JsonPropertyName("sequenceBy")]
     public IList<string>? SequenceBy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderIngestionDefinitionObjectsSchema
@@ -2788,7 +3039,9 @@ public partial class V1alpha1PipelineStatusAtProviderIngestionDefinitionObjectsS
     [JsonPropertyName("tableConfiguration")]
     public IList<V1alpha1PipelineStatusAtProviderIngestionDefinitionObjectsSchemaTableConfiguration>? TableConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderIngestionDefinitionObjectsTableTableConfiguration
@@ -2817,7 +3070,9 @@ public partial class V1alpha1PipelineStatusAtProviderIngestionDefinitionObjectsT
     [JsonPropertyName("sequenceBy")]
     public IList<string>? SequenceBy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderIngestionDefinitionObjectsTable
@@ -2850,7 +3105,9 @@ public partial class V1alpha1PipelineStatusAtProviderIngestionDefinitionObjectsT
     [JsonPropertyName("tableConfiguration")]
     public IList<V1alpha1PipelineStatusAtProviderIngestionDefinitionObjectsTableTableConfiguration>? TableConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderIngestionDefinitionObjects
@@ -2867,7 +3124,9 @@ public partial class V1alpha1PipelineStatusAtProviderIngestionDefinitionObjects
     [JsonPropertyName("table")]
     public IList<V1alpha1PipelineStatusAtProviderIngestionDefinitionObjectsTable>? Table { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderIngestionDefinitionTableConfiguration
@@ -2896,7 +3155,9 @@ public partial class V1alpha1PipelineStatusAtProviderIngestionDefinitionTableCon
     [JsonPropertyName("sequenceBy")]
     public IList<string>? SequenceBy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderIngestionDefinition
@@ -2921,7 +3182,9 @@ public partial class V1alpha1PipelineStatusAtProviderIngestionDefinition
     [JsonPropertyName("tableConfiguration")]
     public IList<V1alpha1PipelineStatusAtProviderIngestionDefinitionTableConfiguration>? TableConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderLatestUpdates
@@ -2938,7 +3201,9 @@ public partial class V1alpha1PipelineStatusAtProviderLatestUpdates
     [JsonPropertyName("updateId")]
     public string? UpdateId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderLibraryFile
@@ -2947,7 +3212,9 @@ public partial class V1alpha1PipelineStatusAtProviderLibraryFile
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderLibraryGlob
@@ -2956,7 +3223,9 @@ public partial class V1alpha1PipelineStatusAtProviderLibraryGlob
     [JsonPropertyName("include")]
     public string? Include { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderLibraryMaven
@@ -2973,7 +3242,9 @@ public partial class V1alpha1PipelineStatusAtProviderLibraryMaven
     [JsonPropertyName("repo")]
     public string? Repo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderLibraryNotebook
@@ -2982,7 +3253,9 @@ public partial class V1alpha1PipelineStatusAtProviderLibraryNotebook
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderLibrary
@@ -3011,7 +3284,9 @@ public partial class V1alpha1PipelineStatusAtProviderLibrary
     [JsonPropertyName("whl")]
     public string? Whl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderNotification
@@ -3024,7 +3299,9 @@ public partial class V1alpha1PipelineStatusAtProviderNotification
     [JsonPropertyName("emailRecipients")]
     public IList<string>? EmailRecipients { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderRestartWindow
@@ -3041,7 +3318,9 @@ public partial class V1alpha1PipelineStatusAtProviderRestartWindow
     [JsonPropertyName("timeZoneId")]
     public string? TimeZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderRunAs
@@ -3054,7 +3333,9 @@ public partial class V1alpha1PipelineStatusAtProviderRunAs
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderTriggerCron
@@ -3067,13 +3348,17 @@ public partial class V1alpha1PipelineStatusAtProviderTriggerCron
     [JsonPropertyName("timezoneId")]
     public string? TimezoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderTriggerManual
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProviderTrigger
@@ -3086,7 +3371,9 @@ public partial class V1alpha1PipelineStatusAtProviderTrigger
     [JsonPropertyName("manual")]
     public IList<V1alpha1PipelineStatusAtProviderTriggerManual>? Manual { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusAtProvider
@@ -3247,7 +3534,9 @@ public partial class V1alpha1PipelineStatusAtProvider
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatusConditions
@@ -3276,7 +3565,9 @@ public partial class V1alpha1PipelineStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PipelineStatus defines the observed state of Pipeline.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PipelineStatus
@@ -3293,7 +3584,9 @@ public partial class V1alpha1PipelineStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Pipeline is the Schema for the Pipelines API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -3323,3 +3616,4 @@ public partial class V1alpha1Pipeline : IKubernetesObject<V1ObjectMeta>, ISpec<V
     [JsonPropertyName("status")]
     public V1alpha1PipelineStatus? Status { get; set; }
 }
+#nullable disable

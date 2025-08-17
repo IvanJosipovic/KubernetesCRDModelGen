@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafactory.azure.m.upbound.io;
+#nullable enable
 /// <summary>TriggerSchedule is the Schema for the TriggerSchedules API. Manages a Trigger Schedule inside a Azure Data Factory.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TriggerScheduleList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1TriggerSchedule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerScheduleSpecForProviderDataFactoryIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1TriggerScheduleSpecForProviderDataFactoryIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Factory in datafactory to populate dataFactoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerScheduleSpecForProviderDataFactoryIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1TriggerScheduleSpecForProviderDataFactoryIdRef
     [JsonPropertyName("policy")]
     public V1beta1TriggerScheduleSpecForProviderDataFactoryIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerScheduleSpecForProviderDataFactoryIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1TriggerScheduleSpecForProviderDataFactoryIdSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Factory in datafactory to populate dataFactoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerScheduleSpecForProviderDataFactoryIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1TriggerScheduleSpecForProviderDataFactoryIdSelector
     [JsonPropertyName("policy")]
     public V1beta1TriggerScheduleSpecForProviderDataFactoryIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerScheduleSpecForProviderPipeline
@@ -110,7 +121,9 @@ public partial class V1beta1TriggerScheduleSpecForProviderPipeline
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerScheduleSpecForProviderPipelineNameRefPolicy
@@ -123,7 +136,9 @@ public partial class V1beta1TriggerScheduleSpecForProviderPipelineNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Pipeline in datafactory to populate pipelineName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerScheduleSpecForProviderPipelineNameRef
@@ -140,7 +155,9 @@ public partial class V1beta1TriggerScheduleSpecForProviderPipelineNameRef
     [JsonPropertyName("policy")]
     public V1beta1TriggerScheduleSpecForProviderPipelineNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerScheduleSpecForProviderPipelineNameSelectorPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1TriggerScheduleSpecForProviderPipelineNameSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Pipeline in datafactory to populate pipelineName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerScheduleSpecForProviderPipelineNameSelector
@@ -174,7 +193,9 @@ public partial class V1beta1TriggerScheduleSpecForProviderPipelineNameSelector
     [JsonPropertyName("policy")]
     public V1beta1TriggerScheduleSpecForProviderPipelineNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerScheduleSpecForProviderScheduleMonthly
@@ -187,7 +208,9 @@ public partial class V1beta1TriggerScheduleSpecForProviderScheduleMonthly
     [JsonPropertyName("weekday")]
     public string? Weekday { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A schedule block as defined below, which further specifies the recurrence schedule for the trigger. A schedule is capable of limiting or increasing the number of trigger executions specified by the frequency and interval properties.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerScheduleSpecForProviderSchedule
@@ -212,7 +235,9 @@ public partial class V1beta1TriggerScheduleSpecForProviderSchedule
     [JsonPropertyName("monthly")]
     public IList<V1beta1TriggerScheduleSpecForProviderScheduleMonthly>? Monthly { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerScheduleSpecForProvider
@@ -285,7 +310,9 @@ public partial class V1beta1TriggerScheduleSpecForProvider
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerScheduleSpecInitProviderPipeline
@@ -298,7 +325,9 @@ public partial class V1beta1TriggerScheduleSpecInitProviderPipeline
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerScheduleSpecInitProviderPipelineNameRefPolicy
@@ -311,7 +340,9 @@ public partial class V1beta1TriggerScheduleSpecInitProviderPipelineNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Pipeline in datafactory to populate pipelineName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerScheduleSpecInitProviderPipelineNameRef
@@ -328,7 +359,9 @@ public partial class V1beta1TriggerScheduleSpecInitProviderPipelineNameRef
     [JsonPropertyName("policy")]
     public V1beta1TriggerScheduleSpecInitProviderPipelineNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerScheduleSpecInitProviderPipelineNameSelectorPolicy
@@ -341,7 +374,9 @@ public partial class V1beta1TriggerScheduleSpecInitProviderPipelineNameSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Pipeline in datafactory to populate pipelineName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerScheduleSpecInitProviderPipelineNameSelector
@@ -362,7 +397,9 @@ public partial class V1beta1TriggerScheduleSpecInitProviderPipelineNameSelector
     [JsonPropertyName("policy")]
     public V1beta1TriggerScheduleSpecInitProviderPipelineNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerScheduleSpecInitProviderScheduleMonthly
@@ -375,7 +412,9 @@ public partial class V1beta1TriggerScheduleSpecInitProviderScheduleMonthly
     [JsonPropertyName("weekday")]
     public string? Weekday { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A schedule block as defined below, which further specifies the recurrence schedule for the trigger. A schedule is capable of limiting or increasing the number of trigger executions specified by the frequency and interval properties.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerScheduleSpecInitProviderSchedule
@@ -400,7 +439,9 @@ public partial class V1beta1TriggerScheduleSpecInitProviderSchedule
     [JsonPropertyName("monthly")]
     public IList<V1beta1TriggerScheduleSpecInitProviderScheduleMonthly>? Monthly { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerScheduleSpecInitProvider
@@ -461,7 +502,9 @@ public partial class V1beta1TriggerScheduleSpecInitProvider
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerScheduleSpecProviderConfigRef
@@ -474,7 +517,9 @@ public partial class V1beta1TriggerScheduleSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerScheduleSpecWriteConnectionSecretToRef
@@ -483,7 +528,9 @@ public partial class V1beta1TriggerScheduleSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TriggerScheduleSpec defines the desired state of TriggerSchedule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerScheduleSpec
@@ -508,7 +555,9 @@ public partial class V1beta1TriggerScheduleSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TriggerScheduleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerScheduleStatusAtProviderPipeline
@@ -521,7 +570,9 @@ public partial class V1beta1TriggerScheduleStatusAtProviderPipeline
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerScheduleStatusAtProviderScheduleMonthly
@@ -534,7 +585,9 @@ public partial class V1beta1TriggerScheduleStatusAtProviderScheduleMonthly
     [JsonPropertyName("weekday")]
     public string? Weekday { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A schedule block as defined below, which further specifies the recurrence schedule for the trigger. A schedule is capable of limiting or increasing the number of trigger executions specified by the frequency and interval properties.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerScheduleStatusAtProviderSchedule
@@ -559,7 +612,9 @@ public partial class V1beta1TriggerScheduleStatusAtProviderSchedule
     [JsonPropertyName("monthly")]
     public IList<V1beta1TriggerScheduleStatusAtProviderScheduleMonthly>? Monthly { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerScheduleStatusAtProvider
@@ -620,7 +675,9 @@ public partial class V1beta1TriggerScheduleStatusAtProvider
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerScheduleStatusConditions
@@ -649,7 +706,9 @@ public partial class V1beta1TriggerScheduleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TriggerScheduleStatus defines the observed state of TriggerSchedule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerScheduleStatus
@@ -666,7 +725,9 @@ public partial class V1beta1TriggerScheduleStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TriggerSchedule is the Schema for the TriggerSchedules API. Manages a Trigger Schedule inside a Azure Data Factory.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -696,3 +757,4 @@ public partial class V1beta1TriggerSchedule : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1TriggerScheduleStatus? Status { get; set; }
 }
+#nullable disable

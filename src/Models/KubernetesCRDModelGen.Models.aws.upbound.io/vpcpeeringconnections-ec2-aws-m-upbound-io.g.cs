@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.m.upbound.io;
+#nullable enable
 /// <summary>VPCPeeringConnection is the Schema for the VPCPeeringConnections API. Provides a resource to manage a VPC peering connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VPCPeeringConnectionList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1VPCPeeringConnection> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCPeeringConnectionSpecForProviderPeerVpcIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1VPCPeeringConnectionSpecForProviderPeerVpcIdRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate peerVpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCPeeringConnectionSpecForProviderPeerVpcIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1VPCPeeringConnectionSpecForProviderPeerVpcIdRef
     [JsonPropertyName("policy")]
     public V1beta1VPCPeeringConnectionSpecForProviderPeerVpcIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCPeeringConnectionSpecForProviderPeerVpcIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1VPCPeeringConnectionSpecForProviderPeerVpcIdSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate peerVpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCPeeringConnectionSpecForProviderPeerVpcIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1VPCPeeringConnectionSpecForProviderPeerVpcIdSelector
     [JsonPropertyName("policy")]
     public V1beta1VPCPeeringConnectionSpecForProviderPeerVpcIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCPeeringConnectionSpecForProviderVpcIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1VPCPeeringConnectionSpecForProviderVpcIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCPeeringConnectionSpecForProviderVpcIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1VPCPeeringConnectionSpecForProviderVpcIdRef
     [JsonPropertyName("policy")]
     public V1beta1VPCPeeringConnectionSpecForProviderVpcIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCPeeringConnectionSpecForProviderVpcIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1VPCPeeringConnectionSpecForProviderVpcIdSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCPeeringConnectionSpecForProviderVpcIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1VPCPeeringConnectionSpecForProviderVpcIdSelector
     [JsonPropertyName("policy")]
     public V1beta1VPCPeeringConnectionSpecForProviderVpcIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCPeeringConnectionSpecForProvider
@@ -210,7 +229,9 @@ public partial class V1beta1VPCPeeringConnectionSpecForProvider
     [JsonPropertyName("vpcIdSelector")]
     public V1beta1VPCPeeringConnectionSpecForProviderVpcIdSelector? VpcIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCPeeringConnectionSpecInitProviderPeerVpcIdRefPolicy
@@ -223,7 +244,9 @@ public partial class V1beta1VPCPeeringConnectionSpecInitProviderPeerVpcIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate peerVpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCPeeringConnectionSpecInitProviderPeerVpcIdRef
@@ -240,7 +263,9 @@ public partial class V1beta1VPCPeeringConnectionSpecInitProviderPeerVpcIdRef
     [JsonPropertyName("policy")]
     public V1beta1VPCPeeringConnectionSpecInitProviderPeerVpcIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCPeeringConnectionSpecInitProviderPeerVpcIdSelectorPolicy
@@ -253,7 +278,9 @@ public partial class V1beta1VPCPeeringConnectionSpecInitProviderPeerVpcIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate peerVpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCPeeringConnectionSpecInitProviderPeerVpcIdSelector
@@ -274,7 +301,9 @@ public partial class V1beta1VPCPeeringConnectionSpecInitProviderPeerVpcIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1VPCPeeringConnectionSpecInitProviderPeerVpcIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCPeeringConnectionSpecInitProviderVpcIdRefPolicy
@@ -287,7 +316,9 @@ public partial class V1beta1VPCPeeringConnectionSpecInitProviderVpcIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCPeeringConnectionSpecInitProviderVpcIdRef
@@ -304,7 +335,9 @@ public partial class V1beta1VPCPeeringConnectionSpecInitProviderVpcIdRef
     [JsonPropertyName("policy")]
     public V1beta1VPCPeeringConnectionSpecInitProviderVpcIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCPeeringConnectionSpecInitProviderVpcIdSelectorPolicy
@@ -317,7 +350,9 @@ public partial class V1beta1VPCPeeringConnectionSpecInitProviderVpcIdSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCPeeringConnectionSpecInitProviderVpcIdSelector
@@ -338,7 +373,9 @@ public partial class V1beta1VPCPeeringConnectionSpecInitProviderVpcIdSelector
     [JsonPropertyName("policy")]
     public V1beta1VPCPeeringConnectionSpecInitProviderVpcIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCPeeringConnectionSpecInitProvider
@@ -383,7 +420,9 @@ public partial class V1beta1VPCPeeringConnectionSpecInitProvider
     [JsonPropertyName("vpcIdSelector")]
     public V1beta1VPCPeeringConnectionSpecInitProviderVpcIdSelector? VpcIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCPeeringConnectionSpecProviderConfigRef
@@ -396,7 +435,9 @@ public partial class V1beta1VPCPeeringConnectionSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCPeeringConnectionSpecWriteConnectionSecretToRef
@@ -405,7 +446,9 @@ public partial class V1beta1VPCPeeringConnectionSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPCPeeringConnectionSpec defines the desired state of VPCPeeringConnection</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCPeeringConnectionSpec
@@ -430,7 +473,9 @@ public partial class V1beta1VPCPeeringConnectionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VPCPeeringConnectionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An optional configuration block that allows for VPC Peering Connection options to be set for the VPC that accepts the peering connection (a maximum of one).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCPeeringConnectionStatusAtProviderAccepter
@@ -439,7 +484,9 @@ public partial class V1beta1VPCPeeringConnectionStatusAtProviderAccepter
     [JsonPropertyName("allowRemoteVpcDnsResolution")]
     public bool? AllowRemoteVpcDnsResolution { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A optional configuration block that allows for VPC Peering Connection options to be set for the VPC that requests the peering connection (a maximum of one).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCPeeringConnectionStatusAtProviderRequester
@@ -448,7 +495,9 @@ public partial class V1beta1VPCPeeringConnectionStatusAtProviderRequester
     [JsonPropertyName("allowRemoteVpcDnsResolution")]
     public bool? AllowRemoteVpcDnsResolution { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCPeeringConnectionStatusAtProvider
@@ -501,7 +550,9 @@ public partial class V1beta1VPCPeeringConnectionStatusAtProvider
     [JsonPropertyName("vpcId")]
     public string? VpcId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCPeeringConnectionStatusConditions
@@ -530,7 +581,9 @@ public partial class V1beta1VPCPeeringConnectionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPCPeeringConnectionStatus defines the observed state of VPCPeeringConnection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCPeeringConnectionStatus
@@ -547,7 +600,9 @@ public partial class V1beta1VPCPeeringConnectionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPCPeeringConnection is the Schema for the VPCPeeringConnections API. Provides a resource to manage a VPC peering connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -577,3 +632,4 @@ public partial class V1beta1VPCPeeringConnection : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1VPCPeeringConnectionStatus? Status { get; set; }
 }
+#nullable disable

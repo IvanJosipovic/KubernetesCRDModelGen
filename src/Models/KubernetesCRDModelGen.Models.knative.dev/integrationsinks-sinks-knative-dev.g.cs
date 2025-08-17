@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sinks.knative.dev;
+#nullable enable
 /// <summary>IntegrationSink sends events to generic event sink</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1IntegrationSinkList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1alpha1IntegrationSink> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IntegrationSinkSpecLog
@@ -90,7 +93,9 @@ public partial class V1alpha1IntegrationSinkSpecLog
     [JsonPropertyName("showCachedStreams")]
     public bool? ShowCachedStreams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IntegrationSinkSpecAwsS3
@@ -155,7 +160,9 @@ public partial class V1alpha1IntegrationSinkSpecAwsS3
     [JsonPropertyName("maxMessagesPerPoll")]
     public int? MaxMessagesPerPoll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IntegrationSinkSpecAwsSqs
@@ -216,7 +223,9 @@ public partial class V1alpha1IntegrationSinkSpecAwsSqs
     [JsonPropertyName("visibilityTimeout")]
     public int? VisibilityTimeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IntegrationSinkSpecAwsSns
@@ -241,7 +250,9 @@ public partial class V1alpha1IntegrationSinkSpecAwsSns
     [JsonPropertyName("overrideEndpoint")]
     public bool? OverrideEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Secret reference. </summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IntegrationSinkSpecAwsAuthSecretRef
@@ -250,7 +261,9 @@ public partial class V1alpha1IntegrationSinkSpecAwsAuthSecretRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Auth secret</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IntegrationSinkSpecAwsAuthSecret
@@ -259,7 +272,9 @@ public partial class V1alpha1IntegrationSinkSpecAwsAuthSecret
     [JsonPropertyName("ref")]
     public V1alpha1IntegrationSinkSpecAwsAuthSecretRef? Ref { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Auth configurations</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IntegrationSinkSpecAwsAuth
@@ -268,7 +283,9 @@ public partial class V1alpha1IntegrationSinkSpecAwsAuth
     [JsonPropertyName("secret")]
     public V1alpha1IntegrationSinkSpecAwsAuthSecret? Secret { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IntegrationSinkSpecAws
@@ -289,7 +306,9 @@ public partial class V1alpha1IntegrationSinkSpecAws
     [JsonPropertyName("auth")]
     public V1alpha1IntegrationSinkSpecAwsAuth? Auth { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Spec defines the desired state of the IntegrationSink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IntegrationSinkSpec
@@ -302,7 +321,9 @@ public partial class V1alpha1IntegrationSinkSpec
     [JsonPropertyName("aws")]
     public V1alpha1IntegrationSinkSpecAws? Aws { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IntegrationSink is Addressable. It exposes the endpoints as URIs to get events delivered into the used Kamelet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IntegrationSinkStatusAddress
@@ -323,7 +344,9 @@ public partial class V1alpha1IntegrationSinkStatusAddress
     [JsonPropertyName("audience")]
     public string? Audience { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IntegrationSinkStatusAddresses
@@ -344,7 +367,9 @@ public partial class V1alpha1IntegrationSinkStatusAddresses
     [JsonPropertyName("audience")]
     public string? Audience { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IntegrationSinkStatusPolicies
@@ -357,7 +382,9 @@ public partial class V1alpha1IntegrationSinkStatusPolicies
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IntegrationSinkStatusConditions
@@ -386,7 +413,9 @@ public partial class V1alpha1IntegrationSinkStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Status represents the current state of the IntegrationSink. This data may be out of date.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IntegrationSinkStatus
@@ -415,7 +444,9 @@ public partial class V1alpha1IntegrationSinkStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IntegrationSink sends events to generic event sink</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -445,3 +476,4 @@ public partial class V1alpha1IntegrationSink : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1alpha1IntegrationSinkStatus? Status { get; set; }
 }
+#nullable disable

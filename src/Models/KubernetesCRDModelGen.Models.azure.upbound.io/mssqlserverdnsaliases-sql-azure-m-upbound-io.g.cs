@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.azure.m.upbound.io;
+#nullable enable
 /// <summary>MSSQLServerDNSAlias is the Schema for the MSSQLServerDNSAliass API. Manages a MS SQL Server DNS Alias.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MSSQLServerDNSAliasList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1MSSQLServerDNSAlias> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerDNSAliasSpecForProviderMssqlServerIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1MSSQLServerDNSAliasSpecForProviderMssqlServerIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MSSQLServer in sql to populate mssqlServerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerDNSAliasSpecForProviderMssqlServerIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1MSSQLServerDNSAliasSpecForProviderMssqlServerIdRef
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerDNSAliasSpecForProviderMssqlServerIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerDNSAliasSpecForProviderMssqlServerIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1MSSQLServerDNSAliasSpecForProviderMssqlServerIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MSSQLServer in sql to populate mssqlServerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerDNSAliasSpecForProviderMssqlServerIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1MSSQLServerDNSAliasSpecForProviderMssqlServerIdSelec
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerDNSAliasSpecForProviderMssqlServerIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerDNSAliasSpecForProvider
@@ -114,13 +125,17 @@ public partial class V1beta1MSSQLServerDNSAliasSpecForProvider
     [JsonPropertyName("mssqlServerIdSelector")]
     public V1beta1MSSQLServerDNSAliasSpecForProviderMssqlServerIdSelector? MssqlServerIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerDNSAliasSpecInitProvider
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerDNSAliasSpecProviderConfigRef
@@ -133,7 +148,9 @@ public partial class V1beta1MSSQLServerDNSAliasSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerDNSAliasSpecWriteConnectionSecretToRef
@@ -142,7 +159,9 @@ public partial class V1beta1MSSQLServerDNSAliasSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MSSQLServerDNSAliasSpec defines the desired state of MSSQLServerDNSAlias</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerDNSAliasSpec
@@ -167,7 +186,9 @@ public partial class V1beta1MSSQLServerDNSAliasSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MSSQLServerDNSAliasSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerDNSAliasStatusAtProvider
@@ -184,7 +205,9 @@ public partial class V1beta1MSSQLServerDNSAliasStatusAtProvider
     [JsonPropertyName("mssqlServerId")]
     public string? MssqlServerId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerDNSAliasStatusConditions
@@ -213,7 +236,9 @@ public partial class V1beta1MSSQLServerDNSAliasStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MSSQLServerDNSAliasStatus defines the observed state of MSSQLServerDNSAlias.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerDNSAliasStatus
@@ -230,7 +255,9 @@ public partial class V1beta1MSSQLServerDNSAliasStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MSSQLServerDNSAlias is the Schema for the MSSQLServerDNSAliass API. Manages a MS SQL Server DNS Alias.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -260,3 +287,4 @@ public partial class V1beta1MSSQLServerDNSAlias : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1MSSQLServerDNSAliasStatus? Status { get; set; }
 }
+#nullable disable

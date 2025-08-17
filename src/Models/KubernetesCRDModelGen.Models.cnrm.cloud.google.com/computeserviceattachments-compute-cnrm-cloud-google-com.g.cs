@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ComputeServiceAttachmentList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1ComputeServiceAttachment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeServiceAttachmentSpecConsumerAcceptListsProjectRef
@@ -50,7 +53,9 @@ public partial class V1beta1ComputeServiceAttachmentSpecConsumerAcceptListsProje
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeServiceAttachmentSpecConsumerAcceptLists
@@ -63,7 +68,9 @@ public partial class V1beta1ComputeServiceAttachmentSpecConsumerAcceptLists
     [JsonPropertyName("projectRef")]
     public V1beta1ComputeServiceAttachmentSpecConsumerAcceptListsProjectRef ProjectRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeServiceAttachmentSpecConsumerRejectLists
@@ -80,7 +87,9 @@ public partial class V1beta1ComputeServiceAttachmentSpecConsumerRejectLists
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeServiceAttachmentSpecNatSubnets
@@ -97,7 +106,9 @@ public partial class V1beta1ComputeServiceAttachmentSpecNatSubnets
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeServiceAttachmentSpecProjectRef
@@ -114,7 +125,9 @@ public partial class V1beta1ComputeServiceAttachmentSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeServiceAttachmentSpecTargetServiceRef
@@ -131,7 +144,9 @@ public partial class V1beta1ComputeServiceAttachmentSpecTargetServiceRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeServiceAttachmentSpec
@@ -176,7 +191,9 @@ public partial class V1beta1ComputeServiceAttachmentSpec
     [JsonPropertyName("targetServiceRef")]
     public V1beta1ComputeServiceAttachmentSpecTargetServiceRef TargetServiceRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeServiceAttachmentStatusConditions
@@ -201,7 +218,9 @@ public partial class V1beta1ComputeServiceAttachmentStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeServiceAttachmentStatusConnectedEndpoints
@@ -218,7 +237,9 @@ public partial class V1beta1ComputeServiceAttachmentStatusConnectedEndpoints
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An 128-bit global unique ID of the PSC service attachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeServiceAttachmentStatusPscServiceAttachmentId
@@ -231,7 +252,9 @@ public partial class V1beta1ComputeServiceAttachmentStatusPscServiceAttachmentId
     [JsonPropertyName("low")]
     public long? Low { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeServiceAttachmentStatus
@@ -268,7 +291,9 @@ public partial class V1beta1ComputeServiceAttachmentStatus
     [JsonPropertyName("selfLink")]
     public string? SelfLink { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -298,3 +323,4 @@ public partial class V1beta1ComputeServiceAttachment : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1ComputeServiceAttachmentStatus? Status { get; set; }
 }
+#nullable disable

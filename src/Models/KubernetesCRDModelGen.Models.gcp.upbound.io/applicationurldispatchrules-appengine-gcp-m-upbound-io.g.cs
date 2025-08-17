@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appengine.gcp.m.upbound.io;
+#nullable enable
 /// <summary>ApplicationURLDispatchRules is the Schema for the ApplicationURLDispatchRuless API. Rules to match an HTTP request and dispatch that request to a service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ApplicationURLDispatchRulesList : IKubernetesObject<
     [JsonPropertyName("items")]
     public IList<V1beta1ApplicationURLDispatchRules> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationURLDispatchRulesSpecForProviderDispatchRulesServiceRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ApplicationURLDispatchRulesSpecForProviderDispatchRu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a StandardAppVersion in appengine to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationURLDispatchRulesSpecForProviderDispatchRulesServiceRef
@@ -63,7 +68,9 @@ public partial class V1beta1ApplicationURLDispatchRulesSpecForProviderDispatchRu
     [JsonPropertyName("policy")]
     public V1beta1ApplicationURLDispatchRulesSpecForProviderDispatchRulesServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationURLDispatchRulesSpecForProviderDispatchRulesServiceSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1ApplicationURLDispatchRulesSpecForProviderDispatchRu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a StandardAppVersion in appengine to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationURLDispatchRulesSpecForProviderDispatchRulesServiceSelector
@@ -97,7 +106,9 @@ public partial class V1beta1ApplicationURLDispatchRulesSpecForProviderDispatchRu
     [JsonPropertyName("policy")]
     public V1beta1ApplicationURLDispatchRulesSpecForProviderDispatchRulesServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationURLDispatchRulesSpecForProviderDispatchRules
@@ -122,7 +133,9 @@ public partial class V1beta1ApplicationURLDispatchRulesSpecForProviderDispatchRu
     [JsonPropertyName("serviceSelector")]
     public V1beta1ApplicationURLDispatchRulesSpecForProviderDispatchRulesServiceSelector? ServiceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationURLDispatchRulesSpecForProvider
@@ -135,7 +148,9 @@ public partial class V1beta1ApplicationURLDispatchRulesSpecForProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationURLDispatchRulesSpecInitProviderDispatchRulesServiceRefPolicy
@@ -148,7 +163,9 @@ public partial class V1beta1ApplicationURLDispatchRulesSpecInitProviderDispatchR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a StandardAppVersion in appengine to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationURLDispatchRulesSpecInitProviderDispatchRulesServiceRef
@@ -165,7 +182,9 @@ public partial class V1beta1ApplicationURLDispatchRulesSpecInitProviderDispatchR
     [JsonPropertyName("policy")]
     public V1beta1ApplicationURLDispatchRulesSpecInitProviderDispatchRulesServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationURLDispatchRulesSpecInitProviderDispatchRulesServiceSelectorPolicy
@@ -178,7 +197,9 @@ public partial class V1beta1ApplicationURLDispatchRulesSpecInitProviderDispatchR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a StandardAppVersion in appengine to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationURLDispatchRulesSpecInitProviderDispatchRulesServiceSelector
@@ -199,7 +220,9 @@ public partial class V1beta1ApplicationURLDispatchRulesSpecInitProviderDispatchR
     [JsonPropertyName("policy")]
     public V1beta1ApplicationURLDispatchRulesSpecInitProviderDispatchRulesServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationURLDispatchRulesSpecInitProviderDispatchRules
@@ -224,7 +247,9 @@ public partial class V1beta1ApplicationURLDispatchRulesSpecInitProviderDispatchR
     [JsonPropertyName("serviceSelector")]
     public V1beta1ApplicationURLDispatchRulesSpecInitProviderDispatchRulesServiceSelector? ServiceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationURLDispatchRulesSpecInitProvider
@@ -237,7 +262,9 @@ public partial class V1beta1ApplicationURLDispatchRulesSpecInitProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationURLDispatchRulesSpecProviderConfigRef
@@ -250,7 +277,9 @@ public partial class V1beta1ApplicationURLDispatchRulesSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationURLDispatchRulesSpecWriteConnectionSecretToRef
@@ -259,7 +288,9 @@ public partial class V1beta1ApplicationURLDispatchRulesSpecWriteConnectionSecret
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApplicationURLDispatchRulesSpec defines the desired state of ApplicationURLDispatchRules</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationURLDispatchRulesSpec
@@ -284,7 +315,9 @@ public partial class V1beta1ApplicationURLDispatchRulesSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ApplicationURLDispatchRulesSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationURLDispatchRulesStatusAtProviderDispatchRules
@@ -301,7 +334,9 @@ public partial class V1beta1ApplicationURLDispatchRulesStatusAtProviderDispatchR
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationURLDispatchRulesStatusAtProvider
@@ -318,7 +353,9 @@ public partial class V1beta1ApplicationURLDispatchRulesStatusAtProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationURLDispatchRulesStatusConditions
@@ -347,7 +384,9 @@ public partial class V1beta1ApplicationURLDispatchRulesStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApplicationURLDispatchRulesStatus defines the observed state of ApplicationURLDispatchRules.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationURLDispatchRulesStatus
@@ -364,7 +403,9 @@ public partial class V1beta1ApplicationURLDispatchRulesStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApplicationURLDispatchRules is the Schema for the ApplicationURLDispatchRuless API. Rules to match an HTTP request and dispatch that request to a service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -394,3 +435,4 @@ public partial class V1beta1ApplicationURLDispatchRules : IKubernetesObject<V1Ob
     [JsonPropertyName("status")]
     public V1beta1ApplicationURLDispatchRulesStatus? Status { get; set; }
 }
+#nullable disable

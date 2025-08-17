@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerapp.azure.m.upbound.io;
+#nullable enable
 /// <summary>EnvironmentCertificate is the Schema for the EnvironmentCertificates API. Manages a Container App Environment Certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1EnvironmentCertificateList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1EnvironmentCertificate> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password for the Certificate. Changing this forces a new resource to be created. The password for the Certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentCertificateSpecForProviderCertificatePasswordSecretRef
@@ -46,7 +49,9 @@ public partial class V1beta1EnvironmentCertificateSpecForProviderCertificatePass
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentCertificateSpecForProviderContainerAppEnvironmentIdRefPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1EnvironmentCertificateSpecForProviderContainerAppEnv
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Environment in containerapp to populate containerAppEnvironmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentCertificateSpecForProviderContainerAppEnvironmentIdRef
@@ -76,7 +83,9 @@ public partial class V1beta1EnvironmentCertificateSpecForProviderContainerAppEnv
     [JsonPropertyName("policy")]
     public V1beta1EnvironmentCertificateSpecForProviderContainerAppEnvironmentIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentCertificateSpecForProviderContainerAppEnvironmentIdSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1EnvironmentCertificateSpecForProviderContainerAppEnv
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Environment in containerapp to populate containerAppEnvironmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentCertificateSpecForProviderContainerAppEnvironmentIdSelector
@@ -110,7 +121,9 @@ public partial class V1beta1EnvironmentCertificateSpecForProviderContainerAppEnv
     [JsonPropertyName("policy")]
     public V1beta1EnvironmentCertificateSpecForProviderContainerAppEnvironmentIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentCertificateSpecForProvider
@@ -139,7 +152,9 @@ public partial class V1beta1EnvironmentCertificateSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password for the Certificate. Changing this forces a new resource to be created. The password for the Certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentCertificateSpecInitProviderCertificatePasswordSecretRef
@@ -152,7 +167,9 @@ public partial class V1beta1EnvironmentCertificateSpecInitProviderCertificatePas
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentCertificateSpecInitProvider
@@ -169,7 +186,9 @@ public partial class V1beta1EnvironmentCertificateSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentCertificateSpecProviderConfigRef
@@ -182,7 +201,9 @@ public partial class V1beta1EnvironmentCertificateSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentCertificateSpecWriteConnectionSecretToRef
@@ -191,7 +212,9 @@ public partial class V1beta1EnvironmentCertificateSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnvironmentCertificateSpec defines the desired state of EnvironmentCertificate</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentCertificateSpec
@@ -216,7 +239,9 @@ public partial class V1beta1EnvironmentCertificateSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1EnvironmentCertificateSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentCertificateStatusAtProvider
@@ -257,7 +282,9 @@ public partial class V1beta1EnvironmentCertificateStatusAtProvider
     [JsonPropertyName("thumbprint")]
     public string? Thumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentCertificateStatusConditions
@@ -286,7 +313,9 @@ public partial class V1beta1EnvironmentCertificateStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnvironmentCertificateStatus defines the observed state of EnvironmentCertificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentCertificateStatus
@@ -303,7 +332,9 @@ public partial class V1beta1EnvironmentCertificateStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnvironmentCertificate is the Schema for the EnvironmentCertificates API. Manages a Container App Environment Certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -333,3 +364,4 @@ public partial class V1beta1EnvironmentCertificate : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1EnvironmentCertificateStatus? Status { get; set; }
 }
+#nullable disable

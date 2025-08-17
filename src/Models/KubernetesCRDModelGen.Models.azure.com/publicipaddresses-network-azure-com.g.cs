@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20240301.PublicIPAddress Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/publicIpAddress.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPAddresses/{publicIpAddressName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20240301storagePublicIPAddressList : IKubernetesObject
     [JsonPropertyName("items")]
     public IList<V1api20240301storagePublicIPAddress> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressSpecDdosSettingsDdosProtectionPlanReference
@@ -54,7 +57,9 @@ public partial class V1api20240301storagePublicIPAddressSpecDdosSettingsDdosProt
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressSpecDdosSettingsDdosProtectionPlan
@@ -67,7 +72,9 @@ public partial class V1api20240301storagePublicIPAddressSpecDdosSettingsDdosProt
     [JsonPropertyName("reference")]
     public V1api20240301storagePublicIPAddressSpecDdosSettingsDdosProtectionPlanReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.DdosSettings Contains the DDoS protection settings of the public IP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressSpecDdosSettings
@@ -84,7 +91,9 @@ public partial class V1api20240301storagePublicIPAddressSpecDdosSettings
     [JsonPropertyName("protectionMode")]
     public string? ProtectionMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PublicIPAddressDnsSettings Contains FQDN of the DNS record associated with the public IP address.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressSpecDnsSettings
@@ -109,7 +118,9 @@ public partial class V1api20240301storagePublicIPAddressSpecDnsSettings
     [JsonPropertyName("reverseFqdn")]
     public string? ReverseFqdn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ExtendedLocation ExtendedLocation complex type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressSpecExtendedLocation
@@ -126,7 +137,9 @@ public partial class V1api20240301storagePublicIPAddressSpecExtendedLocation
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.IpTag Contains the IpTag associated with the object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressSpecIpTags
@@ -143,7 +156,9 @@ public partial class V1api20240301storagePublicIPAddressSpecIpTags
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressSpecLinkedPublicIPAddressReference
@@ -164,7 +179,9 @@ public partial class V1api20240301storagePublicIPAddressSpecLinkedPublicIPAddres
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PublicIPAddressSpec_PublicIPAddress_SubResourceEmbedded Public IP address resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressSpecLinkedPublicIPAddress
@@ -177,7 +194,9 @@ public partial class V1api20240301storagePublicIPAddressSpecLinkedPublicIPAddres
     [JsonPropertyName("reference")]
     public V1api20240301storagePublicIPAddressSpecLinkedPublicIPAddressReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressSpecNatGatewayReference
@@ -198,7 +217,9 @@ public partial class V1api20240301storagePublicIPAddressSpecNatGatewayReference
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.NatGatewaySpec_PublicIPAddress_SubResourceEmbedded Nat Gateway resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressSpecNatGateway
@@ -211,7 +232,9 @@ public partial class V1api20240301storagePublicIPAddressSpecNatGateway
     [JsonPropertyName("reference")]
     public V1api20240301storagePublicIPAddressSpecNatGatewayReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressSpecOperatorSpecConfigMapExpressions
@@ -228,7 +251,9 @@ public partial class V1api20240301storagePublicIPAddressSpecOperatorSpecConfigMa
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressSpecOperatorSpecSecretExpressions
@@ -245,7 +270,9 @@ public partial class V1api20240301storagePublicIPAddressSpecOperatorSpecSecretEx
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PublicIPAddressOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressSpecOperatorSpec
@@ -262,7 +289,9 @@ public partial class V1api20240301storagePublicIPAddressSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20240301storagePublicIPAddressSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressSpecOwner
@@ -275,7 +304,9 @@ public partial class V1api20240301storagePublicIPAddressSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressSpecPublicIPPrefixReference
@@ -296,7 +327,9 @@ public partial class V1api20240301storagePublicIPAddressSpecPublicIPPrefixRefere
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressSpecPublicIPPrefix
@@ -309,7 +342,9 @@ public partial class V1api20240301storagePublicIPAddressSpecPublicIPPrefix
     [JsonPropertyName("reference")]
     public V1api20240301storagePublicIPAddressSpecPublicIPPrefixReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressSpecServicePublicIPAddressReference
@@ -330,7 +365,9 @@ public partial class V1api20240301storagePublicIPAddressSpecServicePublicIPAddre
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PublicIPAddressSpec_PublicIPAddress_SubResourceEmbedded Public IP address resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressSpecServicePublicIPAddress
@@ -343,7 +380,9 @@ public partial class V1api20240301storagePublicIPAddressSpecServicePublicIPAddre
     [JsonPropertyName("reference")]
     public V1api20240301storagePublicIPAddressSpecServicePublicIPAddressReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PublicIPAddressSku SKU of a public IP address.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressSpecSku
@@ -360,7 +399,9 @@ public partial class V1api20240301storagePublicIPAddressSpecSku
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PublicIPAddress_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressSpec
@@ -453,7 +494,9 @@ public partial class V1api20240301storagePublicIPAddressSpec
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressStatusConditions
@@ -486,7 +529,9 @@ public partial class V1api20240301storagePublicIPAddressStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressStatusDdosSettingsDdosProtectionPlan
@@ -499,7 +544,9 @@ public partial class V1api20240301storagePublicIPAddressStatusDdosSettingsDdosPr
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.DdosSettings_STATUS Contains the DDoS protection settings of the public IP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressStatusDdosSettings
@@ -516,7 +563,9 @@ public partial class V1api20240301storagePublicIPAddressStatusDdosSettings
     [JsonPropertyName("protectionMode")]
     public string? ProtectionMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PublicIPAddressDnsSettings_STATUS Contains FQDN of the DNS record associated with the public IP address.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressStatusDnsSettings
@@ -541,7 +590,9 @@ public partial class V1api20240301storagePublicIPAddressStatusDnsSettings
     [JsonPropertyName("reverseFqdn")]
     public string? ReverseFqdn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ExtendedLocation_STATUS ExtendedLocation complex type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressStatusExtendedLocation
@@ -558,7 +609,9 @@ public partial class V1api20240301storagePublicIPAddressStatusExtendedLocation
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.IPConfiguration_STATUS_PublicIPAddress_SubResourceEmbedded IP configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressStatusIpConfiguration
@@ -571,7 +624,9 @@ public partial class V1api20240301storagePublicIPAddressStatusIpConfiguration
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.IpTag_STATUS Contains the IpTag associated with the object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressStatusIpTags
@@ -588,7 +643,9 @@ public partial class V1api20240301storagePublicIPAddressStatusIpTags
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.NatGateway_STATUS_PublicIPAddress_SubResourceEmbedded Nat Gateway resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressStatusNatGateway
@@ -601,7 +658,9 @@ public partial class V1api20240301storagePublicIPAddressStatusNatGateway
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressStatusPublicIPPrefix
@@ -614,7 +673,9 @@ public partial class V1api20240301storagePublicIPAddressStatusPublicIPPrefix
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PublicIPAddressSku_STATUS SKU of a public IP address.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressStatusSku
@@ -631,7 +692,9 @@ public partial class V1api20240301storagePublicIPAddressStatusSku
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PublicIPAddress_STATUS Public IP address resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePublicIPAddressStatus
@@ -736,7 +799,9 @@ public partial class V1api20240301storagePublicIPAddressStatus
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.PublicIPAddress Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/publicIpAddress.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPAddresses/{publicIpAddressName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -766,3 +831,4 @@ public partial class V1api20240301storagePublicIPAddress : IKubernetesObject<V1O
     [JsonPropertyName("status")]
     public V1api20240301storagePublicIPAddressStatus? Status { get; set; }
 }
+#nullable disable

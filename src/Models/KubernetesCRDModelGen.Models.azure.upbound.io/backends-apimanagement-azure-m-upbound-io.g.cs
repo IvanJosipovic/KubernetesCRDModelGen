@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.m.upbound.io;
+#nullable enable
 /// <summary>Backend is the Schema for the Backends API. Manages a backend within an API Management Service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BackendList : IKubernetesObject<V1ListMeta>, IItems<
     [JsonPropertyName("items")]
     public IList<V1beta1Backend> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendSpecForProviderApiManagementNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1BackendSpecForProviderApiManagementNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Management in apimanagement to populate apiManagementName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendSpecForProviderApiManagementNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1BackendSpecForProviderApiManagementNameRef
     [JsonPropertyName("policy")]
     public V1beta1BackendSpecForProviderApiManagementNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendSpecForProviderApiManagementNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1BackendSpecForProviderApiManagementNameSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Management in apimanagement to populate apiManagementName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendSpecForProviderApiManagementNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1BackendSpecForProviderApiManagementNameSelector
     [JsonPropertyName("policy")]
     public V1beta1BackendSpecForProviderApiManagementNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An authorization block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendSpecForProviderCredentialsAuthorization
@@ -110,7 +121,9 @@ public partial class V1beta1BackendSpecForProviderCredentialsAuthorization
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A credentials block as documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendSpecForProviderCredentials
@@ -131,7 +144,9 @@ public partial class V1beta1BackendSpecForProviderCredentials
     [JsonPropertyName("query")]
     public IDictionary<string, string>? Query { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password to connect to the proxy server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendSpecForProviderProxyPasswordSecretRef
@@ -144,7 +159,9 @@ public partial class V1beta1BackendSpecForProviderProxyPasswordSecretRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A proxy block as documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendSpecForProviderProxy
@@ -161,7 +178,9 @@ public partial class V1beta1BackendSpecForProviderProxy
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendSpecForProviderResourceGroupNameRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1BackendSpecForProviderResourceGroupNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendSpecForProviderResourceGroupNameRef
@@ -191,7 +212,9 @@ public partial class V1beta1BackendSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1BackendSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendSpecForProviderResourceGroupNameSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1BackendSpecForProviderResourceGroupNameSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendSpecForProviderResourceGroupNameSelector
@@ -225,7 +250,9 @@ public partial class V1beta1BackendSpecForProviderResourceGroupNameSelector
     [JsonPropertyName("policy")]
     public V1beta1BackendSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendSpecForProviderServiceFabricClusterServerX509Name
@@ -238,7 +265,9 @@ public partial class V1beta1BackendSpecForProviderServiceFabricClusterServerX509
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A service_fabric_cluster block as documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendSpecForProviderServiceFabricCluster
@@ -267,7 +296,9 @@ public partial class V1beta1BackendSpecForProviderServiceFabricCluster
     [JsonPropertyName("serverX509Name")]
     public IList<V1beta1BackendSpecForProviderServiceFabricClusterServerX509Name>? ServerX509Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A tls block as documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendSpecForProviderTls
@@ -280,7 +311,9 @@ public partial class V1beta1BackendSpecForProviderTls
     [JsonPropertyName("validateCertificateName")]
     public bool? ValidateCertificateName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendSpecForProvider
@@ -345,7 +378,9 @@ public partial class V1beta1BackendSpecForProvider
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An authorization block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendSpecInitProviderCredentialsAuthorization
@@ -358,7 +393,9 @@ public partial class V1beta1BackendSpecInitProviderCredentialsAuthorization
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A credentials block as documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendSpecInitProviderCredentials
@@ -379,7 +416,9 @@ public partial class V1beta1BackendSpecInitProviderCredentials
     [JsonPropertyName("query")]
     public IDictionary<string, string>? Query { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password to connect to the proxy server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendSpecInitProviderProxyPasswordSecretRef
@@ -392,7 +431,9 @@ public partial class V1beta1BackendSpecInitProviderProxyPasswordSecretRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A proxy block as documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendSpecInitProviderProxy
@@ -409,7 +450,9 @@ public partial class V1beta1BackendSpecInitProviderProxy
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendSpecInitProviderServiceFabricClusterServerX509Name
@@ -422,7 +465,9 @@ public partial class V1beta1BackendSpecInitProviderServiceFabricClusterServerX50
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A service_fabric_cluster block as documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendSpecInitProviderServiceFabricCluster
@@ -451,7 +496,9 @@ public partial class V1beta1BackendSpecInitProviderServiceFabricCluster
     [JsonPropertyName("serverX509Name")]
     public IList<V1beta1BackendSpecInitProviderServiceFabricClusterServerX509Name>? ServerX509Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A tls block as documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendSpecInitProviderTls
@@ -464,7 +511,9 @@ public partial class V1beta1BackendSpecInitProviderTls
     [JsonPropertyName("validateCertificateName")]
     public bool? ValidateCertificateName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendSpecInitProvider
@@ -505,7 +554,9 @@ public partial class V1beta1BackendSpecInitProvider
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendSpecProviderConfigRef
@@ -518,7 +569,9 @@ public partial class V1beta1BackendSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendSpecWriteConnectionSecretToRef
@@ -527,7 +580,9 @@ public partial class V1beta1BackendSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackendSpec defines the desired state of Backend</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendSpec
@@ -552,7 +607,9 @@ public partial class V1beta1BackendSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BackendSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An authorization block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendStatusAtProviderCredentialsAuthorization
@@ -565,7 +622,9 @@ public partial class V1beta1BackendStatusAtProviderCredentialsAuthorization
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A credentials block as documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendStatusAtProviderCredentials
@@ -586,7 +645,9 @@ public partial class V1beta1BackendStatusAtProviderCredentials
     [JsonPropertyName("query")]
     public IDictionary<string, string>? Query { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A proxy block as documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendStatusAtProviderProxy
@@ -599,7 +660,9 @@ public partial class V1beta1BackendStatusAtProviderProxy
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendStatusAtProviderServiceFabricClusterServerX509Name
@@ -612,7 +675,9 @@ public partial class V1beta1BackendStatusAtProviderServiceFabricClusterServerX50
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A service_fabric_cluster block as documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendStatusAtProviderServiceFabricCluster
@@ -641,7 +706,9 @@ public partial class V1beta1BackendStatusAtProviderServiceFabricCluster
     [JsonPropertyName("serverX509Name")]
     public IList<V1beta1BackendStatusAtProviderServiceFabricClusterServerX509Name>? ServerX509Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A tls block as documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendStatusAtProviderTls
@@ -654,7 +721,9 @@ public partial class V1beta1BackendStatusAtProviderTls
     [JsonPropertyName("validateCertificateName")]
     public bool? ValidateCertificateName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendStatusAtProvider
@@ -707,7 +776,9 @@ public partial class V1beta1BackendStatusAtProvider
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendStatusConditions
@@ -736,7 +807,9 @@ public partial class V1beta1BackendStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackendStatus defines the observed state of Backend.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendStatus
@@ -753,7 +826,9 @@ public partial class V1beta1BackendStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Backend is the Schema for the Backends API. Manages a backend within an API Management Service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -783,3 +858,4 @@ public partial class V1beta1Backend : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     [JsonPropertyName("status")]
     public V1beta1BackendStatus? Status { get; set; }
 }
+#nullable disable

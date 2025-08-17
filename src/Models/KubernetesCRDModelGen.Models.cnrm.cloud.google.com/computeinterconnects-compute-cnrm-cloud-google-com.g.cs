@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>ComputeInterconnect is the Schema for the ComputeInterconnect API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1ComputeInterconnectList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1alpha1ComputeInterconnect> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeInterconnectSpecMacsecPreSharedKeys
@@ -46,7 +49,9 @@ public partial class V1alpha1ComputeInterconnectSpecMacsecPreSharedKeys
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration that enables Media Access Control security (MACsec) on the Cloud Interconnect connection between Google and your on-premises router.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeInterconnectSpecMacsec
@@ -59,7 +64,9 @@ public partial class V1alpha1ComputeInterconnectSpecMacsec
     [JsonPropertyName("preSharedKeys")]
     public IList<V1alpha1ComputeInterconnectSpecMacsecPreSharedKeys>? PreSharedKeys { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeInterconnectSpecProjectRef
@@ -80,7 +87,9 @@ public partial class V1alpha1ComputeInterconnectSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ComputeInterconnectSpec defines the desired state of ComputeInterconnect</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeInterconnectSpec
@@ -149,7 +158,9 @@ public partial class V1alpha1ComputeInterconnectSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeInterconnectStatusConditions
@@ -174,7 +185,9 @@ public partial class V1alpha1ComputeInterconnectStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeInterconnectStatusObservedStateCircuitInfos
@@ -191,7 +204,9 @@ public partial class V1alpha1ComputeInterconnectStatusObservedStateCircuitInfos
     [JsonPropertyName("googleDemarcID")]
     public string? GoogleDemarcID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeInterconnectStatusObservedStateExpectedOutages
@@ -228,7 +243,9 @@ public partial class V1alpha1ComputeInterconnectStatusObservedStateExpectedOutag
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeInterconnectStatusObservedState
@@ -293,7 +310,9 @@ public partial class V1alpha1ComputeInterconnectStatusObservedState
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ComputeInterconnectStatus defines the config connector machine state of ComputeInterconnect</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeInterconnectStatus
@@ -314,7 +333,9 @@ public partial class V1alpha1ComputeInterconnectStatus
     [JsonPropertyName("observedState")]
     public V1alpha1ComputeInterconnectStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ComputeInterconnect is the Schema for the ComputeInterconnect API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -344,3 +365,4 @@ public partial class V1alpha1ComputeInterconnect : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1alpha1ComputeInterconnectStatus? Status { get; set; }
 }
+#nullable disable

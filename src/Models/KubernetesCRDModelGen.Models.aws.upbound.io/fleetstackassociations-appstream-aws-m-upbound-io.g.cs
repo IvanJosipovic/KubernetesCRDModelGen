@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appstream.aws.m.upbound.io;
+#nullable enable
 /// <summary>FleetStackAssociation is the Schema for the FleetStackAssociations API. Manages an AppStream Fleet Stack association.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FleetStackAssociationList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1FleetStackAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStackAssociationSpecForProviderFleetNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1FleetStackAssociationSpecForProviderFleetNameRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Fleet in appstream to populate fleetName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStackAssociationSpecForProviderFleetNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1FleetStackAssociationSpecForProviderFleetNameRef
     [JsonPropertyName("policy")]
     public V1beta1FleetStackAssociationSpecForProviderFleetNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStackAssociationSpecForProviderFleetNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1FleetStackAssociationSpecForProviderFleetNameSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Fleet in appstream to populate fleetName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStackAssociationSpecForProviderFleetNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1FleetStackAssociationSpecForProviderFleetNameSelecto
     [JsonPropertyName("policy")]
     public V1beta1FleetStackAssociationSpecForProviderFleetNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStackAssociationSpecForProviderStackNameRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1FleetStackAssociationSpecForProviderStackNameRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Stack in appstream to populate stackName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStackAssociationSpecForProviderStackNameRef
@@ -127,7 +140,9 @@ public partial class V1beta1FleetStackAssociationSpecForProviderStackNameRef
     [JsonPropertyName("policy")]
     public V1beta1FleetStackAssociationSpecForProviderStackNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStackAssociationSpecForProviderStackNameSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1FleetStackAssociationSpecForProviderStackNameSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Stack in appstream to populate stackName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStackAssociationSpecForProviderStackNameSelector
@@ -161,7 +178,9 @@ public partial class V1beta1FleetStackAssociationSpecForProviderStackNameSelecto
     [JsonPropertyName("policy")]
     public V1beta1FleetStackAssociationSpecForProviderStackNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStackAssociationSpecForProvider
@@ -194,13 +213,17 @@ public partial class V1beta1FleetStackAssociationSpecForProvider
     [JsonPropertyName("stackNameSelector")]
     public V1beta1FleetStackAssociationSpecForProviderStackNameSelector? StackNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStackAssociationSpecInitProvider
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStackAssociationSpecProviderConfigRef
@@ -213,7 +236,9 @@ public partial class V1beta1FleetStackAssociationSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStackAssociationSpecWriteConnectionSecretToRef
@@ -222,7 +247,9 @@ public partial class V1beta1FleetStackAssociationSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FleetStackAssociationSpec defines the desired state of FleetStackAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStackAssociationSpec
@@ -247,7 +274,9 @@ public partial class V1beta1FleetStackAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1FleetStackAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStackAssociationStatusAtProvider
@@ -268,7 +297,9 @@ public partial class V1beta1FleetStackAssociationStatusAtProvider
     [JsonPropertyName("stackName")]
     public string? StackName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStackAssociationStatusConditions
@@ -297,7 +328,9 @@ public partial class V1beta1FleetStackAssociationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FleetStackAssociationStatus defines the observed state of FleetStackAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStackAssociationStatus
@@ -314,7 +347,9 @@ public partial class V1beta1FleetStackAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FleetStackAssociation is the Schema for the FleetStackAssociations API. Manages an AppStream Fleet Stack association.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -344,3 +379,4 @@ public partial class V1beta1FleetStackAssociation : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1FleetStackAssociationStatus? Status { get; set; }
 }
+#nullable disable

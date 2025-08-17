@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.m.upbound.io;
+#nullable enable
 /// <summary>VPCDHCPOptionsAssociation is the Schema for the VPCDHCPOptionsAssociations API. Provides a VPC DHCP Options Association resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VPCDHCPOptionsAssociationList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1beta1VPCDHCPOptionsAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCDHCPOptionsAssociationSpecForProviderDhcpOptionsIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1VPCDHCPOptionsAssociationSpecForProviderDhcpOptionsI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPCDHCPOptions in ec2 to populate dhcpOptionsId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCDHCPOptionsAssociationSpecForProviderDhcpOptionsIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1VPCDHCPOptionsAssociationSpecForProviderDhcpOptionsI
     [JsonPropertyName("policy")]
     public V1beta1VPCDHCPOptionsAssociationSpecForProviderDhcpOptionsIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCDHCPOptionsAssociationSpecForProviderDhcpOptionsIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1VPCDHCPOptionsAssociationSpecForProviderDhcpOptionsI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPCDHCPOptions in ec2 to populate dhcpOptionsId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCDHCPOptionsAssociationSpecForProviderDhcpOptionsIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1VPCDHCPOptionsAssociationSpecForProviderDhcpOptionsI
     [JsonPropertyName("policy")]
     public V1beta1VPCDHCPOptionsAssociationSpecForProviderDhcpOptionsIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCDHCPOptionsAssociationSpecForProviderVpcIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1VPCDHCPOptionsAssociationSpecForProviderVpcIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCDHCPOptionsAssociationSpecForProviderVpcIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1VPCDHCPOptionsAssociationSpecForProviderVpcIdRef
     [JsonPropertyName("policy")]
     public V1beta1VPCDHCPOptionsAssociationSpecForProviderVpcIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCDHCPOptionsAssociationSpecForProviderVpcIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1VPCDHCPOptionsAssociationSpecForProviderVpcIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCDHCPOptionsAssociationSpecForProviderVpcIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1VPCDHCPOptionsAssociationSpecForProviderVpcIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1VPCDHCPOptionsAssociationSpecForProviderVpcIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCDHCPOptionsAssociationSpecForProvider
@@ -194,7 +213,9 @@ public partial class V1beta1VPCDHCPOptionsAssociationSpecForProvider
     [JsonPropertyName("vpcIdSelector")]
     public V1beta1VPCDHCPOptionsAssociationSpecForProviderVpcIdSelector? VpcIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCDHCPOptionsAssociationSpecInitProviderDhcpOptionsIdRefPolicy
@@ -207,7 +228,9 @@ public partial class V1beta1VPCDHCPOptionsAssociationSpecInitProviderDhcpOptions
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPCDHCPOptions in ec2 to populate dhcpOptionsId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCDHCPOptionsAssociationSpecInitProviderDhcpOptionsIdRef
@@ -224,7 +247,9 @@ public partial class V1beta1VPCDHCPOptionsAssociationSpecInitProviderDhcpOptions
     [JsonPropertyName("policy")]
     public V1beta1VPCDHCPOptionsAssociationSpecInitProviderDhcpOptionsIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCDHCPOptionsAssociationSpecInitProviderDhcpOptionsIdSelectorPolicy
@@ -237,7 +262,9 @@ public partial class V1beta1VPCDHCPOptionsAssociationSpecInitProviderDhcpOptions
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPCDHCPOptions in ec2 to populate dhcpOptionsId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCDHCPOptionsAssociationSpecInitProviderDhcpOptionsIdSelector
@@ -258,7 +285,9 @@ public partial class V1beta1VPCDHCPOptionsAssociationSpecInitProviderDhcpOptions
     [JsonPropertyName("policy")]
     public V1beta1VPCDHCPOptionsAssociationSpecInitProviderDhcpOptionsIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCDHCPOptionsAssociationSpecInitProviderVpcIdRefPolicy
@@ -271,7 +300,9 @@ public partial class V1beta1VPCDHCPOptionsAssociationSpecInitProviderVpcIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCDHCPOptionsAssociationSpecInitProviderVpcIdRef
@@ -288,7 +319,9 @@ public partial class V1beta1VPCDHCPOptionsAssociationSpecInitProviderVpcIdRef
     [JsonPropertyName("policy")]
     public V1beta1VPCDHCPOptionsAssociationSpecInitProviderVpcIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCDHCPOptionsAssociationSpecInitProviderVpcIdSelectorPolicy
@@ -301,7 +334,9 @@ public partial class V1beta1VPCDHCPOptionsAssociationSpecInitProviderVpcIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCDHCPOptionsAssociationSpecInitProviderVpcIdSelector
@@ -322,7 +357,9 @@ public partial class V1beta1VPCDHCPOptionsAssociationSpecInitProviderVpcIdSelect
     [JsonPropertyName("policy")]
     public V1beta1VPCDHCPOptionsAssociationSpecInitProviderVpcIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCDHCPOptionsAssociationSpecInitProvider
@@ -351,7 +388,9 @@ public partial class V1beta1VPCDHCPOptionsAssociationSpecInitProvider
     [JsonPropertyName("vpcIdSelector")]
     public V1beta1VPCDHCPOptionsAssociationSpecInitProviderVpcIdSelector? VpcIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCDHCPOptionsAssociationSpecProviderConfigRef
@@ -364,7 +403,9 @@ public partial class V1beta1VPCDHCPOptionsAssociationSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCDHCPOptionsAssociationSpecWriteConnectionSecretToRef
@@ -373,7 +414,9 @@ public partial class V1beta1VPCDHCPOptionsAssociationSpecWriteConnectionSecretTo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPCDHCPOptionsAssociationSpec defines the desired state of VPCDHCPOptionsAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCDHCPOptionsAssociationSpec
@@ -398,7 +441,9 @@ public partial class V1beta1VPCDHCPOptionsAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VPCDHCPOptionsAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCDHCPOptionsAssociationStatusAtProvider
@@ -419,7 +464,9 @@ public partial class V1beta1VPCDHCPOptionsAssociationStatusAtProvider
     [JsonPropertyName("vpcId")]
     public string? VpcId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCDHCPOptionsAssociationStatusConditions
@@ -448,7 +495,9 @@ public partial class V1beta1VPCDHCPOptionsAssociationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPCDHCPOptionsAssociationStatus defines the observed state of VPCDHCPOptionsAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCDHCPOptionsAssociationStatus
@@ -465,7 +514,9 @@ public partial class V1beta1VPCDHCPOptionsAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPCDHCPOptionsAssociation is the Schema for the VPCDHCPOptionsAssociations API. Provides a VPC DHCP Options Association resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -495,3 +546,4 @@ public partial class V1beta1VPCDHCPOptionsAssociation : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1beta1VPCDHCPOptionsAssociationStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.devices.azure.m.upbound.io;
+#nullable enable
 /// <summary>IOTHubEndpointStorageContainer is the Schema for the IOTHubEndpointStorageContainers API. Manages an IotHub Storage Container Endpoint</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerList : IKubernetesObje
     [JsonPropertyName("items")]
     public IList<V1beta1IOTHubEndpointStorageContainer> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The connection string for the endpoint. This attribute can only be specified and is mandatory when authentication_type is keyBased.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderConnectionStringSecretRef
@@ -46,7 +49,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderConnect
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderContainerNameRefPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderContain
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Container in storage to populate containerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderContainerNameRef
@@ -76,7 +83,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderContain
     [JsonPropertyName("policy")]
     public V1beta1IOTHubEndpointStorageContainerSpecForProviderContainerNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderContainerNameSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderContain
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Container in storage to populate containerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderContainerNameSelector
@@ -110,7 +121,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderContain
     [JsonPropertyName("policy")]
     public V1beta1IOTHubEndpointStorageContainerSpecForProviderContainerNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderIothubIdRefPolicy
@@ -123,7 +136,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderIothubI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a IOTHub in devices to populate iothubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderIothubIdRef
@@ -140,7 +155,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderIothubI
     [JsonPropertyName("policy")]
     public V1beta1IOTHubEndpointStorageContainerSpecForProviderIothubIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderIothubIdSelectorPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderIothubI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a IOTHub in devices to populate iothubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderIothubIdSelector
@@ -174,7 +193,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderIothubI
     [JsonPropertyName("policy")]
     public V1beta1IOTHubEndpointStorageContainerSpecForProviderIothubIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderResourceGroupNameRefPolicy
@@ -187,7 +208,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderResourc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderResourceGroupNameRef
@@ -204,7 +227,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderResourc
     [JsonPropertyName("policy")]
     public V1beta1IOTHubEndpointStorageContainerSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderResourceGroupNameSelectorPolicy
@@ -217,7 +242,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderResourc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderResourceGroupNameSelector
@@ -238,7 +265,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderResourc
     [JsonPropertyName("policy")]
     public V1beta1IOTHubEndpointStorageContainerSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointStorageContainerSpecForProvider
@@ -311,7 +340,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecForProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1IOTHubEndpointStorageContainerSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The connection string for the endpoint. This attribute can only be specified and is mandatory when authentication_type is keyBased.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderConnectionStringSecretRef
@@ -324,7 +355,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderConnec
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderContainerNameRefPolicy
@@ -337,7 +370,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderContai
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Container in storage to populate containerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderContainerNameRef
@@ -354,7 +389,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderContai
     [JsonPropertyName("policy")]
     public V1beta1IOTHubEndpointStorageContainerSpecInitProviderContainerNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderContainerNameSelectorPolicy
@@ -367,7 +404,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderContai
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Container in storage to populate containerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderContainerNameSelector
@@ -388,7 +427,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderContai
     [JsonPropertyName("policy")]
     public V1beta1IOTHubEndpointStorageContainerSpecInitProviderContainerNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderResourceGroupNameRefPolicy
@@ -401,7 +442,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderResour
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderResourceGroupNameRef
@@ -418,7 +461,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderResour
     [JsonPropertyName("policy")]
     public V1beta1IOTHubEndpointStorageContainerSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderResourceGroupNameSelectorPolicy
@@ -431,7 +476,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderResour
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderResourceGroupNameSelector
@@ -452,7 +499,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderResour
     [JsonPropertyName("policy")]
     public V1beta1IOTHubEndpointStorageContainerSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProvider
@@ -513,7 +562,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1IOTHubEndpointStorageContainerSpecInitProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointStorageContainerSpecProviderConfigRef
@@ -526,7 +577,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointStorageContainerSpecWriteConnectionSecretToRef
@@ -535,7 +588,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecWriteConnectionSec
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IOTHubEndpointStorageContainerSpec defines the desired state of IOTHubEndpointStorageContainer</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointStorageContainerSpec
@@ -560,7 +615,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1IOTHubEndpointStorageContainerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointStorageContainerStatusAtProvider
@@ -609,7 +666,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerStatusAtProvider
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointStorageContainerStatusConditions
@@ -638,7 +697,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IOTHubEndpointStorageContainerStatus defines the observed state of IOTHubEndpointStorageContainer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointStorageContainerStatus
@@ -655,7 +716,9 @@ public partial class V1beta1IOTHubEndpointStorageContainerStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IOTHubEndpointStorageContainer is the Schema for the IOTHubEndpointStorageContainers API. Manages an IotHub Storage Container Endpoint</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -685,3 +748,4 @@ public partial class V1beta1IOTHubEndpointStorageContainer : IKubernetesObject<V
     [JsonPropertyName("status")]
     public V1beta1IOTHubEndpointStorageContainerStatus? Status { get; set; }
 }
+#nullable disable

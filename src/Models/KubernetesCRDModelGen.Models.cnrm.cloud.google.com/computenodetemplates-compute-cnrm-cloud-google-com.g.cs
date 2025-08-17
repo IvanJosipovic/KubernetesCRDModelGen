@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ComputeNodeTemplateList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1ComputeNodeTemplate> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Flexible properties for the desired node type. Node groups that use this node template will create nodes of a type that matches these properties. Only one of nodeTypeFlexibility and nodeType can be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNodeTemplateSpecNodeTypeFlexibility
@@ -50,7 +53,9 @@ public partial class V1beta1ComputeNodeTemplateSpecNodeTypeFlexibility
     [JsonPropertyName("memory")]
     public string? Memory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The server binding policy for nodes using this template. Determines where the nodes should restart following a maintenance event.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNodeTemplateSpecServerBinding
@@ -59,7 +64,9 @@ public partial class V1beta1ComputeNodeTemplateSpecServerBinding
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNodeTemplateSpec
@@ -92,7 +99,9 @@ public partial class V1beta1ComputeNodeTemplateSpec
     [JsonPropertyName("serverBinding")]
     public V1beta1ComputeNodeTemplateSpecServerBinding? ServerBinding { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNodeTemplateStatusConditions
@@ -117,7 +126,9 @@ public partial class V1beta1ComputeNodeTemplateStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNodeTemplateStatus
@@ -138,7 +149,9 @@ public partial class V1beta1ComputeNodeTemplateStatus
     [JsonPropertyName("selfLink")]
     public string? SelfLink { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -168,3 +181,4 @@ public partial class V1beta1ComputeNodeTemplate : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1ComputeNodeTemplateStatus? Status { get; set; }
 }
+#nullable disable

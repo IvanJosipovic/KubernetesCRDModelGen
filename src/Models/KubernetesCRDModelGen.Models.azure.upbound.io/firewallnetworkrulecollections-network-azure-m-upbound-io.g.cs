@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+#nullable enable
 /// <summary>FirewallNetworkRuleCollection is the Schema for the FirewallNetworkRuleCollections API. Manages a Network Rule Collection within an Azure Firewall.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FirewallNetworkRuleCollectionList : IKubernetesObjec
     [JsonPropertyName("items")]
     public IList<V1beta1FirewallNetworkRuleCollection> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallNetworkRuleCollectionSpecForProviderAzureFirewallNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1FirewallNetworkRuleCollectionSpecForProviderAzureFir
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Firewall in network to populate azureFirewallName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallNetworkRuleCollectionSpecForProviderAzureFirewallNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1FirewallNetworkRuleCollectionSpecForProviderAzureFir
     [JsonPropertyName("policy")]
     public V1beta1FirewallNetworkRuleCollectionSpecForProviderAzureFirewallNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallNetworkRuleCollectionSpecForProviderAzureFirewallNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1FirewallNetworkRuleCollectionSpecForProviderAzureFir
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Firewall in network to populate azureFirewallName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallNetworkRuleCollectionSpecForProviderAzureFirewallNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1FirewallNetworkRuleCollectionSpecForProviderAzureFir
     [JsonPropertyName("policy")]
     public V1beta1FirewallNetworkRuleCollectionSpecForProviderAzureFirewallNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallNetworkRuleCollectionSpecForProviderResourceGroupNameRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1FirewallNetworkRuleCollectionSpecForProviderResource
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallNetworkRuleCollectionSpecForProviderResourceGroupNameRef
@@ -127,7 +140,9 @@ public partial class V1beta1FirewallNetworkRuleCollectionSpecForProviderResource
     [JsonPropertyName("policy")]
     public V1beta1FirewallNetworkRuleCollectionSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallNetworkRuleCollectionSpecForProviderResourceGroupNameSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1FirewallNetworkRuleCollectionSpecForProviderResource
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallNetworkRuleCollectionSpecForProviderResourceGroupNameSelector
@@ -161,7 +178,9 @@ public partial class V1beta1FirewallNetworkRuleCollectionSpecForProviderResource
     [JsonPropertyName("policy")]
     public V1beta1FirewallNetworkRuleCollectionSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallNetworkRuleCollectionSpecForProviderRule
@@ -202,7 +221,9 @@ public partial class V1beta1FirewallNetworkRuleCollectionSpecForProviderRule
     [JsonPropertyName("sourceIpGroups")]
     public IList<string>? SourceIpGroups { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallNetworkRuleCollectionSpecForProvider
@@ -243,7 +264,9 @@ public partial class V1beta1FirewallNetworkRuleCollectionSpecForProvider
     [JsonPropertyName("rule")]
     public IList<V1beta1FirewallNetworkRuleCollectionSpecForProviderRule>? Rule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallNetworkRuleCollectionSpecInitProviderRule
@@ -284,7 +307,9 @@ public partial class V1beta1FirewallNetworkRuleCollectionSpecInitProviderRule
     [JsonPropertyName("sourceIpGroups")]
     public IList<string>? SourceIpGroups { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallNetworkRuleCollectionSpecInitProvider
@@ -301,7 +326,9 @@ public partial class V1beta1FirewallNetworkRuleCollectionSpecInitProvider
     [JsonPropertyName("rule")]
     public IList<V1beta1FirewallNetworkRuleCollectionSpecInitProviderRule>? Rule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallNetworkRuleCollectionSpecProviderConfigRef
@@ -314,7 +341,9 @@ public partial class V1beta1FirewallNetworkRuleCollectionSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallNetworkRuleCollectionSpecWriteConnectionSecretToRef
@@ -323,7 +352,9 @@ public partial class V1beta1FirewallNetworkRuleCollectionSpecWriteConnectionSecr
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FirewallNetworkRuleCollectionSpec defines the desired state of FirewallNetworkRuleCollection</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallNetworkRuleCollectionSpec
@@ -348,7 +379,9 @@ public partial class V1beta1FirewallNetworkRuleCollectionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1FirewallNetworkRuleCollectionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallNetworkRuleCollectionStatusAtProviderRule
@@ -389,7 +422,9 @@ public partial class V1beta1FirewallNetworkRuleCollectionStatusAtProviderRule
     [JsonPropertyName("sourceIpGroups")]
     public IList<string>? SourceIpGroups { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallNetworkRuleCollectionStatusAtProvider
@@ -418,7 +453,9 @@ public partial class V1beta1FirewallNetworkRuleCollectionStatusAtProvider
     [JsonPropertyName("rule")]
     public IList<V1beta1FirewallNetworkRuleCollectionStatusAtProviderRule>? Rule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallNetworkRuleCollectionStatusConditions
@@ -447,7 +484,9 @@ public partial class V1beta1FirewallNetworkRuleCollectionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FirewallNetworkRuleCollectionStatus defines the observed state of FirewallNetworkRuleCollection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallNetworkRuleCollectionStatus
@@ -464,7 +503,9 @@ public partial class V1beta1FirewallNetworkRuleCollectionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FirewallNetworkRuleCollection is the Schema for the FirewallNetworkRuleCollections API. Manages a Network Rule Collection within an Azure Firewall.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -494,3 +535,4 @@ public partial class V1beta1FirewallNetworkRuleCollection : IKubernetesObject<V1
     [JsonPropertyName("status")]
     public V1beta1FirewallNetworkRuleCollectionStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datastream.gcp.upbound.io;
+#nullable enable
 /// <summary>PrivateConnection is the Schema for the PrivateConnections API. The PrivateConnection resource is used to establish private connectivity between Datastream and a customer's network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PrivateConnectionList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1PrivateConnection> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateConnectionSpecForProviderPscInterfaceConfig
@@ -42,7 +45,9 @@ public partial class V1beta1PrivateConnectionSpecForProviderPscInterfaceConfig
     [JsonPropertyName("networkAttachment")]
     public string? NetworkAttachment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateConnectionSpecForProviderVpcPeeringConfigVpcRefPolicy
@@ -55,7 +60,9 @@ public partial class V1beta1PrivateConnectionSpecForProviderVpcPeeringConfigVpcR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate vpc.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateConnectionSpecForProviderVpcPeeringConfigVpcRef
@@ -68,7 +75,9 @@ public partial class V1beta1PrivateConnectionSpecForProviderVpcPeeringConfigVpcR
     [JsonPropertyName("policy")]
     public V1beta1PrivateConnectionSpecForProviderVpcPeeringConfigVpcRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateConnectionSpecForProviderVpcPeeringConfigVpcSelectorPolicy
@@ -81,7 +90,9 @@ public partial class V1beta1PrivateConnectionSpecForProviderVpcPeeringConfigVpcS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate vpc.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateConnectionSpecForProviderVpcPeeringConfigVpcSelector
@@ -98,7 +109,9 @@ public partial class V1beta1PrivateConnectionSpecForProviderVpcPeeringConfigVpcS
     [JsonPropertyName("policy")]
     public V1beta1PrivateConnectionSpecForProviderVpcPeeringConfigVpcSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateConnectionSpecForProviderVpcPeeringConfig
@@ -119,7 +132,9 @@ public partial class V1beta1PrivateConnectionSpecForProviderVpcPeeringConfig
     [JsonPropertyName("vpcSelector")]
     public V1beta1PrivateConnectionSpecForProviderVpcPeeringConfigVpcSelector? VpcSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateConnectionSpecForProvider
@@ -152,7 +167,9 @@ public partial class V1beta1PrivateConnectionSpecForProvider
     [JsonPropertyName("vpcPeeringConfig")]
     public IList<V1beta1PrivateConnectionSpecForProviderVpcPeeringConfig>? VpcPeeringConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateConnectionSpecInitProviderPscInterfaceConfig
@@ -161,7 +178,9 @@ public partial class V1beta1PrivateConnectionSpecInitProviderPscInterfaceConfig
     [JsonPropertyName("networkAttachment")]
     public string? NetworkAttachment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateConnectionSpecInitProviderVpcPeeringConfigVpcRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1PrivateConnectionSpecInitProviderVpcPeeringConfigVpc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate vpc.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateConnectionSpecInitProviderVpcPeeringConfigVpcRef
@@ -187,7 +208,9 @@ public partial class V1beta1PrivateConnectionSpecInitProviderVpcPeeringConfigVpc
     [JsonPropertyName("policy")]
     public V1beta1PrivateConnectionSpecInitProviderVpcPeeringConfigVpcRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateConnectionSpecInitProviderVpcPeeringConfigVpcSelectorPolicy
@@ -200,7 +223,9 @@ public partial class V1beta1PrivateConnectionSpecInitProviderVpcPeeringConfigVpc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate vpc.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateConnectionSpecInitProviderVpcPeeringConfigVpcSelector
@@ -217,7 +242,9 @@ public partial class V1beta1PrivateConnectionSpecInitProviderVpcPeeringConfigVpc
     [JsonPropertyName("policy")]
     public V1beta1PrivateConnectionSpecInitProviderVpcPeeringConfigVpcSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateConnectionSpecInitProviderVpcPeeringConfig
@@ -238,7 +265,9 @@ public partial class V1beta1PrivateConnectionSpecInitProviderVpcPeeringConfig
     [JsonPropertyName("vpcSelector")]
     public V1beta1PrivateConnectionSpecInitProviderVpcPeeringConfigVpcSelector? VpcSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateConnectionSpecInitProvider
@@ -267,7 +296,9 @@ public partial class V1beta1PrivateConnectionSpecInitProvider
     [JsonPropertyName("vpcPeeringConfig")]
     public IList<V1beta1PrivateConnectionSpecInitProviderVpcPeeringConfig>? VpcPeeringConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateConnectionSpecProviderConfigRefPolicy
@@ -280,7 +311,9 @@ public partial class V1beta1PrivateConnectionSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateConnectionSpecProviderConfigRef
@@ -293,7 +326,9 @@ public partial class V1beta1PrivateConnectionSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1PrivateConnectionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateConnectionSpecWriteConnectionSecretToRef
@@ -306,7 +341,9 @@ public partial class V1beta1PrivateConnectionSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivateConnectionSpec defines the desired state of PrivateConnection</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateConnectionSpec
@@ -335,7 +372,9 @@ public partial class V1beta1PrivateConnectionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1PrivateConnectionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateConnectionStatusAtProviderError
@@ -348,7 +387,9 @@ public partial class V1beta1PrivateConnectionStatusAtProviderError
     [JsonPropertyName("message")]
     public string? Message { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateConnectionStatusAtProviderPscInterfaceConfig
@@ -357,7 +398,9 @@ public partial class V1beta1PrivateConnectionStatusAtProviderPscInterfaceConfig
     [JsonPropertyName("networkAttachment")]
     public string? NetworkAttachment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateConnectionStatusAtProviderVpcPeeringConfig
@@ -370,7 +413,9 @@ public partial class V1beta1PrivateConnectionStatusAtProviderVpcPeeringConfig
     [JsonPropertyName("vpc")]
     public string? Vpc { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateConnectionStatusAtProvider
@@ -427,7 +472,9 @@ public partial class V1beta1PrivateConnectionStatusAtProvider
     [JsonPropertyName("vpcPeeringConfig")]
     public IList<V1beta1PrivateConnectionStatusAtProviderVpcPeeringConfig>? VpcPeeringConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateConnectionStatusConditions
@@ -456,7 +503,9 @@ public partial class V1beta1PrivateConnectionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivateConnectionStatus defines the observed state of PrivateConnection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateConnectionStatus
@@ -473,7 +522,9 @@ public partial class V1beta1PrivateConnectionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivateConnection is the Schema for the PrivateConnections API. The PrivateConnection resource is used to establish private connectivity between Datastream and a customer's network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -503,3 +554,4 @@ public partial class V1beta1PrivateConnection : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1PrivateConnectionStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.eks.aws.upbound.io;
+#nullable enable
 /// <summary>FargateProfile is the Schema for the FargateProfiles API. Manages an EKS Fargate Profile</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FargateProfileList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1FargateProfile> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecForProviderClusterNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1FargateProfileSpecForProviderClusterNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in eks to populate clusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecForProviderClusterNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1FargateProfileSpecForProviderClusterNameRef
     [JsonPropertyName("policy")]
     public V1beta1FargateProfileSpecForProviderClusterNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecForProviderClusterNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1FargateProfileSpecForProviderClusterNameSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in eks to populate clusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecForProviderClusterNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1FargateProfileSpecForProviderClusterNameSelector
     [JsonPropertyName("policy")]
     public V1beta1FargateProfileSpecForProviderClusterNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecForProviderPodExecutionRoleArnRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1FargateProfileSpecForProviderPodExecutionRoleArnRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate podExecutionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecForProviderPodExecutionRoleArnRef
@@ -115,7 +128,9 @@ public partial class V1beta1FargateProfileSpecForProviderPodExecutionRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1FargateProfileSpecForProviderPodExecutionRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecForProviderPodExecutionRoleArnSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1FargateProfileSpecForProviderPodExecutionRoleArnSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate podExecutionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecForProviderPodExecutionRoleArnSelector
@@ -145,7 +162,9 @@ public partial class V1beta1FargateProfileSpecForProviderPodExecutionRoleArnSele
     [JsonPropertyName("policy")]
     public V1beta1FargateProfileSpecForProviderPodExecutionRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecForProviderSelector
@@ -158,7 +177,9 @@ public partial class V1beta1FargateProfileSpecForProviderSelector
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecForProviderSubnetIdRefsPolicy
@@ -171,7 +192,9 @@ public partial class V1beta1FargateProfileSpecForProviderSubnetIdRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecForProviderSubnetIdRefs
@@ -184,7 +207,9 @@ public partial class V1beta1FargateProfileSpecForProviderSubnetIdRefs
     [JsonPropertyName("policy")]
     public V1beta1FargateProfileSpecForProviderSubnetIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecForProviderSubnetIdSelectorPolicy
@@ -197,7 +222,9 @@ public partial class V1beta1FargateProfileSpecForProviderSubnetIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecForProviderSubnetIdSelector
@@ -214,7 +241,9 @@ public partial class V1beta1FargateProfileSpecForProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1FargateProfileSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecForProvider
@@ -267,7 +296,9 @@ public partial class V1beta1FargateProfileSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecInitProviderClusterNameRefPolicy
@@ -280,7 +311,9 @@ public partial class V1beta1FargateProfileSpecInitProviderClusterNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in eks to populate clusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecInitProviderClusterNameRef
@@ -293,7 +326,9 @@ public partial class V1beta1FargateProfileSpecInitProviderClusterNameRef
     [JsonPropertyName("policy")]
     public V1beta1FargateProfileSpecInitProviderClusterNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecInitProviderClusterNameSelectorPolicy
@@ -306,7 +341,9 @@ public partial class V1beta1FargateProfileSpecInitProviderClusterNameSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in eks to populate clusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecInitProviderClusterNameSelector
@@ -323,7 +360,9 @@ public partial class V1beta1FargateProfileSpecInitProviderClusterNameSelector
     [JsonPropertyName("policy")]
     public V1beta1FargateProfileSpecInitProviderClusterNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecInitProviderPodExecutionRoleArnRefPolicy
@@ -336,7 +375,9 @@ public partial class V1beta1FargateProfileSpecInitProviderPodExecutionRoleArnRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate podExecutionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecInitProviderPodExecutionRoleArnRef
@@ -349,7 +390,9 @@ public partial class V1beta1FargateProfileSpecInitProviderPodExecutionRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1FargateProfileSpecInitProviderPodExecutionRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecInitProviderPodExecutionRoleArnSelectorPolicy
@@ -362,7 +405,9 @@ public partial class V1beta1FargateProfileSpecInitProviderPodExecutionRoleArnSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate podExecutionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecInitProviderPodExecutionRoleArnSelector
@@ -379,7 +424,9 @@ public partial class V1beta1FargateProfileSpecInitProviderPodExecutionRoleArnSel
     [JsonPropertyName("policy")]
     public V1beta1FargateProfileSpecInitProviderPodExecutionRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecInitProviderSelector
@@ -392,7 +439,9 @@ public partial class V1beta1FargateProfileSpecInitProviderSelector
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecInitProviderSubnetIdRefsPolicy
@@ -405,7 +454,9 @@ public partial class V1beta1FargateProfileSpecInitProviderSubnetIdRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecInitProviderSubnetIdRefs
@@ -418,7 +469,9 @@ public partial class V1beta1FargateProfileSpecInitProviderSubnetIdRefs
     [JsonPropertyName("policy")]
     public V1beta1FargateProfileSpecInitProviderSubnetIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecInitProviderSubnetIdSelectorPolicy
@@ -431,7 +484,9 @@ public partial class V1beta1FargateProfileSpecInitProviderSubnetIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecInitProviderSubnetIdSelector
@@ -448,7 +503,9 @@ public partial class V1beta1FargateProfileSpecInitProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1FargateProfileSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecInitProvider
@@ -497,7 +554,9 @@ public partial class V1beta1FargateProfileSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecProviderConfigRefPolicy
@@ -510,7 +569,9 @@ public partial class V1beta1FargateProfileSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecProviderConfigRef
@@ -523,7 +584,9 @@ public partial class V1beta1FargateProfileSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1FargateProfileSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecWriteConnectionSecretToRef
@@ -536,7 +599,9 @@ public partial class V1beta1FargateProfileSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FargateProfileSpec defines the desired state of FargateProfile</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpec
@@ -565,7 +630,9 @@ public partial class V1beta1FargateProfileSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1FargateProfileSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileStatusAtProviderSelector
@@ -578,7 +645,9 @@ public partial class V1beta1FargateProfileStatusAtProviderSelector
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileStatusAtProvider
@@ -623,7 +692,9 @@ public partial class V1beta1FargateProfileStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileStatusConditions
@@ -652,7 +723,9 @@ public partial class V1beta1FargateProfileStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FargateProfileStatus defines the observed state of FargateProfile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileStatus
@@ -669,7 +742,9 @@ public partial class V1beta1FargateProfileStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FargateProfile is the Schema for the FargateProfiles API. Manages an EKS Fargate Profile</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -699,3 +774,4 @@ public partial class V1beta1FargateProfile : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1FargateProfileStatus? Status { get; set; }
 }
+#nullable disable

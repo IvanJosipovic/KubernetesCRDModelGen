@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+#nullable enable
 /// <summary>AMI is the Schema for the AMIs API. Creates and manages a custom Amazon Machine Image (AMI).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AMIList : IKubernetesObject<V1ListMeta>, IItems<V1be
     [JsonPropertyName("items")]
     public IList<V1beta1AMI> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMISpecForProviderEbsBlockDeviceSnapshotIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1AMISpecForProviderEbsBlockDeviceSnapshotIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EBSSnapshot in ec2 to populate snapshotId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMISpecForProviderEbsBlockDeviceSnapshotIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1AMISpecForProviderEbsBlockDeviceSnapshotIdRef
     [JsonPropertyName("policy")]
     public V1beta1AMISpecForProviderEbsBlockDeviceSnapshotIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMISpecForProviderEbsBlockDeviceSnapshotIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1AMISpecForProviderEbsBlockDeviceSnapshotIdSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EBSSnapshot in ec2 to populate snapshotId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMISpecForProviderEbsBlockDeviceSnapshotIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1AMISpecForProviderEbsBlockDeviceSnapshotIdSelector
     [JsonPropertyName("policy")]
     public V1beta1AMISpecForProviderEbsBlockDeviceSnapshotIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMISpecForProviderEbsBlockDevice
@@ -138,7 +149,9 @@ public partial class V1beta1AMISpecForProviderEbsBlockDevice
     [JsonPropertyName("volumeType")]
     public string? VolumeType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMISpecForProviderEphemeralBlockDevice
@@ -151,7 +164,9 @@ public partial class V1beta1AMISpecForProviderEphemeralBlockDevice
     [JsonPropertyName("virtualName")]
     public string? VirtualName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMISpecForProvider
@@ -232,7 +247,9 @@ public partial class V1beta1AMISpecForProvider
     [JsonPropertyName("virtualizationType")]
     public string? VirtualizationType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMISpecInitProviderEbsBlockDeviceSnapshotIdRefPolicy
@@ -245,7 +262,9 @@ public partial class V1beta1AMISpecInitProviderEbsBlockDeviceSnapshotIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EBSSnapshot in ec2 to populate snapshotId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMISpecInitProviderEbsBlockDeviceSnapshotIdRef
@@ -258,7 +277,9 @@ public partial class V1beta1AMISpecInitProviderEbsBlockDeviceSnapshotIdRef
     [JsonPropertyName("policy")]
     public V1beta1AMISpecInitProviderEbsBlockDeviceSnapshotIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMISpecInitProviderEbsBlockDeviceSnapshotIdSelectorPolicy
@@ -271,7 +292,9 @@ public partial class V1beta1AMISpecInitProviderEbsBlockDeviceSnapshotIdSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EBSSnapshot in ec2 to populate snapshotId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMISpecInitProviderEbsBlockDeviceSnapshotIdSelector
@@ -288,7 +311,9 @@ public partial class V1beta1AMISpecInitProviderEbsBlockDeviceSnapshotIdSelector
     [JsonPropertyName("policy")]
     public V1beta1AMISpecInitProviderEbsBlockDeviceSnapshotIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMISpecInitProviderEbsBlockDevice
@@ -337,7 +362,9 @@ public partial class V1beta1AMISpecInitProviderEbsBlockDevice
     [JsonPropertyName("volumeType")]
     public string? VolumeType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMISpecInitProviderEphemeralBlockDevice
@@ -350,7 +377,9 @@ public partial class V1beta1AMISpecInitProviderEphemeralBlockDevice
     [JsonPropertyName("virtualName")]
     public string? VirtualName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMISpecInitProvider
@@ -427,7 +456,9 @@ public partial class V1beta1AMISpecInitProvider
     [JsonPropertyName("virtualizationType")]
     public string? VirtualizationType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMISpecProviderConfigRefPolicy
@@ -440,7 +471,9 @@ public partial class V1beta1AMISpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMISpecProviderConfigRef
@@ -453,7 +486,9 @@ public partial class V1beta1AMISpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1AMISpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMISpecWriteConnectionSecretToRef
@@ -466,7 +501,9 @@ public partial class V1beta1AMISpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AMISpec defines the desired state of AMI</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMISpec
@@ -495,7 +532,9 @@ public partial class V1beta1AMISpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AMISpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMIStatusAtProviderEbsBlockDevice
@@ -536,7 +575,9 @@ public partial class V1beta1AMIStatusAtProviderEbsBlockDevice
     [JsonPropertyName("volumeType")]
     public string? VolumeType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMIStatusAtProviderEphemeralBlockDevice
@@ -549,7 +590,9 @@ public partial class V1beta1AMIStatusAtProviderEphemeralBlockDevice
     [JsonPropertyName("virtualName")]
     public string? VirtualName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMIStatusAtProvider
@@ -686,7 +729,9 @@ public partial class V1beta1AMIStatusAtProvider
     [JsonPropertyName("virtualizationType")]
     public string? VirtualizationType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMIStatusConditions
@@ -715,7 +760,9 @@ public partial class V1beta1AMIStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AMIStatus defines the observed state of AMI.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMIStatus
@@ -732,7 +779,9 @@ public partial class V1beta1AMIStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AMI is the Schema for the AMIs API. Creates and manages a custom Amazon Machine Image (AMI).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -762,3 +811,4 @@ public partial class V1beta1AMI : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1
     [JsonPropertyName("status")]
     public V1beta1AMIStatus? Status { get; set; }
 }
+#nullable disable

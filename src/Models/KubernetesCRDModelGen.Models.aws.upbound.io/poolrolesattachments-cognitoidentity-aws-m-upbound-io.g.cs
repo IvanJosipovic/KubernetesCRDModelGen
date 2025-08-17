@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cognitoidentity.aws.m.upbound.io;
+#nullable enable
 /// <summary>PoolRolesAttachment is the Schema for the PoolRolesAttachments API. Provides an AWS Cognito Identity Pool Roles Attachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PoolRolesAttachmentList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1PoolRolesAttachment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolRolesAttachmentSpecForProviderIdentityPoolIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1PoolRolesAttachmentSpecForProviderIdentityPoolIdRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Pool in cognitoidentity to populate identityPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolRolesAttachmentSpecForProviderIdentityPoolIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1PoolRolesAttachmentSpecForProviderIdentityPoolIdRef
     [JsonPropertyName("policy")]
     public V1beta1PoolRolesAttachmentSpecForProviderIdentityPoolIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolRolesAttachmentSpecForProviderIdentityPoolIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1PoolRolesAttachmentSpecForProviderIdentityPoolIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Pool in cognitoidentity to populate identityPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolRolesAttachmentSpecForProviderIdentityPoolIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1PoolRolesAttachmentSpecForProviderIdentityPoolIdSele
     [JsonPropertyName("policy")]
     public V1beta1PoolRolesAttachmentSpecForProviderIdentityPoolIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolRolesAttachmentSpecForProviderRoleMappingMappingRuleRoleArnRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1PoolRolesAttachmentSpecForProviderRoleMappingMapping
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolRolesAttachmentSpecForProviderRoleMappingMappingRuleRoleArnRef
@@ -127,7 +140,9 @@ public partial class V1beta1PoolRolesAttachmentSpecForProviderRoleMappingMapping
     [JsonPropertyName("policy")]
     public V1beta1PoolRolesAttachmentSpecForProviderRoleMappingMappingRuleRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolRolesAttachmentSpecForProviderRoleMappingMappingRuleRoleArnSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1PoolRolesAttachmentSpecForProviderRoleMappingMapping
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolRolesAttachmentSpecForProviderRoleMappingMappingRuleRoleArnSelector
@@ -161,7 +178,9 @@ public partial class V1beta1PoolRolesAttachmentSpecForProviderRoleMappingMapping
     [JsonPropertyName("policy")]
     public V1beta1PoolRolesAttachmentSpecForProviderRoleMappingMappingRuleRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolRolesAttachmentSpecForProviderRoleMappingMappingRule
@@ -190,7 +209,9 @@ public partial class V1beta1PoolRolesAttachmentSpecForProviderRoleMappingMapping
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolRolesAttachmentSpecForProviderRoleMapping
@@ -211,7 +232,9 @@ public partial class V1beta1PoolRolesAttachmentSpecForProviderRoleMapping
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolRolesAttachmentSpecForProvider
@@ -240,7 +263,9 @@ public partial class V1beta1PoolRolesAttachmentSpecForProvider
     [JsonPropertyName("roles")]
     public IDictionary<string, string>? Roles { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolRolesAttachmentSpecInitProviderIdentityPoolIdRefPolicy
@@ -253,7 +278,9 @@ public partial class V1beta1PoolRolesAttachmentSpecInitProviderIdentityPoolIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Pool in cognitoidentity to populate identityPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolRolesAttachmentSpecInitProviderIdentityPoolIdRef
@@ -270,7 +297,9 @@ public partial class V1beta1PoolRolesAttachmentSpecInitProviderIdentityPoolIdRef
     [JsonPropertyName("policy")]
     public V1beta1PoolRolesAttachmentSpecInitProviderIdentityPoolIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolRolesAttachmentSpecInitProviderIdentityPoolIdSelectorPolicy
@@ -283,7 +312,9 @@ public partial class V1beta1PoolRolesAttachmentSpecInitProviderIdentityPoolIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Pool in cognitoidentity to populate identityPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolRolesAttachmentSpecInitProviderIdentityPoolIdSelector
@@ -304,7 +335,9 @@ public partial class V1beta1PoolRolesAttachmentSpecInitProviderIdentityPoolIdSel
     [JsonPropertyName("policy")]
     public V1beta1PoolRolesAttachmentSpecInitProviderIdentityPoolIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolRolesAttachmentSpecInitProviderRoleMappingMappingRuleRoleArnRefPolicy
@@ -317,7 +350,9 @@ public partial class V1beta1PoolRolesAttachmentSpecInitProviderRoleMappingMappin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolRolesAttachmentSpecInitProviderRoleMappingMappingRuleRoleArnRef
@@ -334,7 +369,9 @@ public partial class V1beta1PoolRolesAttachmentSpecInitProviderRoleMappingMappin
     [JsonPropertyName("policy")]
     public V1beta1PoolRolesAttachmentSpecInitProviderRoleMappingMappingRuleRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolRolesAttachmentSpecInitProviderRoleMappingMappingRuleRoleArnSelectorPolicy
@@ -347,7 +384,9 @@ public partial class V1beta1PoolRolesAttachmentSpecInitProviderRoleMappingMappin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolRolesAttachmentSpecInitProviderRoleMappingMappingRuleRoleArnSelector
@@ -368,7 +407,9 @@ public partial class V1beta1PoolRolesAttachmentSpecInitProviderRoleMappingMappin
     [JsonPropertyName("policy")]
     public V1beta1PoolRolesAttachmentSpecInitProviderRoleMappingMappingRuleRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolRolesAttachmentSpecInitProviderRoleMappingMappingRule
@@ -397,7 +438,9 @@ public partial class V1beta1PoolRolesAttachmentSpecInitProviderRoleMappingMappin
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolRolesAttachmentSpecInitProviderRoleMapping
@@ -418,7 +461,9 @@ public partial class V1beta1PoolRolesAttachmentSpecInitProviderRoleMapping
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolRolesAttachmentSpecInitProvider
@@ -443,7 +488,9 @@ public partial class V1beta1PoolRolesAttachmentSpecInitProvider
     [JsonPropertyName("roles")]
     public IDictionary<string, string>? Roles { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolRolesAttachmentSpecProviderConfigRef
@@ -456,7 +503,9 @@ public partial class V1beta1PoolRolesAttachmentSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolRolesAttachmentSpecWriteConnectionSecretToRef
@@ -465,7 +514,9 @@ public partial class V1beta1PoolRolesAttachmentSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PoolRolesAttachmentSpec defines the desired state of PoolRolesAttachment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolRolesAttachmentSpec
@@ -490,7 +541,9 @@ public partial class V1beta1PoolRolesAttachmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1PoolRolesAttachmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolRolesAttachmentStatusAtProviderRoleMappingMappingRule
@@ -511,7 +564,9 @@ public partial class V1beta1PoolRolesAttachmentStatusAtProviderRoleMappingMappin
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolRolesAttachmentStatusAtProviderRoleMapping
@@ -532,7 +587,9 @@ public partial class V1beta1PoolRolesAttachmentStatusAtProviderRoleMapping
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolRolesAttachmentStatusAtProvider
@@ -557,7 +614,9 @@ public partial class V1beta1PoolRolesAttachmentStatusAtProvider
     [JsonPropertyName("roles")]
     public IDictionary<string, string>? Roles { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolRolesAttachmentStatusConditions
@@ -586,7 +645,9 @@ public partial class V1beta1PoolRolesAttachmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PoolRolesAttachmentStatus defines the observed state of PoolRolesAttachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolRolesAttachmentStatus
@@ -603,7 +664,9 @@ public partial class V1beta1PoolRolesAttachmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PoolRolesAttachment is the Schema for the PoolRolesAttachments API. Provides an AWS Cognito Identity Pool Roles Attachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -633,3 +696,4 @@ public partial class V1beta1PoolRolesAttachment : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1PoolRolesAttachmentStatus? Status { get; set; }
 }
+#nullable disable

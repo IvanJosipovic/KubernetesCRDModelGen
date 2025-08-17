@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ComputeHealthCheckList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1ComputeHealthCheck> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeHealthCheckSpecGrpcHealthCheck
@@ -54,7 +57,9 @@ public partial class V1beta1ComputeHealthCheckSpecGrpcHealthCheck
     [JsonPropertyName("portSpecification")]
     public string? PortSpecification { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeHealthCheckSpecHttp2HealthCheck
@@ -87,7 +92,9 @@ public partial class V1beta1ComputeHealthCheckSpecHttp2HealthCheck
     [JsonPropertyName("response")]
     public string? Response { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeHealthCheckSpecHttpHealthCheck
@@ -120,7 +127,9 @@ public partial class V1beta1ComputeHealthCheckSpecHttpHealthCheck
     [JsonPropertyName("response")]
     public string? Response { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeHealthCheckSpecHttpsHealthCheck
@@ -153,7 +162,9 @@ public partial class V1beta1ComputeHealthCheckSpecHttpsHealthCheck
     [JsonPropertyName("response")]
     public string? Response { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configure logging on this health check.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeHealthCheckSpecLogConfig
@@ -162,7 +173,9 @@ public partial class V1beta1ComputeHealthCheckSpecLogConfig
     [JsonPropertyName("enable")]
     public bool? Enable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeHealthCheckSpecSslHealthCheck
@@ -191,7 +204,9 @@ public partial class V1beta1ComputeHealthCheckSpecSslHealthCheck
     [JsonPropertyName("response")]
     public string? Response { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeHealthCheckSpecTcpHealthCheck
@@ -220,7 +235,9 @@ public partial class V1beta1ComputeHealthCheckSpecTcpHealthCheck
     [JsonPropertyName("response")]
     public string? Response { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeHealthCheckSpec
@@ -281,7 +298,9 @@ public partial class V1beta1ComputeHealthCheckSpec
     [JsonPropertyName("unhealthyThreshold")]
     public int? UnhealthyThreshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeHealthCheckStatusConditions
@@ -306,7 +325,9 @@ public partial class V1beta1ComputeHealthCheckStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeHealthCheckStatus
@@ -331,7 +352,9 @@ public partial class V1beta1ComputeHealthCheckStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -361,3 +384,4 @@ public partial class V1beta1ComputeHealthCheck : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1ComputeHealthCheckStatus? Status { get; set; }
 }
+#nullable disable

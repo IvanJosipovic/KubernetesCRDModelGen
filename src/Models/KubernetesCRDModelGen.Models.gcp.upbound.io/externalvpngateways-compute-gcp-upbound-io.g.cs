@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+#nullable enable
 /// <summary>ExternalVPNGateway is the Schema for the ExternalVPNGateways API. Represents a VPN gateway managed outside of GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ExternalVPNGatewayList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1ExternalVPNGateway> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExternalVPNGatewaySpecForProviderInterface
@@ -50,7 +53,9 @@ public partial class V1beta1ExternalVPNGatewaySpecForProviderInterface
     [JsonPropertyName("ipv6Address")]
     public string? Ipv6Address { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExternalVPNGatewaySpecForProvider
@@ -75,7 +80,9 @@ public partial class V1beta1ExternalVPNGatewaySpecForProvider
     [JsonPropertyName("redundancyType")]
     public string? RedundancyType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExternalVPNGatewaySpecInitProviderInterface
@@ -92,7 +99,9 @@ public partial class V1beta1ExternalVPNGatewaySpecInitProviderInterface
     [JsonPropertyName("ipv6Address")]
     public string? Ipv6Address { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExternalVPNGatewaySpecInitProvider
@@ -117,7 +126,9 @@ public partial class V1beta1ExternalVPNGatewaySpecInitProvider
     [JsonPropertyName("redundancyType")]
     public string? RedundancyType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExternalVPNGatewaySpecProviderConfigRefPolicy
@@ -130,7 +141,9 @@ public partial class V1beta1ExternalVPNGatewaySpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExternalVPNGatewaySpecProviderConfigRef
@@ -143,7 +156,9 @@ public partial class V1beta1ExternalVPNGatewaySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ExternalVPNGatewaySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExternalVPNGatewaySpecWriteConnectionSecretToRef
@@ -156,7 +171,9 @@ public partial class V1beta1ExternalVPNGatewaySpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExternalVPNGatewaySpec defines the desired state of ExternalVPNGateway</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExternalVPNGatewaySpec
@@ -185,7 +202,9 @@ public partial class V1beta1ExternalVPNGatewaySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ExternalVPNGatewaySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExternalVPNGatewayStatusAtProviderInterface
@@ -202,7 +221,9 @@ public partial class V1beta1ExternalVPNGatewayStatusAtProviderInterface
     [JsonPropertyName("ipv6Address")]
     public string? Ipv6Address { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExternalVPNGatewayStatusAtProvider
@@ -247,7 +268,9 @@ public partial class V1beta1ExternalVPNGatewayStatusAtProvider
     [JsonPropertyName("terraformLabels")]
     public IDictionary<string, string>? TerraformLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExternalVPNGatewayStatusConditions
@@ -276,7 +299,9 @@ public partial class V1beta1ExternalVPNGatewayStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExternalVPNGatewayStatus defines the observed state of ExternalVPNGateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExternalVPNGatewayStatus
@@ -293,7 +318,9 @@ public partial class V1beta1ExternalVPNGatewayStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExternalVPNGateway is the Schema for the ExternalVPNGateways API. Represents a VPN gateway managed outside of GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -323,3 +350,4 @@ public partial class V1beta1ExternalVPNGateway : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1ExternalVPNGatewayStatus? Status { get; set; }
 }
+#nullable disable

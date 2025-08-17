@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.azure.upbound.io;
+#nullable enable
 /// <summary>MSSQLServer is the Schema for the MSSQLServers API. Manages a Microsoft SQL Azure Database Server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MSSQLServerList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1MSSQLServer> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password associated with the administrator_login user. Needs to comply with Azure's Password Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProviderAdministratorLoginPasswordSecretRef
@@ -50,7 +53,9 @@ public partial class V1beta1MSSQLServerSpecForProviderAdministratorLoginPassword
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Password associated with the administrator_login user. Needs to comply with Azure's Password Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProviderAdministratorLoginPasswordWoSecretRef
@@ -67,7 +72,9 @@ public partial class V1beta1MSSQLServerSpecForProviderAdministratorLoginPassword
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministratorLoginUsernameRefPolicy
@@ -80,7 +87,9 @@ public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministratorLoginU
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UserAssignedIdentity in managedidentity to populate loginUsername.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministratorLoginUsernameRef
@@ -93,7 +102,9 @@ public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministratorLoginU
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerSpecForProviderAzureadAdministratorLoginUsernameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministratorLoginUsernameSelectorPolicy
@@ -106,7 +117,9 @@ public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministratorLoginU
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UserAssignedIdentity in managedidentity to populate loginUsername.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministratorLoginUsernameSelector
@@ -123,7 +136,9 @@ public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministratorLoginU
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerSpecForProviderAzureadAdministratorLoginUsernameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministratorObjectIdRefPolicy
@@ -136,7 +151,9 @@ public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministratorObject
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UserAssignedIdentity in managedidentity to populate objectId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministratorObjectIdRef
@@ -149,7 +166,9 @@ public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministratorObject
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerSpecForProviderAzureadAdministratorObjectIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministratorObjectIdSelectorPolicy
@@ -162,7 +181,9 @@ public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministratorObject
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UserAssignedIdentity in managedidentity to populate objectId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministratorObjectIdSelector
@@ -179,7 +200,9 @@ public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministratorObject
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerSpecForProviderAzureadAdministratorObjectIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministrator
@@ -216,7 +239,9 @@ public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministrator
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProviderIdentityIdentityIdsRefsPolicy
@@ -229,7 +254,9 @@ public partial class V1beta1MSSQLServerSpecForProviderIdentityIdentityIdsRefsPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProviderIdentityIdentityIdsRefs
@@ -242,7 +269,9 @@ public partial class V1beta1MSSQLServerSpecForProviderIdentityIdentityIdsRefs
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerSpecForProviderIdentityIdentityIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProviderIdentityIdentityIdsSelectorPolicy
@@ -255,7 +284,9 @@ public partial class V1beta1MSSQLServerSpecForProviderIdentityIdentityIdsSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of UserAssignedIdentity in managedidentity to populate identityIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProviderIdentityIdentityIdsSelector
@@ -272,7 +303,9 @@ public partial class V1beta1MSSQLServerSpecForProviderIdentityIdentityIdsSelecto
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerSpecForProviderIdentityIdentityIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProviderIdentity
@@ -293,7 +326,9 @@ public partial class V1beta1MSSQLServerSpecForProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProviderPrimaryUserAssignedIdentityIdRefPolicy
@@ -306,7 +341,9 @@ public partial class V1beta1MSSQLServerSpecForProviderPrimaryUserAssignedIdentit
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UserAssignedIdentity in managedidentity to populate primaryUserAssignedIdentityId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProviderPrimaryUserAssignedIdentityIdRef
@@ -319,7 +356,9 @@ public partial class V1beta1MSSQLServerSpecForProviderPrimaryUserAssignedIdentit
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerSpecForProviderPrimaryUserAssignedIdentityIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProviderPrimaryUserAssignedIdentityIdSelectorPolicy
@@ -332,7 +371,9 @@ public partial class V1beta1MSSQLServerSpecForProviderPrimaryUserAssignedIdentit
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UserAssignedIdentity in managedidentity to populate primaryUserAssignedIdentityId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProviderPrimaryUserAssignedIdentityIdSelector
@@ -349,7 +390,9 @@ public partial class V1beta1MSSQLServerSpecForProviderPrimaryUserAssignedIdentit
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerSpecForProviderPrimaryUserAssignedIdentityIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProviderResourceGroupNameRefPolicy
@@ -362,7 +405,9 @@ public partial class V1beta1MSSQLServerSpecForProviderResourceGroupNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProviderResourceGroupNameRef
@@ -375,7 +420,9 @@ public partial class V1beta1MSSQLServerSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProviderResourceGroupNameSelectorPolicy
@@ -388,7 +435,9 @@ public partial class V1beta1MSSQLServerSpecForProviderResourceGroupNameSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProviderResourceGroupNameSelector
@@ -405,7 +454,9 @@ public partial class V1beta1MSSQLServerSpecForProviderResourceGroupNameSelector
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProviderTransparentDataEncryptionKeyVaultKeyIdRefPolicy
@@ -418,7 +469,9 @@ public partial class V1beta1MSSQLServerSpecForProviderTransparentDataEncryptionK
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in keyvault to populate transparentDataEncryptionKeyVaultKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProviderTransparentDataEncryptionKeyVaultKeyIdRef
@@ -431,7 +484,9 @@ public partial class V1beta1MSSQLServerSpecForProviderTransparentDataEncryptionK
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerSpecForProviderTransparentDataEncryptionKeyVaultKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProviderTransparentDataEncryptionKeyVaultKeyIdSelectorPolicy
@@ -444,7 +499,9 @@ public partial class V1beta1MSSQLServerSpecForProviderTransparentDataEncryptionK
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in keyvault to populate transparentDataEncryptionKeyVaultKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProviderTransparentDataEncryptionKeyVaultKeyIdSelector
@@ -461,7 +518,9 @@ public partial class V1beta1MSSQLServerSpecForProviderTransparentDataEncryptionK
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerSpecForProviderTransparentDataEncryptionKeyVaultKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProvider
@@ -558,7 +617,9 @@ public partial class V1beta1MSSQLServerSpecForProvider
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password associated with the administrator_login user. Needs to comply with Azure's Password Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecInitProviderAdministratorLoginPasswordSecretRef
@@ -575,7 +636,9 @@ public partial class V1beta1MSSQLServerSpecInitProviderAdministratorLoginPasswor
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Password associated with the administrator_login user. Needs to comply with Azure's Password Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecInitProviderAdministratorLoginPasswordWoSecretRef
@@ -592,7 +655,9 @@ public partial class V1beta1MSSQLServerSpecInitProviderAdministratorLoginPasswor
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministratorLoginUsernameRefPolicy
@@ -605,7 +670,9 @@ public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministratorLogin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UserAssignedIdentity in managedidentity to populate loginUsername.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministratorLoginUsernameRef
@@ -618,7 +685,9 @@ public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministratorLogin
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerSpecInitProviderAzureadAdministratorLoginUsernameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministratorLoginUsernameSelectorPolicy
@@ -631,7 +700,9 @@ public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministratorLogin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UserAssignedIdentity in managedidentity to populate loginUsername.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministratorLoginUsernameSelector
@@ -648,7 +719,9 @@ public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministratorLogin
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerSpecInitProviderAzureadAdministratorLoginUsernameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministratorObjectIdRefPolicy
@@ -661,7 +734,9 @@ public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministratorObjec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UserAssignedIdentity in managedidentity to populate objectId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministratorObjectIdRef
@@ -674,7 +749,9 @@ public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministratorObjec
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerSpecInitProviderAzureadAdministratorObjectIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministratorObjectIdSelectorPolicy
@@ -687,7 +764,9 @@ public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministratorObjec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UserAssignedIdentity in managedidentity to populate objectId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministratorObjectIdSelector
@@ -704,7 +783,9 @@ public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministratorObjec
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerSpecInitProviderAzureadAdministratorObjectIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministrator
@@ -741,7 +822,9 @@ public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministrator
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecInitProviderIdentityIdentityIdsRefsPolicy
@@ -754,7 +837,9 @@ public partial class V1beta1MSSQLServerSpecInitProviderIdentityIdentityIdsRefsPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecInitProviderIdentityIdentityIdsRefs
@@ -767,7 +852,9 @@ public partial class V1beta1MSSQLServerSpecInitProviderIdentityIdentityIdsRefs
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerSpecInitProviderIdentityIdentityIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecInitProviderIdentityIdentityIdsSelectorPolicy
@@ -780,7 +867,9 @@ public partial class V1beta1MSSQLServerSpecInitProviderIdentityIdentityIdsSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of UserAssignedIdentity in managedidentity to populate identityIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecInitProviderIdentityIdentityIdsSelector
@@ -797,7 +886,9 @@ public partial class V1beta1MSSQLServerSpecInitProviderIdentityIdentityIdsSelect
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerSpecInitProviderIdentityIdentityIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecInitProviderIdentity
@@ -818,7 +909,9 @@ public partial class V1beta1MSSQLServerSpecInitProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecInitProviderPrimaryUserAssignedIdentityIdRefPolicy
@@ -831,7 +924,9 @@ public partial class V1beta1MSSQLServerSpecInitProviderPrimaryUserAssignedIdenti
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UserAssignedIdentity in managedidentity to populate primaryUserAssignedIdentityId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecInitProviderPrimaryUserAssignedIdentityIdRef
@@ -844,7 +939,9 @@ public partial class V1beta1MSSQLServerSpecInitProviderPrimaryUserAssignedIdenti
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerSpecInitProviderPrimaryUserAssignedIdentityIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecInitProviderPrimaryUserAssignedIdentityIdSelectorPolicy
@@ -857,7 +954,9 @@ public partial class V1beta1MSSQLServerSpecInitProviderPrimaryUserAssignedIdenti
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UserAssignedIdentity in managedidentity to populate primaryUserAssignedIdentityId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecInitProviderPrimaryUserAssignedIdentityIdSelector
@@ -874,7 +973,9 @@ public partial class V1beta1MSSQLServerSpecInitProviderPrimaryUserAssignedIdenti
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerSpecInitProviderPrimaryUserAssignedIdentityIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecInitProviderTransparentDataEncryptionKeyVaultKeyIdRefPolicy
@@ -887,7 +988,9 @@ public partial class V1beta1MSSQLServerSpecInitProviderTransparentDataEncryption
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in keyvault to populate transparentDataEncryptionKeyVaultKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecInitProviderTransparentDataEncryptionKeyVaultKeyIdRef
@@ -900,7 +1003,9 @@ public partial class V1beta1MSSQLServerSpecInitProviderTransparentDataEncryption
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerSpecInitProviderTransparentDataEncryptionKeyVaultKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecInitProviderTransparentDataEncryptionKeyVaultKeyIdSelectorPolicy
@@ -913,7 +1018,9 @@ public partial class V1beta1MSSQLServerSpecInitProviderTransparentDataEncryption
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in keyvault to populate transparentDataEncryptionKeyVaultKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecInitProviderTransparentDataEncryptionKeyVaultKeyIdSelector
@@ -930,7 +1037,9 @@ public partial class V1beta1MSSQLServerSpecInitProviderTransparentDataEncryption
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerSpecInitProviderTransparentDataEncryptionKeyVaultKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecInitProvider
@@ -1015,7 +1124,9 @@ public partial class V1beta1MSSQLServerSpecInitProvider
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecProviderConfigRefPolicy
@@ -1028,7 +1139,9 @@ public partial class V1beta1MSSQLServerSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecProviderConfigRef
@@ -1041,7 +1154,9 @@ public partial class V1beta1MSSQLServerSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecWriteConnectionSecretToRef
@@ -1054,7 +1169,9 @@ public partial class V1beta1MSSQLServerSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MSSQLServerSpec defines the desired state of MSSQLServer</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpec
@@ -1083,7 +1200,9 @@ public partial class V1beta1MSSQLServerSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MSSQLServerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerStatusAtProviderAzureadAdministrator
@@ -1104,7 +1223,9 @@ public partial class V1beta1MSSQLServerStatusAtProviderAzureadAdministrator
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerStatusAtProviderIdentity
@@ -1125,7 +1246,9 @@ public partial class V1beta1MSSQLServerStatusAtProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerStatusAtProvider
@@ -1202,7 +1325,9 @@ public partial class V1beta1MSSQLServerStatusAtProvider
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerStatusConditions
@@ -1231,7 +1356,9 @@ public partial class V1beta1MSSQLServerStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MSSQLServerStatus defines the observed state of MSSQLServer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerStatus
@@ -1248,7 +1375,9 @@ public partial class V1beta1MSSQLServerStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MSSQLServer is the Schema for the MSSQLServers API. Manages a Microsoft SQL Azure Database Server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1278,3 +1407,4 @@ public partial class V1beta1MSSQLServer : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1MSSQLServerStatus? Status { get; set; }
 }
+#nullable disable

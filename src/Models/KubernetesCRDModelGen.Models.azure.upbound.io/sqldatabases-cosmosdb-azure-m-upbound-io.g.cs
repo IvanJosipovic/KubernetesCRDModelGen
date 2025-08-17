@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cosmosdb.azure.m.upbound.io;
+#nullable enable
 /// <summary>SQLDatabase is the Schema for the SQLDatabases API. Manages a SQL Database within a Cosmos DB Account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SQLDatabaseList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1SQLDatabase> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDatabaseSpecForProviderAccountNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SQLDatabaseSpecForProviderAccountNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in cosmosdb to populate accountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDatabaseSpecForProviderAccountNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1SQLDatabaseSpecForProviderAccountNameRef
     [JsonPropertyName("policy")]
     public V1beta1SQLDatabaseSpecForProviderAccountNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDatabaseSpecForProviderAccountNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1SQLDatabaseSpecForProviderAccountNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in cosmosdb to populate accountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDatabaseSpecForProviderAccountNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1SQLDatabaseSpecForProviderAccountNameSelector
     [JsonPropertyName("policy")]
     public V1beta1SQLDatabaseSpecForProviderAccountNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An autoscale_settings block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDatabaseSpecForProviderAutoscaleSettings
@@ -106,7 +117,9 @@ public partial class V1beta1SQLDatabaseSpecForProviderAutoscaleSettings
     [JsonPropertyName("maxThroughput")]
     public double? MaxThroughput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDatabaseSpecForProviderResourceGroupNameRefPolicy
@@ -119,7 +132,9 @@ public partial class V1beta1SQLDatabaseSpecForProviderResourceGroupNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDatabaseSpecForProviderResourceGroupNameRef
@@ -136,7 +151,9 @@ public partial class V1beta1SQLDatabaseSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1SQLDatabaseSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDatabaseSpecForProviderResourceGroupNameSelectorPolicy
@@ -149,7 +166,9 @@ public partial class V1beta1SQLDatabaseSpecForProviderResourceGroupNameSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDatabaseSpecForProviderResourceGroupNameSelector
@@ -170,7 +189,9 @@ public partial class V1beta1SQLDatabaseSpecForProviderResourceGroupNameSelector
     [JsonPropertyName("policy")]
     public V1beta1SQLDatabaseSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDatabaseSpecForProvider
@@ -207,7 +228,9 @@ public partial class V1beta1SQLDatabaseSpecForProvider
     [JsonPropertyName("throughput")]
     public double? Throughput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An autoscale_settings block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDatabaseSpecInitProviderAutoscaleSettings
@@ -216,7 +239,9 @@ public partial class V1beta1SQLDatabaseSpecInitProviderAutoscaleSettings
     [JsonPropertyName("maxThroughput")]
     public double? MaxThroughput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDatabaseSpecInitProvider
@@ -229,7 +254,9 @@ public partial class V1beta1SQLDatabaseSpecInitProvider
     [JsonPropertyName("throughput")]
     public double? Throughput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDatabaseSpecProviderConfigRef
@@ -242,7 +269,9 @@ public partial class V1beta1SQLDatabaseSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDatabaseSpecWriteConnectionSecretToRef
@@ -251,7 +280,9 @@ public partial class V1beta1SQLDatabaseSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SQLDatabaseSpec defines the desired state of SQLDatabase</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDatabaseSpec
@@ -276,7 +307,9 @@ public partial class V1beta1SQLDatabaseSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SQLDatabaseSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An autoscale_settings block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDatabaseStatusAtProviderAutoscaleSettings
@@ -285,7 +318,9 @@ public partial class V1beta1SQLDatabaseStatusAtProviderAutoscaleSettings
     [JsonPropertyName("maxThroughput")]
     public double? MaxThroughput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDatabaseStatusAtProvider
@@ -310,7 +345,9 @@ public partial class V1beta1SQLDatabaseStatusAtProvider
     [JsonPropertyName("throughput")]
     public double? Throughput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDatabaseStatusConditions
@@ -339,7 +376,9 @@ public partial class V1beta1SQLDatabaseStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SQLDatabaseStatus defines the observed state of SQLDatabase.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDatabaseStatus
@@ -356,7 +395,9 @@ public partial class V1beta1SQLDatabaseStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SQLDatabase is the Schema for the SQLDatabases API. Manages a SQL Database within a Cosmos DB Account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -386,3 +427,4 @@ public partial class V1beta1SQLDatabase : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1SQLDatabaseStatus? Status { get; set; }
 }
+#nullable disable

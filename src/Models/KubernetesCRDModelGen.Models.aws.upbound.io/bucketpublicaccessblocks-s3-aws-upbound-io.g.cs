@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.s3.aws.upbound.io;
+#nullable enable
 /// <summary>BucketPublicAccessBlock is the Schema for the BucketPublicAccessBlocks API. Manages S3 bucket-level Public Access Block Configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BucketPublicAccessBlockList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1BucketPublicAccessBlock> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketPublicAccessBlockSpecForProviderBucketRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1BucketPublicAccessBlockSpecForProviderBucketRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketPublicAccessBlockSpecForProviderBucketRef
@@ -59,7 +64,9 @@ public partial class V1beta1BucketPublicAccessBlockSpecForProviderBucketRef
     [JsonPropertyName("policy")]
     public V1beta1BucketPublicAccessBlockSpecForProviderBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketPublicAccessBlockSpecForProviderBucketSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1BucketPublicAccessBlockSpecForProviderBucketSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketPublicAccessBlockSpecForProviderBucketSelector
@@ -89,7 +98,9 @@ public partial class V1beta1BucketPublicAccessBlockSpecForProviderBucketSelector
     [JsonPropertyName("policy")]
     public V1beta1BucketPublicAccessBlockSpecForProviderBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketPublicAccessBlockSpecForProvider
@@ -126,7 +137,9 @@ public partial class V1beta1BucketPublicAccessBlockSpecForProvider
     [JsonPropertyName("restrictPublicBuckets")]
     public bool? RestrictPublicBuckets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketPublicAccessBlockSpecInitProviderBucketRefPolicy
@@ -139,7 +152,9 @@ public partial class V1beta1BucketPublicAccessBlockSpecInitProviderBucketRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketPublicAccessBlockSpecInitProviderBucketRef
@@ -152,7 +167,9 @@ public partial class V1beta1BucketPublicAccessBlockSpecInitProviderBucketRef
     [JsonPropertyName("policy")]
     public V1beta1BucketPublicAccessBlockSpecInitProviderBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketPublicAccessBlockSpecInitProviderBucketSelectorPolicy
@@ -165,7 +182,9 @@ public partial class V1beta1BucketPublicAccessBlockSpecInitProviderBucketSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketPublicAccessBlockSpecInitProviderBucketSelector
@@ -182,7 +201,9 @@ public partial class V1beta1BucketPublicAccessBlockSpecInitProviderBucketSelecto
     [JsonPropertyName("policy")]
     public V1beta1BucketPublicAccessBlockSpecInitProviderBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketPublicAccessBlockSpecInitProvider
@@ -215,7 +236,9 @@ public partial class V1beta1BucketPublicAccessBlockSpecInitProvider
     [JsonPropertyName("restrictPublicBuckets")]
     public bool? RestrictPublicBuckets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketPublicAccessBlockSpecProviderConfigRefPolicy
@@ -228,7 +251,9 @@ public partial class V1beta1BucketPublicAccessBlockSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketPublicAccessBlockSpecProviderConfigRef
@@ -241,7 +266,9 @@ public partial class V1beta1BucketPublicAccessBlockSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1BucketPublicAccessBlockSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketPublicAccessBlockSpecWriteConnectionSecretToRef
@@ -254,7 +281,9 @@ public partial class V1beta1BucketPublicAccessBlockSpecWriteConnectionSecretToRe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BucketPublicAccessBlockSpec defines the desired state of BucketPublicAccessBlock</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketPublicAccessBlockSpec
@@ -283,7 +312,9 @@ public partial class V1beta1BucketPublicAccessBlockSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BucketPublicAccessBlockSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketPublicAccessBlockStatusAtProvider
@@ -316,7 +347,9 @@ public partial class V1beta1BucketPublicAccessBlockStatusAtProvider
     [JsonPropertyName("restrictPublicBuckets")]
     public bool? RestrictPublicBuckets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketPublicAccessBlockStatusConditions
@@ -345,7 +378,9 @@ public partial class V1beta1BucketPublicAccessBlockStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BucketPublicAccessBlockStatus defines the observed state of BucketPublicAccessBlock.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketPublicAccessBlockStatus
@@ -362,7 +397,9 @@ public partial class V1beta1BucketPublicAccessBlockStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BucketPublicAccessBlock is the Schema for the BucketPublicAccessBlocks API. Manages S3 bucket-level Public Access Block Configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -392,3 +429,4 @@ public partial class V1beta1BucketPublicAccessBlock : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1BucketPublicAccessBlockStatus? Status { get; set; }
 }
+#nullable disable

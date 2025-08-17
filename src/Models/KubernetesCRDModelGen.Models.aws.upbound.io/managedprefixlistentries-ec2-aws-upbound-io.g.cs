@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+#nullable enable
 /// <summary>ManagedPrefixListEntry is the Schema for the ManagedPrefixListEntrys API. Use the</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ManagedPrefixListEntryList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1ManagedPrefixListEntry> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedPrefixListEntrySpecForProviderCidrRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ManagedPrefixListEntrySpecForProviderCidrRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate cidr.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedPrefixListEntrySpecForProviderCidrRef
@@ -59,7 +64,9 @@ public partial class V1beta1ManagedPrefixListEntrySpecForProviderCidrRef
     [JsonPropertyName("policy")]
     public V1beta1ManagedPrefixListEntrySpecForProviderCidrRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedPrefixListEntrySpecForProviderCidrSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1ManagedPrefixListEntrySpecForProviderCidrSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate cidr.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedPrefixListEntrySpecForProviderCidrSelector
@@ -89,7 +98,9 @@ public partial class V1beta1ManagedPrefixListEntrySpecForProviderCidrSelector
     [JsonPropertyName("policy")]
     public V1beta1ManagedPrefixListEntrySpecForProviderCidrSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedPrefixListEntrySpecForProviderPrefixListIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1ManagedPrefixListEntrySpecForProviderPrefixListIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ManagedPrefixList in ec2 to populate prefixListId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedPrefixListEntrySpecForProviderPrefixListIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1ManagedPrefixListEntrySpecForProviderPrefixListIdRef
     [JsonPropertyName("policy")]
     public V1beta1ManagedPrefixListEntrySpecForProviderPrefixListIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedPrefixListEntrySpecForProviderPrefixListIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1ManagedPrefixListEntrySpecForProviderPrefixListIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ManagedPrefixList in ec2 to populate prefixListId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedPrefixListEntrySpecForProviderPrefixListIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1ManagedPrefixListEntrySpecForProviderPrefixListIdSel
     [JsonPropertyName("policy")]
     public V1beta1ManagedPrefixListEntrySpecForProviderPrefixListIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedPrefixListEntrySpecForProvider
@@ -182,7 +201,9 @@ public partial class V1beta1ManagedPrefixListEntrySpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedPrefixListEntrySpecInitProviderCidrRefPolicy
@@ -195,7 +216,9 @@ public partial class V1beta1ManagedPrefixListEntrySpecInitProviderCidrRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate cidr.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedPrefixListEntrySpecInitProviderCidrRef
@@ -208,7 +231,9 @@ public partial class V1beta1ManagedPrefixListEntrySpecInitProviderCidrRef
     [JsonPropertyName("policy")]
     public V1beta1ManagedPrefixListEntrySpecInitProviderCidrRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedPrefixListEntrySpecInitProviderCidrSelectorPolicy
@@ -221,7 +246,9 @@ public partial class V1beta1ManagedPrefixListEntrySpecInitProviderCidrSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate cidr.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedPrefixListEntrySpecInitProviderCidrSelector
@@ -238,7 +265,9 @@ public partial class V1beta1ManagedPrefixListEntrySpecInitProviderCidrSelector
     [JsonPropertyName("policy")]
     public V1beta1ManagedPrefixListEntrySpecInitProviderCidrSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdRefPolicy
@@ -251,7 +280,9 @@ public partial class V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ManagedPrefixList in ec2 to populate prefixListId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdRef
@@ -264,7 +295,9 @@ public partial class V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdRe
     [JsonPropertyName("policy")]
     public V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdSelectorPolicy
@@ -277,7 +310,9 @@ public partial class V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ManagedPrefixList in ec2 to populate prefixListId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdSelector
@@ -294,7 +329,9 @@ public partial class V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdSe
     [JsonPropertyName("policy")]
     public V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedPrefixListEntrySpecInitProvider
@@ -327,7 +364,9 @@ public partial class V1beta1ManagedPrefixListEntrySpecInitProvider
     [JsonPropertyName("prefixListIdSelector")]
     public V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdSelector? PrefixListIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedPrefixListEntrySpecProviderConfigRefPolicy
@@ -340,7 +379,9 @@ public partial class V1beta1ManagedPrefixListEntrySpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedPrefixListEntrySpecProviderConfigRef
@@ -353,7 +394,9 @@ public partial class V1beta1ManagedPrefixListEntrySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ManagedPrefixListEntrySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedPrefixListEntrySpecWriteConnectionSecretToRef
@@ -366,7 +409,9 @@ public partial class V1beta1ManagedPrefixListEntrySpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedPrefixListEntrySpec defines the desired state of ManagedPrefixListEntry</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedPrefixListEntrySpec
@@ -395,7 +440,9 @@ public partial class V1beta1ManagedPrefixListEntrySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ManagedPrefixListEntrySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedPrefixListEntryStatusAtProvider
@@ -420,7 +467,9 @@ public partial class V1beta1ManagedPrefixListEntryStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedPrefixListEntryStatusConditions
@@ -449,7 +498,9 @@ public partial class V1beta1ManagedPrefixListEntryStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedPrefixListEntryStatus defines the observed state of ManagedPrefixListEntry.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedPrefixListEntryStatus
@@ -466,7 +517,9 @@ public partial class V1beta1ManagedPrefixListEntryStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedPrefixListEntry is the Schema for the ManagedPrefixListEntrys API. Use the</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -496,3 +549,4 @@ public partial class V1beta1ManagedPrefixListEntry : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1ManagedPrefixListEntryStatus? Status { get; set; }
 }
+#nullable disable

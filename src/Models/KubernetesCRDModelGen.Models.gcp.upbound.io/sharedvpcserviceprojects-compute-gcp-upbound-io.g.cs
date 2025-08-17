@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+#nullable enable
 /// <summary>SharedVPCServiceProject is the Schema for the SharedVPCServiceProjects API. Enables the Google Compute Engine Shared VPC feature for a project, assigning it as a service project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SharedVPCServiceProjectList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1SharedVPCServiceProject> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedVPCServiceProjectSpecForProviderHostProjectRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SharedVPCServiceProjectSpecForProviderHostProjectRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Project in cloudplatform to populate hostProject.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedVPCServiceProjectSpecForProviderHostProjectRef
@@ -59,7 +64,9 @@ public partial class V1beta1SharedVPCServiceProjectSpecForProviderHostProjectRef
     [JsonPropertyName("policy")]
     public V1beta1SharedVPCServiceProjectSpecForProviderHostProjectRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedVPCServiceProjectSpecForProviderHostProjectSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1SharedVPCServiceProjectSpecForProviderHostProjectSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Project in cloudplatform to populate hostProject.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedVPCServiceProjectSpecForProviderHostProjectSelector
@@ -89,7 +98,9 @@ public partial class V1beta1SharedVPCServiceProjectSpecForProviderHostProjectSel
     [JsonPropertyName("policy")]
     public V1beta1SharedVPCServiceProjectSpecForProviderHostProjectSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedVPCServiceProjectSpecForProviderServiceProjectRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1SharedVPCServiceProjectSpecForProviderServiceProject
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Project in cloudplatform to populate serviceProject.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedVPCServiceProjectSpecForProviderServiceProjectRef
@@ -115,7 +128,9 @@ public partial class V1beta1SharedVPCServiceProjectSpecForProviderServiceProject
     [JsonPropertyName("policy")]
     public V1beta1SharedVPCServiceProjectSpecForProviderServiceProjectRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedVPCServiceProjectSpecForProviderServiceProjectSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1SharedVPCServiceProjectSpecForProviderServiceProject
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Project in cloudplatform to populate serviceProject.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedVPCServiceProjectSpecForProviderServiceProjectSelector
@@ -145,7 +162,9 @@ public partial class V1beta1SharedVPCServiceProjectSpecForProviderServiceProject
     [JsonPropertyName("policy")]
     public V1beta1SharedVPCServiceProjectSpecForProviderServiceProjectSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedVPCServiceProjectSpecForProvider
@@ -178,7 +197,9 @@ public partial class V1beta1SharedVPCServiceProjectSpecForProvider
     [JsonPropertyName("serviceProjectSelector")]
     public V1beta1SharedVPCServiceProjectSpecForProviderServiceProjectSelector? ServiceProjectSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedVPCServiceProjectSpecInitProviderHostProjectRefPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1SharedVPCServiceProjectSpecInitProviderHostProjectRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Project in cloudplatform to populate hostProject.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedVPCServiceProjectSpecInitProviderHostProjectRef
@@ -204,7 +227,9 @@ public partial class V1beta1SharedVPCServiceProjectSpecInitProviderHostProjectRe
     [JsonPropertyName("policy")]
     public V1beta1SharedVPCServiceProjectSpecInitProviderHostProjectRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedVPCServiceProjectSpecInitProviderHostProjectSelectorPolicy
@@ -217,7 +242,9 @@ public partial class V1beta1SharedVPCServiceProjectSpecInitProviderHostProjectSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Project in cloudplatform to populate hostProject.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedVPCServiceProjectSpecInitProviderHostProjectSelector
@@ -234,7 +261,9 @@ public partial class V1beta1SharedVPCServiceProjectSpecInitProviderHostProjectSe
     [JsonPropertyName("policy")]
     public V1beta1SharedVPCServiceProjectSpecInitProviderHostProjectSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedVPCServiceProjectSpecInitProviderServiceProjectRefPolicy
@@ -247,7 +276,9 @@ public partial class V1beta1SharedVPCServiceProjectSpecInitProviderServiceProjec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Project in cloudplatform to populate serviceProject.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedVPCServiceProjectSpecInitProviderServiceProjectRef
@@ -260,7 +291,9 @@ public partial class V1beta1SharedVPCServiceProjectSpecInitProviderServiceProjec
     [JsonPropertyName("policy")]
     public V1beta1SharedVPCServiceProjectSpecInitProviderServiceProjectRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedVPCServiceProjectSpecInitProviderServiceProjectSelectorPolicy
@@ -273,7 +306,9 @@ public partial class V1beta1SharedVPCServiceProjectSpecInitProviderServiceProjec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Project in cloudplatform to populate serviceProject.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedVPCServiceProjectSpecInitProviderServiceProjectSelector
@@ -290,7 +325,9 @@ public partial class V1beta1SharedVPCServiceProjectSpecInitProviderServiceProjec
     [JsonPropertyName("policy")]
     public V1beta1SharedVPCServiceProjectSpecInitProviderServiceProjectSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedVPCServiceProjectSpecInitProvider
@@ -323,7 +360,9 @@ public partial class V1beta1SharedVPCServiceProjectSpecInitProvider
     [JsonPropertyName("serviceProjectSelector")]
     public V1beta1SharedVPCServiceProjectSpecInitProviderServiceProjectSelector? ServiceProjectSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedVPCServiceProjectSpecProviderConfigRefPolicy
@@ -336,7 +375,9 @@ public partial class V1beta1SharedVPCServiceProjectSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedVPCServiceProjectSpecProviderConfigRef
@@ -349,7 +390,9 @@ public partial class V1beta1SharedVPCServiceProjectSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1SharedVPCServiceProjectSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedVPCServiceProjectSpecWriteConnectionSecretToRef
@@ -362,7 +405,9 @@ public partial class V1beta1SharedVPCServiceProjectSpecWriteConnectionSecretToRe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SharedVPCServiceProjectSpec defines the desired state of SharedVPCServiceProject</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedVPCServiceProjectSpec
@@ -391,7 +436,9 @@ public partial class V1beta1SharedVPCServiceProjectSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SharedVPCServiceProjectSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedVPCServiceProjectStatusAtProvider
@@ -412,7 +459,9 @@ public partial class V1beta1SharedVPCServiceProjectStatusAtProvider
     [JsonPropertyName("serviceProject")]
     public string? ServiceProject { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedVPCServiceProjectStatusConditions
@@ -441,7 +490,9 @@ public partial class V1beta1SharedVPCServiceProjectStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SharedVPCServiceProjectStatus defines the observed state of SharedVPCServiceProject.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedVPCServiceProjectStatus
@@ -458,7 +509,9 @@ public partial class V1beta1SharedVPCServiceProjectStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SharedVPCServiceProject is the Schema for the SharedVPCServiceProjects API. Enables the Google Compute Engine Shared VPC feature for a project, assigning it as a service project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -488,3 +541,4 @@ public partial class V1beta1SharedVPCServiceProject : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1SharedVPCServiceProjectStatus? Status { get; set; }
 }
+#nullable disable

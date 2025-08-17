@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.logic.azure.upbound.io;
+#nullable enable
 /// <summary>AppWorkflow is the Schema for the AppWorkflows API. Manages a Logic App Workflow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AppWorkflowList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1AppWorkflow> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecForProviderAccessControlAction
@@ -42,7 +45,9 @@ public partial class V1beta1AppWorkflowSpecForProviderAccessControlAction
     [JsonPropertyName("allowedCallerIpAddressRange")]
     public IList<string>? AllowedCallerIpAddressRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecForProviderAccessControlContent
@@ -51,7 +56,9 @@ public partial class V1beta1AppWorkflowSpecForProviderAccessControlContent
     [JsonPropertyName("allowedCallerIpAddressRange")]
     public IList<string>? AllowedCallerIpAddressRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecForProviderAccessControlTriggerOpenAuthenticationPolicyClaim
@@ -64,7 +71,9 @@ public partial class V1beta1AppWorkflowSpecForProviderAccessControlTriggerOpenAu
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecForProviderAccessControlTriggerOpenAuthenticationPolicy
@@ -77,7 +86,9 @@ public partial class V1beta1AppWorkflowSpecForProviderAccessControlTriggerOpenAu
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecForProviderAccessControlTrigger
@@ -90,7 +101,9 @@ public partial class V1beta1AppWorkflowSpecForProviderAccessControlTrigger
     [JsonPropertyName("openAuthenticationPolicy")]
     public IList<V1beta1AppWorkflowSpecForProviderAccessControlTriggerOpenAuthenticationPolicy>? OpenAuthenticationPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecForProviderAccessControlWorkflowManagement
@@ -99,7 +112,9 @@ public partial class V1beta1AppWorkflowSpecForProviderAccessControlWorkflowManag
     [JsonPropertyName("allowedCallerIpAddressRange")]
     public IList<string>? AllowedCallerIpAddressRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecForProviderAccessControl
@@ -120,7 +135,9 @@ public partial class V1beta1AppWorkflowSpecForProviderAccessControl
     [JsonPropertyName("workflowManagement")]
     public IList<V1beta1AppWorkflowSpecForProviderAccessControlWorkflowManagement>? WorkflowManagement { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecForProviderIdentity
@@ -133,7 +150,9 @@ public partial class V1beta1AppWorkflowSpecForProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecForProviderResourceGroupNameRefPolicy
@@ -146,7 +165,9 @@ public partial class V1beta1AppWorkflowSpecForProviderResourceGroupNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecForProviderResourceGroupNameRef
@@ -159,7 +180,9 @@ public partial class V1beta1AppWorkflowSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1AppWorkflowSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecForProviderResourceGroupNameSelectorPolicy
@@ -172,7 +195,9 @@ public partial class V1beta1AppWorkflowSpecForProviderResourceGroupNameSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecForProviderResourceGroupNameSelector
@@ -189,7 +214,9 @@ public partial class V1beta1AppWorkflowSpecForProviderResourceGroupNameSelector
     [JsonPropertyName("policy")]
     public V1beta1AppWorkflowSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecForProvider
@@ -250,7 +277,9 @@ public partial class V1beta1AppWorkflowSpecForProvider
     [JsonPropertyName("workflowVersion")]
     public string? WorkflowVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecInitProviderAccessControlAction
@@ -259,7 +288,9 @@ public partial class V1beta1AppWorkflowSpecInitProviderAccessControlAction
     [JsonPropertyName("allowedCallerIpAddressRange")]
     public IList<string>? AllowedCallerIpAddressRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecInitProviderAccessControlContent
@@ -268,7 +299,9 @@ public partial class V1beta1AppWorkflowSpecInitProviderAccessControlContent
     [JsonPropertyName("allowedCallerIpAddressRange")]
     public IList<string>? AllowedCallerIpAddressRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecInitProviderAccessControlTriggerOpenAuthenticationPolicyClaim
@@ -281,7 +314,9 @@ public partial class V1beta1AppWorkflowSpecInitProviderAccessControlTriggerOpenA
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecInitProviderAccessControlTriggerOpenAuthenticationPolicy
@@ -294,7 +329,9 @@ public partial class V1beta1AppWorkflowSpecInitProviderAccessControlTriggerOpenA
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecInitProviderAccessControlTrigger
@@ -307,7 +344,9 @@ public partial class V1beta1AppWorkflowSpecInitProviderAccessControlTrigger
     [JsonPropertyName("openAuthenticationPolicy")]
     public IList<V1beta1AppWorkflowSpecInitProviderAccessControlTriggerOpenAuthenticationPolicy>? OpenAuthenticationPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecInitProviderAccessControlWorkflowManagement
@@ -316,7 +355,9 @@ public partial class V1beta1AppWorkflowSpecInitProviderAccessControlWorkflowMana
     [JsonPropertyName("allowedCallerIpAddressRange")]
     public IList<string>? AllowedCallerIpAddressRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecInitProviderAccessControl
@@ -337,7 +378,9 @@ public partial class V1beta1AppWorkflowSpecInitProviderAccessControl
     [JsonPropertyName("workflowManagement")]
     public IList<V1beta1AppWorkflowSpecInitProviderAccessControlWorkflowManagement>? WorkflowManagement { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecInitProviderIdentity
@@ -350,7 +393,9 @@ public partial class V1beta1AppWorkflowSpecInitProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecInitProvider
@@ -399,7 +444,9 @@ public partial class V1beta1AppWorkflowSpecInitProvider
     [JsonPropertyName("workflowVersion")]
     public string? WorkflowVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecProviderConfigRefPolicy
@@ -412,7 +459,9 @@ public partial class V1beta1AppWorkflowSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecProviderConfigRef
@@ -425,7 +474,9 @@ public partial class V1beta1AppWorkflowSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1AppWorkflowSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpecWriteConnectionSecretToRef
@@ -438,7 +489,9 @@ public partial class V1beta1AppWorkflowSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppWorkflowSpec defines the desired state of AppWorkflow</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowSpec
@@ -467,7 +520,9 @@ public partial class V1beta1AppWorkflowSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AppWorkflowSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowStatusAtProviderAccessControlAction
@@ -476,7 +531,9 @@ public partial class V1beta1AppWorkflowStatusAtProviderAccessControlAction
     [JsonPropertyName("allowedCallerIpAddressRange")]
     public IList<string>? AllowedCallerIpAddressRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowStatusAtProviderAccessControlContent
@@ -485,7 +542,9 @@ public partial class V1beta1AppWorkflowStatusAtProviderAccessControlContent
     [JsonPropertyName("allowedCallerIpAddressRange")]
     public IList<string>? AllowedCallerIpAddressRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowStatusAtProviderAccessControlTriggerOpenAuthenticationPolicyClaim
@@ -498,7 +557,9 @@ public partial class V1beta1AppWorkflowStatusAtProviderAccessControlTriggerOpenA
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowStatusAtProviderAccessControlTriggerOpenAuthenticationPolicy
@@ -511,7 +572,9 @@ public partial class V1beta1AppWorkflowStatusAtProviderAccessControlTriggerOpenA
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowStatusAtProviderAccessControlTrigger
@@ -524,7 +587,9 @@ public partial class V1beta1AppWorkflowStatusAtProviderAccessControlTrigger
     [JsonPropertyName("openAuthenticationPolicy")]
     public IList<V1beta1AppWorkflowStatusAtProviderAccessControlTriggerOpenAuthenticationPolicy>? OpenAuthenticationPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowStatusAtProviderAccessControlWorkflowManagement
@@ -533,7 +598,9 @@ public partial class V1beta1AppWorkflowStatusAtProviderAccessControlWorkflowMana
     [JsonPropertyName("allowedCallerIpAddressRange")]
     public IList<string>? AllowedCallerIpAddressRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowStatusAtProviderAccessControl
@@ -554,7 +621,9 @@ public partial class V1beta1AppWorkflowStatusAtProviderAccessControl
     [JsonPropertyName("workflowManagement")]
     public IList<V1beta1AppWorkflowStatusAtProviderAccessControlWorkflowManagement>? WorkflowManagement { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowStatusAtProviderIdentity
@@ -575,7 +644,9 @@ public partial class V1beta1AppWorkflowStatusAtProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowStatusAtProvider
@@ -652,7 +723,9 @@ public partial class V1beta1AppWorkflowStatusAtProvider
     [JsonPropertyName("workflowVersion")]
     public string? WorkflowVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowStatusConditions
@@ -681,7 +754,9 @@ public partial class V1beta1AppWorkflowStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppWorkflowStatus defines the observed state of AppWorkflow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppWorkflowStatus
@@ -698,7 +773,9 @@ public partial class V1beta1AppWorkflowStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppWorkflow is the Schema for the AppWorkflows API. Manages a Logic App Workflow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -728,3 +805,4 @@ public partial class V1beta1AppWorkflow : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1AppWorkflowStatus? Status { get; set; }
 }
+#nullable disable

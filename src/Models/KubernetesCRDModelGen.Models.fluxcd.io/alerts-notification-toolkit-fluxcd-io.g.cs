@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.notification.toolkit.fluxcd.io;
+#nullable enable
 /// <summary>Alert is the Schema for the alerts API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta3AlertList : IKubernetesObject<V1ListMeta>, IItems<V1
     [JsonPropertyName("items")]
     public IList<V1beta3Alert> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CrossNamespaceObjectReference contains enough information to let you locate the typed referenced object at cluster level</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta3AlertSpecEventSources
@@ -58,7 +61,9 @@ public partial class V1beta3AlertSpecEventSources
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderRef specifies which Provider this Alert should use.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta3AlertSpecProviderRef
@@ -67,7 +72,9 @@ public partial class V1beta3AlertSpecProviderRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AlertSpec defines an alerting rule for events involving a list of objects.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta3AlertSpec
@@ -104,7 +111,9 @@ public partial class V1beta3AlertSpec
     [JsonPropertyName("suspend")]
     public bool? Suspend { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Alert is the Schema for the alerts API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -130,3 +139,4 @@ public partial class V1beta3Alert : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     [JsonPropertyName("spec")]
     public V1beta3AlertSpec? Spec { get; set; }
 }
+#nullable disable

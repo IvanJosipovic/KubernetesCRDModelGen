@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1ComputeBackendServiceSignedURLKeyList : IKubernetes
     [JsonPropertyName("items")]
     public IList<V1alpha1ComputeBackendServiceSignedURLKey> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeBackendServiceSignedURLKeySpecBackendServiceRef
@@ -50,7 +53,9 @@ public partial class V1alpha1ComputeBackendServiceSignedURLKeySpecBackendService
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeBackendServiceSignedURLKeySpecKeyValueValueFromSecretKeyRef
@@ -63,7 +68,9 @@ public partial class V1alpha1ComputeBackendServiceSignedURLKeySpecKeyValueValueF
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeBackendServiceSignedURLKeySpecKeyValueValueFrom
@@ -72,7 +79,9 @@ public partial class V1alpha1ComputeBackendServiceSignedURLKeySpecKeyValueValueF
     [JsonPropertyName("secretKeyRef")]
     public V1alpha1ComputeBackendServiceSignedURLKeySpecKeyValueValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. 128-bit key value used for signing the URL. The key value must be a valid RFC 4648 Section 5 base64url encoded string.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeBackendServiceSignedURLKeySpecKeyValue
@@ -85,7 +94,9 @@ public partial class V1alpha1ComputeBackendServiceSignedURLKeySpecKeyValue
     [JsonPropertyName("valueFrom")]
     public V1alpha1ComputeBackendServiceSignedURLKeySpecKeyValueValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeBackendServiceSignedURLKeySpecProjectRef
@@ -102,7 +113,9 @@ public partial class V1alpha1ComputeBackendServiceSignedURLKeySpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeBackendServiceSignedURLKeySpec
@@ -123,7 +136,9 @@ public partial class V1alpha1ComputeBackendServiceSignedURLKeySpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeBackendServiceSignedURLKeyStatusConditions
@@ -148,7 +163,9 @@ public partial class V1alpha1ComputeBackendServiceSignedURLKeyStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeBackendServiceSignedURLKeyStatus
@@ -161,7 +178,9 @@ public partial class V1alpha1ComputeBackendServiceSignedURLKeyStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -191,3 +210,4 @@ public partial class V1alpha1ComputeBackendServiceSignedURLKey : IKubernetesObje
     [JsonPropertyName("status")]
     public V1alpha1ComputeBackendServiceSignedURLKeyStatus? Status { get; set; }
 }
+#nullable disable

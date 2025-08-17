@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudtrail.aws.m.upbound.io;
+#nullable enable
 /// <summary>Trail is the Schema for the Trails API. Provides a CloudTrail resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TrailList : IKubernetesObject<V1ListMeta>, IItems<V1
     [JsonPropertyName("items")]
     public IList<V1beta1Trail> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecForProviderAdvancedEventSelectorFieldSelector
@@ -66,7 +69,9 @@ public partial class V1beta1TrailSpecForProviderAdvancedEventSelectorFieldSelect
     [JsonPropertyName("startsWith")]
     public IList<string>? StartsWith { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecForProviderAdvancedEventSelector
@@ -79,7 +84,9 @@ public partial class V1beta1TrailSpecForProviderAdvancedEventSelector
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecForProviderCloudWatchLogsRoleArnRefPolicy
@@ -92,7 +99,9 @@ public partial class V1beta1TrailSpecForProviderCloudWatchLogsRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate cloudWatchLogsRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecForProviderCloudWatchLogsRoleArnRef
@@ -109,7 +118,9 @@ public partial class V1beta1TrailSpecForProviderCloudWatchLogsRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1TrailSpecForProviderCloudWatchLogsRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecForProviderCloudWatchLogsRoleArnSelectorPolicy
@@ -122,7 +133,9 @@ public partial class V1beta1TrailSpecForProviderCloudWatchLogsRoleArnSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate cloudWatchLogsRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecForProviderCloudWatchLogsRoleArnSelector
@@ -143,7 +156,9 @@ public partial class V1beta1TrailSpecForProviderCloudWatchLogsRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1TrailSpecForProviderCloudWatchLogsRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecForProviderEventSelectorDataResource
@@ -156,7 +171,9 @@ public partial class V1beta1TrailSpecForProviderEventSelectorDataResource
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecForProviderEventSelector
@@ -177,7 +194,9 @@ public partial class V1beta1TrailSpecForProviderEventSelector
     [JsonPropertyName("readWriteType")]
     public string? ReadWriteType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecForProviderInsightSelector
@@ -186,7 +205,9 @@ public partial class V1beta1TrailSpecForProviderInsightSelector
     [JsonPropertyName("insightType")]
     public string? InsightType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecForProviderKmsKeyIdRefPolicy
@@ -199,7 +220,9 @@ public partial class V1beta1TrailSpecForProviderKmsKeyIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecForProviderKmsKeyIdRef
@@ -216,7 +239,9 @@ public partial class V1beta1TrailSpecForProviderKmsKeyIdRef
     [JsonPropertyName("policy")]
     public V1beta1TrailSpecForProviderKmsKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecForProviderKmsKeyIdSelectorPolicy
@@ -229,7 +254,9 @@ public partial class V1beta1TrailSpecForProviderKmsKeyIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecForProviderKmsKeyIdSelector
@@ -250,7 +277,9 @@ public partial class V1beta1TrailSpecForProviderKmsKeyIdSelector
     [JsonPropertyName("policy")]
     public V1beta1TrailSpecForProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecForProviderS3BucketNameRefPolicy
@@ -263,7 +292,9 @@ public partial class V1beta1TrailSpecForProviderS3BucketNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate s3BucketName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecForProviderS3BucketNameRef
@@ -280,7 +311,9 @@ public partial class V1beta1TrailSpecForProviderS3BucketNameRef
     [JsonPropertyName("policy")]
     public V1beta1TrailSpecForProviderS3BucketNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecForProviderS3BucketNameSelectorPolicy
@@ -293,7 +326,9 @@ public partial class V1beta1TrailSpecForProviderS3BucketNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate s3BucketName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecForProviderS3BucketNameSelector
@@ -314,7 +349,9 @@ public partial class V1beta1TrailSpecForProviderS3BucketNameSelector
     [JsonPropertyName("policy")]
     public V1beta1TrailSpecForProviderS3BucketNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecForProvider
@@ -407,7 +444,9 @@ public partial class V1beta1TrailSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecInitProviderAdvancedEventSelectorFieldSelector
@@ -440,7 +479,9 @@ public partial class V1beta1TrailSpecInitProviderAdvancedEventSelectorFieldSelec
     [JsonPropertyName("startsWith")]
     public IList<string>? StartsWith { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecInitProviderAdvancedEventSelector
@@ -453,7 +494,9 @@ public partial class V1beta1TrailSpecInitProviderAdvancedEventSelector
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecInitProviderCloudWatchLogsRoleArnRefPolicy
@@ -466,7 +509,9 @@ public partial class V1beta1TrailSpecInitProviderCloudWatchLogsRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate cloudWatchLogsRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecInitProviderCloudWatchLogsRoleArnRef
@@ -483,7 +528,9 @@ public partial class V1beta1TrailSpecInitProviderCloudWatchLogsRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1TrailSpecInitProviderCloudWatchLogsRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecInitProviderCloudWatchLogsRoleArnSelectorPolicy
@@ -496,7 +543,9 @@ public partial class V1beta1TrailSpecInitProviderCloudWatchLogsRoleArnSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate cloudWatchLogsRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecInitProviderCloudWatchLogsRoleArnSelector
@@ -517,7 +566,9 @@ public partial class V1beta1TrailSpecInitProviderCloudWatchLogsRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1TrailSpecInitProviderCloudWatchLogsRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecInitProviderEventSelectorDataResource
@@ -530,7 +581,9 @@ public partial class V1beta1TrailSpecInitProviderEventSelectorDataResource
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecInitProviderEventSelector
@@ -551,7 +604,9 @@ public partial class V1beta1TrailSpecInitProviderEventSelector
     [JsonPropertyName("readWriteType")]
     public string? ReadWriteType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecInitProviderInsightSelector
@@ -560,7 +615,9 @@ public partial class V1beta1TrailSpecInitProviderInsightSelector
     [JsonPropertyName("insightType")]
     public string? InsightType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecInitProviderKmsKeyIdRefPolicy
@@ -573,7 +630,9 @@ public partial class V1beta1TrailSpecInitProviderKmsKeyIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecInitProviderKmsKeyIdRef
@@ -590,7 +649,9 @@ public partial class V1beta1TrailSpecInitProviderKmsKeyIdRef
     [JsonPropertyName("policy")]
     public V1beta1TrailSpecInitProviderKmsKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecInitProviderKmsKeyIdSelectorPolicy
@@ -603,7 +664,9 @@ public partial class V1beta1TrailSpecInitProviderKmsKeyIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecInitProviderKmsKeyIdSelector
@@ -624,7 +687,9 @@ public partial class V1beta1TrailSpecInitProviderKmsKeyIdSelector
     [JsonPropertyName("policy")]
     public V1beta1TrailSpecInitProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecInitProviderS3BucketNameRefPolicy
@@ -637,7 +702,9 @@ public partial class V1beta1TrailSpecInitProviderS3BucketNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate s3BucketName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecInitProviderS3BucketNameRef
@@ -654,7 +721,9 @@ public partial class V1beta1TrailSpecInitProviderS3BucketNameRef
     [JsonPropertyName("policy")]
     public V1beta1TrailSpecInitProviderS3BucketNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecInitProviderS3BucketNameSelectorPolicy
@@ -667,7 +736,9 @@ public partial class V1beta1TrailSpecInitProviderS3BucketNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate s3BucketName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecInitProviderS3BucketNameSelector
@@ -688,7 +759,9 @@ public partial class V1beta1TrailSpecInitProviderS3BucketNameSelector
     [JsonPropertyName("policy")]
     public V1beta1TrailSpecInitProviderS3BucketNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecInitProvider
@@ -777,7 +850,9 @@ public partial class V1beta1TrailSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecProviderConfigRef
@@ -790,7 +865,9 @@ public partial class V1beta1TrailSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpecWriteConnectionSecretToRef
@@ -799,7 +876,9 @@ public partial class V1beta1TrailSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TrailSpec defines the desired state of Trail</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailSpec
@@ -824,7 +903,9 @@ public partial class V1beta1TrailSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TrailSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailStatusAtProviderAdvancedEventSelectorFieldSelector
@@ -857,7 +938,9 @@ public partial class V1beta1TrailStatusAtProviderAdvancedEventSelectorFieldSelec
     [JsonPropertyName("startsWith")]
     public IList<string>? StartsWith { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailStatusAtProviderAdvancedEventSelector
@@ -870,7 +953,9 @@ public partial class V1beta1TrailStatusAtProviderAdvancedEventSelector
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailStatusAtProviderEventSelectorDataResource
@@ -883,7 +968,9 @@ public partial class V1beta1TrailStatusAtProviderEventSelectorDataResource
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailStatusAtProviderEventSelector
@@ -904,7 +991,9 @@ public partial class V1beta1TrailStatusAtProviderEventSelector
     [JsonPropertyName("readWriteType")]
     public string? ReadWriteType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailStatusAtProviderInsightSelector
@@ -913,7 +1002,9 @@ public partial class V1beta1TrailStatusAtProviderInsightSelector
     [JsonPropertyName("insightType")]
     public string? InsightType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailStatusAtProvider
@@ -1002,7 +1093,9 @@ public partial class V1beta1TrailStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailStatusConditions
@@ -1031,7 +1124,9 @@ public partial class V1beta1TrailStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TrailStatus defines the observed state of Trail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrailStatus
@@ -1048,7 +1143,9 @@ public partial class V1beta1TrailStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Trail is the Schema for the Trails API. Provides a CloudTrail resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1078,3 +1175,4 @@ public partial class V1beta1Trail : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     [JsonPropertyName("status")]
     public V1beta1TrailStatus? Status { get; set; }
 }
+#nullable disable

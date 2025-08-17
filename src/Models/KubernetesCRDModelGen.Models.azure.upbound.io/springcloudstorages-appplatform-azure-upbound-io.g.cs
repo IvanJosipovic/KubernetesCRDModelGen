@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appplatform.azure.upbound.io;
+#nullable enable
 /// <summary>SpringCloudStorage is the Schema for the SpringCloudStorages API. Manages a Spring Cloud Storage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SpringCloudStorageList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1SpringCloudStorage> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudStorageSpecForProviderSpringCloudServiceIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SpringCloudStorageSpecForProviderSpringCloudServiceI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SpringCloudService in appplatform to populate springCloudServiceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudStorageSpecForProviderSpringCloudServiceIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1SpringCloudStorageSpecForProviderSpringCloudServiceI
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudStorageSpecForProviderSpringCloudServiceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudStorageSpecForProviderSpringCloudServiceIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1SpringCloudStorageSpecForProviderSpringCloudServiceI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SpringCloudService in appplatform to populate springCloudServiceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudStorageSpecForProviderSpringCloudServiceIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1SpringCloudStorageSpecForProviderSpringCloudServiceI
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudStorageSpecForProviderSpringCloudServiceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudStorageSpecForProviderStorageAccountKeyRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1SpringCloudStorageSpecForProviderStorageAccountKeyRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudStorageSpecForProviderStorageAccountKeyRef
@@ -115,7 +128,9 @@ public partial class V1beta1SpringCloudStorageSpecForProviderStorageAccountKeyRe
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudStorageSpecForProviderStorageAccountKeyRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudStorageSpecForProviderStorageAccountKeySelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1SpringCloudStorageSpecForProviderStorageAccountKeySe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudStorageSpecForProviderStorageAccountKeySelector
@@ -145,7 +162,9 @@ public partial class V1beta1SpringCloudStorageSpecForProviderStorageAccountKeySe
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudStorageSpecForProviderStorageAccountKeySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudStorageSpecForProviderStorageAccountNameRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1SpringCloudStorageSpecForProviderStorageAccountNameR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudStorageSpecForProviderStorageAccountNameRef
@@ -171,7 +192,9 @@ public partial class V1beta1SpringCloudStorageSpecForProviderStorageAccountNameR
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudStorageSpecForProviderStorageAccountNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudStorageSpecForProviderStorageAccountNameSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1SpringCloudStorageSpecForProviderStorageAccountNameS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudStorageSpecForProviderStorageAccountNameSelector
@@ -201,7 +226,9 @@ public partial class V1beta1SpringCloudStorageSpecForProviderStorageAccountNameS
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudStorageSpecForProviderStorageAccountNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudStorageSpecForProvider
@@ -242,7 +269,9 @@ public partial class V1beta1SpringCloudStorageSpecForProvider
     [JsonPropertyName("storageAccountNameSelector")]
     public V1beta1SpringCloudStorageSpecForProviderStorageAccountNameSelector? StorageAccountNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudStorageSpecInitProviderStorageAccountKeyRefPolicy
@@ -255,7 +284,9 @@ public partial class V1beta1SpringCloudStorageSpecInitProviderStorageAccountKeyR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudStorageSpecInitProviderStorageAccountKeyRef
@@ -268,7 +299,9 @@ public partial class V1beta1SpringCloudStorageSpecInitProviderStorageAccountKeyR
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudStorageSpecInitProviderStorageAccountKeyRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudStorageSpecInitProviderStorageAccountKeySelectorPolicy
@@ -281,7 +314,9 @@ public partial class V1beta1SpringCloudStorageSpecInitProviderStorageAccountKeyS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudStorageSpecInitProviderStorageAccountKeySelector
@@ -298,7 +333,9 @@ public partial class V1beta1SpringCloudStorageSpecInitProviderStorageAccountKeyS
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudStorageSpecInitProviderStorageAccountKeySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudStorageSpecInitProviderStorageAccountNameRefPolicy
@@ -311,7 +348,9 @@ public partial class V1beta1SpringCloudStorageSpecInitProviderStorageAccountName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudStorageSpecInitProviderStorageAccountNameRef
@@ -324,7 +363,9 @@ public partial class V1beta1SpringCloudStorageSpecInitProviderStorageAccountName
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudStorageSpecInitProviderStorageAccountNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudStorageSpecInitProviderStorageAccountNameSelectorPolicy
@@ -337,7 +378,9 @@ public partial class V1beta1SpringCloudStorageSpecInitProviderStorageAccountName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudStorageSpecInitProviderStorageAccountNameSelector
@@ -354,7 +397,9 @@ public partial class V1beta1SpringCloudStorageSpecInitProviderStorageAccountName
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudStorageSpecInitProviderStorageAccountNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudStorageSpecInitProvider
@@ -383,7 +428,9 @@ public partial class V1beta1SpringCloudStorageSpecInitProvider
     [JsonPropertyName("storageAccountNameSelector")]
     public V1beta1SpringCloudStorageSpecInitProviderStorageAccountNameSelector? StorageAccountNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudStorageSpecProviderConfigRefPolicy
@@ -396,7 +443,9 @@ public partial class V1beta1SpringCloudStorageSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudStorageSpecProviderConfigRef
@@ -409,7 +458,9 @@ public partial class V1beta1SpringCloudStorageSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudStorageSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudStorageSpecWriteConnectionSecretToRef
@@ -422,7 +473,9 @@ public partial class V1beta1SpringCloudStorageSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudStorageSpec defines the desired state of SpringCloudStorage</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudStorageSpec
@@ -451,7 +504,9 @@ public partial class V1beta1SpringCloudStorageSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SpringCloudStorageSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudStorageStatusAtProvider
@@ -472,7 +527,9 @@ public partial class V1beta1SpringCloudStorageStatusAtProvider
     [JsonPropertyName("storageAccountName")]
     public string? StorageAccountName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudStorageStatusConditions
@@ -501,7 +558,9 @@ public partial class V1beta1SpringCloudStorageStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudStorageStatus defines the observed state of SpringCloudStorage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudStorageStatus
@@ -518,7 +577,9 @@ public partial class V1beta1SpringCloudStorageStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudStorage is the Schema for the SpringCloudStorages API. Manages a Spring Cloud Storage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -548,3 +609,4 @@ public partial class V1beta1SpringCloudStorage : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1SpringCloudStorageStatus? Status { get; set; }
 }
+#nullable disable

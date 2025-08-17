@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+#nullable enable
 /// <summary>EBSSnapshotImport is the Schema for the EBSSnapshotImports API. Provides an elastic block storage snapshot import resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1EBSSnapshotImportList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1EBSSnapshotImport> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotImportSpecForProviderClientData
@@ -54,7 +57,9 @@ public partial class V1beta1EBSSnapshotImportSpecForProviderClientData
     [JsonPropertyName("uploadStart")]
     public string? UploadStart { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotImportSpecForProviderDiskContainerUserBucket
@@ -67,7 +72,9 @@ public partial class V1beta1EBSSnapshotImportSpecForProviderDiskContainerUserBuc
     [JsonPropertyName("s3Key")]
     public string? S3Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotImportSpecForProviderDiskContainer
@@ -88,7 +95,9 @@ public partial class V1beta1EBSSnapshotImportSpecForProviderDiskContainer
     [JsonPropertyName("userBucket")]
     public IList<V1beta1EBSSnapshotImportSpecForProviderDiskContainerUserBucket>? UserBucket { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotImportSpecForProviderKmsKeyIdRefPolicy
@@ -101,7 +110,9 @@ public partial class V1beta1EBSSnapshotImportSpecForProviderKmsKeyIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotImportSpecForProviderKmsKeyIdRef
@@ -114,7 +125,9 @@ public partial class V1beta1EBSSnapshotImportSpecForProviderKmsKeyIdRef
     [JsonPropertyName("policy")]
     public V1beta1EBSSnapshotImportSpecForProviderKmsKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotImportSpecForProviderKmsKeyIdSelectorPolicy
@@ -127,7 +140,9 @@ public partial class V1beta1EBSSnapshotImportSpecForProviderKmsKeyIdSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotImportSpecForProviderKmsKeyIdSelector
@@ -144,7 +159,9 @@ public partial class V1beta1EBSSnapshotImportSpecForProviderKmsKeyIdSelector
     [JsonPropertyName("policy")]
     public V1beta1EBSSnapshotImportSpecForProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotImportSpecForProvider
@@ -201,7 +218,9 @@ public partial class V1beta1EBSSnapshotImportSpecForProvider
     [JsonPropertyName("temporaryRestoreDays")]
     public double? TemporaryRestoreDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotImportSpecInitProviderClientData
@@ -222,7 +241,9 @@ public partial class V1beta1EBSSnapshotImportSpecInitProviderClientData
     [JsonPropertyName("uploadStart")]
     public string? UploadStart { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotImportSpecInitProviderDiskContainerUserBucket
@@ -235,7 +256,9 @@ public partial class V1beta1EBSSnapshotImportSpecInitProviderDiskContainerUserBu
     [JsonPropertyName("s3Key")]
     public string? S3Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotImportSpecInitProviderDiskContainer
@@ -256,7 +279,9 @@ public partial class V1beta1EBSSnapshotImportSpecInitProviderDiskContainer
     [JsonPropertyName("userBucket")]
     public IList<V1beta1EBSSnapshotImportSpecInitProviderDiskContainerUserBucket>? UserBucket { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotImportSpecInitProviderKmsKeyIdRefPolicy
@@ -269,7 +294,9 @@ public partial class V1beta1EBSSnapshotImportSpecInitProviderKmsKeyIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotImportSpecInitProviderKmsKeyIdRef
@@ -282,7 +309,9 @@ public partial class V1beta1EBSSnapshotImportSpecInitProviderKmsKeyIdRef
     [JsonPropertyName("policy")]
     public V1beta1EBSSnapshotImportSpecInitProviderKmsKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotImportSpecInitProviderKmsKeyIdSelectorPolicy
@@ -295,7 +324,9 @@ public partial class V1beta1EBSSnapshotImportSpecInitProviderKmsKeyIdSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotImportSpecInitProviderKmsKeyIdSelector
@@ -312,7 +343,9 @@ public partial class V1beta1EBSSnapshotImportSpecInitProviderKmsKeyIdSelector
     [JsonPropertyName("policy")]
     public V1beta1EBSSnapshotImportSpecInitProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotImportSpecInitProvider
@@ -365,7 +398,9 @@ public partial class V1beta1EBSSnapshotImportSpecInitProvider
     [JsonPropertyName("temporaryRestoreDays")]
     public double? TemporaryRestoreDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotImportSpecProviderConfigRefPolicy
@@ -378,7 +413,9 @@ public partial class V1beta1EBSSnapshotImportSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotImportSpecProviderConfigRef
@@ -391,7 +428,9 @@ public partial class V1beta1EBSSnapshotImportSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1EBSSnapshotImportSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotImportSpecWriteConnectionSecretToRef
@@ -404,7 +443,9 @@ public partial class V1beta1EBSSnapshotImportSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EBSSnapshotImportSpec defines the desired state of EBSSnapshotImport</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotImportSpec
@@ -433,7 +474,9 @@ public partial class V1beta1EBSSnapshotImportSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1EBSSnapshotImportSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotImportStatusAtProviderClientData
@@ -454,7 +497,9 @@ public partial class V1beta1EBSSnapshotImportStatusAtProviderClientData
     [JsonPropertyName("uploadStart")]
     public string? UploadStart { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotImportStatusAtProviderDiskContainerUserBucket
@@ -467,7 +512,9 @@ public partial class V1beta1EBSSnapshotImportStatusAtProviderDiskContainerUserBu
     [JsonPropertyName("s3Key")]
     public string? S3Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotImportStatusAtProviderDiskContainer
@@ -488,7 +535,9 @@ public partial class V1beta1EBSSnapshotImportStatusAtProviderDiskContainer
     [JsonPropertyName("userBucket")]
     public IList<V1beta1EBSSnapshotImportStatusAtProviderDiskContainerUserBucket>? UserBucket { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotImportStatusAtProvider
@@ -573,7 +622,9 @@ public partial class V1beta1EBSSnapshotImportStatusAtProvider
     [JsonPropertyName("volumeSize")]
     public double? VolumeSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotImportStatusConditions
@@ -602,7 +653,9 @@ public partial class V1beta1EBSSnapshotImportStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EBSSnapshotImportStatus defines the observed state of EBSSnapshotImport.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotImportStatus
@@ -619,7 +672,9 @@ public partial class V1beta1EBSSnapshotImportStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EBSSnapshotImport is the Schema for the EBSSnapshotImports API. Provides an elastic block storage snapshot import resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -649,3 +704,4 @@ public partial class V1beta1EBSSnapshotImport : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1EBSSnapshotImportStatus? Status { get; set; }
 }
+#nullable disable

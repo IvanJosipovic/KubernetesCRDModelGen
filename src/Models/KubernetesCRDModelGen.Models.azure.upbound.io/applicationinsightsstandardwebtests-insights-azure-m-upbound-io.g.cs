@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.m.upbound.io;
+#nullable enable
 /// <summary>ApplicationInsightsStandardWebTest is the Schema for the ApplicationInsightsStandardWebTests API. Manages a Application Insights Standard WebTest.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestList : IKubernetes
     [JsonPropertyName("items")]
     public IList<V1beta1ApplicationInsightsStandardWebTest> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderApplicationInsightsIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderApp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ApplicationInsights in insights to populate applicationInsightsId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderApplicationInsightsIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderApp
     [JsonPropertyName("policy")]
     public V1beta1ApplicationInsightsStandardWebTestSpecForProviderApplicationInsightsIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderApplicationInsightsIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderApp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ApplicationInsights in insights to populate applicationInsightsId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderApplicationInsightsIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderApp
     [JsonPropertyName("policy")]
     public V1beta1ApplicationInsightsStandardWebTestSpecForProviderApplicationInsightsIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderRequestHeader
@@ -110,7 +121,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderReq
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A request block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderRequest
@@ -139,7 +152,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderReq
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderResourceGroupNameRefPolicy
@@ -152,7 +167,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderRes
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderResourceGroupNameRef
@@ -169,7 +186,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderRes
     [JsonPropertyName("policy")]
     public V1beta1ApplicationInsightsStandardWebTestSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderResourceGroupNameSelectorPolicy
@@ -182,7 +201,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderRes
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderResourceGroupNameSelector
@@ -203,7 +224,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderRes
     [JsonPropertyName("policy")]
     public V1beta1ApplicationInsightsStandardWebTestSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A content block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderValidationRulesContent
@@ -220,7 +243,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderVal
     [JsonPropertyName("passIfTextFound")]
     public bool? PassIfTextFound { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A validation_rules block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderValidationRules
@@ -241,7 +266,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderVal
     [JsonPropertyName("sslCheckEnabled")]
     public bool? SslCheckEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProvider
@@ -310,7 +337,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProvider
     [JsonPropertyName("validationRules")]
     public V1beta1ApplicationInsightsStandardWebTestSpecForProviderValidationRules? ValidationRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderApplicationInsightsIdRefPolicy
@@ -323,7 +352,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderAp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ApplicationInsights in insights to populate applicationInsightsId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderApplicationInsightsIdRef
@@ -340,7 +371,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderAp
     [JsonPropertyName("policy")]
     public V1beta1ApplicationInsightsStandardWebTestSpecInitProviderApplicationInsightsIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderApplicationInsightsIdSelectorPolicy
@@ -353,7 +386,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderAp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ApplicationInsights in insights to populate applicationInsightsId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderApplicationInsightsIdSelector
@@ -374,7 +409,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderAp
     [JsonPropertyName("policy")]
     public V1beta1ApplicationInsightsStandardWebTestSpecInitProviderApplicationInsightsIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderRequestHeader
@@ -387,7 +424,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderRe
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A request block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderRequest
@@ -416,7 +455,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderRe
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A content block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderValidationRulesContent
@@ -433,7 +474,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderVa
     [JsonPropertyName("passIfTextFound")]
     public bool? PassIfTextFound { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A validation_rules block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderValidationRules
@@ -454,7 +497,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderVa
     [JsonPropertyName("sslCheckEnabled")]
     public bool? SslCheckEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProvider
@@ -511,7 +556,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProvider
     [JsonPropertyName("validationRules")]
     public V1beta1ApplicationInsightsStandardWebTestSpecInitProviderValidationRules? ValidationRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecProviderConfigRef
@@ -524,7 +571,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecProviderConfig
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecWriteConnectionSecretToRef
@@ -533,7 +582,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecWriteConnectio
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApplicationInsightsStandardWebTestSpec defines the desired state of ApplicationInsightsStandardWebTest</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestSpec
@@ -558,7 +609,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ApplicationInsightsStandardWebTestSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestStatusAtProviderRequestHeader
@@ -571,7 +624,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestStatusAtProviderRe
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A request block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestStatusAtProviderRequest
@@ -600,7 +655,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestStatusAtProviderRe
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A content block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestStatusAtProviderValidationRulesContent
@@ -617,7 +674,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestStatusAtProviderVa
     [JsonPropertyName("passIfTextFound")]
     public bool? PassIfTextFound { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A validation_rules block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestStatusAtProviderValidationRules
@@ -638,7 +697,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestStatusAtProviderVa
     [JsonPropertyName("sslCheckEnabled")]
     public bool? SslCheckEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestStatusAtProvider
@@ -699,7 +760,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestStatusAtProvider
     [JsonPropertyName("validationRules")]
     public V1beta1ApplicationInsightsStandardWebTestStatusAtProviderValidationRules? ValidationRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestStatusConditions
@@ -728,7 +791,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApplicationInsightsStandardWebTestStatus defines the observed state of ApplicationInsightsStandardWebTest.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestStatus
@@ -745,7 +810,9 @@ public partial class V1beta1ApplicationInsightsStandardWebTestStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApplicationInsightsStandardWebTest is the Schema for the ApplicationInsightsStandardWebTests API. Manages a Application Insights Standard WebTest.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -775,3 +842,4 @@ public partial class V1beta1ApplicationInsightsStandardWebTest : IKubernetesObje
     [JsonPropertyName("status")]
     public V1beta1ApplicationInsightsStandardWebTestStatus? Status { get; set; }
 }
+#nullable disable

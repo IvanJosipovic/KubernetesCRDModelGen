@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.directoryroles.azuread.upbound.io;
+#nullable enable
 /// <summary>RoleEligibilityScheduleRequest is the Schema for the RoleEligibilityScheduleRequests API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RoleEligibilityScheduleRequestList : IKubernetesObje
     [JsonPropertyName("items")]
     public IList<V1beta1RoleEligibilityScheduleRequest> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleEligibilityScheduleRequestSpecForProviderPrincipalIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1RoleEligibilityScheduleRequestSpecForProviderPrincip
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a User in users to populate principalId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleEligibilityScheduleRequestSpecForProviderPrincipalIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1RoleEligibilityScheduleRequestSpecForProviderPrincip
     [JsonPropertyName("policy")]
     public V1beta1RoleEligibilityScheduleRequestSpecForProviderPrincipalIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleEligibilityScheduleRequestSpecForProviderPrincipalIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1RoleEligibilityScheduleRequestSpecForProviderPrincip
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a User in users to populate principalId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleEligibilityScheduleRequestSpecForProviderPrincipalIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1RoleEligibilityScheduleRequestSpecForProviderPrincip
     [JsonPropertyName("policy")]
     public V1beta1RoleEligibilityScheduleRequestSpecForProviderPrincipalIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleEligibilityScheduleRequestSpecForProviderRoleDefinitionIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1RoleEligibilityScheduleRequestSpecForProviderRoleDef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in directoryroles to populate roleDefinitionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleEligibilityScheduleRequestSpecForProviderRoleDefinitionIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1RoleEligibilityScheduleRequestSpecForProviderRoleDef
     [JsonPropertyName("policy")]
     public V1beta1RoleEligibilityScheduleRequestSpecForProviderRoleDefinitionIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleEligibilityScheduleRequestSpecForProviderRoleDefinitionIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1RoleEligibilityScheduleRequestSpecForProviderRoleDef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in directoryroles to populate roleDefinitionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleEligibilityScheduleRequestSpecForProviderRoleDefinitionIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1RoleEligibilityScheduleRequestSpecForProviderRoleDef
     [JsonPropertyName("policy")]
     public V1beta1RoleEligibilityScheduleRequestSpecForProviderRoleDefinitionIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleEligibilityScheduleRequestSpecForProvider
@@ -182,7 +201,9 @@ public partial class V1beta1RoleEligibilityScheduleRequestSpecForProvider
     [JsonPropertyName("roleDefinitionIdSelector")]
     public V1beta1RoleEligibilityScheduleRequestSpecForProviderRoleDefinitionIdSelector? RoleDefinitionIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleEligibilityScheduleRequestSpecInitProviderPrincipalIdRefPolicy
@@ -195,7 +216,9 @@ public partial class V1beta1RoleEligibilityScheduleRequestSpecInitProviderPrinci
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a User in users to populate principalId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleEligibilityScheduleRequestSpecInitProviderPrincipalIdRef
@@ -208,7 +231,9 @@ public partial class V1beta1RoleEligibilityScheduleRequestSpecInitProviderPrinci
     [JsonPropertyName("policy")]
     public V1beta1RoleEligibilityScheduleRequestSpecInitProviderPrincipalIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleEligibilityScheduleRequestSpecInitProviderPrincipalIdSelectorPolicy
@@ -221,7 +246,9 @@ public partial class V1beta1RoleEligibilityScheduleRequestSpecInitProviderPrinci
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a User in users to populate principalId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleEligibilityScheduleRequestSpecInitProviderPrincipalIdSelector
@@ -238,7 +265,9 @@ public partial class V1beta1RoleEligibilityScheduleRequestSpecInitProviderPrinci
     [JsonPropertyName("policy")]
     public V1beta1RoleEligibilityScheduleRequestSpecInitProviderPrincipalIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleEligibilityScheduleRequestSpecInitProviderRoleDefinitionIdRefPolicy
@@ -251,7 +280,9 @@ public partial class V1beta1RoleEligibilityScheduleRequestSpecInitProviderRoleDe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in directoryroles to populate roleDefinitionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleEligibilityScheduleRequestSpecInitProviderRoleDefinitionIdRef
@@ -264,7 +295,9 @@ public partial class V1beta1RoleEligibilityScheduleRequestSpecInitProviderRoleDe
     [JsonPropertyName("policy")]
     public V1beta1RoleEligibilityScheduleRequestSpecInitProviderRoleDefinitionIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleEligibilityScheduleRequestSpecInitProviderRoleDefinitionIdSelectorPolicy
@@ -277,7 +310,9 @@ public partial class V1beta1RoleEligibilityScheduleRequestSpecInitProviderRoleDe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in directoryroles to populate roleDefinitionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleEligibilityScheduleRequestSpecInitProviderRoleDefinitionIdSelector
@@ -294,7 +329,9 @@ public partial class V1beta1RoleEligibilityScheduleRequestSpecInitProviderRoleDe
     [JsonPropertyName("policy")]
     public V1beta1RoleEligibilityScheduleRequestSpecInitProviderRoleDefinitionIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleEligibilityScheduleRequestSpecInitProvider
@@ -331,7 +368,9 @@ public partial class V1beta1RoleEligibilityScheduleRequestSpecInitProvider
     [JsonPropertyName("roleDefinitionIdSelector")]
     public V1beta1RoleEligibilityScheduleRequestSpecInitProviderRoleDefinitionIdSelector? RoleDefinitionIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleEligibilityScheduleRequestSpecProviderConfigRefPolicy
@@ -344,7 +383,9 @@ public partial class V1beta1RoleEligibilityScheduleRequestSpecProviderConfigRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleEligibilityScheduleRequestSpecProviderConfigRef
@@ -357,7 +398,9 @@ public partial class V1beta1RoleEligibilityScheduleRequestSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1RoleEligibilityScheduleRequestSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleEligibilityScheduleRequestSpecWriteConnectionSecretToRef
@@ -370,7 +413,9 @@ public partial class V1beta1RoleEligibilityScheduleRequestSpecWriteConnectionSec
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RoleEligibilityScheduleRequestSpec defines the desired state of RoleEligibilityScheduleRequest</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleEligibilityScheduleRequestSpec
@@ -399,7 +444,9 @@ public partial class V1beta1RoleEligibilityScheduleRequestSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RoleEligibilityScheduleRequestSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleEligibilityScheduleRequestStatusAtProvider
@@ -424,7 +471,9 @@ public partial class V1beta1RoleEligibilityScheduleRequestStatusAtProvider
     [JsonPropertyName("roleDefinitionId")]
     public string? RoleDefinitionId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleEligibilityScheduleRequestStatusConditions
@@ -453,7 +502,9 @@ public partial class V1beta1RoleEligibilityScheduleRequestStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RoleEligibilityScheduleRequestStatus defines the observed state of RoleEligibilityScheduleRequest.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleEligibilityScheduleRequestStatus
@@ -470,7 +521,9 @@ public partial class V1beta1RoleEligibilityScheduleRequestStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RoleEligibilityScheduleRequest is the Schema for the RoleEligibilityScheduleRequests API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -500,3 +553,4 @@ public partial class V1beta1RoleEligibilityScheduleRequest : IKubernetesObject<V
     [JsonPropertyName("status")]
     public V1beta1RoleEligibilityScheduleRequestStatus? Status { get; set; }
 }
+#nullable disable

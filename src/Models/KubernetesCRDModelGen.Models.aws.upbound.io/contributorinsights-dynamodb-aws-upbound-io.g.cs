@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dynamodb.aws.upbound.io;
+#nullable enable
 /// <summary>ContributorInsights is the Schema for the ContributorInsightss API. Provides a DynamoDB contributor insights resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ContributorInsightsList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1ContributorInsights> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContributorInsightsSpecForProviderTableNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ContributorInsightsSpecForProviderTableNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Table in dynamodb to populate tableName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContributorInsightsSpecForProviderTableNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1ContributorInsightsSpecForProviderTableNameRef
     [JsonPropertyName("policy")]
     public V1beta1ContributorInsightsSpecForProviderTableNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContributorInsightsSpecForProviderTableNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1ContributorInsightsSpecForProviderTableNameSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Table in dynamodb to populate tableName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContributorInsightsSpecForProviderTableNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1ContributorInsightsSpecForProviderTableNameSelector
     [JsonPropertyName("policy")]
     public V1beta1ContributorInsightsSpecForProviderTableNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContributorInsightsSpecForProvider
@@ -114,7 +125,9 @@ public partial class V1beta1ContributorInsightsSpecForProvider
     [JsonPropertyName("tableNameSelector")]
     public V1beta1ContributorInsightsSpecForProviderTableNameSelector? TableNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContributorInsightsSpecInitProviderTableNameRefPolicy
@@ -127,7 +140,9 @@ public partial class V1beta1ContributorInsightsSpecInitProviderTableNameRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Table in dynamodb to populate tableName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContributorInsightsSpecInitProviderTableNameRef
@@ -140,7 +155,9 @@ public partial class V1beta1ContributorInsightsSpecInitProviderTableNameRef
     [JsonPropertyName("policy")]
     public V1beta1ContributorInsightsSpecInitProviderTableNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContributorInsightsSpecInitProviderTableNameSelectorPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1ContributorInsightsSpecInitProviderTableNameSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Table in dynamodb to populate tableName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContributorInsightsSpecInitProviderTableNameSelector
@@ -170,7 +189,9 @@ public partial class V1beta1ContributorInsightsSpecInitProviderTableNameSelector
     [JsonPropertyName("policy")]
     public V1beta1ContributorInsightsSpecInitProviderTableNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContributorInsightsSpecInitProvider
@@ -191,7 +212,9 @@ public partial class V1beta1ContributorInsightsSpecInitProvider
     [JsonPropertyName("tableNameSelector")]
     public V1beta1ContributorInsightsSpecInitProviderTableNameSelector? TableNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContributorInsightsSpecProviderConfigRefPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1ContributorInsightsSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContributorInsightsSpecProviderConfigRef
@@ -217,7 +242,9 @@ public partial class V1beta1ContributorInsightsSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ContributorInsightsSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContributorInsightsSpecWriteConnectionSecretToRef
@@ -230,7 +257,9 @@ public partial class V1beta1ContributorInsightsSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContributorInsightsSpec defines the desired state of ContributorInsights</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContributorInsightsSpec
@@ -259,7 +288,9 @@ public partial class V1beta1ContributorInsightsSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ContributorInsightsSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContributorInsightsStatusAtProvider
@@ -280,7 +311,9 @@ public partial class V1beta1ContributorInsightsStatusAtProvider
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContributorInsightsStatusConditions
@@ -309,7 +342,9 @@ public partial class V1beta1ContributorInsightsStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContributorInsightsStatus defines the observed state of ContributorInsights.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContributorInsightsStatus
@@ -326,7 +361,9 @@ public partial class V1beta1ContributorInsightsStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContributorInsights is the Schema for the ContributorInsightss API. Provides a DynamoDB contributor insights resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -356,3 +393,4 @@ public partial class V1beta1ContributorInsights : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1ContributorInsightsStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.devtestlab.azure.m.upbound.io;
+#nullable enable
 /// <summary>Schedule is the Schema for the Schedules API. Manages automated startup and shutdown schedules for Azure Dev Test Lab.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ScheduleList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1beta1Schedule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The properties of a daily schedule. If the schedule occurs once each day of the week, specify the daily recurrence. A daily_recurrence block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleSpecForProviderDailyRecurrence
@@ -42,7 +45,9 @@ public partial class V1beta1ScheduleSpecForProviderDailyRecurrence
     [JsonPropertyName("time")]
     public string? Time { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The properties of an hourly schedule. If the schedule occurs multiple times a day, specify the hourly recurrence. A hourly_recurrence block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleSpecForProviderHourlyRecurrence
@@ -51,7 +56,9 @@ public partial class V1beta1ScheduleSpecForProviderHourlyRecurrence
     [JsonPropertyName("minute")]
     public double? Minute { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleSpecForProviderLabNameRefPolicy
@@ -64,7 +71,9 @@ public partial class V1beta1ScheduleSpecForProviderLabNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Lab in devtestlab to populate labName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleSpecForProviderLabNameRef
@@ -81,7 +90,9 @@ public partial class V1beta1ScheduleSpecForProviderLabNameRef
     [JsonPropertyName("policy")]
     public V1beta1ScheduleSpecForProviderLabNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleSpecForProviderLabNameSelectorPolicy
@@ -94,7 +105,9 @@ public partial class V1beta1ScheduleSpecForProviderLabNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Lab in devtestlab to populate labName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleSpecForProviderLabNameSelector
@@ -115,7 +128,9 @@ public partial class V1beta1ScheduleSpecForProviderLabNameSelector
     [JsonPropertyName("policy")]
     public V1beta1ScheduleSpecForProviderLabNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The notification setting of a schedule. A notification_settings block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleSpecForProviderNotificationSettings
@@ -132,7 +147,9 @@ public partial class V1beta1ScheduleSpecForProviderNotificationSettings
     [JsonPropertyName("webhookUrl")]
     public string? WebhookUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleSpecForProviderResourceGroupNameRefPolicy
@@ -145,7 +162,9 @@ public partial class V1beta1ScheduleSpecForProviderResourceGroupNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleSpecForProviderResourceGroupNameRef
@@ -162,7 +181,9 @@ public partial class V1beta1ScheduleSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1ScheduleSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleSpecForProviderResourceGroupNameSelectorPolicy
@@ -175,7 +196,9 @@ public partial class V1beta1ScheduleSpecForProviderResourceGroupNameSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleSpecForProviderResourceGroupNameSelector
@@ -196,7 +219,9 @@ public partial class V1beta1ScheduleSpecForProviderResourceGroupNameSelector
     [JsonPropertyName("policy")]
     public V1beta1ScheduleSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The properties of a weekly schedule. If the schedule occurs only some days of the week, specify the weekly recurrence. A weekly_recurrence block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleSpecForProviderWeeklyRecurrence
@@ -209,7 +234,9 @@ public partial class V1beta1ScheduleSpecForProviderWeeklyRecurrence
     [JsonPropertyName("weekDays")]
     public IList<string>? WeekDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleSpecForProvider
@@ -274,7 +301,9 @@ public partial class V1beta1ScheduleSpecForProvider
     [JsonPropertyName("weeklyRecurrence")]
     public V1beta1ScheduleSpecForProviderWeeklyRecurrence? WeeklyRecurrence { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The properties of a daily schedule. If the schedule occurs once each day of the week, specify the daily recurrence. A daily_recurrence block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleSpecInitProviderDailyRecurrence
@@ -283,7 +312,9 @@ public partial class V1beta1ScheduleSpecInitProviderDailyRecurrence
     [JsonPropertyName("time")]
     public string? Time { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The properties of an hourly schedule. If the schedule occurs multiple times a day, specify the hourly recurrence. A hourly_recurrence block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleSpecInitProviderHourlyRecurrence
@@ -292,7 +323,9 @@ public partial class V1beta1ScheduleSpecInitProviderHourlyRecurrence
     [JsonPropertyName("minute")]
     public double? Minute { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The notification setting of a schedule. A notification_settings block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleSpecInitProviderNotificationSettings
@@ -309,7 +342,9 @@ public partial class V1beta1ScheduleSpecInitProviderNotificationSettings
     [JsonPropertyName("webhookUrl")]
     public string? WebhookUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The properties of a weekly schedule. If the schedule occurs only some days of the week, specify the weekly recurrence. A weekly_recurrence block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleSpecInitProviderWeeklyRecurrence
@@ -322,7 +357,9 @@ public partial class V1beta1ScheduleSpecInitProviderWeeklyRecurrence
     [JsonPropertyName("weekDays")]
     public IList<string>? WeekDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleSpecInitProvider
@@ -363,7 +400,9 @@ public partial class V1beta1ScheduleSpecInitProvider
     [JsonPropertyName("weeklyRecurrence")]
     public V1beta1ScheduleSpecInitProviderWeeklyRecurrence? WeeklyRecurrence { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleSpecProviderConfigRef
@@ -376,7 +415,9 @@ public partial class V1beta1ScheduleSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleSpecWriteConnectionSecretToRef
@@ -385,7 +426,9 @@ public partial class V1beta1ScheduleSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ScheduleSpec defines the desired state of Schedule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleSpec
@@ -410,7 +453,9 @@ public partial class V1beta1ScheduleSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ScheduleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The properties of a daily schedule. If the schedule occurs once each day of the week, specify the daily recurrence. A daily_recurrence block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleStatusAtProviderDailyRecurrence
@@ -419,7 +464,9 @@ public partial class V1beta1ScheduleStatusAtProviderDailyRecurrence
     [JsonPropertyName("time")]
     public string? Time { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The properties of an hourly schedule. If the schedule occurs multiple times a day, specify the hourly recurrence. A hourly_recurrence block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleStatusAtProviderHourlyRecurrence
@@ -428,7 +475,9 @@ public partial class V1beta1ScheduleStatusAtProviderHourlyRecurrence
     [JsonPropertyName("minute")]
     public double? Minute { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The notification setting of a schedule. A notification_settings block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleStatusAtProviderNotificationSettings
@@ -445,7 +494,9 @@ public partial class V1beta1ScheduleStatusAtProviderNotificationSettings
     [JsonPropertyName("webhookUrl")]
     public string? WebhookUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The properties of a weekly schedule. If the schedule occurs only some days of the week, specify the weekly recurrence. A weekly_recurrence block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleStatusAtProviderWeeklyRecurrence
@@ -458,7 +509,9 @@ public partial class V1beta1ScheduleStatusAtProviderWeeklyRecurrence
     [JsonPropertyName("weekDays")]
     public IList<string>? WeekDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleStatusAtProvider
@@ -511,7 +564,9 @@ public partial class V1beta1ScheduleStatusAtProvider
     [JsonPropertyName("weeklyRecurrence")]
     public V1beta1ScheduleStatusAtProviderWeeklyRecurrence? WeeklyRecurrence { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleStatusConditions
@@ -540,7 +595,9 @@ public partial class V1beta1ScheduleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ScheduleStatus defines the observed state of Schedule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleStatus
@@ -557,7 +614,9 @@ public partial class V1beta1ScheduleStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Schedule is the Schema for the Schedules API. Manages automated startup and shutdown schedules for Azure Dev Test Lab.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -587,3 +646,4 @@ public partial class V1beta1Schedule : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1beta1ScheduleStatus? Status { get; set; }
 }
+#nullable disable

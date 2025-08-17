@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ses.aws.m.upbound.io;
+#nullable enable
 /// <summary>ActiveReceiptRuleSet is the Schema for the ActiveReceiptRuleSets API. Provides a resource to designate the active SES receipt rule set</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ActiveReceiptRuleSetList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1ActiveReceiptRuleSet> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ActiveReceiptRuleSetSpecForProvider
@@ -46,7 +49,9 @@ public partial class V1beta1ActiveReceiptRuleSetSpecForProvider
     [JsonPropertyName("ruleSetName")]
     public string? RuleSetName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ActiveReceiptRuleSetSpecInitProvider
@@ -55,7 +60,9 @@ public partial class V1beta1ActiveReceiptRuleSetSpecInitProvider
     [JsonPropertyName("ruleSetName")]
     public string? RuleSetName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ActiveReceiptRuleSetSpecProviderConfigRef
@@ -68,7 +75,9 @@ public partial class V1beta1ActiveReceiptRuleSetSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ActiveReceiptRuleSetSpecWriteConnectionSecretToRef
@@ -77,7 +86,9 @@ public partial class V1beta1ActiveReceiptRuleSetSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ActiveReceiptRuleSetSpec defines the desired state of ActiveReceiptRuleSet</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ActiveReceiptRuleSetSpec
@@ -102,7 +113,9 @@ public partial class V1beta1ActiveReceiptRuleSetSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ActiveReceiptRuleSetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ActiveReceiptRuleSetStatusAtProvider
@@ -123,7 +136,9 @@ public partial class V1beta1ActiveReceiptRuleSetStatusAtProvider
     [JsonPropertyName("ruleSetName")]
     public string? RuleSetName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ActiveReceiptRuleSetStatusConditions
@@ -152,7 +167,9 @@ public partial class V1beta1ActiveReceiptRuleSetStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ActiveReceiptRuleSetStatus defines the observed state of ActiveReceiptRuleSet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ActiveReceiptRuleSetStatus
@@ -169,7 +186,9 @@ public partial class V1beta1ActiveReceiptRuleSetStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ActiveReceiptRuleSet is the Schema for the ActiveReceiptRuleSets API. Provides a resource to designate the active SES receipt rule set</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -199,3 +218,4 @@ public partial class V1beta1ActiveReceiptRuleSet : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1ActiveReceiptRuleSetStatus? Status { get; set; }
 }
+#nullable disable

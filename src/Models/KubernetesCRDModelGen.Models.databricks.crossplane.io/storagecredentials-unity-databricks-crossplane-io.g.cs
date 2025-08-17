@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.unity.databricks.crossplane.io;
+#nullable enable
 /// <summary>StorageCredential is the Schema for the StorageCredentials API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1StorageCredentialList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1alpha1StorageCredential> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialSpecForProviderAwsIamRole
@@ -50,7 +53,9 @@ public partial class V1alpha1StorageCredentialSpecForProviderAwsIamRole
     [JsonPropertyName("unityCatalogIamArn")]
     public string? UnityCatalogIamArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialSpecForProviderAzureManagedIdentity
@@ -67,7 +72,9 @@ public partial class V1alpha1StorageCredentialSpecForProviderAzureManagedIdentit
     [JsonPropertyName("managedIdentityId")]
     public string? ManagedIdentityId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The client secret generated for the above app ID in AAD. This field is redacted on output</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialSpecForProviderAzureServicePrincipalClientSecretSecretRef
@@ -84,7 +91,9 @@ public partial class V1alpha1StorageCredentialSpecForProviderAzureServicePrincip
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialSpecForProviderAzureServicePrincipal
@@ -101,7 +110,9 @@ public partial class V1alpha1StorageCredentialSpecForProviderAzureServicePrincip
     [JsonPropertyName("directoryId")]
     public string? DirectoryId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>R2 API token secret access key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialSpecForProviderCloudflareApiTokenSecretAccessKeySecretRef
@@ -118,7 +129,9 @@ public partial class V1alpha1StorageCredentialSpecForProviderCloudflareApiTokenS
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialSpecForProviderCloudflareApiToken
@@ -135,7 +148,9 @@ public partial class V1alpha1StorageCredentialSpecForProviderCloudflareApiToken
     [JsonPropertyName("secretAccessKeySecretRef")]
     public V1alpha1StorageCredentialSpecForProviderCloudflareApiTokenSecretAccessKeySecretRef? SecretAccessKeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialSpecForProviderDatabricksGcpServiceAccount
@@ -148,7 +163,9 @@ public partial class V1alpha1StorageCredentialSpecForProviderDatabricksGcpServic
     [JsonPropertyName("email")]
     public string? Email { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialSpecForProviderGcpServiceAccountKeyPrivateKeySecretRef
@@ -165,7 +182,9 @@ public partial class V1alpha1StorageCredentialSpecForProviderGcpServiceAccountKe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialSpecForProviderGcpServiceAccountKey
@@ -182,7 +201,9 @@ public partial class V1alpha1StorageCredentialSpecForProviderGcpServiceAccountKe
     [JsonPropertyName("privateKeySecretRef")]
     public V1alpha1StorageCredentialSpecForProviderGcpServiceAccountKeyPrivateKeySecretRef? PrivateKeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialSpecForProvider
@@ -247,7 +268,9 @@ public partial class V1alpha1StorageCredentialSpecForProvider
     [JsonPropertyName("skipValidation")]
     public bool? SkipValidation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialSpecInitProviderAwsIamRole
@@ -264,7 +287,9 @@ public partial class V1alpha1StorageCredentialSpecInitProviderAwsIamRole
     [JsonPropertyName("unityCatalogIamArn")]
     public string? UnityCatalogIamArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialSpecInitProviderAzureManagedIdentity
@@ -281,7 +306,9 @@ public partial class V1alpha1StorageCredentialSpecInitProviderAzureManagedIdenti
     [JsonPropertyName("managedIdentityId")]
     public string? ManagedIdentityId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The client secret generated for the above app ID in AAD. This field is redacted on output</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialSpecInitProviderAzureServicePrincipalClientSecretSecretRef
@@ -298,7 +325,9 @@ public partial class V1alpha1StorageCredentialSpecInitProviderAzureServicePrinci
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialSpecInitProviderAzureServicePrincipal
@@ -315,7 +344,9 @@ public partial class V1alpha1StorageCredentialSpecInitProviderAzureServicePrinci
     [JsonPropertyName("directoryId")]
     public string? DirectoryId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>R2 API token secret access key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialSpecInitProviderCloudflareApiTokenSecretAccessKeySecretRef
@@ -332,7 +363,9 @@ public partial class V1alpha1StorageCredentialSpecInitProviderCloudflareApiToken
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialSpecInitProviderCloudflareApiToken
@@ -349,7 +382,9 @@ public partial class V1alpha1StorageCredentialSpecInitProviderCloudflareApiToken
     [JsonPropertyName("secretAccessKeySecretRef")]
     public V1alpha1StorageCredentialSpecInitProviderCloudflareApiTokenSecretAccessKeySecretRef SecretAccessKeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialSpecInitProviderDatabricksGcpServiceAccount
@@ -362,7 +397,9 @@ public partial class V1alpha1StorageCredentialSpecInitProviderDatabricksGcpServi
     [JsonPropertyName("email")]
     public string? Email { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialSpecInitProviderGcpServiceAccountKeyPrivateKeySecretRef
@@ -379,7 +416,9 @@ public partial class V1alpha1StorageCredentialSpecInitProviderGcpServiceAccountK
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialSpecInitProviderGcpServiceAccountKey
@@ -396,7 +435,9 @@ public partial class V1alpha1StorageCredentialSpecInitProviderGcpServiceAccountK
     [JsonPropertyName("privateKeySecretRef")]
     public V1alpha1StorageCredentialSpecInitProviderGcpServiceAccountKeyPrivateKeySecretRef PrivateKeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialSpecInitProvider
@@ -461,7 +502,9 @@ public partial class V1alpha1StorageCredentialSpecInitProvider
     [JsonPropertyName("skipValidation")]
     public bool? SkipValidation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialSpecProviderConfigRefPolicy
@@ -474,7 +517,9 @@ public partial class V1alpha1StorageCredentialSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialSpecProviderConfigRef
@@ -487,7 +532,9 @@ public partial class V1alpha1StorageCredentialSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1StorageCredentialSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialSpecPublishConnectionDetailsToConfigRefPolicy
@@ -500,7 +547,9 @@ public partial class V1alpha1StorageCredentialSpecPublishConnectionDetailsToConf
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialSpecPublishConnectionDetailsToConfigRef
@@ -513,7 +562,9 @@ public partial class V1alpha1StorageCredentialSpecPublishConnectionDetailsToConf
     [JsonPropertyName("policy")]
     public V1alpha1StorageCredentialSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Metadata is the metadata for connection secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialSpecPublishConnectionDetailsToMetadata
@@ -530,7 +581,9 @@ public partial class V1alpha1StorageCredentialSpecPublishConnectionDetailsToMeta
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialSpecPublishConnectionDetailsTo
@@ -547,7 +600,9 @@ public partial class V1alpha1StorageCredentialSpecPublishConnectionDetailsTo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialSpecWriteConnectionSecretToRef
@@ -560,7 +615,9 @@ public partial class V1alpha1StorageCredentialSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StorageCredentialSpec defines the desired state of StorageCredential</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialSpec
@@ -593,7 +650,9 @@ public partial class V1alpha1StorageCredentialSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1alpha1StorageCredentialSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialStatusAtProviderAwsIamRole
@@ -610,7 +669,9 @@ public partial class V1alpha1StorageCredentialStatusAtProviderAwsIamRole
     [JsonPropertyName("unityCatalogIamArn")]
     public string? UnityCatalogIamArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialStatusAtProviderAzureManagedIdentity
@@ -627,7 +688,9 @@ public partial class V1alpha1StorageCredentialStatusAtProviderAzureManagedIdenti
     [JsonPropertyName("managedIdentityId")]
     public string? ManagedIdentityId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialStatusAtProviderAzureServicePrincipal
@@ -640,7 +703,9 @@ public partial class V1alpha1StorageCredentialStatusAtProviderAzureServicePrinci
     [JsonPropertyName("directoryId")]
     public string? DirectoryId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialStatusAtProviderCloudflareApiToken
@@ -653,7 +718,9 @@ public partial class V1alpha1StorageCredentialStatusAtProviderCloudflareApiToken
     [JsonPropertyName("accountId")]
     public string? AccountId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialStatusAtProviderDatabricksGcpServiceAccount
@@ -666,7 +733,9 @@ public partial class V1alpha1StorageCredentialStatusAtProviderDatabricksGcpServi
     [JsonPropertyName("email")]
     public string? Email { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialStatusAtProviderGcpServiceAccountKey
@@ -679,7 +748,9 @@ public partial class V1alpha1StorageCredentialStatusAtProviderGcpServiceAccountK
     [JsonPropertyName("privateKeyId")]
     public string? PrivateKeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialStatusAtProvider
@@ -752,7 +823,9 @@ public partial class V1alpha1StorageCredentialStatusAtProvider
     [JsonPropertyName("storageCredentialId")]
     public string? StorageCredentialId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialStatusConditions
@@ -781,7 +854,9 @@ public partial class V1alpha1StorageCredentialStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StorageCredentialStatus defines the observed state of StorageCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1StorageCredentialStatus
@@ -798,7 +873,9 @@ public partial class V1alpha1StorageCredentialStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StorageCredential is the Schema for the StorageCredentials API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -828,3 +905,4 @@ public partial class V1alpha1StorageCredential : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1alpha1StorageCredentialStatus? Status { get; set; }
 }
+#nullable disable

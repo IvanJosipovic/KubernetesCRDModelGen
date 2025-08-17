@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kafka.aws.m.upbound.io;
+#nullable enable
 /// <summary>ServerlessCluster is the Schema for the ServerlessClusters API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ServerlessClusterList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1ServerlessCluster> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Details for client authentication using IAM. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterSpecForProviderClientAuthenticationSaslIam
@@ -42,7 +45,9 @@ public partial class V1beta1ServerlessClusterSpecForProviderClientAuthentication
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Details for client authentication using SASL. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterSpecForProviderClientAuthenticationSasl
@@ -51,7 +56,9 @@ public partial class V1beta1ServerlessClusterSpecForProviderClientAuthentication
     [JsonPropertyName("iam")]
     public V1beta1ServerlessClusterSpecForProviderClientAuthenticationSaslIam? Iam { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies client authentication information for the serverless cluster. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterSpecForProviderClientAuthentication
@@ -60,7 +67,9 @@ public partial class V1beta1ServerlessClusterSpecForProviderClientAuthentication
     [JsonPropertyName("sasl")]
     public V1beta1ServerlessClusterSpecForProviderClientAuthenticationSasl? Sasl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterSpecForProviderVpcConfigSecurityGroupIdRefsPolicy
@@ -73,7 +82,9 @@ public partial class V1beta1ServerlessClusterSpecForProviderVpcConfigSecurityGro
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterSpecForProviderVpcConfigSecurityGroupIdRefs
@@ -90,7 +101,9 @@ public partial class V1beta1ServerlessClusterSpecForProviderVpcConfigSecurityGro
     [JsonPropertyName("policy")]
     public V1beta1ServerlessClusterSpecForProviderVpcConfigSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterSpecForProviderVpcConfigSecurityGroupIdSelectorPolicy
@@ -103,7 +116,9 @@ public partial class V1beta1ServerlessClusterSpecForProviderVpcConfigSecurityGro
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterSpecForProviderVpcConfigSecurityGroupIdSelector
@@ -124,7 +139,9 @@ public partial class V1beta1ServerlessClusterSpecForProviderVpcConfigSecurityGro
     [JsonPropertyName("policy")]
     public V1beta1ServerlessClusterSpecForProviderVpcConfigSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterSpecForProviderVpcConfigSubnetIdRefsPolicy
@@ -137,7 +154,9 @@ public partial class V1beta1ServerlessClusterSpecForProviderVpcConfigSubnetIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterSpecForProviderVpcConfigSubnetIdRefs
@@ -154,7 +173,9 @@ public partial class V1beta1ServerlessClusterSpecForProviderVpcConfigSubnetIdRef
     [JsonPropertyName("policy")]
     public V1beta1ServerlessClusterSpecForProviderVpcConfigSubnetIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterSpecForProviderVpcConfigSubnetIdSelectorPolicy
@@ -167,7 +188,9 @@ public partial class V1beta1ServerlessClusterSpecForProviderVpcConfigSubnetIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterSpecForProviderVpcConfigSubnetIdSelector
@@ -188,7 +211,9 @@ public partial class V1beta1ServerlessClusterSpecForProviderVpcConfigSubnetIdSel
     [JsonPropertyName("policy")]
     public V1beta1ServerlessClusterSpecForProviderVpcConfigSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterSpecForProviderVpcConfig
@@ -217,7 +242,9 @@ public partial class V1beta1ServerlessClusterSpecForProviderVpcConfig
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterSpecForProvider
@@ -242,7 +269,9 @@ public partial class V1beta1ServerlessClusterSpecForProvider
     [JsonPropertyName("vpcConfig")]
     public IList<V1beta1ServerlessClusterSpecForProviderVpcConfig>? VpcConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Details for client authentication using IAM. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterSpecInitProviderClientAuthenticationSaslIam
@@ -251,7 +280,9 @@ public partial class V1beta1ServerlessClusterSpecInitProviderClientAuthenticatio
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Details for client authentication using SASL. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterSpecInitProviderClientAuthenticationSasl
@@ -260,7 +291,9 @@ public partial class V1beta1ServerlessClusterSpecInitProviderClientAuthenticatio
     [JsonPropertyName("iam")]
     public V1beta1ServerlessClusterSpecInitProviderClientAuthenticationSaslIam? Iam { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies client authentication information for the serverless cluster. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterSpecInitProviderClientAuthentication
@@ -269,7 +302,9 @@ public partial class V1beta1ServerlessClusterSpecInitProviderClientAuthenticatio
     [JsonPropertyName("sasl")]
     public V1beta1ServerlessClusterSpecInitProviderClientAuthenticationSasl? Sasl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterSpecInitProviderVpcConfigSecurityGroupIdRefsPolicy
@@ -282,7 +317,9 @@ public partial class V1beta1ServerlessClusterSpecInitProviderVpcConfigSecurityGr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterSpecInitProviderVpcConfigSecurityGroupIdRefs
@@ -299,7 +336,9 @@ public partial class V1beta1ServerlessClusterSpecInitProviderVpcConfigSecurityGr
     [JsonPropertyName("policy")]
     public V1beta1ServerlessClusterSpecInitProviderVpcConfigSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterSpecInitProviderVpcConfigSecurityGroupIdSelectorPolicy
@@ -312,7 +351,9 @@ public partial class V1beta1ServerlessClusterSpecInitProviderVpcConfigSecurityGr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterSpecInitProviderVpcConfigSecurityGroupIdSelector
@@ -333,7 +374,9 @@ public partial class V1beta1ServerlessClusterSpecInitProviderVpcConfigSecurityGr
     [JsonPropertyName("policy")]
     public V1beta1ServerlessClusterSpecInitProviderVpcConfigSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterSpecInitProviderVpcConfigSubnetIdRefsPolicy
@@ -346,7 +389,9 @@ public partial class V1beta1ServerlessClusterSpecInitProviderVpcConfigSubnetIdRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterSpecInitProviderVpcConfigSubnetIdRefs
@@ -363,7 +408,9 @@ public partial class V1beta1ServerlessClusterSpecInitProviderVpcConfigSubnetIdRe
     [JsonPropertyName("policy")]
     public V1beta1ServerlessClusterSpecInitProviderVpcConfigSubnetIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterSpecInitProviderVpcConfigSubnetIdSelectorPolicy
@@ -376,7 +423,9 @@ public partial class V1beta1ServerlessClusterSpecInitProviderVpcConfigSubnetIdSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterSpecInitProviderVpcConfigSubnetIdSelector
@@ -397,7 +446,9 @@ public partial class V1beta1ServerlessClusterSpecInitProviderVpcConfigSubnetIdSe
     [JsonPropertyName("policy")]
     public V1beta1ServerlessClusterSpecInitProviderVpcConfigSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterSpecInitProviderVpcConfig
@@ -426,7 +477,9 @@ public partial class V1beta1ServerlessClusterSpecInitProviderVpcConfig
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterSpecInitProvider
@@ -447,7 +500,9 @@ public partial class V1beta1ServerlessClusterSpecInitProvider
     [JsonPropertyName("vpcConfig")]
     public IList<V1beta1ServerlessClusterSpecInitProviderVpcConfig>? VpcConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterSpecProviderConfigRef
@@ -460,7 +515,9 @@ public partial class V1beta1ServerlessClusterSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterSpecWriteConnectionSecretToRef
@@ -469,7 +526,9 @@ public partial class V1beta1ServerlessClusterSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServerlessClusterSpec defines the desired state of ServerlessCluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterSpec
@@ -494,7 +553,9 @@ public partial class V1beta1ServerlessClusterSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ServerlessClusterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Details for client authentication using IAM. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterStatusAtProviderClientAuthenticationSaslIam
@@ -503,7 +564,9 @@ public partial class V1beta1ServerlessClusterStatusAtProviderClientAuthenticatio
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Details for client authentication using SASL. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterStatusAtProviderClientAuthenticationSasl
@@ -512,7 +575,9 @@ public partial class V1beta1ServerlessClusterStatusAtProviderClientAuthenticatio
     [JsonPropertyName("iam")]
     public V1beta1ServerlessClusterStatusAtProviderClientAuthenticationSaslIam? Iam { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies client authentication information for the serverless cluster. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterStatusAtProviderClientAuthentication
@@ -521,7 +586,9 @@ public partial class V1beta1ServerlessClusterStatusAtProviderClientAuthenticatio
     [JsonPropertyName("sasl")]
     public V1beta1ServerlessClusterStatusAtProviderClientAuthenticationSasl? Sasl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterStatusAtProviderVpcConfig
@@ -534,7 +601,9 @@ public partial class V1beta1ServerlessClusterStatusAtProviderVpcConfig
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterStatusAtProvider
@@ -579,7 +648,9 @@ public partial class V1beta1ServerlessClusterStatusAtProvider
     [JsonPropertyName("vpcConfig")]
     public IList<V1beta1ServerlessClusterStatusAtProviderVpcConfig>? VpcConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterStatusConditions
@@ -608,7 +679,9 @@ public partial class V1beta1ServerlessClusterStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServerlessClusterStatus defines the observed state of ServerlessCluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterStatus
@@ -625,7 +698,9 @@ public partial class V1beta1ServerlessClusterStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServerlessCluster is the Schema for the ServerlessClusters API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -655,3 +730,4 @@ public partial class V1beta1ServerlessCluster : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1ServerlessClusterStatus? Status { get; set; }
 }
+#nullable disable

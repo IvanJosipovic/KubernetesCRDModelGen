@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iot.aws.m.upbound.io;
+#nullable enable
 /// <summary>ProvisioningTemplate is the Schema for the ProvisioningTemplates API. Manages an IoT fleet provisioning template.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ProvisioningTemplateList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1ProvisioningTemplate> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Creates a pre-provisioning hook template. Details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProvisioningTemplateSpecForProviderPreProvisioningHook
@@ -46,7 +49,9 @@ public partial class V1beta1ProvisioningTemplateSpecForProviderPreProvisioningHo
     [JsonPropertyName("targetArn")]
     public string? TargetArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProvisioningTemplateSpecForProviderProvisioningRoleArnRefPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1ProvisioningTemplateSpecForProviderProvisioningRoleA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate provisioningRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProvisioningTemplateSpecForProviderProvisioningRoleArnRef
@@ -76,7 +83,9 @@ public partial class V1beta1ProvisioningTemplateSpecForProviderProvisioningRoleA
     [JsonPropertyName("policy")]
     public V1beta1ProvisioningTemplateSpecForProviderProvisioningRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProvisioningTemplateSpecForProviderProvisioningRoleArnSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1ProvisioningTemplateSpecForProviderProvisioningRoleA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate provisioningRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProvisioningTemplateSpecForProviderProvisioningRoleArnSelector
@@ -110,7 +121,9 @@ public partial class V1beta1ProvisioningTemplateSpecForProviderProvisioningRoleA
     [JsonPropertyName("policy")]
     public V1beta1ProvisioningTemplateSpecForProviderProvisioningRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProvisioningTemplateSpecForProvider
@@ -155,7 +168,9 @@ public partial class V1beta1ProvisioningTemplateSpecForProvider
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Creates a pre-provisioning hook template. Details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProvisioningTemplateSpecInitProviderPreProvisioningHook
@@ -168,7 +183,9 @@ public partial class V1beta1ProvisioningTemplateSpecInitProviderPreProvisioningH
     [JsonPropertyName("targetArn")]
     public string? TargetArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProvisioningTemplateSpecInitProviderProvisioningRoleArnRefPolicy
@@ -181,7 +198,9 @@ public partial class V1beta1ProvisioningTemplateSpecInitProviderProvisioningRole
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate provisioningRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProvisioningTemplateSpecInitProviderProvisioningRoleArnRef
@@ -198,7 +217,9 @@ public partial class V1beta1ProvisioningTemplateSpecInitProviderProvisioningRole
     [JsonPropertyName("policy")]
     public V1beta1ProvisioningTemplateSpecInitProviderProvisioningRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProvisioningTemplateSpecInitProviderProvisioningRoleArnSelectorPolicy
@@ -211,7 +232,9 @@ public partial class V1beta1ProvisioningTemplateSpecInitProviderProvisioningRole
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate provisioningRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProvisioningTemplateSpecInitProviderProvisioningRoleArnSelector
@@ -232,7 +255,9 @@ public partial class V1beta1ProvisioningTemplateSpecInitProviderProvisioningRole
     [JsonPropertyName("policy")]
     public V1beta1ProvisioningTemplateSpecInitProviderProvisioningRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProvisioningTemplateSpecInitProvider
@@ -273,7 +298,9 @@ public partial class V1beta1ProvisioningTemplateSpecInitProvider
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProvisioningTemplateSpecProviderConfigRef
@@ -286,7 +313,9 @@ public partial class V1beta1ProvisioningTemplateSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProvisioningTemplateSpecWriteConnectionSecretToRef
@@ -295,7 +324,9 @@ public partial class V1beta1ProvisioningTemplateSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProvisioningTemplateSpec defines the desired state of ProvisioningTemplate</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProvisioningTemplateSpec
@@ -320,7 +351,9 @@ public partial class V1beta1ProvisioningTemplateSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ProvisioningTemplateSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Creates a pre-provisioning hook template. Details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProvisioningTemplateStatusAtProviderPreProvisioningHook
@@ -333,7 +366,9 @@ public partial class V1beta1ProvisioningTemplateStatusAtProviderPreProvisioningH
     [JsonPropertyName("targetArn")]
     public string? TargetArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProvisioningTemplateStatusAtProvider
@@ -386,7 +421,9 @@ public partial class V1beta1ProvisioningTemplateStatusAtProvider
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProvisioningTemplateStatusConditions
@@ -415,7 +452,9 @@ public partial class V1beta1ProvisioningTemplateStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProvisioningTemplateStatus defines the observed state of ProvisioningTemplate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProvisioningTemplateStatus
@@ -432,7 +471,9 @@ public partial class V1beta1ProvisioningTemplateStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProvisioningTemplate is the Schema for the ProvisioningTemplates API. Manages an IoT fleet provisioning template.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -462,3 +503,4 @@ public partial class V1beta1ProvisioningTemplate : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1ProvisioningTemplateStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataproc.gcp.upbound.io;
+#nullable enable
 /// <summary>Job is the Schema for the Jobs API. Manages a job resource within a Dataproc cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1JobList : IKubernetesObject<V1ListMeta>, IItems<V1be
     [JsonPropertyName("items")]
     public IList<V1beta1Job> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderHadoopConfigLoggingConfig
@@ -42,7 +45,9 @@ public partial class V1beta1JobSpecForProviderHadoopConfigLoggingConfig
     [JsonPropertyName("driverLogLevels")]
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderHadoopConfig
@@ -79,7 +84,9 @@ public partial class V1beta1JobSpecForProviderHadoopConfig
     [JsonPropertyName("properties")]
     public IDictionary<string, string>? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderHiveConfig
@@ -108,7 +115,9 @@ public partial class V1beta1JobSpecForProviderHiveConfig
     [JsonPropertyName("scriptVariables")]
     public IDictionary<string, string>? ScriptVariables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderPigConfigLoggingConfig
@@ -117,7 +126,9 @@ public partial class V1beta1JobSpecForProviderPigConfigLoggingConfig
     [JsonPropertyName("driverLogLevels")]
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderPigConfig
@@ -150,7 +161,9 @@ public partial class V1beta1JobSpecForProviderPigConfig
     [JsonPropertyName("scriptVariables")]
     public IDictionary<string, string>? ScriptVariables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderPlacementClusterNameRefPolicy
@@ -163,7 +176,9 @@ public partial class V1beta1JobSpecForProviderPlacementClusterNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in dataproc to populate clusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderPlacementClusterNameRef
@@ -176,7 +191,9 @@ public partial class V1beta1JobSpecForProviderPlacementClusterNameRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecForProviderPlacementClusterNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderPlacementClusterNameSelectorPolicy
@@ -189,7 +206,9 @@ public partial class V1beta1JobSpecForProviderPlacementClusterNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in dataproc to populate clusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderPlacementClusterNameSelector
@@ -206,7 +225,9 @@ public partial class V1beta1JobSpecForProviderPlacementClusterNameSelector
     [JsonPropertyName("policy")]
     public V1beta1JobSpecForProviderPlacementClusterNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderPlacement
@@ -223,7 +244,9 @@ public partial class V1beta1JobSpecForProviderPlacement
     [JsonPropertyName("clusterNameSelector")]
     public V1beta1JobSpecForProviderPlacementClusterNameSelector? ClusterNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderPrestoConfigLoggingConfig
@@ -232,7 +255,9 @@ public partial class V1beta1JobSpecForProviderPrestoConfigLoggingConfig
     [JsonPropertyName("driverLogLevels")]
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderPrestoConfig
@@ -265,7 +290,9 @@ public partial class V1beta1JobSpecForProviderPrestoConfig
     [JsonPropertyName("queryList")]
     public IList<string>? QueryList { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderPysparkConfigLoggingConfig
@@ -274,7 +301,9 @@ public partial class V1beta1JobSpecForProviderPysparkConfigLoggingConfig
     [JsonPropertyName("driverLogLevels")]
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderPysparkConfig
@@ -311,7 +340,9 @@ public partial class V1beta1JobSpecForProviderPysparkConfig
     [JsonPropertyName("pythonFileUris")]
     public IList<string>? PythonFileUris { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderReference
@@ -320,7 +351,9 @@ public partial class V1beta1JobSpecForProviderReference
     [JsonPropertyName("jobId")]
     public string? JobId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderRegionRefPolicy
@@ -333,7 +366,9 @@ public partial class V1beta1JobSpecForProviderRegionRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in dataproc to populate region.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderRegionRef
@@ -346,7 +381,9 @@ public partial class V1beta1JobSpecForProviderRegionRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecForProviderRegionRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderRegionSelectorPolicy
@@ -359,7 +396,9 @@ public partial class V1beta1JobSpecForProviderRegionSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in dataproc to populate region.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderRegionSelector
@@ -376,7 +415,9 @@ public partial class V1beta1JobSpecForProviderRegionSelector
     [JsonPropertyName("policy")]
     public V1beta1JobSpecForProviderRegionSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderScheduling
@@ -389,7 +430,9 @@ public partial class V1beta1JobSpecForProviderScheduling
     [JsonPropertyName("maxFailuresTotal")]
     public double? MaxFailuresTotal { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderSparkConfigLoggingConfig
@@ -398,7 +441,9 @@ public partial class V1beta1JobSpecForProviderSparkConfigLoggingConfig
     [JsonPropertyName("driverLogLevels")]
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderSparkConfig
@@ -435,7 +480,9 @@ public partial class V1beta1JobSpecForProviderSparkConfig
     [JsonPropertyName("properties")]
     public IDictionary<string, string>? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderSparksqlConfigLoggingConfig
@@ -444,7 +491,9 @@ public partial class V1beta1JobSpecForProviderSparksqlConfigLoggingConfig
     [JsonPropertyName("driverLogLevels")]
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderSparksqlConfig
@@ -473,7 +522,9 @@ public partial class V1beta1JobSpecForProviderSparksqlConfig
     [JsonPropertyName("scriptVariables")]
     public IDictionary<string, string>? ScriptVariables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProvider
@@ -542,7 +593,9 @@ public partial class V1beta1JobSpecForProvider
     [JsonPropertyName("sparksqlConfig")]
     public IList<V1beta1JobSpecForProviderSparksqlConfig>? SparksqlConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderHadoopConfigLoggingConfig
@@ -551,7 +604,9 @@ public partial class V1beta1JobSpecInitProviderHadoopConfigLoggingConfig
     [JsonPropertyName("driverLogLevels")]
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderHadoopConfig
@@ -588,7 +643,9 @@ public partial class V1beta1JobSpecInitProviderHadoopConfig
     [JsonPropertyName("properties")]
     public IDictionary<string, string>? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderHiveConfig
@@ -617,7 +674,9 @@ public partial class V1beta1JobSpecInitProviderHiveConfig
     [JsonPropertyName("scriptVariables")]
     public IDictionary<string, string>? ScriptVariables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderPigConfigLoggingConfig
@@ -626,7 +685,9 @@ public partial class V1beta1JobSpecInitProviderPigConfigLoggingConfig
     [JsonPropertyName("driverLogLevels")]
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderPigConfig
@@ -659,7 +720,9 @@ public partial class V1beta1JobSpecInitProviderPigConfig
     [JsonPropertyName("scriptVariables")]
     public IDictionary<string, string>? ScriptVariables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderPlacementClusterNameRefPolicy
@@ -672,7 +735,9 @@ public partial class V1beta1JobSpecInitProviderPlacementClusterNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in dataproc to populate clusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderPlacementClusterNameRef
@@ -685,7 +750,9 @@ public partial class V1beta1JobSpecInitProviderPlacementClusterNameRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecInitProviderPlacementClusterNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderPlacementClusterNameSelectorPolicy
@@ -698,7 +765,9 @@ public partial class V1beta1JobSpecInitProviderPlacementClusterNameSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in dataproc to populate clusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderPlacementClusterNameSelector
@@ -715,7 +784,9 @@ public partial class V1beta1JobSpecInitProviderPlacementClusterNameSelector
     [JsonPropertyName("policy")]
     public V1beta1JobSpecInitProviderPlacementClusterNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderPlacement
@@ -732,7 +803,9 @@ public partial class V1beta1JobSpecInitProviderPlacement
     [JsonPropertyName("clusterNameSelector")]
     public V1beta1JobSpecInitProviderPlacementClusterNameSelector? ClusterNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderPrestoConfigLoggingConfig
@@ -741,7 +814,9 @@ public partial class V1beta1JobSpecInitProviderPrestoConfigLoggingConfig
     [JsonPropertyName("driverLogLevels")]
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderPrestoConfig
@@ -774,7 +849,9 @@ public partial class V1beta1JobSpecInitProviderPrestoConfig
     [JsonPropertyName("queryList")]
     public IList<string>? QueryList { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderPysparkConfigLoggingConfig
@@ -783,7 +860,9 @@ public partial class V1beta1JobSpecInitProviderPysparkConfigLoggingConfig
     [JsonPropertyName("driverLogLevels")]
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderPysparkConfig
@@ -820,7 +899,9 @@ public partial class V1beta1JobSpecInitProviderPysparkConfig
     [JsonPropertyName("pythonFileUris")]
     public IList<string>? PythonFileUris { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderReference
@@ -829,7 +910,9 @@ public partial class V1beta1JobSpecInitProviderReference
     [JsonPropertyName("jobId")]
     public string? JobId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderRegionRefPolicy
@@ -842,7 +925,9 @@ public partial class V1beta1JobSpecInitProviderRegionRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in dataproc to populate region.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderRegionRef
@@ -855,7 +940,9 @@ public partial class V1beta1JobSpecInitProviderRegionRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecInitProviderRegionRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderRegionSelectorPolicy
@@ -868,7 +955,9 @@ public partial class V1beta1JobSpecInitProviderRegionSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in dataproc to populate region.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderRegionSelector
@@ -885,7 +974,9 @@ public partial class V1beta1JobSpecInitProviderRegionSelector
     [JsonPropertyName("policy")]
     public V1beta1JobSpecInitProviderRegionSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderScheduling
@@ -898,7 +989,9 @@ public partial class V1beta1JobSpecInitProviderScheduling
     [JsonPropertyName("maxFailuresTotal")]
     public double? MaxFailuresTotal { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderSparkConfigLoggingConfig
@@ -907,7 +1000,9 @@ public partial class V1beta1JobSpecInitProviderSparkConfigLoggingConfig
     [JsonPropertyName("driverLogLevels")]
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderSparkConfig
@@ -944,7 +1039,9 @@ public partial class V1beta1JobSpecInitProviderSparkConfig
     [JsonPropertyName("properties")]
     public IDictionary<string, string>? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderSparksqlConfigLoggingConfig
@@ -953,7 +1050,9 @@ public partial class V1beta1JobSpecInitProviderSparksqlConfigLoggingConfig
     [JsonPropertyName("driverLogLevels")]
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderSparksqlConfig
@@ -982,7 +1081,9 @@ public partial class V1beta1JobSpecInitProviderSparksqlConfig
     [JsonPropertyName("scriptVariables")]
     public IDictionary<string, string>? ScriptVariables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProvider
@@ -1051,7 +1152,9 @@ public partial class V1beta1JobSpecInitProvider
     [JsonPropertyName("sparksqlConfig")]
     public IList<V1beta1JobSpecInitProviderSparksqlConfig>? SparksqlConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecProviderConfigRefPolicy
@@ -1064,7 +1167,9 @@ public partial class V1beta1JobSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecProviderConfigRef
@@ -1077,7 +1182,9 @@ public partial class V1beta1JobSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecWriteConnectionSecretToRef
@@ -1090,7 +1197,9 @@ public partial class V1beta1JobSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>JobSpec defines the desired state of Job</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpec
@@ -1119,7 +1228,9 @@ public partial class V1beta1JobSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1JobSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderHadoopConfigLoggingConfig
@@ -1128,7 +1239,9 @@ public partial class V1beta1JobStatusAtProviderHadoopConfigLoggingConfig
     [JsonPropertyName("driverLogLevels")]
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderHadoopConfig
@@ -1165,7 +1278,9 @@ public partial class V1beta1JobStatusAtProviderHadoopConfig
     [JsonPropertyName("properties")]
     public IDictionary<string, string>? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderHiveConfig
@@ -1194,7 +1309,9 @@ public partial class V1beta1JobStatusAtProviderHiveConfig
     [JsonPropertyName("scriptVariables")]
     public IDictionary<string, string>? ScriptVariables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderPigConfigLoggingConfig
@@ -1203,7 +1320,9 @@ public partial class V1beta1JobStatusAtProviderPigConfigLoggingConfig
     [JsonPropertyName("driverLogLevels")]
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderPigConfig
@@ -1236,7 +1355,9 @@ public partial class V1beta1JobStatusAtProviderPigConfig
     [JsonPropertyName("scriptVariables")]
     public IDictionary<string, string>? ScriptVariables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderPlacement
@@ -1249,7 +1370,9 @@ public partial class V1beta1JobStatusAtProviderPlacement
     [JsonPropertyName("clusterUuid")]
     public string? ClusterUuid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderPrestoConfigLoggingConfig
@@ -1258,7 +1381,9 @@ public partial class V1beta1JobStatusAtProviderPrestoConfigLoggingConfig
     [JsonPropertyName("driverLogLevels")]
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderPrestoConfig
@@ -1291,7 +1416,9 @@ public partial class V1beta1JobStatusAtProviderPrestoConfig
     [JsonPropertyName("queryList")]
     public IList<string>? QueryList { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderPysparkConfigLoggingConfig
@@ -1300,7 +1427,9 @@ public partial class V1beta1JobStatusAtProviderPysparkConfigLoggingConfig
     [JsonPropertyName("driverLogLevels")]
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderPysparkConfig
@@ -1337,7 +1466,9 @@ public partial class V1beta1JobStatusAtProviderPysparkConfig
     [JsonPropertyName("pythonFileUris")]
     public IList<string>? PythonFileUris { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderReference
@@ -1346,7 +1477,9 @@ public partial class V1beta1JobStatusAtProviderReference
     [JsonPropertyName("jobId")]
     public string? JobId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderScheduling
@@ -1359,7 +1492,9 @@ public partial class V1beta1JobStatusAtProviderScheduling
     [JsonPropertyName("maxFailuresTotal")]
     public double? MaxFailuresTotal { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderSparkConfigLoggingConfig
@@ -1368,7 +1503,9 @@ public partial class V1beta1JobStatusAtProviderSparkConfigLoggingConfig
     [JsonPropertyName("driverLogLevels")]
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderSparkConfig
@@ -1405,7 +1542,9 @@ public partial class V1beta1JobStatusAtProviderSparkConfig
     [JsonPropertyName("properties")]
     public IDictionary<string, string>? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderSparksqlConfigLoggingConfig
@@ -1414,7 +1553,9 @@ public partial class V1beta1JobStatusAtProviderSparksqlConfigLoggingConfig
     [JsonPropertyName("driverLogLevels")]
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderSparksqlConfig
@@ -1443,7 +1584,9 @@ public partial class V1beta1JobStatusAtProviderSparksqlConfig
     [JsonPropertyName("scriptVariables")]
     public IDictionary<string, string>? ScriptVariables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderStatus
@@ -1464,7 +1607,9 @@ public partial class V1beta1JobStatusAtProviderStatus
     [JsonPropertyName("substate")]
     public string? Substate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProvider
@@ -1549,7 +1694,9 @@ public partial class V1beta1JobStatusAtProvider
     [JsonPropertyName("terraformLabels")]
     public IDictionary<string, string>? TerraformLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusConditions
@@ -1578,7 +1725,9 @@ public partial class V1beta1JobStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>JobStatus defines the observed state of Job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatus
@@ -1595,7 +1744,9 @@ public partial class V1beta1JobStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Job is the Schema for the Jobs API. Manages a job resource within a Dataproc cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1625,3 +1776,4 @@ public partial class V1beta1Job : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1
     [JsonPropertyName("status")]
     public V1beta1JobStatus? Status { get; set; }
 }
+#nullable disable

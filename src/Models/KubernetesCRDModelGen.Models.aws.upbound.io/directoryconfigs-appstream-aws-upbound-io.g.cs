@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appstream.aws.upbound.io;
+#nullable enable
 /// <summary>DirectoryConfig is the Schema for the DirectoryConfigs API. Provides an AppStream Directory Config</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DirectoryConfigList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1DirectoryConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Password for the account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectoryConfigSpecForProviderServiceAccountCredentialsAccountPasswordSecretRef
@@ -50,7 +53,9 @@ public partial class V1beta1DirectoryConfigSpecForProviderServiceAccountCredenti
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectoryConfigSpecForProviderServiceAccountCredentials
@@ -63,7 +68,9 @@ public partial class V1beta1DirectoryConfigSpecForProviderServiceAccountCredenti
     [JsonPropertyName("accountPasswordSecretRef")]
     public V1beta1DirectoryConfigSpecForProviderServiceAccountCredentialsAccountPasswordSecretRef? AccountPasswordSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectoryConfigSpecForProvider
@@ -84,7 +91,9 @@ public partial class V1beta1DirectoryConfigSpecForProvider
     [JsonPropertyName("serviceAccountCredentials")]
     public IList<V1beta1DirectoryConfigSpecForProviderServiceAccountCredentials>? ServiceAccountCredentials { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Password for the account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectoryConfigSpecInitProviderServiceAccountCredentialsAccountPasswordSecretRef
@@ -101,7 +110,9 @@ public partial class V1beta1DirectoryConfigSpecInitProviderServiceAccountCredent
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectoryConfigSpecInitProviderServiceAccountCredentials
@@ -114,7 +125,9 @@ public partial class V1beta1DirectoryConfigSpecInitProviderServiceAccountCredent
     [JsonPropertyName("accountPasswordSecretRef")]
     public V1beta1DirectoryConfigSpecInitProviderServiceAccountCredentialsAccountPasswordSecretRef AccountPasswordSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectoryConfigSpecInitProvider
@@ -131,7 +144,9 @@ public partial class V1beta1DirectoryConfigSpecInitProvider
     [JsonPropertyName("serviceAccountCredentials")]
     public IList<V1beta1DirectoryConfigSpecInitProviderServiceAccountCredentials>? ServiceAccountCredentials { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectoryConfigSpecProviderConfigRefPolicy
@@ -144,7 +159,9 @@ public partial class V1beta1DirectoryConfigSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectoryConfigSpecProviderConfigRef
@@ -157,7 +174,9 @@ public partial class V1beta1DirectoryConfigSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1DirectoryConfigSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectoryConfigSpecWriteConnectionSecretToRef
@@ -170,7 +189,9 @@ public partial class V1beta1DirectoryConfigSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DirectoryConfigSpec defines the desired state of DirectoryConfig</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectoryConfigSpec
@@ -199,7 +220,9 @@ public partial class V1beta1DirectoryConfigSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DirectoryConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectoryConfigStatusAtProviderServiceAccountCredentials
@@ -208,7 +231,9 @@ public partial class V1beta1DirectoryConfigStatusAtProviderServiceAccountCredent
     [JsonPropertyName("accountName")]
     public string? AccountName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectoryConfigStatusAtProvider
@@ -237,7 +262,9 @@ public partial class V1beta1DirectoryConfigStatusAtProvider
     [JsonPropertyName("serviceAccountCredentials")]
     public IList<V1beta1DirectoryConfigStatusAtProviderServiceAccountCredentials>? ServiceAccountCredentials { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectoryConfigStatusConditions
@@ -266,7 +293,9 @@ public partial class V1beta1DirectoryConfigStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DirectoryConfigStatus defines the observed state of DirectoryConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectoryConfigStatus
@@ -283,7 +312,9 @@ public partial class V1beta1DirectoryConfigStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DirectoryConfig is the Schema for the DirectoryConfigs API. Provides an AppStream Directory Config</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -313,3 +344,4 @@ public partial class V1beta1DirectoryConfig : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1DirectoryConfigStatus? Status { get; set; }
 }
+#nullable disable

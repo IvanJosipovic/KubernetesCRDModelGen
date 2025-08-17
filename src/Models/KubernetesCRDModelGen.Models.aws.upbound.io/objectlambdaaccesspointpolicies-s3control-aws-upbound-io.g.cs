@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.s3control.aws.upbound.io;
+#nullable enable
 /// <summary>ObjectLambdaAccessPointPolicy is the Schema for the ObjectLambdaAccessPointPolicys API. Provides a resource to manage an S3 Object Lambda Access Point resource policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ObjectLambdaAccessPointPolicyList : IKubernetesObjec
     [JsonPropertyName("items")]
     public IList<V1beta1ObjectLambdaAccessPointPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectLambdaAccessPointPolicySpecForProviderNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ObjectLambdaAccessPointPolicySpecForProviderNameRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ObjectLambdaAccessPoint in s3control to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectLambdaAccessPointPolicySpecForProviderNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1ObjectLambdaAccessPointPolicySpecForProviderNameRef
     [JsonPropertyName("policy")]
     public V1beta1ObjectLambdaAccessPointPolicySpecForProviderNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectLambdaAccessPointPolicySpecForProviderNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1ObjectLambdaAccessPointPolicySpecForProviderNameSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ObjectLambdaAccessPoint in s3control to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectLambdaAccessPointPolicySpecForProviderNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1ObjectLambdaAccessPointPolicySpecForProviderNameSele
     [JsonPropertyName("policy")]
     public V1beta1ObjectLambdaAccessPointPolicySpecForProviderNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectLambdaAccessPointPolicySpecForProvider
@@ -118,7 +129,9 @@ public partial class V1beta1ObjectLambdaAccessPointPolicySpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectLambdaAccessPointPolicySpecInitProviderNameRefPolicy
@@ -131,7 +144,9 @@ public partial class V1beta1ObjectLambdaAccessPointPolicySpecInitProviderNameRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ObjectLambdaAccessPoint in s3control to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectLambdaAccessPointPolicySpecInitProviderNameRef
@@ -144,7 +159,9 @@ public partial class V1beta1ObjectLambdaAccessPointPolicySpecInitProviderNameRef
     [JsonPropertyName("policy")]
     public V1beta1ObjectLambdaAccessPointPolicySpecInitProviderNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectLambdaAccessPointPolicySpecInitProviderNameSelectorPolicy
@@ -157,7 +174,9 @@ public partial class V1beta1ObjectLambdaAccessPointPolicySpecInitProviderNameSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ObjectLambdaAccessPoint in s3control to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectLambdaAccessPointPolicySpecInitProviderNameSelector
@@ -174,7 +193,9 @@ public partial class V1beta1ObjectLambdaAccessPointPolicySpecInitProviderNameSel
     [JsonPropertyName("policy")]
     public V1beta1ObjectLambdaAccessPointPolicySpecInitProviderNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectLambdaAccessPointPolicySpecInitProvider
@@ -199,7 +220,9 @@ public partial class V1beta1ObjectLambdaAccessPointPolicySpecInitProvider
     [JsonPropertyName("policy")]
     public string? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectLambdaAccessPointPolicySpecProviderConfigRefPolicy
@@ -212,7 +235,9 @@ public partial class V1beta1ObjectLambdaAccessPointPolicySpecProviderConfigRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectLambdaAccessPointPolicySpecProviderConfigRef
@@ -225,7 +250,9 @@ public partial class V1beta1ObjectLambdaAccessPointPolicySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ObjectLambdaAccessPointPolicySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectLambdaAccessPointPolicySpecWriteConnectionSecretToRef
@@ -238,7 +265,9 @@ public partial class V1beta1ObjectLambdaAccessPointPolicySpecWriteConnectionSecr
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObjectLambdaAccessPointPolicySpec defines the desired state of ObjectLambdaAccessPointPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectLambdaAccessPointPolicySpec
@@ -267,7 +296,9 @@ public partial class V1beta1ObjectLambdaAccessPointPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ObjectLambdaAccessPointPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectLambdaAccessPointPolicyStatusAtProvider
@@ -296,7 +327,9 @@ public partial class V1beta1ObjectLambdaAccessPointPolicyStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectLambdaAccessPointPolicyStatusConditions
@@ -325,7 +358,9 @@ public partial class V1beta1ObjectLambdaAccessPointPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObjectLambdaAccessPointPolicyStatus defines the observed state of ObjectLambdaAccessPointPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectLambdaAccessPointPolicyStatus
@@ -342,7 +377,9 @@ public partial class V1beta1ObjectLambdaAccessPointPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObjectLambdaAccessPointPolicy is the Schema for the ObjectLambdaAccessPointPolicys API. Provides a resource to manage an S3 Object Lambda Access Point resource policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -372,3 +409,4 @@ public partial class V1beta1ObjectLambdaAccessPointPolicy : IKubernetesObject<V1
     [JsonPropertyName("status")]
     public V1beta1ObjectLambdaAccessPointPolicyStatus? Status { get; set; }
 }
+#nullable disable

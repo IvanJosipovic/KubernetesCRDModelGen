@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.efs.aws.m.upbound.io;
+#nullable enable
 /// <summary>FileSystemPolicy is the Schema for the FileSystemPolicys API. Provides an Elastic File System (EFS) File System Policy resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FileSystemPolicyList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1FileSystemPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FileSystemPolicySpecForProviderFileSystemIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1FileSystemPolicySpecForProviderFileSystemIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a FileSystem in efs to populate fileSystemId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FileSystemPolicySpecForProviderFileSystemIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1FileSystemPolicySpecForProviderFileSystemIdRef
     [JsonPropertyName("policy")]
     public V1beta1FileSystemPolicySpecForProviderFileSystemIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FileSystemPolicySpecForProviderFileSystemIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1FileSystemPolicySpecForProviderFileSystemIdSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a FileSystem in efs to populate fileSystemId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FileSystemPolicySpecForProviderFileSystemIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1FileSystemPolicySpecForProviderFileSystemIdSelector
     [JsonPropertyName("policy")]
     public V1beta1FileSystemPolicySpecForProviderFileSystemIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FileSystemPolicySpecForProvider
@@ -126,7 +137,9 @@ public partial class V1beta1FileSystemPolicySpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FileSystemPolicySpecInitProviderFileSystemIdRefPolicy
@@ -139,7 +152,9 @@ public partial class V1beta1FileSystemPolicySpecInitProviderFileSystemIdRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a FileSystem in efs to populate fileSystemId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FileSystemPolicySpecInitProviderFileSystemIdRef
@@ -156,7 +171,9 @@ public partial class V1beta1FileSystemPolicySpecInitProviderFileSystemIdRef
     [JsonPropertyName("policy")]
     public V1beta1FileSystemPolicySpecInitProviderFileSystemIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FileSystemPolicySpecInitProviderFileSystemIdSelectorPolicy
@@ -169,7 +186,9 @@ public partial class V1beta1FileSystemPolicySpecInitProviderFileSystemIdSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a FileSystem in efs to populate fileSystemId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FileSystemPolicySpecInitProviderFileSystemIdSelector
@@ -190,7 +209,9 @@ public partial class V1beta1FileSystemPolicySpecInitProviderFileSystemIdSelector
     [JsonPropertyName("policy")]
     public V1beta1FileSystemPolicySpecInitProviderFileSystemIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FileSystemPolicySpecInitProvider
@@ -215,7 +236,9 @@ public partial class V1beta1FileSystemPolicySpecInitProvider
     [JsonPropertyName("policy")]
     public string? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FileSystemPolicySpecProviderConfigRef
@@ -228,7 +251,9 @@ public partial class V1beta1FileSystemPolicySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FileSystemPolicySpecWriteConnectionSecretToRef
@@ -237,7 +262,9 @@ public partial class V1beta1FileSystemPolicySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FileSystemPolicySpec defines the desired state of FileSystemPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FileSystemPolicySpec
@@ -262,7 +289,9 @@ public partial class V1beta1FileSystemPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1FileSystemPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FileSystemPolicyStatusAtProvider
@@ -287,7 +316,9 @@ public partial class V1beta1FileSystemPolicyStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FileSystemPolicyStatusConditions
@@ -316,7 +347,9 @@ public partial class V1beta1FileSystemPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FileSystemPolicyStatus defines the observed state of FileSystemPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FileSystemPolicyStatus
@@ -333,7 +366,9 @@ public partial class V1beta1FileSystemPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FileSystemPolicy is the Schema for the FileSystemPolicys API. Provides an Elastic File System (EFS) File System Policy resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -363,3 +398,4 @@ public partial class V1beta1FileSystemPolicy : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1FileSystemPolicyStatus? Status { get; set; }
 }
+#nullable disable

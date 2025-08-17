@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.m.upbound.io;
+#nullable enable
 /// <summary>DefaultSecurityGroup is the Schema for the DefaultSecurityGroups API. Manage a default security group resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DefaultSecurityGroupList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1DefaultSecurityGroup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSecurityGroupSpecForProviderEgress
@@ -74,7 +77,9 @@ public partial class V1beta1DefaultSecurityGroupSpecForProviderEgress
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSecurityGroupSpecForProviderIngress
@@ -115,7 +120,9 @@ public partial class V1beta1DefaultSecurityGroupSpecForProviderIngress
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSecurityGroupSpecForProviderVpcIdRefPolicy
@@ -128,7 +135,9 @@ public partial class V1beta1DefaultSecurityGroupSpecForProviderVpcIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSecurityGroupSpecForProviderVpcIdRef
@@ -145,7 +154,9 @@ public partial class V1beta1DefaultSecurityGroupSpecForProviderVpcIdRef
     [JsonPropertyName("policy")]
     public V1beta1DefaultSecurityGroupSpecForProviderVpcIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSecurityGroupSpecForProviderVpcIdSelectorPolicy
@@ -158,7 +169,9 @@ public partial class V1beta1DefaultSecurityGroupSpecForProviderVpcIdSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSecurityGroupSpecForProviderVpcIdSelector
@@ -179,7 +192,9 @@ public partial class V1beta1DefaultSecurityGroupSpecForProviderVpcIdSelector
     [JsonPropertyName("policy")]
     public V1beta1DefaultSecurityGroupSpecForProviderVpcIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSecurityGroupSpecForProvider
@@ -216,7 +231,9 @@ public partial class V1beta1DefaultSecurityGroupSpecForProvider
     [JsonPropertyName("vpcIdSelector")]
     public V1beta1DefaultSecurityGroupSpecForProviderVpcIdSelector? VpcIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSecurityGroupSpecInitProviderEgress
@@ -257,7 +274,9 @@ public partial class V1beta1DefaultSecurityGroupSpecInitProviderEgress
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSecurityGroupSpecInitProviderIngress
@@ -298,7 +317,9 @@ public partial class V1beta1DefaultSecurityGroupSpecInitProviderIngress
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSecurityGroupSpecInitProviderVpcIdRefPolicy
@@ -311,7 +332,9 @@ public partial class V1beta1DefaultSecurityGroupSpecInitProviderVpcIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSecurityGroupSpecInitProviderVpcIdRef
@@ -328,7 +351,9 @@ public partial class V1beta1DefaultSecurityGroupSpecInitProviderVpcIdRef
     [JsonPropertyName("policy")]
     public V1beta1DefaultSecurityGroupSpecInitProviderVpcIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSecurityGroupSpecInitProviderVpcIdSelectorPolicy
@@ -341,7 +366,9 @@ public partial class V1beta1DefaultSecurityGroupSpecInitProviderVpcIdSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSecurityGroupSpecInitProviderVpcIdSelector
@@ -362,7 +389,9 @@ public partial class V1beta1DefaultSecurityGroupSpecInitProviderVpcIdSelector
     [JsonPropertyName("policy")]
     public V1beta1DefaultSecurityGroupSpecInitProviderVpcIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSecurityGroupSpecInitProvider
@@ -395,7 +424,9 @@ public partial class V1beta1DefaultSecurityGroupSpecInitProvider
     [JsonPropertyName("vpcIdSelector")]
     public V1beta1DefaultSecurityGroupSpecInitProviderVpcIdSelector? VpcIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSecurityGroupSpecProviderConfigRef
@@ -408,7 +439,9 @@ public partial class V1beta1DefaultSecurityGroupSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSecurityGroupSpecWriteConnectionSecretToRef
@@ -417,7 +450,9 @@ public partial class V1beta1DefaultSecurityGroupSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DefaultSecurityGroupSpec defines the desired state of DefaultSecurityGroup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSecurityGroupSpec
@@ -442,7 +477,9 @@ public partial class V1beta1DefaultSecurityGroupSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DefaultSecurityGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSecurityGroupStatusAtProviderEgress
@@ -483,7 +520,9 @@ public partial class V1beta1DefaultSecurityGroupStatusAtProviderEgress
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSecurityGroupStatusAtProviderIngress
@@ -524,7 +563,9 @@ public partial class V1beta1DefaultSecurityGroupStatusAtProviderIngress
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSecurityGroupStatusAtProvider
@@ -577,7 +618,9 @@ public partial class V1beta1DefaultSecurityGroupStatusAtProvider
     [JsonPropertyName("vpcId")]
     public string? VpcId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSecurityGroupStatusConditions
@@ -606,7 +649,9 @@ public partial class V1beta1DefaultSecurityGroupStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DefaultSecurityGroupStatus defines the observed state of DefaultSecurityGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSecurityGroupStatus
@@ -623,7 +668,9 @@ public partial class V1beta1DefaultSecurityGroupStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DefaultSecurityGroup is the Schema for the DefaultSecurityGroups API. Manage a default security group resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -653,3 +700,4 @@ public partial class V1beta1DefaultSecurityGroup : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1DefaultSecurityGroupStatus? Status { get; set; }
 }
+#nullable disable

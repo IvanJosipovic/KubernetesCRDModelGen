@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudwatchlogs.aws.m.upbound.io;
+#nullable enable
 /// <summary>SubscriptionFilter is the Schema for the SubscriptionFilters API. Provides a CloudWatch Logs subscription filter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SubscriptionFilterList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1SubscriptionFilter> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionFilterSpecForProviderDestinationArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SubscriptionFilterSpecForProviderDestinationArnRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Stream in kinesis to populate destinationArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionFilterSpecForProviderDestinationArnRef
@@ -63,7 +68,9 @@ public partial class V1beta1SubscriptionFilterSpecForProviderDestinationArnRef
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionFilterSpecForProviderDestinationArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionFilterSpecForProviderDestinationArnSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1SubscriptionFilterSpecForProviderDestinationArnSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Stream in kinesis to populate destinationArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionFilterSpecForProviderDestinationArnSelector
@@ -97,7 +106,9 @@ public partial class V1beta1SubscriptionFilterSpecForProviderDestinationArnSelec
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionFilterSpecForProviderDestinationArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionFilterSpecForProviderRoleArnRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1SubscriptionFilterSpecForProviderRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionFilterSpecForProviderRoleArnRef
@@ -127,7 +140,9 @@ public partial class V1beta1SubscriptionFilterSpecForProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionFilterSpecForProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionFilterSpecForProviderRoleArnSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1SubscriptionFilterSpecForProviderRoleArnSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionFilterSpecForProviderRoleArnSelector
@@ -161,7 +178,9 @@ public partial class V1beta1SubscriptionFilterSpecForProviderRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionFilterSpecForProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionFilterSpecForProvider
@@ -210,7 +229,9 @@ public partial class V1beta1SubscriptionFilterSpecForProvider
     [JsonPropertyName("roleArnSelector")]
     public V1beta1SubscriptionFilterSpecForProviderRoleArnSelector? RoleArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionFilterSpecInitProviderDestinationArnRefPolicy
@@ -223,7 +244,9 @@ public partial class V1beta1SubscriptionFilterSpecInitProviderDestinationArnRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Stream in kinesis to populate destinationArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionFilterSpecInitProviderDestinationArnRef
@@ -240,7 +263,9 @@ public partial class V1beta1SubscriptionFilterSpecInitProviderDestinationArnRef
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionFilterSpecInitProviderDestinationArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionFilterSpecInitProviderDestinationArnSelectorPolicy
@@ -253,7 +278,9 @@ public partial class V1beta1SubscriptionFilterSpecInitProviderDestinationArnSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Stream in kinesis to populate destinationArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionFilterSpecInitProviderDestinationArnSelector
@@ -274,7 +301,9 @@ public partial class V1beta1SubscriptionFilterSpecInitProviderDestinationArnSele
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionFilterSpecInitProviderDestinationArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionFilterSpecInitProviderRoleArnRefPolicy
@@ -287,7 +316,9 @@ public partial class V1beta1SubscriptionFilterSpecInitProviderRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionFilterSpecInitProviderRoleArnRef
@@ -304,7 +335,9 @@ public partial class V1beta1SubscriptionFilterSpecInitProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionFilterSpecInitProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionFilterSpecInitProviderRoleArnSelectorPolicy
@@ -317,7 +350,9 @@ public partial class V1beta1SubscriptionFilterSpecInitProviderRoleArnSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionFilterSpecInitProviderRoleArnSelector
@@ -338,7 +373,9 @@ public partial class V1beta1SubscriptionFilterSpecInitProviderRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionFilterSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionFilterSpecInitProvider
@@ -383,7 +420,9 @@ public partial class V1beta1SubscriptionFilterSpecInitProvider
     [JsonPropertyName("roleArnSelector")]
     public V1beta1SubscriptionFilterSpecInitProviderRoleArnSelector? RoleArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionFilterSpecProviderConfigRef
@@ -396,7 +435,9 @@ public partial class V1beta1SubscriptionFilterSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionFilterSpecWriteConnectionSecretToRef
@@ -405,7 +446,9 @@ public partial class V1beta1SubscriptionFilterSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubscriptionFilterSpec defines the desired state of SubscriptionFilter</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionFilterSpec
@@ -430,7 +473,9 @@ public partial class V1beta1SubscriptionFilterSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SubscriptionFilterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionFilterStatusAtProvider
@@ -467,7 +512,9 @@ public partial class V1beta1SubscriptionFilterStatusAtProvider
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionFilterStatusConditions
@@ -496,7 +543,9 @@ public partial class V1beta1SubscriptionFilterStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubscriptionFilterStatus defines the observed state of SubscriptionFilter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionFilterStatus
@@ -513,7 +562,9 @@ public partial class V1beta1SubscriptionFilterStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubscriptionFilter is the Schema for the SubscriptionFilters API. Provides a CloudWatch Logs subscription filter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -543,3 +594,4 @@ public partial class V1beta1SubscriptionFilter : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1SubscriptionFilterStatus? Status { get; set; }
 }
+#nullable disable

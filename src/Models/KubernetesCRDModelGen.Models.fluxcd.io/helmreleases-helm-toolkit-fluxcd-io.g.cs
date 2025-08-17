@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.helm.toolkit.fluxcd.io;
+#nullable enable
 /// <summary>HelmRelease is the Schema for the helmreleases API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V2HelmReleaseList : IKubernetesObject<V1ListMeta>, IItems<V
     [JsonPropertyName("items")]
     public IList<V2HelmRelease> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObjectMeta holds the template for metadata like labels and annotations.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecChartMetadata
@@ -46,7 +49,9 @@ public partial class V2HelmReleaseSpecChartMetadata
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The name and namespace of the v1.Source the chart is available at.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecChartSpecSourceRef
@@ -67,7 +72,9 @@ public partial class V2HelmReleaseSpecChartSpecSourceRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretRef specifies the Kubernetes Secret containing the trusted public keys.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecChartSpecVerifySecretRef
@@ -76,7 +83,9 @@ public partial class V2HelmReleaseSpecChartSpecVerifySecretRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Verify contains the secret name containing the trusted public keys used to verify the signature and specifies which provider to use to check whether OCI image is authentic. This field is only supported for OCI sources. Chart dependencies, which are not bundled in the umbrella chart artifact, are not verified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecChartSpecVerify
@@ -89,7 +98,9 @@ public partial class V2HelmReleaseSpecChartSpecVerify
     [JsonPropertyName("secretRef")]
     public V2HelmReleaseSpecChartSpecVerifySecretRef? SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Spec holds the template for the v1.HelmChartSpec for this HelmRelease.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecChartSpec
@@ -126,7 +137,9 @@ public partial class V2HelmReleaseSpecChartSpec
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Chart defines the template of the v1.HelmChart that should be created for this HelmRelease.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecChart
@@ -139,7 +152,9 @@ public partial class V2HelmReleaseSpecChart
     [JsonPropertyName("spec")]
     public V2HelmReleaseSpecChartSpec Spec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ChartRef holds a reference to a source controller resource containing the Helm chart artifact.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecChartRef
@@ -160,7 +175,9 @@ public partial class V2HelmReleaseSpecChartRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NamespacedObjectReference contains enough information to locate the referenced Kubernetes resource object in any namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecDependsOn
@@ -173,7 +190,9 @@ public partial class V2HelmReleaseSpecDependsOn
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Target is a selector for specifying Kubernetes objects to which this rule applies. If Target is not set, the Paths will be ignored for all Kubernetes objects within the manifest of the Helm release.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecDriftDetectionIgnoreTarget
@@ -206,7 +225,9 @@ public partial class V2HelmReleaseSpecDriftDetectionIgnoreTarget
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IgnoreRule defines a rule to selectively disregard specific changes during the drift detection process.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecDriftDetectionIgnore
@@ -219,7 +240,9 @@ public partial class V2HelmReleaseSpecDriftDetectionIgnore
     [JsonPropertyName("target")]
     public V2HelmReleaseSpecDriftDetectionIgnoreTarget? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DriftDetection holds the configuration for detecting and handling differences between the manifest in the Helm storage and the resources currently existing in the cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecDriftDetection
@@ -232,7 +255,9 @@ public partial class V2HelmReleaseSpecDriftDetection
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Remediation holds the remediation configuration for when the Helm install action for the HelmRelease fails. The default is to not perform any action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecInstallRemediation
@@ -249,7 +274,9 @@ public partial class V2HelmReleaseSpecInstallRemediation
     [JsonPropertyName("retries")]
     public int? Retries { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Install holds the configuration for Helm install actions for this HelmRelease.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecInstall
@@ -302,7 +329,9 @@ public partial class V2HelmReleaseSpecInstall
     [JsonPropertyName("timeout")]
     public string? Timeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretRef holds the name of a secret that contains a key with the kubeconfig file as the value. If no key is set, the key will default to 'value'. It is recommended that the kubeconfig is self-contained, and the secret is regularly updated if credentials such as a cloud-access-token expire. Cloud specific `cmd-path` auth helpers will not function without adding binaries and credentials to the Pod that is responsible for reconciling Kubernetes resources.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecKubeConfigSecretRef
@@ -315,7 +344,9 @@ public partial class V2HelmReleaseSpecKubeConfigSecretRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KubeConfig for reconciling the HelmRelease on a remote cluster. When used in combination with HelmReleaseSpec.ServiceAccountName, forces the controller to act on behalf of that Service Account at the target cluster. If the --default-service-account flag is set, its value will be used as a controller level fallback for when HelmReleaseSpec.ServiceAccountName is empty.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecKubeConfig
@@ -324,7 +355,9 @@ public partial class V2HelmReleaseSpecKubeConfig
     [JsonPropertyName("secretRef")]
     public V2HelmReleaseSpecKubeConfigSecretRef SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Image contains an image name, a new name, a new tag or digest, which will replace the original name and tag.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecPostRenderersKustomizeImages
@@ -345,7 +378,9 @@ public partial class V2HelmReleaseSpecPostRenderersKustomizeImages
     [JsonPropertyName("newTag")]
     public string? NewTag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Target points to the resources that the patch document should be applied to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecPostRenderersKustomizePatchesTarget
@@ -378,7 +413,9 @@ public partial class V2HelmReleaseSpecPostRenderersKustomizePatchesTarget
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Patch contains an inline StrategicMerge or JSON6902 patch, and the target the patch should be applied to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecPostRenderersKustomizePatches
@@ -391,7 +428,9 @@ public partial class V2HelmReleaseSpecPostRenderersKustomizePatches
     [JsonPropertyName("target")]
     public V2HelmReleaseSpecPostRenderersKustomizePatchesTarget? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Kustomization to apply as PostRenderer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecPostRenderersKustomize
@@ -404,7 +443,9 @@ public partial class V2HelmReleaseSpecPostRenderersKustomize
     [JsonPropertyName("patches")]
     public IList<V2HelmReleaseSpecPostRenderersKustomizePatches>? Patches { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PostRenderer contains a Helm PostRenderer specification.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecPostRenderers
@@ -413,7 +454,9 @@ public partial class V2HelmReleaseSpecPostRenderers
     [JsonPropertyName("kustomize")]
     public V2HelmReleaseSpecPostRenderersKustomize? Kustomize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Rollback holds the configuration for Helm rollback actions for this HelmRelease.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecRollback
@@ -446,7 +489,9 @@ public partial class V2HelmReleaseSpecRollback
     [JsonPropertyName("timeout")]
     public string? Timeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Filter holds the configuration for individual Helm test filters.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecTestFilters
@@ -459,7 +504,9 @@ public partial class V2HelmReleaseSpecTestFilters
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Test holds the configuration for Helm test actions for this HelmRelease.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecTest
@@ -480,7 +527,9 @@ public partial class V2HelmReleaseSpecTest
     [JsonPropertyName("timeout")]
     public string? Timeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Uninstall holds the configuration for Helm uninstall actions for this HelmRelease.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecUninstall
@@ -505,7 +554,9 @@ public partial class V2HelmReleaseSpecUninstall
     [JsonPropertyName("timeout")]
     public string? Timeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Remediation holds the remediation configuration for when the Helm upgrade action for the HelmRelease fails. The default is to not perform any action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecUpgradeRemediation
@@ -526,7 +577,9 @@ public partial class V2HelmReleaseSpecUpgradeRemediation
     [JsonPropertyName("strategy")]
     public string? Strategy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Upgrade holds the configuration for Helm upgrade actions for this HelmRelease.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecUpgrade
@@ -579,7 +632,9 @@ public partial class V2HelmReleaseSpecUpgrade
     [JsonPropertyName("timeout")]
     public string? Timeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ValuesReference contains a reference to a resource containing Helm values, and optionally the key they can be found at.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecValuesFrom
@@ -604,7 +659,9 @@ public partial class V2HelmReleaseSpecValuesFrom
     [JsonPropertyName("valuesKey")]
     public string? ValuesKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HelmReleaseSpec defines the desired state of a Helm release.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpec
@@ -697,7 +754,9 @@ public partial class V2HelmReleaseSpec
     [JsonPropertyName("valuesFrom")]
     public IList<V2HelmReleaseSpecValuesFrom>? ValuesFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition contains details for one aspect of the current state of this API Resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseStatusConditions
@@ -726,7 +785,9 @@ public partial class V2HelmReleaseStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TestHookStatus holds the status information for a test hook as observed to be run by the controller.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseStatusHistoryTestHooks
@@ -743,7 +804,9 @@ public partial class V2HelmReleaseStatusHistoryTestHooks
     [JsonPropertyName("phase")]
     public string? Phase { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Snapshot captures a point-in-time copy of the status information for a Helm release, as managed by the controller.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseStatusHistory
@@ -808,7 +871,9 @@ public partial class V2HelmReleaseStatusHistory
     [JsonPropertyName("version")]
     public int Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HelmReleaseStatus defines the observed state of a HelmRelease.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseStatus
@@ -889,7 +954,9 @@ public partial class V2HelmReleaseStatus
     [JsonPropertyName("upgradeFailures")]
     public long? UpgradeFailures { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HelmRelease is the Schema for the helmreleases API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -919,3 +986,4 @@ public partial class V2HelmRelease : IKubernetesObject<V1ObjectMeta>, ISpec<V2He
     [JsonPropertyName("status")]
     public V2HelmReleaseStatus? Status { get; set; }
 }
+#nullable disable

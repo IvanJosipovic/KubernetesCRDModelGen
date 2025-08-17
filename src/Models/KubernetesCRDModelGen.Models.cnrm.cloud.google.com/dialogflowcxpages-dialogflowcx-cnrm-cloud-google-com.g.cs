@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dialogflowcx.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1DialogflowCXPageList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1alpha1DialogflowCXPage> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecEntryFulfillmentConditionalCases
@@ -42,7 +45,9 @@ public partial class V1alpha1DialogflowCXPageSpecEntryFulfillmentConditionalCase
     [JsonPropertyName("cases")]
     public string? Cases { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Indicates that the conversation succeeded, i.e., the bot handled the issue that the customer talked to it about. Dialogflow only uses this to determine which conversations should be counted as successful and doesn't process the metadata in this message in any way. Note that Dialogflow also considers conversations that get to the conversation end page as successful even if they don't return ConversationSuccess. You may set this, for example: * In the entryFulfillment of a Page if entering the page indicates that the conversation succeeded. * In a webhook response when you determine that you handled the customer issue.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecEntryFulfillmentMessagesConversationSuccess
@@ -51,7 +56,9 @@ public partial class V1alpha1DialogflowCXPageSpecEntryFulfillmentMessagesConvers
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Indicates that the conversation should be handed off to a live agent. Dialogflow only uses this to determine which conversations were handed off to a human agent for measurement purposes. What else to do with this signal is up to you and your handoff procedures. You may set this, for example: * In the entryFulfillment of a Page if entering the page indicates something went extremely wrong in the conversation. * In a webhook response when you determine that the customer issue can only be handled by a human.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecEntryFulfillmentMessagesLiveAgentHandoff
@@ -60,7 +67,9 @@ public partial class V1alpha1DialogflowCXPageSpecEntryFulfillmentMessagesLiveAge
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A text or ssml response that is preferentially used for TTS output audio synthesis, as described in the comment on the ResponseMessage message.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecEntryFulfillmentMessagesOutputAudioText
@@ -77,7 +86,9 @@ public partial class V1alpha1DialogflowCXPageSpecEntryFulfillmentMessagesOutputA
     [JsonPropertyName("text")]
     public string? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies an audio clip to be played by the client as part of the response.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecEntryFulfillmentMessagesPlayAudio
@@ -90,7 +101,9 @@ public partial class V1alpha1DialogflowCXPageSpecEntryFulfillmentMessagesPlayAud
     [JsonPropertyName("audioUri")]
     public string AudioUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents the signal that telles the client to transfer the phone call connected to the agent to a third-party endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecEntryFulfillmentMessagesTelephonyTransferCall
@@ -99,7 +112,9 @@ public partial class V1alpha1DialogflowCXPageSpecEntryFulfillmentMessagesTelepho
     [JsonPropertyName("phoneNumber")]
     public string PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The text response message.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecEntryFulfillmentMessagesText
@@ -112,7 +127,9 @@ public partial class V1alpha1DialogflowCXPageSpecEntryFulfillmentMessagesText
     [JsonPropertyName("text")]
     public IList<string>? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecEntryFulfillmentMessages
@@ -149,7 +166,9 @@ public partial class V1alpha1DialogflowCXPageSpecEntryFulfillmentMessages
     [JsonPropertyName("text")]
     public V1alpha1DialogflowCXPageSpecEntryFulfillmentMessagesText? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecEntryFulfillmentSetParameterActions
@@ -162,7 +181,9 @@ public partial class V1alpha1DialogflowCXPageSpecEntryFulfillmentSetParameterAct
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The fulfillment to call when the session is entering the page.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecEntryFulfillment
@@ -191,7 +212,9 @@ public partial class V1alpha1DialogflowCXPageSpecEntryFulfillment
     [JsonPropertyName("webhook")]
     public string? Webhook { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecEventHandlersTriggerFulfillmentConditionalCases
@@ -200,7 +223,9 @@ public partial class V1alpha1DialogflowCXPageSpecEventHandlersTriggerFulfillment
     [JsonPropertyName("cases")]
     public string? Cases { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Indicates that the conversation succeeded, i.e., the bot handled the issue that the customer talked to it about. Dialogflow only uses this to determine which conversations should be counted as successful and doesn't process the metadata in this message in any way. Note that Dialogflow also considers conversations that get to the conversation end page as successful even if they don't return ConversationSuccess. You may set this, for example: * In the entryFulfillment of a Page if entering the page indicates that the conversation succeeded. * In a webhook response when you determine that you handled the customer issue.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecEventHandlersTriggerFulfillmentMessagesConversationSuccess
@@ -209,7 +234,9 @@ public partial class V1alpha1DialogflowCXPageSpecEventHandlersTriggerFulfillment
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Indicates that the conversation should be handed off to a live agent. Dialogflow only uses this to determine which conversations were handed off to a human agent for measurement purposes. What else to do with this signal is up to you and your handoff procedures. You may set this, for example: * In the entryFulfillment of a Page if entering the page indicates something went extremely wrong in the conversation. * In a webhook response when you determine that the customer issue can only be handled by a human.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecEventHandlersTriggerFulfillmentMessagesLiveAgentHandoff
@@ -218,7 +245,9 @@ public partial class V1alpha1DialogflowCXPageSpecEventHandlersTriggerFulfillment
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A text or ssml response that is preferentially used for TTS output audio synthesis, as described in the comment on the ResponseMessage message.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecEventHandlersTriggerFulfillmentMessagesOutputAudioText
@@ -235,7 +264,9 @@ public partial class V1alpha1DialogflowCXPageSpecEventHandlersTriggerFulfillment
     [JsonPropertyName("text")]
     public string? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies an audio clip to be played by the client as part of the response.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecEventHandlersTriggerFulfillmentMessagesPlayAudio
@@ -248,7 +279,9 @@ public partial class V1alpha1DialogflowCXPageSpecEventHandlersTriggerFulfillment
     [JsonPropertyName("audioUri")]
     public string AudioUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents the signal that telles the client to transfer the phone call connected to the agent to a third-party endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecEventHandlersTriggerFulfillmentMessagesTelephonyTransferCall
@@ -257,7 +290,9 @@ public partial class V1alpha1DialogflowCXPageSpecEventHandlersTriggerFulfillment
     [JsonPropertyName("phoneNumber")]
     public string PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The text response message.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecEventHandlersTriggerFulfillmentMessagesText
@@ -270,7 +305,9 @@ public partial class V1alpha1DialogflowCXPageSpecEventHandlersTriggerFulfillment
     [JsonPropertyName("text")]
     public IList<string>? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecEventHandlersTriggerFulfillmentMessages
@@ -307,7 +344,9 @@ public partial class V1alpha1DialogflowCXPageSpecEventHandlersTriggerFulfillment
     [JsonPropertyName("text")]
     public V1alpha1DialogflowCXPageSpecEventHandlersTriggerFulfillmentMessagesText? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecEventHandlersTriggerFulfillmentSetParameterActions
@@ -320,7 +359,9 @@ public partial class V1alpha1DialogflowCXPageSpecEventHandlersTriggerFulfillment
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecEventHandlersTriggerFulfillment
@@ -349,7 +390,9 @@ public partial class V1alpha1DialogflowCXPageSpecEventHandlersTriggerFulfillment
     [JsonPropertyName("webhook")]
     public string? Webhook { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecEventHandlers
@@ -374,7 +417,9 @@ public partial class V1alpha1DialogflowCXPageSpecEventHandlers
     [JsonPropertyName("triggerFulfillment")]
     public V1alpha1DialogflowCXPageSpecEventHandlersTriggerFulfillment? TriggerFulfillment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorInitialPromptFulfillmentConditionalCases
@@ -383,7 +428,9 @@ public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorIniti
     [JsonPropertyName("cases")]
     public string? Cases { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Indicates that the conversation succeeded, i.e., the bot handled the issue that the customer talked to it about. Dialogflow only uses this to determine which conversations should be counted as successful and doesn't process the metadata in this message in any way. Note that Dialogflow also considers conversations that get to the conversation end page as successful even if they don't return ConversationSuccess. You may set this, for example: * In the entryFulfillment of a Page if entering the page indicates that the conversation succeeded. * In a webhook response when you determine that you handled the customer issue.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorInitialPromptFulfillmentMessagesConversationSuccess
@@ -392,7 +439,9 @@ public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorIniti
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Indicates that the conversation should be handed off to a live agent. Dialogflow only uses this to determine which conversations were handed off to a human agent for measurement purposes. What else to do with this signal is up to you and your handoff procedures. You may set this, for example: * In the entryFulfillment of a Page if entering the page indicates something went extremely wrong in the conversation. * In a webhook response when you determine that the customer issue can only be handled by a human.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorInitialPromptFulfillmentMessagesLiveAgentHandoff
@@ -401,7 +450,9 @@ public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorIniti
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A text or ssml response that is preferentially used for TTS output audio synthesis, as described in the comment on the ResponseMessage message.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorInitialPromptFulfillmentMessagesOutputAudioText
@@ -418,7 +469,9 @@ public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorIniti
     [JsonPropertyName("text")]
     public string? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies an audio clip to be played by the client as part of the response.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorInitialPromptFulfillmentMessagesPlayAudio
@@ -431,7 +484,9 @@ public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorIniti
     [JsonPropertyName("audioUri")]
     public string AudioUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents the signal that telles the client to transfer the phone call connected to the agent to a third-party endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorInitialPromptFulfillmentMessagesTelephonyTransferCall
@@ -440,7 +495,9 @@ public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorIniti
     [JsonPropertyName("phoneNumber")]
     public string PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The text response message.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorInitialPromptFulfillmentMessagesText
@@ -453,7 +510,9 @@ public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorIniti
     [JsonPropertyName("text")]
     public IList<string>? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorInitialPromptFulfillmentMessages
@@ -490,7 +549,9 @@ public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorIniti
     [JsonPropertyName("text")]
     public V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorInitialPromptFulfillmentMessagesText? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorInitialPromptFulfillmentSetParameterActions
@@ -503,7 +564,9 @@ public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorIniti
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The fulfillment to provide the initial prompt that the agent can present to the user in order to fill the parameter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorInitialPromptFulfillment
@@ -532,7 +595,9 @@ public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorIniti
     [JsonPropertyName("webhook")]
     public string? Webhook { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentConditionalCases
@@ -541,7 +606,9 @@ public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorRepro
     [JsonPropertyName("cases")]
     public string? Cases { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Indicates that the conversation succeeded, i.e., the bot handled the issue that the customer talked to it about. Dialogflow only uses this to determine which conversations should be counted as successful and doesn't process the metadata in this message in any way. Note that Dialogflow also considers conversations that get to the conversation end page as successful even if they don't return ConversationSuccess. You may set this, for example: * In the entryFulfillment of a Page if entering the page indicates that the conversation succeeded. * In a webhook response when you determine that you handled the customer issue.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessagesConversationSuccess
@@ -550,7 +617,9 @@ public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorRepro
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Indicates that the conversation should be handed off to a live agent. Dialogflow only uses this to determine which conversations were handed off to a human agent for measurement purposes. What else to do with this signal is up to you and your handoff procedures. You may set this, for example: * In the entryFulfillment of a Page if entering the page indicates something went extremely wrong in the conversation. * In a webhook response when you determine that the customer issue can only be handled by a human.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessagesLiveAgentHandoff
@@ -559,7 +628,9 @@ public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorRepro
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A text or ssml response that is preferentially used for TTS output audio synthesis, as described in the comment on the ResponseMessage message.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessagesOutputAudioText
@@ -576,7 +647,9 @@ public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorRepro
     [JsonPropertyName("text")]
     public string? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies an audio clip to be played by the client as part of the response.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessagesPlayAudio
@@ -589,7 +662,9 @@ public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorRepro
     [JsonPropertyName("audioUri")]
     public string AudioUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents the signal that telles the client to transfer the phone call connected to the agent to a third-party endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessagesTelephonyTransferCall
@@ -598,7 +673,9 @@ public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorRepro
     [JsonPropertyName("phoneNumber")]
     public string PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The text response message.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessagesText
@@ -611,7 +688,9 @@ public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorRepro
     [JsonPropertyName("text")]
     public IList<string>? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessages
@@ -648,7 +727,9 @@ public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorRepro
     [JsonPropertyName("text")]
     public V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentMessagesText? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentSetParameterActions
@@ -661,7 +742,9 @@ public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorRepro
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillment
@@ -690,7 +773,9 @@ public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorRepro
     [JsonPropertyName("webhook")]
     public string? Webhook { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorRepromptEventHandlers
@@ -715,7 +800,9 @@ public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorRepro
     [JsonPropertyName("triggerFulfillment")]
     public V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillment? TriggerFulfillment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines fill behavior for the parameter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehavior
@@ -728,7 +815,9 @@ public partial class V1alpha1DialogflowCXPageSpecFormParametersFillBehavior
     [JsonPropertyName("repromptEventHandlers")]
     public IList<V1alpha1DialogflowCXPageSpecFormParametersFillBehaviorRepromptEventHandlers>? RepromptEventHandlers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecFormParameters
@@ -761,7 +850,9 @@ public partial class V1alpha1DialogflowCXPageSpecFormParameters
     [JsonPropertyName("required")]
     public bool? Required { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The form associated with the page, used for collecting parameters relevant to the page.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecForm
@@ -770,7 +861,9 @@ public partial class V1alpha1DialogflowCXPageSpecForm
     [JsonPropertyName("parameters")]
     public IList<V1alpha1DialogflowCXPageSpecFormParameters>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecTransitionRoutesTriggerFulfillmentConditionalCases
@@ -779,7 +872,9 @@ public partial class V1alpha1DialogflowCXPageSpecTransitionRoutesTriggerFulfillm
     [JsonPropertyName("cases")]
     public string? Cases { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Indicates that the conversation succeeded, i.e., the bot handled the issue that the customer talked to it about. Dialogflow only uses this to determine which conversations should be counted as successful and doesn't process the metadata in this message in any way. Note that Dialogflow also considers conversations that get to the conversation end page as successful even if they don't return ConversationSuccess. You may set this, for example: * In the entryFulfillment of a Page if entering the page indicates that the conversation succeeded. * In a webhook response when you determine that you handled the customer issue.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecTransitionRoutesTriggerFulfillmentMessagesConversationSuccess
@@ -788,7 +883,9 @@ public partial class V1alpha1DialogflowCXPageSpecTransitionRoutesTriggerFulfillm
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Indicates that the conversation should be handed off to a live agent. Dialogflow only uses this to determine which conversations were handed off to a human agent for measurement purposes. What else to do with this signal is up to you and your handoff procedures. You may set this, for example: * In the entryFulfillment of a Page if entering the page indicates something went extremely wrong in the conversation. * In a webhook response when you determine that the customer issue can only be handled by a human.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecTransitionRoutesTriggerFulfillmentMessagesLiveAgentHandoff
@@ -797,7 +894,9 @@ public partial class V1alpha1DialogflowCXPageSpecTransitionRoutesTriggerFulfillm
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A text or ssml response that is preferentially used for TTS output audio synthesis, as described in the comment on the ResponseMessage message.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecTransitionRoutesTriggerFulfillmentMessagesOutputAudioText
@@ -814,7 +913,9 @@ public partial class V1alpha1DialogflowCXPageSpecTransitionRoutesTriggerFulfillm
     [JsonPropertyName("text")]
     public string? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies an audio clip to be played by the client as part of the response.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecTransitionRoutesTriggerFulfillmentMessagesPlayAudio
@@ -827,7 +928,9 @@ public partial class V1alpha1DialogflowCXPageSpecTransitionRoutesTriggerFulfillm
     [JsonPropertyName("audioUri")]
     public string AudioUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents the signal that telles the client to transfer the phone call connected to the agent to a third-party endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecTransitionRoutesTriggerFulfillmentMessagesTelephonyTransferCall
@@ -836,7 +939,9 @@ public partial class V1alpha1DialogflowCXPageSpecTransitionRoutesTriggerFulfillm
     [JsonPropertyName("phoneNumber")]
     public string PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The text response message.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecTransitionRoutesTriggerFulfillmentMessagesText
@@ -849,7 +954,9 @@ public partial class V1alpha1DialogflowCXPageSpecTransitionRoutesTriggerFulfillm
     [JsonPropertyName("text")]
     public IList<string>? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecTransitionRoutesTriggerFulfillmentMessages
@@ -886,7 +993,9 @@ public partial class V1alpha1DialogflowCXPageSpecTransitionRoutesTriggerFulfillm
     [JsonPropertyName("text")]
     public V1alpha1DialogflowCXPageSpecTransitionRoutesTriggerFulfillmentMessagesText? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecTransitionRoutesTriggerFulfillmentSetParameterActions
@@ -899,7 +1008,9 @@ public partial class V1alpha1DialogflowCXPageSpecTransitionRoutesTriggerFulfillm
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The fulfillment to call when the condition is satisfied. At least one of triggerFulfillment and target must be specified. When both are defined, triggerFulfillment is executed first.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecTransitionRoutesTriggerFulfillment
@@ -928,7 +1039,9 @@ public partial class V1alpha1DialogflowCXPageSpecTransitionRoutesTriggerFulfillm
     [JsonPropertyName("webhook")]
     public string? Webhook { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpecTransitionRoutes
@@ -957,7 +1070,9 @@ public partial class V1alpha1DialogflowCXPageSpecTransitionRoutes
     [JsonPropertyName("triggerFulfillment")]
     public V1alpha1DialogflowCXPageSpecTransitionRoutesTriggerFulfillment? TriggerFulfillment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageSpec
@@ -998,7 +1113,9 @@ public partial class V1alpha1DialogflowCXPageSpec
     [JsonPropertyName("transitionRoutes")]
     public IList<V1alpha1DialogflowCXPageSpecTransitionRoutes>? TransitionRoutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageStatusConditions
@@ -1023,7 +1140,9 @@ public partial class V1alpha1DialogflowCXPageStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXPageStatus
@@ -1040,7 +1159,9 @@ public partial class V1alpha1DialogflowCXPageStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1070,3 +1191,4 @@ public partial class V1alpha1DialogflowCXPage : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1alpha1DialogflowCXPageStatus? Status { get; set; }
 }
+#nullable disable

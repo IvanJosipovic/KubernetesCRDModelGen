@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.azuread.m.upbound.io;
+#nullable enable
 /// <summary>A ProviderConfigUsage indicates that a resource is using a ProviderConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ProviderConfigUsageList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1ProviderConfigUsage> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference to the provider config being used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigUsageProviderConfigRef
@@ -46,7 +49,9 @@ public partial class V1beta1ProviderConfigUsageProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference to the managed resource using the provider config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigUsageResourceRef
@@ -67,7 +72,9 @@ public partial class V1beta1ProviderConfigUsageResourceRef
     [JsonPropertyName("uid")]
     public string? Uid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ProviderConfigUsage indicates that a resource is using a ProviderConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -97,3 +104,4 @@ public partial class V1beta1ProviderConfigUsage : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("resourceRef")]
     public V1beta1ProviderConfigUsageResourceRef ResourceRef { get; set; }
 }
+#nullable disable

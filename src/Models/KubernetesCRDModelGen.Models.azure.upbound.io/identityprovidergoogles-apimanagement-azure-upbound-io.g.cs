@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.upbound.io;
+#nullable enable
 /// <summary>IdentityProviderGoogle is the Schema for the IdentityProviderGoogles API. Manages an API Management Google Identity Provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1IdentityProviderGoogleList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1IdentityProviderGoogle> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderGoogleSpecForProviderApiManagementNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1IdentityProviderGoogleSpecForProviderApiManagementNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Management in apimanagement to populate apiManagementName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderGoogleSpecForProviderApiManagementNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1IdentityProviderGoogleSpecForProviderApiManagementNa
     [JsonPropertyName("policy")]
     public V1beta1IdentityProviderGoogleSpecForProviderApiManagementNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderGoogleSpecForProviderApiManagementNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1IdentityProviderGoogleSpecForProviderApiManagementNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Management in apimanagement to populate apiManagementName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderGoogleSpecForProviderApiManagementNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1IdentityProviderGoogleSpecForProviderApiManagementNa
     [JsonPropertyName("policy")]
     public V1beta1IdentityProviderGoogleSpecForProviderApiManagementNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Client secret for Google Sign-in.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderGoogleSpecForProviderClientSecretSecretRef
@@ -106,7 +117,9 @@ public partial class V1beta1IdentityProviderGoogleSpecForProviderClientSecretSec
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderGoogleSpecForProviderResourceGroupNameRefPolicy
@@ -119,7 +132,9 @@ public partial class V1beta1IdentityProviderGoogleSpecForProviderResourceGroupNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderGoogleSpecForProviderResourceGroupNameRef
@@ -132,7 +147,9 @@ public partial class V1beta1IdentityProviderGoogleSpecForProviderResourceGroupNa
     [JsonPropertyName("policy")]
     public V1beta1IdentityProviderGoogleSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderGoogleSpecForProviderResourceGroupNameSelectorPolicy
@@ -145,7 +162,9 @@ public partial class V1beta1IdentityProviderGoogleSpecForProviderResourceGroupNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderGoogleSpecForProviderResourceGroupNameSelector
@@ -162,7 +181,9 @@ public partial class V1beta1IdentityProviderGoogleSpecForProviderResourceGroupNa
     [JsonPropertyName("policy")]
     public V1beta1IdentityProviderGoogleSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderGoogleSpecForProvider
@@ -199,7 +220,9 @@ public partial class V1beta1IdentityProviderGoogleSpecForProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1IdentityProviderGoogleSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderGoogleSpecInitProviderApiManagementNameRefPolicy
@@ -212,7 +235,9 @@ public partial class V1beta1IdentityProviderGoogleSpecInitProviderApiManagementN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Management in apimanagement to populate apiManagementName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderGoogleSpecInitProviderApiManagementNameRef
@@ -225,7 +250,9 @@ public partial class V1beta1IdentityProviderGoogleSpecInitProviderApiManagementN
     [JsonPropertyName("policy")]
     public V1beta1IdentityProviderGoogleSpecInitProviderApiManagementNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderGoogleSpecInitProviderApiManagementNameSelectorPolicy
@@ -238,7 +265,9 @@ public partial class V1beta1IdentityProviderGoogleSpecInitProviderApiManagementN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Management in apimanagement to populate apiManagementName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderGoogleSpecInitProviderApiManagementNameSelector
@@ -255,7 +284,9 @@ public partial class V1beta1IdentityProviderGoogleSpecInitProviderApiManagementN
     [JsonPropertyName("policy")]
     public V1beta1IdentityProviderGoogleSpecInitProviderApiManagementNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Client secret for Google Sign-in.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderGoogleSpecInitProviderClientSecretSecretRef
@@ -272,7 +303,9 @@ public partial class V1beta1IdentityProviderGoogleSpecInitProviderClientSecretSe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderGoogleSpecInitProviderResourceGroupNameRefPolicy
@@ -285,7 +318,9 @@ public partial class V1beta1IdentityProviderGoogleSpecInitProviderResourceGroupN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderGoogleSpecInitProviderResourceGroupNameRef
@@ -298,7 +333,9 @@ public partial class V1beta1IdentityProviderGoogleSpecInitProviderResourceGroupN
     [JsonPropertyName("policy")]
     public V1beta1IdentityProviderGoogleSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderGoogleSpecInitProviderResourceGroupNameSelectorPolicy
@@ -311,7 +348,9 @@ public partial class V1beta1IdentityProviderGoogleSpecInitProviderResourceGroupN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderGoogleSpecInitProviderResourceGroupNameSelector
@@ -328,7 +367,9 @@ public partial class V1beta1IdentityProviderGoogleSpecInitProviderResourceGroupN
     [JsonPropertyName("policy")]
     public V1beta1IdentityProviderGoogleSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderGoogleSpecInitProvider
@@ -365,7 +406,9 @@ public partial class V1beta1IdentityProviderGoogleSpecInitProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1IdentityProviderGoogleSpecInitProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderGoogleSpecProviderConfigRefPolicy
@@ -378,7 +421,9 @@ public partial class V1beta1IdentityProviderGoogleSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderGoogleSpecProviderConfigRef
@@ -391,7 +436,9 @@ public partial class V1beta1IdentityProviderGoogleSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1IdentityProviderGoogleSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderGoogleSpecWriteConnectionSecretToRef
@@ -404,7 +451,9 @@ public partial class V1beta1IdentityProviderGoogleSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IdentityProviderGoogleSpec defines the desired state of IdentityProviderGoogle</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderGoogleSpec
@@ -433,7 +482,9 @@ public partial class V1beta1IdentityProviderGoogleSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1IdentityProviderGoogleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderGoogleStatusAtProvider
@@ -454,7 +505,9 @@ public partial class V1beta1IdentityProviderGoogleStatusAtProvider
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderGoogleStatusConditions
@@ -483,7 +536,9 @@ public partial class V1beta1IdentityProviderGoogleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IdentityProviderGoogleStatus defines the observed state of IdentityProviderGoogle.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderGoogleStatus
@@ -500,7 +555,9 @@ public partial class V1beta1IdentityProviderGoogleStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IdentityProviderGoogle is the Schema for the IdentityProviderGoogles API. Manages an API Management Google Identity Provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -530,3 +587,4 @@ public partial class V1beta1IdentityProviderGoogle : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1IdentityProviderGoogleStatus? Status { get; set; }
 }
+#nullable disable

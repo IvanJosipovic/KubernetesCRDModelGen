@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20230101.StorageAccountsManagementPolicy Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2023-01-01/storage.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/managementPolicies/default</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyList : I
     [JsonPropertyName("items")]
     public IList<V1api20230101storageStorageAccountsManagementPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecOperatorSpecConfigMapExpressions
@@ -50,7 +53,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecOper
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecOperatorSpecSecretExpressions
@@ -67,7 +72,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecOper
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.StorageAccountsManagementPolicyOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecOperatorSpec
@@ -84,7 +91,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecOper
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20230101storageStorageAccountsManagementPolicySpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a storage.azure.com/StorageAccount resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecOwner
@@ -97,7 +106,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecOwne
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DateAfterModification Object to define the base blob action conditions. Properties daysAfterModificationGreaterThan, daysAfterLastAccessTimeGreaterThan and daysAfterCreationGreaterThan are mutually exclusive. The daysAfterLastTierChangeGreaterThan property is only applicable for tierToArchive actions which requires daysAfterModificationGreaterThan to be set, also it cannot be used in conjunction with daysAfterLastAccessTimeGreaterThan or daysAfterCreationGreaterThan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsBaseBlobDelete
@@ -122,7 +133,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     [JsonPropertyName("daysAfterModificationGreaterThan")]
     public int? DaysAfterModificationGreaterThan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DateAfterModification Object to define the base blob action conditions. Properties daysAfterModificationGreaterThan, daysAfterLastAccessTimeGreaterThan and daysAfterCreationGreaterThan are mutually exclusive. The daysAfterLastTierChangeGreaterThan property is only applicable for tierToArchive actions which requires daysAfterModificationGreaterThan to be set, also it cannot be used in conjunction with daysAfterLastAccessTimeGreaterThan or daysAfterCreationGreaterThan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsBaseBlobTierToArchive
@@ -147,7 +160,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     [JsonPropertyName("daysAfterModificationGreaterThan")]
     public int? DaysAfterModificationGreaterThan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DateAfterModification Object to define the base blob action conditions. Properties daysAfterModificationGreaterThan, daysAfterLastAccessTimeGreaterThan and daysAfterCreationGreaterThan are mutually exclusive. The daysAfterLastTierChangeGreaterThan property is only applicable for tierToArchive actions which requires daysAfterModificationGreaterThan to be set, also it cannot be used in conjunction with daysAfterLastAccessTimeGreaterThan or daysAfterCreationGreaterThan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsBaseBlobTierToCold
@@ -172,7 +187,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     [JsonPropertyName("daysAfterModificationGreaterThan")]
     public int? DaysAfterModificationGreaterThan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DateAfterModification Object to define the base blob action conditions. Properties daysAfterModificationGreaterThan, daysAfterLastAccessTimeGreaterThan and daysAfterCreationGreaterThan are mutually exclusive. The daysAfterLastTierChangeGreaterThan property is only applicable for tierToArchive actions which requires daysAfterModificationGreaterThan to be set, also it cannot be used in conjunction with daysAfterLastAccessTimeGreaterThan or daysAfterCreationGreaterThan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsBaseBlobTierToCool
@@ -197,7 +214,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     [JsonPropertyName("daysAfterModificationGreaterThan")]
     public int? DaysAfterModificationGreaterThan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DateAfterModification Object to define the base blob action conditions. Properties daysAfterModificationGreaterThan, daysAfterLastAccessTimeGreaterThan and daysAfterCreationGreaterThan are mutually exclusive. The daysAfterLastTierChangeGreaterThan property is only applicable for tierToArchive actions which requires daysAfterModificationGreaterThan to be set, also it cannot be used in conjunction with daysAfterLastAccessTimeGreaterThan or daysAfterCreationGreaterThan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsBaseBlobTierToHot
@@ -222,7 +241,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     [JsonPropertyName("daysAfterModificationGreaterThan")]
     public int? DaysAfterModificationGreaterThan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.ManagementPolicyBaseBlob Management policy action for base blob.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsBaseBlob
@@ -255,7 +276,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     [JsonPropertyName("tierToHot")]
     public V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsBaseBlobTierToHot? TierToHot { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DateAfterCreation Object to define snapshot and version action conditions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsSnapshotDelete
@@ -272,7 +295,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     [JsonPropertyName("daysAfterLastTierChangeGreaterThan")]
     public int? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DateAfterCreation Object to define snapshot and version action conditions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsSnapshotTierToArchive
@@ -289,7 +314,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     [JsonPropertyName("daysAfterLastTierChangeGreaterThan")]
     public int? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DateAfterCreation Object to define snapshot and version action conditions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsSnapshotTierToCold
@@ -306,7 +333,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     [JsonPropertyName("daysAfterLastTierChangeGreaterThan")]
     public int? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DateAfterCreation Object to define snapshot and version action conditions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsSnapshotTierToCool
@@ -323,7 +352,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     [JsonPropertyName("daysAfterLastTierChangeGreaterThan")]
     public int? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DateAfterCreation Object to define snapshot and version action conditions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsSnapshotTierToHot
@@ -340,7 +371,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     [JsonPropertyName("daysAfterLastTierChangeGreaterThan")]
     public int? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.ManagementPolicySnapShot Management policy action for snapshot.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsSnapshot
@@ -369,7 +402,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     [JsonPropertyName("tierToHot")]
     public V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsSnapshotTierToHot? TierToHot { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DateAfterCreation Object to define snapshot and version action conditions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsVersionDelete
@@ -386,7 +421,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     [JsonPropertyName("daysAfterLastTierChangeGreaterThan")]
     public int? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DateAfterCreation Object to define snapshot and version action conditions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsVersionTierToArchive
@@ -403,7 +440,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     [JsonPropertyName("daysAfterLastTierChangeGreaterThan")]
     public int? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DateAfterCreation Object to define snapshot and version action conditions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsVersionTierToCold
@@ -420,7 +459,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     [JsonPropertyName("daysAfterLastTierChangeGreaterThan")]
     public int? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DateAfterCreation Object to define snapshot and version action conditions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsVersionTierToCool
@@ -437,7 +478,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     [JsonPropertyName("daysAfterLastTierChangeGreaterThan")]
     public int? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DateAfterCreation Object to define snapshot and version action conditions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsVersionTierToHot
@@ -454,7 +497,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     [JsonPropertyName("daysAfterLastTierChangeGreaterThan")]
     public int? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.ManagementPolicyVersion Management policy action for blob version.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsVersion
@@ -483,7 +528,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     [JsonPropertyName("tierToHot")]
     public V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsVersionTierToHot? TierToHot { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.ManagementPolicyAction Actions are applied to the filtered blobs when the execution condition is met.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActions
@@ -504,7 +551,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     [JsonPropertyName("version")]
     public V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsVersion? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.TagFilter Blob index tag based filtering for blob objects</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionFiltersBlobIndexMatch
@@ -525,7 +574,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.ManagementPolicyFilter Filters limit rule actions to a subset of blobs within the storage account. If multiple filters are defined, a logical AND is performed on all filters.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionFilters
@@ -546,7 +597,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     [JsonPropertyName("prefixMatch")]
     public IList<string>? PrefixMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.ManagementPolicyDefinition An object that defines the Lifecycle rule. Each definition is made up with a filters set and an actions set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinition
@@ -563,7 +616,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     [JsonPropertyName("filters")]
     public V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionFilters? Filters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.ManagementPolicyRule An object that wraps the Lifecycle rule. Each rule is uniquely defined by name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRules
@@ -588,7 +643,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.ManagementPolicySchema The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicy
@@ -601,7 +658,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     [JsonPropertyName("rules")]
     public IList<V1api20230101storageStorageAccountsManagementPolicySpecPolicyRules>? Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.StorageAccountsManagementPolicy_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicySpec
@@ -626,7 +685,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpec
     [JsonPropertyName("policy")]
     public V1api20230101storageStorageAccountsManagementPolicySpecPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusConditions
@@ -659,7 +720,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusCo
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DateAfterModification_STATUS Object to define the base blob action conditions. Properties daysAfterModificationGreaterThan, daysAfterLastAccessTimeGreaterThan and daysAfterCreationGreaterThan are mutually exclusive. The daysAfterLastTierChangeGreaterThan property is only applicable for tierToArchive actions which requires daysAfterModificationGreaterThan to be set, also it cannot be used in conjunction with daysAfterLastAccessTimeGreaterThan or daysAfterCreationGreaterThan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsBaseBlobDelete
@@ -684,7 +747,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     [JsonPropertyName("daysAfterModificationGreaterThan")]
     public double? DaysAfterModificationGreaterThan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DateAfterModification_STATUS Object to define the base blob action conditions. Properties daysAfterModificationGreaterThan, daysAfterLastAccessTimeGreaterThan and daysAfterCreationGreaterThan are mutually exclusive. The daysAfterLastTierChangeGreaterThan property is only applicable for tierToArchive actions which requires daysAfterModificationGreaterThan to be set, also it cannot be used in conjunction with daysAfterLastAccessTimeGreaterThan or daysAfterCreationGreaterThan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsBaseBlobTierToArchive
@@ -709,7 +774,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     [JsonPropertyName("daysAfterModificationGreaterThan")]
     public double? DaysAfterModificationGreaterThan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DateAfterModification_STATUS Object to define the base blob action conditions. Properties daysAfterModificationGreaterThan, daysAfterLastAccessTimeGreaterThan and daysAfterCreationGreaterThan are mutually exclusive. The daysAfterLastTierChangeGreaterThan property is only applicable for tierToArchive actions which requires daysAfterModificationGreaterThan to be set, also it cannot be used in conjunction with daysAfterLastAccessTimeGreaterThan or daysAfterCreationGreaterThan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsBaseBlobTierToCold
@@ -734,7 +801,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     [JsonPropertyName("daysAfterModificationGreaterThan")]
     public double? DaysAfterModificationGreaterThan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DateAfterModification_STATUS Object to define the base blob action conditions. Properties daysAfterModificationGreaterThan, daysAfterLastAccessTimeGreaterThan and daysAfterCreationGreaterThan are mutually exclusive. The daysAfterLastTierChangeGreaterThan property is only applicable for tierToArchive actions which requires daysAfterModificationGreaterThan to be set, also it cannot be used in conjunction with daysAfterLastAccessTimeGreaterThan or daysAfterCreationGreaterThan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsBaseBlobTierToCool
@@ -759,7 +828,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     [JsonPropertyName("daysAfterModificationGreaterThan")]
     public double? DaysAfterModificationGreaterThan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DateAfterModification_STATUS Object to define the base blob action conditions. Properties daysAfterModificationGreaterThan, daysAfterLastAccessTimeGreaterThan and daysAfterCreationGreaterThan are mutually exclusive. The daysAfterLastTierChangeGreaterThan property is only applicable for tierToArchive actions which requires daysAfterModificationGreaterThan to be set, also it cannot be used in conjunction with daysAfterLastAccessTimeGreaterThan or daysAfterCreationGreaterThan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsBaseBlobTierToHot
@@ -784,7 +855,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     [JsonPropertyName("daysAfterModificationGreaterThan")]
     public double? DaysAfterModificationGreaterThan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.ManagementPolicyBaseBlob_STATUS Management policy action for base blob.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsBaseBlob
@@ -817,7 +890,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     [JsonPropertyName("tierToHot")]
     public V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsBaseBlobTierToHot? TierToHot { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DateAfterCreation_STATUS Object to define snapshot and version action conditions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsSnapshotDelete
@@ -834,7 +909,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     [JsonPropertyName("daysAfterLastTierChangeGreaterThan")]
     public double? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DateAfterCreation_STATUS Object to define snapshot and version action conditions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsSnapshotTierToArchive
@@ -851,7 +928,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     [JsonPropertyName("daysAfterLastTierChangeGreaterThan")]
     public double? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DateAfterCreation_STATUS Object to define snapshot and version action conditions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsSnapshotTierToCold
@@ -868,7 +947,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     [JsonPropertyName("daysAfterLastTierChangeGreaterThan")]
     public double? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DateAfterCreation_STATUS Object to define snapshot and version action conditions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsSnapshotTierToCool
@@ -885,7 +966,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     [JsonPropertyName("daysAfterLastTierChangeGreaterThan")]
     public double? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DateAfterCreation_STATUS Object to define snapshot and version action conditions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsSnapshotTierToHot
@@ -902,7 +985,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     [JsonPropertyName("daysAfterLastTierChangeGreaterThan")]
     public double? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.ManagementPolicySnapShot_STATUS Management policy action for snapshot.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsSnapshot
@@ -931,7 +1016,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     [JsonPropertyName("tierToHot")]
     public V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsSnapshotTierToHot? TierToHot { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DateAfterCreation_STATUS Object to define snapshot and version action conditions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsVersionDelete
@@ -948,7 +1035,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     [JsonPropertyName("daysAfterLastTierChangeGreaterThan")]
     public double? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DateAfterCreation_STATUS Object to define snapshot and version action conditions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsVersionTierToArchive
@@ -965,7 +1054,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     [JsonPropertyName("daysAfterLastTierChangeGreaterThan")]
     public double? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DateAfterCreation_STATUS Object to define snapshot and version action conditions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsVersionTierToCold
@@ -982,7 +1073,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     [JsonPropertyName("daysAfterLastTierChangeGreaterThan")]
     public double? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DateAfterCreation_STATUS Object to define snapshot and version action conditions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsVersionTierToCool
@@ -999,7 +1092,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     [JsonPropertyName("daysAfterLastTierChangeGreaterThan")]
     public double? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.DateAfterCreation_STATUS Object to define snapshot and version action conditions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsVersionTierToHot
@@ -1016,7 +1111,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     [JsonPropertyName("daysAfterLastTierChangeGreaterThan")]
     public double? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.ManagementPolicyVersion_STATUS Management policy action for blob version.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsVersion
@@ -1045,7 +1142,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     [JsonPropertyName("tierToHot")]
     public V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsVersionTierToHot? TierToHot { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.ManagementPolicyAction_STATUS Actions are applied to the filtered blobs when the execution condition is met.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActions
@@ -1066,7 +1165,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     [JsonPropertyName("version")]
     public V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsVersion? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.TagFilter_STATUS Blob index tag based filtering for blob objects</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionFiltersBlobIndexMatch
@@ -1087,7 +1188,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.ManagementPolicyFilter_STATUS Filters limit rule actions to a subset of blobs within the storage account. If multiple filters are defined, a logical AND is performed on all filters.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionFilters
@@ -1108,7 +1211,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     [JsonPropertyName("prefixMatch")]
     public IList<string>? PrefixMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.ManagementPolicyDefinition_STATUS An object that defines the Lifecycle rule. Each definition is made up with a filters set and an actions set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinition
@@ -1125,7 +1230,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     [JsonPropertyName("filters")]
     public V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionFilters? Filters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.ManagementPolicyRule_STATUS An object that wraps the Lifecycle rule. Each rule is uniquely defined by name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRules
@@ -1150,7 +1257,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.ManagementPolicySchema_STATUS The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicy
@@ -1163,7 +1272,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     [JsonPropertyName("rules")]
     public IList<V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRules>? Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.StorageAccountsManagementPolicy_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatus
@@ -1196,7 +1307,9 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.StorageAccountsManagementPolicy Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2023-01-01/storage.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/managementPolicies/default</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1226,3 +1339,4 @@ public partial class V1api20230101storageStorageAccountsManagementPolicy : IKube
     [JsonPropertyName("status")]
     public V1api20230101storageStorageAccountsManagementPolicyStatus? Status { get; set; }
 }
+#nullable disable

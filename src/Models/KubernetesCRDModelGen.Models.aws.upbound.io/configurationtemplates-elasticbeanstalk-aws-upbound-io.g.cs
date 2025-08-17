@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.elasticbeanstalk.aws.upbound.io;
+#nullable enable
 /// <summary>ConfigurationTemplate is the Schema for the ConfigurationTemplates API. Provides an Elastic Beanstalk Configuration Template</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ConfigurationTemplateList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1ConfigurationTemplate> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationTemplateSpecForProviderApplicationRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ConfigurationTemplateSpecForProviderApplicationRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Application in elasticbeanstalk to populate application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationTemplateSpecForProviderApplicationRef
@@ -59,7 +64,9 @@ public partial class V1beta1ConfigurationTemplateSpecForProviderApplicationRef
     [JsonPropertyName("policy")]
     public V1beta1ConfigurationTemplateSpecForProviderApplicationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationTemplateSpecForProviderApplicationSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1ConfigurationTemplateSpecForProviderApplicationSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Application in elasticbeanstalk to populate application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationTemplateSpecForProviderApplicationSelector
@@ -89,7 +98,9 @@ public partial class V1beta1ConfigurationTemplateSpecForProviderApplicationSelec
     [JsonPropertyName("policy")]
     public V1beta1ConfigurationTemplateSpecForProviderApplicationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationTemplateSpecForProviderSetting
@@ -110,7 +121,9 @@ public partial class V1beta1ConfigurationTemplateSpecForProviderSetting
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationTemplateSpecForProvider
@@ -147,7 +160,9 @@ public partial class V1beta1ConfigurationTemplateSpecForProvider
     [JsonPropertyName("solutionStackName")]
     public string? SolutionStackName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationTemplateSpecInitProviderApplicationRefPolicy
@@ -160,7 +175,9 @@ public partial class V1beta1ConfigurationTemplateSpecInitProviderApplicationRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Application in elasticbeanstalk to populate application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationTemplateSpecInitProviderApplicationRef
@@ -173,7 +190,9 @@ public partial class V1beta1ConfigurationTemplateSpecInitProviderApplicationRef
     [JsonPropertyName("policy")]
     public V1beta1ConfigurationTemplateSpecInitProviderApplicationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationTemplateSpecInitProviderApplicationSelectorPolicy
@@ -186,7 +205,9 @@ public partial class V1beta1ConfigurationTemplateSpecInitProviderApplicationSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Application in elasticbeanstalk to populate application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationTemplateSpecInitProviderApplicationSelector
@@ -203,7 +224,9 @@ public partial class V1beta1ConfigurationTemplateSpecInitProviderApplicationSele
     [JsonPropertyName("policy")]
     public V1beta1ConfigurationTemplateSpecInitProviderApplicationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationTemplateSpecInitProviderSetting
@@ -224,7 +247,9 @@ public partial class V1beta1ConfigurationTemplateSpecInitProviderSetting
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationTemplateSpecInitProvider
@@ -257,7 +282,9 @@ public partial class V1beta1ConfigurationTemplateSpecInitProvider
     [JsonPropertyName("solutionStackName")]
     public string? SolutionStackName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationTemplateSpecProviderConfigRefPolicy
@@ -270,7 +297,9 @@ public partial class V1beta1ConfigurationTemplateSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationTemplateSpecProviderConfigRef
@@ -283,7 +312,9 @@ public partial class V1beta1ConfigurationTemplateSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ConfigurationTemplateSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationTemplateSpecWriteConnectionSecretToRef
@@ -296,7 +327,9 @@ public partial class V1beta1ConfigurationTemplateSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigurationTemplateSpec defines the desired state of ConfigurationTemplate</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationTemplateSpec
@@ -325,7 +358,9 @@ public partial class V1beta1ConfigurationTemplateSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ConfigurationTemplateSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationTemplateStatusAtProviderSetting
@@ -346,7 +381,9 @@ public partial class V1beta1ConfigurationTemplateStatusAtProviderSetting
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationTemplateStatusAtProvider
@@ -379,7 +416,9 @@ public partial class V1beta1ConfigurationTemplateStatusAtProvider
     [JsonPropertyName("solutionStackName")]
     public string? SolutionStackName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationTemplateStatusConditions
@@ -408,7 +447,9 @@ public partial class V1beta1ConfigurationTemplateStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigurationTemplateStatus defines the observed state of ConfigurationTemplate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationTemplateStatus
@@ -425,7 +466,9 @@ public partial class V1beta1ConfigurationTemplateStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigurationTemplate is the Schema for the ConfigurationTemplates API. Provides an Elastic Beanstalk Configuration Template</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -455,3 +498,4 @@ public partial class V1beta1ConfigurationTemplate : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1ConfigurationTemplateStatus? Status { get; set; }
 }
+#nullable disable

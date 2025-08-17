@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+#nullable enable
 /// <summary>PrivateDNSTXTRecord is the Schema for the PrivateDNSTXTRecords API. Manages a Private DNS TXT Record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PrivateDNSTXTRecordList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1PrivateDNSTXTRecord> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSTXTRecordSpecForProviderRecord
@@ -42,7 +45,9 @@ public partial class V1beta1PrivateDNSTXTRecordSpecForProviderRecord
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSTXTRecordSpecForProviderResourceGroupNameRefPolicy
@@ -55,7 +60,9 @@ public partial class V1beta1PrivateDNSTXTRecordSpecForProviderResourceGroupNameR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSTXTRecordSpecForProviderResourceGroupNameRef
@@ -72,7 +79,9 @@ public partial class V1beta1PrivateDNSTXTRecordSpecForProviderResourceGroupNameR
     [JsonPropertyName("policy")]
     public V1beta1PrivateDNSTXTRecordSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSTXTRecordSpecForProviderResourceGroupNameSelectorPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1PrivateDNSTXTRecordSpecForProviderResourceGroupNameS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSTXTRecordSpecForProviderResourceGroupNameSelector
@@ -106,7 +117,9 @@ public partial class V1beta1PrivateDNSTXTRecordSpecForProviderResourceGroupNameS
     [JsonPropertyName("policy")]
     public V1beta1PrivateDNSTXTRecordSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSTXTRecordSpecForProviderZoneNameRefPolicy
@@ -119,7 +132,9 @@ public partial class V1beta1PrivateDNSTXTRecordSpecForProviderZoneNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PrivateDNSZone in network to populate zoneName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSTXTRecordSpecForProviderZoneNameRef
@@ -136,7 +151,9 @@ public partial class V1beta1PrivateDNSTXTRecordSpecForProviderZoneNameRef
     [JsonPropertyName("policy")]
     public V1beta1PrivateDNSTXTRecordSpecForProviderZoneNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSTXTRecordSpecForProviderZoneNameSelectorPolicy
@@ -149,7 +166,9 @@ public partial class V1beta1PrivateDNSTXTRecordSpecForProviderZoneNameSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PrivateDNSZone in network to populate zoneName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSTXTRecordSpecForProviderZoneNameSelector
@@ -170,7 +189,9 @@ public partial class V1beta1PrivateDNSTXTRecordSpecForProviderZoneNameSelector
     [JsonPropertyName("policy")]
     public V1beta1PrivateDNSTXTRecordSpecForProviderZoneNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSTXTRecordSpecForProvider
@@ -211,7 +232,9 @@ public partial class V1beta1PrivateDNSTXTRecordSpecForProvider
     [JsonPropertyName("zoneNameSelector")]
     public V1beta1PrivateDNSTXTRecordSpecForProviderZoneNameSelector? ZoneNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSTXTRecordSpecInitProviderRecord
@@ -220,7 +243,9 @@ public partial class V1beta1PrivateDNSTXTRecordSpecInitProviderRecord
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSTXTRecordSpecInitProvider
@@ -237,7 +262,9 @@ public partial class V1beta1PrivateDNSTXTRecordSpecInitProvider
     [JsonPropertyName("ttl")]
     public double? Ttl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSTXTRecordSpecProviderConfigRef
@@ -250,7 +277,9 @@ public partial class V1beta1PrivateDNSTXTRecordSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSTXTRecordSpecWriteConnectionSecretToRef
@@ -259,7 +288,9 @@ public partial class V1beta1PrivateDNSTXTRecordSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivateDNSTXTRecordSpec defines the desired state of PrivateDNSTXTRecord</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSTXTRecordSpec
@@ -284,7 +315,9 @@ public partial class V1beta1PrivateDNSTXTRecordSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1PrivateDNSTXTRecordSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSTXTRecordStatusAtProviderRecord
@@ -293,7 +326,9 @@ public partial class V1beta1PrivateDNSTXTRecordStatusAtProviderRecord
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSTXTRecordStatusAtProvider
@@ -326,7 +361,9 @@ public partial class V1beta1PrivateDNSTXTRecordStatusAtProvider
     [JsonPropertyName("zoneName")]
     public string? ZoneName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSTXTRecordStatusConditions
@@ -355,7 +392,9 @@ public partial class V1beta1PrivateDNSTXTRecordStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivateDNSTXTRecordStatus defines the observed state of PrivateDNSTXTRecord.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSTXTRecordStatus
@@ -372,7 +411,9 @@ public partial class V1beta1PrivateDNSTXTRecordStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivateDNSTXTRecord is the Schema for the PrivateDNSTXTRecords API. Manages a Private DNS TXT Record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -402,3 +443,4 @@ public partial class V1beta1PrivateDNSTXTRecord : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1PrivateDNSTXTRecordStatus? Status { get; set; }
 }
+#nullable disable

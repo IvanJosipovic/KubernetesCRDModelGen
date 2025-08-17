@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudwatch.aws.upbound.io;
+#nullable enable
 /// <summary>MetricAlarm is the Schema for the MetricAlarms API. Provides a CloudWatch Metric Alarm resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MetricAlarmList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1MetricAlarm> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmSpecForProviderAlarmActionsRefsPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1MetricAlarmSpecForProviderAlarmActionsRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmSpecForProviderAlarmActionsRefs
@@ -59,7 +64,9 @@ public partial class V1beta1MetricAlarmSpecForProviderAlarmActionsRefs
     [JsonPropertyName("policy")]
     public V1beta1MetricAlarmSpecForProviderAlarmActionsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmSpecForProviderAlarmActionsSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1MetricAlarmSpecForProviderAlarmActionsSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Policy in autoscaling to populate alarmActions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmSpecForProviderAlarmActionsSelector
@@ -89,7 +98,9 @@ public partial class V1beta1MetricAlarmSpecForProviderAlarmActionsSelector
     [JsonPropertyName("policy")]
     public V1beta1MetricAlarmSpecForProviderAlarmActionsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmSpecForProviderMetricQueryMetric
@@ -118,7 +129,9 @@ public partial class V1beta1MetricAlarmSpecForProviderMetricQueryMetric
     [JsonPropertyName("unit")]
     public string? Unit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmSpecForProviderMetricQuery
@@ -151,7 +164,9 @@ public partial class V1beta1MetricAlarmSpecForProviderMetricQuery
     [JsonPropertyName("returnData")]
     public bool? ReturnData { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmSpecForProviderOkActionsRefsPolicy
@@ -164,7 +179,9 @@ public partial class V1beta1MetricAlarmSpecForProviderOkActionsRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmSpecForProviderOkActionsRefs
@@ -177,7 +194,9 @@ public partial class V1beta1MetricAlarmSpecForProviderOkActionsRefs
     [JsonPropertyName("policy")]
     public V1beta1MetricAlarmSpecForProviderOkActionsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmSpecForProviderOkActionsSelectorPolicy
@@ -190,7 +209,9 @@ public partial class V1beta1MetricAlarmSpecForProviderOkActionsSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Topic in sns to populate okActions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmSpecForProviderOkActionsSelector
@@ -207,7 +228,9 @@ public partial class V1beta1MetricAlarmSpecForProviderOkActionsSelector
     [JsonPropertyName("policy")]
     public V1beta1MetricAlarmSpecForProviderOkActionsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmSpecForProvider
@@ -316,7 +339,9 @@ public partial class V1beta1MetricAlarmSpecForProvider
     [JsonPropertyName("unit")]
     public string? Unit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmSpecInitProviderAlarmActionsRefsPolicy
@@ -329,7 +354,9 @@ public partial class V1beta1MetricAlarmSpecInitProviderAlarmActionsRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmSpecInitProviderAlarmActionsRefs
@@ -342,7 +369,9 @@ public partial class V1beta1MetricAlarmSpecInitProviderAlarmActionsRefs
     [JsonPropertyName("policy")]
     public V1beta1MetricAlarmSpecInitProviderAlarmActionsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmSpecInitProviderAlarmActionsSelectorPolicy
@@ -355,7 +384,9 @@ public partial class V1beta1MetricAlarmSpecInitProviderAlarmActionsSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Policy in autoscaling to populate alarmActions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmSpecInitProviderAlarmActionsSelector
@@ -372,7 +403,9 @@ public partial class V1beta1MetricAlarmSpecInitProviderAlarmActionsSelector
     [JsonPropertyName("policy")]
     public V1beta1MetricAlarmSpecInitProviderAlarmActionsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmSpecInitProviderMetricQueryMetric
@@ -401,7 +434,9 @@ public partial class V1beta1MetricAlarmSpecInitProviderMetricQueryMetric
     [JsonPropertyName("unit")]
     public string? Unit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmSpecInitProviderMetricQuery
@@ -434,7 +469,9 @@ public partial class V1beta1MetricAlarmSpecInitProviderMetricQuery
     [JsonPropertyName("returnData")]
     public bool? ReturnData { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmSpecInitProviderOkActionsRefsPolicy
@@ -447,7 +484,9 @@ public partial class V1beta1MetricAlarmSpecInitProviderOkActionsRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmSpecInitProviderOkActionsRefs
@@ -460,7 +499,9 @@ public partial class V1beta1MetricAlarmSpecInitProviderOkActionsRefs
     [JsonPropertyName("policy")]
     public V1beta1MetricAlarmSpecInitProviderOkActionsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmSpecInitProviderOkActionsSelectorPolicy
@@ -473,7 +514,9 @@ public partial class V1beta1MetricAlarmSpecInitProviderOkActionsSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Topic in sns to populate okActions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmSpecInitProviderOkActionsSelector
@@ -490,7 +533,9 @@ public partial class V1beta1MetricAlarmSpecInitProviderOkActionsSelector
     [JsonPropertyName("policy")]
     public V1beta1MetricAlarmSpecInitProviderOkActionsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmSpecInitProvider
@@ -595,7 +640,9 @@ public partial class V1beta1MetricAlarmSpecInitProvider
     [JsonPropertyName("unit")]
     public string? Unit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmSpecProviderConfigRefPolicy
@@ -608,7 +655,9 @@ public partial class V1beta1MetricAlarmSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmSpecProviderConfigRef
@@ -621,7 +670,9 @@ public partial class V1beta1MetricAlarmSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1MetricAlarmSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmSpecWriteConnectionSecretToRef
@@ -634,7 +685,9 @@ public partial class V1beta1MetricAlarmSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MetricAlarmSpec defines the desired state of MetricAlarm</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmSpec
@@ -663,7 +716,9 @@ public partial class V1beta1MetricAlarmSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MetricAlarmSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmStatusAtProviderMetricQueryMetric
@@ -692,7 +747,9 @@ public partial class V1beta1MetricAlarmStatusAtProviderMetricQueryMetric
     [JsonPropertyName("unit")]
     public string? Unit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmStatusAtProviderMetricQuery
@@ -725,7 +782,9 @@ public partial class V1beta1MetricAlarmStatusAtProviderMetricQuery
     [JsonPropertyName("returnData")]
     public bool? ReturnData { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmStatusAtProvider
@@ -830,7 +889,9 @@ public partial class V1beta1MetricAlarmStatusAtProvider
     [JsonPropertyName("unit")]
     public string? Unit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmStatusConditions
@@ -859,7 +920,9 @@ public partial class V1beta1MetricAlarmStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MetricAlarmStatus defines the observed state of MetricAlarm.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricAlarmStatus
@@ -876,7 +939,9 @@ public partial class V1beta1MetricAlarmStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MetricAlarm is the Schema for the MetricAlarms API. Provides a CloudWatch Metric Alarm resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -906,3 +971,4 @@ public partial class V1beta1MetricAlarm : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1MetricAlarmStatus? Status { get; set; }
 }
+#nullable disable

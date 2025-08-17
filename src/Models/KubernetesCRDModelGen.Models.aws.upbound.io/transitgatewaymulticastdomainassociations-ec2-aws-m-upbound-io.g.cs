@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.m.upbound.io;
+#nullable enable
 /// <summary>TransitGatewayMulticastDomainAssociation is the Schema for the TransitGatewayMulticastDomainAssociations API. Manages an EC2 Transit Gateway Multicast Domain Association</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationList : IKube
     [JsonPropertyName("items")]
     public IList<V1beta1TransitGatewayMulticastDomainAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecForProviderSubnetIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecForProvi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecForProviderSubnetIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecForProvi
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayMulticastDomainAssociationSpecForProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecForProviderSubnetIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecForProvi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecForProviderSubnetIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecForProvi
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayMulticastDomainAssociationSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecForProviderTransitGatewayAttachmentIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecForProvi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TransitGatewayVPCAttachment in ec2 to populate transitGatewayAttachmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecForProviderTransitGatewayAttachmentIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecForProvi
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayMulticastDomainAssociationSpecForProviderTransitGatewayAttachmentIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecForProviderTransitGatewayAttachmentIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecForProvi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TransitGatewayVPCAttachment in ec2 to populate transitGatewayAttachmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecForProviderTransitGatewayAttachmentIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecForProvi
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayMulticastDomainAssociationSpecForProviderTransitGatewayAttachmentIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecForProviderTransitGatewayMulticastDomainIdRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecForProvi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TransitGatewayMulticastDomain in ec2 to populate transitGatewayMulticastDomainId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecForProviderTransitGatewayMulticastDomainIdRef
@@ -191,7 +212,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecForProvi
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayMulticastDomainAssociationSpecForProviderTransitGatewayMulticastDomainIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecForProviderTransitGatewayMulticastDomainIdSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecForProvi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TransitGatewayMulticastDomain in ec2 to populate transitGatewayMulticastDomainId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecForProviderTransitGatewayMulticastDomainIdSelector
@@ -225,7 +250,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecForProvi
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayMulticastDomainAssociationSpecForProviderTransitGatewayMulticastDomainIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecForProvider
@@ -270,7 +297,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecForProvi
     [JsonPropertyName("transitGatewayMulticastDomainIdSelector")]
     public V1beta1TransitGatewayMulticastDomainAssociationSpecForProviderTransitGatewayMulticastDomainIdSelector? TransitGatewayMulticastDomainIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecInitProviderSubnetIdRefPolicy
@@ -283,7 +312,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecInitProv
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecInitProviderSubnetIdRef
@@ -300,7 +331,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecInitProv
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayMulticastDomainAssociationSpecInitProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecInitProviderSubnetIdSelectorPolicy
@@ -313,7 +346,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecInitProv
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecInitProviderSubnetIdSelector
@@ -334,7 +369,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecInitProv
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayMulticastDomainAssociationSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecInitProviderTransitGatewayAttachmentIdRefPolicy
@@ -347,7 +384,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecInitProv
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TransitGatewayVPCAttachment in ec2 to populate transitGatewayAttachmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecInitProviderTransitGatewayAttachmentIdRef
@@ -364,7 +403,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecInitProv
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayMulticastDomainAssociationSpecInitProviderTransitGatewayAttachmentIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecInitProviderTransitGatewayAttachmentIdSelectorPolicy
@@ -377,7 +418,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecInitProv
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TransitGatewayVPCAttachment in ec2 to populate transitGatewayAttachmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecInitProviderTransitGatewayAttachmentIdSelector
@@ -398,7 +441,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecInitProv
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayMulticastDomainAssociationSpecInitProviderTransitGatewayAttachmentIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecInitProviderTransitGatewayMulticastDomainIdRefPolicy
@@ -411,7 +456,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecInitProv
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TransitGatewayMulticastDomain in ec2 to populate transitGatewayMulticastDomainId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecInitProviderTransitGatewayMulticastDomainIdRef
@@ -428,7 +475,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecInitProv
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayMulticastDomainAssociationSpecInitProviderTransitGatewayMulticastDomainIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecInitProviderTransitGatewayMulticastDomainIdSelectorPolicy
@@ -441,7 +490,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecInitProv
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TransitGatewayMulticastDomain in ec2 to populate transitGatewayMulticastDomainId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecInitProviderTransitGatewayMulticastDomainIdSelector
@@ -462,7 +513,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecInitProv
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayMulticastDomainAssociationSpecInitProviderTransitGatewayMulticastDomainIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecInitProvider
@@ -503,7 +556,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecInitProv
     [JsonPropertyName("transitGatewayMulticastDomainIdSelector")]
     public V1beta1TransitGatewayMulticastDomainAssociationSpecInitProviderTransitGatewayMulticastDomainIdSelector? TransitGatewayMulticastDomainIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecProviderConfigRef
@@ -516,7 +571,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecProvider
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecWriteConnectionSecretToRef
@@ -525,7 +582,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationSpecWriteCon
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TransitGatewayMulticastDomainAssociationSpec defines the desired state of TransitGatewayMulticastDomainAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationSpec
@@ -550,7 +609,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TransitGatewayMulticastDomainAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationStatusAtProvider
@@ -575,7 +636,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationStatusAtProv
     [JsonPropertyName("transitGatewayMulticastDomainId")]
     public string? TransitGatewayMulticastDomainId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationStatusConditions
@@ -604,7 +667,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationStatusCondit
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TransitGatewayMulticastDomainAssociationStatus defines the observed state of TransitGatewayMulticastDomainAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayMulticastDomainAssociationStatus
@@ -621,7 +686,9 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TransitGatewayMulticastDomainAssociation is the Schema for the TransitGatewayMulticastDomainAssociations API. Manages an EC2 Transit Gateway Multicast Domain Association</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -651,3 +718,4 @@ public partial class V1beta1TransitGatewayMulticastDomainAssociation : IKubernet
     [JsonPropertyName("status")]
     public V1beta1TransitGatewayMulticastDomainAssociationStatus? Status { get; set; }
 }
+#nullable disable

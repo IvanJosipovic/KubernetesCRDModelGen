@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dialogflowcx.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1DialogflowCXIntentList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1alpha1DialogflowCXIntent> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXIntentSpecParameters
@@ -54,7 +57,9 @@ public partial class V1alpha1DialogflowCXIntentSpecParameters
     [JsonPropertyName("redact")]
     public bool? Redact { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXIntentSpecTrainingPhrasesParts
@@ -67,7 +72,9 @@ public partial class V1alpha1DialogflowCXIntentSpecTrainingPhrasesParts
     [JsonPropertyName("text")]
     public string Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXIntentSpecTrainingPhrases
@@ -84,7 +91,9 @@ public partial class V1alpha1DialogflowCXIntentSpecTrainingPhrases
     [JsonPropertyName("repeatCount")]
     public int? RepeatCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXIntentSpec
@@ -125,7 +134,9 @@ public partial class V1alpha1DialogflowCXIntentSpec
     [JsonPropertyName("trainingPhrases")]
     public IList<V1alpha1DialogflowCXIntentSpecTrainingPhrases>? TrainingPhrases { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXIntentStatusConditions
@@ -150,7 +161,9 @@ public partial class V1alpha1DialogflowCXIntentStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DialogflowCXIntentStatus
@@ -167,7 +180,9 @@ public partial class V1alpha1DialogflowCXIntentStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -197,3 +212,4 @@ public partial class V1alpha1DialogflowCXIntent : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1alpha1DialogflowCXIntentStatus? Status { get; set; }
 }
+#nullable disable

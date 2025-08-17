@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerregistry.azure.upbound.io;
+#nullable enable
 /// <summary>AgentPool is the Schema for the AgentPools API. Manages an Azure Container Registry Agent Pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AgentPoolList : IKubernetesObject<V1ListMeta>, IItem
     [JsonPropertyName("items")]
     public IList<V1beta1AgentPool> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentPoolSpecForProviderContainerRegistryNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1AgentPoolSpecForProviderContainerRegistryNameRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Registry in containerregistry to populate containerRegistryName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentPoolSpecForProviderContainerRegistryNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1AgentPoolSpecForProviderContainerRegistryNameRef
     [JsonPropertyName("policy")]
     public V1beta1AgentPoolSpecForProviderContainerRegistryNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentPoolSpecForProviderContainerRegistryNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1AgentPoolSpecForProviderContainerRegistryNameSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Registry in containerregistry to populate containerRegistryName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentPoolSpecForProviderContainerRegistryNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1AgentPoolSpecForProviderContainerRegistryNameSelecto
     [JsonPropertyName("policy")]
     public V1beta1AgentPoolSpecForProviderContainerRegistryNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentPoolSpecForProviderResourceGroupNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1AgentPoolSpecForProviderResourceGroupNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentPoolSpecForProviderResourceGroupNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1AgentPoolSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1AgentPoolSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentPoolSpecForProviderResourceGroupNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1AgentPoolSpecForProviderResourceGroupNameSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentPoolSpecForProviderResourceGroupNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1AgentPoolSpecForProviderResourceGroupNameSelector
     [JsonPropertyName("policy")]
     public V1beta1AgentPoolSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentPoolSpecForProviderVirtualNetworkSubnetIdRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1AgentPoolSpecForProviderVirtualNetworkSubnetIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentPoolSpecForProviderVirtualNetworkSubnetIdRef
@@ -171,7 +192,9 @@ public partial class V1beta1AgentPoolSpecForProviderVirtualNetworkSubnetIdRef
     [JsonPropertyName("policy")]
     public V1beta1AgentPoolSpecForProviderVirtualNetworkSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentPoolSpecForProviderVirtualNetworkSubnetIdSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1AgentPoolSpecForProviderVirtualNetworkSubnetIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentPoolSpecForProviderVirtualNetworkSubnetIdSelector
@@ -201,7 +226,9 @@ public partial class V1beta1AgentPoolSpecForProviderVirtualNetworkSubnetIdSelect
     [JsonPropertyName("policy")]
     public V1beta1AgentPoolSpecForProviderVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentPoolSpecForProvider
@@ -258,7 +285,9 @@ public partial class V1beta1AgentPoolSpecForProvider
     [JsonPropertyName("virtualNetworkSubnetIdSelector")]
     public V1beta1AgentPoolSpecForProviderVirtualNetworkSubnetIdSelector? VirtualNetworkSubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentPoolSpecInitProviderVirtualNetworkSubnetIdRefPolicy
@@ -271,7 +300,9 @@ public partial class V1beta1AgentPoolSpecInitProviderVirtualNetworkSubnetIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentPoolSpecInitProviderVirtualNetworkSubnetIdRef
@@ -284,7 +315,9 @@ public partial class V1beta1AgentPoolSpecInitProviderVirtualNetworkSubnetIdRef
     [JsonPropertyName("policy")]
     public V1beta1AgentPoolSpecInitProviderVirtualNetworkSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentPoolSpecInitProviderVirtualNetworkSubnetIdSelectorPolicy
@@ -297,7 +330,9 @@ public partial class V1beta1AgentPoolSpecInitProviderVirtualNetworkSubnetIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentPoolSpecInitProviderVirtualNetworkSubnetIdSelector
@@ -314,7 +349,9 @@ public partial class V1beta1AgentPoolSpecInitProviderVirtualNetworkSubnetIdSelec
     [JsonPropertyName("policy")]
     public V1beta1AgentPoolSpecInitProviderVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentPoolSpecInitProvider
@@ -347,7 +384,9 @@ public partial class V1beta1AgentPoolSpecInitProvider
     [JsonPropertyName("virtualNetworkSubnetIdSelector")]
     public V1beta1AgentPoolSpecInitProviderVirtualNetworkSubnetIdSelector? VirtualNetworkSubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentPoolSpecProviderConfigRefPolicy
@@ -360,7 +399,9 @@ public partial class V1beta1AgentPoolSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentPoolSpecProviderConfigRef
@@ -373,7 +414,9 @@ public partial class V1beta1AgentPoolSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1AgentPoolSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentPoolSpecWriteConnectionSecretToRef
@@ -386,7 +429,9 @@ public partial class V1beta1AgentPoolSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AgentPoolSpec defines the desired state of AgentPool</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentPoolSpec
@@ -415,7 +460,9 @@ public partial class V1beta1AgentPoolSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AgentPoolSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentPoolStatusAtProvider
@@ -452,7 +499,9 @@ public partial class V1beta1AgentPoolStatusAtProvider
     [JsonPropertyName("virtualNetworkSubnetId")]
     public string? VirtualNetworkSubnetId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentPoolStatusConditions
@@ -481,7 +530,9 @@ public partial class V1beta1AgentPoolStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AgentPoolStatus defines the observed state of AgentPool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentPoolStatus
@@ -498,7 +549,9 @@ public partial class V1beta1AgentPoolStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AgentPool is the Schema for the AgentPools API. Manages an Azure Container Registry Agent Pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -528,3 +581,4 @@ public partial class V1beta1AgentPool : IKubernetesObject<V1ObjectMeta>, ISpec<V
     [JsonPropertyName("status")]
     public V1beta1AgentPoolStatus? Status { get; set; }
 }
+#nullable disable

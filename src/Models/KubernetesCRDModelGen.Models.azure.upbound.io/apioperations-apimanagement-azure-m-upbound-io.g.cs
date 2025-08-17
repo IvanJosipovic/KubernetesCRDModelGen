@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.m.upbound.io;
+#nullable enable
 /// <summary>APIOperation is the Schema for the APIOperations API. Manages an API Operation within an API Management Service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1APIOperationList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1APIOperation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProviderApiManagementNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1APIOperationSpecForProviderApiManagementNameRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Management in apimanagement to populate apiManagementName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProviderApiManagementNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1APIOperationSpecForProviderApiManagementNameRef
     [JsonPropertyName("policy")]
     public V1beta1APIOperationSpecForProviderApiManagementNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProviderApiManagementNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1APIOperationSpecForProviderApiManagementNameSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Management in apimanagement to populate apiManagementName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProviderApiManagementNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1APIOperationSpecForProviderApiManagementNameSelector
     [JsonPropertyName("policy")]
     public V1beta1APIOperationSpecForProviderApiManagementNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProviderApiNameRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1APIOperationSpecForProviderApiNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a API in apimanagement to populate apiName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProviderApiNameRef
@@ -127,7 +140,9 @@ public partial class V1beta1APIOperationSpecForProviderApiNameRef
     [JsonPropertyName("policy")]
     public V1beta1APIOperationSpecForProviderApiNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProviderApiNameSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1APIOperationSpecForProviderApiNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a API in apimanagement to populate apiName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProviderApiNameSelector
@@ -161,7 +178,9 @@ public partial class V1beta1APIOperationSpecForProviderApiNameSelector
     [JsonPropertyName("policy")]
     public V1beta1APIOperationSpecForProviderApiNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProviderRequestHeaderExample
@@ -186,7 +205,9 @@ public partial class V1beta1APIOperationSpecForProviderRequestHeaderExample
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProviderRequestHeader
@@ -227,7 +248,9 @@ public partial class V1beta1APIOperationSpecForProviderRequestHeader
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProviderRequestQueryParameterExample
@@ -252,7 +275,9 @@ public partial class V1beta1APIOperationSpecForProviderRequestQueryParameterExam
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProviderRequestQueryParameter
@@ -293,7 +318,9 @@ public partial class V1beta1APIOperationSpecForProviderRequestQueryParameter
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProviderRequestRepresentationExample
@@ -318,7 +345,9 @@ public partial class V1beta1APIOperationSpecForProviderRequestRepresentationExam
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProviderRequestRepresentationFormParameterExample
@@ -343,7 +372,9 @@ public partial class V1beta1APIOperationSpecForProviderRequestRepresentationForm
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProviderRequestRepresentationFormParameter
@@ -384,7 +415,9 @@ public partial class V1beta1APIOperationSpecForProviderRequestRepresentationForm
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProviderRequestRepresentation
@@ -409,7 +442,9 @@ public partial class V1beta1APIOperationSpecForProviderRequestRepresentation
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A request block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProviderRequest
@@ -430,7 +465,9 @@ public partial class V1beta1APIOperationSpecForProviderRequest
     [JsonPropertyName("representation")]
     public IList<V1beta1APIOperationSpecForProviderRequestRepresentation>? Representation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProviderResourceGroupNameRefPolicy
@@ -443,7 +480,9 @@ public partial class V1beta1APIOperationSpecForProviderResourceGroupNameRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProviderResourceGroupNameRef
@@ -460,7 +499,9 @@ public partial class V1beta1APIOperationSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1APIOperationSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProviderResourceGroupNameSelectorPolicy
@@ -473,7 +514,9 @@ public partial class V1beta1APIOperationSpecForProviderResourceGroupNameSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProviderResourceGroupNameSelector
@@ -494,7 +537,9 @@ public partial class V1beta1APIOperationSpecForProviderResourceGroupNameSelector
     [JsonPropertyName("policy")]
     public V1beta1APIOperationSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProviderResponseHeaderExample
@@ -519,7 +564,9 @@ public partial class V1beta1APIOperationSpecForProviderResponseHeaderExample
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProviderResponseHeader
@@ -560,7 +607,9 @@ public partial class V1beta1APIOperationSpecForProviderResponseHeader
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProviderResponseRepresentationExample
@@ -585,7 +634,9 @@ public partial class V1beta1APIOperationSpecForProviderResponseRepresentationExa
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProviderResponseRepresentationFormParameterExample
@@ -610,7 +661,9 @@ public partial class V1beta1APIOperationSpecForProviderResponseRepresentationFor
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProviderResponseRepresentationFormParameter
@@ -651,7 +704,9 @@ public partial class V1beta1APIOperationSpecForProviderResponseRepresentationFor
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProviderResponseRepresentation
@@ -676,7 +731,9 @@ public partial class V1beta1APIOperationSpecForProviderResponseRepresentation
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProviderResponse
@@ -697,7 +754,9 @@ public partial class V1beta1APIOperationSpecForProviderResponse
     [JsonPropertyName("statusCode")]
     public double? StatusCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProviderTemplateParameterExample
@@ -722,7 +781,9 @@ public partial class V1beta1APIOperationSpecForProviderTemplateParameterExample
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProviderTemplateParameter
@@ -763,7 +824,9 @@ public partial class V1beta1APIOperationSpecForProviderTemplateParameter
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecForProvider
@@ -832,7 +895,9 @@ public partial class V1beta1APIOperationSpecForProvider
     [JsonPropertyName("urlTemplate")]
     public string? UrlTemplate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecInitProviderRequestHeaderExample
@@ -857,7 +922,9 @@ public partial class V1beta1APIOperationSpecInitProviderRequestHeaderExample
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecInitProviderRequestHeader
@@ -898,7 +965,9 @@ public partial class V1beta1APIOperationSpecInitProviderRequestHeader
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecInitProviderRequestQueryParameterExample
@@ -923,7 +992,9 @@ public partial class V1beta1APIOperationSpecInitProviderRequestQueryParameterExa
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecInitProviderRequestQueryParameter
@@ -964,7 +1035,9 @@ public partial class V1beta1APIOperationSpecInitProviderRequestQueryParameter
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecInitProviderRequestRepresentationExample
@@ -989,7 +1062,9 @@ public partial class V1beta1APIOperationSpecInitProviderRequestRepresentationExa
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecInitProviderRequestRepresentationFormParameterExample
@@ -1014,7 +1089,9 @@ public partial class V1beta1APIOperationSpecInitProviderRequestRepresentationFor
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecInitProviderRequestRepresentationFormParameter
@@ -1055,7 +1132,9 @@ public partial class V1beta1APIOperationSpecInitProviderRequestRepresentationFor
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecInitProviderRequestRepresentation
@@ -1080,7 +1159,9 @@ public partial class V1beta1APIOperationSpecInitProviderRequestRepresentation
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A request block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecInitProviderRequest
@@ -1101,7 +1182,9 @@ public partial class V1beta1APIOperationSpecInitProviderRequest
     [JsonPropertyName("representation")]
     public IList<V1beta1APIOperationSpecInitProviderRequestRepresentation>? Representation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecInitProviderResponseHeaderExample
@@ -1126,7 +1209,9 @@ public partial class V1beta1APIOperationSpecInitProviderResponseHeaderExample
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecInitProviderResponseHeader
@@ -1167,7 +1252,9 @@ public partial class V1beta1APIOperationSpecInitProviderResponseHeader
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecInitProviderResponseRepresentationExample
@@ -1192,7 +1279,9 @@ public partial class V1beta1APIOperationSpecInitProviderResponseRepresentationEx
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecInitProviderResponseRepresentationFormParameterExample
@@ -1217,7 +1306,9 @@ public partial class V1beta1APIOperationSpecInitProviderResponseRepresentationFo
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecInitProviderResponseRepresentationFormParameter
@@ -1258,7 +1349,9 @@ public partial class V1beta1APIOperationSpecInitProviderResponseRepresentationFo
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecInitProviderResponseRepresentation
@@ -1283,7 +1376,9 @@ public partial class V1beta1APIOperationSpecInitProviderResponseRepresentation
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecInitProviderResponse
@@ -1304,7 +1399,9 @@ public partial class V1beta1APIOperationSpecInitProviderResponse
     [JsonPropertyName("statusCode")]
     public double? StatusCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecInitProviderTemplateParameterExample
@@ -1329,7 +1426,9 @@ public partial class V1beta1APIOperationSpecInitProviderTemplateParameterExample
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecInitProviderTemplateParameter
@@ -1370,7 +1469,9 @@ public partial class V1beta1APIOperationSpecInitProviderTemplateParameter
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecInitProvider
@@ -1403,7 +1504,9 @@ public partial class V1beta1APIOperationSpecInitProvider
     [JsonPropertyName("urlTemplate")]
     public string? UrlTemplate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecProviderConfigRef
@@ -1416,7 +1519,9 @@ public partial class V1beta1APIOperationSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpecWriteConnectionSecretToRef
@@ -1425,7 +1530,9 @@ public partial class V1beta1APIOperationSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>APIOperationSpec defines the desired state of APIOperation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationSpec
@@ -1450,7 +1557,9 @@ public partial class V1beta1APIOperationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1APIOperationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationStatusAtProviderRequestHeaderExample
@@ -1475,7 +1584,9 @@ public partial class V1beta1APIOperationStatusAtProviderRequestHeaderExample
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationStatusAtProviderRequestHeader
@@ -1516,7 +1627,9 @@ public partial class V1beta1APIOperationStatusAtProviderRequestHeader
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationStatusAtProviderRequestQueryParameterExample
@@ -1541,7 +1654,9 @@ public partial class V1beta1APIOperationStatusAtProviderRequestQueryParameterExa
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationStatusAtProviderRequestQueryParameter
@@ -1582,7 +1697,9 @@ public partial class V1beta1APIOperationStatusAtProviderRequestQueryParameter
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationStatusAtProviderRequestRepresentationExample
@@ -1607,7 +1724,9 @@ public partial class V1beta1APIOperationStatusAtProviderRequestRepresentationExa
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationStatusAtProviderRequestRepresentationFormParameterExample
@@ -1632,7 +1751,9 @@ public partial class V1beta1APIOperationStatusAtProviderRequestRepresentationFor
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationStatusAtProviderRequestRepresentationFormParameter
@@ -1673,7 +1794,9 @@ public partial class V1beta1APIOperationStatusAtProviderRequestRepresentationFor
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationStatusAtProviderRequestRepresentation
@@ -1698,7 +1821,9 @@ public partial class V1beta1APIOperationStatusAtProviderRequestRepresentation
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A request block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationStatusAtProviderRequest
@@ -1719,7 +1844,9 @@ public partial class V1beta1APIOperationStatusAtProviderRequest
     [JsonPropertyName("representation")]
     public IList<V1beta1APIOperationStatusAtProviderRequestRepresentation>? Representation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationStatusAtProviderResponseHeaderExample
@@ -1744,7 +1871,9 @@ public partial class V1beta1APIOperationStatusAtProviderResponseHeaderExample
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationStatusAtProviderResponseHeader
@@ -1785,7 +1914,9 @@ public partial class V1beta1APIOperationStatusAtProviderResponseHeader
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationStatusAtProviderResponseRepresentationExample
@@ -1810,7 +1941,9 @@ public partial class V1beta1APIOperationStatusAtProviderResponseRepresentationEx
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationStatusAtProviderResponseRepresentationFormParameterExample
@@ -1835,7 +1968,9 @@ public partial class V1beta1APIOperationStatusAtProviderResponseRepresentationFo
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationStatusAtProviderResponseRepresentationFormParameter
@@ -1876,7 +2011,9 @@ public partial class V1beta1APIOperationStatusAtProviderResponseRepresentationFo
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationStatusAtProviderResponseRepresentation
@@ -1901,7 +2038,9 @@ public partial class V1beta1APIOperationStatusAtProviderResponseRepresentation
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationStatusAtProviderResponse
@@ -1922,7 +2061,9 @@ public partial class V1beta1APIOperationStatusAtProviderResponse
     [JsonPropertyName("statusCode")]
     public double? StatusCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationStatusAtProviderTemplateParameterExample
@@ -1947,7 +2088,9 @@ public partial class V1beta1APIOperationStatusAtProviderTemplateParameterExample
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationStatusAtProviderTemplateParameter
@@ -1988,7 +2131,9 @@ public partial class V1beta1APIOperationStatusAtProviderTemplateParameter
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationStatusAtProvider
@@ -2037,7 +2182,9 @@ public partial class V1beta1APIOperationStatusAtProvider
     [JsonPropertyName("urlTemplate")]
     public string? UrlTemplate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationStatusConditions
@@ -2066,7 +2213,9 @@ public partial class V1beta1APIOperationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>APIOperationStatus defines the observed state of APIOperation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationStatus
@@ -2083,7 +2232,9 @@ public partial class V1beta1APIOperationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>APIOperation is the Schema for the APIOperations API. Manages an API Operation within an API Management Service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -2113,3 +2264,4 @@ public partial class V1beta1APIOperation : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1APIOperationStatus? Status { get; set; }
 }
+#nullable disable

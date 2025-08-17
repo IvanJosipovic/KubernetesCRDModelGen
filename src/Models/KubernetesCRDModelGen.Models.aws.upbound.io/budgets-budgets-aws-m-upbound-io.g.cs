@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.budgets.aws.m.upbound.io;
+#nullable enable
 /// <summary>Budget is the Schema for the Budgets API. Provides a budgets budget resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BudgetList : IKubernetesObject<V1ListMeta>, IItems<V
     [JsonPropertyName("items")]
     public IList<V1beta1Budget> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block of Historical Options. Required for auto_adjust_type of HISTORICAL Configuration block that defines the historical data that your auto-adjusting budget is based on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSpecForProviderAutoAdjustDataHistoricalOptions
@@ -42,7 +45,9 @@ public partial class V1beta1BudgetSpecForProviderAutoAdjustDataHistoricalOptions
     [JsonPropertyName("budgetAdjustmentPeriod")]
     public double? BudgetAdjustmentPeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object containing AutoAdjustData which determines the budget amount for an auto-adjusting budget.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSpecForProviderAutoAdjustData
@@ -55,7 +60,9 @@ public partial class V1beta1BudgetSpecForProviderAutoAdjustData
     [JsonPropertyName("historicalOptions")]
     public V1beta1BudgetSpecForProviderAutoAdjustDataHistoricalOptions? HistoricalOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSpecForProviderCostFilter
@@ -68,7 +75,9 @@ public partial class V1beta1BudgetSpecForProviderCostFilter
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSpecForProviderCostTypes
@@ -117,7 +126,9 @@ public partial class V1beta1BudgetSpecForProviderCostTypes
     [JsonPropertyName("useBlended")]
     public bool? UseBlended { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSpecForProviderNotification
@@ -146,7 +157,9 @@ public partial class V1beta1BudgetSpecForProviderNotification
     [JsonPropertyName("thresholdType")]
     public string? ThresholdType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSpecForProviderPlannedLimit
@@ -163,7 +176,9 @@ public partial class V1beta1BudgetSpecForProviderPlannedLimit
     [JsonPropertyName("unit")]
     public string? Unit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSpecForProvider
@@ -220,7 +235,9 @@ public partial class V1beta1BudgetSpecForProvider
     [JsonPropertyName("timeUnit")]
     public string? TimeUnit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block of Historical Options. Required for auto_adjust_type of HISTORICAL Configuration block that defines the historical data that your auto-adjusting budget is based on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSpecInitProviderAutoAdjustDataHistoricalOptions
@@ -229,7 +246,9 @@ public partial class V1beta1BudgetSpecInitProviderAutoAdjustDataHistoricalOption
     [JsonPropertyName("budgetAdjustmentPeriod")]
     public double? BudgetAdjustmentPeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object containing AutoAdjustData which determines the budget amount for an auto-adjusting budget.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSpecInitProviderAutoAdjustData
@@ -242,7 +261,9 @@ public partial class V1beta1BudgetSpecInitProviderAutoAdjustData
     [JsonPropertyName("historicalOptions")]
     public V1beta1BudgetSpecInitProviderAutoAdjustDataHistoricalOptions? HistoricalOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSpecInitProviderCostFilter
@@ -255,7 +276,9 @@ public partial class V1beta1BudgetSpecInitProviderCostFilter
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSpecInitProviderCostTypes
@@ -304,7 +327,9 @@ public partial class V1beta1BudgetSpecInitProviderCostTypes
     [JsonPropertyName("useBlended")]
     public bool? UseBlended { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSpecInitProviderNotification
@@ -333,7 +358,9 @@ public partial class V1beta1BudgetSpecInitProviderNotification
     [JsonPropertyName("thresholdType")]
     public string? ThresholdType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSpecInitProviderPlannedLimit
@@ -350,7 +377,9 @@ public partial class V1beta1BudgetSpecInitProviderPlannedLimit
     [JsonPropertyName("unit")]
     public string? Unit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSpecInitProvider
@@ -407,7 +436,9 @@ public partial class V1beta1BudgetSpecInitProvider
     [JsonPropertyName("timeUnit")]
     public string? TimeUnit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSpecProviderConfigRef
@@ -420,7 +451,9 @@ public partial class V1beta1BudgetSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSpecWriteConnectionSecretToRef
@@ -429,7 +462,9 @@ public partial class V1beta1BudgetSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BudgetSpec defines the desired state of Budget</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSpec
@@ -454,7 +489,9 @@ public partial class V1beta1BudgetSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BudgetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block of Historical Options. Required for auto_adjust_type of HISTORICAL Configuration block that defines the historical data that your auto-adjusting budget is based on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetStatusAtProviderAutoAdjustDataHistoricalOptions
@@ -467,7 +504,9 @@ public partial class V1beta1BudgetStatusAtProviderAutoAdjustDataHistoricalOption
     [JsonPropertyName("lookbackAvailablePeriods")]
     public double? LookbackAvailablePeriods { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object containing AutoAdjustData which determines the budget amount for an auto-adjusting budget.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetStatusAtProviderAutoAdjustData
@@ -484,7 +523,9 @@ public partial class V1beta1BudgetStatusAtProviderAutoAdjustData
     [JsonPropertyName("lastAutoAdjustTime")]
     public string? LastAutoAdjustTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetStatusAtProviderCostFilter
@@ -497,7 +538,9 @@ public partial class V1beta1BudgetStatusAtProviderCostFilter
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetStatusAtProviderCostTypes
@@ -546,7 +589,9 @@ public partial class V1beta1BudgetStatusAtProviderCostTypes
     [JsonPropertyName("useBlended")]
     public bool? UseBlended { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetStatusAtProviderNotification
@@ -575,7 +620,9 @@ public partial class V1beta1BudgetStatusAtProviderNotification
     [JsonPropertyName("thresholdType")]
     public string? ThresholdType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetStatusAtProviderPlannedLimit
@@ -592,7 +639,9 @@ public partial class V1beta1BudgetStatusAtProviderPlannedLimit
     [JsonPropertyName("unit")]
     public string? Unit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetStatusAtProvider
@@ -661,7 +710,9 @@ public partial class V1beta1BudgetStatusAtProvider
     [JsonPropertyName("timeUnit")]
     public string? TimeUnit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetStatusConditions
@@ -690,7 +741,9 @@ public partial class V1beta1BudgetStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BudgetStatus defines the observed state of Budget.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetStatus
@@ -707,7 +760,9 @@ public partial class V1beta1BudgetStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Budget is the Schema for the Budgets API. Provides a budgets budget resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -737,3 +792,4 @@ public partial class V1beta1Budget : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     [JsonPropertyName("status")]
     public V1beta1BudgetStatus? Status { get; set; }
 }
+#nullable disable

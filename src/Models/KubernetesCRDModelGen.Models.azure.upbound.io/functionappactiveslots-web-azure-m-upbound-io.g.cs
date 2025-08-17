@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.web.azure.m.upbound.io;
+#nullable enable
 /// <summary>FunctionAppActiveSlot is the Schema for the FunctionAppActiveSlots API. Manages a Function App Active Slot.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FunctionAppActiveSlotList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1FunctionAppActiveSlot> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppActiveSlotSpecForProviderSlotIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1FunctionAppActiveSlotSpecForProviderSlotIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a WindowsFunctionAppSlot in web to populate slotId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppActiveSlotSpecForProviderSlotIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1FunctionAppActiveSlotSpecForProviderSlotIdRef
     [JsonPropertyName("policy")]
     public V1beta1FunctionAppActiveSlotSpecForProviderSlotIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppActiveSlotSpecForProviderSlotIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1FunctionAppActiveSlotSpecForProviderSlotIdSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a WindowsFunctionAppSlot in web to populate slotId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppActiveSlotSpecForProviderSlotIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1FunctionAppActiveSlotSpecForProviderSlotIdSelector
     [JsonPropertyName("policy")]
     public V1beta1FunctionAppActiveSlotSpecForProviderSlotIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppActiveSlotSpecForProvider
@@ -118,7 +129,9 @@ public partial class V1beta1FunctionAppActiveSlotSpecForProvider
     [JsonPropertyName("slotIdSelector")]
     public V1beta1FunctionAppActiveSlotSpecForProviderSlotIdSelector? SlotIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppActiveSlotSpecInitProviderSlotIdRefPolicy
@@ -131,7 +144,9 @@ public partial class V1beta1FunctionAppActiveSlotSpecInitProviderSlotIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a WindowsFunctionAppSlot in web to populate slotId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppActiveSlotSpecInitProviderSlotIdRef
@@ -148,7 +163,9 @@ public partial class V1beta1FunctionAppActiveSlotSpecInitProviderSlotIdRef
     [JsonPropertyName("policy")]
     public V1beta1FunctionAppActiveSlotSpecInitProviderSlotIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppActiveSlotSpecInitProviderSlotIdSelectorPolicy
@@ -161,7 +178,9 @@ public partial class V1beta1FunctionAppActiveSlotSpecInitProviderSlotIdSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a WindowsFunctionAppSlot in web to populate slotId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppActiveSlotSpecInitProviderSlotIdSelector
@@ -182,7 +201,9 @@ public partial class V1beta1FunctionAppActiveSlotSpecInitProviderSlotIdSelector
     [JsonPropertyName("policy")]
     public V1beta1FunctionAppActiveSlotSpecInitProviderSlotIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppActiveSlotSpecInitProvider
@@ -203,7 +224,9 @@ public partial class V1beta1FunctionAppActiveSlotSpecInitProvider
     [JsonPropertyName("slotIdSelector")]
     public V1beta1FunctionAppActiveSlotSpecInitProviderSlotIdSelector? SlotIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppActiveSlotSpecProviderConfigRef
@@ -216,7 +239,9 @@ public partial class V1beta1FunctionAppActiveSlotSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppActiveSlotSpecWriteConnectionSecretToRef
@@ -225,7 +250,9 @@ public partial class V1beta1FunctionAppActiveSlotSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FunctionAppActiveSlotSpec defines the desired state of FunctionAppActiveSlot</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppActiveSlotSpec
@@ -250,7 +277,9 @@ public partial class V1beta1FunctionAppActiveSlotSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1FunctionAppActiveSlotSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppActiveSlotStatusAtProvider
@@ -271,7 +300,9 @@ public partial class V1beta1FunctionAppActiveSlotStatusAtProvider
     [JsonPropertyName("slotId")]
     public string? SlotId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppActiveSlotStatusConditions
@@ -300,7 +331,9 @@ public partial class V1beta1FunctionAppActiveSlotStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FunctionAppActiveSlotStatus defines the observed state of FunctionAppActiveSlot.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppActiveSlotStatus
@@ -317,7 +350,9 @@ public partial class V1beta1FunctionAppActiveSlotStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FunctionAppActiveSlot is the Schema for the FunctionAppActiveSlots API. Manages a Function App Active Slot.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -347,3 +382,4 @@ public partial class V1beta1FunctionAppActiveSlot : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1FunctionAppActiveSlotStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gkehub.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1GKEHubMembershipList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1GKEHubMembership> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. How to identify workloads from this Membership. See the documentation on Workload Identity for more details: https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubMembershipSpecAuthority
@@ -42,7 +45,9 @@ public partial class V1beta1GKEHubMembershipSpecAuthority
     [JsonPropertyName("issuer")]
     public string? Issuer { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubMembershipSpecEndpointGkeClusterResourceRef
@@ -59,7 +64,9 @@ public partial class V1beta1GKEHubMembershipSpecEndpointGkeClusterResourceRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. GKE-specific information. Only present if this Membership is a GKE cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubMembershipSpecEndpointGkeCluster
@@ -68,7 +75,9 @@ public partial class V1beta1GKEHubMembershipSpecEndpointGkeCluster
     [JsonPropertyName("resourceRef")]
     public V1beta1GKEHubMembershipSpecEndpointGkeClusterResourceRef? ResourceRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Options for Kubernetes resource generation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubMembershipSpecEndpointKubernetesResourceResourceOptions
@@ -81,7 +90,9 @@ public partial class V1beta1GKEHubMembershipSpecEndpointKubernetesResourceResour
     [JsonPropertyName("v1beta1Crd")]
     public bool? V1beta1Crd { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The in-cluster Kubernetes Resources that should be applied for a correctly registered cluster, in the steady state. These resources: * Ensure that the cluster is exclusively registered to one and only one Hub Membership. * Propagate Workload Pool Information available in the Membership Authority field. * Ensure proper initial configuration of default Hub Features.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubMembershipSpecEndpointKubernetesResource
@@ -94,7 +105,9 @@ public partial class V1beta1GKEHubMembershipSpecEndpointKubernetesResource
     [JsonPropertyName("resourceOptions")]
     public V1beta1GKEHubMembershipSpecEndpointKubernetesResourceResourceOptions? ResourceOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Endpoint information to reach this member.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubMembershipSpecEndpoint
@@ -107,7 +120,9 @@ public partial class V1beta1GKEHubMembershipSpecEndpoint
     [JsonPropertyName("kubernetesResource")]
     public V1beta1GKEHubMembershipSpecEndpointKubernetesResource? KubernetesResource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubMembershipSpec
@@ -140,7 +155,9 @@ public partial class V1beta1GKEHubMembershipSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubMembershipStatusAuthority
@@ -153,7 +170,9 @@ public partial class V1beta1GKEHubMembershipStatusAuthority
     [JsonPropertyName("workloadIdentityPool")]
     public string? WorkloadIdentityPool { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubMembershipStatusConditions
@@ -178,7 +197,9 @@ public partial class V1beta1GKEHubMembershipStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Useful Kubernetes-specific metadata.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubMembershipStatusEndpointKubernetesMetadata
@@ -207,7 +228,9 @@ public partial class V1beta1GKEHubMembershipStatusEndpointKubernetesMetadata
     [JsonPropertyName("vcpuCount")]
     public long? VcpuCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubMembershipStatusEndpointKubernetesResourceConnectResources
@@ -220,7 +243,9 @@ public partial class V1beta1GKEHubMembershipStatusEndpointKubernetesResourceConn
     [JsonPropertyName("manifest")]
     public string? Manifest { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubMembershipStatusEndpointKubernetesResourceMembershipResources
@@ -233,7 +258,9 @@ public partial class V1beta1GKEHubMembershipStatusEndpointKubernetesResourceMemb
     [JsonPropertyName("manifest")]
     public string? Manifest { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubMembershipStatusEndpointKubernetesResource
@@ -246,7 +273,9 @@ public partial class V1beta1GKEHubMembershipStatusEndpointKubernetesResource
     [JsonPropertyName("membershipResources")]
     public IList<V1beta1GKEHubMembershipStatusEndpointKubernetesResourceMembershipResources>? MembershipResources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubMembershipStatusEndpoint
@@ -259,7 +288,9 @@ public partial class V1beta1GKEHubMembershipStatusEndpoint
     [JsonPropertyName("kubernetesResource")]
     public V1beta1GKEHubMembershipStatusEndpointKubernetesResource? KubernetesResource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. State of the Membership resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubMembershipStatusState
@@ -268,7 +299,9 @@ public partial class V1beta1GKEHubMembershipStatusState
     [JsonPropertyName("code")]
     public string? Code { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubMembershipStatus
@@ -313,7 +346,9 @@ public partial class V1beta1GKEHubMembershipStatus
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -343,3 +378,4 @@ public partial class V1beta1GKEHubMembership : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1GKEHubMembershipStatus? Status { get; set; }
 }
+#nullable disable

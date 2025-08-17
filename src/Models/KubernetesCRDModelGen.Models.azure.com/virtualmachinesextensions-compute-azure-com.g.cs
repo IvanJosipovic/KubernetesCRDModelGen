@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachinesExtension Generator information: - Generated from: /compute/resource-manager/Microsoft.Compute/ComputeRP/stable/2022-03-01/virtualMachine.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/extensions/{vmExtensionName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20220301storageVirtualMachinesExtensionList : IKuberne
     [JsonPropertyName("items")]
     public IList<V1api20220301storageVirtualMachinesExtension> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.InstanceViewStatus Instance view status.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionSpecInstanceViewStatuses
@@ -62,7 +65,9 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpecInstanceVie
     [JsonPropertyName("time")]
     public string? Time { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.InstanceViewStatus Instance view status.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionSpecInstanceViewSubstatuses
@@ -91,7 +96,9 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpecInstanceVie
     [JsonPropertyName("time")]
     public string? Time { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineExtensionInstanceView The instance view of a virtual machine extension.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionSpecInstanceView
@@ -120,7 +127,9 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpecInstanceVie
     [JsonPropertyName("typeHandlerVersion")]
     public string? TypeHandlerVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionSpecOperatorSpecConfigMapExpressions
@@ -137,7 +146,9 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpecOperatorSpe
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionSpecOperatorSpecSecretExpressions
@@ -154,7 +165,9 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpecOperatorSpe
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachinesExtensionOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionSpecOperatorSpec
@@ -171,7 +184,9 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpecOperatorSpe
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20220301storageVirtualMachinesExtensionSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a compute.azure.com/VirtualMachine resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionSpecOwner
@@ -184,7 +199,9 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretMapReference is a reference to a Kubernetes secret in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionSpecProtectedSettings
@@ -193,7 +210,9 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpecProtectedSe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource Id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionSpecProtectedSettingsFromKeyVaultSourceVaultReference
@@ -214,7 +233,9 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpecProtectedSe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionSpecProtectedSettingsFromKeyVaultSourceVault
@@ -227,7 +248,9 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpecProtectedSe
     [JsonPropertyName("reference")]
     public V1api20220301storageVirtualMachinesExtensionSpecProtectedSettingsFromKeyVaultSourceVaultReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.KeyVaultSecretReference Describes a reference to Key Vault Secret</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionSpecProtectedSettingsFromKeyVault
@@ -244,7 +267,9 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpecProtectedSe
     [JsonPropertyName("sourceVault")]
     public V1api20220301storageVirtualMachinesExtensionSpecProtectedSettingsFromKeyVaultSourceVault? SourceVault { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachinesExtension_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionSpec
@@ -321,7 +346,9 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpec
     [JsonPropertyName("typeHandlerVersion")]
     public string? TypeHandlerVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionStatusConditions
@@ -354,7 +381,9 @@ public partial class V1api20220301storageVirtualMachinesExtensionStatusCondition
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.InstanceViewStatus_STATUS Instance view status.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionStatusInstanceViewStatuses
@@ -383,7 +412,9 @@ public partial class V1api20220301storageVirtualMachinesExtensionStatusInstanceV
     [JsonPropertyName("time")]
     public string? Time { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.InstanceViewStatus_STATUS Instance view status.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionStatusInstanceViewSubstatuses
@@ -412,7 +443,9 @@ public partial class V1api20220301storageVirtualMachinesExtensionStatusInstanceV
     [JsonPropertyName("time")]
     public string? Time { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachineExtensionInstanceView_STATUS The instance view of a virtual machine extension.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionStatusInstanceView
@@ -441,7 +474,9 @@ public partial class V1api20220301storageVirtualMachinesExtensionStatusInstanceV
     [JsonPropertyName("typeHandlerVersion")]
     public string? TypeHandlerVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionStatusProtectedSettingsFromKeyVaultSourceVault
@@ -454,7 +489,9 @@ public partial class V1api20220301storageVirtualMachinesExtensionStatusProtected
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.KeyVaultSecretReference_STATUS Describes a reference to Key Vault Secret</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionStatusProtectedSettingsFromKeyVault
@@ -471,7 +508,9 @@ public partial class V1api20220301storageVirtualMachinesExtensionStatusProtected
     [JsonPropertyName("sourceVault")]
     public V1api20220301storageVirtualMachinesExtensionStatusProtectedSettingsFromKeyVaultSourceVault? SourceVault { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachinesExtension_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionStatus
@@ -548,7 +587,9 @@ public partial class V1api20220301storageVirtualMachinesExtensionStatus
     [JsonPropertyName("typeHandlerVersion")]
     public string? TypeHandlerVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualMachinesExtension Generator information: - Generated from: /compute/resource-manager/Microsoft.Compute/ComputeRP/stable/2022-03-01/virtualMachine.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/extensions/{vmExtensionName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -578,3 +619,4 @@ public partial class V1api20220301storageVirtualMachinesExtension : IKubernetesO
     [JsonPropertyName("status")]
     public V1api20220301storageVirtualMachinesExtensionStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+#nullable enable
 /// <summary>BastionHost is the Schema for the BastionHosts API. Manages a Bastion Host.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BastionHostList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1BastionHost> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostSpecForProviderIpConfigurationPublicIpAddressIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1BastionHostSpecForProviderIpConfigurationPublicIpAdd
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PublicIP in network to populate publicIpAddressId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostSpecForProviderIpConfigurationPublicIpAddressIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1BastionHostSpecForProviderIpConfigurationPublicIpAdd
     [JsonPropertyName("policy")]
     public V1beta1BastionHostSpecForProviderIpConfigurationPublicIpAddressIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostSpecForProviderIpConfigurationPublicIpAddressIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1BastionHostSpecForProviderIpConfigurationPublicIpAdd
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PublicIP in network to populate publicIpAddressId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostSpecForProviderIpConfigurationPublicIpAddressIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1BastionHostSpecForProviderIpConfigurationPublicIpAdd
     [JsonPropertyName("policy")]
     public V1beta1BastionHostSpecForProviderIpConfigurationPublicIpAddressIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdRef
     [JsonPropertyName("policy")]
     public V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdSel
     [JsonPropertyName("policy")]
     public V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ip_configuration block as defined below. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostSpecForProviderIpConfiguration
@@ -194,7 +213,9 @@ public partial class V1beta1BastionHostSpecForProviderIpConfiguration
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdSelector? SubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostSpecForProviderResourceGroupNameRefPolicy
@@ -207,7 +228,9 @@ public partial class V1beta1BastionHostSpecForProviderResourceGroupNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostSpecForProviderResourceGroupNameRef
@@ -224,7 +247,9 @@ public partial class V1beta1BastionHostSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1BastionHostSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostSpecForProviderResourceGroupNameSelectorPolicy
@@ -237,7 +262,9 @@ public partial class V1beta1BastionHostSpecForProviderResourceGroupNameSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostSpecForProviderResourceGroupNameSelector
@@ -258,7 +285,9 @@ public partial class V1beta1BastionHostSpecForProviderResourceGroupNameSelector
     [JsonPropertyName("policy")]
     public V1beta1BastionHostSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostSpecForProvider
@@ -331,7 +360,9 @@ public partial class V1beta1BastionHostSpecForProvider
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostSpecInitProviderIpConfigurationPublicIpAddressIdRefPolicy
@@ -344,7 +375,9 @@ public partial class V1beta1BastionHostSpecInitProviderIpConfigurationPublicIpAd
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PublicIP in network to populate publicIpAddressId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostSpecInitProviderIpConfigurationPublicIpAddressIdRef
@@ -361,7 +394,9 @@ public partial class V1beta1BastionHostSpecInitProviderIpConfigurationPublicIpAd
     [JsonPropertyName("policy")]
     public V1beta1BastionHostSpecInitProviderIpConfigurationPublicIpAddressIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostSpecInitProviderIpConfigurationPublicIpAddressIdSelectorPolicy
@@ -374,7 +409,9 @@ public partial class V1beta1BastionHostSpecInitProviderIpConfigurationPublicIpAd
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PublicIP in network to populate publicIpAddressId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostSpecInitProviderIpConfigurationPublicIpAddressIdSelector
@@ -395,7 +432,9 @@ public partial class V1beta1BastionHostSpecInitProviderIpConfigurationPublicIpAd
     [JsonPropertyName("policy")]
     public V1beta1BastionHostSpecInitProviderIpConfigurationPublicIpAddressIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdRefPolicy
@@ -408,7 +447,9 @@ public partial class V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdRef
@@ -425,7 +466,9 @@ public partial class V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdRe
     [JsonPropertyName("policy")]
     public V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdSelectorPolicy
@@ -438,7 +481,9 @@ public partial class V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdSelector
@@ -459,7 +504,9 @@ public partial class V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdSe
     [JsonPropertyName("policy")]
     public V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ip_configuration block as defined below. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostSpecInitProviderIpConfiguration
@@ -492,7 +539,9 @@ public partial class V1beta1BastionHostSpecInitProviderIpConfiguration
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdSelector? SubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostSpecInitProvider
@@ -553,7 +602,9 @@ public partial class V1beta1BastionHostSpecInitProvider
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostSpecProviderConfigRef
@@ -566,7 +617,9 @@ public partial class V1beta1BastionHostSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostSpecWriteConnectionSecretToRef
@@ -575,7 +628,9 @@ public partial class V1beta1BastionHostSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BastionHostSpec defines the desired state of BastionHost</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostSpec
@@ -600,7 +655,9 @@ public partial class V1beta1BastionHostSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BastionHostSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ip_configuration block as defined below. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostStatusAtProviderIpConfiguration
@@ -617,7 +674,9 @@ public partial class V1beta1BastionHostStatusAtProviderIpConfiguration
     [JsonPropertyName("subnetId")]
     public string? SubnetId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostStatusAtProvider
@@ -690,7 +749,9 @@ public partial class V1beta1BastionHostStatusAtProvider
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostStatusConditions
@@ -719,7 +780,9 @@ public partial class V1beta1BastionHostStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BastionHostStatus defines the observed state of BastionHost.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BastionHostStatus
@@ -736,7 +799,9 @@ public partial class V1beta1BastionHostStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BastionHost is the Schema for the BastionHosts API. Manages a Bastion Host.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -766,3 +831,4 @@ public partial class V1beta1BastionHost : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1BastionHostStatus? Status { get; set; }
 }
+#nullable disable

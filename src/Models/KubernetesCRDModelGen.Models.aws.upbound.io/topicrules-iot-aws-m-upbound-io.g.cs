@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iot.aws.m.upbound.io;
+#nullable enable
 /// <summary>TopicRule is the Schema for the TopicRules API. Creates and manages an AWS IoT topic rule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TopicRuleList : IKubernetesObject<V1ListMeta>, IItem
     [JsonPropertyName("items")]
     public IList<V1beta1TopicRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderCloudwatchAlarm
@@ -54,7 +57,9 @@ public partial class V1beta1TopicRuleSpecForProviderCloudwatchAlarm
     [JsonPropertyName("stateValue")]
     public string? StateValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderCloudwatchLogs
@@ -71,7 +76,9 @@ public partial class V1beta1TopicRuleSpecForProviderCloudwatchLogs
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderCloudwatchMetric
@@ -100,7 +107,9 @@ public partial class V1beta1TopicRuleSpecForProviderCloudwatchMetric
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderDynamodb
@@ -145,7 +154,9 @@ public partial class V1beta1TopicRuleSpecForProviderDynamodb
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderDynamodbv2PutItem
@@ -154,7 +165,9 @@ public partial class V1beta1TopicRuleSpecForProviderDynamodbv2PutItem
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderDynamodbv2
@@ -167,7 +180,9 @@ public partial class V1beta1TopicRuleSpecForProviderDynamodbv2
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderElasticsearch
@@ -192,7 +207,9 @@ public partial class V1beta1TopicRuleSpecForProviderElasticsearch
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionCloudwatchAlarm
@@ -213,7 +230,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionCloudwatchAlarm
     [JsonPropertyName("stateValue")]
     public string? StateValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionCloudwatchLogs
@@ -230,7 +249,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionCloudwatchLogs
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionCloudwatchMetric
@@ -259,7 +280,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionCloudwatchMetric
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionDynamodb
@@ -304,7 +327,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionDynamodb
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionDynamodbv2PutItem
@@ -313,7 +338,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionDynamodbv2PutItem
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionDynamodbv2
@@ -326,7 +353,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionDynamodbv2
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionElasticsearch
@@ -351,7 +380,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionElasticsearch
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionFirehose
@@ -372,7 +403,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionFirehose
     [JsonPropertyName("separator")]
     public string? Separator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionHttpHttpHeader
@@ -385,7 +418,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionHttpHttpHeader
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionHttp
@@ -402,7 +437,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionHttp
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionIotAnalytics
@@ -419,7 +456,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionIotAnalytics
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionIotEvents
@@ -440,7 +479,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionIotEvents
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionKafkaHeader
@@ -453,7 +494,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionKafkaHeader
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionKafka
@@ -482,7 +525,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionKafka
     [JsonPropertyName("topic")]
     public string? Topic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionKinesis
@@ -499,7 +544,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionKinesis
     [JsonPropertyName("streamName")]
     public string? StreamName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionLambda
@@ -508,7 +555,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionLambda
     [JsonPropertyName("functionArn")]
     public string? FunctionArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionRepublish
@@ -525,7 +574,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionRepublish
     [JsonPropertyName("topic")]
     public string? Topic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionS3
@@ -546,7 +597,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionS3
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnRefPolicy
@@ -559,7 +612,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnRef
@@ -576,7 +631,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnSelectorPolicy
@@ -589,7 +646,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnSelector
@@ -610,7 +669,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnSelecto
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnRefPolicy
@@ -623,7 +684,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in sns to populate targetArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnRef
@@ -640,7 +703,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnRef
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnSelectorPolicy
@@ -653,7 +718,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in sns to populate targetArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnSelector
@@ -674,7 +741,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnSelec
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionSns
@@ -707,7 +776,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionSns
     [JsonPropertyName("targetArnSelector")]
     public V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnSelector? TargetArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionSqs
@@ -724,7 +795,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionSqs
     [JsonPropertyName("useBase64")]
     public bool? UseBase64 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionStepFunctions
@@ -741,7 +814,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionStepFunctions
     [JsonPropertyName("stateMachineName")]
     public string? StateMachineName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionTimestreamDimension
@@ -754,7 +829,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionTimestreamDimensi
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block specifying an application-defined value to replace the default value assigned to the Timestream record's timestamp in the time column. Nested arguments below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionTimestreamTimestamp
@@ -767,7 +844,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionTimestreamTimesta
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionTimestream
@@ -792,7 +871,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionTimestream
     [JsonPropertyName("timestamp")]
     public V1beta1TopicRuleSpecForProviderErrorActionTimestreamTimestamp? Timestamp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with error action to be associated with the rule. See the documentation for cloudwatch_alarm, cloudwatch_logs, cloudwatch_metric, dynamodb, dynamodbv2, elasticsearch, firehose, http, iot_analytics, iot_events, kafka, kinesis, lambda, republish, s3, sns, sqs, step_functions, timestream configuration blocks for further configuration details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorAction
@@ -873,7 +954,9 @@ public partial class V1beta1TopicRuleSpecForProviderErrorAction
     [JsonPropertyName("timestream")]
     public V1beta1TopicRuleSpecForProviderErrorActionTimestream? Timestream { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderFirehose
@@ -894,7 +977,9 @@ public partial class V1beta1TopicRuleSpecForProviderFirehose
     [JsonPropertyName("separator")]
     public string? Separator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderHttpHttpHeader
@@ -907,7 +992,9 @@ public partial class V1beta1TopicRuleSpecForProviderHttpHttpHeader
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderHttp
@@ -924,7 +1011,9 @@ public partial class V1beta1TopicRuleSpecForProviderHttp
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderIotAnalytics
@@ -941,7 +1030,9 @@ public partial class V1beta1TopicRuleSpecForProviderIotAnalytics
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderIotEvents
@@ -962,7 +1053,9 @@ public partial class V1beta1TopicRuleSpecForProviderIotEvents
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderKafkaHeader
@@ -975,7 +1068,9 @@ public partial class V1beta1TopicRuleSpecForProviderKafkaHeader
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderKafka
@@ -1004,7 +1099,9 @@ public partial class V1beta1TopicRuleSpecForProviderKafka
     [JsonPropertyName("topic")]
     public string? Topic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderKinesis
@@ -1021,7 +1118,9 @@ public partial class V1beta1TopicRuleSpecForProviderKinesis
     [JsonPropertyName("streamName")]
     public string? StreamName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderLambda
@@ -1030,7 +1129,9 @@ public partial class V1beta1TopicRuleSpecForProviderLambda
     [JsonPropertyName("functionArn")]
     public string? FunctionArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderRepublish
@@ -1047,7 +1148,9 @@ public partial class V1beta1TopicRuleSpecForProviderRepublish
     [JsonPropertyName("topic")]
     public string? Topic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderS3
@@ -1068,7 +1171,9 @@ public partial class V1beta1TopicRuleSpecForProviderS3
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderSnsRoleArnRefPolicy
@@ -1081,7 +1186,9 @@ public partial class V1beta1TopicRuleSpecForProviderSnsRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderSnsRoleArnRef
@@ -1098,7 +1205,9 @@ public partial class V1beta1TopicRuleSpecForProviderSnsRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleSpecForProviderSnsRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderSnsRoleArnSelectorPolicy
@@ -1111,7 +1220,9 @@ public partial class V1beta1TopicRuleSpecForProviderSnsRoleArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderSnsRoleArnSelector
@@ -1132,7 +1243,9 @@ public partial class V1beta1TopicRuleSpecForProviderSnsRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleSpecForProviderSnsRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderSnsTargetArnRefPolicy
@@ -1145,7 +1258,9 @@ public partial class V1beta1TopicRuleSpecForProviderSnsTargetArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in sns to populate targetArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderSnsTargetArnRef
@@ -1162,7 +1277,9 @@ public partial class V1beta1TopicRuleSpecForProviderSnsTargetArnRef
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleSpecForProviderSnsTargetArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderSnsTargetArnSelectorPolicy
@@ -1175,7 +1292,9 @@ public partial class V1beta1TopicRuleSpecForProviderSnsTargetArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in sns to populate targetArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderSnsTargetArnSelector
@@ -1196,7 +1315,9 @@ public partial class V1beta1TopicRuleSpecForProviderSnsTargetArnSelector
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleSpecForProviderSnsTargetArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderSns
@@ -1229,7 +1350,9 @@ public partial class V1beta1TopicRuleSpecForProviderSns
     [JsonPropertyName("targetArnSelector")]
     public V1beta1TopicRuleSpecForProviderSnsTargetArnSelector? TargetArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderSqs
@@ -1246,7 +1369,9 @@ public partial class V1beta1TopicRuleSpecForProviderSqs
     [JsonPropertyName("useBase64")]
     public bool? UseBase64 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderStepFunctions
@@ -1263,7 +1388,9 @@ public partial class V1beta1TopicRuleSpecForProviderStepFunctions
     [JsonPropertyName("stateMachineName")]
     public string? StateMachineName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderTimestreamDimension
@@ -1276,7 +1403,9 @@ public partial class V1beta1TopicRuleSpecForProviderTimestreamDimension
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block specifying an application-defined value to replace the default value assigned to the Timestream record's timestamp in the time column. Nested arguments below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderTimestreamTimestamp
@@ -1289,7 +1418,9 @@ public partial class V1beta1TopicRuleSpecForProviderTimestreamTimestamp
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderTimestream
@@ -1314,7 +1445,9 @@ public partial class V1beta1TopicRuleSpecForProviderTimestream
     [JsonPropertyName("timestamp")]
     public V1beta1TopicRuleSpecForProviderTimestreamTimestamp? Timestamp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProvider
@@ -1423,7 +1556,9 @@ public partial class V1beta1TopicRuleSpecForProvider
     [JsonPropertyName("timestream")]
     public IList<V1beta1TopicRuleSpecForProviderTimestream>? Timestream { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderCloudwatchAlarm
@@ -1444,7 +1579,9 @@ public partial class V1beta1TopicRuleSpecInitProviderCloudwatchAlarm
     [JsonPropertyName("stateValue")]
     public string? StateValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderCloudwatchLogs
@@ -1461,7 +1598,9 @@ public partial class V1beta1TopicRuleSpecInitProviderCloudwatchLogs
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderCloudwatchMetric
@@ -1490,7 +1629,9 @@ public partial class V1beta1TopicRuleSpecInitProviderCloudwatchMetric
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderDynamodb
@@ -1535,7 +1676,9 @@ public partial class V1beta1TopicRuleSpecInitProviderDynamodb
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderDynamodbv2PutItem
@@ -1544,7 +1687,9 @@ public partial class V1beta1TopicRuleSpecInitProviderDynamodbv2PutItem
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderDynamodbv2
@@ -1557,7 +1702,9 @@ public partial class V1beta1TopicRuleSpecInitProviderDynamodbv2
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderElasticsearch
@@ -1582,7 +1729,9 @@ public partial class V1beta1TopicRuleSpecInitProviderElasticsearch
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionCloudwatchAlarm
@@ -1603,7 +1752,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionCloudwatchAlarm
     [JsonPropertyName("stateValue")]
     public string? StateValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionCloudwatchLogs
@@ -1620,7 +1771,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionCloudwatchLogs
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionCloudwatchMetric
@@ -1649,7 +1802,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionCloudwatchMetric
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionDynamodb
@@ -1694,7 +1849,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionDynamodb
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionDynamodbv2PutItem
@@ -1703,7 +1860,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionDynamodbv2PutIte
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionDynamodbv2
@@ -1716,7 +1875,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionDynamodbv2
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionElasticsearch
@@ -1741,7 +1902,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionElasticsearch
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionFirehose
@@ -1762,7 +1925,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionFirehose
     [JsonPropertyName("separator")]
     public string? Separator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionHttpHttpHeader
@@ -1775,7 +1940,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionHttpHttpHeader
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionHttp
@@ -1792,7 +1959,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionHttp
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionIotAnalytics
@@ -1809,7 +1978,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionIotAnalytics
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionIotEvents
@@ -1830,7 +2001,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionIotEvents
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionKafkaHeader
@@ -1843,7 +2016,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionKafkaHeader
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionKafka
@@ -1872,7 +2047,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionKafka
     [JsonPropertyName("topic")]
     public string? Topic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionKinesis
@@ -1889,7 +2066,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionKinesis
     [JsonPropertyName("streamName")]
     public string? StreamName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionLambda
@@ -1898,7 +2077,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionLambda
     [JsonPropertyName("functionArn")]
     public string? FunctionArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionRepublish
@@ -1915,7 +2096,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionRepublish
     [JsonPropertyName("topic")]
     public string? Topic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionS3
@@ -1936,7 +2119,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionS3
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnRefPolicy
@@ -1949,7 +2134,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnRef
@@ -1966,7 +2153,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnSelectorPolicy
@@ -1979,7 +2168,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnSelector
@@ -2000,7 +2191,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnSelect
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnRefPolicy
@@ -2013,7 +2206,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in sns to populate targetArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnRef
@@ -2030,7 +2225,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnRef
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnSelectorPolicy
@@ -2043,7 +2240,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in sns to populate targetArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnSelector
@@ -2064,7 +2263,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnSele
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionSns
@@ -2097,7 +2298,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionSns
     [JsonPropertyName("targetArnSelector")]
     public V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnSelector? TargetArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionSqs
@@ -2114,7 +2317,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionSqs
     [JsonPropertyName("useBase64")]
     public bool? UseBase64 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionStepFunctions
@@ -2131,7 +2336,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionStepFunctions
     [JsonPropertyName("stateMachineName")]
     public string? StateMachineName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionTimestreamDimension
@@ -2144,7 +2351,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionTimestreamDimens
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block specifying an application-defined value to replace the default value assigned to the Timestream record's timestamp in the time column. Nested arguments below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionTimestreamTimestamp
@@ -2157,7 +2366,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionTimestreamTimest
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionTimestream
@@ -2182,7 +2393,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionTimestream
     [JsonPropertyName("timestamp")]
     public V1beta1TopicRuleSpecInitProviderErrorActionTimestreamTimestamp? Timestamp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with error action to be associated with the rule. See the documentation for cloudwatch_alarm, cloudwatch_logs, cloudwatch_metric, dynamodb, dynamodbv2, elasticsearch, firehose, http, iot_analytics, iot_events, kafka, kinesis, lambda, republish, s3, sns, sqs, step_functions, timestream configuration blocks for further configuration details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorAction
@@ -2263,7 +2476,9 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorAction
     [JsonPropertyName("timestream")]
     public V1beta1TopicRuleSpecInitProviderErrorActionTimestream? Timestream { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderFirehose
@@ -2284,7 +2499,9 @@ public partial class V1beta1TopicRuleSpecInitProviderFirehose
     [JsonPropertyName("separator")]
     public string? Separator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderHttpHttpHeader
@@ -2297,7 +2514,9 @@ public partial class V1beta1TopicRuleSpecInitProviderHttpHttpHeader
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderHttp
@@ -2314,7 +2533,9 @@ public partial class V1beta1TopicRuleSpecInitProviderHttp
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderIotAnalytics
@@ -2331,7 +2552,9 @@ public partial class V1beta1TopicRuleSpecInitProviderIotAnalytics
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderIotEvents
@@ -2352,7 +2575,9 @@ public partial class V1beta1TopicRuleSpecInitProviderIotEvents
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderKafkaHeader
@@ -2365,7 +2590,9 @@ public partial class V1beta1TopicRuleSpecInitProviderKafkaHeader
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderKafka
@@ -2394,7 +2621,9 @@ public partial class V1beta1TopicRuleSpecInitProviderKafka
     [JsonPropertyName("topic")]
     public string? Topic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderKinesis
@@ -2411,7 +2640,9 @@ public partial class V1beta1TopicRuleSpecInitProviderKinesis
     [JsonPropertyName("streamName")]
     public string? StreamName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderLambda
@@ -2420,7 +2651,9 @@ public partial class V1beta1TopicRuleSpecInitProviderLambda
     [JsonPropertyName("functionArn")]
     public string? FunctionArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderRepublish
@@ -2437,7 +2670,9 @@ public partial class V1beta1TopicRuleSpecInitProviderRepublish
     [JsonPropertyName("topic")]
     public string? Topic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderS3
@@ -2458,7 +2693,9 @@ public partial class V1beta1TopicRuleSpecInitProviderS3
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderSnsRoleArnRefPolicy
@@ -2471,7 +2708,9 @@ public partial class V1beta1TopicRuleSpecInitProviderSnsRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderSnsRoleArnRef
@@ -2488,7 +2727,9 @@ public partial class V1beta1TopicRuleSpecInitProviderSnsRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleSpecInitProviderSnsRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderSnsRoleArnSelectorPolicy
@@ -2501,7 +2742,9 @@ public partial class V1beta1TopicRuleSpecInitProviderSnsRoleArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderSnsRoleArnSelector
@@ -2522,7 +2765,9 @@ public partial class V1beta1TopicRuleSpecInitProviderSnsRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleSpecInitProviderSnsRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderSnsTargetArnRefPolicy
@@ -2535,7 +2780,9 @@ public partial class V1beta1TopicRuleSpecInitProviderSnsTargetArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in sns to populate targetArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderSnsTargetArnRef
@@ -2552,7 +2799,9 @@ public partial class V1beta1TopicRuleSpecInitProviderSnsTargetArnRef
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleSpecInitProviderSnsTargetArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderSnsTargetArnSelectorPolicy
@@ -2565,7 +2814,9 @@ public partial class V1beta1TopicRuleSpecInitProviderSnsTargetArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in sns to populate targetArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderSnsTargetArnSelector
@@ -2586,7 +2837,9 @@ public partial class V1beta1TopicRuleSpecInitProviderSnsTargetArnSelector
     [JsonPropertyName("policy")]
     public V1beta1TopicRuleSpecInitProviderSnsTargetArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderSns
@@ -2619,7 +2872,9 @@ public partial class V1beta1TopicRuleSpecInitProviderSns
     [JsonPropertyName("targetArnSelector")]
     public V1beta1TopicRuleSpecInitProviderSnsTargetArnSelector? TargetArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderSqs
@@ -2636,7 +2891,9 @@ public partial class V1beta1TopicRuleSpecInitProviderSqs
     [JsonPropertyName("useBase64")]
     public bool? UseBase64 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderStepFunctions
@@ -2653,7 +2910,9 @@ public partial class V1beta1TopicRuleSpecInitProviderStepFunctions
     [JsonPropertyName("stateMachineName")]
     public string? StateMachineName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderTimestreamDimension
@@ -2666,7 +2925,9 @@ public partial class V1beta1TopicRuleSpecInitProviderTimestreamDimension
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block specifying an application-defined value to replace the default value assigned to the Timestream record's timestamp in the time column. Nested arguments below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderTimestreamTimestamp
@@ -2679,7 +2940,9 @@ public partial class V1beta1TopicRuleSpecInitProviderTimestreamTimestamp
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderTimestream
@@ -2704,7 +2967,9 @@ public partial class V1beta1TopicRuleSpecInitProviderTimestream
     [JsonPropertyName("timestamp")]
     public V1beta1TopicRuleSpecInitProviderTimestreamTimestamp? Timestamp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProvider
@@ -2809,7 +3074,9 @@ public partial class V1beta1TopicRuleSpecInitProvider
     [JsonPropertyName("timestream")]
     public IList<V1beta1TopicRuleSpecInitProviderTimestream>? Timestream { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecProviderConfigRef
@@ -2822,7 +3089,9 @@ public partial class V1beta1TopicRuleSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecWriteConnectionSecretToRef
@@ -2831,7 +3100,9 @@ public partial class V1beta1TopicRuleSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TopicRuleSpec defines the desired state of TopicRule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpec
@@ -2856,7 +3127,9 @@ public partial class V1beta1TopicRuleSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TopicRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderCloudwatchAlarm
@@ -2877,7 +3150,9 @@ public partial class V1beta1TopicRuleStatusAtProviderCloudwatchAlarm
     [JsonPropertyName("stateValue")]
     public string? StateValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderCloudwatchLogs
@@ -2894,7 +3169,9 @@ public partial class V1beta1TopicRuleStatusAtProviderCloudwatchLogs
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderCloudwatchMetric
@@ -2923,7 +3200,9 @@ public partial class V1beta1TopicRuleStatusAtProviderCloudwatchMetric
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderDynamodb
@@ -2968,7 +3247,9 @@ public partial class V1beta1TopicRuleStatusAtProviderDynamodb
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderDynamodbv2PutItem
@@ -2977,7 +3258,9 @@ public partial class V1beta1TopicRuleStatusAtProviderDynamodbv2PutItem
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderDynamodbv2
@@ -2990,7 +3273,9 @@ public partial class V1beta1TopicRuleStatusAtProviderDynamodbv2
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderElasticsearch
@@ -3015,7 +3300,9 @@ public partial class V1beta1TopicRuleStatusAtProviderElasticsearch
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionCloudwatchAlarm
@@ -3036,7 +3323,9 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionCloudwatchAlarm
     [JsonPropertyName("stateValue")]
     public string? StateValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionCloudwatchLogs
@@ -3053,7 +3342,9 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionCloudwatchLogs
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionCloudwatchMetric
@@ -3082,7 +3373,9 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionCloudwatchMetric
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionDynamodb
@@ -3127,7 +3420,9 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionDynamodb
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionDynamodbv2PutItem
@@ -3136,7 +3431,9 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionDynamodbv2PutIte
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionDynamodbv2
@@ -3149,7 +3446,9 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionDynamodbv2
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionElasticsearch
@@ -3174,7 +3473,9 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionElasticsearch
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionFirehose
@@ -3195,7 +3496,9 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionFirehose
     [JsonPropertyName("separator")]
     public string? Separator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionHttpHttpHeader
@@ -3208,7 +3511,9 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionHttpHttpHeader
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionHttp
@@ -3225,7 +3530,9 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionHttp
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionIotAnalytics
@@ -3242,7 +3549,9 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionIotAnalytics
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionIotEvents
@@ -3263,7 +3572,9 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionIotEvents
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionKafkaHeader
@@ -3276,7 +3587,9 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionKafkaHeader
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionKafka
@@ -3305,7 +3618,9 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionKafka
     [JsonPropertyName("topic")]
     public string? Topic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionKinesis
@@ -3322,7 +3637,9 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionKinesis
     [JsonPropertyName("streamName")]
     public string? StreamName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionLambda
@@ -3331,7 +3648,9 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionLambda
     [JsonPropertyName("functionArn")]
     public string? FunctionArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionRepublish
@@ -3348,7 +3667,9 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionRepublish
     [JsonPropertyName("topic")]
     public string? Topic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionS3
@@ -3369,7 +3690,9 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionS3
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionSns
@@ -3386,7 +3709,9 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionSns
     [JsonPropertyName("targetArn")]
     public string? TargetArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionSqs
@@ -3403,7 +3728,9 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionSqs
     [JsonPropertyName("useBase64")]
     public bool? UseBase64 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionStepFunctions
@@ -3420,7 +3747,9 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionStepFunctions
     [JsonPropertyName("stateMachineName")]
     public string? StateMachineName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionTimestreamDimension
@@ -3433,7 +3762,9 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionTimestreamDimens
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block specifying an application-defined value to replace the default value assigned to the Timestream record's timestamp in the time column. Nested arguments below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionTimestreamTimestamp
@@ -3446,7 +3777,9 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionTimestreamTimest
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionTimestream
@@ -3471,7 +3804,9 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionTimestream
     [JsonPropertyName("timestamp")]
     public V1beta1TopicRuleStatusAtProviderErrorActionTimestreamTimestamp? Timestamp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with error action to be associated with the rule. See the documentation for cloudwatch_alarm, cloudwatch_logs, cloudwatch_metric, dynamodb, dynamodbv2, elasticsearch, firehose, http, iot_analytics, iot_events, kafka, kinesis, lambda, republish, s3, sns, sqs, step_functions, timestream configuration blocks for further configuration details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorAction
@@ -3552,7 +3887,9 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorAction
     [JsonPropertyName("timestream")]
     public V1beta1TopicRuleStatusAtProviderErrorActionTimestream? Timestream { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderFirehose
@@ -3573,7 +3910,9 @@ public partial class V1beta1TopicRuleStatusAtProviderFirehose
     [JsonPropertyName("separator")]
     public string? Separator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderHttpHttpHeader
@@ -3586,7 +3925,9 @@ public partial class V1beta1TopicRuleStatusAtProviderHttpHttpHeader
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderHttp
@@ -3603,7 +3944,9 @@ public partial class V1beta1TopicRuleStatusAtProviderHttp
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderIotAnalytics
@@ -3620,7 +3963,9 @@ public partial class V1beta1TopicRuleStatusAtProviderIotAnalytics
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderIotEvents
@@ -3641,7 +3986,9 @@ public partial class V1beta1TopicRuleStatusAtProviderIotEvents
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderKafkaHeader
@@ -3654,7 +4001,9 @@ public partial class V1beta1TopicRuleStatusAtProviderKafkaHeader
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderKafka
@@ -3683,7 +4032,9 @@ public partial class V1beta1TopicRuleStatusAtProviderKafka
     [JsonPropertyName("topic")]
     public string? Topic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderKinesis
@@ -3700,7 +4051,9 @@ public partial class V1beta1TopicRuleStatusAtProviderKinesis
     [JsonPropertyName("streamName")]
     public string? StreamName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderLambda
@@ -3709,7 +4062,9 @@ public partial class V1beta1TopicRuleStatusAtProviderLambda
     [JsonPropertyName("functionArn")]
     public string? FunctionArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderRepublish
@@ -3726,7 +4081,9 @@ public partial class V1beta1TopicRuleStatusAtProviderRepublish
     [JsonPropertyName("topic")]
     public string? Topic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderS3
@@ -3747,7 +4104,9 @@ public partial class V1beta1TopicRuleStatusAtProviderS3
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderSns
@@ -3764,7 +4123,9 @@ public partial class V1beta1TopicRuleStatusAtProviderSns
     [JsonPropertyName("targetArn")]
     public string? TargetArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderSqs
@@ -3781,7 +4142,9 @@ public partial class V1beta1TopicRuleStatusAtProviderSqs
     [JsonPropertyName("useBase64")]
     public bool? UseBase64 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderStepFunctions
@@ -3798,7 +4161,9 @@ public partial class V1beta1TopicRuleStatusAtProviderStepFunctions
     [JsonPropertyName("stateMachineName")]
     public string? StateMachineName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderTimestreamDimension
@@ -3811,7 +4176,9 @@ public partial class V1beta1TopicRuleStatusAtProviderTimestreamDimension
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block specifying an application-defined value to replace the default value assigned to the Timestream record's timestamp in the time column. Nested arguments below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderTimestreamTimestamp
@@ -3824,7 +4191,9 @@ public partial class V1beta1TopicRuleStatusAtProviderTimestreamTimestamp
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderTimestream
@@ -3849,7 +4218,9 @@ public partial class V1beta1TopicRuleStatusAtProviderTimestream
     [JsonPropertyName("timestamp")]
     public V1beta1TopicRuleStatusAtProviderTimestreamTimestamp? Timestamp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProvider
@@ -3970,7 +4341,9 @@ public partial class V1beta1TopicRuleStatusAtProvider
     [JsonPropertyName("timestream")]
     public IList<V1beta1TopicRuleStatusAtProviderTimestream>? Timestream { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusConditions
@@ -3999,7 +4372,9 @@ public partial class V1beta1TopicRuleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TopicRuleStatus defines the observed state of TopicRule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatus
@@ -4016,7 +4391,9 @@ public partial class V1beta1TopicRuleStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TopicRule is the Schema for the TopicRules API. Creates and manages an AWS IoT topic rule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -4046,3 +4423,4 @@ public partial class V1beta1TopicRule : IKubernetesObject<V1ObjectMeta>, ISpec<V
     [JsonPropertyName("status")]
     public V1beta1TopicRuleStatus? Status { get; set; }
 }
+#nullable disable

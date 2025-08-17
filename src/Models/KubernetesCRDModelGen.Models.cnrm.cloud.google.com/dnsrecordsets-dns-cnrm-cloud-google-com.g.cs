@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dns.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DNSRecordSetList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1DNSRecordSet> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecManagedZoneRef
@@ -50,7 +53,9 @@ public partial class V1beta1DNSRecordSetSpecManagedZoneRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancersIpAddressRef
@@ -67,7 +72,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargets
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancersNetworkRef
@@ -84,7 +91,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargets
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancersProjectRef
@@ -101,7 +110,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargets
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancersRegionRef
@@ -118,7 +129,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargets
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancers
@@ -151,7 +164,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargets
     [JsonPropertyName("regionRef")]
     public V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancersRegionRef? RegionRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>For A and AAAA types only. The list of targets to be health checked. These can be specified along with `rrdatas` within this item.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargets
@@ -160,7 +175,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargets
     [JsonPropertyName("internalLoadBalancers")]
     public IList<V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancers> InternalLoadBalancers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoRrdatasRefs
@@ -181,7 +198,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoRrdatasRefs
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeo
@@ -198,7 +217,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeo
     [JsonPropertyName("rrdatasRefs")]
     public IList<V1beta1DNSRecordSetSpecRoutingPolicyGeoRrdatasRefs>? RrdatasRefs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancersIpAddressRef
@@ -215,7 +236,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoH
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancersNetworkRef
@@ -232,7 +255,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoH
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancersProjectRef
@@ -249,7 +274,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoH
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancersRegionRef
@@ -266,7 +293,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoH
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancers
@@ -299,7 +328,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoH
     [JsonPropertyName("regionRef")]
     public V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancersRegionRef? RegionRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>For A and AAAA types only. The list of targets to be health checked. These can be specified along with `rrdatas` within this item.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargets
@@ -308,7 +339,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoH
     [JsonPropertyName("internalLoadBalancers")]
     public IList<V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancers> InternalLoadBalancers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoRrdatasRefs
@@ -325,7 +358,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoR
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeo
@@ -342,7 +377,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeo
     [JsonPropertyName("rrdatasRefs")]
     public IList<V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoRrdatasRefs>? RrdatasRefs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersIpAddressRef
@@ -359,7 +396,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInt
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersNetworkRef
@@ -376,7 +415,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInt
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersProjectRef
@@ -393,7 +434,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInt
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersRegionRef
@@ -410,7 +453,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInt
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancers
@@ -443,7 +488,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInt
     [JsonPropertyName("regionRef")]
     public V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersRegionRef? RegionRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The list of global primary targets to be health checked.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimary
@@ -452,7 +499,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimary
     [JsonPropertyName("internalLoadBalancers")]
     public IList<V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancers> InternalLoadBalancers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for a primary-backup policy with global to regional failover. Queries are responded to with the global primary targets, but if none of the primary targets are healthy, then we fallback to a regional failover policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackup
@@ -473,7 +522,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackup
     [JsonPropertyName("trickleRatio")]
     public double? TrickleRatio { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancersIpAddressRef
@@ -490,7 +541,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargets
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancersNetworkRef
@@ -507,7 +560,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargets
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancersProjectRef
@@ -524,7 +579,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargets
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancersRegionRef
@@ -541,7 +598,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargets
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancers
@@ -574,7 +633,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargets
     [JsonPropertyName("regionRef")]
     public V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancersRegionRef? RegionRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The list of targets to be health checked. Note that if DNSSEC is enabled for this zone, only one of `rrdatas` or `health_checked_targets` can be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargets
@@ -583,7 +644,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargets
     [JsonPropertyName("internalLoadBalancers")]
     public IList<V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancers> InternalLoadBalancers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrRrdatasRefs
@@ -604,7 +667,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrRrdatasRefs
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrr
@@ -621,7 +686,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrr
     [JsonPropertyName("weight")]
     public double Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for steering traffic based on query. You can specify either Weighted Round Robin(WRR) type or Geolocation(GEO) type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicy
@@ -642,7 +709,9 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicy
     [JsonPropertyName("wrr")]
     public IList<V1beta1DNSRecordSetSpecRoutingPolicyWrr>? Wrr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRrdatasRefs
@@ -663,7 +732,9 @@ public partial class V1beta1DNSRecordSetSpecRrdatasRefs
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpec
@@ -696,7 +767,9 @@ public partial class V1beta1DNSRecordSetSpec
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetStatusConditions
@@ -721,7 +794,9 @@ public partial class V1beta1DNSRecordSetStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetStatus
@@ -734,7 +809,9 @@ public partial class V1beta1DNSRecordSetStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -764,3 +841,4 @@ public partial class V1beta1DNSRecordSet : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1DNSRecordSetStatus? Status { get; set; }
 }
+#nullable disable

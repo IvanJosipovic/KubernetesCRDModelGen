@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.web.azure.m.upbound.io;
+#nullable enable
 /// <summary>FunctionAppHybridConnection is the Schema for the FunctionAppHybridConnections API. Manages a Function App Hybrid Connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FunctionAppHybridConnectionList : IKubernetesObject<
     [JsonPropertyName("items")]
     public IList<V1beta1FunctionAppHybridConnection> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppHybridConnectionSpecForProviderFunctionAppIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1FunctionAppHybridConnectionSpecForProviderFunctionAp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a WindowsFunctionApp in web to populate functionAppId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppHybridConnectionSpecForProviderFunctionAppIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1FunctionAppHybridConnectionSpecForProviderFunctionAp
     [JsonPropertyName("policy")]
     public V1beta1FunctionAppHybridConnectionSpecForProviderFunctionAppIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppHybridConnectionSpecForProviderFunctionAppIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1FunctionAppHybridConnectionSpecForProviderFunctionAp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a WindowsFunctionApp in web to populate functionAppId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppHybridConnectionSpecForProviderFunctionAppIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1FunctionAppHybridConnectionSpecForProviderFunctionAp
     [JsonPropertyName("policy")]
     public V1beta1FunctionAppHybridConnectionSpecForProviderFunctionAppIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppHybridConnectionSpecForProviderRelayIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1FunctionAppHybridConnectionSpecForProviderRelayIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a HybridConnection in relay to populate relayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppHybridConnectionSpecForProviderRelayIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1FunctionAppHybridConnectionSpecForProviderRelayIdRef
     [JsonPropertyName("policy")]
     public V1beta1FunctionAppHybridConnectionSpecForProviderRelayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppHybridConnectionSpecForProviderRelayIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1FunctionAppHybridConnectionSpecForProviderRelayIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a HybridConnection in relay to populate relayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppHybridConnectionSpecForProviderRelayIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1FunctionAppHybridConnectionSpecForProviderRelayIdSel
     [JsonPropertyName("policy")]
     public V1beta1FunctionAppHybridConnectionSpecForProviderRelayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppHybridConnectionSpecForProvider
@@ -202,7 +221,9 @@ public partial class V1beta1FunctionAppHybridConnectionSpecForProvider
     [JsonPropertyName("sendKeyName")]
     public string? SendKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppHybridConnectionSpecInitProviderFunctionAppIdRefPolicy
@@ -215,7 +236,9 @@ public partial class V1beta1FunctionAppHybridConnectionSpecInitProviderFunctionA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a WindowsFunctionApp in web to populate functionAppId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppHybridConnectionSpecInitProviderFunctionAppIdRef
@@ -232,7 +255,9 @@ public partial class V1beta1FunctionAppHybridConnectionSpecInitProviderFunctionA
     [JsonPropertyName("policy")]
     public V1beta1FunctionAppHybridConnectionSpecInitProviderFunctionAppIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppHybridConnectionSpecInitProviderFunctionAppIdSelectorPolicy
@@ -245,7 +270,9 @@ public partial class V1beta1FunctionAppHybridConnectionSpecInitProviderFunctionA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a WindowsFunctionApp in web to populate functionAppId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppHybridConnectionSpecInitProviderFunctionAppIdSelector
@@ -266,7 +293,9 @@ public partial class V1beta1FunctionAppHybridConnectionSpecInitProviderFunctionA
     [JsonPropertyName("policy")]
     public V1beta1FunctionAppHybridConnectionSpecInitProviderFunctionAppIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppHybridConnectionSpecInitProviderRelayIdRefPolicy
@@ -279,7 +308,9 @@ public partial class V1beta1FunctionAppHybridConnectionSpecInitProviderRelayIdRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a HybridConnection in relay to populate relayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppHybridConnectionSpecInitProviderRelayIdRef
@@ -296,7 +327,9 @@ public partial class V1beta1FunctionAppHybridConnectionSpecInitProviderRelayIdRe
     [JsonPropertyName("policy")]
     public V1beta1FunctionAppHybridConnectionSpecInitProviderRelayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppHybridConnectionSpecInitProviderRelayIdSelectorPolicy
@@ -309,7 +342,9 @@ public partial class V1beta1FunctionAppHybridConnectionSpecInitProviderRelayIdSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a HybridConnection in relay to populate relayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppHybridConnectionSpecInitProviderRelayIdSelector
@@ -330,7 +365,9 @@ public partial class V1beta1FunctionAppHybridConnectionSpecInitProviderRelayIdSe
     [JsonPropertyName("policy")]
     public V1beta1FunctionAppHybridConnectionSpecInitProviderRelayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppHybridConnectionSpecInitProvider
@@ -371,7 +408,9 @@ public partial class V1beta1FunctionAppHybridConnectionSpecInitProvider
     [JsonPropertyName("sendKeyName")]
     public string? SendKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppHybridConnectionSpecProviderConfigRef
@@ -384,7 +423,9 @@ public partial class V1beta1FunctionAppHybridConnectionSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppHybridConnectionSpecWriteConnectionSecretToRef
@@ -393,7 +434,9 @@ public partial class V1beta1FunctionAppHybridConnectionSpecWriteConnectionSecret
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FunctionAppHybridConnectionSpec defines the desired state of FunctionAppHybridConnection</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppHybridConnectionSpec
@@ -418,7 +461,9 @@ public partial class V1beta1FunctionAppHybridConnectionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1FunctionAppHybridConnectionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppHybridConnectionStatusAtProvider
@@ -463,7 +508,9 @@ public partial class V1beta1FunctionAppHybridConnectionStatusAtProvider
     [JsonPropertyName("serviceBusSuffix")]
     public string? ServiceBusSuffix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppHybridConnectionStatusConditions
@@ -492,7 +539,9 @@ public partial class V1beta1FunctionAppHybridConnectionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FunctionAppHybridConnectionStatus defines the observed state of FunctionAppHybridConnection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppHybridConnectionStatus
@@ -509,7 +558,9 @@ public partial class V1beta1FunctionAppHybridConnectionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FunctionAppHybridConnection is the Schema for the FunctionAppHybridConnections API. Manages a Function App Hybrid Connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -539,3 +590,4 @@ public partial class V1beta1FunctionAppHybridConnection : IKubernetesObject<V1Ob
     [JsonPropertyName("status")]
     public V1beta1FunctionAppHybridConnectionStatus? Status { get; set; }
 }
+#nullable disable

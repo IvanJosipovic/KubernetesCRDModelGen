@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.azure.upbound.io;
+#nullable enable
 /// <summary>MSSQLFirewallRule is the Schema for the MSSQLFirewallRules API. Manages an Azure SQL Firewall Rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MSSQLFirewallRuleList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1MSSQLFirewallRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFirewallRuleSpecForProviderServerIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1MSSQLFirewallRuleSpecForProviderServerIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MSSQLServer in sql to populate serverId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFirewallRuleSpecForProviderServerIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1MSSQLFirewallRuleSpecForProviderServerIdRef
     [JsonPropertyName("policy")]
     public V1beta1MSSQLFirewallRuleSpecForProviderServerIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFirewallRuleSpecForProviderServerIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1MSSQLFirewallRuleSpecForProviderServerIdSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MSSQLServer in sql to populate serverId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFirewallRuleSpecForProviderServerIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1MSSQLFirewallRuleSpecForProviderServerIdSelector
     [JsonPropertyName("policy")]
     public V1beta1MSSQLFirewallRuleSpecForProviderServerIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFirewallRuleSpecForProvider
@@ -114,7 +125,9 @@ public partial class V1beta1MSSQLFirewallRuleSpecForProvider
     [JsonPropertyName("startIpAddress")]
     public string? StartIpAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFirewallRuleSpecInitProvider
@@ -127,7 +140,9 @@ public partial class V1beta1MSSQLFirewallRuleSpecInitProvider
     [JsonPropertyName("startIpAddress")]
     public string? StartIpAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFirewallRuleSpecProviderConfigRefPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1MSSQLFirewallRuleSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFirewallRuleSpecProviderConfigRef
@@ -153,7 +170,9 @@ public partial class V1beta1MSSQLFirewallRuleSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1MSSQLFirewallRuleSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFirewallRuleSpecWriteConnectionSecretToRef
@@ -166,7 +185,9 @@ public partial class V1beta1MSSQLFirewallRuleSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MSSQLFirewallRuleSpec defines the desired state of MSSQLFirewallRule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFirewallRuleSpec
@@ -195,7 +216,9 @@ public partial class V1beta1MSSQLFirewallRuleSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MSSQLFirewallRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFirewallRuleStatusAtProvider
@@ -216,7 +239,9 @@ public partial class V1beta1MSSQLFirewallRuleStatusAtProvider
     [JsonPropertyName("startIpAddress")]
     public string? StartIpAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFirewallRuleStatusConditions
@@ -245,7 +270,9 @@ public partial class V1beta1MSSQLFirewallRuleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MSSQLFirewallRuleStatus defines the observed state of MSSQLFirewallRule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFirewallRuleStatus
@@ -262,7 +289,9 @@ public partial class V1beta1MSSQLFirewallRuleStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MSSQLFirewallRule is the Schema for the MSSQLFirewallRules API. Manages an Azure SQL Firewall Rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -292,3 +321,4 @@ public partial class V1beta1MSSQLFirewallRule : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1MSSQLFirewallRuleStatus? Status { get; set; }
 }
+#nullable disable

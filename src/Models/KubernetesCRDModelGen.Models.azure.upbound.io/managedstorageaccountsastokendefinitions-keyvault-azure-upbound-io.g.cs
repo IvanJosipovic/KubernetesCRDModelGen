@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.keyvault.azure.upbound.io;
+#nullable enable
 /// <summary>ManagedStorageAccountSASTokenDefinition is the Schema for the ManagedStorageAccountSASTokenDefinitions API. Manages a Key Vault Managed Storage Account SAS Definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ManagedStorageAccountSASTokenDefinitionList : IKuber
     [JsonPropertyName("items")]
     public IList<V1beta1ManagedStorageAccountSASTokenDefinition> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedStorageAccountSASTokenDefinitionSpecForProviderManagedStorageAccountIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ManagedStorageAccountSASTokenDefinitionSpecForProvid
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ManagedStorageAccount in keyvault to populate managedStorageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedStorageAccountSASTokenDefinitionSpecForProviderManagedStorageAccountIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1ManagedStorageAccountSASTokenDefinitionSpecForProvid
     [JsonPropertyName("policy")]
     public V1beta1ManagedStorageAccountSASTokenDefinitionSpecForProviderManagedStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedStorageAccountSASTokenDefinitionSpecForProviderManagedStorageAccountIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1ManagedStorageAccountSASTokenDefinitionSpecForProvid
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ManagedStorageAccount in keyvault to populate managedStorageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedStorageAccountSASTokenDefinitionSpecForProviderManagedStorageAccountIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1ManagedStorageAccountSASTokenDefinitionSpecForProvid
     [JsonPropertyName("policy")]
     public V1beta1ManagedStorageAccountSASTokenDefinitionSpecForProviderManagedStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedStorageAccountSASTokenDefinitionSpecForProvider
@@ -122,7 +133,9 @@ public partial class V1beta1ManagedStorageAccountSASTokenDefinitionSpecForProvid
     [JsonPropertyName("validityPeriod")]
     public string? ValidityPeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedStorageAccountSASTokenDefinitionSpecInitProvider
@@ -143,7 +156,9 @@ public partial class V1beta1ManagedStorageAccountSASTokenDefinitionSpecInitProvi
     [JsonPropertyName("validityPeriod")]
     public string? ValidityPeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedStorageAccountSASTokenDefinitionSpecProviderConfigRefPolicy
@@ -156,7 +171,9 @@ public partial class V1beta1ManagedStorageAccountSASTokenDefinitionSpecProviderC
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedStorageAccountSASTokenDefinitionSpecProviderConfigRef
@@ -169,7 +186,9 @@ public partial class V1beta1ManagedStorageAccountSASTokenDefinitionSpecProviderC
     [JsonPropertyName("policy")]
     public V1beta1ManagedStorageAccountSASTokenDefinitionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedStorageAccountSASTokenDefinitionSpecWriteConnectionSecretToRef
@@ -182,7 +201,9 @@ public partial class V1beta1ManagedStorageAccountSASTokenDefinitionSpecWriteConn
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedStorageAccountSASTokenDefinitionSpec defines the desired state of ManagedStorageAccountSASTokenDefinition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedStorageAccountSASTokenDefinitionSpec
@@ -211,7 +232,9 @@ public partial class V1beta1ManagedStorageAccountSASTokenDefinitionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ManagedStorageAccountSASTokenDefinitionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedStorageAccountSASTokenDefinitionStatusAtProvider
@@ -244,7 +267,9 @@ public partial class V1beta1ManagedStorageAccountSASTokenDefinitionStatusAtProvi
     [JsonPropertyName("validityPeriod")]
     public string? ValidityPeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedStorageAccountSASTokenDefinitionStatusConditions
@@ -273,7 +298,9 @@ public partial class V1beta1ManagedStorageAccountSASTokenDefinitionStatusConditi
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedStorageAccountSASTokenDefinitionStatus defines the observed state of ManagedStorageAccountSASTokenDefinition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedStorageAccountSASTokenDefinitionStatus
@@ -290,7 +317,9 @@ public partial class V1beta1ManagedStorageAccountSASTokenDefinitionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedStorageAccountSASTokenDefinition is the Schema for the ManagedStorageAccountSASTokenDefinitions API. Manages a Key Vault Managed Storage Account SAS Definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -320,3 +349,4 @@ public partial class V1beta1ManagedStorageAccountSASTokenDefinition : IKubernete
     [JsonPropertyName("status")]
     public V1beta1ManagedStorageAccountSASTokenDefinitionStatus? Status { get; set; }
 }
+#nullable disable

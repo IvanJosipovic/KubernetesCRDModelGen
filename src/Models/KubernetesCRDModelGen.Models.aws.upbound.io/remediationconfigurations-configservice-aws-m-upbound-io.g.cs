@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.configservice.aws.m.upbound.io;
+#nullable enable
 /// <summary>RemediationConfiguration is the Schema for the RemediationConfigurations API. Provides an AWS Config Remediation Configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RemediationConfigurationList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1RemediationConfiguration> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for SSM controls. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RemediationConfigurationSpecForProviderExecutionControlsSsmControls
@@ -46,7 +49,9 @@ public partial class V1beta1RemediationConfigurationSpecForProviderExecutionCont
     [JsonPropertyName("errorPercentage")]
     public double? ErrorPercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for execution controls. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RemediationConfigurationSpecForProviderExecutionControls
@@ -55,7 +60,9 @@ public partial class V1beta1RemediationConfigurationSpecForProviderExecutionCont
     [JsonPropertyName("ssmControls")]
     public V1beta1RemediationConfigurationSpecForProviderExecutionControlsSsmControls? SsmControls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RemediationConfigurationSpecForProviderParameter
@@ -76,7 +83,9 @@ public partial class V1beta1RemediationConfigurationSpecForProviderParameter
     [JsonPropertyName("staticValues")]
     public IList<string>? StaticValues { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RemediationConfigurationSpecForProvider
@@ -121,7 +130,9 @@ public partial class V1beta1RemediationConfigurationSpecForProvider
     [JsonPropertyName("targetVersion")]
     public string? TargetVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for SSM controls. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RemediationConfigurationSpecInitProviderExecutionControlsSsmControls
@@ -134,7 +145,9 @@ public partial class V1beta1RemediationConfigurationSpecInitProviderExecutionCon
     [JsonPropertyName("errorPercentage")]
     public double? ErrorPercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for execution controls. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RemediationConfigurationSpecInitProviderExecutionControls
@@ -143,7 +156,9 @@ public partial class V1beta1RemediationConfigurationSpecInitProviderExecutionCon
     [JsonPropertyName("ssmControls")]
     public V1beta1RemediationConfigurationSpecInitProviderExecutionControlsSsmControls? SsmControls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RemediationConfigurationSpecInitProviderParameter
@@ -164,7 +179,9 @@ public partial class V1beta1RemediationConfigurationSpecInitProviderParameter
     [JsonPropertyName("staticValues")]
     public IList<string>? StaticValues { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RemediationConfigurationSpecInitProvider
@@ -205,7 +222,9 @@ public partial class V1beta1RemediationConfigurationSpecInitProvider
     [JsonPropertyName("targetVersion")]
     public string? TargetVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RemediationConfigurationSpecProviderConfigRef
@@ -218,7 +237,9 @@ public partial class V1beta1RemediationConfigurationSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RemediationConfigurationSpecWriteConnectionSecretToRef
@@ -227,7 +248,9 @@ public partial class V1beta1RemediationConfigurationSpecWriteConnectionSecretToR
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RemediationConfigurationSpec defines the desired state of RemediationConfiguration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RemediationConfigurationSpec
@@ -252,7 +275,9 @@ public partial class V1beta1RemediationConfigurationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RemediationConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for SSM controls. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RemediationConfigurationStatusAtProviderExecutionControlsSsmControls
@@ -265,7 +290,9 @@ public partial class V1beta1RemediationConfigurationStatusAtProviderExecutionCon
     [JsonPropertyName("errorPercentage")]
     public double? ErrorPercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for execution controls. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RemediationConfigurationStatusAtProviderExecutionControls
@@ -274,7 +301,9 @@ public partial class V1beta1RemediationConfigurationStatusAtProviderExecutionCon
     [JsonPropertyName("ssmControls")]
     public V1beta1RemediationConfigurationStatusAtProviderExecutionControlsSsmControls? SsmControls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RemediationConfigurationStatusAtProviderParameter
@@ -295,7 +324,9 @@ public partial class V1beta1RemediationConfigurationStatusAtProviderParameter
     [JsonPropertyName("staticValues")]
     public IList<string>? StaticValues { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RemediationConfigurationStatusAtProvider
@@ -348,7 +379,9 @@ public partial class V1beta1RemediationConfigurationStatusAtProvider
     [JsonPropertyName("targetVersion")]
     public string? TargetVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RemediationConfigurationStatusConditions
@@ -377,7 +410,9 @@ public partial class V1beta1RemediationConfigurationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RemediationConfigurationStatus defines the observed state of RemediationConfiguration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RemediationConfigurationStatus
@@ -394,7 +429,9 @@ public partial class V1beta1RemediationConfigurationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RemediationConfiguration is the Schema for the RemediationConfigurations API. Provides an AWS Config Remediation Configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -424,3 +461,4 @@ public partial class V1beta1RemediationConfiguration : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1RemediationConfigurationStatus? Status { get; set; }
 }
+#nullable disable

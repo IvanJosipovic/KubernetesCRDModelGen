@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudscheduler.gcp.m.upbound.io;
+#nullable enable
 /// <summary>Job is the Schema for the Jobs API. A scheduled job that can publish a PubSub message or an HTTP request every X interval of time, using a crontab format string.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1JobList : IKubernetesObject<V1ListMeta>, IItems<V1be
     [JsonPropertyName("items")]
     public IList<V1beta1Job> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>App Engine Routing setting for the job. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderAppEngineHttpTargetAppEngineRouting
@@ -50,7 +53,9 @@ public partial class V1beta1JobSpecForProviderAppEngineHttpTargetAppEngineRoutin
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>App Engine HTTP target. If the job providers a App Engine HTTP target the cron will send a request to the service instance Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderAppEngineHttpTarget
@@ -75,7 +80,9 @@ public partial class V1beta1JobSpecForProviderAppEngineHttpTarget
     [JsonPropertyName("relativeUri")]
     public string? RelativeUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contains information needed for generating an OAuth token. This type of authorization should be used when sending requests to a GCP endpoint. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderHttpTargetOauthToken
@@ -88,7 +95,9 @@ public partial class V1beta1JobSpecForProviderHttpTargetOauthToken
     [JsonPropertyName("serviceAccountEmail")]
     public string? ServiceAccountEmail { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contains information needed for generating an OpenID Connect token. This type of authorization should be used when sending requests to third party endpoints or Cloud Run. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderHttpTargetOidcToken
@@ -101,7 +110,9 @@ public partial class V1beta1JobSpecForProviderHttpTargetOidcToken
     [JsonPropertyName("serviceAccountEmail")]
     public string? ServiceAccountEmail { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTP target. If the job providers a http_target the cron will send a request to the targeted url Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderHttpTarget
@@ -130,7 +141,9 @@ public partial class V1beta1JobSpecForProviderHttpTarget
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderPubsubTargetTopicNameRefPolicy
@@ -143,7 +156,9 @@ public partial class V1beta1JobSpecForProviderPubsubTargetTopicNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in pubsub to populate topicName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderPubsubTargetTopicNameRef
@@ -160,7 +175,9 @@ public partial class V1beta1JobSpecForProviderPubsubTargetTopicNameRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecForProviderPubsubTargetTopicNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderPubsubTargetTopicNameSelectorPolicy
@@ -173,7 +190,9 @@ public partial class V1beta1JobSpecForProviderPubsubTargetTopicNameSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in pubsub to populate topicName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderPubsubTargetTopicNameSelector
@@ -194,7 +213,9 @@ public partial class V1beta1JobSpecForProviderPubsubTargetTopicNameSelector
     [JsonPropertyName("policy")]
     public V1beta1JobSpecForProviderPubsubTargetTopicNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Pub/Sub target If the job providers a Pub/Sub target the cron will publish a message to the provided topic Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderPubsubTarget
@@ -219,7 +240,9 @@ public partial class V1beta1JobSpecForProviderPubsubTarget
     [JsonPropertyName("topicNameSelector")]
     public V1beta1JobSpecForProviderPubsubTargetTopicNameSelector? TopicNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>By default, if a job does not complete successfully, meaning that an acknowledgement is not received from the handler, then it will be retried with exponential backoff according to the settings Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderRetryConfig
@@ -244,7 +267,9 @@ public partial class V1beta1JobSpecForProviderRetryConfig
     [JsonPropertyName("retryCount")]
     public double? RetryCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProvider
@@ -293,7 +318,9 @@ public partial class V1beta1JobSpecForProvider
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>App Engine Routing setting for the job. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderAppEngineHttpTargetAppEngineRouting
@@ -310,7 +337,9 @@ public partial class V1beta1JobSpecInitProviderAppEngineHttpTargetAppEngineRouti
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>App Engine HTTP target. If the job providers a App Engine HTTP target the cron will send a request to the service instance Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderAppEngineHttpTarget
@@ -335,7 +364,9 @@ public partial class V1beta1JobSpecInitProviderAppEngineHttpTarget
     [JsonPropertyName("relativeUri")]
     public string? RelativeUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contains information needed for generating an OAuth token. This type of authorization should be used when sending requests to a GCP endpoint. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderHttpTargetOauthToken
@@ -348,7 +379,9 @@ public partial class V1beta1JobSpecInitProviderHttpTargetOauthToken
     [JsonPropertyName("serviceAccountEmail")]
     public string? ServiceAccountEmail { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contains information needed for generating an OpenID Connect token. This type of authorization should be used when sending requests to third party endpoints or Cloud Run. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderHttpTargetOidcToken
@@ -361,7 +394,9 @@ public partial class V1beta1JobSpecInitProviderHttpTargetOidcToken
     [JsonPropertyName("serviceAccountEmail")]
     public string? ServiceAccountEmail { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTP target. If the job providers a http_target the cron will send a request to the targeted url Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderHttpTarget
@@ -390,7 +425,9 @@ public partial class V1beta1JobSpecInitProviderHttpTarget
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderPubsubTargetTopicNameRefPolicy
@@ -403,7 +440,9 @@ public partial class V1beta1JobSpecInitProviderPubsubTargetTopicNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in pubsub to populate topicName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderPubsubTargetTopicNameRef
@@ -420,7 +459,9 @@ public partial class V1beta1JobSpecInitProviderPubsubTargetTopicNameRef
     [JsonPropertyName("policy")]
     public V1beta1JobSpecInitProviderPubsubTargetTopicNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderPubsubTargetTopicNameSelectorPolicy
@@ -433,7 +474,9 @@ public partial class V1beta1JobSpecInitProviderPubsubTargetTopicNameSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in pubsub to populate topicName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderPubsubTargetTopicNameSelector
@@ -454,7 +497,9 @@ public partial class V1beta1JobSpecInitProviderPubsubTargetTopicNameSelector
     [JsonPropertyName("policy")]
     public V1beta1JobSpecInitProviderPubsubTargetTopicNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Pub/Sub target If the job providers a Pub/Sub target the cron will publish a message to the provided topic Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderPubsubTarget
@@ -479,7 +524,9 @@ public partial class V1beta1JobSpecInitProviderPubsubTarget
     [JsonPropertyName("topicNameSelector")]
     public V1beta1JobSpecInitProviderPubsubTargetTopicNameSelector? TopicNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>By default, if a job does not complete successfully, meaning that an acknowledgement is not received from the handler, then it will be retried with exponential backoff according to the settings Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderRetryConfig
@@ -504,7 +551,9 @@ public partial class V1beta1JobSpecInitProviderRetryConfig
     [JsonPropertyName("retryCount")]
     public double? RetryCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProvider
@@ -549,7 +598,9 @@ public partial class V1beta1JobSpecInitProvider
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecProviderConfigRef
@@ -562,7 +613,9 @@ public partial class V1beta1JobSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecWriteConnectionSecretToRef
@@ -571,7 +624,9 @@ public partial class V1beta1JobSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>JobSpec defines the desired state of Job</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpec
@@ -596,7 +651,9 @@ public partial class V1beta1JobSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1JobSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>App Engine Routing setting for the job. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderAppEngineHttpTargetAppEngineRouting
@@ -613,7 +670,9 @@ public partial class V1beta1JobStatusAtProviderAppEngineHttpTargetAppEngineRouti
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>App Engine HTTP target. If the job providers a App Engine HTTP target the cron will send a request to the service instance Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderAppEngineHttpTarget
@@ -638,7 +697,9 @@ public partial class V1beta1JobStatusAtProviderAppEngineHttpTarget
     [JsonPropertyName("relativeUri")]
     public string? RelativeUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contains information needed for generating an OAuth token. This type of authorization should be used when sending requests to a GCP endpoint. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderHttpTargetOauthToken
@@ -651,7 +712,9 @@ public partial class V1beta1JobStatusAtProviderHttpTargetOauthToken
     [JsonPropertyName("serviceAccountEmail")]
     public string? ServiceAccountEmail { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contains information needed for generating an OpenID Connect token. This type of authorization should be used when sending requests to third party endpoints or Cloud Run. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderHttpTargetOidcToken
@@ -664,7 +727,9 @@ public partial class V1beta1JobStatusAtProviderHttpTargetOidcToken
     [JsonPropertyName("serviceAccountEmail")]
     public string? ServiceAccountEmail { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTP target. If the job providers a http_target the cron will send a request to the targeted url Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderHttpTarget
@@ -693,7 +758,9 @@ public partial class V1beta1JobStatusAtProviderHttpTarget
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Pub/Sub target If the job providers a Pub/Sub target the cron will publish a message to the provided topic Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderPubsubTarget
@@ -710,7 +777,9 @@ public partial class V1beta1JobStatusAtProviderPubsubTarget
     [JsonPropertyName("topicName")]
     public string? TopicName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>By default, if a job does not complete successfully, meaning that an acknowledgement is not received from the handler, then it will be retried with exponential backoff according to the settings Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderRetryConfig
@@ -735,7 +804,9 @@ public partial class V1beta1JobStatusAtProviderRetryConfig
     [JsonPropertyName("retryCount")]
     public double? RetryCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProvider
@@ -792,7 +863,9 @@ public partial class V1beta1JobStatusAtProvider
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusConditions
@@ -821,7 +894,9 @@ public partial class V1beta1JobStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>JobStatus defines the observed state of Job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatus
@@ -838,7 +913,9 @@ public partial class V1beta1JobStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Job is the Schema for the Jobs API. A scheduled job that can publish a PubSub message or an HTTP request every X interval of time, using a crontab format string.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -868,3 +945,4 @@ public partial class V1beta1Job : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1
     [JsonPropertyName("status")]
     public V1beta1JobStatus? Status { get; set; }
 }
+#nullable disable

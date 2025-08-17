@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networksecurity.gcp.upbound.io;
+#nullable enable
 /// <summary>GatewaySecurityPolicyRule is the Schema for the GatewaySecurityPolicyRules API. The GatewaySecurityPolicyRule resource is in a nested collection within a GatewaySecurityPolicy and represents a traffic matching condition and associated action to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1GatewaySecurityPolicyRuleList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1beta1GatewaySecurityPolicyRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewaySecurityPolicyRuleSpecForProviderGatewaySecurityPolicyRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1GatewaySecurityPolicyRuleSpecForProviderGatewaySecur
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a GatewaySecurityPolicy in networksecurity to populate gatewaySecurityPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewaySecurityPolicyRuleSpecForProviderGatewaySecurityPolicyRef
@@ -59,7 +64,9 @@ public partial class V1beta1GatewaySecurityPolicyRuleSpecForProviderGatewaySecur
     [JsonPropertyName("policy")]
     public V1beta1GatewaySecurityPolicyRuleSpecForProviderGatewaySecurityPolicyRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewaySecurityPolicyRuleSpecForProviderGatewaySecurityPolicySelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1GatewaySecurityPolicyRuleSpecForProviderGatewaySecur
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a GatewaySecurityPolicy in networksecurity to populate gatewaySecurityPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewaySecurityPolicyRuleSpecForProviderGatewaySecurityPolicySelector
@@ -89,7 +98,9 @@ public partial class V1beta1GatewaySecurityPolicyRuleSpecForProviderGatewaySecur
     [JsonPropertyName("policy")]
     public V1beta1GatewaySecurityPolicyRuleSpecForProviderGatewaySecurityPolicySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewaySecurityPolicyRuleSpecForProvider
@@ -142,7 +153,9 @@ public partial class V1beta1GatewaySecurityPolicyRuleSpecForProvider
     [JsonPropertyName("tlsInspectionEnabled")]
     public bool? TlsInspectionEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewaySecurityPolicyRuleSpecInitProvider
@@ -179,7 +192,9 @@ public partial class V1beta1GatewaySecurityPolicyRuleSpecInitProvider
     [JsonPropertyName("tlsInspectionEnabled")]
     public bool? TlsInspectionEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewaySecurityPolicyRuleSpecProviderConfigRefPolicy
@@ -192,7 +207,9 @@ public partial class V1beta1GatewaySecurityPolicyRuleSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewaySecurityPolicyRuleSpecProviderConfigRef
@@ -205,7 +222,9 @@ public partial class V1beta1GatewaySecurityPolicyRuleSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1GatewaySecurityPolicyRuleSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewaySecurityPolicyRuleSpecWriteConnectionSecretToRef
@@ -218,7 +237,9 @@ public partial class V1beta1GatewaySecurityPolicyRuleSpecWriteConnectionSecretTo
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GatewaySecurityPolicyRuleSpec defines the desired state of GatewaySecurityPolicyRule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewaySecurityPolicyRuleSpec
@@ -247,7 +268,9 @@ public partial class V1beta1GatewaySecurityPolicyRuleSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1GatewaySecurityPolicyRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewaySecurityPolicyRuleStatusAtProvider
@@ -308,7 +331,9 @@ public partial class V1beta1GatewaySecurityPolicyRuleStatusAtProvider
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewaySecurityPolicyRuleStatusConditions
@@ -337,7 +362,9 @@ public partial class V1beta1GatewaySecurityPolicyRuleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GatewaySecurityPolicyRuleStatus defines the observed state of GatewaySecurityPolicyRule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewaySecurityPolicyRuleStatus
@@ -354,7 +381,9 @@ public partial class V1beta1GatewaySecurityPolicyRuleStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GatewaySecurityPolicyRule is the Schema for the GatewaySecurityPolicyRules API. The GatewaySecurityPolicyRule resource is in a nested collection within a GatewaySecurityPolicy and represents a traffic matching condition and associated action to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -384,3 +413,4 @@ public partial class V1beta1GatewaySecurityPolicyRule : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1beta1GatewaySecurityPolicyRuleStatus? Status { get; set; }
 }
+#nullable disable

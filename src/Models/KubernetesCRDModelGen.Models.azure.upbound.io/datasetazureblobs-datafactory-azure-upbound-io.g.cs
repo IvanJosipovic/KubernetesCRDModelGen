@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafactory.azure.upbound.io;
+#nullable enable
 /// <summary>DataSetAzureBlob is the Schema for the DataSetAzureBlobs API. Manages an Azure Blob Dataset inside an Azure Data Factory.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DataSetAzureBlobList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1DataSetAzureBlob> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetAzureBlobSpecForProviderDataFactoryIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1DataSetAzureBlobSpecForProviderDataFactoryIdRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Factory in datafactory to populate dataFactoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetAzureBlobSpecForProviderDataFactoryIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1DataSetAzureBlobSpecForProviderDataFactoryIdRef
     [JsonPropertyName("policy")]
     public V1beta1DataSetAzureBlobSpecForProviderDataFactoryIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetAzureBlobSpecForProviderDataFactoryIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1DataSetAzureBlobSpecForProviderDataFactoryIdSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Factory in datafactory to populate dataFactoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetAzureBlobSpecForProviderDataFactoryIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1DataSetAzureBlobSpecForProviderDataFactoryIdSelector
     [JsonPropertyName("policy")]
     public V1beta1DataSetAzureBlobSpecForProviderDataFactoryIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetAzureBlobSpecForProviderLinkedServiceNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1DataSetAzureBlobSpecForProviderLinkedServiceNameRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LinkedServiceAzureBlobStorage in datafactory to populate linkedServiceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetAzureBlobSpecForProviderLinkedServiceNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1DataSetAzureBlobSpecForProviderLinkedServiceNameRef
     [JsonPropertyName("policy")]
     public V1beta1DataSetAzureBlobSpecForProviderLinkedServiceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetAzureBlobSpecForProviderLinkedServiceNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1DataSetAzureBlobSpecForProviderLinkedServiceNameSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LinkedServiceAzureBlobStorage in datafactory to populate linkedServiceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetAzureBlobSpecForProviderLinkedServiceNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1DataSetAzureBlobSpecForProviderLinkedServiceNameSele
     [JsonPropertyName("policy")]
     public V1beta1DataSetAzureBlobSpecForProviderLinkedServiceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetAzureBlobSpecForProviderSchemaColumn
@@ -162,7 +181,9 @@ public partial class V1beta1DataSetAzureBlobSpecForProviderSchemaColumn
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetAzureBlobSpecForProvider
@@ -231,7 +252,9 @@ public partial class V1beta1DataSetAzureBlobSpecForProvider
     [JsonPropertyName("schemaColumn")]
     public IList<V1beta1DataSetAzureBlobSpecForProviderSchemaColumn>? SchemaColumn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetAzureBlobSpecInitProviderLinkedServiceNameRefPolicy
@@ -244,7 +267,9 @@ public partial class V1beta1DataSetAzureBlobSpecInitProviderLinkedServiceNameRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LinkedServiceAzureBlobStorage in datafactory to populate linkedServiceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetAzureBlobSpecInitProviderLinkedServiceNameRef
@@ -257,7 +282,9 @@ public partial class V1beta1DataSetAzureBlobSpecInitProviderLinkedServiceNameRef
     [JsonPropertyName("policy")]
     public V1beta1DataSetAzureBlobSpecInitProviderLinkedServiceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetAzureBlobSpecInitProviderLinkedServiceNameSelectorPolicy
@@ -270,7 +297,9 @@ public partial class V1beta1DataSetAzureBlobSpecInitProviderLinkedServiceNameSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LinkedServiceAzureBlobStorage in datafactory to populate linkedServiceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetAzureBlobSpecInitProviderLinkedServiceNameSelector
@@ -287,7 +316,9 @@ public partial class V1beta1DataSetAzureBlobSpecInitProviderLinkedServiceNameSel
     [JsonPropertyName("policy")]
     public V1beta1DataSetAzureBlobSpecInitProviderLinkedServiceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetAzureBlobSpecInitProviderSchemaColumn
@@ -304,7 +335,9 @@ public partial class V1beta1DataSetAzureBlobSpecInitProviderSchemaColumn
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetAzureBlobSpecInitProvider
@@ -361,7 +394,9 @@ public partial class V1beta1DataSetAzureBlobSpecInitProvider
     [JsonPropertyName("schemaColumn")]
     public IList<V1beta1DataSetAzureBlobSpecInitProviderSchemaColumn>? SchemaColumn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetAzureBlobSpecProviderConfigRefPolicy
@@ -374,7 +409,9 @@ public partial class V1beta1DataSetAzureBlobSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetAzureBlobSpecProviderConfigRef
@@ -387,7 +424,9 @@ public partial class V1beta1DataSetAzureBlobSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1DataSetAzureBlobSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetAzureBlobSpecWriteConnectionSecretToRef
@@ -400,7 +439,9 @@ public partial class V1beta1DataSetAzureBlobSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataSetAzureBlobSpec defines the desired state of DataSetAzureBlob</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetAzureBlobSpec
@@ -429,7 +470,9 @@ public partial class V1beta1DataSetAzureBlobSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DataSetAzureBlobSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetAzureBlobStatusAtProviderSchemaColumn
@@ -446,7 +489,9 @@ public partial class V1beta1DataSetAzureBlobStatusAtProviderSchemaColumn
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetAzureBlobStatusAtProvider
@@ -503,7 +548,9 @@ public partial class V1beta1DataSetAzureBlobStatusAtProvider
     [JsonPropertyName("schemaColumn")]
     public IList<V1beta1DataSetAzureBlobStatusAtProviderSchemaColumn>? SchemaColumn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetAzureBlobStatusConditions
@@ -532,7 +579,9 @@ public partial class V1beta1DataSetAzureBlobStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataSetAzureBlobStatus defines the observed state of DataSetAzureBlob.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetAzureBlobStatus
@@ -549,7 +598,9 @@ public partial class V1beta1DataSetAzureBlobStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataSetAzureBlob is the Schema for the DataSetAzureBlobs API. Manages an Azure Blob Dataset inside an Azure Data Factory.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -579,3 +630,4 @@ public partial class V1beta1DataSetAzureBlob : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1DataSetAzureBlobStatus? Status { get; set; }
 }
+#nullable disable

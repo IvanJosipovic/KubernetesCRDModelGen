@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+#nullable enable
 /// <summary>ManagerStaticMember is the Schema for the ManagerStaticMembers API. Manages a Network Manager Static Member.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ManagerStaticMemberList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1ManagerStaticMember> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerStaticMemberSpecForProviderNetworkGroupIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ManagerStaticMemberSpecForProviderNetworkGroupIdRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ManagerNetworkGroup in network to populate networkGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerStaticMemberSpecForProviderNetworkGroupIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1ManagerStaticMemberSpecForProviderNetworkGroupIdRef
     [JsonPropertyName("policy")]
     public V1beta1ManagerStaticMemberSpecForProviderNetworkGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerStaticMemberSpecForProviderNetworkGroupIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1ManagerStaticMemberSpecForProviderNetworkGroupIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ManagerNetworkGroup in network to populate networkGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerStaticMemberSpecForProviderNetworkGroupIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1ManagerStaticMemberSpecForProviderNetworkGroupIdSele
     [JsonPropertyName("policy")]
     public V1beta1ManagerStaticMemberSpecForProviderNetworkGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerStaticMemberSpecForProviderTargetVirtualNetworkIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1ManagerStaticMemberSpecForProviderTargetVirtualNetwo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualNetwork in network to populate targetVirtualNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerStaticMemberSpecForProviderTargetVirtualNetworkIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1ManagerStaticMemberSpecForProviderTargetVirtualNetwo
     [JsonPropertyName("policy")]
     public V1beta1ManagerStaticMemberSpecForProviderTargetVirtualNetworkIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerStaticMemberSpecForProviderTargetVirtualNetworkIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1ManagerStaticMemberSpecForProviderTargetVirtualNetwo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualNetwork in network to populate targetVirtualNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerStaticMemberSpecForProviderTargetVirtualNetworkIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1ManagerStaticMemberSpecForProviderTargetVirtualNetwo
     [JsonPropertyName("policy")]
     public V1beta1ManagerStaticMemberSpecForProviderTargetVirtualNetworkIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerStaticMemberSpecForProvider
@@ -190,7 +209,9 @@ public partial class V1beta1ManagerStaticMemberSpecForProvider
     [JsonPropertyName("targetVirtualNetworkIdSelector")]
     public V1beta1ManagerStaticMemberSpecForProviderTargetVirtualNetworkIdSelector? TargetVirtualNetworkIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerStaticMemberSpecInitProviderTargetVirtualNetworkIdRefPolicy
@@ -203,7 +224,9 @@ public partial class V1beta1ManagerStaticMemberSpecInitProviderTargetVirtualNetw
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualNetwork in network to populate targetVirtualNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerStaticMemberSpecInitProviderTargetVirtualNetworkIdRef
@@ -220,7 +243,9 @@ public partial class V1beta1ManagerStaticMemberSpecInitProviderTargetVirtualNetw
     [JsonPropertyName("policy")]
     public V1beta1ManagerStaticMemberSpecInitProviderTargetVirtualNetworkIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerStaticMemberSpecInitProviderTargetVirtualNetworkIdSelectorPolicy
@@ -233,7 +258,9 @@ public partial class V1beta1ManagerStaticMemberSpecInitProviderTargetVirtualNetw
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualNetwork in network to populate targetVirtualNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerStaticMemberSpecInitProviderTargetVirtualNetworkIdSelector
@@ -254,7 +281,9 @@ public partial class V1beta1ManagerStaticMemberSpecInitProviderTargetVirtualNetw
     [JsonPropertyName("policy")]
     public V1beta1ManagerStaticMemberSpecInitProviderTargetVirtualNetworkIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerStaticMemberSpecInitProvider
@@ -271,7 +300,9 @@ public partial class V1beta1ManagerStaticMemberSpecInitProvider
     [JsonPropertyName("targetVirtualNetworkIdSelector")]
     public V1beta1ManagerStaticMemberSpecInitProviderTargetVirtualNetworkIdSelector? TargetVirtualNetworkIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerStaticMemberSpecProviderConfigRef
@@ -284,7 +315,9 @@ public partial class V1beta1ManagerStaticMemberSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerStaticMemberSpecWriteConnectionSecretToRef
@@ -293,7 +326,9 @@ public partial class V1beta1ManagerStaticMemberSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagerStaticMemberSpec defines the desired state of ManagerStaticMember</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerStaticMemberSpec
@@ -318,7 +353,9 @@ public partial class V1beta1ManagerStaticMemberSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ManagerStaticMemberSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerStaticMemberStatusAtProvider
@@ -339,7 +376,9 @@ public partial class V1beta1ManagerStaticMemberStatusAtProvider
     [JsonPropertyName("targetVirtualNetworkId")]
     public string? TargetVirtualNetworkId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerStaticMemberStatusConditions
@@ -368,7 +407,9 @@ public partial class V1beta1ManagerStaticMemberStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagerStaticMemberStatus defines the observed state of ManagerStaticMember.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerStaticMemberStatus
@@ -385,7 +426,9 @@ public partial class V1beta1ManagerStaticMemberStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagerStaticMember is the Schema for the ManagerStaticMembers API. Manages a Network Manager Static Member.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -415,3 +458,4 @@ public partial class V1beta1ManagerStaticMember : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1ManagerStaticMemberStatus? Status { get; set; }
 }
+#nullable disable

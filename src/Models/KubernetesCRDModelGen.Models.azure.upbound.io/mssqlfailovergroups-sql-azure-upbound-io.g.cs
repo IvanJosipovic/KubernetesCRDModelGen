@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.azure.upbound.io;
+#nullable enable
 /// <summary>MSSQLFailoverGroup is the Schema for the MSSQLFailoverGroups API. Manages a Microsoft Azure SQL Failover Group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MSSQLFailoverGroupList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1MSSQLFailoverGroup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupSpecForProviderDatabasesRefsPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1MSSQLFailoverGroupSpecForProviderDatabasesRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupSpecForProviderDatabasesRefs
@@ -59,7 +64,9 @@ public partial class V1beta1MSSQLFailoverGroupSpecForProviderDatabasesRefs
     [JsonPropertyName("policy")]
     public V1beta1MSSQLFailoverGroupSpecForProviderDatabasesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupSpecForProviderDatabasesSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1MSSQLFailoverGroupSpecForProviderDatabasesSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of MSSQLDatabase in sql to populate databases.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupSpecForProviderDatabasesSelector
@@ -89,7 +98,9 @@ public partial class V1beta1MSSQLFailoverGroupSpecForProviderDatabasesSelector
     [JsonPropertyName("policy")]
     public V1beta1MSSQLFailoverGroupSpecForProviderDatabasesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MSSQLServer in sql to populate id.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdRef
     [JsonPropertyName("policy")]
     public V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MSSQLServer in sql to populate id.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdSele
     [JsonPropertyName("policy")]
     public V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupSpecForProviderPartnerServer
@@ -162,7 +181,9 @@ public partial class V1beta1MSSQLFailoverGroupSpecForProviderPartnerServer
     [JsonPropertyName("idSelector")]
     public V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdSelector? IdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupSpecForProviderReadWriteEndpointFailoverPolicy
@@ -175,7 +196,9 @@ public partial class V1beta1MSSQLFailoverGroupSpecForProviderReadWriteEndpointFa
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupSpecForProviderServerIdRefPolicy
@@ -188,7 +211,9 @@ public partial class V1beta1MSSQLFailoverGroupSpecForProviderServerIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MSSQLServer in sql to populate serverId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupSpecForProviderServerIdRef
@@ -201,7 +226,9 @@ public partial class V1beta1MSSQLFailoverGroupSpecForProviderServerIdRef
     [JsonPropertyName("policy")]
     public V1beta1MSSQLFailoverGroupSpecForProviderServerIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupSpecForProviderServerIdSelectorPolicy
@@ -214,7 +241,9 @@ public partial class V1beta1MSSQLFailoverGroupSpecForProviderServerIdSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MSSQLServer in sql to populate serverId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupSpecForProviderServerIdSelector
@@ -231,7 +260,9 @@ public partial class V1beta1MSSQLFailoverGroupSpecForProviderServerIdSelector
     [JsonPropertyName("policy")]
     public V1beta1MSSQLFailoverGroupSpecForProviderServerIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupSpecForProvider
@@ -276,7 +307,9 @@ public partial class V1beta1MSSQLFailoverGroupSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupSpecInitProviderDatabasesRefsPolicy
@@ -289,7 +322,9 @@ public partial class V1beta1MSSQLFailoverGroupSpecInitProviderDatabasesRefsPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupSpecInitProviderDatabasesRefs
@@ -302,7 +337,9 @@ public partial class V1beta1MSSQLFailoverGroupSpecInitProviderDatabasesRefs
     [JsonPropertyName("policy")]
     public V1beta1MSSQLFailoverGroupSpecInitProviderDatabasesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupSpecInitProviderDatabasesSelectorPolicy
@@ -315,7 +352,9 @@ public partial class V1beta1MSSQLFailoverGroupSpecInitProviderDatabasesSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of MSSQLDatabase in sql to populate databases.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupSpecInitProviderDatabasesSelector
@@ -332,7 +371,9 @@ public partial class V1beta1MSSQLFailoverGroupSpecInitProviderDatabasesSelector
     [JsonPropertyName("policy")]
     public V1beta1MSSQLFailoverGroupSpecInitProviderDatabasesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdRefPolicy
@@ -345,7 +386,9 @@ public partial class V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MSSQLServer in sql to populate id.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdRef
@@ -358,7 +401,9 @@ public partial class V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdRef
     [JsonPropertyName("policy")]
     public V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdSelectorPolicy
@@ -371,7 +416,9 @@ public partial class V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MSSQLServer in sql to populate id.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdSelector
@@ -388,7 +435,9 @@ public partial class V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdSel
     [JsonPropertyName("policy")]
     public V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServer
@@ -405,7 +454,9 @@ public partial class V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServer
     [JsonPropertyName("idSelector")]
     public V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdSelector? IdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupSpecInitProviderReadWriteEndpointFailoverPolicy
@@ -418,7 +469,9 @@ public partial class V1beta1MSSQLFailoverGroupSpecInitProviderReadWriteEndpointF
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupSpecInitProvider
@@ -451,7 +504,9 @@ public partial class V1beta1MSSQLFailoverGroupSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupSpecProviderConfigRefPolicy
@@ -464,7 +519,9 @@ public partial class V1beta1MSSQLFailoverGroupSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupSpecProviderConfigRef
@@ -477,7 +534,9 @@ public partial class V1beta1MSSQLFailoverGroupSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1MSSQLFailoverGroupSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupSpecWriteConnectionSecretToRef
@@ -490,7 +549,9 @@ public partial class V1beta1MSSQLFailoverGroupSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MSSQLFailoverGroupSpec defines the desired state of MSSQLFailoverGroup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupSpec
@@ -519,7 +580,9 @@ public partial class V1beta1MSSQLFailoverGroupSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MSSQLFailoverGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupStatusAtProviderPartnerServer
@@ -536,7 +599,9 @@ public partial class V1beta1MSSQLFailoverGroupStatusAtProviderPartnerServer
     [JsonPropertyName("role")]
     public string? Role { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupStatusAtProviderReadWriteEndpointFailoverPolicy
@@ -549,7 +614,9 @@ public partial class V1beta1MSSQLFailoverGroupStatusAtProviderReadWriteEndpointF
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupStatusAtProvider
@@ -582,7 +649,9 @@ public partial class V1beta1MSSQLFailoverGroupStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupStatusConditions
@@ -611,7 +680,9 @@ public partial class V1beta1MSSQLFailoverGroupStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MSSQLFailoverGroupStatus defines the observed state of MSSQLFailoverGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLFailoverGroupStatus
@@ -628,7 +699,9 @@ public partial class V1beta1MSSQLFailoverGroupStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MSSQLFailoverGroup is the Schema for the MSSQLFailoverGroups API. Manages a Microsoft Azure SQL Failover Group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -658,3 +731,4 @@ public partial class V1beta1MSSQLFailoverGroup : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1MSSQLFailoverGroupStatus? Status { get; set; }
 }
+#nullable disable

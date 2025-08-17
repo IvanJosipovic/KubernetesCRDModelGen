@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.m.upbound.io;
+#nullable enable
 /// <summary>TrafficMirrorFilterRule is the Schema for the TrafficMirrorFilterRules API. Provides an Traffic mirror filter rule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TrafficMirrorFilterRuleList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1TrafficMirrorFilterRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficMirrorFilterRuleSpecForProviderDestinationPortRange
@@ -46,7 +49,9 @@ public partial class V1beta1TrafficMirrorFilterRuleSpecForProviderDestinationPor
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficMirrorFilterRuleSpecForProviderSourcePortRange
@@ -59,7 +64,9 @@ public partial class V1beta1TrafficMirrorFilterRuleSpecForProviderSourcePortRang
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficMirrorFilterRuleSpecForProviderTrafficMirrorFilterIdRefPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1TrafficMirrorFilterRuleSpecForProviderTrafficMirrorF
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TrafficMirrorFilter in ec2 to populate trafficMirrorFilterId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficMirrorFilterRuleSpecForProviderTrafficMirrorFilterIdRef
@@ -89,7 +98,9 @@ public partial class V1beta1TrafficMirrorFilterRuleSpecForProviderTrafficMirrorF
     [JsonPropertyName("policy")]
     public V1beta1TrafficMirrorFilterRuleSpecForProviderTrafficMirrorFilterIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficMirrorFilterRuleSpecForProviderTrafficMirrorFilterIdSelectorPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1TrafficMirrorFilterRuleSpecForProviderTrafficMirrorF
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TrafficMirrorFilter in ec2 to populate trafficMirrorFilterId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficMirrorFilterRuleSpecForProviderTrafficMirrorFilterIdSelector
@@ -123,7 +136,9 @@ public partial class V1beta1TrafficMirrorFilterRuleSpecForProviderTrafficMirrorF
     [JsonPropertyName("policy")]
     public V1beta1TrafficMirrorFilterRuleSpecForProviderTrafficMirrorFilterIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficMirrorFilterRuleSpecForProvider
@@ -180,7 +195,9 @@ public partial class V1beta1TrafficMirrorFilterRuleSpecForProvider
     [JsonPropertyName("trafficMirrorFilterIdSelector")]
     public V1beta1TrafficMirrorFilterRuleSpecForProviderTrafficMirrorFilterIdSelector? TrafficMirrorFilterIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficMirrorFilterRuleSpecInitProviderDestinationPortRange
@@ -193,7 +210,9 @@ public partial class V1beta1TrafficMirrorFilterRuleSpecInitProviderDestinationPo
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficMirrorFilterRuleSpecInitProviderSourcePortRange
@@ -206,7 +225,9 @@ public partial class V1beta1TrafficMirrorFilterRuleSpecInitProviderSourcePortRan
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficMirrorFilterRuleSpecInitProviderTrafficMirrorFilterIdRefPolicy
@@ -219,7 +240,9 @@ public partial class V1beta1TrafficMirrorFilterRuleSpecInitProviderTrafficMirror
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TrafficMirrorFilter in ec2 to populate trafficMirrorFilterId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficMirrorFilterRuleSpecInitProviderTrafficMirrorFilterIdRef
@@ -236,7 +259,9 @@ public partial class V1beta1TrafficMirrorFilterRuleSpecInitProviderTrafficMirror
     [JsonPropertyName("policy")]
     public V1beta1TrafficMirrorFilterRuleSpecInitProviderTrafficMirrorFilterIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficMirrorFilterRuleSpecInitProviderTrafficMirrorFilterIdSelectorPolicy
@@ -249,7 +274,9 @@ public partial class V1beta1TrafficMirrorFilterRuleSpecInitProviderTrafficMirror
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TrafficMirrorFilter in ec2 to populate trafficMirrorFilterId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficMirrorFilterRuleSpecInitProviderTrafficMirrorFilterIdSelector
@@ -270,7 +297,9 @@ public partial class V1beta1TrafficMirrorFilterRuleSpecInitProviderTrafficMirror
     [JsonPropertyName("policy")]
     public V1beta1TrafficMirrorFilterRuleSpecInitProviderTrafficMirrorFilterIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficMirrorFilterRuleSpecInitProvider
@@ -323,7 +352,9 @@ public partial class V1beta1TrafficMirrorFilterRuleSpecInitProvider
     [JsonPropertyName("trafficMirrorFilterIdSelector")]
     public V1beta1TrafficMirrorFilterRuleSpecInitProviderTrafficMirrorFilterIdSelector? TrafficMirrorFilterIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficMirrorFilterRuleSpecProviderConfigRef
@@ -336,7 +367,9 @@ public partial class V1beta1TrafficMirrorFilterRuleSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficMirrorFilterRuleSpecWriteConnectionSecretToRef
@@ -345,7 +378,9 @@ public partial class V1beta1TrafficMirrorFilterRuleSpecWriteConnectionSecretToRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TrafficMirrorFilterRuleSpec defines the desired state of TrafficMirrorFilterRule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficMirrorFilterRuleSpec
@@ -370,7 +405,9 @@ public partial class V1beta1TrafficMirrorFilterRuleSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TrafficMirrorFilterRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficMirrorFilterRuleStatusAtProviderDestinationPortRange
@@ -383,7 +420,9 @@ public partial class V1beta1TrafficMirrorFilterRuleStatusAtProviderDestinationPo
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficMirrorFilterRuleStatusAtProviderSourcePortRange
@@ -396,7 +435,9 @@ public partial class V1beta1TrafficMirrorFilterRuleStatusAtProviderSourcePortRan
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficMirrorFilterRuleStatusAtProvider
@@ -453,7 +494,9 @@ public partial class V1beta1TrafficMirrorFilterRuleStatusAtProvider
     [JsonPropertyName("trafficMirrorFilterId")]
     public string? TrafficMirrorFilterId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficMirrorFilterRuleStatusConditions
@@ -482,7 +525,9 @@ public partial class V1beta1TrafficMirrorFilterRuleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TrafficMirrorFilterRuleStatus defines the observed state of TrafficMirrorFilterRule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficMirrorFilterRuleStatus
@@ -499,7 +544,9 @@ public partial class V1beta1TrafficMirrorFilterRuleStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TrafficMirrorFilterRule is the Schema for the TrafficMirrorFilterRules API. Provides an Traffic mirror filter rule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -529,3 +576,4 @@ public partial class V1beta1TrafficMirrorFilterRule : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1TrafficMirrorFilterRuleStatus? Status { get; set; }
 }
+#nullable disable

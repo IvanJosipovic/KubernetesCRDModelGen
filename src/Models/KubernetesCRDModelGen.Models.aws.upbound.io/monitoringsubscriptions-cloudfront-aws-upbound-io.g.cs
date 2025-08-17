@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudfront.aws.upbound.io;
+#nullable enable
 /// <summary>MonitoringSubscription is the Schema for the MonitoringSubscriptions API. Provides a CloudFront monitoring subscription resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MonitoringSubscriptionList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1MonitoringSubscription> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringSubscriptionSpecForProviderDistributionIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1MonitoringSubscriptionSpecForProviderDistributionIdR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Distribution in cloudfront to populate distributionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringSubscriptionSpecForProviderDistributionIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1MonitoringSubscriptionSpecForProviderDistributionIdR
     [JsonPropertyName("policy")]
     public V1beta1MonitoringSubscriptionSpecForProviderDistributionIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringSubscriptionSpecForProviderDistributionIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1MonitoringSubscriptionSpecForProviderDistributionIdS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Distribution in cloudfront to populate distributionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringSubscriptionSpecForProviderDistributionIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1MonitoringSubscriptionSpecForProviderDistributionIdS
     [JsonPropertyName("policy")]
     public V1beta1MonitoringSubscriptionSpecForProviderDistributionIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringSubscriptionSpecForProviderMonitoringSubscriptionRealtimeMetricsSubscriptionConfig
@@ -98,7 +109,9 @@ public partial class V1beta1MonitoringSubscriptionSpecForProviderMonitoringSubsc
     [JsonPropertyName("realtimeMetricsSubscriptionStatus")]
     public string? RealtimeMetricsSubscriptionStatus { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringSubscriptionSpecForProviderMonitoringSubscription
@@ -107,7 +120,9 @@ public partial class V1beta1MonitoringSubscriptionSpecForProviderMonitoringSubsc
     [JsonPropertyName("realtimeMetricsSubscriptionConfig")]
     public IList<V1beta1MonitoringSubscriptionSpecForProviderMonitoringSubscriptionRealtimeMetricsSubscriptionConfig>? RealtimeMetricsSubscriptionConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringSubscriptionSpecForProvider
@@ -128,7 +143,9 @@ public partial class V1beta1MonitoringSubscriptionSpecForProvider
     [JsonPropertyName("monitoringSubscription")]
     public IList<V1beta1MonitoringSubscriptionSpecForProviderMonitoringSubscription>? MonitoringSubscription { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringSubscriptionSpecInitProviderDistributionIdRefPolicy
@@ -141,7 +158,9 @@ public partial class V1beta1MonitoringSubscriptionSpecInitProviderDistributionId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Distribution in cloudfront to populate distributionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringSubscriptionSpecInitProviderDistributionIdRef
@@ -154,7 +173,9 @@ public partial class V1beta1MonitoringSubscriptionSpecInitProviderDistributionId
     [JsonPropertyName("policy")]
     public V1beta1MonitoringSubscriptionSpecInitProviderDistributionIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringSubscriptionSpecInitProviderDistributionIdSelectorPolicy
@@ -167,7 +188,9 @@ public partial class V1beta1MonitoringSubscriptionSpecInitProviderDistributionId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Distribution in cloudfront to populate distributionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringSubscriptionSpecInitProviderDistributionIdSelector
@@ -184,7 +207,9 @@ public partial class V1beta1MonitoringSubscriptionSpecInitProviderDistributionId
     [JsonPropertyName("policy")]
     public V1beta1MonitoringSubscriptionSpecInitProviderDistributionIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringSubscriptionSpecInitProviderMonitoringSubscriptionRealtimeMetricsSubscriptionConfig
@@ -193,7 +218,9 @@ public partial class V1beta1MonitoringSubscriptionSpecInitProviderMonitoringSubs
     [JsonPropertyName("realtimeMetricsSubscriptionStatus")]
     public string? RealtimeMetricsSubscriptionStatus { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringSubscriptionSpecInitProviderMonitoringSubscription
@@ -202,7 +229,9 @@ public partial class V1beta1MonitoringSubscriptionSpecInitProviderMonitoringSubs
     [JsonPropertyName("realtimeMetricsSubscriptionConfig")]
     public IList<V1beta1MonitoringSubscriptionSpecInitProviderMonitoringSubscriptionRealtimeMetricsSubscriptionConfig>? RealtimeMetricsSubscriptionConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringSubscriptionSpecInitProvider
@@ -223,7 +252,9 @@ public partial class V1beta1MonitoringSubscriptionSpecInitProvider
     [JsonPropertyName("monitoringSubscription")]
     public IList<V1beta1MonitoringSubscriptionSpecInitProviderMonitoringSubscription>? MonitoringSubscription { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringSubscriptionSpecProviderConfigRefPolicy
@@ -236,7 +267,9 @@ public partial class V1beta1MonitoringSubscriptionSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringSubscriptionSpecProviderConfigRef
@@ -249,7 +282,9 @@ public partial class V1beta1MonitoringSubscriptionSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1MonitoringSubscriptionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringSubscriptionSpecWriteConnectionSecretToRef
@@ -262,7 +297,9 @@ public partial class V1beta1MonitoringSubscriptionSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitoringSubscriptionSpec defines the desired state of MonitoringSubscription</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringSubscriptionSpec
@@ -291,7 +328,9 @@ public partial class V1beta1MonitoringSubscriptionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MonitoringSubscriptionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringSubscriptionStatusAtProviderMonitoringSubscriptionRealtimeMetricsSubscriptionConfig
@@ -300,7 +339,9 @@ public partial class V1beta1MonitoringSubscriptionStatusAtProviderMonitoringSubs
     [JsonPropertyName("realtimeMetricsSubscriptionStatus")]
     public string? RealtimeMetricsSubscriptionStatus { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringSubscriptionStatusAtProviderMonitoringSubscription
@@ -309,7 +350,9 @@ public partial class V1beta1MonitoringSubscriptionStatusAtProviderMonitoringSubs
     [JsonPropertyName("realtimeMetricsSubscriptionConfig")]
     public IList<V1beta1MonitoringSubscriptionStatusAtProviderMonitoringSubscriptionRealtimeMetricsSubscriptionConfig>? RealtimeMetricsSubscriptionConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringSubscriptionStatusAtProvider
@@ -326,7 +369,9 @@ public partial class V1beta1MonitoringSubscriptionStatusAtProvider
     [JsonPropertyName("monitoringSubscription")]
     public IList<V1beta1MonitoringSubscriptionStatusAtProviderMonitoringSubscription>? MonitoringSubscription { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringSubscriptionStatusConditions
@@ -355,7 +400,9 @@ public partial class V1beta1MonitoringSubscriptionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitoringSubscriptionStatus defines the observed state of MonitoringSubscription.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringSubscriptionStatus
@@ -372,7 +419,9 @@ public partial class V1beta1MonitoringSubscriptionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitoringSubscription is the Schema for the MonitoringSubscriptions API. Provides a CloudFront monitoring subscription resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -402,3 +451,4 @@ public partial class V1beta1MonitoringSubscription : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1MonitoringSubscriptionStatus? Status { get; set; }
 }
+#nullable disable

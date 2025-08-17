@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigtable.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>BigtableAuthorizedView is the Schema for the BigtableAuthorizedView API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1BigtableAuthorizedViewList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1alpha1BigtableAuthorizedView> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An AuthorizedView permitting access to an explicit subset of a Table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigtableAuthorizedViewSpecSubsetView
@@ -42,7 +45,9 @@ public partial class V1alpha1BigtableAuthorizedViewSpecSubsetView
     [JsonPropertyName("rowPrefixes")]
     public IList<string>? RowPrefixes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TableRef defines the resource reference to BigtableTable, which "External" field holds the GCP identifier for the KRM object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigtableAuthorizedViewSpecTableRef
@@ -59,7 +64,9 @@ public partial class V1alpha1BigtableAuthorizedViewSpecTableRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigtableAuthorizedViewSpec defines the desired state of BigtableAuthorizedView</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigtableAuthorizedViewSpec
@@ -84,7 +91,9 @@ public partial class V1alpha1BigtableAuthorizedViewSpec
     [JsonPropertyName("tableRef")]
     public V1alpha1BigtableAuthorizedViewSpecTableRef TableRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigtableAuthorizedViewStatusConditions
@@ -109,13 +118,17 @@ public partial class V1alpha1BigtableAuthorizedViewStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigtableAuthorizedViewStatusObservedState
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigtableAuthorizedViewStatus defines the config connector machine state of BigtableAuthorizedView</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigtableAuthorizedViewStatus
@@ -136,7 +149,9 @@ public partial class V1alpha1BigtableAuthorizedViewStatus
     [JsonPropertyName("observedState")]
     public V1alpha1BigtableAuthorizedViewStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigtableAuthorizedView is the Schema for the BigtableAuthorizedView API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -166,3 +181,4 @@ public partial class V1alpha1BigtableAuthorizedView : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1alpha1BigtableAuthorizedViewStatus? Status { get; set; }
 }
+#nullable disable

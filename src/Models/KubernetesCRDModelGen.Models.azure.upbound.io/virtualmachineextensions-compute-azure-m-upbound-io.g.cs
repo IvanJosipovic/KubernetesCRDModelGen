@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.azure.m.upbound.io;
+#nullable enable
 /// <summary>VirtualMachineExtension is the Schema for the VirtualMachineExtensions API. Manages a Virtual Machine Extension to provide post deployment configuration and run automated tasks.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VirtualMachineExtensionList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1VirtualMachineExtension> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A protected_settings_from_key_vault block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineExtensionSpecForProviderProtectedSettingsFromKeyVault
@@ -46,7 +49,9 @@ public partial class V1beta1VirtualMachineExtensionSpecForProviderProtectedSetti
     [JsonPropertyName("sourceVaultId")]
     public string? SourceVaultId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The protected_settings passed to the extension, like settings, these are specified as a JSON object in a string.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineExtensionSpecForProviderProtectedSettingsSecretRef
@@ -59,7 +64,9 @@ public partial class V1beta1VirtualMachineExtensionSpecForProviderProtectedSetti
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineExtensionSpecForProviderVirtualMachineIdRefPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1VirtualMachineExtensionSpecForProviderVirtualMachine
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LinuxVirtualMachine in compute to populate virtualMachineId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineExtensionSpecForProviderVirtualMachineIdRef
@@ -89,7 +98,9 @@ public partial class V1beta1VirtualMachineExtensionSpecForProviderVirtualMachine
     [JsonPropertyName("policy")]
     public V1beta1VirtualMachineExtensionSpecForProviderVirtualMachineIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineExtensionSpecForProviderVirtualMachineIdSelectorPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1VirtualMachineExtensionSpecForProviderVirtualMachine
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LinuxVirtualMachine in compute to populate virtualMachineId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineExtensionSpecForProviderVirtualMachineIdSelector
@@ -123,7 +136,9 @@ public partial class V1beta1VirtualMachineExtensionSpecForProviderVirtualMachine
     [JsonPropertyName("policy")]
     public V1beta1VirtualMachineExtensionSpecForProviderVirtualMachineIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineExtensionSpecForProvider
@@ -184,7 +199,9 @@ public partial class V1beta1VirtualMachineExtensionSpecForProvider
     [JsonPropertyName("virtualMachineIdSelector")]
     public V1beta1VirtualMachineExtensionSpecForProviderVirtualMachineIdSelector? VirtualMachineIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A protected_settings_from_key_vault block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineExtensionSpecInitProviderProtectedSettingsFromKeyVault
@@ -197,7 +214,9 @@ public partial class V1beta1VirtualMachineExtensionSpecInitProviderProtectedSett
     [JsonPropertyName("sourceVaultId")]
     public string? SourceVaultId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The protected_settings passed to the extension, like settings, these are specified as a JSON object in a string.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineExtensionSpecInitProviderProtectedSettingsSecretRef
@@ -210,7 +229,9 @@ public partial class V1beta1VirtualMachineExtensionSpecInitProviderProtectedSett
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineExtensionSpecInitProvider
@@ -259,7 +280,9 @@ public partial class V1beta1VirtualMachineExtensionSpecInitProvider
     [JsonPropertyName("typeHandlerVersion")]
     public string? TypeHandlerVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineExtensionSpecProviderConfigRef
@@ -272,7 +295,9 @@ public partial class V1beta1VirtualMachineExtensionSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineExtensionSpecWriteConnectionSecretToRef
@@ -281,7 +306,9 @@ public partial class V1beta1VirtualMachineExtensionSpecWriteConnectionSecretToRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualMachineExtensionSpec defines the desired state of VirtualMachineExtension</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineExtensionSpec
@@ -306,7 +333,9 @@ public partial class V1beta1VirtualMachineExtensionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VirtualMachineExtensionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A protected_settings_from_key_vault block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineExtensionStatusAtProviderProtectedSettingsFromKeyVault
@@ -319,7 +348,9 @@ public partial class V1beta1VirtualMachineExtensionStatusAtProviderProtectedSett
     [JsonPropertyName("sourceVaultId")]
     public string? SourceVaultId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineExtensionStatusAtProvider
@@ -372,7 +403,9 @@ public partial class V1beta1VirtualMachineExtensionStatusAtProvider
     [JsonPropertyName("virtualMachineId")]
     public string? VirtualMachineId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineExtensionStatusConditions
@@ -401,7 +434,9 @@ public partial class V1beta1VirtualMachineExtensionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualMachineExtensionStatus defines the observed state of VirtualMachineExtension.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineExtensionStatus
@@ -418,7 +453,9 @@ public partial class V1beta1VirtualMachineExtensionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualMachineExtension is the Schema for the VirtualMachineExtensions API. Manages a Virtual Machine Extension to provide post deployment configuration and run automated tasks.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -448,3 +485,4 @@ public partial class V1beta1VirtualMachineExtension : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1VirtualMachineExtensionStatus? Status { get; set; }
 }
+#nullable disable

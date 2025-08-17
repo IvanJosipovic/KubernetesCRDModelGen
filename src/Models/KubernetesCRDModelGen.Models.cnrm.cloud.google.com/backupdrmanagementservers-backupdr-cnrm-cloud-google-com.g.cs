@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.backupdr.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>BackupDRManagementServer is the Schema for the BackupDRManagementServer API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1BackupDRManagementServerList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1alpha1BackupDRManagementServer> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The resource name of the Google Compute Engine VPC network to which the ManagementServer instance is connected.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRManagementServerSpecNetworksNetworkRef
@@ -50,7 +53,9 @@ public partial class V1alpha1BackupDRManagementServerSpecNetworksNetworkRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRManagementServerSpecNetworks
@@ -63,7 +68,9 @@ public partial class V1alpha1BackupDRManagementServerSpecNetworks
     [JsonPropertyName("peeringMode")]
     public string? PeeringMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRManagementServerSpecProjectRef
@@ -84,7 +91,9 @@ public partial class V1alpha1BackupDRManagementServerSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupDRManagementServerSpec defines the desired state of BackupDRManagementServer</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRManagementServerSpec
@@ -121,7 +130,9 @@ public partial class V1alpha1BackupDRManagementServerSpec
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRManagementServerStatusConditions
@@ -146,7 +157,9 @@ public partial class V1alpha1BackupDRManagementServerStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. The hostname or ip address of the exposed AGM endpoints, used by clients to connect to AGM/RD graphical user interface and APIs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRManagementServerStatusObservedStateManagementURI
@@ -159,7 +172,9 @@ public partial class V1alpha1BackupDRManagementServerStatusObservedStateManageme
     [JsonPropertyName("webUI")]
     public string? WebUI { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. The hostnames of the exposed AGM endpoints for both types of user i.e. 1p and 3p, used to connect AGM/RM UI.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRManagementServerStatusObservedStateWorkforceIdentityBasedManagementURI
@@ -172,7 +187,9 @@ public partial class V1alpha1BackupDRManagementServerStatusObservedStateWorkforc
     [JsonPropertyName("thirdPartyManagementURI")]
     public string? ThirdPartyManagementURI { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. The OAuth client IDs for both types of user i.e. 1p and 3p.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRManagementServerStatusObservedStateWorkforceIdentityBasedOAuth2ClientID
@@ -185,7 +202,9 @@ public partial class V1alpha1BackupDRManagementServerStatusObservedStateWorkforc
     [JsonPropertyName("thirdPartyOAuth2ClientID")]
     public string? ThirdPartyOAuth2ClientID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRManagementServerStatusObservedState
@@ -222,7 +241,9 @@ public partial class V1alpha1BackupDRManagementServerStatusObservedState
     [JsonPropertyName("workforceIdentityBasedOAuth2ClientID")]
     public V1alpha1BackupDRManagementServerStatusObservedStateWorkforceIdentityBasedOAuth2ClientID? WorkforceIdentityBasedOAuth2ClientID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupDRManagementServerStatus defines the config connector machine state of BackupDRManagementServer</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRManagementServerStatus
@@ -243,7 +264,9 @@ public partial class V1alpha1BackupDRManagementServerStatus
     [JsonPropertyName("observedState")]
     public V1alpha1BackupDRManagementServerStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupDRManagementServer is the Schema for the BackupDRManagementServer API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -273,3 +296,4 @@ public partial class V1alpha1BackupDRManagementServer : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1alpha1BackupDRManagementServerStatus? Status { get; set; }
 }
+#nullable disable

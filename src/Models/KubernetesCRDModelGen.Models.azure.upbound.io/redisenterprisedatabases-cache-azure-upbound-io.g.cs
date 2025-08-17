@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cache.azure.upbound.io;
+#nullable enable
 /// <summary>RedisEnterpriseDatabase is the Schema for the RedisEnterpriseDatabases API. Manages a Redis Enterprise Database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RedisEnterpriseDatabaseList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1RedisEnterpriseDatabase> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisEnterpriseDatabaseSpecForProviderClusterIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1RedisEnterpriseDatabaseSpecForProviderClusterIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RedisEnterpriseCluster in cache to populate clusterId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisEnterpriseDatabaseSpecForProviderClusterIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1RedisEnterpriseDatabaseSpecForProviderClusterIdRef
     [JsonPropertyName("policy")]
     public V1beta1RedisEnterpriseDatabaseSpecForProviderClusterIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisEnterpriseDatabaseSpecForProviderClusterIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1RedisEnterpriseDatabaseSpecForProviderClusterIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RedisEnterpriseCluster in cache to populate clusterId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisEnterpriseDatabaseSpecForProviderClusterIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1RedisEnterpriseDatabaseSpecForProviderClusterIdSelec
     [JsonPropertyName("policy")]
     public V1beta1RedisEnterpriseDatabaseSpecForProviderClusterIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisEnterpriseDatabaseSpecForProviderModule
@@ -102,7 +113,9 @@ public partial class V1beta1RedisEnterpriseDatabaseSpecForProviderModule
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisEnterpriseDatabaseSpecForProvider
@@ -147,7 +160,9 @@ public partial class V1beta1RedisEnterpriseDatabaseSpecForProvider
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisEnterpriseDatabaseSpecInitProviderModule
@@ -160,7 +175,9 @@ public partial class V1beta1RedisEnterpriseDatabaseSpecInitProviderModule
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisEnterpriseDatabaseSpecInitProvider
@@ -193,7 +210,9 @@ public partial class V1beta1RedisEnterpriseDatabaseSpecInitProvider
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisEnterpriseDatabaseSpecProviderConfigRefPolicy
@@ -206,7 +225,9 @@ public partial class V1beta1RedisEnterpriseDatabaseSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisEnterpriseDatabaseSpecProviderConfigRef
@@ -219,7 +240,9 @@ public partial class V1beta1RedisEnterpriseDatabaseSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1RedisEnterpriseDatabaseSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisEnterpriseDatabaseSpecWriteConnectionSecretToRef
@@ -232,7 +255,9 @@ public partial class V1beta1RedisEnterpriseDatabaseSpecWriteConnectionSecretToRe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RedisEnterpriseDatabaseSpec defines the desired state of RedisEnterpriseDatabase</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisEnterpriseDatabaseSpec
@@ -261,7 +286,9 @@ public partial class V1beta1RedisEnterpriseDatabaseSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RedisEnterpriseDatabaseSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisEnterpriseDatabaseStatusAtProviderModule
@@ -278,7 +305,9 @@ public partial class V1beta1RedisEnterpriseDatabaseStatusAtProviderModule
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisEnterpriseDatabaseStatusAtProvider
@@ -319,7 +348,9 @@ public partial class V1beta1RedisEnterpriseDatabaseStatusAtProvider
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisEnterpriseDatabaseStatusConditions
@@ -348,7 +379,9 @@ public partial class V1beta1RedisEnterpriseDatabaseStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RedisEnterpriseDatabaseStatus defines the observed state of RedisEnterpriseDatabase.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisEnterpriseDatabaseStatus
@@ -365,7 +398,9 @@ public partial class V1beta1RedisEnterpriseDatabaseStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RedisEnterpriseDatabase is the Schema for the RedisEnterpriseDatabases API. Manages a Redis Enterprise Database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -395,3 +430,4 @@ public partial class V1beta1RedisEnterpriseDatabase : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1RedisEnterpriseDatabaseStatus? Status { get; set; }
 }
+#nullable disable

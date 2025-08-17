@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkservices.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1NetworkServicesTLSRouteList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1NetworkServicesTLSRoute> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesTLSRouteSpecGateways
@@ -50,7 +53,9 @@ public partial class V1beta1NetworkServicesTLSRouteSpecGateways
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesTLSRouteSpecMeshes
@@ -67,7 +72,9 @@ public partial class V1beta1NetworkServicesTLSRouteSpecMeshes
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesTLSRouteSpecProjectRef
@@ -84,7 +91,9 @@ public partial class V1beta1NetworkServicesTLSRouteSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesTLSRouteSpecRulesActionDestinationsServiceRef
@@ -101,7 +110,9 @@ public partial class V1beta1NetworkServicesTLSRouteSpecRulesActionDestinationsSe
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesTLSRouteSpecRulesActionDestinations
@@ -114,7 +125,9 @@ public partial class V1beta1NetworkServicesTLSRouteSpecRulesActionDestinations
     [JsonPropertyName("weight")]
     public long? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The detailed rule defining how to route matched traffic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesTLSRouteSpecRulesAction
@@ -123,7 +136,9 @@ public partial class V1beta1NetworkServicesTLSRouteSpecRulesAction
     [JsonPropertyName("destinations")]
     public IList<V1beta1NetworkServicesTLSRouteSpecRulesActionDestinations> Destinations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesTLSRouteSpecRulesMatches
@@ -136,7 +151,9 @@ public partial class V1beta1NetworkServicesTLSRouteSpecRulesMatches
     [JsonPropertyName("sniHost")]
     public IList<string>? SniHost { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesTLSRouteSpecRules
@@ -149,7 +166,9 @@ public partial class V1beta1NetworkServicesTLSRouteSpecRules
     [JsonPropertyName("matches")]
     public IList<V1beta1NetworkServicesTLSRouteSpecRulesMatches> Matches { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesTLSRouteSpec
@@ -182,7 +201,9 @@ public partial class V1beta1NetworkServicesTLSRouteSpec
     [JsonPropertyName("rules")]
     public IList<V1beta1NetworkServicesTLSRouteSpecRules> Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesTLSRouteStatusConditions
@@ -207,7 +228,9 @@ public partial class V1beta1NetworkServicesTLSRouteStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesTLSRouteStatus
@@ -232,7 +255,9 @@ public partial class V1beta1NetworkServicesTLSRouteStatus
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -262,3 +287,4 @@ public partial class V1beta1NetworkServicesTLSRoute : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1NetworkServicesTLSRouteStatus? Status { get; set; }
 }
+#nullable disable

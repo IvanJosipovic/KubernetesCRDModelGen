@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.azure.upbound.io;
+#nullable enable
 /// <summary>ManagedDisk is the Schema for the ManagedDisks API. Manages a Managed Disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ManagedDiskList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1ManagedDisk> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedDiskSpecForProviderEncryptionSettingsDiskEncryptionKey
@@ -46,7 +49,9 @@ public partial class V1beta1ManagedDiskSpecForProviderEncryptionSettingsDiskEncr
     [JsonPropertyName("sourceVaultId")]
     public string? SourceVaultId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedDiskSpecForProviderEncryptionSettingsKeyEncryptionKey
@@ -59,7 +64,9 @@ public partial class V1beta1ManagedDiskSpecForProviderEncryptionSettingsKeyEncry
     [JsonPropertyName("sourceVaultId")]
     public string? SourceVaultId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedDiskSpecForProviderEncryptionSettings
@@ -72,7 +79,9 @@ public partial class V1beta1ManagedDiskSpecForProviderEncryptionSettings
     [JsonPropertyName("keyEncryptionKey")]
     public IList<V1beta1ManagedDiskSpecForProviderEncryptionSettingsKeyEncryptionKey>? KeyEncryptionKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedDiskSpecForProviderResourceGroupNameRefPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1ManagedDiskSpecForProviderResourceGroupNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedDiskSpecForProviderResourceGroupNameRef
@@ -98,7 +109,9 @@ public partial class V1beta1ManagedDiskSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1ManagedDiskSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedDiskSpecForProviderResourceGroupNameSelectorPolicy
@@ -111,7 +124,9 @@ public partial class V1beta1ManagedDiskSpecForProviderResourceGroupNameSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedDiskSpecForProviderResourceGroupNameSelector
@@ -128,7 +143,9 @@ public partial class V1beta1ManagedDiskSpecForProviderResourceGroupNameSelector
     [JsonPropertyName("policy")]
     public V1beta1ManagedDiskSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedDiskSpecForProviderSourceResourceIdRefPolicy
@@ -141,7 +158,9 @@ public partial class V1beta1ManagedDiskSpecForProviderSourceResourceIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ManagedDisk in compute to populate sourceResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedDiskSpecForProviderSourceResourceIdRef
@@ -154,7 +173,9 @@ public partial class V1beta1ManagedDiskSpecForProviderSourceResourceIdRef
     [JsonPropertyName("policy")]
     public V1beta1ManagedDiskSpecForProviderSourceResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedDiskSpecForProviderSourceResourceIdSelectorPolicy
@@ -167,7 +188,9 @@ public partial class V1beta1ManagedDiskSpecForProviderSourceResourceIdSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ManagedDisk in compute to populate sourceResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedDiskSpecForProviderSourceResourceIdSelector
@@ -184,7 +207,9 @@ public partial class V1beta1ManagedDiskSpecForProviderSourceResourceIdSelector
     [JsonPropertyName("policy")]
     public V1beta1ManagedDiskSpecForProviderSourceResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedDiskSpecForProvider
@@ -341,7 +366,9 @@ public partial class V1beta1ManagedDiskSpecForProvider
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedDiskSpecInitProviderEncryptionSettingsDiskEncryptionKey
@@ -354,7 +381,9 @@ public partial class V1beta1ManagedDiskSpecInitProviderEncryptionSettingsDiskEnc
     [JsonPropertyName("sourceVaultId")]
     public string? SourceVaultId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedDiskSpecInitProviderEncryptionSettingsKeyEncryptionKey
@@ -367,7 +396,9 @@ public partial class V1beta1ManagedDiskSpecInitProviderEncryptionSettingsKeyEncr
     [JsonPropertyName("sourceVaultId")]
     public string? SourceVaultId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedDiskSpecInitProviderEncryptionSettings
@@ -380,7 +411,9 @@ public partial class V1beta1ManagedDiskSpecInitProviderEncryptionSettings
     [JsonPropertyName("keyEncryptionKey")]
     public IList<V1beta1ManagedDiskSpecInitProviderEncryptionSettingsKeyEncryptionKey>? KeyEncryptionKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedDiskSpecInitProviderSourceResourceIdRefPolicy
@@ -393,7 +426,9 @@ public partial class V1beta1ManagedDiskSpecInitProviderSourceResourceIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ManagedDisk in compute to populate sourceResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedDiskSpecInitProviderSourceResourceIdRef
@@ -406,7 +441,9 @@ public partial class V1beta1ManagedDiskSpecInitProviderSourceResourceIdRef
     [JsonPropertyName("policy")]
     public V1beta1ManagedDiskSpecInitProviderSourceResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedDiskSpecInitProviderSourceResourceIdSelectorPolicy
@@ -419,7 +456,9 @@ public partial class V1beta1ManagedDiskSpecInitProviderSourceResourceIdSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ManagedDisk in compute to populate sourceResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedDiskSpecInitProviderSourceResourceIdSelector
@@ -436,7 +475,9 @@ public partial class V1beta1ManagedDiskSpecInitProviderSourceResourceIdSelector
     [JsonPropertyName("policy")]
     public V1beta1ManagedDiskSpecInitProviderSourceResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedDiskSpecInitProvider
@@ -581,7 +622,9 @@ public partial class V1beta1ManagedDiskSpecInitProvider
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedDiskSpecProviderConfigRefPolicy
@@ -594,7 +637,9 @@ public partial class V1beta1ManagedDiskSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedDiskSpecProviderConfigRef
@@ -607,7 +652,9 @@ public partial class V1beta1ManagedDiskSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ManagedDiskSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedDiskSpecWriteConnectionSecretToRef
@@ -620,7 +667,9 @@ public partial class V1beta1ManagedDiskSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedDiskSpec defines the desired state of ManagedDisk</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedDiskSpec
@@ -649,7 +698,9 @@ public partial class V1beta1ManagedDiskSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ManagedDiskSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedDiskStatusAtProviderEncryptionSettingsDiskEncryptionKey
@@ -662,7 +713,9 @@ public partial class V1beta1ManagedDiskStatusAtProviderEncryptionSettingsDiskEnc
     [JsonPropertyName("sourceVaultId")]
     public string? SourceVaultId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedDiskStatusAtProviderEncryptionSettingsKeyEncryptionKey
@@ -675,7 +728,9 @@ public partial class V1beta1ManagedDiskStatusAtProviderEncryptionSettingsKeyEncr
     [JsonPropertyName("sourceVaultId")]
     public string? SourceVaultId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedDiskStatusAtProviderEncryptionSettings
@@ -688,7 +743,9 @@ public partial class V1beta1ManagedDiskStatusAtProviderEncryptionSettings
     [JsonPropertyName("keyEncryptionKey")]
     public IList<V1beta1ManagedDiskStatusAtProviderEncryptionSettingsKeyEncryptionKey>? KeyEncryptionKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedDiskStatusAtProvider
@@ -833,7 +890,9 @@ public partial class V1beta1ManagedDiskStatusAtProvider
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedDiskStatusConditions
@@ -862,7 +921,9 @@ public partial class V1beta1ManagedDiskStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedDiskStatus defines the observed state of ManagedDisk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedDiskStatus
@@ -879,7 +940,9 @@ public partial class V1beta1ManagedDiskStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedDisk is the Schema for the ManagedDisks API. Manages a Managed Disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -909,3 +972,4 @@ public partial class V1beta1ManagedDisk : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1ManagedDiskStatus? Status { get; set; }
 }
+#nullable disable

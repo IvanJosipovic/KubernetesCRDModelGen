@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.flows.knative.dev;
+#nullable enable
 /// <summary>Sequence defines a sequence of Subscribers that will be wired in series through Channels and Subscriptions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1SequenceList : IKubernetesObject<V1ListMeta>, IItems<V1Se
     [JsonPropertyName("items")]
     public IList<V1Sequence> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ChannelTemplate specifies which Channel CRD to use. If left unspecified, it is set to the default Channel CRD for the namespace (or cluster, in case there are no defaults for the namespace).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceSpecChannelTemplate
@@ -50,7 +53,9 @@ public partial class V1SequenceSpecChannelTemplate
     [JsonPropertyName("spec")]
     public JsonNode? Spec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Ref points to an Addressable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceSpecReplyRef
@@ -71,7 +76,9 @@ public partial class V1SequenceSpecReplyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reply is a Reference to where the result of the last Subscriber gets sent to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceSpecReply
@@ -92,7 +99,9 @@ public partial class V1SequenceSpecReply
     [JsonPropertyName("audience")]
     public string? Audience { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Ref points to an Addressable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceSpecStepsRef
@@ -113,7 +122,9 @@ public partial class V1SequenceSpecStepsRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceSpecSteps
@@ -138,7 +149,9 @@ public partial class V1SequenceSpecSteps
     [JsonPropertyName("audience")]
     public string? Audience { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Spec defines the desired state of the Sequence.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceSpec
@@ -155,7 +168,9 @@ public partial class V1SequenceSpec
     [JsonPropertyName("steps")]
     public IList<V1SequenceSpecSteps>? Steps { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sequence is Addressable. It exposes the endpoint as an URI to get events delivered into the Sequence.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceStatusAddress
@@ -176,7 +191,9 @@ public partial class V1SequenceStatusAddress
     [JsonPropertyName("audience")]
     public string? Audience { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceStatusAddresses
@@ -197,7 +214,9 @@ public partial class V1SequenceStatusAddresses
     [JsonPropertyName("audience")]
     public string? Audience { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceStatusAuth
@@ -210,7 +229,9 @@ public partial class V1SequenceStatusAuth
     [JsonPropertyName("serviceAccountNames")]
     public IList<string>? ServiceAccountNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Channel is the reference to the underlying channel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceStatusChannelStatusesChannel
@@ -243,7 +264,9 @@ public partial class V1SequenceStatusChannelStatusesChannel
     [JsonPropertyName("uid")]
     public string? Uid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ReadyCondition indicates whether the Channel is ready or not.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceStatusChannelStatusesReady
@@ -272,7 +295,9 @@ public partial class V1SequenceStatusChannelStatusesReady
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceStatusChannelStatuses
@@ -285,7 +310,9 @@ public partial class V1SequenceStatusChannelStatuses
     [JsonPropertyName("ready")]
     public V1SequenceStatusChannelStatusesReady? Ready { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceStatusPolicies
@@ -298,7 +325,9 @@ public partial class V1SequenceStatusPolicies
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceStatusConditions
@@ -327,7 +356,9 @@ public partial class V1SequenceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ReadyCondition indicates whether the Subscription is ready or not.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceStatusSubscriptionStatusesReady
@@ -356,7 +387,9 @@ public partial class V1SequenceStatusSubscriptionStatusesReady
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Subscription is the reference to the underlying Subscription.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceStatusSubscriptionStatusesSubscription
@@ -389,7 +422,9 @@ public partial class V1SequenceStatusSubscriptionStatusesSubscription
     [JsonPropertyName("uid")]
     public string? Uid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceStatusSubscriptionStatuses
@@ -402,7 +437,9 @@ public partial class V1SequenceStatusSubscriptionStatuses
     [JsonPropertyName("subscription")]
     public V1SequenceStatusSubscriptionStatusesSubscription? Subscription { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Status represents the current state of the Sequence. This data may be out of date.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SequenceStatus
@@ -443,7 +480,9 @@ public partial class V1SequenceStatus
     [JsonPropertyName("subscriptionStatuses")]
     public IList<V1SequenceStatusSubscriptionStatuses>? SubscriptionStatuses { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sequence defines a sequence of Subscribers that will be wired in series through Channels and Subscriptions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -473,3 +512,4 @@ public partial class V1Sequence : IKubernetesObject<V1ObjectMeta>, ISpec<V1Seque
     [JsonPropertyName("status")]
     public V1SequenceStatus? Status { get; set; }
 }
+#nullable disable

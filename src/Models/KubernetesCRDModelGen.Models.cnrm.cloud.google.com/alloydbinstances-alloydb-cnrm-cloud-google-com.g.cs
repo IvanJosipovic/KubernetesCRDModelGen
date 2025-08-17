@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.alloydb.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>AlloyDBInstance is the Schema for the AlloyDBInstance API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1AlloyDBInstanceList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1alpha1AlloyDBInstance> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The AlloyDBInstance cluster that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlloyDBInstanceSpecClusterRef
@@ -50,7 +53,9 @@ public partial class V1alpha1AlloyDBInstanceSpecClusterRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The type of instance. Possible values: ["PRIMARY", "READ_POOL", "SECONDARY"]  For PRIMARY and SECONDARY instances, set the value to refer to the name of the associated cluster. This is recommended because the instance type of primary and secondary instances is tied to the cluster type of the associated cluster. If the secondary cluster is promoted to primary cluster, then the associated secondary instance also becomes primary instance. Example: instanceTypeRef:   name: clusterName For instances of type READ_POOL, set the value using external keyword. Example: instanceTypeRef:   external: READ_POOL If the instance type is SECONDARY, the delete instance operation does not delete the secondary instance but abandons it instead. Use deletionPolicy = "FORCE" in the associated secondary cluster and delete the cluster forcefully to delete the secondary cluster as well its associated secondary instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlloyDBInstanceSpecInstanceTypeRef
@@ -67,7 +72,9 @@ public partial class V1alpha1AlloyDBInstanceSpecInstanceTypeRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configurations for the machines that host the underlying database engine.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlloyDBInstanceSpecMachineConfig
@@ -76,7 +83,9 @@ public partial class V1alpha1AlloyDBInstanceSpecMachineConfig
     [JsonPropertyName("cpuCount")]
     public int? CpuCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlloyDBInstanceSpecNetworkConfigAuthorizedExternalNetworks
@@ -85,7 +94,9 @@ public partial class V1alpha1AlloyDBInstanceSpecNetworkConfigAuthorizedExternalN
     [JsonPropertyName("cidrRange")]
     public string? CidrRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Instance level network configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlloyDBInstanceSpecNetworkConfig
@@ -102,7 +113,9 @@ public partial class V1alpha1AlloyDBInstanceSpecNetworkConfig
     [JsonPropertyName("enablePublicIp")]
     public bool? EnablePublicIp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Read pool specific config. If the instance type is READ_POOL, this configuration must be provided.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlloyDBInstanceSpecReadPoolConfig
@@ -111,7 +124,9 @@ public partial class V1alpha1AlloyDBInstanceSpecReadPoolConfig
     [JsonPropertyName("nodeCount")]
     public int? NodeCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AlloyDBInstanceSpec defines the desired state of AlloyDBInstance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlloyDBInstanceSpec
@@ -164,7 +179,9 @@ public partial class V1alpha1AlloyDBInstanceSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlloyDBInstanceStatusConditions
@@ -189,7 +206,9 @@ public partial class V1alpha1AlloyDBInstanceStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AlloyDBInstanceStatus defines the config connector machine state of AlloyDBInstance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlloyDBInstanceStatus
@@ -242,7 +261,9 @@ public partial class V1alpha1AlloyDBInstanceStatus
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AlloyDBInstance is the Schema for the AlloyDBInstance API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -272,3 +293,4 @@ public partial class V1alpha1AlloyDBInstance : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1alpha1AlloyDBInstanceStatus? Status { get; set; }
 }
+#nullable disable

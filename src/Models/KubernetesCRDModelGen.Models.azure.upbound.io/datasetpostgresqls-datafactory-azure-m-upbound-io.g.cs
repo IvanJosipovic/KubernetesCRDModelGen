@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafactory.azure.m.upbound.io;
+#nullable enable
 /// <summary>DataSetPostgreSQL is the Schema for the DataSetPostgreSQLs API. Manages a PostgreSQL Dataset inside a Azure Data Factory.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DataSetPostgreSQLList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1DataSetPostgreSQL> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetPostgreSQLSpecForProviderDataFactoryIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1DataSetPostgreSQLSpecForProviderDataFactoryIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Factory in datafactory to populate dataFactoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetPostgreSQLSpecForProviderDataFactoryIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1DataSetPostgreSQLSpecForProviderDataFactoryIdRef
     [JsonPropertyName("policy")]
     public V1beta1DataSetPostgreSQLSpecForProviderDataFactoryIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetPostgreSQLSpecForProviderDataFactoryIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1DataSetPostgreSQLSpecForProviderDataFactoryIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Factory in datafactory to populate dataFactoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetPostgreSQLSpecForProviderDataFactoryIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1DataSetPostgreSQLSpecForProviderDataFactoryIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1DataSetPostgreSQLSpecForProviderDataFactoryIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetPostgreSQLSpecForProviderLinkedServiceNameRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1DataSetPostgreSQLSpecForProviderLinkedServiceNameRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LinkedServicePostgreSQL in datafactory to populate linkedServiceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetPostgreSQLSpecForProviderLinkedServiceNameRef
@@ -127,7 +140,9 @@ public partial class V1beta1DataSetPostgreSQLSpecForProviderLinkedServiceNameRef
     [JsonPropertyName("policy")]
     public V1beta1DataSetPostgreSQLSpecForProviderLinkedServiceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetPostgreSQLSpecForProviderLinkedServiceNameSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1DataSetPostgreSQLSpecForProviderLinkedServiceNameSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LinkedServicePostgreSQL in datafactory to populate linkedServiceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetPostgreSQLSpecForProviderLinkedServiceNameSelector
@@ -161,7 +178,9 @@ public partial class V1beta1DataSetPostgreSQLSpecForProviderLinkedServiceNameSel
     [JsonPropertyName("policy")]
     public V1beta1DataSetPostgreSQLSpecForProviderLinkedServiceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetPostgreSQLSpecForProviderSchemaColumn
@@ -178,7 +197,9 @@ public partial class V1beta1DataSetPostgreSQLSpecForProviderSchemaColumn
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetPostgreSQLSpecForProvider
@@ -235,7 +256,9 @@ public partial class V1beta1DataSetPostgreSQLSpecForProvider
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetPostgreSQLSpecInitProviderLinkedServiceNameRefPolicy
@@ -248,7 +271,9 @@ public partial class V1beta1DataSetPostgreSQLSpecInitProviderLinkedServiceNameRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LinkedServicePostgreSQL in datafactory to populate linkedServiceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetPostgreSQLSpecInitProviderLinkedServiceNameRef
@@ -265,7 +290,9 @@ public partial class V1beta1DataSetPostgreSQLSpecInitProviderLinkedServiceNameRe
     [JsonPropertyName("policy")]
     public V1beta1DataSetPostgreSQLSpecInitProviderLinkedServiceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetPostgreSQLSpecInitProviderLinkedServiceNameSelectorPolicy
@@ -278,7 +305,9 @@ public partial class V1beta1DataSetPostgreSQLSpecInitProviderLinkedServiceNameSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LinkedServicePostgreSQL in datafactory to populate linkedServiceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetPostgreSQLSpecInitProviderLinkedServiceNameSelector
@@ -299,7 +328,9 @@ public partial class V1beta1DataSetPostgreSQLSpecInitProviderLinkedServiceNameSe
     [JsonPropertyName("policy")]
     public V1beta1DataSetPostgreSQLSpecInitProviderLinkedServiceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetPostgreSQLSpecInitProviderSchemaColumn
@@ -316,7 +347,9 @@ public partial class V1beta1DataSetPostgreSQLSpecInitProviderSchemaColumn
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetPostgreSQLSpecInitProvider
@@ -361,7 +394,9 @@ public partial class V1beta1DataSetPostgreSQLSpecInitProvider
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetPostgreSQLSpecProviderConfigRef
@@ -374,7 +409,9 @@ public partial class V1beta1DataSetPostgreSQLSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetPostgreSQLSpecWriteConnectionSecretToRef
@@ -383,7 +420,9 @@ public partial class V1beta1DataSetPostgreSQLSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataSetPostgreSQLSpec defines the desired state of DataSetPostgreSQL</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetPostgreSQLSpec
@@ -408,7 +447,9 @@ public partial class V1beta1DataSetPostgreSQLSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DataSetPostgreSQLSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetPostgreSQLStatusAtProviderSchemaColumn
@@ -425,7 +466,9 @@ public partial class V1beta1DataSetPostgreSQLStatusAtProviderSchemaColumn
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetPostgreSQLStatusAtProvider
@@ -470,7 +513,9 @@ public partial class V1beta1DataSetPostgreSQLStatusAtProvider
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetPostgreSQLStatusConditions
@@ -499,7 +544,9 @@ public partial class V1beta1DataSetPostgreSQLStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataSetPostgreSQLStatus defines the observed state of DataSetPostgreSQL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetPostgreSQLStatus
@@ -516,7 +563,9 @@ public partial class V1beta1DataSetPostgreSQLStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataSetPostgreSQL is the Schema for the DataSetPostgreSQLs API. Manages a PostgreSQL Dataset inside a Azure Data Factory.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -546,3 +595,4 @@ public partial class V1beta1DataSetPostgreSQL : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1DataSetPostgreSQLStatus? Status { get; set; }
 }
+#nullable disable

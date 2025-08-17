@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.alertsmanagement.azure.m.upbound.io;
+#nullable enable
 /// <summary>MonitorSmartDetectorAlertRule is the Schema for the MonitorSmartDetectorAlertRules API. Manages an Monitor Smart Detector Alert Rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleList : IKubernetesObjec
     [JsonPropertyName("items")]
     public IList<V1beta1MonitorSmartDetectorAlertRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderActionGroupIdsRefsPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderActionGr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderActionGroupIdsRefs
@@ -63,7 +68,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderActionGr
     [JsonPropertyName("policy")]
     public V1beta1MonitorSmartDetectorAlertRuleSpecForProviderActionGroupIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderActionGroupIdsSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderActionGr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of MonitorActionGroup in insights to populate ids.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderActionGroupIdsSelector
@@ -97,7 +106,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderActionGr
     [JsonPropertyName("policy")]
     public V1beta1MonitorSmartDetectorAlertRuleSpecForProviderActionGroupIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An action_group block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderActionGroup
@@ -122,7 +133,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderActionGr
     [JsonPropertyName("webhookPayload")]
     public string? WebhookPayload { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderResourceGroupNameRefPolicy
@@ -135,7 +148,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderResource
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderResourceGroupNameRef
@@ -152,7 +167,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderResource
     [JsonPropertyName("policy")]
     public V1beta1MonitorSmartDetectorAlertRuleSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderResourceGroupNameSelectorPolicy
@@ -165,7 +182,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderResource
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderResourceGroupNameSelector
@@ -186,7 +205,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderResource
     [JsonPropertyName("policy")]
     public V1beta1MonitorSmartDetectorAlertRuleSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderScopeResourceIdsRefsPolicy
@@ -199,7 +220,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderScopeRes
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderScopeResourceIdsRefs
@@ -216,7 +239,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderScopeRes
     [JsonPropertyName("policy")]
     public V1beta1MonitorSmartDetectorAlertRuleSpecForProviderScopeResourceIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderScopeResourceIdsSelectorPolicy
@@ -229,7 +254,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderScopeRes
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of ApplicationInsights in insights to populate scopeResourceIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderScopeResourceIdsSelector
@@ -250,7 +277,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderScopeRes
     [JsonPropertyName("policy")]
     public V1beta1MonitorSmartDetectorAlertRuleSpecForProviderScopeResourceIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProvider
@@ -315,7 +344,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProvider
     [JsonPropertyName("throttlingDuration")]
     public string? ThrottlingDuration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderActionGroupIdsRefsPolicy
@@ -328,7 +359,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderActionG
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderActionGroupIdsRefs
@@ -345,7 +378,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderActionG
     [JsonPropertyName("policy")]
     public V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderActionGroupIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderActionGroupIdsSelectorPolicy
@@ -358,7 +393,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderActionG
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of MonitorActionGroup in insights to populate ids.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderActionGroupIdsSelector
@@ -379,7 +416,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderActionG
     [JsonPropertyName("policy")]
     public V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderActionGroupIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An action_group block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderActionGroup
@@ -404,7 +443,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderActionG
     [JsonPropertyName("webhookPayload")]
     public string? WebhookPayload { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderResourceGroupNameRefPolicy
@@ -417,7 +458,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderResourc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderResourceGroupNameRef
@@ -434,7 +477,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderResourc
     [JsonPropertyName("policy")]
     public V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderResourceGroupNameSelectorPolicy
@@ -447,7 +492,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderResourc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderResourceGroupNameSelector
@@ -468,7 +515,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderResourc
     [JsonPropertyName("policy")]
     public V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderScopeResourceIdsRefsPolicy
@@ -481,7 +530,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderScopeRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderScopeResourceIdsRefs
@@ -498,7 +549,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderScopeRe
     [JsonPropertyName("policy")]
     public V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderScopeResourceIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderScopeResourceIdsSelectorPolicy
@@ -511,7 +564,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderScopeRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of ApplicationInsights in insights to populate scopeResourceIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderScopeResourceIdsSelector
@@ -532,7 +587,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderScopeRe
     [JsonPropertyName("policy")]
     public V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderScopeResourceIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProvider
@@ -597,7 +654,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProvider
     [JsonPropertyName("throttlingDuration")]
     public string? ThrottlingDuration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecProviderConfigRef
@@ -610,7 +669,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecWriteConnectionSecretToRef
@@ -619,7 +680,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecWriteConnectionSecr
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitorSmartDetectorAlertRuleSpec defines the desired state of MonitorSmartDetectorAlertRule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpec
@@ -644,7 +707,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MonitorSmartDetectorAlertRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An action_group block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleStatusAtProviderActionGroup
@@ -661,7 +726,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleStatusAtProviderActionG
     [JsonPropertyName("webhookPayload")]
     public string? WebhookPayload { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleStatusAtProvider
@@ -714,7 +781,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleStatusAtProvider
     [JsonPropertyName("throttlingDuration")]
     public string? ThrottlingDuration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleStatusConditions
@@ -743,7 +812,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitorSmartDetectorAlertRuleStatus defines the observed state of MonitorSmartDetectorAlertRule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorSmartDetectorAlertRuleStatus
@@ -760,7 +831,9 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitorSmartDetectorAlertRule is the Schema for the MonitorSmartDetectorAlertRules API. Manages an Monitor Smart Detector Alert Rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -790,3 +863,4 @@ public partial class V1beta1MonitorSmartDetectorAlertRule : IKubernetesObject<V1
     [JsonPropertyName("status")]
     public V1beta1MonitorSmartDetectorAlertRuleStatus? Status { get; set; }
 }
+#nullable disable

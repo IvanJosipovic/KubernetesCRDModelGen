@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.logic.azure.upbound.io;
+#nullable enable
 /// <summary>AppIntegrationAccountBatchConfiguration is the Schema for the AppIntegrationAccountBatchConfigurations API. Manages a Logic App Integration Account Batch Configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationList : IKuber
     [JsonPropertyName("items")]
     public IList<V1beta1AppIntegrationAccountBatchConfiguration> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderIntegrationAccountNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecForProvid
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a AppIntegrationAccount in logic to populate integrationAccountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderIntegrationAccountNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecForProvid
     [JsonPropertyName("policy")]
     public V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderIntegrationAccountNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderIntegrationAccountNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecForProvid
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a AppIntegrationAccount in logic to populate integrationAccountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderIntegrationAccountNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecForProvid
     [JsonPropertyName("policy")]
     public V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderIntegrationAccountNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderReleaseCriteriaRecurrenceScheduleMonthly
@@ -102,7 +113,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecForProvid
     [JsonPropertyName("weekday")]
     public string? Weekday { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderReleaseCriteriaRecurrenceSchedule
@@ -127,7 +140,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecForProvid
     [JsonPropertyName("weekDays")]
     public IList<string>? WeekDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderReleaseCriteriaRecurrence
@@ -156,7 +171,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecForProvid
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderReleaseCriteria
@@ -173,7 +190,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecForProvid
     [JsonPropertyName("recurrence")]
     public IList<V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderReleaseCriteriaRecurrence>? Recurrence { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderResourceGroupNameRefPolicy
@@ -186,7 +205,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecForProvid
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderResourceGroupNameRef
@@ -199,7 +220,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecForProvid
     [JsonPropertyName("policy")]
     public V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderResourceGroupNameSelectorPolicy
@@ -212,7 +235,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecForProvid
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderResourceGroupNameSelector
@@ -229,7 +254,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecForProvid
     [JsonPropertyName("policy")]
     public V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecForProvider
@@ -274,7 +301,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecForProvid
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderIntegrationAccountNameRefPolicy
@@ -287,7 +316,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecInitProvi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a AppIntegrationAccount in logic to populate integrationAccountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderIntegrationAccountNameRef
@@ -300,7 +331,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecInitProvi
     [JsonPropertyName("policy")]
     public V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderIntegrationAccountNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderIntegrationAccountNameSelectorPolicy
@@ -313,7 +346,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecInitProvi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a AppIntegrationAccount in logic to populate integrationAccountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderIntegrationAccountNameSelector
@@ -330,7 +365,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecInitProvi
     [JsonPropertyName("policy")]
     public V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderIntegrationAccountNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderReleaseCriteriaRecurrenceScheduleMonthly
@@ -343,7 +380,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecInitProvi
     [JsonPropertyName("weekday")]
     public string? Weekday { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderReleaseCriteriaRecurrenceSchedule
@@ -368,7 +407,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecInitProvi
     [JsonPropertyName("weekDays")]
     public IList<string>? WeekDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderReleaseCriteriaRecurrence
@@ -397,7 +438,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecInitProvi
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderReleaseCriteria
@@ -414,7 +457,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecInitProvi
     [JsonPropertyName("recurrence")]
     public IList<V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderReleaseCriteriaRecurrence>? Recurrence { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderResourceGroupNameRefPolicy
@@ -427,7 +472,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecInitProvi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderResourceGroupNameRef
@@ -440,7 +487,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecInitProvi
     [JsonPropertyName("policy")]
     public V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderResourceGroupNameSelectorPolicy
@@ -453,7 +502,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecInitProvi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderResourceGroupNameSelector
@@ -470,7 +521,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecInitProvi
     [JsonPropertyName("policy")]
     public V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecInitProvider
@@ -515,7 +568,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecInitProvi
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecProviderConfigRefPolicy
@@ -528,7 +583,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecProviderC
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecProviderConfigRef
@@ -541,7 +598,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecProviderC
     [JsonPropertyName("policy")]
     public V1beta1AppIntegrationAccountBatchConfigurationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecWriteConnectionSecretToRef
@@ -554,7 +613,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecWriteConn
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppIntegrationAccountBatchConfigurationSpec defines the desired state of AppIntegrationAccountBatchConfiguration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationSpec
@@ -583,7 +644,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AppIntegrationAccountBatchConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationStatusAtProviderReleaseCriteriaRecurrenceScheduleMonthly
@@ -596,7 +659,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationStatusAtProvi
     [JsonPropertyName("weekday")]
     public string? Weekday { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationStatusAtProviderReleaseCriteriaRecurrenceSchedule
@@ -621,7 +686,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationStatusAtProvi
     [JsonPropertyName("weekDays")]
     public IList<string>? WeekDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationStatusAtProviderReleaseCriteriaRecurrence
@@ -650,7 +717,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationStatusAtProvi
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationStatusAtProviderReleaseCriteria
@@ -667,7 +736,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationStatusAtProvi
     [JsonPropertyName("recurrence")]
     public IList<V1beta1AppIntegrationAccountBatchConfigurationStatusAtProviderReleaseCriteriaRecurrence>? Recurrence { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationStatusAtProvider
@@ -700,7 +771,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationStatusAtProvi
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationStatusConditions
@@ -729,7 +802,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationStatusConditi
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppIntegrationAccountBatchConfigurationStatus defines the observed state of AppIntegrationAccountBatchConfiguration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountBatchConfigurationStatus
@@ -746,7 +821,9 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppIntegrationAccountBatchConfiguration is the Schema for the AppIntegrationAccountBatchConfigurations API. Manages a Logic App Integration Account Batch Configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -776,3 +853,4 @@ public partial class V1beta1AppIntegrationAccountBatchConfiguration : IKubernete
     [JsonPropertyName("status")]
     public V1beta1AppIntegrationAccountBatchConfigurationStatus? Status { get; set; }
 }
+#nullable disable

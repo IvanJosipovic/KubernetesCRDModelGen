@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apiextensions.crossplane.io;
+#nullable enable
 /// <summary>A CompositionRevision represents a revision of a Composition. Crossplane creates new revisions when there are changes to the Composition.  Crossplane creates and manages CompositionRevisions. Don't directly edit CompositionRevisions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1CompositionRevisionList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1CompositionRevision> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CompositeTypeRef specifies the type of composite resource that this composition is compatible with.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionRevisionSpecCompositeTypeRef
@@ -46,7 +49,9 @@ public partial class V1CompositionRevisionSpecCompositeTypeRef
     [JsonPropertyName("kind")]
     public string Kind { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SecretRef is a reference to a secret containing credentials that should be supplied to the function.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionRevisionSpecPipelineCredentialsSecretRef
@@ -59,7 +64,9 @@ public partial class V1CompositionRevisionSpecPipelineCredentialsSecretRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FunctionCredentials are optional credentials that a function needs to run.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionRevisionSpecPipelineCredentials
@@ -76,7 +83,9 @@ public partial class V1CompositionRevisionSpecPipelineCredentials
     [JsonPropertyName("source")]
     public string Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FunctionRef is a reference to the function this step should execute.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionRevisionSpecPipelineFunctionRef
@@ -85,7 +94,9 @@ public partial class V1CompositionRevisionSpecPipelineFunctionRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RequiredResourceSelector selects a required resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionRevisionSpecPipelineRequirementsRequiredResources
@@ -114,7 +125,9 @@ public partial class V1CompositionRevisionSpecPipelineRequirementsRequiredResour
     [JsonPropertyName("requirementName")]
     public string RequirementName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Requirements are resource requirements that will be satisfied before this pipeline step is called for the first time. This allows pre-populating required resources without requiring a function to request them first.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionRevisionSpecPipelineRequirements
@@ -123,7 +136,9 @@ public partial class V1CompositionRevisionSpecPipelineRequirements
     [JsonPropertyName("requiredResources")]
     public IList<V1CompositionRevisionSpecPipelineRequirementsRequiredResources>? RequiredResources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A PipelineStep in a function pipeline.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionRevisionSpecPipeline
@@ -148,7 +163,9 @@ public partial class V1CompositionRevisionSpecPipeline
     [JsonPropertyName("step")]
     public string Step { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CompositionRevisionSpec specifies the desired state of the composition revision.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionRevisionSpec
@@ -173,7 +190,9 @@ public partial class V1CompositionRevisionSpec
     [JsonPropertyName("writeConnectionSecretsToNamespace")]
     public string? WriteConnectionSecretsToNamespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionRevisionStatusConditions
@@ -202,7 +221,9 @@ public partial class V1CompositionRevisionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CompositionRevisionStatus shows the observed state of the composition revision.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionRevisionStatus
@@ -211,7 +232,9 @@ public partial class V1CompositionRevisionStatus
     [JsonPropertyName("conditions")]
     public IList<V1CompositionRevisionStatusConditions>? Conditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A CompositionRevision represents a revision of a Composition. Crossplane creates new revisions when there are changes to the Composition.  Crossplane creates and manages CompositionRevisions. Don't directly edit CompositionRevisions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -241,3 +264,4 @@ public partial class V1CompositionRevision : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1CompositionRevisionStatus? Status { get; set; }
 }
+#nullable disable

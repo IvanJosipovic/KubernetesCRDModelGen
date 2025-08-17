@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.upbound.io;
+#nullable enable
 /// <summary>MonitorDiagnosticSetting is the Schema for the MonitorDiagnosticSettings API. Manages a Diagnostic Setting for an existing Resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MonitorDiagnosticSettingList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1MonitorDiagnosticSetting> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingSpecForProviderEnabledLogRetentionPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1MonitorDiagnosticSettingSpecForProviderEnabledLogRet
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingSpecForProviderEnabledLog
@@ -63,7 +68,9 @@ public partial class V1beta1MonitorDiagnosticSettingSpecForProviderEnabledLog
     [JsonPropertyName("retentionPolicy")]
     public IList<V1beta1MonitorDiagnosticSettingSpecForProviderEnabledLogRetentionPolicy>? RetentionPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingSpecForProviderEnabledMetric
@@ -72,7 +79,9 @@ public partial class V1beta1MonitorDiagnosticSettingSpecForProviderEnabledMetric
     [JsonPropertyName("category")]
     public string? Category { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingSpecForProviderMetricRetentionPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1MonitorDiagnosticSettingSpecForProviderMetricRetenti
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingSpecForProviderMetric
@@ -102,7 +113,9 @@ public partial class V1beta1MonitorDiagnosticSettingSpecForProviderMetric
     [JsonPropertyName("retentionPolicy")]
     public IList<V1beta1MonitorDiagnosticSettingSpecForProviderMetricRetentionPolicy>? RetentionPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingSpecForProviderStorageAccountIdRefPolicy
@@ -115,7 +128,9 @@ public partial class V1beta1MonitorDiagnosticSettingSpecForProviderStorageAccoun
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingSpecForProviderStorageAccountIdRef
@@ -128,7 +143,9 @@ public partial class V1beta1MonitorDiagnosticSettingSpecForProviderStorageAccoun
     [JsonPropertyName("policy")]
     public V1beta1MonitorDiagnosticSettingSpecForProviderStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingSpecForProviderStorageAccountIdSelectorPolicy
@@ -141,7 +158,9 @@ public partial class V1beta1MonitorDiagnosticSettingSpecForProviderStorageAccoun
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingSpecForProviderStorageAccountIdSelector
@@ -158,7 +177,9 @@ public partial class V1beta1MonitorDiagnosticSettingSpecForProviderStorageAccoun
     [JsonPropertyName("policy")]
     public V1beta1MonitorDiagnosticSettingSpecForProviderStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingSpecForProvider
@@ -215,7 +236,9 @@ public partial class V1beta1MonitorDiagnosticSettingSpecForProvider
     [JsonPropertyName("targetResourceId")]
     public string? TargetResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingSpecInitProviderEnabledLogRetentionPolicy
@@ -228,7 +251,9 @@ public partial class V1beta1MonitorDiagnosticSettingSpecInitProviderEnabledLogRe
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingSpecInitProviderEnabledLog
@@ -245,7 +270,9 @@ public partial class V1beta1MonitorDiagnosticSettingSpecInitProviderEnabledLog
     [JsonPropertyName("retentionPolicy")]
     public IList<V1beta1MonitorDiagnosticSettingSpecInitProviderEnabledLogRetentionPolicy>? RetentionPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingSpecInitProviderEnabledMetric
@@ -254,7 +281,9 @@ public partial class V1beta1MonitorDiagnosticSettingSpecInitProviderEnabledMetri
     [JsonPropertyName("category")]
     public string? Category { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingSpecInitProviderMetricRetentionPolicy
@@ -267,7 +296,9 @@ public partial class V1beta1MonitorDiagnosticSettingSpecInitProviderMetricRetent
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingSpecInitProviderMetric
@@ -284,7 +315,9 @@ public partial class V1beta1MonitorDiagnosticSettingSpecInitProviderMetric
     [JsonPropertyName("retentionPolicy")]
     public IList<V1beta1MonitorDiagnosticSettingSpecInitProviderMetricRetentionPolicy>? RetentionPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingSpecInitProviderStorageAccountIdRefPolicy
@@ -297,7 +330,9 @@ public partial class V1beta1MonitorDiagnosticSettingSpecInitProviderStorageAccou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingSpecInitProviderStorageAccountIdRef
@@ -310,7 +345,9 @@ public partial class V1beta1MonitorDiagnosticSettingSpecInitProviderStorageAccou
     [JsonPropertyName("policy")]
     public V1beta1MonitorDiagnosticSettingSpecInitProviderStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingSpecInitProviderStorageAccountIdSelectorPolicy
@@ -323,7 +360,9 @@ public partial class V1beta1MonitorDiagnosticSettingSpecInitProviderStorageAccou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingSpecInitProviderStorageAccountIdSelector
@@ -340,7 +379,9 @@ public partial class V1beta1MonitorDiagnosticSettingSpecInitProviderStorageAccou
     [JsonPropertyName("policy")]
     public V1beta1MonitorDiagnosticSettingSpecInitProviderStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingSpecInitProvider
@@ -397,7 +438,9 @@ public partial class V1beta1MonitorDiagnosticSettingSpecInitProvider
     [JsonPropertyName("targetResourceId")]
     public string? TargetResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingSpecProviderConfigRefPolicy
@@ -410,7 +453,9 @@ public partial class V1beta1MonitorDiagnosticSettingSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingSpecProviderConfigRef
@@ -423,7 +468,9 @@ public partial class V1beta1MonitorDiagnosticSettingSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1MonitorDiagnosticSettingSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingSpecWriteConnectionSecretToRef
@@ -436,7 +483,9 @@ public partial class V1beta1MonitorDiagnosticSettingSpecWriteConnectionSecretToR
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitorDiagnosticSettingSpec defines the desired state of MonitorDiagnosticSetting</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingSpec
@@ -465,7 +514,9 @@ public partial class V1beta1MonitorDiagnosticSettingSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MonitorDiagnosticSettingSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingStatusAtProviderEnabledLogRetentionPolicy
@@ -478,7 +529,9 @@ public partial class V1beta1MonitorDiagnosticSettingStatusAtProviderEnabledLogRe
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingStatusAtProviderEnabledLog
@@ -495,7 +548,9 @@ public partial class V1beta1MonitorDiagnosticSettingStatusAtProviderEnabledLog
     [JsonPropertyName("retentionPolicy")]
     public IList<V1beta1MonitorDiagnosticSettingStatusAtProviderEnabledLogRetentionPolicy>? RetentionPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingStatusAtProviderEnabledMetric
@@ -504,7 +559,9 @@ public partial class V1beta1MonitorDiagnosticSettingStatusAtProviderEnabledMetri
     [JsonPropertyName("category")]
     public string? Category { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingStatusAtProviderMetricRetentionPolicy
@@ -517,7 +574,9 @@ public partial class V1beta1MonitorDiagnosticSettingStatusAtProviderMetricRetent
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingStatusAtProviderMetric
@@ -534,7 +593,9 @@ public partial class V1beta1MonitorDiagnosticSettingStatusAtProviderMetric
     [JsonPropertyName("retentionPolicy")]
     public IList<V1beta1MonitorDiagnosticSettingStatusAtProviderMetricRetentionPolicy>? RetentionPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingStatusAtProvider
@@ -587,7 +648,9 @@ public partial class V1beta1MonitorDiagnosticSettingStatusAtProvider
     [JsonPropertyName("targetResourceId")]
     public string? TargetResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingStatusConditions
@@ -616,7 +679,9 @@ public partial class V1beta1MonitorDiagnosticSettingStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitorDiagnosticSettingStatus defines the observed state of MonitorDiagnosticSetting.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingStatus
@@ -633,7 +698,9 @@ public partial class V1beta1MonitorDiagnosticSettingStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitorDiagnosticSetting is the Schema for the MonitorDiagnosticSettings API. Manages a Diagnostic Setting for an existing Resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -663,3 +730,4 @@ public partial class V1beta1MonitorDiagnosticSetting : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1MonitorDiagnosticSettingStatus? Status { get; set; }
 }
+#nullable disable

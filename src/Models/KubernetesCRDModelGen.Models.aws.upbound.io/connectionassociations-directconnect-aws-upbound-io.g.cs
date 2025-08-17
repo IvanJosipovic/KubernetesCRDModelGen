@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.directconnect.aws.upbound.io;
+#nullable enable
 /// <summary>ConnectionAssociation is the Schema for the ConnectionAssociations API. Associates a Direct Connect Connection with a LAG.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ConnectionAssociationList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1ConnectionAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionAssociationSpecForProviderConnectionIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ConnectionAssociationSpecForProviderConnectionIdRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Connection in directconnect to populate connectionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionAssociationSpecForProviderConnectionIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1ConnectionAssociationSpecForProviderConnectionIdRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectionAssociationSpecForProviderConnectionIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionAssociationSpecForProviderConnectionIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1ConnectionAssociationSpecForProviderConnectionIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Connection in directconnect to populate connectionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionAssociationSpecForProviderConnectionIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1ConnectionAssociationSpecForProviderConnectionIdSele
     [JsonPropertyName("policy")]
     public V1beta1ConnectionAssociationSpecForProviderConnectionIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionAssociationSpecForProviderLagIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1ConnectionAssociationSpecForProviderLagIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Lag in directconnect to populate lagId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionAssociationSpecForProviderLagIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1ConnectionAssociationSpecForProviderLagIdRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectionAssociationSpecForProviderLagIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionAssociationSpecForProviderLagIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1ConnectionAssociationSpecForProviderLagIdSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Lag in directconnect to populate lagId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionAssociationSpecForProviderLagIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1ConnectionAssociationSpecForProviderLagIdSelector
     [JsonPropertyName("policy")]
     public V1beta1ConnectionAssociationSpecForProviderLagIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionAssociationSpecForProvider
@@ -178,7 +197,9 @@ public partial class V1beta1ConnectionAssociationSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionAssociationSpecInitProviderConnectionIdRefPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1ConnectionAssociationSpecInitProviderConnectionIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Connection in directconnect to populate connectionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionAssociationSpecInitProviderConnectionIdRef
@@ -204,7 +227,9 @@ public partial class V1beta1ConnectionAssociationSpecInitProviderConnectionIdRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectionAssociationSpecInitProviderConnectionIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionAssociationSpecInitProviderConnectionIdSelectorPolicy
@@ -217,7 +242,9 @@ public partial class V1beta1ConnectionAssociationSpecInitProviderConnectionIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Connection in directconnect to populate connectionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionAssociationSpecInitProviderConnectionIdSelector
@@ -234,7 +261,9 @@ public partial class V1beta1ConnectionAssociationSpecInitProviderConnectionIdSel
     [JsonPropertyName("policy")]
     public V1beta1ConnectionAssociationSpecInitProviderConnectionIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionAssociationSpecInitProviderLagIdRefPolicy
@@ -247,7 +276,9 @@ public partial class V1beta1ConnectionAssociationSpecInitProviderLagIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Lag in directconnect to populate lagId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionAssociationSpecInitProviderLagIdRef
@@ -260,7 +291,9 @@ public partial class V1beta1ConnectionAssociationSpecInitProviderLagIdRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectionAssociationSpecInitProviderLagIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionAssociationSpecInitProviderLagIdSelectorPolicy
@@ -273,7 +306,9 @@ public partial class V1beta1ConnectionAssociationSpecInitProviderLagIdSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Lag in directconnect to populate lagId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionAssociationSpecInitProviderLagIdSelector
@@ -290,7 +325,9 @@ public partial class V1beta1ConnectionAssociationSpecInitProviderLagIdSelector
     [JsonPropertyName("policy")]
     public V1beta1ConnectionAssociationSpecInitProviderLagIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionAssociationSpecInitProvider
@@ -319,7 +356,9 @@ public partial class V1beta1ConnectionAssociationSpecInitProvider
     [JsonPropertyName("lagIdSelector")]
     public V1beta1ConnectionAssociationSpecInitProviderLagIdSelector? LagIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionAssociationSpecProviderConfigRefPolicy
@@ -332,7 +371,9 @@ public partial class V1beta1ConnectionAssociationSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionAssociationSpecProviderConfigRef
@@ -345,7 +386,9 @@ public partial class V1beta1ConnectionAssociationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectionAssociationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionAssociationSpecWriteConnectionSecretToRef
@@ -358,7 +401,9 @@ public partial class V1beta1ConnectionAssociationSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConnectionAssociationSpec defines the desired state of ConnectionAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionAssociationSpec
@@ -387,7 +432,9 @@ public partial class V1beta1ConnectionAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ConnectionAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionAssociationStatusAtProvider
@@ -408,7 +455,9 @@ public partial class V1beta1ConnectionAssociationStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionAssociationStatusConditions
@@ -437,7 +486,9 @@ public partial class V1beta1ConnectionAssociationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConnectionAssociationStatus defines the observed state of ConnectionAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionAssociationStatus
@@ -454,7 +505,9 @@ public partial class V1beta1ConnectionAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConnectionAssociation is the Schema for the ConnectionAssociations API. Associates a Direct Connect Connection with a LAG.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -484,3 +537,4 @@ public partial class V1beta1ConnectionAssociation : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1ConnectionAssociationStatus? Status { get; set; }
 }
+#nullable disable

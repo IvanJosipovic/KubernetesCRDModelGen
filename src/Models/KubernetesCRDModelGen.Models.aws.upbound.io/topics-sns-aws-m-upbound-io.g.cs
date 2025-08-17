@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sns.aws.m.upbound.io;
+#nullable enable
 /// <summary>Topic is the Schema for the Topics API. Provides an SNS topic resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TopicList : IKubernetesObject<V1ListMeta>, IItems<V1
     [JsonPropertyName("items")]
     public IList<V1beta1Topic> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderApplicationFailureFeedbackRoleArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1TopicSpecForProviderApplicationFailureFeedbackRoleAr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate applicationFailureFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderApplicationFailureFeedbackRoleArnRef
@@ -63,7 +68,9 @@ public partial class V1beta1TopicSpecForProviderApplicationFailureFeedbackRoleAr
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecForProviderApplicationFailureFeedbackRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderApplicationFailureFeedbackRoleArnSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1TopicSpecForProviderApplicationFailureFeedbackRoleAr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate applicationFailureFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderApplicationFailureFeedbackRoleArnSelector
@@ -97,7 +106,9 @@ public partial class V1beta1TopicSpecForProviderApplicationFailureFeedbackRoleAr
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecForProviderApplicationFailureFeedbackRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderApplicationSuccessFeedbackRoleArnRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1TopicSpecForProviderApplicationSuccessFeedbackRoleAr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate applicationSuccessFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderApplicationSuccessFeedbackRoleArnRef
@@ -127,7 +140,9 @@ public partial class V1beta1TopicSpecForProviderApplicationSuccessFeedbackRoleAr
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecForProviderApplicationSuccessFeedbackRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderApplicationSuccessFeedbackRoleArnSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1TopicSpecForProviderApplicationSuccessFeedbackRoleAr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate applicationSuccessFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderApplicationSuccessFeedbackRoleArnSelector
@@ -161,7 +178,9 @@ public partial class V1beta1TopicSpecForProviderApplicationSuccessFeedbackRoleAr
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecForProviderApplicationSuccessFeedbackRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderFirehoseFailureFeedbackRoleArnRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1TopicSpecForProviderFirehoseFailureFeedbackRoleArnRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate firehoseFailureFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderFirehoseFailureFeedbackRoleArnRef
@@ -191,7 +212,9 @@ public partial class V1beta1TopicSpecForProviderFirehoseFailureFeedbackRoleArnRe
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecForProviderFirehoseFailureFeedbackRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderFirehoseFailureFeedbackRoleArnSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1TopicSpecForProviderFirehoseFailureFeedbackRoleArnSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate firehoseFailureFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderFirehoseFailureFeedbackRoleArnSelector
@@ -225,7 +250,9 @@ public partial class V1beta1TopicSpecForProviderFirehoseFailureFeedbackRoleArnSe
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecForProviderFirehoseFailureFeedbackRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderFirehoseSuccessFeedbackRoleArnRefPolicy
@@ -238,7 +265,9 @@ public partial class V1beta1TopicSpecForProviderFirehoseSuccessFeedbackRoleArnRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate firehoseSuccessFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderFirehoseSuccessFeedbackRoleArnRef
@@ -255,7 +284,9 @@ public partial class V1beta1TopicSpecForProviderFirehoseSuccessFeedbackRoleArnRe
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecForProviderFirehoseSuccessFeedbackRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderFirehoseSuccessFeedbackRoleArnSelectorPolicy
@@ -268,7 +299,9 @@ public partial class V1beta1TopicSpecForProviderFirehoseSuccessFeedbackRoleArnSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate firehoseSuccessFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderFirehoseSuccessFeedbackRoleArnSelector
@@ -289,7 +322,9 @@ public partial class V1beta1TopicSpecForProviderFirehoseSuccessFeedbackRoleArnSe
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecForProviderFirehoseSuccessFeedbackRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderHttpFailureFeedbackRoleArnRefPolicy
@@ -302,7 +337,9 @@ public partial class V1beta1TopicSpecForProviderHttpFailureFeedbackRoleArnRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate httpFailureFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderHttpFailureFeedbackRoleArnRef
@@ -319,7 +356,9 @@ public partial class V1beta1TopicSpecForProviderHttpFailureFeedbackRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecForProviderHttpFailureFeedbackRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderHttpFailureFeedbackRoleArnSelectorPolicy
@@ -332,7 +371,9 @@ public partial class V1beta1TopicSpecForProviderHttpFailureFeedbackRoleArnSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate httpFailureFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderHttpFailureFeedbackRoleArnSelector
@@ -353,7 +394,9 @@ public partial class V1beta1TopicSpecForProviderHttpFailureFeedbackRoleArnSelect
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecForProviderHttpFailureFeedbackRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderHttpSuccessFeedbackRoleArnRefPolicy
@@ -366,7 +409,9 @@ public partial class V1beta1TopicSpecForProviderHttpSuccessFeedbackRoleArnRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate httpSuccessFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderHttpSuccessFeedbackRoleArnRef
@@ -383,7 +428,9 @@ public partial class V1beta1TopicSpecForProviderHttpSuccessFeedbackRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecForProviderHttpSuccessFeedbackRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderHttpSuccessFeedbackRoleArnSelectorPolicy
@@ -396,7 +443,9 @@ public partial class V1beta1TopicSpecForProviderHttpSuccessFeedbackRoleArnSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate httpSuccessFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderHttpSuccessFeedbackRoleArnSelector
@@ -417,7 +466,9 @@ public partial class V1beta1TopicSpecForProviderHttpSuccessFeedbackRoleArnSelect
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecForProviderHttpSuccessFeedbackRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderLambdaFailureFeedbackRoleArnRefPolicy
@@ -430,7 +481,9 @@ public partial class V1beta1TopicSpecForProviderLambdaFailureFeedbackRoleArnRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate lambdaFailureFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderLambdaFailureFeedbackRoleArnRef
@@ -447,7 +500,9 @@ public partial class V1beta1TopicSpecForProviderLambdaFailureFeedbackRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecForProviderLambdaFailureFeedbackRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderLambdaFailureFeedbackRoleArnSelectorPolicy
@@ -460,7 +515,9 @@ public partial class V1beta1TopicSpecForProviderLambdaFailureFeedbackRoleArnSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate lambdaFailureFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderLambdaFailureFeedbackRoleArnSelector
@@ -481,7 +538,9 @@ public partial class V1beta1TopicSpecForProviderLambdaFailureFeedbackRoleArnSele
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecForProviderLambdaFailureFeedbackRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderLambdaSuccessFeedbackRoleArnRefPolicy
@@ -494,7 +553,9 @@ public partial class V1beta1TopicSpecForProviderLambdaSuccessFeedbackRoleArnRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate lambdaSuccessFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderLambdaSuccessFeedbackRoleArnRef
@@ -511,7 +572,9 @@ public partial class V1beta1TopicSpecForProviderLambdaSuccessFeedbackRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecForProviderLambdaSuccessFeedbackRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderLambdaSuccessFeedbackRoleArnSelectorPolicy
@@ -524,7 +587,9 @@ public partial class V1beta1TopicSpecForProviderLambdaSuccessFeedbackRoleArnSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate lambdaSuccessFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderLambdaSuccessFeedbackRoleArnSelector
@@ -545,7 +610,9 @@ public partial class V1beta1TopicSpecForProviderLambdaSuccessFeedbackRoleArnSele
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecForProviderLambdaSuccessFeedbackRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderSqsFailureFeedbackRoleArnRefPolicy
@@ -558,7 +625,9 @@ public partial class V1beta1TopicSpecForProviderSqsFailureFeedbackRoleArnRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate sqsFailureFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderSqsFailureFeedbackRoleArnRef
@@ -575,7 +644,9 @@ public partial class V1beta1TopicSpecForProviderSqsFailureFeedbackRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecForProviderSqsFailureFeedbackRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderSqsFailureFeedbackRoleArnSelectorPolicy
@@ -588,7 +659,9 @@ public partial class V1beta1TopicSpecForProviderSqsFailureFeedbackRoleArnSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate sqsFailureFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderSqsFailureFeedbackRoleArnSelector
@@ -609,7 +682,9 @@ public partial class V1beta1TopicSpecForProviderSqsFailureFeedbackRoleArnSelecto
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecForProviderSqsFailureFeedbackRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderSqsSuccessFeedbackRoleArnRefPolicy
@@ -622,7 +697,9 @@ public partial class V1beta1TopicSpecForProviderSqsSuccessFeedbackRoleArnRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate sqsSuccessFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderSqsSuccessFeedbackRoleArnRef
@@ -639,7 +716,9 @@ public partial class V1beta1TopicSpecForProviderSqsSuccessFeedbackRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecForProviderSqsSuccessFeedbackRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderSqsSuccessFeedbackRoleArnSelectorPolicy
@@ -652,7 +731,9 @@ public partial class V1beta1TopicSpecForProviderSqsSuccessFeedbackRoleArnSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate sqsSuccessFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderSqsSuccessFeedbackRoleArnSelector
@@ -673,7 +754,9 @@ public partial class V1beta1TopicSpecForProviderSqsSuccessFeedbackRoleArnSelecto
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecForProviderSqsSuccessFeedbackRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProvider
@@ -866,7 +949,9 @@ public partial class V1beta1TopicSpecForProvider
     [JsonPropertyName("tracingConfig")]
     public string? TracingConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderApplicationFailureFeedbackRoleArnRefPolicy
@@ -879,7 +964,9 @@ public partial class V1beta1TopicSpecInitProviderApplicationFailureFeedbackRoleA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate applicationFailureFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderApplicationFailureFeedbackRoleArnRef
@@ -896,7 +983,9 @@ public partial class V1beta1TopicSpecInitProviderApplicationFailureFeedbackRoleA
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecInitProviderApplicationFailureFeedbackRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderApplicationFailureFeedbackRoleArnSelectorPolicy
@@ -909,7 +998,9 @@ public partial class V1beta1TopicSpecInitProviderApplicationFailureFeedbackRoleA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate applicationFailureFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderApplicationFailureFeedbackRoleArnSelector
@@ -930,7 +1021,9 @@ public partial class V1beta1TopicSpecInitProviderApplicationFailureFeedbackRoleA
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecInitProviderApplicationFailureFeedbackRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderApplicationSuccessFeedbackRoleArnRefPolicy
@@ -943,7 +1036,9 @@ public partial class V1beta1TopicSpecInitProviderApplicationSuccessFeedbackRoleA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate applicationSuccessFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderApplicationSuccessFeedbackRoleArnRef
@@ -960,7 +1055,9 @@ public partial class V1beta1TopicSpecInitProviderApplicationSuccessFeedbackRoleA
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecInitProviderApplicationSuccessFeedbackRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderApplicationSuccessFeedbackRoleArnSelectorPolicy
@@ -973,7 +1070,9 @@ public partial class V1beta1TopicSpecInitProviderApplicationSuccessFeedbackRoleA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate applicationSuccessFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderApplicationSuccessFeedbackRoleArnSelector
@@ -994,7 +1093,9 @@ public partial class V1beta1TopicSpecInitProviderApplicationSuccessFeedbackRoleA
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecInitProviderApplicationSuccessFeedbackRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderFirehoseFailureFeedbackRoleArnRefPolicy
@@ -1007,7 +1108,9 @@ public partial class V1beta1TopicSpecInitProviderFirehoseFailureFeedbackRoleArnR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate firehoseFailureFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderFirehoseFailureFeedbackRoleArnRef
@@ -1024,7 +1127,9 @@ public partial class V1beta1TopicSpecInitProviderFirehoseFailureFeedbackRoleArnR
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecInitProviderFirehoseFailureFeedbackRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderFirehoseFailureFeedbackRoleArnSelectorPolicy
@@ -1037,7 +1142,9 @@ public partial class V1beta1TopicSpecInitProviderFirehoseFailureFeedbackRoleArnS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate firehoseFailureFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderFirehoseFailureFeedbackRoleArnSelector
@@ -1058,7 +1165,9 @@ public partial class V1beta1TopicSpecInitProviderFirehoseFailureFeedbackRoleArnS
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecInitProviderFirehoseFailureFeedbackRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderFirehoseSuccessFeedbackRoleArnRefPolicy
@@ -1071,7 +1180,9 @@ public partial class V1beta1TopicSpecInitProviderFirehoseSuccessFeedbackRoleArnR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate firehoseSuccessFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderFirehoseSuccessFeedbackRoleArnRef
@@ -1088,7 +1199,9 @@ public partial class V1beta1TopicSpecInitProviderFirehoseSuccessFeedbackRoleArnR
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecInitProviderFirehoseSuccessFeedbackRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderFirehoseSuccessFeedbackRoleArnSelectorPolicy
@@ -1101,7 +1214,9 @@ public partial class V1beta1TopicSpecInitProviderFirehoseSuccessFeedbackRoleArnS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate firehoseSuccessFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderFirehoseSuccessFeedbackRoleArnSelector
@@ -1122,7 +1237,9 @@ public partial class V1beta1TopicSpecInitProviderFirehoseSuccessFeedbackRoleArnS
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecInitProviderFirehoseSuccessFeedbackRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderHttpFailureFeedbackRoleArnRefPolicy
@@ -1135,7 +1252,9 @@ public partial class V1beta1TopicSpecInitProviderHttpFailureFeedbackRoleArnRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate httpFailureFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderHttpFailureFeedbackRoleArnRef
@@ -1152,7 +1271,9 @@ public partial class V1beta1TopicSpecInitProviderHttpFailureFeedbackRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecInitProviderHttpFailureFeedbackRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderHttpFailureFeedbackRoleArnSelectorPolicy
@@ -1165,7 +1286,9 @@ public partial class V1beta1TopicSpecInitProviderHttpFailureFeedbackRoleArnSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate httpFailureFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderHttpFailureFeedbackRoleArnSelector
@@ -1186,7 +1309,9 @@ public partial class V1beta1TopicSpecInitProviderHttpFailureFeedbackRoleArnSelec
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecInitProviderHttpFailureFeedbackRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderHttpSuccessFeedbackRoleArnRefPolicy
@@ -1199,7 +1324,9 @@ public partial class V1beta1TopicSpecInitProviderHttpSuccessFeedbackRoleArnRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate httpSuccessFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderHttpSuccessFeedbackRoleArnRef
@@ -1216,7 +1343,9 @@ public partial class V1beta1TopicSpecInitProviderHttpSuccessFeedbackRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecInitProviderHttpSuccessFeedbackRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderHttpSuccessFeedbackRoleArnSelectorPolicy
@@ -1229,7 +1358,9 @@ public partial class V1beta1TopicSpecInitProviderHttpSuccessFeedbackRoleArnSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate httpSuccessFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderHttpSuccessFeedbackRoleArnSelector
@@ -1250,7 +1381,9 @@ public partial class V1beta1TopicSpecInitProviderHttpSuccessFeedbackRoleArnSelec
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecInitProviderHttpSuccessFeedbackRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderLambdaFailureFeedbackRoleArnRefPolicy
@@ -1263,7 +1396,9 @@ public partial class V1beta1TopicSpecInitProviderLambdaFailureFeedbackRoleArnRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate lambdaFailureFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderLambdaFailureFeedbackRoleArnRef
@@ -1280,7 +1415,9 @@ public partial class V1beta1TopicSpecInitProviderLambdaFailureFeedbackRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecInitProviderLambdaFailureFeedbackRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderLambdaFailureFeedbackRoleArnSelectorPolicy
@@ -1293,7 +1430,9 @@ public partial class V1beta1TopicSpecInitProviderLambdaFailureFeedbackRoleArnSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate lambdaFailureFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderLambdaFailureFeedbackRoleArnSelector
@@ -1314,7 +1453,9 @@ public partial class V1beta1TopicSpecInitProviderLambdaFailureFeedbackRoleArnSel
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecInitProviderLambdaFailureFeedbackRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderLambdaSuccessFeedbackRoleArnRefPolicy
@@ -1327,7 +1468,9 @@ public partial class V1beta1TopicSpecInitProviderLambdaSuccessFeedbackRoleArnRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate lambdaSuccessFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderLambdaSuccessFeedbackRoleArnRef
@@ -1344,7 +1487,9 @@ public partial class V1beta1TopicSpecInitProviderLambdaSuccessFeedbackRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecInitProviderLambdaSuccessFeedbackRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderLambdaSuccessFeedbackRoleArnSelectorPolicy
@@ -1357,7 +1502,9 @@ public partial class V1beta1TopicSpecInitProviderLambdaSuccessFeedbackRoleArnSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate lambdaSuccessFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderLambdaSuccessFeedbackRoleArnSelector
@@ -1378,7 +1525,9 @@ public partial class V1beta1TopicSpecInitProviderLambdaSuccessFeedbackRoleArnSel
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecInitProviderLambdaSuccessFeedbackRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderSqsFailureFeedbackRoleArnRefPolicy
@@ -1391,7 +1540,9 @@ public partial class V1beta1TopicSpecInitProviderSqsFailureFeedbackRoleArnRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate sqsFailureFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderSqsFailureFeedbackRoleArnRef
@@ -1408,7 +1559,9 @@ public partial class V1beta1TopicSpecInitProviderSqsFailureFeedbackRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecInitProviderSqsFailureFeedbackRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderSqsFailureFeedbackRoleArnSelectorPolicy
@@ -1421,7 +1574,9 @@ public partial class V1beta1TopicSpecInitProviderSqsFailureFeedbackRoleArnSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate sqsFailureFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderSqsFailureFeedbackRoleArnSelector
@@ -1442,7 +1597,9 @@ public partial class V1beta1TopicSpecInitProviderSqsFailureFeedbackRoleArnSelect
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecInitProviderSqsFailureFeedbackRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderSqsSuccessFeedbackRoleArnRefPolicy
@@ -1455,7 +1612,9 @@ public partial class V1beta1TopicSpecInitProviderSqsSuccessFeedbackRoleArnRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate sqsSuccessFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderSqsSuccessFeedbackRoleArnRef
@@ -1472,7 +1631,9 @@ public partial class V1beta1TopicSpecInitProviderSqsSuccessFeedbackRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecInitProviderSqsSuccessFeedbackRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderSqsSuccessFeedbackRoleArnSelectorPolicy
@@ -1485,7 +1646,9 @@ public partial class V1beta1TopicSpecInitProviderSqsSuccessFeedbackRoleArnSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate sqsSuccessFeedbackRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderSqsSuccessFeedbackRoleArnSelector
@@ -1506,7 +1669,9 @@ public partial class V1beta1TopicSpecInitProviderSqsSuccessFeedbackRoleArnSelect
     [JsonPropertyName("policy")]
     public V1beta1TopicSpecInitProviderSqsSuccessFeedbackRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProvider
@@ -1695,7 +1860,9 @@ public partial class V1beta1TopicSpecInitProvider
     [JsonPropertyName("tracingConfig")]
     public string? TracingConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecProviderConfigRef
@@ -1708,7 +1875,9 @@ public partial class V1beta1TopicSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecWriteConnectionSecretToRef
@@ -1717,7 +1886,9 @@ public partial class V1beta1TopicSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TopicSpec defines the desired state of Topic</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpec
@@ -1742,7 +1913,9 @@ public partial class V1beta1TopicSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TopicSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicStatusAtProvider
@@ -1875,7 +2048,9 @@ public partial class V1beta1TopicStatusAtProvider
     [JsonPropertyName("tracingConfig")]
     public string? TracingConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicStatusConditions
@@ -1904,7 +2079,9 @@ public partial class V1beta1TopicStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TopicStatus defines the observed state of Topic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicStatus
@@ -1921,7 +2098,9 @@ public partial class V1beta1TopicStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Topic is the Schema for the Topics API. Provides an SNS topic resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1951,3 +2130,4 @@ public partial class V1beta1Topic : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     [JsonPropertyName("status")]
     public V1beta1TopicStatus? Status { get; set; }
 }
+#nullable disable

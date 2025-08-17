@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ssoadmin.aws.upbound.io;
+#nullable enable
 /// <summary>PermissionSetInlinePolicy is the Schema for the PermissionSetInlinePolicys API. Manages an IAM inline policy for a Single Sign-On (SSO) Permission Set</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PermissionSetInlinePolicyList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1beta1PermissionSetInlinePolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionSetInlinePolicySpecForProviderPermissionSetArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1PermissionSetInlinePolicySpecForProviderPermissionSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PermissionSet in ssoadmin to populate permissionSetArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionSetInlinePolicySpecForProviderPermissionSetArnRef
@@ -59,7 +64,9 @@ public partial class V1beta1PermissionSetInlinePolicySpecForProviderPermissionSe
     [JsonPropertyName("policy")]
     public V1beta1PermissionSetInlinePolicySpecForProviderPermissionSetArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionSetInlinePolicySpecForProviderPermissionSetArnSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1PermissionSetInlinePolicySpecForProviderPermissionSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PermissionSet in ssoadmin to populate permissionSetArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionSetInlinePolicySpecForProviderPermissionSetArnSelector
@@ -89,7 +98,9 @@ public partial class V1beta1PermissionSetInlinePolicySpecForProviderPermissionSe
     [JsonPropertyName("policy")]
     public V1beta1PermissionSetInlinePolicySpecForProviderPermissionSetArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionSetInlinePolicySpecForProvider
@@ -118,7 +129,9 @@ public partial class V1beta1PermissionSetInlinePolicySpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionSetInlinePolicySpecInitProvider
@@ -127,7 +140,9 @@ public partial class V1beta1PermissionSetInlinePolicySpecInitProvider
     [JsonPropertyName("inlinePolicy")]
     public string? InlinePolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionSetInlinePolicySpecProviderConfigRefPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1PermissionSetInlinePolicySpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionSetInlinePolicySpecProviderConfigRef
@@ -153,7 +170,9 @@ public partial class V1beta1PermissionSetInlinePolicySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1PermissionSetInlinePolicySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionSetInlinePolicySpecWriteConnectionSecretToRef
@@ -166,7 +185,9 @@ public partial class V1beta1PermissionSetInlinePolicySpecWriteConnectionSecretTo
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PermissionSetInlinePolicySpec defines the desired state of PermissionSetInlinePolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionSetInlinePolicySpec
@@ -195,7 +216,9 @@ public partial class V1beta1PermissionSetInlinePolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1PermissionSetInlinePolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionSetInlinePolicyStatusAtProvider
@@ -220,7 +243,9 @@ public partial class V1beta1PermissionSetInlinePolicyStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionSetInlinePolicyStatusConditions
@@ -249,7 +274,9 @@ public partial class V1beta1PermissionSetInlinePolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PermissionSetInlinePolicyStatus defines the observed state of PermissionSetInlinePolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionSetInlinePolicyStatus
@@ -266,7 +293,9 @@ public partial class V1beta1PermissionSetInlinePolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PermissionSetInlinePolicy is the Schema for the PermissionSetInlinePolicys API. Manages an IAM inline policy for a Single Sign-On (SSO) Permission Set</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -296,3 +325,4 @@ public partial class V1beta1PermissionSetInlinePolicy : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1beta1PermissionSetInlinePolicyStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.s3.aws.upbound.io;
+#nullable enable
 /// <summary>BucketOwnershipControls is the Schema for the BucketOwnershipControlss API. Manages S3 Bucket Ownership Controls.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BucketOwnershipControlsList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1BucketOwnershipControls> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketOwnershipControlsSpecForProviderBucketRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1BucketOwnershipControlsSpecForProviderBucketRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketOwnershipControlsSpecForProviderBucketRef
@@ -59,7 +64,9 @@ public partial class V1beta1BucketOwnershipControlsSpecForProviderBucketRef
     [JsonPropertyName("policy")]
     public V1beta1BucketOwnershipControlsSpecForProviderBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketOwnershipControlsSpecForProviderBucketSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1BucketOwnershipControlsSpecForProviderBucketSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketOwnershipControlsSpecForProviderBucketSelector
@@ -89,7 +98,9 @@ public partial class V1beta1BucketOwnershipControlsSpecForProviderBucketSelector
     [JsonPropertyName("policy")]
     public V1beta1BucketOwnershipControlsSpecForProviderBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketOwnershipControlsSpecForProviderRule
@@ -98,7 +109,9 @@ public partial class V1beta1BucketOwnershipControlsSpecForProviderRule
     [JsonPropertyName("objectOwnership")]
     public string? ObjectOwnership { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketOwnershipControlsSpecForProvider
@@ -123,7 +136,9 @@ public partial class V1beta1BucketOwnershipControlsSpecForProvider
     [JsonPropertyName("rule")]
     public IList<V1beta1BucketOwnershipControlsSpecForProviderRule>? Rule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketOwnershipControlsSpecInitProviderBucketRefPolicy
@@ -136,7 +151,9 @@ public partial class V1beta1BucketOwnershipControlsSpecInitProviderBucketRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketOwnershipControlsSpecInitProviderBucketRef
@@ -149,7 +166,9 @@ public partial class V1beta1BucketOwnershipControlsSpecInitProviderBucketRef
     [JsonPropertyName("policy")]
     public V1beta1BucketOwnershipControlsSpecInitProviderBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketOwnershipControlsSpecInitProviderBucketSelectorPolicy
@@ -162,7 +181,9 @@ public partial class V1beta1BucketOwnershipControlsSpecInitProviderBucketSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketOwnershipControlsSpecInitProviderBucketSelector
@@ -179,7 +200,9 @@ public partial class V1beta1BucketOwnershipControlsSpecInitProviderBucketSelecto
     [JsonPropertyName("policy")]
     public V1beta1BucketOwnershipControlsSpecInitProviderBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketOwnershipControlsSpecInitProviderRule
@@ -188,7 +211,9 @@ public partial class V1beta1BucketOwnershipControlsSpecInitProviderRule
     [JsonPropertyName("objectOwnership")]
     public string? ObjectOwnership { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketOwnershipControlsSpecInitProvider
@@ -209,7 +234,9 @@ public partial class V1beta1BucketOwnershipControlsSpecInitProvider
     [JsonPropertyName("rule")]
     public IList<V1beta1BucketOwnershipControlsSpecInitProviderRule>? Rule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketOwnershipControlsSpecProviderConfigRefPolicy
@@ -222,7 +249,9 @@ public partial class V1beta1BucketOwnershipControlsSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketOwnershipControlsSpecProviderConfigRef
@@ -235,7 +264,9 @@ public partial class V1beta1BucketOwnershipControlsSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1BucketOwnershipControlsSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketOwnershipControlsSpecWriteConnectionSecretToRef
@@ -248,7 +279,9 @@ public partial class V1beta1BucketOwnershipControlsSpecWriteConnectionSecretToRe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BucketOwnershipControlsSpec defines the desired state of BucketOwnershipControls</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketOwnershipControlsSpec
@@ -277,7 +310,9 @@ public partial class V1beta1BucketOwnershipControlsSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BucketOwnershipControlsSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketOwnershipControlsStatusAtProviderRule
@@ -286,7 +321,9 @@ public partial class V1beta1BucketOwnershipControlsStatusAtProviderRule
     [JsonPropertyName("objectOwnership")]
     public string? ObjectOwnership { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketOwnershipControlsStatusAtProvider
@@ -307,7 +344,9 @@ public partial class V1beta1BucketOwnershipControlsStatusAtProvider
     [JsonPropertyName("rule")]
     public IList<V1beta1BucketOwnershipControlsStatusAtProviderRule>? Rule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketOwnershipControlsStatusConditions
@@ -336,7 +375,9 @@ public partial class V1beta1BucketOwnershipControlsStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BucketOwnershipControlsStatus defines the observed state of BucketOwnershipControls.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketOwnershipControlsStatus
@@ -353,7 +394,9 @@ public partial class V1beta1BucketOwnershipControlsStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BucketOwnershipControls is the Schema for the BucketOwnershipControlss API. Manages S3 Bucket Ownership Controls.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -383,3 +426,4 @@ public partial class V1beta1BucketOwnershipControls : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1BucketOwnershipControlsStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kms.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>KMSKeyHandle is the Schema for the KMSKeyHandle API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1KMSKeyHandleList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1KMSKeyHandle> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Project hosting KMSKeyHandle</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KMSKeyHandleSpecProjectRef
@@ -54,7 +57,9 @@ public partial class V1beta1KMSKeyHandleSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMSKeyHandleSpec defines the desired state of KMSKeyHandle</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KMSKeyHandleSpec
@@ -75,7 +80,9 @@ public partial class V1beta1KMSKeyHandleSpec
     [JsonPropertyName("resourceTypeSelector")]
     public string? ResourceTypeSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KMSKeyHandleStatusConditions
@@ -100,7 +107,9 @@ public partial class V1beta1KMSKeyHandleStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KMSKeyHandleStatusObservedState
@@ -109,7 +118,9 @@ public partial class V1beta1KMSKeyHandleStatusObservedState
     [JsonPropertyName("kmsKey")]
     public string? KmsKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMSKeyHandleStatus defines the config connector machine state of KMSKeyHandle</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KMSKeyHandleStatus
@@ -130,7 +141,9 @@ public partial class V1beta1KMSKeyHandleStatus
     [JsonPropertyName("observedState")]
     public V1beta1KMSKeyHandleStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMSKeyHandle is the Schema for the KMSKeyHandle API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -160,3 +173,4 @@ public partial class V1beta1KMSKeyHandle : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1KMSKeyHandleStatus? Status { get; set; }
 }
+#nullable disable

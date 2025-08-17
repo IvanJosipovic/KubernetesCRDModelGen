@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.m.upbound.io;
+#nullable enable
 /// <summary>DefaultRouteTable is the Schema for the DefaultRouteTables API. Provides a resource to manage a default route table of a VPC.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DefaultRouteTableList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1DefaultRouteTable> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpecForProviderDefaultRouteTableIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1DefaultRouteTableSpecForProviderDefaultRouteTableIdR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate defaultRouteTableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpecForProviderDefaultRouteTableIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1DefaultRouteTableSpecForProviderDefaultRouteTableIdR
     [JsonPropertyName("policy")]
     public V1beta1DefaultRouteTableSpecForProviderDefaultRouteTableIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpecForProviderDefaultRouteTableIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1DefaultRouteTableSpecForProviderDefaultRouteTableIdS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate defaultRouteTableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpecForProviderDefaultRouteTableIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1DefaultRouteTableSpecForProviderDefaultRouteTableIdS
     [JsonPropertyName("policy")]
     public V1beta1DefaultRouteTableSpecForProviderDefaultRouteTableIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpecForProviderRouteEgressOnlyGatewayIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1DefaultRouteTableSpecForProviderRouteEgressOnlyGatew
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EgressOnlyInternetGateway in ec2 to populate egressOnlyGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpecForProviderRouteEgressOnlyGatewayIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1DefaultRouteTableSpecForProviderRouteEgressOnlyGatew
     [JsonPropertyName("policy")]
     public V1beta1DefaultRouteTableSpecForProviderRouteEgressOnlyGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpecForProviderRouteEgressOnlyGatewayIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1DefaultRouteTableSpecForProviderRouteEgressOnlyGatew
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EgressOnlyInternetGateway in ec2 to populate egressOnlyGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpecForProviderRouteEgressOnlyGatewayIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1DefaultRouteTableSpecForProviderRouteEgressOnlyGatew
     [JsonPropertyName("policy")]
     public V1beta1DefaultRouteTableSpecForProviderRouteEgressOnlyGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpecForProviderRouteGatewayIdRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1DefaultRouteTableSpecForProviderRouteGatewayIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a InternetGateway in ec2 to populate gatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpecForProviderRouteGatewayIdRef
@@ -191,7 +212,9 @@ public partial class V1beta1DefaultRouteTableSpecForProviderRouteGatewayIdRef
     [JsonPropertyName("policy")]
     public V1beta1DefaultRouteTableSpecForProviderRouteGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpecForProviderRouteGatewayIdSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1DefaultRouteTableSpecForProviderRouteGatewayIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a InternetGateway in ec2 to populate gatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpecForProviderRouteGatewayIdSelector
@@ -225,7 +250,9 @@ public partial class V1beta1DefaultRouteTableSpecForProviderRouteGatewayIdSelect
     [JsonPropertyName("policy")]
     public V1beta1DefaultRouteTableSpecForProviderRouteGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpecForProviderRoute
@@ -294,7 +321,9 @@ public partial class V1beta1DefaultRouteTableSpecForProviderRoute
     [JsonPropertyName("vpcPeeringConnectionId")]
     public string? VpcPeeringConnectionId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpecForProvider
@@ -327,7 +356,9 @@ public partial class V1beta1DefaultRouteTableSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpecInitProviderDefaultRouteTableIdRefPolicy
@@ -340,7 +371,9 @@ public partial class V1beta1DefaultRouteTableSpecInitProviderDefaultRouteTableId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate defaultRouteTableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpecInitProviderDefaultRouteTableIdRef
@@ -357,7 +390,9 @@ public partial class V1beta1DefaultRouteTableSpecInitProviderDefaultRouteTableId
     [JsonPropertyName("policy")]
     public V1beta1DefaultRouteTableSpecInitProviderDefaultRouteTableIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpecInitProviderDefaultRouteTableIdSelectorPolicy
@@ -370,7 +405,9 @@ public partial class V1beta1DefaultRouteTableSpecInitProviderDefaultRouteTableId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate defaultRouteTableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpecInitProviderDefaultRouteTableIdSelector
@@ -391,7 +428,9 @@ public partial class V1beta1DefaultRouteTableSpecInitProviderDefaultRouteTableId
     [JsonPropertyName("policy")]
     public V1beta1DefaultRouteTableSpecInitProviderDefaultRouteTableIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpecInitProviderRouteEgressOnlyGatewayIdRefPolicy
@@ -404,7 +443,9 @@ public partial class V1beta1DefaultRouteTableSpecInitProviderRouteEgressOnlyGate
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EgressOnlyInternetGateway in ec2 to populate egressOnlyGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpecInitProviderRouteEgressOnlyGatewayIdRef
@@ -421,7 +462,9 @@ public partial class V1beta1DefaultRouteTableSpecInitProviderRouteEgressOnlyGate
     [JsonPropertyName("policy")]
     public V1beta1DefaultRouteTableSpecInitProviderRouteEgressOnlyGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpecInitProviderRouteEgressOnlyGatewayIdSelectorPolicy
@@ -434,7 +477,9 @@ public partial class V1beta1DefaultRouteTableSpecInitProviderRouteEgressOnlyGate
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EgressOnlyInternetGateway in ec2 to populate egressOnlyGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpecInitProviderRouteEgressOnlyGatewayIdSelector
@@ -455,7 +500,9 @@ public partial class V1beta1DefaultRouteTableSpecInitProviderRouteEgressOnlyGate
     [JsonPropertyName("policy")]
     public V1beta1DefaultRouteTableSpecInitProviderRouteEgressOnlyGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpecInitProviderRouteGatewayIdRefPolicy
@@ -468,7 +515,9 @@ public partial class V1beta1DefaultRouteTableSpecInitProviderRouteGatewayIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a InternetGateway in ec2 to populate gatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpecInitProviderRouteGatewayIdRef
@@ -485,7 +534,9 @@ public partial class V1beta1DefaultRouteTableSpecInitProviderRouteGatewayIdRef
     [JsonPropertyName("policy")]
     public V1beta1DefaultRouteTableSpecInitProviderRouteGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpecInitProviderRouteGatewayIdSelectorPolicy
@@ -498,7 +549,9 @@ public partial class V1beta1DefaultRouteTableSpecInitProviderRouteGatewayIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a InternetGateway in ec2 to populate gatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpecInitProviderRouteGatewayIdSelector
@@ -519,7 +572,9 @@ public partial class V1beta1DefaultRouteTableSpecInitProviderRouteGatewayIdSelec
     [JsonPropertyName("policy")]
     public V1beta1DefaultRouteTableSpecInitProviderRouteGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpecInitProviderRoute
@@ -588,7 +643,9 @@ public partial class V1beta1DefaultRouteTableSpecInitProviderRoute
     [JsonPropertyName("vpcPeeringConnectionId")]
     public string? VpcPeeringConnectionId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpecInitProvider
@@ -617,7 +674,9 @@ public partial class V1beta1DefaultRouteTableSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpecProviderConfigRef
@@ -630,7 +689,9 @@ public partial class V1beta1DefaultRouteTableSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpecWriteConnectionSecretToRef
@@ -639,7 +700,9 @@ public partial class V1beta1DefaultRouteTableSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DefaultRouteTableSpec defines the desired state of DefaultRouteTable</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableSpec
@@ -664,7 +727,9 @@ public partial class V1beta1DefaultRouteTableSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DefaultRouteTableSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableStatusAtProviderRoute
@@ -717,7 +782,9 @@ public partial class V1beta1DefaultRouteTableStatusAtProviderRoute
     [JsonPropertyName("vpcPeeringConnectionId")]
     public string? VpcPeeringConnectionId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableStatusAtProvider
@@ -762,7 +829,9 @@ public partial class V1beta1DefaultRouteTableStatusAtProvider
     [JsonPropertyName("vpcId")]
     public string? VpcId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableStatusConditions
@@ -791,7 +860,9 @@ public partial class V1beta1DefaultRouteTableStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DefaultRouteTableStatus defines the observed state of DefaultRouteTable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultRouteTableStatus
@@ -808,7 +879,9 @@ public partial class V1beta1DefaultRouteTableStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DefaultRouteTable is the Schema for the DefaultRouteTables API. Provides a resource to manage a default route table of a VPC.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -838,3 +911,4 @@ public partial class V1beta1DefaultRouteTable : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1DefaultRouteTableStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dbforpostgresql.azure.com;
+#nullable enable
 /// <summary>User is a postgresql user.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1UserList : IKubernetesObject<V1ListMeta>, IItems<V1User>
     [JsonPropertyName("items")]
     public IList<V1User> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Password is the password to use for the user</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1UserSpecLocalUserPassword
@@ -46,7 +49,9 @@ public partial class V1UserSpecLocalUserPassword
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServerAdminPassword is a reference to a secret containing the servers administrator password</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1UserSpecLocalUserServerAdminPassword
@@ -59,7 +64,9 @@ public partial class V1UserSpecLocalUserServerAdminPassword
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LocalUser contains details for creating a standard (non-aad) postgresql User.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1UserSpecLocalUser
@@ -76,7 +83,9 @@ public partial class V1UserSpecLocalUser
     [JsonPropertyName("serverAdminUsername")]
     public string ServerAdminUsername { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a dbforpostgresql.azure.com/FlexibleServer resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1UserSpecOwner
@@ -85,7 +94,9 @@ public partial class V1UserSpecOwner
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RoleOptions defines additional attributes of the user role. You can read more about these attributes at https://www.postgresql.org/docs/current/role-attributes.html.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1UserSpecRoleOptions
@@ -106,7 +117,9 @@ public partial class V1UserSpecRoleOptions
     [JsonPropertyName("replication")]
     public bool? Replication { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1UserSpec
@@ -131,7 +144,9 @@ public partial class V1UserSpec
     [JsonPropertyName("roles")]
     public IList<string>? Roles { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1UserStatusConditions
@@ -164,7 +179,9 @@ public partial class V1UserStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1UserStatus
@@ -173,7 +190,9 @@ public partial class V1UserStatus
     [JsonPropertyName("conditions")]
     public IList<V1UserStatusConditions>? Conditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>User is a postgresql user.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -203,3 +222,4 @@ public partial class V1User : IKubernetesObject<V1ObjectMeta>, ISpec<V1UserSpec>
     [JsonPropertyName("status")]
     public V1UserStatus? Status { get; set; }
 }
+#nullable disable

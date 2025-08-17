@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networking.@internal.knative.dev;
+#nullable enable
 /// <summary>ClusterDomainClaim is a cluster-wide reservation for a particular domain name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1ClusterDomainClaimList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1alpha1ClusterDomainClaim> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Spec is the desired state of the ClusterDomainClaim. More info: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterDomainClaimSpec
@@ -42,7 +45,9 @@ public partial class V1alpha1ClusterDomainClaimSpec
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClusterDomainClaim is a cluster-wide reservation for a particular domain name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -68,3 +73,4 @@ public partial class V1alpha1ClusterDomainClaim : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("spec")]
     public V1alpha1ClusterDomainClaimSpec? Spec { get; set; }
 }
+#nullable disable

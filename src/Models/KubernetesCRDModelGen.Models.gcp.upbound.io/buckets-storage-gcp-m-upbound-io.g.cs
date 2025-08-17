@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.gcp.m.upbound.io;
+#nullable enable
 /// <summary>Bucket is the Schema for the Buckets API. Creates a new bucket in Google Cloud Storage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BucketList : IKubernetesObject<V1ListMeta>, IItems<V
     [JsonPropertyName("items")]
     public IList<V1beta1Bucket> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The bucket's Autoclass configuration.  Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecForProviderAutoclass
@@ -46,7 +49,9 @@ public partial class V1beta1BucketSpecForProviderAutoclass
     [JsonPropertyName("terminalStorageClass")]
     public string? TerminalStorageClass { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecForProviderCors
@@ -67,7 +72,9 @@ public partial class V1beta1BucketSpecForProviderCors
     [JsonPropertyName("responseHeader")]
     public IList<string>? ResponseHeader { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The bucket's custom location configuration, which specifies the individual regions that comprise a dual-region bucket. If the bucket is designated a single or multi-region, the parameters are empty. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecForProviderCustomPlacementConfig
@@ -76,7 +83,9 @@ public partial class V1beta1BucketSpecForProviderCustomPlacementConfig
     [JsonPropertyName("dataLocations")]
     public IList<string>? DataLocations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The bucket's encryption configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecForProviderEncryption
@@ -85,7 +94,9 @@ public partial class V1beta1BucketSpecForProviderEncryption
     [JsonPropertyName("defaultKmsKeyName")]
     public string? DefaultKmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The bucket's hierarchical namespace policy, which defines the bucket capability to handle folders in logical structure. Structure is documented below. To use this configuration, uniform_bucket_level_access must be enabled on bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecForProviderHierarchicalNamespace
@@ -94,7 +105,9 @@ public partial class V1beta1BucketSpecForProviderHierarchicalNamespace
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The public network IP address ranges that can access the bucket and its data. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecForProviderIpFilterPublicNetworkSource
@@ -103,7 +116,9 @@ public partial class V1beta1BucketSpecForProviderIpFilterPublicNetworkSource
     [JsonPropertyName("allowedIpCidrRanges")]
     public IList<string>? AllowedIpCidrRanges { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecForProviderIpFilterVpcNetworkSources
@@ -116,7 +131,9 @@ public partial class V1beta1BucketSpecForProviderIpFilterVpcNetworkSources
     [JsonPropertyName("network")]
     public string? Network { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The bucket IP filtering configuration. Specifies the network sources that can access the bucket, as well as its underlying objects. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecForProviderIpFilter
@@ -141,7 +158,9 @@ public partial class V1beta1BucketSpecForProviderIpFilter
     [JsonPropertyName("vpcNetworkSources")]
     public IList<V1beta1BucketSpecForProviderIpFilterVpcNetworkSources>? VpcNetworkSources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Lifecycle Rule's action configuration. A single block of this type is supported. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecForProviderLifecycleRuleAction
@@ -154,7 +173,9 @@ public partial class V1beta1BucketSpecForProviderLifecycleRuleAction
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Lifecycle Rule's condition configuration. A single block of this type is supported. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecForProviderLifecycleRuleCondition
@@ -219,7 +240,9 @@ public partial class V1beta1BucketSpecForProviderLifecycleRuleCondition
     [JsonPropertyName("withState")]
     public string? WithState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecForProviderLifecycleRule
@@ -232,7 +255,9 @@ public partial class V1beta1BucketSpecForProviderLifecycleRule
     [JsonPropertyName("condition")]
     public V1beta1BucketSpecForProviderLifecycleRuleCondition? Condition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The bucket's Access &amp; Storage Logs configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecForProviderLogging
@@ -245,7 +270,9 @@ public partial class V1beta1BucketSpecForProviderLogging
     [JsonPropertyName("logObjectPrefix")]
     public string? LogObjectPrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration of the bucket's data retention policy for how long objects in the bucket should be retained. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecForProviderRetentionPolicy
@@ -258,7 +285,9 @@ public partial class V1beta1BucketSpecForProviderRetentionPolicy
     [JsonPropertyName("retentionPeriod")]
     public double? RetentionPeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The bucket's soft delete policy, which defines the period of time that soft-deleted objects will be retained, and cannot be permanently deleted. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecForProviderSoftDeletePolicy
@@ -267,7 +296,9 @@ public partial class V1beta1BucketSpecForProviderSoftDeletePolicy
     [JsonPropertyName("retentionDurationSeconds")]
     public double? RetentionDurationSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The bucket's Versioning configuration.  Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecForProviderVersioning
@@ -276,7 +307,9 @@ public partial class V1beta1BucketSpecForProviderVersioning
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration if the bucket acts as a website. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecForProviderWebsite
@@ -289,7 +322,9 @@ public partial class V1beta1BucketSpecForProviderWebsite
     [JsonPropertyName("notFoundPage")]
     public string? NotFoundPage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecForProvider
@@ -386,7 +421,9 @@ public partial class V1beta1BucketSpecForProvider
     [JsonPropertyName("website")]
     public V1beta1BucketSpecForProviderWebsite? Website { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The bucket's Autoclass configuration.  Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecInitProviderAutoclass
@@ -399,7 +436,9 @@ public partial class V1beta1BucketSpecInitProviderAutoclass
     [JsonPropertyName("terminalStorageClass")]
     public string? TerminalStorageClass { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecInitProviderCors
@@ -420,7 +459,9 @@ public partial class V1beta1BucketSpecInitProviderCors
     [JsonPropertyName("responseHeader")]
     public IList<string>? ResponseHeader { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The bucket's custom location configuration, which specifies the individual regions that comprise a dual-region bucket. If the bucket is designated a single or multi-region, the parameters are empty. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecInitProviderCustomPlacementConfig
@@ -429,7 +470,9 @@ public partial class V1beta1BucketSpecInitProviderCustomPlacementConfig
     [JsonPropertyName("dataLocations")]
     public IList<string>? DataLocations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The bucket's encryption configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecInitProviderEncryption
@@ -438,7 +481,9 @@ public partial class V1beta1BucketSpecInitProviderEncryption
     [JsonPropertyName("defaultKmsKeyName")]
     public string? DefaultKmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The bucket's hierarchical namespace policy, which defines the bucket capability to handle folders in logical structure. Structure is documented below. To use this configuration, uniform_bucket_level_access must be enabled on bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecInitProviderHierarchicalNamespace
@@ -447,7 +492,9 @@ public partial class V1beta1BucketSpecInitProviderHierarchicalNamespace
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The public network IP address ranges that can access the bucket and its data. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecInitProviderIpFilterPublicNetworkSource
@@ -456,7 +503,9 @@ public partial class V1beta1BucketSpecInitProviderIpFilterPublicNetworkSource
     [JsonPropertyName("allowedIpCidrRanges")]
     public IList<string>? AllowedIpCidrRanges { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecInitProviderIpFilterVpcNetworkSources
@@ -469,7 +518,9 @@ public partial class V1beta1BucketSpecInitProviderIpFilterVpcNetworkSources
     [JsonPropertyName("network")]
     public string? Network { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The bucket IP filtering configuration. Specifies the network sources that can access the bucket, as well as its underlying objects. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecInitProviderIpFilter
@@ -494,7 +545,9 @@ public partial class V1beta1BucketSpecInitProviderIpFilter
     [JsonPropertyName("vpcNetworkSources")]
     public IList<V1beta1BucketSpecInitProviderIpFilterVpcNetworkSources>? VpcNetworkSources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Lifecycle Rule's action configuration. A single block of this type is supported. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecInitProviderLifecycleRuleAction
@@ -507,7 +560,9 @@ public partial class V1beta1BucketSpecInitProviderLifecycleRuleAction
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Lifecycle Rule's condition configuration. A single block of this type is supported. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecInitProviderLifecycleRuleCondition
@@ -572,7 +627,9 @@ public partial class V1beta1BucketSpecInitProviderLifecycleRuleCondition
     [JsonPropertyName("withState")]
     public string? WithState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecInitProviderLifecycleRule
@@ -585,7 +642,9 @@ public partial class V1beta1BucketSpecInitProviderLifecycleRule
     [JsonPropertyName("condition")]
     public V1beta1BucketSpecInitProviderLifecycleRuleCondition? Condition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The bucket's Access &amp; Storage Logs configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecInitProviderLogging
@@ -598,7 +657,9 @@ public partial class V1beta1BucketSpecInitProviderLogging
     [JsonPropertyName("logObjectPrefix")]
     public string? LogObjectPrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration of the bucket's data retention policy for how long objects in the bucket should be retained. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecInitProviderRetentionPolicy
@@ -611,7 +672,9 @@ public partial class V1beta1BucketSpecInitProviderRetentionPolicy
     [JsonPropertyName("retentionPeriod")]
     public double? RetentionPeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The bucket's soft delete policy, which defines the period of time that soft-deleted objects will be retained, and cannot be permanently deleted. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecInitProviderSoftDeletePolicy
@@ -620,7 +683,9 @@ public partial class V1beta1BucketSpecInitProviderSoftDeletePolicy
     [JsonPropertyName("retentionDurationSeconds")]
     public double? RetentionDurationSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The bucket's Versioning configuration.  Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecInitProviderVersioning
@@ -629,7 +694,9 @@ public partial class V1beta1BucketSpecInitProviderVersioning
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration if the bucket acts as a website. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecInitProviderWebsite
@@ -642,7 +709,9 @@ public partial class V1beta1BucketSpecInitProviderWebsite
     [JsonPropertyName("notFoundPage")]
     public string? NotFoundPage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecInitProvider
@@ -739,7 +808,9 @@ public partial class V1beta1BucketSpecInitProvider
     [JsonPropertyName("website")]
     public V1beta1BucketSpecInitProviderWebsite? Website { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecProviderConfigRef
@@ -752,7 +823,9 @@ public partial class V1beta1BucketSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecWriteConnectionSecretToRef
@@ -761,7 +834,9 @@ public partial class V1beta1BucketSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BucketSpec defines the desired state of Bucket</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpec
@@ -786,7 +861,9 @@ public partial class V1beta1BucketSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BucketSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The bucket's Autoclass configuration.  Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketStatusAtProviderAutoclass
@@ -799,7 +876,9 @@ public partial class V1beta1BucketStatusAtProviderAutoclass
     [JsonPropertyName("terminalStorageClass")]
     public string? TerminalStorageClass { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketStatusAtProviderCors
@@ -820,7 +899,9 @@ public partial class V1beta1BucketStatusAtProviderCors
     [JsonPropertyName("responseHeader")]
     public IList<string>? ResponseHeader { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The bucket's custom location configuration, which specifies the individual regions that comprise a dual-region bucket. If the bucket is designated a single or multi-region, the parameters are empty. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketStatusAtProviderCustomPlacementConfig
@@ -829,7 +910,9 @@ public partial class V1beta1BucketStatusAtProviderCustomPlacementConfig
     [JsonPropertyName("dataLocations")]
     public IList<string>? DataLocations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The bucket's encryption configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketStatusAtProviderEncryption
@@ -838,7 +921,9 @@ public partial class V1beta1BucketStatusAtProviderEncryption
     [JsonPropertyName("defaultKmsKeyName")]
     public string? DefaultKmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The bucket's hierarchical namespace policy, which defines the bucket capability to handle folders in logical structure. Structure is documented below. To use this configuration, uniform_bucket_level_access must be enabled on bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketStatusAtProviderHierarchicalNamespace
@@ -847,7 +932,9 @@ public partial class V1beta1BucketStatusAtProviderHierarchicalNamespace
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The public network IP address ranges that can access the bucket and its data. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketStatusAtProviderIpFilterPublicNetworkSource
@@ -856,7 +943,9 @@ public partial class V1beta1BucketStatusAtProviderIpFilterPublicNetworkSource
     [JsonPropertyName("allowedIpCidrRanges")]
     public IList<string>? AllowedIpCidrRanges { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketStatusAtProviderIpFilterVpcNetworkSources
@@ -869,7 +958,9 @@ public partial class V1beta1BucketStatusAtProviderIpFilterVpcNetworkSources
     [JsonPropertyName("network")]
     public string? Network { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The bucket IP filtering configuration. Specifies the network sources that can access the bucket, as well as its underlying objects. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketStatusAtProviderIpFilter
@@ -894,7 +985,9 @@ public partial class V1beta1BucketStatusAtProviderIpFilter
     [JsonPropertyName("vpcNetworkSources")]
     public IList<V1beta1BucketStatusAtProviderIpFilterVpcNetworkSources>? VpcNetworkSources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Lifecycle Rule's action configuration. A single block of this type is supported. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketStatusAtProviderLifecycleRuleAction
@@ -907,7 +1000,9 @@ public partial class V1beta1BucketStatusAtProviderLifecycleRuleAction
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Lifecycle Rule's condition configuration. A single block of this type is supported. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketStatusAtProviderLifecycleRuleCondition
@@ -972,7 +1067,9 @@ public partial class V1beta1BucketStatusAtProviderLifecycleRuleCondition
     [JsonPropertyName("withState")]
     public string? WithState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketStatusAtProviderLifecycleRule
@@ -985,7 +1082,9 @@ public partial class V1beta1BucketStatusAtProviderLifecycleRule
     [JsonPropertyName("condition")]
     public V1beta1BucketStatusAtProviderLifecycleRuleCondition? Condition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The bucket's Access &amp; Storage Logs configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketStatusAtProviderLogging
@@ -998,7 +1097,9 @@ public partial class V1beta1BucketStatusAtProviderLogging
     [JsonPropertyName("logObjectPrefix")]
     public string? LogObjectPrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration of the bucket's data retention policy for how long objects in the bucket should be retained. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketStatusAtProviderRetentionPolicy
@@ -1011,7 +1112,9 @@ public partial class V1beta1BucketStatusAtProviderRetentionPolicy
     [JsonPropertyName("retentionPeriod")]
     public double? RetentionPeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The bucket's soft delete policy, which defines the period of time that soft-deleted objects will be retained, and cannot be permanently deleted. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketStatusAtProviderSoftDeletePolicy
@@ -1024,7 +1127,9 @@ public partial class V1beta1BucketStatusAtProviderSoftDeletePolicy
     [JsonPropertyName("retentionDurationSeconds")]
     public double? RetentionDurationSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The bucket's Versioning configuration.  Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketStatusAtProviderVersioning
@@ -1033,7 +1138,9 @@ public partial class V1beta1BucketStatusAtProviderVersioning
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration if the bucket acts as a website. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketStatusAtProviderWebsite
@@ -1046,7 +1153,9 @@ public partial class V1beta1BucketStatusAtProviderWebsite
     [JsonPropertyName("notFoundPage")]
     public string? NotFoundPage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketStatusAtProvider
@@ -1175,7 +1284,9 @@ public partial class V1beta1BucketStatusAtProvider
     [JsonPropertyName("website")]
     public V1beta1BucketStatusAtProviderWebsite? Website { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketStatusConditions
@@ -1204,7 +1315,9 @@ public partial class V1beta1BucketStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BucketStatus defines the observed state of Bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketStatus
@@ -1221,7 +1334,9 @@ public partial class V1beta1BucketStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Bucket is the Schema for the Buckets API. Creates a new bucket in Google Cloud Storage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1251,3 +1366,4 @@ public partial class V1beta1Bucket : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     [JsonPropertyName("status")]
     public V1beta1BucketStatus? Status { get; set; }
 }
+#nullable disable

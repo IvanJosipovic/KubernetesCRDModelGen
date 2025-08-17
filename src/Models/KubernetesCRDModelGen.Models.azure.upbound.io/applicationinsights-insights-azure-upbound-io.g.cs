@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.upbound.io;
+#nullable enable
 /// <summary>ApplicationInsights is the Schema for the ApplicationInsightss API. Manages an Application Insights component.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ApplicationInsightsList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1ApplicationInsights> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsSpecForProviderResourceGroupNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ApplicationInsightsSpecForProviderResourceGroupNameR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsSpecForProviderResourceGroupNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1ApplicationInsightsSpecForProviderResourceGroupNameR
     [JsonPropertyName("policy")]
     public V1beta1ApplicationInsightsSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsSpecForProviderResourceGroupNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1ApplicationInsightsSpecForProviderResourceGroupNameS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsSpecForProviderResourceGroupNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1ApplicationInsightsSpecForProviderResourceGroupNameS
     [JsonPropertyName("policy")]
     public V1beta1ApplicationInsightsSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsSpecForProviderWorkspaceIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1ApplicationInsightsSpecForProviderWorkspaceIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in operationalinsights to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsSpecForProviderWorkspaceIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1ApplicationInsightsSpecForProviderWorkspaceIdRef
     [JsonPropertyName("policy")]
     public V1beta1ApplicationInsightsSpecForProviderWorkspaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsSpecForProviderWorkspaceIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1ApplicationInsightsSpecForProviderWorkspaceIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in operationalinsights to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsSpecForProviderWorkspaceIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1ApplicationInsightsSpecForProviderWorkspaceIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1ApplicationInsightsSpecForProviderWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsSpecForProvider
@@ -222,7 +241,9 @@ public partial class V1beta1ApplicationInsightsSpecForProvider
     [JsonPropertyName("workspaceIdSelector")]
     public V1beta1ApplicationInsightsSpecForProviderWorkspaceIdSelector? WorkspaceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsSpecInitProviderWorkspaceIdRefPolicy
@@ -235,7 +256,9 @@ public partial class V1beta1ApplicationInsightsSpecInitProviderWorkspaceIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in operationalinsights to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsSpecInitProviderWorkspaceIdRef
@@ -248,7 +271,9 @@ public partial class V1beta1ApplicationInsightsSpecInitProviderWorkspaceIdRef
     [JsonPropertyName("policy")]
     public V1beta1ApplicationInsightsSpecInitProviderWorkspaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsSpecInitProviderWorkspaceIdSelectorPolicy
@@ -261,7 +286,9 @@ public partial class V1beta1ApplicationInsightsSpecInitProviderWorkspaceIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in operationalinsights to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsSpecInitProviderWorkspaceIdSelector
@@ -278,7 +305,9 @@ public partial class V1beta1ApplicationInsightsSpecInitProviderWorkspaceIdSelect
     [JsonPropertyName("policy")]
     public V1beta1ApplicationInsightsSpecInitProviderWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsSpecInitProvider
@@ -343,7 +372,9 @@ public partial class V1beta1ApplicationInsightsSpecInitProvider
     [JsonPropertyName("workspaceIdSelector")]
     public V1beta1ApplicationInsightsSpecInitProviderWorkspaceIdSelector? WorkspaceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsSpecProviderConfigRefPolicy
@@ -356,7 +387,9 @@ public partial class V1beta1ApplicationInsightsSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsSpecProviderConfigRef
@@ -369,7 +402,9 @@ public partial class V1beta1ApplicationInsightsSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ApplicationInsightsSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsSpecWriteConnectionSecretToRef
@@ -382,7 +417,9 @@ public partial class V1beta1ApplicationInsightsSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApplicationInsightsSpec defines the desired state of ApplicationInsights</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsSpec
@@ -411,7 +448,9 @@ public partial class V1beta1ApplicationInsightsSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ApplicationInsightsSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStatusAtProvider
@@ -480,7 +519,9 @@ public partial class V1beta1ApplicationInsightsStatusAtProvider
     [JsonPropertyName("workspaceId")]
     public string? WorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStatusConditions
@@ -509,7 +550,9 @@ public partial class V1beta1ApplicationInsightsStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApplicationInsightsStatus defines the observed state of ApplicationInsights.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStatus
@@ -526,7 +569,9 @@ public partial class V1beta1ApplicationInsightsStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApplicationInsights is the Schema for the ApplicationInsightss API. Manages an Application Insights component.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -556,3 +601,4 @@ public partial class V1beta1ApplicationInsights : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1ApplicationInsightsStatus? Status { get; set; }
 }
+#nullable disable

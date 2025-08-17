@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.detective.aws.m.upbound.io;
+#nullable enable
 /// <summary>InvitationAccepter is the Schema for the InvitationAccepters API. Provides a resource to manage an Amazon Detective member invitation accepter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1InvitationAccepterList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1InvitationAccepter> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InvitationAccepterSpecForProviderGraphArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1InvitationAccepterSpecForProviderGraphArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Graph in detective to populate graphArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InvitationAccepterSpecForProviderGraphArnRef
@@ -63,7 +68,9 @@ public partial class V1beta1InvitationAccepterSpecForProviderGraphArnRef
     [JsonPropertyName("policy")]
     public V1beta1InvitationAccepterSpecForProviderGraphArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InvitationAccepterSpecForProviderGraphArnSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1InvitationAccepterSpecForProviderGraphArnSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Graph in detective to populate graphArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InvitationAccepterSpecForProviderGraphArnSelector
@@ -97,7 +106,9 @@ public partial class V1beta1InvitationAccepterSpecForProviderGraphArnSelector
     [JsonPropertyName("policy")]
     public V1beta1InvitationAccepterSpecForProviderGraphArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InvitationAccepterSpecForProvider
@@ -118,7 +129,9 @@ public partial class V1beta1InvitationAccepterSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InvitationAccepterSpecInitProviderGraphArnRefPolicy
@@ -131,7 +144,9 @@ public partial class V1beta1InvitationAccepterSpecInitProviderGraphArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Graph in detective to populate graphArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InvitationAccepterSpecInitProviderGraphArnRef
@@ -148,7 +163,9 @@ public partial class V1beta1InvitationAccepterSpecInitProviderGraphArnRef
     [JsonPropertyName("policy")]
     public V1beta1InvitationAccepterSpecInitProviderGraphArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InvitationAccepterSpecInitProviderGraphArnSelectorPolicy
@@ -161,7 +178,9 @@ public partial class V1beta1InvitationAccepterSpecInitProviderGraphArnSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Graph in detective to populate graphArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InvitationAccepterSpecInitProviderGraphArnSelector
@@ -182,7 +201,9 @@ public partial class V1beta1InvitationAccepterSpecInitProviderGraphArnSelector
     [JsonPropertyName("policy")]
     public V1beta1InvitationAccepterSpecInitProviderGraphArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InvitationAccepterSpecInitProvider
@@ -199,7 +220,9 @@ public partial class V1beta1InvitationAccepterSpecInitProvider
     [JsonPropertyName("graphArnSelector")]
     public V1beta1InvitationAccepterSpecInitProviderGraphArnSelector? GraphArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InvitationAccepterSpecProviderConfigRef
@@ -212,7 +235,9 @@ public partial class V1beta1InvitationAccepterSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InvitationAccepterSpecWriteConnectionSecretToRef
@@ -221,7 +246,9 @@ public partial class V1beta1InvitationAccepterSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InvitationAccepterSpec defines the desired state of InvitationAccepter</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InvitationAccepterSpec
@@ -246,7 +273,9 @@ public partial class V1beta1InvitationAccepterSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1InvitationAccepterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InvitationAccepterStatusAtProvider
@@ -263,7 +292,9 @@ public partial class V1beta1InvitationAccepterStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InvitationAccepterStatusConditions
@@ -292,7 +323,9 @@ public partial class V1beta1InvitationAccepterStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InvitationAccepterStatus defines the observed state of InvitationAccepter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InvitationAccepterStatus
@@ -309,7 +342,9 @@ public partial class V1beta1InvitationAccepterStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InvitationAccepter is the Schema for the InvitationAccepters API. Provides a resource to manage an Amazon Detective member invitation accepter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -339,3 +374,4 @@ public partial class V1beta1InvitationAccepter : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1InvitationAccepterStatus? Status { get; set; }
 }
+#nullable disable

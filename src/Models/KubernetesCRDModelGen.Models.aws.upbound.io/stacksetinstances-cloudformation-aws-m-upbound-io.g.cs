@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudformation.aws.m.upbound.io;
+#nullable enable
 /// <summary>StackSetInstance is the Schema for the StackSetInstances API. Manages a CloudFormation StackSet Instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1StackSetInstanceList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1StackSetInstance> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AWS Organizations accounts to which StackSets deploys. StackSets doesn't deploy stack instances to the organization management account, even if the organization management account is in your organization or in an OU in your organization. Drift detection is not possible for this argument. See deployment_targets below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetInstanceSpecForProviderDeploymentTargets
@@ -54,7 +57,9 @@ public partial class V1beta1StackSetInstanceSpecForProviderDeploymentTargets
     [JsonPropertyName("organizationalUnitIds")]
     public IList<string>? OrganizationalUnitIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Preferences for how AWS CloudFormation performs a stack set operation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetInstanceSpecForProviderOperationPreferences
@@ -87,7 +92,9 @@ public partial class V1beta1StackSetInstanceSpecForProviderOperationPreferences
     [JsonPropertyName("regionOrder")]
     public IList<string>? RegionOrder { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetInstanceSpecForProviderStackSetNameRefPolicy
@@ -100,7 +107,9 @@ public partial class V1beta1StackSetInstanceSpecForProviderStackSetNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a StackSet in cloudformation to populate stackSetName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetInstanceSpecForProviderStackSetNameRef
@@ -117,7 +126,9 @@ public partial class V1beta1StackSetInstanceSpecForProviderStackSetNameRef
     [JsonPropertyName("policy")]
     public V1beta1StackSetInstanceSpecForProviderStackSetNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetInstanceSpecForProviderStackSetNameSelectorPolicy
@@ -130,7 +141,9 @@ public partial class V1beta1StackSetInstanceSpecForProviderStackSetNameSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a StackSet in cloudformation to populate stackSetName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetInstanceSpecForProviderStackSetNameSelector
@@ -151,7 +164,9 @@ public partial class V1beta1StackSetInstanceSpecForProviderStackSetNameSelector
     [JsonPropertyName("policy")]
     public V1beta1StackSetInstanceSpecForProviderStackSetNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetInstanceSpecForProvider
@@ -200,7 +215,9 @@ public partial class V1beta1StackSetInstanceSpecForProvider
     [JsonPropertyName("stackSetNameSelector")]
     public V1beta1StackSetInstanceSpecForProviderStackSetNameSelector? StackSetNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AWS Organizations accounts to which StackSets deploys. StackSets doesn't deploy stack instances to the organization management account, even if the organization management account is in your organization or in an OU in your organization. Drift detection is not possible for this argument. See deployment_targets below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetInstanceSpecInitProviderDeploymentTargets
@@ -221,7 +238,9 @@ public partial class V1beta1StackSetInstanceSpecInitProviderDeploymentTargets
     [JsonPropertyName("organizationalUnitIds")]
     public IList<string>? OrganizationalUnitIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Preferences for how AWS CloudFormation performs a stack set operation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetInstanceSpecInitProviderOperationPreferences
@@ -254,7 +273,9 @@ public partial class V1beta1StackSetInstanceSpecInitProviderOperationPreferences
     [JsonPropertyName("regionOrder")]
     public IList<string>? RegionOrder { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetInstanceSpecInitProviderStackSetNameRefPolicy
@@ -267,7 +288,9 @@ public partial class V1beta1StackSetInstanceSpecInitProviderStackSetNameRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a StackSet in cloudformation to populate stackSetName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetInstanceSpecInitProviderStackSetNameRef
@@ -284,7 +307,9 @@ public partial class V1beta1StackSetInstanceSpecInitProviderStackSetNameRef
     [JsonPropertyName("policy")]
     public V1beta1StackSetInstanceSpecInitProviderStackSetNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetInstanceSpecInitProviderStackSetNameSelectorPolicy
@@ -297,7 +322,9 @@ public partial class V1beta1StackSetInstanceSpecInitProviderStackSetNameSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a StackSet in cloudformation to populate stackSetName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetInstanceSpecInitProviderStackSetNameSelector
@@ -318,7 +345,9 @@ public partial class V1beta1StackSetInstanceSpecInitProviderStackSetNameSelector
     [JsonPropertyName("policy")]
     public V1beta1StackSetInstanceSpecInitProviderStackSetNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetInstanceSpecInitProvider
@@ -363,7 +392,9 @@ public partial class V1beta1StackSetInstanceSpecInitProvider
     [JsonPropertyName("stackSetNameSelector")]
     public V1beta1StackSetInstanceSpecInitProviderStackSetNameSelector? StackSetNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetInstanceSpecProviderConfigRef
@@ -376,7 +407,9 @@ public partial class V1beta1StackSetInstanceSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetInstanceSpecWriteConnectionSecretToRef
@@ -385,7 +418,9 @@ public partial class V1beta1StackSetInstanceSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StackSetInstanceSpec defines the desired state of StackSetInstance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetInstanceSpec
@@ -410,7 +445,9 @@ public partial class V1beta1StackSetInstanceSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1StackSetInstanceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AWS Organizations accounts to which StackSets deploys. StackSets doesn't deploy stack instances to the organization management account, even if the organization management account is in your organization or in an OU in your organization. Drift detection is not possible for this argument. See deployment_targets below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetInstanceStatusAtProviderDeploymentTargets
@@ -431,7 +468,9 @@ public partial class V1beta1StackSetInstanceStatusAtProviderDeploymentTargets
     [JsonPropertyName("organizationalUnitIds")]
     public IList<string>? OrganizationalUnitIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Preferences for how AWS CloudFormation performs a stack set operation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetInstanceStatusAtProviderOperationPreferences
@@ -464,7 +503,9 @@ public partial class V1beta1StackSetInstanceStatusAtProviderOperationPreferences
     [JsonPropertyName("regionOrder")]
     public IList<string>? RegionOrder { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetInstanceStatusAtProviderStackInstanceSummaries
@@ -481,7 +522,9 @@ public partial class V1beta1StackSetInstanceStatusAtProviderStackInstanceSummari
     [JsonPropertyName("stackId")]
     public string? StackId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetInstanceStatusAtProvider
@@ -538,7 +581,9 @@ public partial class V1beta1StackSetInstanceStatusAtProvider
     [JsonPropertyName("stackSetName")]
     public string? StackSetName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetInstanceStatusConditions
@@ -567,7 +612,9 @@ public partial class V1beta1StackSetInstanceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StackSetInstanceStatus defines the observed state of StackSetInstance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetInstanceStatus
@@ -584,7 +631,9 @@ public partial class V1beta1StackSetInstanceStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StackSetInstance is the Schema for the StackSetInstances API. Manages a CloudFormation StackSet Instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -614,3 +663,4 @@ public partial class V1beta1StackSetInstance : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1StackSetInstanceStatus? Status { get; set; }
 }
+#nullable disable

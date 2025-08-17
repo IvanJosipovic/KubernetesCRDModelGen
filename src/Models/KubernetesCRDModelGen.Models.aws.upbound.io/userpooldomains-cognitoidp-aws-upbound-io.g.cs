@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cognitoidp.aws.upbound.io;
+#nullable enable
 /// <summary>UserPoolDomain is the Schema for the UserPoolDomains API. Provides a Cognito User Pool Domain resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1UserPoolDomainList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1UserPoolDomain> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolDomainSpecForProviderCertificateArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1UserPoolDomainSpecForProviderCertificateArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Certificate in acm to populate certificateArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolDomainSpecForProviderCertificateArnRef
@@ -59,7 +64,9 @@ public partial class V1beta1UserPoolDomainSpecForProviderCertificateArnRef
     [JsonPropertyName("policy")]
     public V1beta1UserPoolDomainSpecForProviderCertificateArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolDomainSpecForProviderCertificateArnSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1UserPoolDomainSpecForProviderCertificateArnSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Certificate in acm to populate certificateArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolDomainSpecForProviderCertificateArnSelector
@@ -89,7 +98,9 @@ public partial class V1beta1UserPoolDomainSpecForProviderCertificateArnSelector
     [JsonPropertyName("policy")]
     public V1beta1UserPoolDomainSpecForProviderCertificateArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolDomainSpecForProviderUserPoolIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1UserPoolDomainSpecForProviderUserPoolIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UserPool in cognitoidp to populate userPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolDomainSpecForProviderUserPoolIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1UserPoolDomainSpecForProviderUserPoolIdRef
     [JsonPropertyName("policy")]
     public V1beta1UserPoolDomainSpecForProviderUserPoolIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolDomainSpecForProviderUserPoolIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1UserPoolDomainSpecForProviderUserPoolIdSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UserPool in cognitoidp to populate userPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolDomainSpecForProviderUserPoolIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1UserPoolDomainSpecForProviderUserPoolIdSelector
     [JsonPropertyName("policy")]
     public V1beta1UserPoolDomainSpecForProviderUserPoolIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolDomainSpecForProvider
@@ -186,7 +205,9 @@ public partial class V1beta1UserPoolDomainSpecForProvider
     [JsonPropertyName("userPoolIdSelector")]
     public V1beta1UserPoolDomainSpecForProviderUserPoolIdSelector? UserPoolIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolDomainSpecInitProviderCertificateArnRefPolicy
@@ -199,7 +220,9 @@ public partial class V1beta1UserPoolDomainSpecInitProviderCertificateArnRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Certificate in acm to populate certificateArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolDomainSpecInitProviderCertificateArnRef
@@ -212,7 +235,9 @@ public partial class V1beta1UserPoolDomainSpecInitProviderCertificateArnRef
     [JsonPropertyName("policy")]
     public V1beta1UserPoolDomainSpecInitProviderCertificateArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolDomainSpecInitProviderCertificateArnSelectorPolicy
@@ -225,7 +250,9 @@ public partial class V1beta1UserPoolDomainSpecInitProviderCertificateArnSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Certificate in acm to populate certificateArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolDomainSpecInitProviderCertificateArnSelector
@@ -242,7 +269,9 @@ public partial class V1beta1UserPoolDomainSpecInitProviderCertificateArnSelector
     [JsonPropertyName("policy")]
     public V1beta1UserPoolDomainSpecInitProviderCertificateArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolDomainSpecInitProviderUserPoolIdRefPolicy
@@ -255,7 +284,9 @@ public partial class V1beta1UserPoolDomainSpecInitProviderUserPoolIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UserPool in cognitoidp to populate userPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolDomainSpecInitProviderUserPoolIdRef
@@ -268,7 +299,9 @@ public partial class V1beta1UserPoolDomainSpecInitProviderUserPoolIdRef
     [JsonPropertyName("policy")]
     public V1beta1UserPoolDomainSpecInitProviderUserPoolIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolDomainSpecInitProviderUserPoolIdSelectorPolicy
@@ -281,7 +314,9 @@ public partial class V1beta1UserPoolDomainSpecInitProviderUserPoolIdSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UserPool in cognitoidp to populate userPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolDomainSpecInitProviderUserPoolIdSelector
@@ -298,7 +333,9 @@ public partial class V1beta1UserPoolDomainSpecInitProviderUserPoolIdSelector
     [JsonPropertyName("policy")]
     public V1beta1UserPoolDomainSpecInitProviderUserPoolIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolDomainSpecInitProvider
@@ -335,7 +372,9 @@ public partial class V1beta1UserPoolDomainSpecInitProvider
     [JsonPropertyName("userPoolIdSelector")]
     public V1beta1UserPoolDomainSpecInitProviderUserPoolIdSelector? UserPoolIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolDomainSpecProviderConfigRefPolicy
@@ -348,7 +387,9 @@ public partial class V1beta1UserPoolDomainSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolDomainSpecProviderConfigRef
@@ -361,7 +402,9 @@ public partial class V1beta1UserPoolDomainSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1UserPoolDomainSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolDomainSpecWriteConnectionSecretToRef
@@ -374,7 +417,9 @@ public partial class V1beta1UserPoolDomainSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UserPoolDomainSpec defines the desired state of UserPoolDomain</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolDomainSpec
@@ -403,7 +448,9 @@ public partial class V1beta1UserPoolDomainSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1UserPoolDomainSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolDomainStatusAtProvider
@@ -456,7 +503,9 @@ public partial class V1beta1UserPoolDomainStatusAtProvider
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolDomainStatusConditions
@@ -485,7 +534,9 @@ public partial class V1beta1UserPoolDomainStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UserPoolDomainStatus defines the observed state of UserPoolDomain.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolDomainStatus
@@ -502,7 +553,9 @@ public partial class V1beta1UserPoolDomainStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UserPoolDomain is the Schema for the UserPoolDomains API. Provides a Cognito User Pool Domain resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -532,3 +585,4 @@ public partial class V1beta1UserPoolDomain : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1UserPoolDomainStatus? Status { get; set; }
 }
+#nullable disable

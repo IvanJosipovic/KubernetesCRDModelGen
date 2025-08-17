@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+#nullable enable
 /// <summary>SubnetServiceEndpointStoragePolicy is the Schema for the SubnetServiceEndpointStoragePolicys API. Manages a Subnet Service Endpoint Storage Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicyList : IKubernetes
     [JsonPropertyName("items")]
     public IList<V1beta1SubnetServiceEndpointStoragePolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecForProviderDefinitionServiceResourcesRefsPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpecForProviderDef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecForProviderDefinitionServiceResourcesRefs
@@ -63,7 +68,9 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpecForProviderDef
     [JsonPropertyName("policy")]
     public V1beta1SubnetServiceEndpointStoragePolicySpecForProviderDefinitionServiceResourcesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecForProviderDefinitionServiceResourcesSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpecForProviderDef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of ResourceGroup in azure to populate serviceResources.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecForProviderDefinitionServiceResourcesSelector
@@ -97,7 +106,9 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpecForProviderDef
     [JsonPropertyName("policy")]
     public V1beta1SubnetServiceEndpointStoragePolicySpecForProviderDefinitionServiceResourcesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecForProviderDefinition
@@ -126,7 +137,9 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpecForProviderDef
     [JsonPropertyName("serviceResourcesSelector")]
     public V1beta1SubnetServiceEndpointStoragePolicySpecForProviderDefinitionServiceResourcesSelector? ServiceResourcesSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecForProviderResourceGroupNameRefPolicy
@@ -139,7 +152,9 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpecForProviderRes
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecForProviderResourceGroupNameRef
@@ -156,7 +171,9 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpecForProviderRes
     [JsonPropertyName("policy")]
     public V1beta1SubnetServiceEndpointStoragePolicySpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecForProviderResourceGroupNameSelectorPolicy
@@ -169,7 +186,9 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpecForProviderRes
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecForProviderResourceGroupNameSelector
@@ -190,7 +209,9 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpecForProviderRes
     [JsonPropertyName("policy")]
     public V1beta1SubnetServiceEndpointStoragePolicySpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecForProvider
@@ -219,7 +240,9 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecInitProviderDefinitionServiceResourcesRefsPolicy
@@ -232,7 +255,9 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpecInitProviderDe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecInitProviderDefinitionServiceResourcesRefs
@@ -249,7 +274,9 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpecInitProviderDe
     [JsonPropertyName("policy")]
     public V1beta1SubnetServiceEndpointStoragePolicySpecInitProviderDefinitionServiceResourcesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecInitProviderDefinitionServiceResourcesSelectorPolicy
@@ -262,7 +289,9 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpecInitProviderDe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of ResourceGroup in azure to populate serviceResources.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecInitProviderDefinitionServiceResourcesSelector
@@ -283,7 +312,9 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpecInitProviderDe
     [JsonPropertyName("policy")]
     public V1beta1SubnetServiceEndpointStoragePolicySpecInitProviderDefinitionServiceResourcesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecInitProviderDefinition
@@ -312,7 +343,9 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpecInitProviderDe
     [JsonPropertyName("serviceResourcesSelector")]
     public V1beta1SubnetServiceEndpointStoragePolicySpecInitProviderDefinitionServiceResourcesSelector? ServiceResourcesSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecInitProvider
@@ -329,7 +362,9 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecProviderConfigRef
@@ -342,7 +377,9 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpecProviderConfig
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecWriteConnectionSecretToRef
@@ -351,7 +388,9 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpecWriteConnectio
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubnetServiceEndpointStoragePolicySpec defines the desired state of SubnetServiceEndpointStoragePolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpec
@@ -376,7 +415,9 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SubnetServiceEndpointStoragePolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetServiceEndpointStoragePolicyStatusAtProviderDefinition
@@ -397,7 +438,9 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicyStatusAtProviderDe
     [JsonPropertyName("serviceResources")]
     public IList<string>? ServiceResources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetServiceEndpointStoragePolicyStatusAtProvider
@@ -422,7 +465,9 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicyStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetServiceEndpointStoragePolicyStatusConditions
@@ -451,7 +496,9 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubnetServiceEndpointStoragePolicyStatus defines the observed state of SubnetServiceEndpointStoragePolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetServiceEndpointStoragePolicyStatus
@@ -468,7 +515,9 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubnetServiceEndpointStoragePolicy is the Schema for the SubnetServiceEndpointStoragePolicys API. Manages a Subnet Service Endpoint Storage Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -498,3 +547,4 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicy : IKubernetesObje
     [JsonPropertyName("status")]
     public V1beta1SubnetServiceEndpointStoragePolicyStatus? Status { get; set; }
 }
+#nullable disable

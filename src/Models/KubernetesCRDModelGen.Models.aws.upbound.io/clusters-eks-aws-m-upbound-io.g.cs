@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.eks.aws.m.upbound.io;
+#nullable enable
 /// <summary>Cluster is the Schema for the Clusters API. Manages an EKS Cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ClusterList : IKubernetesObject<V1ListMeta>, IItems<
     [JsonPropertyName("items")]
     public IList<V1beta1Cluster> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the access config associated with your cluster, see Amazon EKS Access Entries. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderAccessConfig
@@ -46,7 +49,9 @@ public partial class V1beta1ClusterSpecForProviderAccessConfig
     [JsonPropertyName("bootstrapClusterCreatorAdminPermissions")]
     public bool? BootstrapClusterCreatorAdminPermissions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with compute configuration for EKS Auto Mode. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderComputeConfig
@@ -63,7 +68,9 @@ public partial class V1beta1ClusterSpecForProviderComputeConfig
     [JsonPropertyName("nodeRoleArn")]
     public string? NodeRoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with provider for encryption. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderEncryptionConfigProvider
@@ -72,7 +79,9 @@ public partial class V1beta1ClusterSpecForProviderEncryptionConfigProvider
     [JsonPropertyName("keyArn")]
     public string? KeyArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with encryption configuration for the cluster. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderEncryptionConfig
@@ -85,7 +94,9 @@ public partial class V1beta1ClusterSpecForProviderEncryptionConfig
     [JsonPropertyName("resources")]
     public IList<string>? Resources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with elastic load balancing configuration for the cluster. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderKubernetesNetworkConfigElasticLoadBalancing
@@ -94,7 +105,9 @@ public partial class V1beta1ClusterSpecForProviderKubernetesNetworkConfigElastic
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with kubernetes network configuration for the cluster. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderKubernetesNetworkConfig
@@ -111,7 +124,9 @@ public partial class V1beta1ClusterSpecForProviderKubernetesNetworkConfig
     [JsonPropertyName("serviceIpv4Cidr")]
     public string? ServiceIpv4Cidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An object representing the placement configuration for all the control plane instances of your local Amazon EKS cluster on AWS Outpost. The control_plane_placement configuration block supports the following arguments:</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderOutpostConfigControlPlanePlacement
@@ -120,7 +135,9 @@ public partial class V1beta1ClusterSpecForProviderOutpostConfigControlPlanePlace
     [JsonPropertyName("groupName")]
     public string? GroupName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block representing the configuration of your local Amazon EKS cluster on an AWS Outpost. This block isn't available for creating Amazon EKS clusters on the AWS cloud.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderOutpostConfig
@@ -137,7 +154,9 @@ public partial class V1beta1ClusterSpecForProviderOutpostConfig
     [JsonPropertyName("outpostArns")]
     public IList<string>? OutpostArns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with remote node network configuration for EKS Hybrid Nodes. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderRemoteNetworkConfigRemoteNodeNetworks
@@ -146,7 +165,9 @@ public partial class V1beta1ClusterSpecForProviderRemoteNetworkConfigRemoteNodeN
     [JsonPropertyName("cidrs")]
     public IList<string>? Cidrs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with remote pod network configuration for EKS Hybrid Nodes. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderRemoteNetworkConfigRemotePodNetworks
@@ -155,7 +176,9 @@ public partial class V1beta1ClusterSpecForProviderRemoteNetworkConfigRemotePodNe
     [JsonPropertyName("cidrs")]
     public IList<string>? Cidrs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with remote network configuration for EKS Hybrid Nodes. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderRemoteNetworkConfig
@@ -168,7 +191,9 @@ public partial class V1beta1ClusterSpecForProviderRemoteNetworkConfig
     [JsonPropertyName("remotePodNetworks")]
     public V1beta1ClusterSpecForProviderRemoteNetworkConfigRemotePodNetworks? RemotePodNetworks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderRoleArnRefPolicy
@@ -181,7 +206,9 @@ public partial class V1beta1ClusterSpecForProviderRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderRoleArnRef
@@ -198,7 +225,9 @@ public partial class V1beta1ClusterSpecForProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecForProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderRoleArnSelectorPolicy
@@ -211,7 +240,9 @@ public partial class V1beta1ClusterSpecForProviderRoleArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderRoleArnSelector
@@ -232,7 +263,9 @@ public partial class V1beta1ClusterSpecForProviderRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecForProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with block storage configuration for the cluster. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderStorageConfigBlockStorage
@@ -241,7 +274,9 @@ public partial class V1beta1ClusterSpecForProviderStorageConfigBlockStorage
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with storage configuration for EKS Auto Mode. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderStorageConfig
@@ -250,7 +285,9 @@ public partial class V1beta1ClusterSpecForProviderStorageConfig
     [JsonPropertyName("blockStorage")]
     public V1beta1ClusterSpecForProviderStorageConfigBlockStorage? BlockStorage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the support policy to use for the cluster.  See upgrade_policy for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderUpgradePolicy
@@ -259,7 +296,9 @@ public partial class V1beta1ClusterSpecForProviderUpgradePolicy
     [JsonPropertyName("supportType")]
     public string? SupportType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVpcConfigSecurityGroupIdRefsPolicy
@@ -272,7 +311,9 @@ public partial class V1beta1ClusterSpecForProviderVpcConfigSecurityGroupIdRefsPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVpcConfigSecurityGroupIdRefs
@@ -289,7 +330,9 @@ public partial class V1beta1ClusterSpecForProviderVpcConfigSecurityGroupIdRefs
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecForProviderVpcConfigSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVpcConfigSecurityGroupIdSelectorPolicy
@@ -302,7 +345,9 @@ public partial class V1beta1ClusterSpecForProviderVpcConfigSecurityGroupIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVpcConfigSecurityGroupIdSelector
@@ -323,7 +368,9 @@ public partial class V1beta1ClusterSpecForProviderVpcConfigSecurityGroupIdSelect
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecForProviderVpcConfigSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVpcConfigSubnetIdRefsPolicy
@@ -336,7 +383,9 @@ public partial class V1beta1ClusterSpecForProviderVpcConfigSubnetIdRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVpcConfigSubnetIdRefs
@@ -353,7 +402,9 @@ public partial class V1beta1ClusterSpecForProviderVpcConfigSubnetIdRefs
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecForProviderVpcConfigSubnetIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVpcConfigSubnetIdSelectorPolicy
@@ -366,7 +417,9 @@ public partial class V1beta1ClusterSpecForProviderVpcConfigSubnetIdSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVpcConfigSubnetIdSelector
@@ -387,7 +440,9 @@ public partial class V1beta1ClusterSpecForProviderVpcConfigSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecForProviderVpcConfigSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see Cluster VPC Considerations and Cluster Security Group Considerations in the Amazon EKS User Guide. Detailed below. Also contains attributes detailed in the Attributes section.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVpcConfig
@@ -428,7 +483,9 @@ public partial class V1beta1ClusterSpecForProviderVpcConfig
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with zonal shift configuration for the cluster. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderZonalShiftConfig
@@ -437,7 +494,9 @@ public partial class V1beta1ClusterSpecForProviderZonalShiftConfig
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProvider
@@ -518,7 +577,9 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("zonalShiftConfig")]
     public V1beta1ClusterSpecForProviderZonalShiftConfig? ZonalShiftConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the access config associated with your cluster, see Amazon EKS Access Entries. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderAccessConfig
@@ -531,7 +592,9 @@ public partial class V1beta1ClusterSpecInitProviderAccessConfig
     [JsonPropertyName("bootstrapClusterCreatorAdminPermissions")]
     public bool? BootstrapClusterCreatorAdminPermissions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with compute configuration for EKS Auto Mode. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderComputeConfig
@@ -548,7 +611,9 @@ public partial class V1beta1ClusterSpecInitProviderComputeConfig
     [JsonPropertyName("nodeRoleArn")]
     public string? NodeRoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with provider for encryption. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderEncryptionConfigProvider
@@ -557,7 +622,9 @@ public partial class V1beta1ClusterSpecInitProviderEncryptionConfigProvider
     [JsonPropertyName("keyArn")]
     public string? KeyArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with encryption configuration for the cluster. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderEncryptionConfig
@@ -570,7 +637,9 @@ public partial class V1beta1ClusterSpecInitProviderEncryptionConfig
     [JsonPropertyName("resources")]
     public IList<string>? Resources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with elastic load balancing configuration for the cluster. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderKubernetesNetworkConfigElasticLoadBalancing
@@ -579,7 +648,9 @@ public partial class V1beta1ClusterSpecInitProviderKubernetesNetworkConfigElasti
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with kubernetes network configuration for the cluster. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderKubernetesNetworkConfig
@@ -596,7 +667,9 @@ public partial class V1beta1ClusterSpecInitProviderKubernetesNetworkConfig
     [JsonPropertyName("serviceIpv4Cidr")]
     public string? ServiceIpv4Cidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An object representing the placement configuration for all the control plane instances of your local Amazon EKS cluster on AWS Outpost. The control_plane_placement configuration block supports the following arguments:</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderOutpostConfigControlPlanePlacement
@@ -605,7 +678,9 @@ public partial class V1beta1ClusterSpecInitProviderOutpostConfigControlPlanePlac
     [JsonPropertyName("groupName")]
     public string? GroupName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block representing the configuration of your local Amazon EKS cluster on an AWS Outpost. This block isn't available for creating Amazon EKS clusters on the AWS cloud.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderOutpostConfig
@@ -622,7 +697,9 @@ public partial class V1beta1ClusterSpecInitProviderOutpostConfig
     [JsonPropertyName("outpostArns")]
     public IList<string>? OutpostArns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with remote node network configuration for EKS Hybrid Nodes. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderRemoteNetworkConfigRemoteNodeNetworks
@@ -631,7 +708,9 @@ public partial class V1beta1ClusterSpecInitProviderRemoteNetworkConfigRemoteNode
     [JsonPropertyName("cidrs")]
     public IList<string>? Cidrs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with remote pod network configuration for EKS Hybrid Nodes. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderRemoteNetworkConfigRemotePodNetworks
@@ -640,7 +719,9 @@ public partial class V1beta1ClusterSpecInitProviderRemoteNetworkConfigRemotePodN
     [JsonPropertyName("cidrs")]
     public IList<string>? Cidrs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with remote network configuration for EKS Hybrid Nodes. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderRemoteNetworkConfig
@@ -653,7 +734,9 @@ public partial class V1beta1ClusterSpecInitProviderRemoteNetworkConfig
     [JsonPropertyName("remotePodNetworks")]
     public V1beta1ClusterSpecInitProviderRemoteNetworkConfigRemotePodNetworks? RemotePodNetworks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderRoleArnRefPolicy
@@ -666,7 +749,9 @@ public partial class V1beta1ClusterSpecInitProviderRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderRoleArnRef
@@ -683,7 +768,9 @@ public partial class V1beta1ClusterSpecInitProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecInitProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderRoleArnSelectorPolicy
@@ -696,7 +783,9 @@ public partial class V1beta1ClusterSpecInitProviderRoleArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderRoleArnSelector
@@ -717,7 +806,9 @@ public partial class V1beta1ClusterSpecInitProviderRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with block storage configuration for the cluster. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderStorageConfigBlockStorage
@@ -726,7 +817,9 @@ public partial class V1beta1ClusterSpecInitProviderStorageConfigBlockStorage
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with storage configuration for EKS Auto Mode. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderStorageConfig
@@ -735,7 +828,9 @@ public partial class V1beta1ClusterSpecInitProviderStorageConfig
     [JsonPropertyName("blockStorage")]
     public V1beta1ClusterSpecInitProviderStorageConfigBlockStorage? BlockStorage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the support policy to use for the cluster.  See upgrade_policy for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderUpgradePolicy
@@ -744,7 +839,9 @@ public partial class V1beta1ClusterSpecInitProviderUpgradePolicy
     [JsonPropertyName("supportType")]
     public string? SupportType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVpcConfigSecurityGroupIdRefsPolicy
@@ -757,7 +854,9 @@ public partial class V1beta1ClusterSpecInitProviderVpcConfigSecurityGroupIdRefsP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVpcConfigSecurityGroupIdRefs
@@ -774,7 +873,9 @@ public partial class V1beta1ClusterSpecInitProviderVpcConfigSecurityGroupIdRefs
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecInitProviderVpcConfigSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVpcConfigSecurityGroupIdSelectorPolicy
@@ -787,7 +888,9 @@ public partial class V1beta1ClusterSpecInitProviderVpcConfigSecurityGroupIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVpcConfigSecurityGroupIdSelector
@@ -808,7 +911,9 @@ public partial class V1beta1ClusterSpecInitProviderVpcConfigSecurityGroupIdSelec
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecInitProviderVpcConfigSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVpcConfigSubnetIdRefsPolicy
@@ -821,7 +926,9 @@ public partial class V1beta1ClusterSpecInitProviderVpcConfigSubnetIdRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVpcConfigSubnetIdRefs
@@ -838,7 +945,9 @@ public partial class V1beta1ClusterSpecInitProviderVpcConfigSubnetIdRefs
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecInitProviderVpcConfigSubnetIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVpcConfigSubnetIdSelectorPolicy
@@ -851,7 +960,9 @@ public partial class V1beta1ClusterSpecInitProviderVpcConfigSubnetIdSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVpcConfigSubnetIdSelector
@@ -872,7 +983,9 @@ public partial class V1beta1ClusterSpecInitProviderVpcConfigSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecInitProviderVpcConfigSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see Cluster VPC Considerations and Cluster Security Group Considerations in the Amazon EKS User Guide. Detailed below. Also contains attributes detailed in the Attributes section.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVpcConfig
@@ -913,7 +1026,9 @@ public partial class V1beta1ClusterSpecInitProviderVpcConfig
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with zonal shift configuration for the cluster. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderZonalShiftConfig
@@ -922,7 +1037,9 @@ public partial class V1beta1ClusterSpecInitProviderZonalShiftConfig
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProvider
@@ -999,7 +1116,9 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("zonalShiftConfig")]
     public V1beta1ClusterSpecInitProviderZonalShiftConfig? ZonalShiftConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecProviderConfigRef
@@ -1012,7 +1131,9 @@ public partial class V1beta1ClusterSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecWriteConnectionSecretToRef
@@ -1021,7 +1142,9 @@ public partial class V1beta1ClusterSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClusterSpec defines the desired state of Cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpec
@@ -1046,7 +1169,9 @@ public partial class V1beta1ClusterSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ClusterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the access config associated with your cluster, see Amazon EKS Access Entries. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderAccessConfig
@@ -1059,7 +1184,9 @@ public partial class V1beta1ClusterStatusAtProviderAccessConfig
     [JsonPropertyName("bootstrapClusterCreatorAdminPermissions")]
     public bool? BootstrapClusterCreatorAdminPermissions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderCertificateAuthority
@@ -1068,7 +1195,9 @@ public partial class V1beta1ClusterStatusAtProviderCertificateAuthority
     [JsonPropertyName("data")]
     public string? Data { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with compute configuration for EKS Auto Mode. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderComputeConfig
@@ -1085,7 +1214,9 @@ public partial class V1beta1ClusterStatusAtProviderComputeConfig
     [JsonPropertyName("nodeRoleArn")]
     public string? NodeRoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with provider for encryption. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderEncryptionConfigProvider
@@ -1094,7 +1225,9 @@ public partial class V1beta1ClusterStatusAtProviderEncryptionConfigProvider
     [JsonPropertyName("keyArn")]
     public string? KeyArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with encryption configuration for the cluster. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderEncryptionConfig
@@ -1107,7 +1240,9 @@ public partial class V1beta1ClusterStatusAtProviderEncryptionConfig
     [JsonPropertyName("resources")]
     public IList<string>? Resources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderIdentityOidc
@@ -1116,7 +1251,9 @@ public partial class V1beta1ClusterStatusAtProviderIdentityOidc
     [JsonPropertyName("issuer")]
     public string? Issuer { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderIdentity
@@ -1125,7 +1262,9 @@ public partial class V1beta1ClusterStatusAtProviderIdentity
     [JsonPropertyName("oidc")]
     public IList<V1beta1ClusterStatusAtProviderIdentityOidc>? Oidc { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with elastic load balancing configuration for the cluster. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderKubernetesNetworkConfigElasticLoadBalancing
@@ -1134,7 +1273,9 @@ public partial class V1beta1ClusterStatusAtProviderKubernetesNetworkConfigElasti
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with kubernetes network configuration for the cluster. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderKubernetesNetworkConfig
@@ -1155,7 +1296,9 @@ public partial class V1beta1ClusterStatusAtProviderKubernetesNetworkConfig
     [JsonPropertyName("serviceIpv6Cidr")]
     public string? ServiceIpv6Cidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An object representing the placement configuration for all the control plane instances of your local Amazon EKS cluster on AWS Outpost. The control_plane_placement configuration block supports the following arguments:</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderOutpostConfigControlPlanePlacement
@@ -1164,7 +1307,9 @@ public partial class V1beta1ClusterStatusAtProviderOutpostConfigControlPlanePlac
     [JsonPropertyName("groupName")]
     public string? GroupName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block representing the configuration of your local Amazon EKS cluster on an AWS Outpost. This block isn't available for creating Amazon EKS clusters on the AWS cloud.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderOutpostConfig
@@ -1181,7 +1326,9 @@ public partial class V1beta1ClusterStatusAtProviderOutpostConfig
     [JsonPropertyName("outpostArns")]
     public IList<string>? OutpostArns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with remote node network configuration for EKS Hybrid Nodes. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderRemoteNetworkConfigRemoteNodeNetworks
@@ -1190,7 +1337,9 @@ public partial class V1beta1ClusterStatusAtProviderRemoteNetworkConfigRemoteNode
     [JsonPropertyName("cidrs")]
     public IList<string>? Cidrs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with remote pod network configuration for EKS Hybrid Nodes. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderRemoteNetworkConfigRemotePodNetworks
@@ -1199,7 +1348,9 @@ public partial class V1beta1ClusterStatusAtProviderRemoteNetworkConfigRemotePodN
     [JsonPropertyName("cidrs")]
     public IList<string>? Cidrs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with remote network configuration for EKS Hybrid Nodes. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderRemoteNetworkConfig
@@ -1212,7 +1363,9 @@ public partial class V1beta1ClusterStatusAtProviderRemoteNetworkConfig
     [JsonPropertyName("remotePodNetworks")]
     public V1beta1ClusterStatusAtProviderRemoteNetworkConfigRemotePodNetworks? RemotePodNetworks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with block storage configuration for the cluster. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderStorageConfigBlockStorage
@@ -1221,7 +1374,9 @@ public partial class V1beta1ClusterStatusAtProviderStorageConfigBlockStorage
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with storage configuration for EKS Auto Mode. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderStorageConfig
@@ -1230,7 +1385,9 @@ public partial class V1beta1ClusterStatusAtProviderStorageConfig
     [JsonPropertyName("blockStorage")]
     public V1beta1ClusterStatusAtProviderStorageConfigBlockStorage? BlockStorage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the support policy to use for the cluster.  See upgrade_policy for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderUpgradePolicy
@@ -1239,7 +1396,9 @@ public partial class V1beta1ClusterStatusAtProviderUpgradePolicy
     [JsonPropertyName("supportType")]
     public string? SupportType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see Cluster VPC Considerations and Cluster Security Group Considerations in the Amazon EKS User Guide. Detailed below. Also contains attributes detailed in the Attributes section.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderVpcConfig
@@ -1272,7 +1431,9 @@ public partial class V1beta1ClusterStatusAtProviderVpcConfig
     [JsonPropertyName("vpcId")]
     public string? VpcId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with zonal shift configuration for the cluster. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderZonalShiftConfig
@@ -1281,7 +1442,9 @@ public partial class V1beta1ClusterStatusAtProviderZonalShiftConfig
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProvider
@@ -1394,7 +1557,9 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("zonalShiftConfig")]
     public V1beta1ClusterStatusAtProviderZonalShiftConfig? ZonalShiftConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusConditions
@@ -1423,7 +1588,9 @@ public partial class V1beta1ClusterStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClusterStatus defines the observed state of Cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatus
@@ -1440,7 +1607,9 @@ public partial class V1beta1ClusterStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cluster is the Schema for the Clusters API. Manages an EKS Cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1470,3 +1639,4 @@ public partial class V1beta1Cluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     [JsonPropertyName("status")]
     public V1beta1ClusterStatus? Status { get; set; }
 }
+#nullable disable

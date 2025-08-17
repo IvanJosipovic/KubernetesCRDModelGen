@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.elb.aws.upbound.io;
+#nullable enable
 /// <summary>LBCookieStickinessPolicy is the Schema for the LBCookieStickinessPolicys API. Provides a load balancer cookie stickiness policy, which allows an ELB to control the sticky session lifetime of the browser.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LBCookieStickinessPolicyList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1LBCookieStickinessPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBCookieStickinessPolicySpecForProviderLoadBalancerRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1LBCookieStickinessPolicySpecForProviderLoadBalancerR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ELB in elb to populate loadBalancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBCookieStickinessPolicySpecForProviderLoadBalancerRef
@@ -59,7 +64,9 @@ public partial class V1beta1LBCookieStickinessPolicySpecForProviderLoadBalancerR
     [JsonPropertyName("policy")]
     public V1beta1LBCookieStickinessPolicySpecForProviderLoadBalancerRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBCookieStickinessPolicySpecForProviderLoadBalancerSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1LBCookieStickinessPolicySpecForProviderLoadBalancerS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ELB in elb to populate loadBalancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBCookieStickinessPolicySpecForProviderLoadBalancerSelector
@@ -89,7 +98,9 @@ public partial class V1beta1LBCookieStickinessPolicySpecForProviderLoadBalancerS
     [JsonPropertyName("policy")]
     public V1beta1LBCookieStickinessPolicySpecForProviderLoadBalancerSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBCookieStickinessPolicySpecForProvider
@@ -122,7 +133,9 @@ public partial class V1beta1LBCookieStickinessPolicySpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBCookieStickinessPolicySpecInitProviderLoadBalancerRefPolicy
@@ -135,7 +148,9 @@ public partial class V1beta1LBCookieStickinessPolicySpecInitProviderLoadBalancer
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ELB in elb to populate loadBalancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBCookieStickinessPolicySpecInitProviderLoadBalancerRef
@@ -148,7 +163,9 @@ public partial class V1beta1LBCookieStickinessPolicySpecInitProviderLoadBalancer
     [JsonPropertyName("policy")]
     public V1beta1LBCookieStickinessPolicySpecInitProviderLoadBalancerRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBCookieStickinessPolicySpecInitProviderLoadBalancerSelectorPolicy
@@ -161,7 +178,9 @@ public partial class V1beta1LBCookieStickinessPolicySpecInitProviderLoadBalancer
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ELB in elb to populate loadBalancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBCookieStickinessPolicySpecInitProviderLoadBalancerSelector
@@ -178,7 +197,9 @@ public partial class V1beta1LBCookieStickinessPolicySpecInitProviderLoadBalancer
     [JsonPropertyName("policy")]
     public V1beta1LBCookieStickinessPolicySpecInitProviderLoadBalancerSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBCookieStickinessPolicySpecInitProvider
@@ -207,7 +228,9 @@ public partial class V1beta1LBCookieStickinessPolicySpecInitProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBCookieStickinessPolicySpecProviderConfigRefPolicy
@@ -220,7 +243,9 @@ public partial class V1beta1LBCookieStickinessPolicySpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBCookieStickinessPolicySpecProviderConfigRef
@@ -233,7 +258,9 @@ public partial class V1beta1LBCookieStickinessPolicySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1LBCookieStickinessPolicySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBCookieStickinessPolicySpecWriteConnectionSecretToRef
@@ -246,7 +273,9 @@ public partial class V1beta1LBCookieStickinessPolicySpecWriteConnectionSecretToR
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LBCookieStickinessPolicySpec defines the desired state of LBCookieStickinessPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBCookieStickinessPolicySpec
@@ -275,7 +304,9 @@ public partial class V1beta1LBCookieStickinessPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LBCookieStickinessPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBCookieStickinessPolicyStatusAtProvider
@@ -304,7 +335,9 @@ public partial class V1beta1LBCookieStickinessPolicyStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBCookieStickinessPolicyStatusConditions
@@ -333,7 +366,9 @@ public partial class V1beta1LBCookieStickinessPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LBCookieStickinessPolicyStatus defines the observed state of LBCookieStickinessPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBCookieStickinessPolicyStatus
@@ -350,7 +385,9 @@ public partial class V1beta1LBCookieStickinessPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LBCookieStickinessPolicy is the Schema for the LBCookieStickinessPolicys API. Provides a load balancer cookie stickiness policy, which allows an ELB to control the sticky session lifetime of the browser.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -380,3 +417,4 @@ public partial class V1beta1LBCookieStickinessPolicy : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1LBCookieStickinessPolicyStatus? Status { get; set; }
 }
+#nullable disable

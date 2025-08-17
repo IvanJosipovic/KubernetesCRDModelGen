@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.m.upbound.io;
+#nullable enable
 /// <summary>MonitorDataCollectionRuleAssociation is the Schema for the MonitorDataCollectionRuleAssociations API. Manages a Data Collection Rule Association.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MonitorDataCollectionRuleAssociationList : IKubernet
     [JsonPropertyName("items")]
     public IList<V1beta1MonitorDataCollectionRuleAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleAssociationSpecForProviderDataCollectionEndpointIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1MonitorDataCollectionRuleAssociationSpecForProviderD
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MonitorDataCollectionEndpoint in insights to populate dataCollectionEndpointId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleAssociationSpecForProviderDataCollectionEndpointIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1MonitorDataCollectionRuleAssociationSpecForProviderD
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleAssociationSpecForProviderDataCollectionEndpointIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleAssociationSpecForProviderDataCollectionEndpointIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1MonitorDataCollectionRuleAssociationSpecForProviderD
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MonitorDataCollectionEndpoint in insights to populate dataCollectionEndpointId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleAssociationSpecForProviderDataCollectionEndpointIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1MonitorDataCollectionRuleAssociationSpecForProviderD
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleAssociationSpecForProviderDataCollectionEndpointIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleAssociationSpecForProviderDataCollectionRuleIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1MonitorDataCollectionRuleAssociationSpecForProviderD
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MonitorDataCollectionRule in insights to populate dataCollectionRuleId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleAssociationSpecForProviderDataCollectionRuleIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1MonitorDataCollectionRuleAssociationSpecForProviderD
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleAssociationSpecForProviderDataCollectionRuleIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleAssociationSpecForProviderDataCollectionRuleIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1MonitorDataCollectionRuleAssociationSpecForProviderD
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MonitorDataCollectionRule in insights to populate dataCollectionRuleId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleAssociationSpecForProviderDataCollectionRuleIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1MonitorDataCollectionRuleAssociationSpecForProviderD
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleAssociationSpecForProviderDataCollectionRuleIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleAssociationSpecForProviderTargetResourceIdRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1MonitorDataCollectionRuleAssociationSpecForProviderT
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LinuxVirtualMachine in compute to populate targetResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleAssociationSpecForProviderTargetResourceIdRef
@@ -191,7 +212,9 @@ public partial class V1beta1MonitorDataCollectionRuleAssociationSpecForProviderT
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleAssociationSpecForProviderTargetResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleAssociationSpecForProviderTargetResourceIdSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1MonitorDataCollectionRuleAssociationSpecForProviderT
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LinuxVirtualMachine in compute to populate targetResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleAssociationSpecForProviderTargetResourceIdSelector
@@ -225,7 +250,9 @@ public partial class V1beta1MonitorDataCollectionRuleAssociationSpecForProviderT
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleAssociationSpecForProviderTargetResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleAssociationSpecForProvider
@@ -270,7 +297,9 @@ public partial class V1beta1MonitorDataCollectionRuleAssociationSpecForProvider
     [JsonPropertyName("targetResourceIdSelector")]
     public V1beta1MonitorDataCollectionRuleAssociationSpecForProviderTargetResourceIdSelector? TargetResourceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleAssociationSpecInitProviderDataCollectionEndpointIdRefPolicy
@@ -283,7 +312,9 @@ public partial class V1beta1MonitorDataCollectionRuleAssociationSpecInitProvider
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MonitorDataCollectionEndpoint in insights to populate dataCollectionEndpointId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleAssociationSpecInitProviderDataCollectionEndpointIdRef
@@ -300,7 +331,9 @@ public partial class V1beta1MonitorDataCollectionRuleAssociationSpecInitProvider
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleAssociationSpecInitProviderDataCollectionEndpointIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleAssociationSpecInitProviderDataCollectionEndpointIdSelectorPolicy
@@ -313,7 +346,9 @@ public partial class V1beta1MonitorDataCollectionRuleAssociationSpecInitProvider
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MonitorDataCollectionEndpoint in insights to populate dataCollectionEndpointId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleAssociationSpecInitProviderDataCollectionEndpointIdSelector
@@ -334,7 +369,9 @@ public partial class V1beta1MonitorDataCollectionRuleAssociationSpecInitProvider
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleAssociationSpecInitProviderDataCollectionEndpointIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleAssociationSpecInitProviderDataCollectionRuleIdRefPolicy
@@ -347,7 +384,9 @@ public partial class V1beta1MonitorDataCollectionRuleAssociationSpecInitProvider
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MonitorDataCollectionRule in insights to populate dataCollectionRuleId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleAssociationSpecInitProviderDataCollectionRuleIdRef
@@ -364,7 +403,9 @@ public partial class V1beta1MonitorDataCollectionRuleAssociationSpecInitProvider
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleAssociationSpecInitProviderDataCollectionRuleIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleAssociationSpecInitProviderDataCollectionRuleIdSelectorPolicy
@@ -377,7 +418,9 @@ public partial class V1beta1MonitorDataCollectionRuleAssociationSpecInitProvider
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MonitorDataCollectionRule in insights to populate dataCollectionRuleId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleAssociationSpecInitProviderDataCollectionRuleIdSelector
@@ -398,7 +441,9 @@ public partial class V1beta1MonitorDataCollectionRuleAssociationSpecInitProvider
     [JsonPropertyName("policy")]
     public V1beta1MonitorDataCollectionRuleAssociationSpecInitProviderDataCollectionRuleIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleAssociationSpecInitProvider
@@ -431,7 +476,9 @@ public partial class V1beta1MonitorDataCollectionRuleAssociationSpecInitProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleAssociationSpecProviderConfigRef
@@ -444,7 +491,9 @@ public partial class V1beta1MonitorDataCollectionRuleAssociationSpecProviderConf
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleAssociationSpecWriteConnectionSecretToRef
@@ -453,7 +502,9 @@ public partial class V1beta1MonitorDataCollectionRuleAssociationSpecWriteConnect
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitorDataCollectionRuleAssociationSpec defines the desired state of MonitorDataCollectionRuleAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleAssociationSpec
@@ -478,7 +529,9 @@ public partial class V1beta1MonitorDataCollectionRuleAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MonitorDataCollectionRuleAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleAssociationStatusAtProvider
@@ -503,7 +556,9 @@ public partial class V1beta1MonitorDataCollectionRuleAssociationStatusAtProvider
     [JsonPropertyName("targetResourceId")]
     public string? TargetResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleAssociationStatusConditions
@@ -532,7 +587,9 @@ public partial class V1beta1MonitorDataCollectionRuleAssociationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitorDataCollectionRuleAssociationStatus defines the observed state of MonitorDataCollectionRuleAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDataCollectionRuleAssociationStatus
@@ -549,7 +606,9 @@ public partial class V1beta1MonitorDataCollectionRuleAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitorDataCollectionRuleAssociation is the Schema for the MonitorDataCollectionRuleAssociations API. Manages a Data Collection Rule Association.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -579,3 +638,4 @@ public partial class V1beta1MonitorDataCollectionRuleAssociation : IKubernetesOb
     [JsonPropertyName("status")]
     public V1beta1MonitorDataCollectionRuleAssociationStatus? Status { get; set; }
 }
+#nullable disable

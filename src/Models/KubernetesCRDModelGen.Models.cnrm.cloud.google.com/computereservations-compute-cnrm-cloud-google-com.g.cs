@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ComputeReservationList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1ComputeReservation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeReservationSpecSpecificReservationInstancePropertiesGuestAccelerators
@@ -46,7 +49,9 @@ public partial class V1beta1ComputeReservationSpecSpecificReservationInstancePro
     [JsonPropertyName("acceleratorType")]
     public string AcceleratorType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeReservationSpecSpecificReservationInstancePropertiesLocalSsds
@@ -59,7 +64,9 @@ public partial class V1beta1ComputeReservationSpecSpecificReservationInstancePro
     [JsonPropertyName("interface")]
     public string? Interface { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The instance properties for the reservation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeReservationSpecSpecificReservationInstanceProperties
@@ -80,7 +87,9 @@ public partial class V1beta1ComputeReservationSpecSpecificReservationInstancePro
     [JsonPropertyName("minCpuPlatform")]
     public string? MinCpuPlatform { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reservation for instances with specific machine shapes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeReservationSpecSpecificReservation
@@ -97,7 +106,9 @@ public partial class V1beta1ComputeReservationSpecSpecificReservation
     [JsonPropertyName("instanceProperties")]
     public V1beta1ComputeReservationSpecSpecificReservationInstanceProperties InstanceProperties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeReservationSpec
@@ -122,7 +133,9 @@ public partial class V1beta1ComputeReservationSpec
     [JsonPropertyName("zone")]
     public string Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeReservationStatusConditions
@@ -147,7 +160,9 @@ public partial class V1beta1ComputeReservationStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeReservationStatus
@@ -176,7 +191,9 @@ public partial class V1beta1ComputeReservationStatus
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -206,3 +223,4 @@ public partial class V1beta1ComputeReservation : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1ComputeReservationStatus? Status { get; set; }
 }
+#nullable disable

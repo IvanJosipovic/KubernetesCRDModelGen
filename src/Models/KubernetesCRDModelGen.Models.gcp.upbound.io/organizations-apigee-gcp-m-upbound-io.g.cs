@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.gcp.m.upbound.io;
+#nullable enable
 /// <summary>Organization is the Schema for the Organizations API. An</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1OrganizationList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1Organization> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationSpecForProviderAuthorizedNetworkRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1OrganizationSpecForProviderAuthorizedNetworkRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate authorizedNetwork.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationSpecForProviderAuthorizedNetworkRef
@@ -63,7 +68,9 @@ public partial class V1beta1OrganizationSpecForProviderAuthorizedNetworkRef
     [JsonPropertyName("policy")]
     public V1beta1OrganizationSpecForProviderAuthorizedNetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationSpecForProviderAuthorizedNetworkSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1OrganizationSpecForProviderAuthorizedNetworkSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate authorizedNetwork.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationSpecForProviderAuthorizedNetworkSelector
@@ -97,7 +106,9 @@ public partial class V1beta1OrganizationSpecForProviderAuthorizedNetworkSelector
     [JsonPropertyName("policy")]
     public V1beta1OrganizationSpecForProviderAuthorizedNetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationSpecForProviderPropertiesProperty
@@ -110,7 +121,9 @@ public partial class V1beta1OrganizationSpecForProviderPropertiesProperty
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Properties defined in the Apigee organization profile. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationSpecForProviderProperties
@@ -119,7 +132,9 @@ public partial class V1beta1OrganizationSpecForProviderProperties
     [JsonPropertyName("property")]
     public IList<V1beta1OrganizationSpecForProviderPropertiesProperty>? Property { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationSpecForProviderRuntimeDatabaseEncryptionKeyNameRefPolicy
@@ -132,7 +147,9 @@ public partial class V1beta1OrganizationSpecForProviderRuntimeDatabaseEncryption
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CryptoKey in kms to populate runtimeDatabaseEncryptionKeyName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationSpecForProviderRuntimeDatabaseEncryptionKeyNameRef
@@ -149,7 +166,9 @@ public partial class V1beta1OrganizationSpecForProviderRuntimeDatabaseEncryption
     [JsonPropertyName("policy")]
     public V1beta1OrganizationSpecForProviderRuntimeDatabaseEncryptionKeyNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationSpecForProviderRuntimeDatabaseEncryptionKeyNameSelectorPolicy
@@ -162,7 +181,9 @@ public partial class V1beta1OrganizationSpecForProviderRuntimeDatabaseEncryption
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CryptoKey in kms to populate runtimeDatabaseEncryptionKeyName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationSpecForProviderRuntimeDatabaseEncryptionKeyNameSelector
@@ -183,7 +204,9 @@ public partial class V1beta1OrganizationSpecForProviderRuntimeDatabaseEncryption
     [JsonPropertyName("policy")]
     public V1beta1OrganizationSpecForProviderRuntimeDatabaseEncryptionKeyNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationSpecForProvider
@@ -260,7 +283,9 @@ public partial class V1beta1OrganizationSpecForProvider
     [JsonPropertyName("runtimeType")]
     public string? RuntimeType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationSpecInitProviderAuthorizedNetworkRefPolicy
@@ -273,7 +298,9 @@ public partial class V1beta1OrganizationSpecInitProviderAuthorizedNetworkRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate authorizedNetwork.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationSpecInitProviderAuthorizedNetworkRef
@@ -290,7 +317,9 @@ public partial class V1beta1OrganizationSpecInitProviderAuthorizedNetworkRef
     [JsonPropertyName("policy")]
     public V1beta1OrganizationSpecInitProviderAuthorizedNetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationSpecInitProviderAuthorizedNetworkSelectorPolicy
@@ -303,7 +332,9 @@ public partial class V1beta1OrganizationSpecInitProviderAuthorizedNetworkSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate authorizedNetwork.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationSpecInitProviderAuthorizedNetworkSelector
@@ -324,7 +355,9 @@ public partial class V1beta1OrganizationSpecInitProviderAuthorizedNetworkSelecto
     [JsonPropertyName("policy")]
     public V1beta1OrganizationSpecInitProviderAuthorizedNetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationSpecInitProviderPropertiesProperty
@@ -337,7 +370,9 @@ public partial class V1beta1OrganizationSpecInitProviderPropertiesProperty
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Properties defined in the Apigee organization profile. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationSpecInitProviderProperties
@@ -346,7 +381,9 @@ public partial class V1beta1OrganizationSpecInitProviderProperties
     [JsonPropertyName("property")]
     public IList<V1beta1OrganizationSpecInitProviderPropertiesProperty>? Property { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationSpecInitProviderRuntimeDatabaseEncryptionKeyNameRefPolicy
@@ -359,7 +396,9 @@ public partial class V1beta1OrganizationSpecInitProviderRuntimeDatabaseEncryptio
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CryptoKey in kms to populate runtimeDatabaseEncryptionKeyName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationSpecInitProviderRuntimeDatabaseEncryptionKeyNameRef
@@ -376,7 +415,9 @@ public partial class V1beta1OrganizationSpecInitProviderRuntimeDatabaseEncryptio
     [JsonPropertyName("policy")]
     public V1beta1OrganizationSpecInitProviderRuntimeDatabaseEncryptionKeyNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationSpecInitProviderRuntimeDatabaseEncryptionKeyNameSelectorPolicy
@@ -389,7 +430,9 @@ public partial class V1beta1OrganizationSpecInitProviderRuntimeDatabaseEncryptio
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CryptoKey in kms to populate runtimeDatabaseEncryptionKeyName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationSpecInitProviderRuntimeDatabaseEncryptionKeyNameSelector
@@ -410,7 +453,9 @@ public partial class V1beta1OrganizationSpecInitProviderRuntimeDatabaseEncryptio
     [JsonPropertyName("policy")]
     public V1beta1OrganizationSpecInitProviderRuntimeDatabaseEncryptionKeyNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationSpecInitProvider
@@ -487,7 +532,9 @@ public partial class V1beta1OrganizationSpecInitProvider
     [JsonPropertyName("runtimeType")]
     public string? RuntimeType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationSpecProviderConfigRef
@@ -500,7 +547,9 @@ public partial class V1beta1OrganizationSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationSpecWriteConnectionSecretToRef
@@ -509,7 +558,9 @@ public partial class V1beta1OrganizationSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OrganizationSpec defines the desired state of Organization</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationSpec
@@ -534,7 +585,9 @@ public partial class V1beta1OrganizationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1OrganizationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationStatusAtProviderPropertiesProperty
@@ -547,7 +600,9 @@ public partial class V1beta1OrganizationStatusAtProviderPropertiesProperty
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Properties defined in the Apigee organization profile. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationStatusAtProviderProperties
@@ -556,7 +611,9 @@ public partial class V1beta1OrganizationStatusAtProviderProperties
     [JsonPropertyName("property")]
     public IList<V1beta1OrganizationStatusAtProviderPropertiesProperty>? Property { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationStatusAtProvider
@@ -637,7 +694,9 @@ public partial class V1beta1OrganizationStatusAtProvider
     [JsonPropertyName("subscriptionType")]
     public string? SubscriptionType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationStatusConditions
@@ -666,7 +725,9 @@ public partial class V1beta1OrganizationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OrganizationStatus defines the observed state of Organization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationStatus
@@ -683,7 +744,9 @@ public partial class V1beta1OrganizationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Organization is the Schema for the Organizations API. An</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -713,3 +776,4 @@ public partial class V1beta1Organization : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1OrganizationStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.organizations.aws.upbound.io;
+#nullable enable
 /// <summary>DelegatedAdministrator is the Schema for the DelegatedAdministrators API. Provides a resource to manage an AWS Organizations Delegated Administrator.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DelegatedAdministratorList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1DelegatedAdministrator> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DelegatedAdministratorSpecForProviderAccountIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1DelegatedAdministratorSpecForProviderAccountIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in organizations to populate accountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DelegatedAdministratorSpecForProviderAccountIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1DelegatedAdministratorSpecForProviderAccountIdRef
     [JsonPropertyName("policy")]
     public V1beta1DelegatedAdministratorSpecForProviderAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DelegatedAdministratorSpecForProviderAccountIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1DelegatedAdministratorSpecForProviderAccountIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in organizations to populate accountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DelegatedAdministratorSpecForProviderAccountIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1DelegatedAdministratorSpecForProviderAccountIdSelect
     [JsonPropertyName("policy")]
     public V1beta1DelegatedAdministratorSpecForProviderAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DelegatedAdministratorSpecForProvider
@@ -110,7 +121,9 @@ public partial class V1beta1DelegatedAdministratorSpecForProvider
     [JsonPropertyName("servicePrincipal")]
     public string? ServicePrincipal { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DelegatedAdministratorSpecInitProviderAccountIdRefPolicy
@@ -123,7 +136,9 @@ public partial class V1beta1DelegatedAdministratorSpecInitProviderAccountIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in organizations to populate accountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DelegatedAdministratorSpecInitProviderAccountIdRef
@@ -136,7 +151,9 @@ public partial class V1beta1DelegatedAdministratorSpecInitProviderAccountIdRef
     [JsonPropertyName("policy")]
     public V1beta1DelegatedAdministratorSpecInitProviderAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DelegatedAdministratorSpecInitProviderAccountIdSelectorPolicy
@@ -149,7 +166,9 @@ public partial class V1beta1DelegatedAdministratorSpecInitProviderAccountIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in organizations to populate accountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DelegatedAdministratorSpecInitProviderAccountIdSelector
@@ -166,7 +185,9 @@ public partial class V1beta1DelegatedAdministratorSpecInitProviderAccountIdSelec
     [JsonPropertyName("policy")]
     public V1beta1DelegatedAdministratorSpecInitProviderAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DelegatedAdministratorSpecInitProvider
@@ -187,7 +208,9 @@ public partial class V1beta1DelegatedAdministratorSpecInitProvider
     [JsonPropertyName("servicePrincipal")]
     public string? ServicePrincipal { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DelegatedAdministratorSpecProviderConfigRefPolicy
@@ -200,7 +223,9 @@ public partial class V1beta1DelegatedAdministratorSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DelegatedAdministratorSpecProviderConfigRef
@@ -213,7 +238,9 @@ public partial class V1beta1DelegatedAdministratorSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1DelegatedAdministratorSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DelegatedAdministratorSpecWriteConnectionSecretToRef
@@ -226,7 +253,9 @@ public partial class V1beta1DelegatedAdministratorSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DelegatedAdministratorSpec defines the desired state of DelegatedAdministrator</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DelegatedAdministratorSpec
@@ -255,7 +284,9 @@ public partial class V1beta1DelegatedAdministratorSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DelegatedAdministratorSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DelegatedAdministratorStatusAtProvider
@@ -300,7 +331,9 @@ public partial class V1beta1DelegatedAdministratorStatusAtProvider
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DelegatedAdministratorStatusConditions
@@ -329,7 +362,9 @@ public partial class V1beta1DelegatedAdministratorStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DelegatedAdministratorStatus defines the observed state of DelegatedAdministrator.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DelegatedAdministratorStatus
@@ -346,7 +381,9 @@ public partial class V1beta1DelegatedAdministratorStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DelegatedAdministrator is the Schema for the DelegatedAdministrators API. Provides a resource to manage an AWS Organizations Delegated Administrator.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -376,3 +413,4 @@ public partial class V1beta1DelegatedAdministrator : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1DelegatedAdministratorStatus? Status { get; set; }
 }
+#nullable disable

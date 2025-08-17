@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.wafregional.aws.m.upbound.io;
+#nullable enable
 /// <summary>WebACL is the Schema for the WebACLs API. Provides a AWS WAF Regional web access control group (ACL) resource for use with ALB.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1WebACLList : IKubernetesObject<V1ListMeta>, IItems<V
     [JsonPropertyName("items")]
     public IList<V1beta1WebACL> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The action that you want AWS WAF Regional to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderDefaultAction
@@ -42,7 +45,9 @@ public partial class V1beta1WebACLSpecForProviderDefaultAction
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderLoggingConfigurationLogDestinationRefPolicy
@@ -55,7 +60,9 @@ public partial class V1beta1WebACLSpecForProviderLoggingConfigurationLogDestinat
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DeliveryStream in firehose to populate logDestination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderLoggingConfigurationLogDestinationRef
@@ -72,7 +79,9 @@ public partial class V1beta1WebACLSpecForProviderLoggingConfigurationLogDestinat
     [JsonPropertyName("policy")]
     public V1beta1WebACLSpecForProviderLoggingConfigurationLogDestinationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderLoggingConfigurationLogDestinationSelectorPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1WebACLSpecForProviderLoggingConfigurationLogDestinat
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DeliveryStream in firehose to populate logDestination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderLoggingConfigurationLogDestinationSelector
@@ -106,7 +117,9 @@ public partial class V1beta1WebACLSpecForProviderLoggingConfigurationLogDestinat
     [JsonPropertyName("policy")]
     public V1beta1WebACLSpecForProviderLoggingConfigurationLogDestinationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderLoggingConfigurationRedactedFieldsFieldToMatch
@@ -119,7 +132,9 @@ public partial class V1beta1WebACLSpecForProviderLoggingConfigurationRedactedFie
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block containing parts of the request that you want redacted from the logs. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderLoggingConfigurationRedactedFields
@@ -128,7 +143,9 @@ public partial class V1beta1WebACLSpecForProviderLoggingConfigurationRedactedFie
     [JsonPropertyName("fieldToMatch")]
     public IList<V1beta1WebACLSpecForProviderLoggingConfigurationRedactedFieldsFieldToMatch>? FieldToMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block to enable WAF logging. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderLoggingConfiguration
@@ -149,7 +166,9 @@ public partial class V1beta1WebACLSpecForProviderLoggingConfiguration
     [JsonPropertyName("redactedFields")]
     public V1beta1WebACLSpecForProviderLoggingConfigurationRedactedFields? RedactedFields { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block of the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.  Not used if type is GROUP. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderRuleAction
@@ -158,7 +177,9 @@ public partial class V1beta1WebACLSpecForProviderRuleAction
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block of the override the action that a group requests CloudFront or AWS WAF takes when a web request matches the conditions in the rule.  Only used if type is GROUP. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderRuleOverrideAction
@@ -167,7 +188,9 @@ public partial class V1beta1WebACLSpecForProviderRuleOverrideAction
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderRuleRuleIdRefPolicy
@@ -180,7 +203,9 @@ public partial class V1beta1WebACLSpecForProviderRuleRuleIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Rule in wafregional to populate ruleId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderRuleRuleIdRef
@@ -197,7 +222,9 @@ public partial class V1beta1WebACLSpecForProviderRuleRuleIdRef
     [JsonPropertyName("policy")]
     public V1beta1WebACLSpecForProviderRuleRuleIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderRuleRuleIdSelectorPolicy
@@ -210,7 +237,9 @@ public partial class V1beta1WebACLSpecForProviderRuleRuleIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Rule in wafregional to populate ruleId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderRuleRuleIdSelector
@@ -231,7 +260,9 @@ public partial class V1beta1WebACLSpecForProviderRuleRuleIdSelector
     [JsonPropertyName("policy")]
     public V1beta1WebACLSpecForProviderRuleRuleIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderRule
@@ -264,7 +295,9 @@ public partial class V1beta1WebACLSpecForProviderRule
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProvider
@@ -297,7 +330,9 @@ public partial class V1beta1WebACLSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The action that you want AWS WAF Regional to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderDefaultAction
@@ -306,7 +341,9 @@ public partial class V1beta1WebACLSpecInitProviderDefaultAction
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderLoggingConfigurationLogDestinationRefPolicy
@@ -319,7 +356,9 @@ public partial class V1beta1WebACLSpecInitProviderLoggingConfigurationLogDestina
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DeliveryStream in firehose to populate logDestination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderLoggingConfigurationLogDestinationRef
@@ -336,7 +375,9 @@ public partial class V1beta1WebACLSpecInitProviderLoggingConfigurationLogDestina
     [JsonPropertyName("policy")]
     public V1beta1WebACLSpecInitProviderLoggingConfigurationLogDestinationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderLoggingConfigurationLogDestinationSelectorPolicy
@@ -349,7 +390,9 @@ public partial class V1beta1WebACLSpecInitProviderLoggingConfigurationLogDestina
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DeliveryStream in firehose to populate logDestination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderLoggingConfigurationLogDestinationSelector
@@ -370,7 +413,9 @@ public partial class V1beta1WebACLSpecInitProviderLoggingConfigurationLogDestina
     [JsonPropertyName("policy")]
     public V1beta1WebACLSpecInitProviderLoggingConfigurationLogDestinationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderLoggingConfigurationRedactedFieldsFieldToMatch
@@ -383,7 +428,9 @@ public partial class V1beta1WebACLSpecInitProviderLoggingConfigurationRedactedFi
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block containing parts of the request that you want redacted from the logs. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderLoggingConfigurationRedactedFields
@@ -392,7 +439,9 @@ public partial class V1beta1WebACLSpecInitProviderLoggingConfigurationRedactedFi
     [JsonPropertyName("fieldToMatch")]
     public IList<V1beta1WebACLSpecInitProviderLoggingConfigurationRedactedFieldsFieldToMatch>? FieldToMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block to enable WAF logging. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderLoggingConfiguration
@@ -413,7 +462,9 @@ public partial class V1beta1WebACLSpecInitProviderLoggingConfiguration
     [JsonPropertyName("redactedFields")]
     public V1beta1WebACLSpecInitProviderLoggingConfigurationRedactedFields? RedactedFields { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block of the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.  Not used if type is GROUP. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderRuleAction
@@ -422,7 +473,9 @@ public partial class V1beta1WebACLSpecInitProviderRuleAction
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block of the override the action that a group requests CloudFront or AWS WAF takes when a web request matches the conditions in the rule.  Only used if type is GROUP. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderRuleOverrideAction
@@ -431,7 +484,9 @@ public partial class V1beta1WebACLSpecInitProviderRuleOverrideAction
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderRuleRuleIdRefPolicy
@@ -444,7 +499,9 @@ public partial class V1beta1WebACLSpecInitProviderRuleRuleIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Rule in wafregional to populate ruleId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderRuleRuleIdRef
@@ -461,7 +518,9 @@ public partial class V1beta1WebACLSpecInitProviderRuleRuleIdRef
     [JsonPropertyName("policy")]
     public V1beta1WebACLSpecInitProviderRuleRuleIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderRuleRuleIdSelectorPolicy
@@ -474,7 +533,9 @@ public partial class V1beta1WebACLSpecInitProviderRuleRuleIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Rule in wafregional to populate ruleId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderRuleRuleIdSelector
@@ -495,7 +556,9 @@ public partial class V1beta1WebACLSpecInitProviderRuleRuleIdSelector
     [JsonPropertyName("policy")]
     public V1beta1WebACLSpecInitProviderRuleRuleIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderRule
@@ -528,7 +591,9 @@ public partial class V1beta1WebACLSpecInitProviderRule
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProvider
@@ -557,7 +622,9 @@ public partial class V1beta1WebACLSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecProviderConfigRef
@@ -570,7 +637,9 @@ public partial class V1beta1WebACLSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecWriteConnectionSecretToRef
@@ -579,7 +648,9 @@ public partial class V1beta1WebACLSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WebACLSpec defines the desired state of WebACL</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpec
@@ -604,7 +675,9 @@ public partial class V1beta1WebACLSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1WebACLSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The action that you want AWS WAF Regional to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderDefaultAction
@@ -613,7 +686,9 @@ public partial class V1beta1WebACLStatusAtProviderDefaultAction
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderLoggingConfigurationRedactedFieldsFieldToMatch
@@ -626,7 +701,9 @@ public partial class V1beta1WebACLStatusAtProviderLoggingConfigurationRedactedFi
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block containing parts of the request that you want redacted from the logs. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderLoggingConfigurationRedactedFields
@@ -635,7 +712,9 @@ public partial class V1beta1WebACLStatusAtProviderLoggingConfigurationRedactedFi
     [JsonPropertyName("fieldToMatch")]
     public IList<V1beta1WebACLStatusAtProviderLoggingConfigurationRedactedFieldsFieldToMatch>? FieldToMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block to enable WAF logging. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderLoggingConfiguration
@@ -648,7 +727,9 @@ public partial class V1beta1WebACLStatusAtProviderLoggingConfiguration
     [JsonPropertyName("redactedFields")]
     public V1beta1WebACLStatusAtProviderLoggingConfigurationRedactedFields? RedactedFields { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block of the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.  Not used if type is GROUP. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderRuleAction
@@ -657,7 +738,9 @@ public partial class V1beta1WebACLStatusAtProviderRuleAction
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block of the override the action that a group requests CloudFront or AWS WAF takes when a web request matches the conditions in the rule.  Only used if type is GROUP. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderRuleOverrideAction
@@ -666,7 +749,9 @@ public partial class V1beta1WebACLStatusAtProviderRuleOverrideAction
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderRule
@@ -691,7 +776,9 @@ public partial class V1beta1WebACLStatusAtProviderRule
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProvider
@@ -736,7 +823,9 @@ public partial class V1beta1WebACLStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusConditions
@@ -765,7 +854,9 @@ public partial class V1beta1WebACLStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WebACLStatus defines the observed state of WebACL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatus
@@ -782,7 +873,9 @@ public partial class V1beta1WebACLStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WebACL is the Schema for the WebACLs API. Provides a AWS WAF Regional web access control group (ACL) resource for use with ALB.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -812,3 +905,4 @@ public partial class V1beta1WebACL : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     [JsonPropertyName("status")]
     public V1beta1WebACLStatus? Status { get; set; }
 }
+#nullable disable

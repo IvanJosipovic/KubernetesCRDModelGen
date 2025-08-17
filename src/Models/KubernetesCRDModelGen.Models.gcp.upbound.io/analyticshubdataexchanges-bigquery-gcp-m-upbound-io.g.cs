@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigquery.gcp.m.upbound.io;
+#nullable enable
 /// <summary>AnalyticsHubDataExchange is the Schema for the AnalyticsHubDataExchanges API. A Bigquery Analytics Hub data exchange</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,19 +34,25 @@ public partial class V1beta1AnalyticsHubDataExchangeList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1AnalyticsHubDataExchange> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Data Clean Room (DCR), used for privacy-safe and secured data sharing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeSpecForProviderSharingEnvironmentConfigDcrExchangeConfig
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Default Analytics Hub data exchange, used for secured data sharing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeSpecForProviderSharingEnvironmentConfigDefaultExchangeConfig
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configurable data sharing environment option for a data exchange. This field is required for data clean room exchanges. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeSpecForProviderSharingEnvironmentConfig
@@ -58,7 +65,9 @@ public partial class V1beta1AnalyticsHubDataExchangeSpecForProviderSharingEnviro
     [JsonPropertyName("defaultExchangeConfig")]
     public V1beta1AnalyticsHubDataExchangeSpecForProviderSharingEnvironmentConfigDefaultExchangeConfig? DefaultExchangeConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeSpecForProvider
@@ -103,19 +112,25 @@ public partial class V1beta1AnalyticsHubDataExchangeSpecForProvider
     [JsonPropertyName("sharingEnvironmentConfig")]
     public V1beta1AnalyticsHubDataExchangeSpecForProviderSharingEnvironmentConfig? SharingEnvironmentConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Data Clean Room (DCR), used for privacy-safe and secured data sharing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeSpecInitProviderSharingEnvironmentConfigDcrExchangeConfig
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Default Analytics Hub data exchange, used for secured data sharing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeSpecInitProviderSharingEnvironmentConfigDefaultExchangeConfig
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configurable data sharing environment option for a data exchange. This field is required for data clean room exchanges. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeSpecInitProviderSharingEnvironmentConfig
@@ -128,7 +143,9 @@ public partial class V1beta1AnalyticsHubDataExchangeSpecInitProviderSharingEnvir
     [JsonPropertyName("defaultExchangeConfig")]
     public V1beta1AnalyticsHubDataExchangeSpecInitProviderSharingEnvironmentConfigDefaultExchangeConfig? DefaultExchangeConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeSpecInitProvider
@@ -173,7 +190,9 @@ public partial class V1beta1AnalyticsHubDataExchangeSpecInitProvider
     [JsonPropertyName("sharingEnvironmentConfig")]
     public V1beta1AnalyticsHubDataExchangeSpecInitProviderSharingEnvironmentConfig? SharingEnvironmentConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeSpecProviderConfigRef
@@ -186,7 +205,9 @@ public partial class V1beta1AnalyticsHubDataExchangeSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeSpecWriteConnectionSecretToRef
@@ -195,7 +216,9 @@ public partial class V1beta1AnalyticsHubDataExchangeSpecWriteConnectionSecretToR
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AnalyticsHubDataExchangeSpec defines the desired state of AnalyticsHubDataExchange</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeSpec
@@ -220,19 +243,25 @@ public partial class V1beta1AnalyticsHubDataExchangeSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AnalyticsHubDataExchangeSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Data Clean Room (DCR), used for privacy-safe and secured data sharing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeStatusAtProviderSharingEnvironmentConfigDcrExchangeConfig
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Default Analytics Hub data exchange, used for secured data sharing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeStatusAtProviderSharingEnvironmentConfigDefaultExchangeConfig
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configurable data sharing environment option for a data exchange. This field is required for data clean room exchanges. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeStatusAtProviderSharingEnvironmentConfig
@@ -245,7 +274,9 @@ public partial class V1beta1AnalyticsHubDataExchangeStatusAtProviderSharingEnvir
     [JsonPropertyName("defaultExchangeConfig")]
     public V1beta1AnalyticsHubDataExchangeStatusAtProviderSharingEnvironmentConfigDefaultExchangeConfig? DefaultExchangeConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeStatusAtProvider
@@ -302,7 +333,9 @@ public partial class V1beta1AnalyticsHubDataExchangeStatusAtProvider
     [JsonPropertyName("sharingEnvironmentConfig")]
     public V1beta1AnalyticsHubDataExchangeStatusAtProviderSharingEnvironmentConfig? SharingEnvironmentConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeStatusConditions
@@ -331,7 +364,9 @@ public partial class V1beta1AnalyticsHubDataExchangeStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AnalyticsHubDataExchangeStatus defines the observed state of AnalyticsHubDataExchange.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeStatus
@@ -348,7 +383,9 @@ public partial class V1beta1AnalyticsHubDataExchangeStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AnalyticsHubDataExchange is the Schema for the AnalyticsHubDataExchanges API. A Bigquery Analytics Hub data exchange</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -378,3 +415,4 @@ public partial class V1beta1AnalyticsHubDataExchange : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1AnalyticsHubDataExchangeStatus? Status { get; set; }
 }
+#nullable disable

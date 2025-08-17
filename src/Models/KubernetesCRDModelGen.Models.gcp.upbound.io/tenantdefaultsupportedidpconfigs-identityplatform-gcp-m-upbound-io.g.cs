@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identityplatform.gcp.m.upbound.io;
+#nullable enable
 /// <summary>TenantDefaultSupportedIdPConfig is the Schema for the TenantDefaultSupportedIdPConfigs API. Configurations options for the tenant for authenticating with a the standard set of Identity Toolkit-trusted IDPs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigList : IKubernetesObj
     [JsonPropertyName("items")]
     public IList<V1beta1TenantDefaultSupportedIdPConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OAuth client ID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecForProviderClientIdSecretRef
@@ -46,7 +49,9 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecForProviderClient
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OAuth client secret</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecForProviderClientSecretSecretRef
@@ -59,7 +64,9 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecForProviderClient
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecForProviderTenantRefPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecForProviderTenant
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Tenant in identityplatform to populate tenant.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecForProviderTenantRef
@@ -89,7 +98,9 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecForProviderTenant
     [JsonPropertyName("policy")]
     public V1beta1TenantDefaultSupportedIdPConfigSpecForProviderTenantRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecForProviderTenantSelectorPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecForProviderTenant
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Tenant in identityplatform to populate tenant.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecForProviderTenantSelector
@@ -123,7 +136,9 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecForProviderTenant
     [JsonPropertyName("policy")]
     public V1beta1TenantDefaultSupportedIdPConfigSpecForProviderTenantSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecForProvider
@@ -160,7 +175,9 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecForProvider
     [JsonPropertyName("tenantSelector")]
     public V1beta1TenantDefaultSupportedIdPConfigSpecForProviderTenantSelector? TenantSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OAuth client ID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderClientIdSecretRef
@@ -173,7 +190,9 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderClien
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OAuth client secret</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderClientSecretSecretRef
@@ -186,7 +205,9 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderClien
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderTenantRefPolicy
@@ -199,7 +220,9 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderTenan
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Tenant in identityplatform to populate tenant.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderTenantRef
@@ -216,7 +239,9 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderTenan
     [JsonPropertyName("policy")]
     public V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderTenantRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderTenantSelectorPolicy
@@ -229,7 +254,9 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderTenan
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Tenant in identityplatform to populate tenant.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderTenantSelector
@@ -250,7 +277,9 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderTenan
     [JsonPropertyName("policy")]
     public V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderTenantSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecInitProvider
@@ -287,7 +316,9 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecInitProvider
     [JsonPropertyName("tenantSelector")]
     public V1beta1TenantDefaultSupportedIdPConfigSpecInitProviderTenantSelector? TenantSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecProviderConfigRef
@@ -300,7 +331,9 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecWriteConnectionSecretToRef
@@ -309,7 +342,9 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpecWriteConnectionSe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TenantDefaultSupportedIdPConfigSpec defines the desired state of TenantDefaultSupportedIdPConfig</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpec
@@ -334,7 +369,9 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TenantDefaultSupportedIdPConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigStatusAtProvider
@@ -363,7 +400,9 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigStatusAtProvider
     [JsonPropertyName("tenant")]
     public string? Tenant { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigStatusConditions
@@ -392,7 +431,9 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TenantDefaultSupportedIdPConfigStatus defines the observed state of TenantDefaultSupportedIdPConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigStatus
@@ -409,7 +450,9 @@ public partial class V1beta1TenantDefaultSupportedIdPConfigStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TenantDefaultSupportedIdPConfig is the Schema for the TenantDefaultSupportedIdPConfigs API. Configurations options for the tenant for authenticating with a the standard set of Identity Toolkit-trusted IDPs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -439,3 +482,4 @@ public partial class V1beta1TenantDefaultSupportedIdPConfig : IKubernetesObject<
     [JsonPropertyName("status")]
     public V1beta1TenantDefaultSupportedIdPConfigStatus? Status { get; set; }
 }
+#nullable disable

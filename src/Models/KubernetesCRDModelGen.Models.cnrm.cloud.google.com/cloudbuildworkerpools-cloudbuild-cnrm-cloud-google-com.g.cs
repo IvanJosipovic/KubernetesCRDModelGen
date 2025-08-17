@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudbuild.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>CloudBuildWorkerPool is the Schema for the CloudBuild WorkerPool API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1CloudBuildWorkerPoolList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1CloudBuildWorkerPool> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The network definition that the workers are peered to. If this section is left empty, the workers will be peered to `WorkerPool.project_id` on the service producer network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildWorkerPoolSpecPrivatePoolV1ConfigNetworkConfigPeeredNetworkRef
@@ -50,7 +53,9 @@ public partial class V1beta1CloudBuildWorkerPoolSpecPrivatePoolV1ConfigNetworkCo
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Network configuration for the pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildWorkerPoolSpecPrivatePoolV1ConfigNetworkConfig
@@ -67,7 +72,9 @@ public partial class V1beta1CloudBuildWorkerPoolSpecPrivatePoolV1ConfigNetworkCo
     [JsonPropertyName("peeredNetworkRef")]
     public V1beta1CloudBuildWorkerPoolSpecPrivatePoolV1ConfigNetworkConfigPeeredNetworkRef? PeeredNetworkRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Machine configuration for the workers in the pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildWorkerPoolSpecPrivatePoolV1ConfigWorkerConfig
@@ -80,7 +87,9 @@ public partial class V1beta1CloudBuildWorkerPoolSpecPrivatePoolV1ConfigWorkerCon
     [JsonPropertyName("machineType")]
     public string? MachineType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Legacy Private Pool configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildWorkerPoolSpecPrivatePoolV1Config
@@ -93,7 +102,9 @@ public partial class V1beta1CloudBuildWorkerPoolSpecPrivatePoolV1Config
     [JsonPropertyName("workerConfig")]
     public V1beta1CloudBuildWorkerPoolSpecPrivatePoolV1ConfigWorkerConfig WorkerConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildWorkerPoolSpecProjectRef
@@ -114,7 +125,9 @@ public partial class V1beta1CloudBuildWorkerPoolSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CloudBuildWorkerPoolSpec defines the desired state of Instance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildWorkerPoolSpec
@@ -139,7 +152,9 @@ public partial class V1beta1CloudBuildWorkerPoolSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildWorkerPoolStatusConditions
@@ -164,7 +179,9 @@ public partial class V1beta1CloudBuildWorkerPoolStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Network configuration for the pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildWorkerPoolStatusObservedStateNetworkConfig
@@ -181,7 +198,9 @@ public partial class V1beta1CloudBuildWorkerPoolStatusObservedStateNetworkConfig
     [JsonPropertyName("peeredNetworkIPRange")]
     public string? PeeredNetworkIPRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Machine configuration for the workers in the pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildWorkerPoolStatusObservedStateWorkerConfig
@@ -194,7 +213,9 @@ public partial class V1beta1CloudBuildWorkerPoolStatusObservedStateWorkerConfig
     [JsonPropertyName("machineType")]
     public string? MachineType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildWorkerPoolStatusObservedState
@@ -219,7 +240,9 @@ public partial class V1beta1CloudBuildWorkerPoolStatusObservedState
     [JsonPropertyName("workerConfig")]
     public V1beta1CloudBuildWorkerPoolStatusObservedStateWorkerConfig WorkerConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CloudBuildWorkerPoolStatus defines the observed state of Instance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildWorkerPoolStatus
@@ -240,7 +263,9 @@ public partial class V1beta1CloudBuildWorkerPoolStatus
     [JsonPropertyName("observedState")]
     public V1beta1CloudBuildWorkerPoolStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CloudBuildWorkerPool is the Schema for the CloudBuild WorkerPool API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -270,3 +295,4 @@ public partial class V1beta1CloudBuildWorkerPool : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1CloudBuildWorkerPoolStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identityplatform.gcp.m.upbound.io;
+#nullable enable
 /// <summary>TenantInboundSAMLConfig is the Schema for the TenantInboundSAMLConfigs API. Inbound SAML configuration for a Identity Toolkit tenant.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TenantInboundSAMLConfigList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1TenantInboundSAMLConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>(Output) The x509 certificate</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantInboundSAMLConfigSpecForProviderIdpConfigIdpCertificatesX509CertificateSecretRef
@@ -46,7 +49,9 @@ public partial class V1beta1TenantInboundSAMLConfigSpecForProviderIdpConfigIdpCe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantInboundSAMLConfigSpecForProviderIdpConfigIdpCertificates
@@ -55,7 +60,9 @@ public partial class V1beta1TenantInboundSAMLConfigSpecForProviderIdpConfigIdpCe
     [JsonPropertyName("x509CertificateSecretRef")]
     public V1beta1TenantInboundSAMLConfigSpecForProviderIdpConfigIdpCertificatesX509CertificateSecretRef? X509CertificateSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SAML IdP configuration when the project acts as the relying party Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantInboundSAMLConfigSpecForProviderIdpConfig
@@ -76,7 +83,9 @@ public partial class V1beta1TenantInboundSAMLConfigSpecForProviderIdpConfig
     [JsonPropertyName("ssoUrl")]
     public string? SsoUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an authentication assertion issued by a SAML identity provider. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantInboundSAMLConfigSpecForProviderSpConfig
@@ -89,7 +98,9 @@ public partial class V1beta1TenantInboundSAMLConfigSpecForProviderSpConfig
     [JsonPropertyName("spEntityId")]
     public string? SpEntityId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantInboundSAMLConfigSpecForProviderTenantRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1TenantInboundSAMLConfigSpecForProviderTenantRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Tenant in identityplatform to populate tenant.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantInboundSAMLConfigSpecForProviderTenantRef
@@ -119,7 +132,9 @@ public partial class V1beta1TenantInboundSAMLConfigSpecForProviderTenantRef
     [JsonPropertyName("policy")]
     public V1beta1TenantInboundSAMLConfigSpecForProviderTenantRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantInboundSAMLConfigSpecForProviderTenantSelectorPolicy
@@ -132,7 +147,9 @@ public partial class V1beta1TenantInboundSAMLConfigSpecForProviderTenantSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Tenant in identityplatform to populate tenant.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantInboundSAMLConfigSpecForProviderTenantSelector
@@ -153,7 +170,9 @@ public partial class V1beta1TenantInboundSAMLConfigSpecForProviderTenantSelector
     [JsonPropertyName("policy")]
     public V1beta1TenantInboundSAMLConfigSpecForProviderTenantSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantInboundSAMLConfigSpecForProvider
@@ -194,7 +213,9 @@ public partial class V1beta1TenantInboundSAMLConfigSpecForProvider
     [JsonPropertyName("tenantSelector")]
     public V1beta1TenantInboundSAMLConfigSpecForProviderTenantSelector? TenantSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>(Output) The x509 certificate</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantInboundSAMLConfigSpecInitProviderIdpConfigIdpCertificatesX509CertificateSecretRef
@@ -207,7 +228,9 @@ public partial class V1beta1TenantInboundSAMLConfigSpecInitProviderIdpConfigIdpC
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantInboundSAMLConfigSpecInitProviderIdpConfigIdpCertificates
@@ -216,7 +239,9 @@ public partial class V1beta1TenantInboundSAMLConfigSpecInitProviderIdpConfigIdpC
     [JsonPropertyName("x509CertificateSecretRef")]
     public V1beta1TenantInboundSAMLConfigSpecInitProviderIdpConfigIdpCertificatesX509CertificateSecretRef? X509CertificateSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SAML IdP configuration when the project acts as the relying party Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantInboundSAMLConfigSpecInitProviderIdpConfig
@@ -237,7 +262,9 @@ public partial class V1beta1TenantInboundSAMLConfigSpecInitProviderIdpConfig
     [JsonPropertyName("ssoUrl")]
     public string? SsoUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an authentication assertion issued by a SAML identity provider. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantInboundSAMLConfigSpecInitProviderSpConfig
@@ -250,7 +277,9 @@ public partial class V1beta1TenantInboundSAMLConfigSpecInitProviderSpConfig
     [JsonPropertyName("spEntityId")]
     public string? SpEntityId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantInboundSAMLConfigSpecInitProviderTenantRefPolicy
@@ -263,7 +292,9 @@ public partial class V1beta1TenantInboundSAMLConfigSpecInitProviderTenantRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Tenant in identityplatform to populate tenant.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantInboundSAMLConfigSpecInitProviderTenantRef
@@ -280,7 +311,9 @@ public partial class V1beta1TenantInboundSAMLConfigSpecInitProviderTenantRef
     [JsonPropertyName("policy")]
     public V1beta1TenantInboundSAMLConfigSpecInitProviderTenantRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantInboundSAMLConfigSpecInitProviderTenantSelectorPolicy
@@ -293,7 +326,9 @@ public partial class V1beta1TenantInboundSAMLConfigSpecInitProviderTenantSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Tenant in identityplatform to populate tenant.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantInboundSAMLConfigSpecInitProviderTenantSelector
@@ -314,7 +349,9 @@ public partial class V1beta1TenantInboundSAMLConfigSpecInitProviderTenantSelecto
     [JsonPropertyName("policy")]
     public V1beta1TenantInboundSAMLConfigSpecInitProviderTenantSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantInboundSAMLConfigSpecInitProvider
@@ -355,7 +392,9 @@ public partial class V1beta1TenantInboundSAMLConfigSpecInitProvider
     [JsonPropertyName("tenantSelector")]
     public V1beta1TenantInboundSAMLConfigSpecInitProviderTenantSelector? TenantSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantInboundSAMLConfigSpecProviderConfigRef
@@ -368,7 +407,9 @@ public partial class V1beta1TenantInboundSAMLConfigSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantInboundSAMLConfigSpecWriteConnectionSecretToRef
@@ -377,7 +418,9 @@ public partial class V1beta1TenantInboundSAMLConfigSpecWriteConnectionSecretToRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TenantInboundSAMLConfigSpec defines the desired state of TenantInboundSAMLConfig</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantInboundSAMLConfigSpec
@@ -402,7 +445,9 @@ public partial class V1beta1TenantInboundSAMLConfigSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TenantInboundSAMLConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>(Output) The x509 certificate</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantInboundSAMLConfigStatusAtProviderIdpConfigIdpCertificatesX509CertificateSecretRef
@@ -415,7 +460,9 @@ public partial class V1beta1TenantInboundSAMLConfigStatusAtProviderIdpConfigIdpC
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantInboundSAMLConfigStatusAtProviderIdpConfigIdpCertificates
@@ -424,7 +471,9 @@ public partial class V1beta1TenantInboundSAMLConfigStatusAtProviderIdpConfigIdpC
     [JsonPropertyName("x509CertificateSecretRef")]
     public V1beta1TenantInboundSAMLConfigStatusAtProviderIdpConfigIdpCertificatesX509CertificateSecretRef? X509CertificateSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SAML IdP configuration when the project acts as the relying party Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantInboundSAMLConfigStatusAtProviderIdpConfig
@@ -445,7 +494,9 @@ public partial class V1beta1TenantInboundSAMLConfigStatusAtProviderIdpConfig
     [JsonPropertyName("ssoUrl")]
     public string? SsoUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantInboundSAMLConfigStatusAtProviderSpConfigSpCertificates
@@ -454,7 +505,9 @@ public partial class V1beta1TenantInboundSAMLConfigStatusAtProviderSpConfigSpCer
     [JsonPropertyName("x509Certificate")]
     public string? X509Certificate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an authentication assertion issued by a SAML identity provider. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantInboundSAMLConfigStatusAtProviderSpConfig
@@ -471,7 +524,9 @@ public partial class V1beta1TenantInboundSAMLConfigStatusAtProviderSpConfig
     [JsonPropertyName("spEntityId")]
     public string? SpEntityId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantInboundSAMLConfigStatusAtProvider
@@ -508,7 +563,9 @@ public partial class V1beta1TenantInboundSAMLConfigStatusAtProvider
     [JsonPropertyName("tenant")]
     public string? Tenant { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantInboundSAMLConfigStatusConditions
@@ -537,7 +594,9 @@ public partial class V1beta1TenantInboundSAMLConfigStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TenantInboundSAMLConfigStatus defines the observed state of TenantInboundSAMLConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantInboundSAMLConfigStatus
@@ -554,7 +613,9 @@ public partial class V1beta1TenantInboundSAMLConfigStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TenantInboundSAMLConfig is the Schema for the TenantInboundSAMLConfigs API. Inbound SAML configuration for a Identity Toolkit tenant.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -584,3 +645,4 @@ public partial class V1beta1TenantInboundSAMLConfig : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1TenantInboundSAMLConfigStatus? Status { get; set; }
 }
+#nullable disable

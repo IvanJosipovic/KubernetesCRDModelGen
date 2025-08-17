@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.m.upbound.io;
+#nullable enable
 /// <summary>InstanceGroupManager is the Schema for the InstanceGroupManagers API. Manages an Instance Group within GCE.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1InstanceGroupManagerList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1InstanceGroupManager> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Properties to set on all instances in the group. After setting allInstancesConfig on the group, you must update the group's instances to apply the configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecForProviderAllInstancesConfig
@@ -46,7 +49,9 @@ public partial class V1beta1InstanceGroupManagerSpecForProviderAllInstancesConfi
     [JsonPropertyName("metadata")]
     public IDictionary<string, string>? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecForProviderAutoHealingPoliciesHealthCheckRefPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1InstanceGroupManagerSpecForProviderAutoHealingPolici
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a HealthCheck in compute to populate healthCheck.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecForProviderAutoHealingPoliciesHealthCheckRef
@@ -76,7 +83,9 @@ public partial class V1beta1InstanceGroupManagerSpecForProviderAutoHealingPolici
     [JsonPropertyName("policy")]
     public V1beta1InstanceGroupManagerSpecForProviderAutoHealingPoliciesHealthCheckRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecForProviderAutoHealingPoliciesHealthCheckSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1InstanceGroupManagerSpecForProviderAutoHealingPolici
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a HealthCheck in compute to populate healthCheck.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecForProviderAutoHealingPoliciesHealthCheckSelector
@@ -110,7 +121,9 @@ public partial class V1beta1InstanceGroupManagerSpecForProviderAutoHealingPolici
     [JsonPropertyName("policy")]
     public V1beta1InstanceGroupManagerSpecForProviderAutoHealingPoliciesHealthCheckSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The autohealing policies for this managed instance group. You can specify only one value. Structure is documented below. For more information, see the official documentation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecForProviderAutoHealingPolicies
@@ -131,7 +144,9 @@ public partial class V1beta1InstanceGroupManagerSpecForProviderAutoHealingPolici
     [JsonPropertyName("initialDelaySec")]
     public double? InitialDelaySec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecForProviderInstanceLifecyclePolicy
@@ -144,7 +159,9 @@ public partial class V1beta1InstanceGroupManagerSpecForProviderInstanceLifecycle
     [JsonPropertyName("forceUpdateOnRepair")]
     public string? ForceUpdateOnRepair { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecForProviderNamedPort
@@ -157,7 +174,9 @@ public partial class V1beta1InstanceGroupManagerSpecForProviderNamedPort
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecForProviderResourcePoliciesWorkloadPolicyRefPolicy
@@ -170,7 +189,9 @@ public partial class V1beta1InstanceGroupManagerSpecForProviderResourcePoliciesW
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourcePolicy in compute to populate workloadPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecForProviderResourcePoliciesWorkloadPolicyRef
@@ -187,7 +208,9 @@ public partial class V1beta1InstanceGroupManagerSpecForProviderResourcePoliciesW
     [JsonPropertyName("policy")]
     public V1beta1InstanceGroupManagerSpecForProviderResourcePoliciesWorkloadPolicyRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecForProviderResourcePoliciesWorkloadPolicySelectorPolicy
@@ -200,7 +223,9 @@ public partial class V1beta1InstanceGroupManagerSpecForProviderResourcePoliciesW
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourcePolicy in compute to populate workloadPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecForProviderResourcePoliciesWorkloadPolicySelector
@@ -221,7 +246,9 @@ public partial class V1beta1InstanceGroupManagerSpecForProviderResourcePoliciesW
     [JsonPropertyName("policy")]
     public V1beta1InstanceGroupManagerSpecForProviderResourcePoliciesWorkloadPolicySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Resource policies for this managed instance group. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecForProviderResourcePolicies
@@ -238,7 +265,9 @@ public partial class V1beta1InstanceGroupManagerSpecForProviderResourcePolicies
     [JsonPropertyName("workloadPolicySelector")]
     public V1beta1InstanceGroupManagerSpecForProviderResourcePoliciesWorkloadPolicySelector? WorkloadPolicySelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The standby policy for stopped and suspended instances. Structure is documented below. For more information, see the official documentation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecForProviderStandbyPolicy
@@ -251,7 +280,9 @@ public partial class V1beta1InstanceGroupManagerSpecForProviderStandbyPolicy
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecForProviderStatefulDisk
@@ -264,7 +295,9 @@ public partial class V1beta1InstanceGroupManagerSpecForProviderStatefulDisk
     [JsonPropertyName("deviceName")]
     public string? DeviceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecForProviderStatefulExternalIp
@@ -277,7 +310,9 @@ public partial class V1beta1InstanceGroupManagerSpecForProviderStatefulExternalI
     [JsonPropertyName("interfaceName")]
     public string? InterfaceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecForProviderStatefulInternalIp
@@ -290,7 +325,9 @@ public partial class V1beta1InstanceGroupManagerSpecForProviderStatefulInternalI
     [JsonPropertyName("interfaceName")]
     public string? InterfaceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecForProviderTargetPoolsRefsPolicy
@@ -303,7 +340,9 @@ public partial class V1beta1InstanceGroupManagerSpecForProviderTargetPoolsRefsPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecForProviderTargetPoolsRefs
@@ -320,7 +359,9 @@ public partial class V1beta1InstanceGroupManagerSpecForProviderTargetPoolsRefs
     [JsonPropertyName("policy")]
     public V1beta1InstanceGroupManagerSpecForProviderTargetPoolsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecForProviderTargetPoolsSelectorPolicy
@@ -333,7 +374,9 @@ public partial class V1beta1InstanceGroupManagerSpecForProviderTargetPoolsSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of TargetPool in compute to populate targetPools.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecForProviderTargetPoolsSelector
@@ -354,7 +397,9 @@ public partial class V1beta1InstanceGroupManagerSpecForProviderTargetPoolsSelect
     [JsonPropertyName("policy")]
     public V1beta1InstanceGroupManagerSpecForProviderTargetPoolsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The update policy for this managed instance group. Structure is documented below. For more information, see the official documentation and API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecForProviderUpdatePolicy
@@ -391,7 +436,9 @@ public partial class V1beta1InstanceGroupManagerSpecForProviderUpdatePolicy
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecForProviderVersionInstanceTemplateRefPolicy
@@ -404,7 +451,9 @@ public partial class V1beta1InstanceGroupManagerSpecForProviderVersionInstanceTe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a InstanceTemplate in compute to populate instanceTemplate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecForProviderVersionInstanceTemplateRef
@@ -421,7 +470,9 @@ public partial class V1beta1InstanceGroupManagerSpecForProviderVersionInstanceTe
     [JsonPropertyName("policy")]
     public V1beta1InstanceGroupManagerSpecForProviderVersionInstanceTemplateRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecForProviderVersionInstanceTemplateSelectorPolicy
@@ -434,7 +485,9 @@ public partial class V1beta1InstanceGroupManagerSpecForProviderVersionInstanceTe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a InstanceTemplate in compute to populate instanceTemplate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecForProviderVersionInstanceTemplateSelector
@@ -455,7 +508,9 @@ public partial class V1beta1InstanceGroupManagerSpecForProviderVersionInstanceTe
     [JsonPropertyName("policy")]
     public V1beta1InstanceGroupManagerSpecForProviderVersionInstanceTemplateSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>- The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecForProviderVersionTargetSize
@@ -468,7 +523,9 @@ public partial class V1beta1InstanceGroupManagerSpecForProviderVersionTargetSize
     [JsonPropertyName("percent")]
     public double? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecForProviderVersion
@@ -493,7 +550,9 @@ public partial class V1beta1InstanceGroupManagerSpecForProviderVersion
     [JsonPropertyName("targetSize")]
     public V1beta1InstanceGroupManagerSpecForProviderVersionTargetSize? TargetSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecForProvider
@@ -594,7 +653,9 @@ public partial class V1beta1InstanceGroupManagerSpecForProvider
     [JsonPropertyName("zone")]
     public string Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Properties to set on all instances in the group. After setting allInstancesConfig on the group, you must update the group's instances to apply the configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecInitProviderAllInstancesConfig
@@ -607,7 +668,9 @@ public partial class V1beta1InstanceGroupManagerSpecInitProviderAllInstancesConf
     [JsonPropertyName("metadata")]
     public IDictionary<string, string>? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecInitProviderAutoHealingPoliciesHealthCheckRefPolicy
@@ -620,7 +683,9 @@ public partial class V1beta1InstanceGroupManagerSpecInitProviderAutoHealingPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a HealthCheck in compute to populate healthCheck.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecInitProviderAutoHealingPoliciesHealthCheckRef
@@ -637,7 +702,9 @@ public partial class V1beta1InstanceGroupManagerSpecInitProviderAutoHealingPolic
     [JsonPropertyName("policy")]
     public V1beta1InstanceGroupManagerSpecInitProviderAutoHealingPoliciesHealthCheckRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecInitProviderAutoHealingPoliciesHealthCheckSelectorPolicy
@@ -650,7 +717,9 @@ public partial class V1beta1InstanceGroupManagerSpecInitProviderAutoHealingPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a HealthCheck in compute to populate healthCheck.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecInitProviderAutoHealingPoliciesHealthCheckSelector
@@ -671,7 +740,9 @@ public partial class V1beta1InstanceGroupManagerSpecInitProviderAutoHealingPolic
     [JsonPropertyName("policy")]
     public V1beta1InstanceGroupManagerSpecInitProviderAutoHealingPoliciesHealthCheckSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The autohealing policies for this managed instance group. You can specify only one value. Structure is documented below. For more information, see the official documentation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecInitProviderAutoHealingPolicies
@@ -692,7 +763,9 @@ public partial class V1beta1InstanceGroupManagerSpecInitProviderAutoHealingPolic
     [JsonPropertyName("initialDelaySec")]
     public double? InitialDelaySec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecInitProviderInstanceLifecyclePolicy
@@ -705,7 +778,9 @@ public partial class V1beta1InstanceGroupManagerSpecInitProviderInstanceLifecycl
     [JsonPropertyName("forceUpdateOnRepair")]
     public string? ForceUpdateOnRepair { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecInitProviderNamedPort
@@ -718,7 +793,9 @@ public partial class V1beta1InstanceGroupManagerSpecInitProviderNamedPort
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecInitProviderResourcePoliciesWorkloadPolicyRefPolicy
@@ -731,7 +808,9 @@ public partial class V1beta1InstanceGroupManagerSpecInitProviderResourcePolicies
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourcePolicy in compute to populate workloadPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecInitProviderResourcePoliciesWorkloadPolicyRef
@@ -748,7 +827,9 @@ public partial class V1beta1InstanceGroupManagerSpecInitProviderResourcePolicies
     [JsonPropertyName("policy")]
     public V1beta1InstanceGroupManagerSpecInitProviderResourcePoliciesWorkloadPolicyRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecInitProviderResourcePoliciesWorkloadPolicySelectorPolicy
@@ -761,7 +842,9 @@ public partial class V1beta1InstanceGroupManagerSpecInitProviderResourcePolicies
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourcePolicy in compute to populate workloadPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecInitProviderResourcePoliciesWorkloadPolicySelector
@@ -782,7 +865,9 @@ public partial class V1beta1InstanceGroupManagerSpecInitProviderResourcePolicies
     [JsonPropertyName("policy")]
     public V1beta1InstanceGroupManagerSpecInitProviderResourcePoliciesWorkloadPolicySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Resource policies for this managed instance group. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecInitProviderResourcePolicies
@@ -799,7 +884,9 @@ public partial class V1beta1InstanceGroupManagerSpecInitProviderResourcePolicies
     [JsonPropertyName("workloadPolicySelector")]
     public V1beta1InstanceGroupManagerSpecInitProviderResourcePoliciesWorkloadPolicySelector? WorkloadPolicySelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The standby policy for stopped and suspended instances. Structure is documented below. For more information, see the official documentation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecInitProviderStandbyPolicy
@@ -812,7 +899,9 @@ public partial class V1beta1InstanceGroupManagerSpecInitProviderStandbyPolicy
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecInitProviderStatefulDisk
@@ -825,7 +914,9 @@ public partial class V1beta1InstanceGroupManagerSpecInitProviderStatefulDisk
     [JsonPropertyName("deviceName")]
     public string? DeviceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecInitProviderStatefulExternalIp
@@ -838,7 +929,9 @@ public partial class V1beta1InstanceGroupManagerSpecInitProviderStatefulExternal
     [JsonPropertyName("interfaceName")]
     public string? InterfaceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecInitProviderStatefulInternalIp
@@ -851,7 +944,9 @@ public partial class V1beta1InstanceGroupManagerSpecInitProviderStatefulInternal
     [JsonPropertyName("interfaceName")]
     public string? InterfaceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecInitProviderTargetPoolsRefsPolicy
@@ -864,7 +959,9 @@ public partial class V1beta1InstanceGroupManagerSpecInitProviderTargetPoolsRefsP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecInitProviderTargetPoolsRefs
@@ -881,7 +978,9 @@ public partial class V1beta1InstanceGroupManagerSpecInitProviderTargetPoolsRefs
     [JsonPropertyName("policy")]
     public V1beta1InstanceGroupManagerSpecInitProviderTargetPoolsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecInitProviderTargetPoolsSelectorPolicy
@@ -894,7 +993,9 @@ public partial class V1beta1InstanceGroupManagerSpecInitProviderTargetPoolsSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of TargetPool in compute to populate targetPools.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecInitProviderTargetPoolsSelector
@@ -915,7 +1016,9 @@ public partial class V1beta1InstanceGroupManagerSpecInitProviderTargetPoolsSelec
     [JsonPropertyName("policy")]
     public V1beta1InstanceGroupManagerSpecInitProviderTargetPoolsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The update policy for this managed instance group. Structure is documented below. For more information, see the official documentation and API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecInitProviderUpdatePolicy
@@ -952,7 +1055,9 @@ public partial class V1beta1InstanceGroupManagerSpecInitProviderUpdatePolicy
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecInitProviderVersionInstanceTemplateRefPolicy
@@ -965,7 +1070,9 @@ public partial class V1beta1InstanceGroupManagerSpecInitProviderVersionInstanceT
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a InstanceTemplate in compute to populate instanceTemplate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecInitProviderVersionInstanceTemplateRef
@@ -982,7 +1089,9 @@ public partial class V1beta1InstanceGroupManagerSpecInitProviderVersionInstanceT
     [JsonPropertyName("policy")]
     public V1beta1InstanceGroupManagerSpecInitProviderVersionInstanceTemplateRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecInitProviderVersionInstanceTemplateSelectorPolicy
@@ -995,7 +1104,9 @@ public partial class V1beta1InstanceGroupManagerSpecInitProviderVersionInstanceT
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a InstanceTemplate in compute to populate instanceTemplate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecInitProviderVersionInstanceTemplateSelector
@@ -1016,7 +1127,9 @@ public partial class V1beta1InstanceGroupManagerSpecInitProviderVersionInstanceT
     [JsonPropertyName("policy")]
     public V1beta1InstanceGroupManagerSpecInitProviderVersionInstanceTemplateSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>- The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecInitProviderVersionTargetSize
@@ -1029,7 +1142,9 @@ public partial class V1beta1InstanceGroupManagerSpecInitProviderVersionTargetSiz
     [JsonPropertyName("percent")]
     public double? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecInitProviderVersion
@@ -1054,7 +1169,9 @@ public partial class V1beta1InstanceGroupManagerSpecInitProviderVersion
     [JsonPropertyName("targetSize")]
     public V1beta1InstanceGroupManagerSpecInitProviderVersionTargetSize? TargetSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecInitProvider
@@ -1151,7 +1268,9 @@ public partial class V1beta1InstanceGroupManagerSpecInitProvider
     [JsonPropertyName("waitForInstancesStatus")]
     public string? WaitForInstancesStatus { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecProviderConfigRef
@@ -1164,7 +1283,9 @@ public partial class V1beta1InstanceGroupManagerSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecWriteConnectionSecretToRef
@@ -1173,7 +1294,9 @@ public partial class V1beta1InstanceGroupManagerSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InstanceGroupManagerSpec defines the desired state of InstanceGroupManager</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpec
@@ -1198,7 +1321,9 @@ public partial class V1beta1InstanceGroupManagerSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1InstanceGroupManagerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Properties to set on all instances in the group. After setting allInstancesConfig on the group, you must update the group's instances to apply the configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerStatusAtProviderAllInstancesConfig
@@ -1211,7 +1336,9 @@ public partial class V1beta1InstanceGroupManagerStatusAtProviderAllInstancesConf
     [JsonPropertyName("metadata")]
     public IDictionary<string, string>? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The autohealing policies for this managed instance group. You can specify only one value. Structure is documented below. For more information, see the official documentation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerStatusAtProviderAutoHealingPolicies
@@ -1224,7 +1351,9 @@ public partial class V1beta1InstanceGroupManagerStatusAtProviderAutoHealingPolic
     [JsonPropertyName("initialDelaySec")]
     public double? InitialDelaySec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerStatusAtProviderInstanceLifecyclePolicy
@@ -1237,7 +1366,9 @@ public partial class V1beta1InstanceGroupManagerStatusAtProviderInstanceLifecycl
     [JsonPropertyName("forceUpdateOnRepair")]
     public string? ForceUpdateOnRepair { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerStatusAtProviderNamedPort
@@ -1250,7 +1381,9 @@ public partial class V1beta1InstanceGroupManagerStatusAtProviderNamedPort
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Resource policies for this managed instance group. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerStatusAtProviderResourcePolicies
@@ -1259,7 +1392,9 @@ public partial class V1beta1InstanceGroupManagerStatusAtProviderResourcePolicies
     [JsonPropertyName("workloadPolicy")]
     public string? WorkloadPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The standby policy for stopped and suspended instances. Structure is documented below. For more information, see the official documentation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerStatusAtProviderStandbyPolicy
@@ -1272,7 +1407,9 @@ public partial class V1beta1InstanceGroupManagerStatusAtProviderStandbyPolicy
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerStatusAtProviderStatefulDisk
@@ -1285,7 +1422,9 @@ public partial class V1beta1InstanceGroupManagerStatusAtProviderStatefulDisk
     [JsonPropertyName("deviceName")]
     public string? DeviceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerStatusAtProviderStatefulExternalIp
@@ -1298,7 +1437,9 @@ public partial class V1beta1InstanceGroupManagerStatusAtProviderStatefulExternal
     [JsonPropertyName("interfaceName")]
     public string? InterfaceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerStatusAtProviderStatefulInternalIp
@@ -1311,7 +1452,9 @@ public partial class V1beta1InstanceGroupManagerStatusAtProviderStatefulInternal
     [JsonPropertyName("interfaceName")]
     public string? InterfaceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerStatusAtProviderStatusAllInstancesConfig
@@ -1324,7 +1467,9 @@ public partial class V1beta1InstanceGroupManagerStatusAtProviderStatusAllInstanc
     [JsonPropertyName("effective")]
     public bool? Effective { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerStatusAtProviderStatusStatefulPerInstanceConfigs
@@ -1333,7 +1478,9 @@ public partial class V1beta1InstanceGroupManagerStatusAtProviderStatusStatefulPe
     [JsonPropertyName("allEffective")]
     public bool? AllEffective { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerStatusAtProviderStatusStateful
@@ -1346,7 +1493,9 @@ public partial class V1beta1InstanceGroupManagerStatusAtProviderStatusStateful
     [JsonPropertyName("perInstanceConfigs")]
     public IList<V1beta1InstanceGroupManagerStatusAtProviderStatusStatefulPerInstanceConfigs>? PerInstanceConfigs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerStatusAtProviderStatusVersionTarget
@@ -1355,7 +1504,9 @@ public partial class V1beta1InstanceGroupManagerStatusAtProviderStatusVersionTar
     [JsonPropertyName("isReached")]
     public bool? IsReached { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerStatusAtProviderStatus
@@ -1376,7 +1527,9 @@ public partial class V1beta1InstanceGroupManagerStatusAtProviderStatus
     [JsonPropertyName("versionTarget")]
     public IList<V1beta1InstanceGroupManagerStatusAtProviderStatusVersionTarget>? VersionTarget { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The update policy for this managed instance group. Structure is documented below. For more information, see the official documentation and API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerStatusAtProviderUpdatePolicy
@@ -1413,7 +1566,9 @@ public partial class V1beta1InstanceGroupManagerStatusAtProviderUpdatePolicy
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>- The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerStatusAtProviderVersionTargetSize
@@ -1426,7 +1581,9 @@ public partial class V1beta1InstanceGroupManagerStatusAtProviderVersionTargetSiz
     [JsonPropertyName("percent")]
     public double? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerStatusAtProviderVersion
@@ -1443,7 +1600,9 @@ public partial class V1beta1InstanceGroupManagerStatusAtProviderVersion
     [JsonPropertyName("targetSize")]
     public V1beta1InstanceGroupManagerStatusAtProviderVersionTargetSize? TargetSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerStatusAtProvider
@@ -1568,7 +1727,9 @@ public partial class V1beta1InstanceGroupManagerStatusAtProvider
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerStatusConditions
@@ -1597,7 +1758,9 @@ public partial class V1beta1InstanceGroupManagerStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InstanceGroupManagerStatus defines the observed state of InstanceGroupManager.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerStatus
@@ -1614,7 +1777,9 @@ public partial class V1beta1InstanceGroupManagerStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InstanceGroupManager is the Schema for the InstanceGroupManagers API. Manages an Instance Group within GCE.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1644,3 +1809,4 @@ public partial class V1beta1InstanceGroupManager : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1InstanceGroupManagerStatus? Status { get; set; }
 }
+#nullable disable

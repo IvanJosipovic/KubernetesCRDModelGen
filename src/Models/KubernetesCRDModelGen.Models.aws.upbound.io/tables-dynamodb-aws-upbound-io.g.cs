@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dynamodb.aws.upbound.io;
+#nullable enable
 /// <summary>Table is the Schema for the Tables API. Provides a DynamoDB table resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TableList : IKubernetesObject<V1ListMeta>, IItems<V1
     [JsonPropertyName("items")]
     public IList<V1beta1Table> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderAttribute
@@ -46,7 +49,9 @@ public partial class V1beta1TableSpecForProviderAttribute
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderGlobalSecondaryIndexOnDemandThroughput
@@ -59,7 +64,9 @@ public partial class V1beta1TableSpecForProviderGlobalSecondaryIndexOnDemandThro
     [JsonPropertyName("maxWriteRequestUnits")]
     public double? MaxWriteRequestUnits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderGlobalSecondaryIndex
@@ -96,7 +103,9 @@ public partial class V1beta1TableSpecForProviderGlobalSecondaryIndex
     [JsonPropertyName("writeCapacity")]
     public double? WriteCapacity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderImportTableInputFormatOptionsCsv
@@ -109,7 +118,9 @@ public partial class V1beta1TableSpecForProviderImportTableInputFormatOptionsCsv
     [JsonPropertyName("headerList")]
     public IList<string>? HeaderList { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderImportTableInputFormatOptions
@@ -118,7 +129,9 @@ public partial class V1beta1TableSpecForProviderImportTableInputFormatOptions
     [JsonPropertyName("csv")]
     public IList<V1beta1TableSpecForProviderImportTableInputFormatOptionsCsv>? Csv { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderImportTableS3BucketSource
@@ -135,7 +148,9 @@ public partial class V1beta1TableSpecForProviderImportTableS3BucketSource
     [JsonPropertyName("keyPrefix")]
     public string? KeyPrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderImportTable
@@ -156,7 +171,9 @@ public partial class V1beta1TableSpecForProviderImportTable
     [JsonPropertyName("s3BucketSource")]
     public IList<V1beta1TableSpecForProviderImportTableS3BucketSource>? S3BucketSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderLocalSecondaryIndex
@@ -177,7 +194,9 @@ public partial class V1beta1TableSpecForProviderLocalSecondaryIndex
     [JsonPropertyName("rangeKey")]
     public string? RangeKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderOnDemandThroughput
@@ -190,7 +209,9 @@ public partial class V1beta1TableSpecForProviderOnDemandThroughput
     [JsonPropertyName("maxWriteRequestUnits")]
     public double? MaxWriteRequestUnits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderPointInTimeRecovery
@@ -203,7 +224,9 @@ public partial class V1beta1TableSpecForProviderPointInTimeRecovery
     [JsonPropertyName("recoveryPeriodInDays")]
     public double? RecoveryPeriodInDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderReplica
@@ -228,7 +251,9 @@ public partial class V1beta1TableSpecForProviderReplica
     [JsonPropertyName("regionName")]
     public string? RegionName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderServerSideEncryption
@@ -241,7 +266,9 @@ public partial class V1beta1TableSpecForProviderServerSideEncryption
     [JsonPropertyName("kmsKeyArn")]
     public string? KmsKeyArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderTtl
@@ -254,7 +281,9 @@ public partial class V1beta1TableSpecForProviderTtl
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProvider
@@ -355,7 +384,9 @@ public partial class V1beta1TableSpecForProvider
     [JsonPropertyName("writeCapacity")]
     public double? WriteCapacity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderAttribute
@@ -368,7 +399,9 @@ public partial class V1beta1TableSpecInitProviderAttribute
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderGlobalSecondaryIndexOnDemandThroughput
@@ -381,7 +414,9 @@ public partial class V1beta1TableSpecInitProviderGlobalSecondaryIndexOnDemandThr
     [JsonPropertyName("maxWriteRequestUnits")]
     public double? MaxWriteRequestUnits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderGlobalSecondaryIndex
@@ -418,7 +453,9 @@ public partial class V1beta1TableSpecInitProviderGlobalSecondaryIndex
     [JsonPropertyName("writeCapacity")]
     public double? WriteCapacity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderImportTableInputFormatOptionsCsv
@@ -431,7 +468,9 @@ public partial class V1beta1TableSpecInitProviderImportTableInputFormatOptionsCs
     [JsonPropertyName("headerList")]
     public IList<string>? HeaderList { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderImportTableInputFormatOptions
@@ -440,7 +479,9 @@ public partial class V1beta1TableSpecInitProviderImportTableInputFormatOptions
     [JsonPropertyName("csv")]
     public IList<V1beta1TableSpecInitProviderImportTableInputFormatOptionsCsv>? Csv { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderImportTableS3BucketSource
@@ -457,7 +498,9 @@ public partial class V1beta1TableSpecInitProviderImportTableS3BucketSource
     [JsonPropertyName("keyPrefix")]
     public string? KeyPrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderImportTable
@@ -478,7 +521,9 @@ public partial class V1beta1TableSpecInitProviderImportTable
     [JsonPropertyName("s3BucketSource")]
     public IList<V1beta1TableSpecInitProviderImportTableS3BucketSource>? S3BucketSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderLocalSecondaryIndex
@@ -499,7 +544,9 @@ public partial class V1beta1TableSpecInitProviderLocalSecondaryIndex
     [JsonPropertyName("rangeKey")]
     public string? RangeKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderOnDemandThroughput
@@ -512,7 +559,9 @@ public partial class V1beta1TableSpecInitProviderOnDemandThroughput
     [JsonPropertyName("maxWriteRequestUnits")]
     public double? MaxWriteRequestUnits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderPointInTimeRecovery
@@ -525,7 +574,9 @@ public partial class V1beta1TableSpecInitProviderPointInTimeRecovery
     [JsonPropertyName("recoveryPeriodInDays")]
     public double? RecoveryPeriodInDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderReplica
@@ -550,7 +601,9 @@ public partial class V1beta1TableSpecInitProviderReplica
     [JsonPropertyName("regionName")]
     public string? RegionName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderServerSideEncryption
@@ -563,7 +616,9 @@ public partial class V1beta1TableSpecInitProviderServerSideEncryption
     [JsonPropertyName("kmsKeyArn")]
     public string? KmsKeyArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderTtl
@@ -576,7 +631,9 @@ public partial class V1beta1TableSpecInitProviderTtl
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProvider
@@ -673,7 +730,9 @@ public partial class V1beta1TableSpecInitProvider
     [JsonPropertyName("writeCapacity")]
     public double? WriteCapacity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecProviderConfigRefPolicy
@@ -686,7 +745,9 @@ public partial class V1beta1TableSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecProviderConfigRef
@@ -699,7 +760,9 @@ public partial class V1beta1TableSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1TableSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecWriteConnectionSecretToRef
@@ -712,7 +775,9 @@ public partial class V1beta1TableSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TableSpec defines the desired state of Table</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpec
@@ -741,7 +806,9 @@ public partial class V1beta1TableSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TableSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderAttribute
@@ -754,7 +821,9 @@ public partial class V1beta1TableStatusAtProviderAttribute
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderGlobalSecondaryIndexOnDemandThroughput
@@ -767,7 +836,9 @@ public partial class V1beta1TableStatusAtProviderGlobalSecondaryIndexOnDemandThr
     [JsonPropertyName("maxWriteRequestUnits")]
     public double? MaxWriteRequestUnits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderGlobalSecondaryIndex
@@ -804,7 +875,9 @@ public partial class V1beta1TableStatusAtProviderGlobalSecondaryIndex
     [JsonPropertyName("writeCapacity")]
     public double? WriteCapacity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderImportTableInputFormatOptionsCsv
@@ -817,7 +890,9 @@ public partial class V1beta1TableStatusAtProviderImportTableInputFormatOptionsCs
     [JsonPropertyName("headerList")]
     public IList<string>? HeaderList { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderImportTableInputFormatOptions
@@ -826,7 +901,9 @@ public partial class V1beta1TableStatusAtProviderImportTableInputFormatOptions
     [JsonPropertyName("csv")]
     public IList<V1beta1TableStatusAtProviderImportTableInputFormatOptionsCsv>? Csv { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderImportTableS3BucketSource
@@ -843,7 +920,9 @@ public partial class V1beta1TableStatusAtProviderImportTableS3BucketSource
     [JsonPropertyName("keyPrefix")]
     public string? KeyPrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderImportTable
@@ -864,7 +943,9 @@ public partial class V1beta1TableStatusAtProviderImportTable
     [JsonPropertyName("s3BucketSource")]
     public IList<V1beta1TableStatusAtProviderImportTableS3BucketSource>? S3BucketSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderLocalSecondaryIndex
@@ -885,7 +966,9 @@ public partial class V1beta1TableStatusAtProviderLocalSecondaryIndex
     [JsonPropertyName("rangeKey")]
     public string? RangeKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderOnDemandThroughput
@@ -898,7 +981,9 @@ public partial class V1beta1TableStatusAtProviderOnDemandThroughput
     [JsonPropertyName("maxWriteRequestUnits")]
     public double? MaxWriteRequestUnits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderPointInTimeRecovery
@@ -911,7 +996,9 @@ public partial class V1beta1TableStatusAtProviderPointInTimeRecovery
     [JsonPropertyName("recoveryPeriodInDays")]
     public double? RecoveryPeriodInDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderReplica
@@ -948,7 +1035,9 @@ public partial class V1beta1TableStatusAtProviderReplica
     [JsonPropertyName("streamLabel")]
     public string? StreamLabel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderServerSideEncryption
@@ -961,7 +1050,9 @@ public partial class V1beta1TableStatusAtProviderServerSideEncryption
     [JsonPropertyName("kmsKeyArn")]
     public string? KmsKeyArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderTtl
@@ -974,7 +1065,9 @@ public partial class V1beta1TableStatusAtProviderTtl
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProvider
@@ -1095,7 +1188,9 @@ public partial class V1beta1TableStatusAtProvider
     [JsonPropertyName("writeCapacity")]
     public double? WriteCapacity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusConditions
@@ -1124,7 +1219,9 @@ public partial class V1beta1TableStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TableStatus defines the observed state of Table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatus
@@ -1141,7 +1238,9 @@ public partial class V1beta1TableStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Table is the Schema for the Tables API. Provides a DynamoDB table resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1171,3 +1270,4 @@ public partial class V1beta1Table : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     [JsonPropertyName("status")]
     public V1beta1TableStatus? Status { get; set; }
 }
+#nullable disable

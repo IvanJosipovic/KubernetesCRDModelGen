@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apiextensions.crossplane.io;
+#nullable enable
 /// <summary>A Composition defines a collection of managed resources or functions that Crossplane uses to create and manage new composite resources.  Read the Crossplane documentation for [more information about Compositions](https://docs.crossplane.io/latest/concepts/compositions).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1CompositionList : IKubernetesObject<V1ListMeta>, IItems<V
     [JsonPropertyName("items")]
     public IList<V1Composition> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CompositeTypeRef specifies the type of composite resource that this composition is compatible with.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecCompositeTypeRef
@@ -46,7 +49,9 @@ public partial class V1CompositionSpecCompositeTypeRef
     [JsonPropertyName("kind")]
     public string Kind { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SecretRef is a reference to a secret containing credentials that should be supplied to the function.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPipelineCredentialsSecretRef
@@ -59,7 +64,9 @@ public partial class V1CompositionSpecPipelineCredentialsSecretRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FunctionCredentials are optional credentials that a function needs to run.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPipelineCredentials
@@ -76,7 +83,9 @@ public partial class V1CompositionSpecPipelineCredentials
     [JsonPropertyName("source")]
     public string Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FunctionRef is a reference to the function this step should execute.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPipelineFunctionRef
@@ -85,7 +94,9 @@ public partial class V1CompositionSpecPipelineFunctionRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RequiredResourceSelector selects a required resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPipelineRequirementsRequiredResources
@@ -114,7 +125,9 @@ public partial class V1CompositionSpecPipelineRequirementsRequiredResources
     [JsonPropertyName("requirementName")]
     public string RequirementName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Requirements are resource requirements that will be satisfied before this pipeline step is called for the first time. This allows pre-populating required resources without requiring a function to request them first.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPipelineRequirements
@@ -123,7 +136,9 @@ public partial class V1CompositionSpecPipelineRequirements
     [JsonPropertyName("requiredResources")]
     public IList<V1CompositionSpecPipelineRequirementsRequiredResources>? RequiredResources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A PipelineStep in a function pipeline.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPipeline
@@ -148,7 +163,9 @@ public partial class V1CompositionSpecPipeline
     [JsonPropertyName("step")]
     public string Step { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CompositionSpec specifies desired state of a composition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpec
@@ -169,7 +186,9 @@ public partial class V1CompositionSpec
     [JsonPropertyName("writeConnectionSecretsToNamespace")]
     public string? WriteConnectionSecretsToNamespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Composition defines a collection of managed resources or functions that Crossplane uses to create and manage new composite resources.  Read the Crossplane documentation for [more information about Compositions](https://docs.crossplane.io/latest/concepts/compositions).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -195,3 +214,4 @@ public partial class V1Composition : IKubernetesObject<V1ObjectMeta>, ISpec<V1Co
     [JsonPropertyName("spec")]
     public V1CompositionSpec? Spec { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networking.istio.io;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha3EnvoyFilterList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1alpha3EnvoyFilter> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Match on envoy cluster attributes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatchCluster
@@ -54,7 +57,9 @@ public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatchCluster
     [JsonPropertyName("subset")]
     public string? Subset { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The next level filter within this filter to match upon.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatchListenerFilterChainFilterSubFilter
@@ -63,7 +68,9 @@ public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatchListenerFilterChai
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The name of a specific filter to apply the patch to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatchListenerFilterChainFilter
@@ -76,7 +83,9 @@ public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatchListenerFilterChai
     [JsonPropertyName("subFilter")]
     public V1alpha3EnvoyFilterSpecConfigPatchesMatchListenerFilterChainFilterSubFilter? SubFilter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Match a specific filter chain in a listener.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatchListenerFilterChain
@@ -105,7 +114,9 @@ public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatchListenerFilterChai
     [JsonPropertyName("transportProtocol")]
     public string? TransportProtocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Match on envoy listener attributes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatchListener
@@ -130,7 +141,9 @@ public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatchListener
     [JsonPropertyName("portNumber")]
     public int? PortNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Match on properties associated with a proxy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatchProxy
@@ -143,7 +156,9 @@ public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatchProxy
     [JsonPropertyName("proxyVersion")]
     public string? ProxyVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Match a specific route within the virtual host.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatchRouteConfigurationVhostRoute
@@ -156,7 +171,9 @@ public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatchRouteConfiguration
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Match a specific virtual host in a route configuration and apply the patch to the virtual host.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatchRouteConfigurationVhost
@@ -173,7 +190,9 @@ public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatchRouteConfiguration
     [JsonPropertyName("route")]
     public V1alpha3EnvoyFilterSpecConfigPatchesMatchRouteConfigurationVhostRoute? Route { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Match on envoy HTTP route configuration attributes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatchRouteConfiguration
@@ -198,7 +217,9 @@ public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatchRouteConfiguration
     [JsonPropertyName("vhost")]
     public V1alpha3EnvoyFilterSpecConfigPatchesMatchRouteConfigurationVhost? Vhost { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Match on listener/route configuration/cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatch
@@ -223,7 +244,9 @@ public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatch
     [JsonPropertyName("routeConfiguration")]
     public V1alpha3EnvoyFilterSpecConfigPatchesMatchRouteConfiguration? RouteConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The patch to apply along with the operation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha3EnvoyFilterSpecConfigPatchesPatch
@@ -240,7 +263,9 @@ public partial class V1alpha3EnvoyFilterSpecConfigPatchesPatch
     [JsonPropertyName("value")]
     public JsonNode? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha3EnvoyFilterSpecConfigPatches
@@ -257,7 +282,9 @@ public partial class V1alpha3EnvoyFilterSpecConfigPatches
     [JsonPropertyName("patch")]
     public V1alpha3EnvoyFilterSpecConfigPatchesPatch? Patch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha3EnvoyFilterSpecTargetRefs
@@ -278,7 +305,9 @@ public partial class V1alpha3EnvoyFilterSpecTargetRefs
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Criteria used to select the specific set of pods/VMs on which this patch configuration should be applied.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha3EnvoyFilterSpecWorkloadSelector
@@ -287,7 +316,9 @@ public partial class V1alpha3EnvoyFilterSpecWorkloadSelector
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Customizing Envoy configuration generated by Istio. See more details at: https://istio.io/docs/reference/config/networking/envoy-filter.html</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha3EnvoyFilterSpec
@@ -308,7 +339,9 @@ public partial class V1alpha3EnvoyFilterSpec
     [JsonPropertyName("workloadSelector")]
     public V1alpha3EnvoyFilterSpecWorkloadSelector? WorkloadSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -338,3 +371,4 @@ public partial class V1alpha3EnvoyFilter : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public JsonNode? Status { get; set; }
 }
+#nullable disable

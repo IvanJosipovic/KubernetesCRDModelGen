@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.osconfig.gcp.upbound.io;
+#nullable enable
 /// <summary>OsPolicyAssignment is the Schema for the OsPolicyAssignments API. OS policy assignment is an API resource that is used to apply a set of OS policies to a dynamically targeted group of Compute Engine VM instances.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1OsPolicyAssignmentList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1OsPolicyAssignment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderInstanceFilterExclusionLabels
@@ -42,7 +45,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderInstanceFilterExclu
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderInstanceFilterInclusionLabels
@@ -51,7 +56,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderInstanceFilterInclu
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderInstanceFilterInventories
@@ -64,7 +71,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderInstanceFilterInven
     [JsonPropertyName("osVersion")]
     public string? OsVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderInstanceFilter
@@ -85,7 +94,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderInstanceFilter
     [JsonPropertyName("inventories")]
     public IList<V1beta1OsPolicyAssignmentSpecForProviderInstanceFilterInventories>? Inventories { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsInventoryFilters
@@ -98,7 +109,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("osVersion")]
     public string? OsVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesExecEnforceFileGcs
@@ -115,7 +128,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesExecEnforceFileRemote
@@ -128,7 +143,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesExecEnforceFile
@@ -149,7 +166,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("remote")]
     public IList<V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesExecEnforceFileRemote>? Remote { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesExecEnforce
@@ -174,7 +193,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("script")]
     public string? Script { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesExecValidateFileGcs
@@ -191,7 +212,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesExecValidateFileRemote
@@ -204,7 +227,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesExecValidateFile
@@ -225,7 +250,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("remote")]
     public IList<V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesExecValidateFileRemote>? Remote { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesExecValidate
@@ -250,7 +277,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("script")]
     public string? Script { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesExec
@@ -263,7 +292,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("validate")]
     public IList<V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesExecValidate>? Validate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesFileFileGcs
@@ -280,7 +311,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesFileFileRemote
@@ -293,7 +326,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesFileFile
@@ -314,7 +349,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("remote")]
     public IList<V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesFileFileRemote>? Remote { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesFile
@@ -335,7 +372,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgApt
@@ -344,7 +383,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgDebSourceGcs
@@ -361,7 +402,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgDebSourceRemote
@@ -374,7 +417,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgDebSource
@@ -395,7 +440,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("remote")]
     public IList<V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgDebSourceRemote>? Remote { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgDeb
@@ -408,7 +455,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("source")]
     public IList<V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgDebSource>? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgGooget
@@ -417,7 +466,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgMsiSourceGcs
@@ -434,7 +485,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgMsiSourceRemote
@@ -447,7 +500,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgMsiSource
@@ -468,7 +523,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("remote")]
     public IList<V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgMsiSourceRemote>? Remote { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgMsi
@@ -481,7 +538,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("source")]
     public IList<V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgMsiSource>? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgRpmSourceGcs
@@ -498,7 +557,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgRpmSourceRemote
@@ -511,7 +572,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgRpmSource
@@ -532,7 +595,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("remote")]
     public IList<V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgRpmSourceRemote>? Remote { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgRpm
@@ -545,7 +610,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("source")]
     public IList<V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgRpmSource>? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgYum
@@ -554,7 +621,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgZypper
@@ -563,7 +632,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkg
@@ -600,7 +671,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("zypper")]
     public IList<V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesPkgZypper>? Zypper { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesRepositoryApt
@@ -625,7 +698,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesRepositoryGoo
@@ -638,7 +713,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesRepositoryYum
@@ -659,7 +736,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesRepositoryZypper
@@ -680,7 +759,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesRepository
@@ -701,7 +782,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("zypper")]
     public IList<V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesRepositoryZypper>? Zypper { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResources
@@ -726,7 +809,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("repository")]
     public IList<V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResourcesRepository>? Repository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroups
@@ -739,7 +824,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceG
     [JsonPropertyName("resources")]
     public IList<V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroupsResources>? Resources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPolicies
@@ -764,7 +851,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderOsPolicies
     [JsonPropertyName("resourceGroups")]
     public IList<V1beta1OsPolicyAssignmentSpecForProviderOsPoliciesResourceGroups>? ResourceGroups { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderRolloutDisruptionBudget
@@ -777,7 +866,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderRolloutDisruptionBu
     [JsonPropertyName("percent")]
     public double? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProviderRollout
@@ -790,7 +881,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProviderRollout
     [JsonPropertyName("minWaitDuration")]
     public string? MinWaitDuration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecForProvider
@@ -823,7 +916,9 @@ public partial class V1beta1OsPolicyAssignmentSpecForProvider
     [JsonPropertyName("skipAwaitRollout")]
     public bool? SkipAwaitRollout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderInstanceFilterExclusionLabels
@@ -832,7 +927,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderInstanceFilterExcl
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderInstanceFilterInclusionLabels
@@ -841,7 +938,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderInstanceFilterIncl
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderInstanceFilterInventories
@@ -854,7 +953,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderInstanceFilterInve
     [JsonPropertyName("osVersion")]
     public string? OsVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderInstanceFilter
@@ -875,7 +976,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderInstanceFilter
     [JsonPropertyName("inventories")]
     public IList<V1beta1OsPolicyAssignmentSpecInitProviderInstanceFilterInventories>? Inventories { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsInventoryFilters
@@ -888,7 +991,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("osVersion")]
     public string? OsVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesExecEnforceFileGcs
@@ -905,7 +1010,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesExecEnforceFileRemote
@@ -918,7 +1025,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesExecEnforceFile
@@ -939,7 +1048,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("remote")]
     public IList<V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesExecEnforceFileRemote>? Remote { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesExecEnforce
@@ -964,7 +1075,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("script")]
     public string? Script { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesExecValidateFileGcs
@@ -981,7 +1094,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesExecValidateFileRemote
@@ -994,7 +1109,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesExecValidateFile
@@ -1015,7 +1132,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("remote")]
     public IList<V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesExecValidateFileRemote>? Remote { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesExecValidate
@@ -1040,7 +1159,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("script")]
     public string? Script { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesExec
@@ -1053,7 +1174,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("validate")]
     public IList<V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesExecValidate>? Validate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesFileFileGcs
@@ -1070,7 +1193,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesFileFileRemote
@@ -1083,7 +1208,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesFileFile
@@ -1104,7 +1231,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("remote")]
     public IList<V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesFileFileRemote>? Remote { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesFile
@@ -1125,7 +1254,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgApt
@@ -1134,7 +1265,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgDebSourceGcs
@@ -1151,7 +1284,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgDebSourceRemote
@@ -1164,7 +1299,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgDebSource
@@ -1185,7 +1322,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("remote")]
     public IList<V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgDebSourceRemote>? Remote { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgDeb
@@ -1198,7 +1337,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("source")]
     public IList<V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgDebSource>? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgGooget
@@ -1207,7 +1348,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgMsiSourceGcs
@@ -1224,7 +1367,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgMsiSourceRemote
@@ -1237,7 +1382,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgMsiSource
@@ -1258,7 +1405,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("remote")]
     public IList<V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgMsiSourceRemote>? Remote { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgMsi
@@ -1271,7 +1420,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("source")]
     public IList<V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgMsiSource>? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgRpmSourceGcs
@@ -1288,7 +1439,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgRpmSourceRemote
@@ -1301,7 +1454,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgRpmSource
@@ -1322,7 +1477,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("remote")]
     public IList<V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgRpmSourceRemote>? Remote { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgRpm
@@ -1335,7 +1492,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("source")]
     public IList<V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgRpmSource>? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgYum
@@ -1344,7 +1503,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgZypper
@@ -1353,7 +1514,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkg
@@ -1390,7 +1553,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("zypper")]
     public IList<V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesPkgZypper>? Zypper { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesRepositoryApt
@@ -1415,7 +1580,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesRepositoryGoo
@@ -1428,7 +1595,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesRepositoryYum
@@ -1449,7 +1618,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesRepositoryZypper
@@ -1470,7 +1641,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesRepository
@@ -1491,7 +1664,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("zypper")]
     public IList<V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesRepositoryZypper>? Zypper { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResources
@@ -1516,7 +1691,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("repository")]
     public IList<V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResourcesRepository>? Repository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroups
@@ -1529,7 +1706,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResource
     [JsonPropertyName("resources")]
     public IList<V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroupsResources>? Resources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPolicies
@@ -1554,7 +1733,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderOsPolicies
     [JsonPropertyName("resourceGroups")]
     public IList<V1beta1OsPolicyAssignmentSpecInitProviderOsPoliciesResourceGroups>? ResourceGroups { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderRolloutDisruptionBudget
@@ -1567,7 +1748,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderRolloutDisruptionB
     [JsonPropertyName("percent")]
     public double? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProviderRollout
@@ -1580,7 +1763,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProviderRollout
     [JsonPropertyName("minWaitDuration")]
     public string? MinWaitDuration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecInitProvider
@@ -1609,7 +1794,9 @@ public partial class V1beta1OsPolicyAssignmentSpecInitProvider
     [JsonPropertyName("skipAwaitRollout")]
     public bool? SkipAwaitRollout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecProviderConfigRefPolicy
@@ -1622,7 +1809,9 @@ public partial class V1beta1OsPolicyAssignmentSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecProviderConfigRef
@@ -1635,7 +1824,9 @@ public partial class V1beta1OsPolicyAssignmentSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1OsPolicyAssignmentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpecWriteConnectionSecretToRef
@@ -1648,7 +1839,9 @@ public partial class V1beta1OsPolicyAssignmentSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OsPolicyAssignmentSpec defines the desired state of OsPolicyAssignment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentSpec
@@ -1677,7 +1870,9 @@ public partial class V1beta1OsPolicyAssignmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1OsPolicyAssignmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderInstanceFilterExclusionLabels
@@ -1686,7 +1881,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderInstanceFilterExcl
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderInstanceFilterInclusionLabels
@@ -1695,7 +1892,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderInstanceFilterIncl
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderInstanceFilterInventories
@@ -1708,7 +1907,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderInstanceFilterInve
     [JsonPropertyName("osVersion")]
     public string? OsVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderInstanceFilter
@@ -1729,7 +1930,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderInstanceFilter
     [JsonPropertyName("inventories")]
     public IList<V1beta1OsPolicyAssignmentStatusAtProviderInstanceFilterInventories>? Inventories { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsInventoryFilters
@@ -1742,7 +1945,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("osVersion")]
     public string? OsVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesExecEnforceFileGcs
@@ -1759,7 +1964,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesExecEnforceFileRemote
@@ -1772,7 +1979,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesExecEnforceFile
@@ -1793,7 +2002,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("remote")]
     public IList<V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesExecEnforceFileRemote>? Remote { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesExecEnforce
@@ -1818,7 +2029,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("script")]
     public string? Script { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesExecValidateFileGcs
@@ -1835,7 +2048,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesExecValidateFileRemote
@@ -1848,7 +2063,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesExecValidateFile
@@ -1869,7 +2086,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("remote")]
     public IList<V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesExecValidateFileRemote>? Remote { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesExecValidate
@@ -1894,7 +2113,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("script")]
     public string? Script { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesExec
@@ -1907,7 +2128,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("validate")]
     public IList<V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesExecValidate>? Validate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesFileFileGcs
@@ -1924,7 +2147,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesFileFileRemote
@@ -1937,7 +2162,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesFileFile
@@ -1958,7 +2185,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("remote")]
     public IList<V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesFileFileRemote>? Remote { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesFile
@@ -1983,7 +2212,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgApt
@@ -1992,7 +2223,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgDebSourceGcs
@@ -2009,7 +2242,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgDebSourceRemote
@@ -2022,7 +2257,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgDebSource
@@ -2043,7 +2280,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("remote")]
     public IList<V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgDebSourceRemote>? Remote { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgDeb
@@ -2056,7 +2295,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("source")]
     public IList<V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgDebSource>? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgGooget
@@ -2065,7 +2306,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgMsiSourceGcs
@@ -2082,7 +2325,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgMsiSourceRemote
@@ -2095,7 +2340,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgMsiSource
@@ -2116,7 +2363,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("remote")]
     public IList<V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgMsiSourceRemote>? Remote { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgMsi
@@ -2129,7 +2378,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("source")]
     public IList<V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgMsiSource>? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgRpmSourceGcs
@@ -2146,7 +2397,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgRpmSourceRemote
@@ -2159,7 +2412,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgRpmSource
@@ -2180,7 +2435,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("remote")]
     public IList<V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgRpmSourceRemote>? Remote { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgRpm
@@ -2193,7 +2450,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("source")]
     public IList<V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgRpmSource>? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgYum
@@ -2202,7 +2461,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgZypper
@@ -2211,7 +2472,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkg
@@ -2248,7 +2511,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("zypper")]
     public IList<V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesPkgZypper>? Zypper { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesRepositoryApt
@@ -2273,7 +2538,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesRepositoryGoo
@@ -2286,7 +2553,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesRepositoryYum
@@ -2307,7 +2576,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesRepositoryZypper
@@ -2328,7 +2599,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesRepository
@@ -2349,7 +2622,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("zypper")]
     public IList<V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesRepositoryZypper>? Zypper { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResources
@@ -2374,7 +2649,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("repository")]
     public IList<V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResourcesRepository>? Repository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroups
@@ -2387,7 +2664,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResource
     [JsonPropertyName("resources")]
     public IList<V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroupsResources>? Resources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPolicies
@@ -2412,7 +2691,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderOsPolicies
     [JsonPropertyName("resourceGroups")]
     public IList<V1beta1OsPolicyAssignmentStatusAtProviderOsPoliciesResourceGroups>? ResourceGroups { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderRolloutDisruptionBudget
@@ -2425,7 +2706,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderRolloutDisruptionB
     [JsonPropertyName("percent")]
     public double? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProviderRollout
@@ -2438,7 +2721,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProviderRollout
     [JsonPropertyName("minWaitDuration")]
     public string? MinWaitDuration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusAtProvider
@@ -2507,7 +2792,9 @@ public partial class V1beta1OsPolicyAssignmentStatusAtProvider
     [JsonPropertyName("uid")]
     public string? Uid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatusConditions
@@ -2536,7 +2823,9 @@ public partial class V1beta1OsPolicyAssignmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OsPolicyAssignmentStatus defines the observed state of OsPolicyAssignment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OsPolicyAssignmentStatus
@@ -2553,7 +2842,9 @@ public partial class V1beta1OsPolicyAssignmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OsPolicyAssignment is the Schema for the OsPolicyAssignments API. OS policy assignment is an API resource that is used to apply a set of OS policies to a dynamically targeted group of Compute Engine VM instances.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -2583,3 +2874,4 @@ public partial class V1beta1OsPolicyAssignment : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1OsPolicyAssignmentStatus? Status { get; set; }
 }
+#nullable disable

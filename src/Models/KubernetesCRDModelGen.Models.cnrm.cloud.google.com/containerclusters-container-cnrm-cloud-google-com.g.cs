@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.container.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ContainerClusterList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1ContainerCluster> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The status of the CloudRun addon. It is disabled by default. Set disabled = false to enable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecAddonsConfigCloudrunConfig
@@ -46,7 +49,9 @@ public partial class V1beta1ContainerClusterSpecAddonsConfigCloudrunConfig
     [JsonPropertyName("loadBalancerType")]
     public string? LoadBalancerType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The of the Config Connector addon.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecAddonsConfigConfigConnectorConfig
@@ -55,7 +60,9 @@ public partial class V1beta1ContainerClusterSpecAddonsConfigConfigConnectorConfi
     [JsonPropertyName("enabled")]
     public bool Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The status of the NodeLocal DNSCache addon. It is disabled by default. Set enabled = true to enable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecAddonsConfigDnsCacheConfig
@@ -64,7 +71,9 @@ public partial class V1beta1ContainerClusterSpecAddonsConfigDnsCacheConfig
     [JsonPropertyName("enabled")]
     public bool Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Whether this cluster should enable the Google Compute Engine Persistent Disk Container Storage Interface (CSI) Driver. Set enabled = true to enable. The Compute Engine persistent disk CSI Driver is enabled by default on newly created clusters for the following versions: Linux clusters: GKE version 1.18.10-gke.2100 or later, or 1.19.3-gke.2100 or later.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecAddonsConfigGcePersistentDiskCsiDriverConfig
@@ -73,7 +82,9 @@ public partial class V1beta1ContainerClusterSpecAddonsConfigGcePersistentDiskCsi
     [JsonPropertyName("enabled")]
     public bool Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The status of the Filestore CSI driver addon, which allows the usage of filestore instance as volumes. Defaults to disabled; set enabled = true to enable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecAddonsConfigGcpFilestoreCsiDriverConfig
@@ -82,7 +93,9 @@ public partial class V1beta1ContainerClusterSpecAddonsConfigGcpFilestoreCsiDrive
     [JsonPropertyName("enabled")]
     public bool Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The status of the GCS Fuse CSI driver addon, which allows the usage of gcs bucket as volumes. Defaults to disabled; set enabled = true to enable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecAddonsConfigGcsFuseCsiDriverConfig
@@ -91,7 +104,9 @@ public partial class V1beta1ContainerClusterSpecAddonsConfigGcsFuseCsiDriverConf
     [JsonPropertyName("enabled")]
     public bool Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The status of the Backup for GKE Agent addon. It is disabled by default. Set enabled = true to enable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecAddonsConfigGkeBackupAgentConfig
@@ -100,7 +115,9 @@ public partial class V1beta1ContainerClusterSpecAddonsConfigGkeBackupAgentConfig
     [JsonPropertyName("enabled")]
     public bool Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The status of the Horizontal Pod Autoscaling addon, which increases or decreases the number of replica pods a replication controller has based on the resource usage of the existing pods. It ensures that a Heapster pod is running in the cluster, which is also used by the Cloud Monitoring service. It is enabled by default; set disabled = true to disable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecAddonsConfigHorizontalPodAutoscaling
@@ -109,7 +126,9 @@ public partial class V1beta1ContainerClusterSpecAddonsConfigHorizontalPodAutosca
     [JsonPropertyName("disabled")]
     public bool Disabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The status of the HTTP (L7) load balancing controller addon, which makes it easy to set up HTTP load balancers for services in a cluster. It is enabled by default; set disabled = true to disable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecAddonsConfigHttpLoadBalancing
@@ -118,7 +137,9 @@ public partial class V1beta1ContainerClusterSpecAddonsConfigHttpLoadBalancing
     [JsonPropertyName("disabled")]
     public bool Disabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The status of the Istio addon.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecAddonsConfigIstioConfig
@@ -131,7 +152,9 @@ public partial class V1beta1ContainerClusterSpecAddonsConfigIstioConfig
     [JsonPropertyName("disabled")]
     public bool Disabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for the KALM addon, which manages the lifecycle of k8s. It is disabled by default; Set enabled = true to enable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecAddonsConfigKalmConfig
@@ -140,7 +163,9 @@ public partial class V1beta1ContainerClusterSpecAddonsConfigKalmConfig
     [JsonPropertyName("enabled")]
     public bool Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Whether we should enable the network policy addon for the master. This must be enabled in order to enable network policy for the nodes. To enable this, you must also define a network_policy block, otherwise nothing will happen. It can only be disabled if the nodes already do not have network policies enabled. Defaults to disabled; set disabled = false to enable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecAddonsConfigNetworkPolicyConfig
@@ -149,7 +174,9 @@ public partial class V1beta1ContainerClusterSpecAddonsConfigNetworkPolicyConfig
     [JsonPropertyName("disabled")]
     public bool Disabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for addons supported by GKE.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecAddonsConfig
@@ -202,7 +229,9 @@ public partial class V1beta1ContainerClusterSpecAddonsConfig
     [JsonPropertyName("networkPolicyConfig")]
     public V1beta1ContainerClusterSpecAddonsConfigNetworkPolicyConfig? NetworkPolicyConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for the Google Groups for GKE feature.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecAuthenticatorGroupsConfig
@@ -211,7 +240,9 @@ public partial class V1beta1ContainerClusterSpecAuthenticatorGroupsConfig
     [JsonPropertyName("securityGroup")]
     public string SecurityGroup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration options for the Binary Authorization feature.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecBinaryAuthorization
@@ -224,7 +255,9 @@ public partial class V1beta1ContainerClusterSpecBinaryAuthorization
     [JsonPropertyName("evaluationMode")]
     public string? EvaluationMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecClusterAutoscalingAutoProvisioningDefaultsBootDiskKMSKeyRef
@@ -241,7 +274,9 @@ public partial class V1beta1ContainerClusterSpecClusterAutoscalingAutoProvisioni
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecClusterAutoscalingAutoProvisioningDefaultsManagementUpgradeOptions
@@ -254,7 +289,9 @@ public partial class V1beta1ContainerClusterSpecClusterAutoscalingAutoProvisioni
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NodeManagement configuration for this NodePool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecClusterAutoscalingAutoProvisioningDefaultsManagement
@@ -271,7 +308,9 @@ public partial class V1beta1ContainerClusterSpecClusterAutoscalingAutoProvisioni
     [JsonPropertyName("upgradeOptions")]
     public IList<V1beta1ContainerClusterSpecClusterAutoscalingAutoProvisioningDefaultsManagementUpgradeOptions>? UpgradeOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecClusterAutoscalingAutoProvisioningDefaultsServiceAccountRef
@@ -288,7 +327,9 @@ public partial class V1beta1ContainerClusterSpecClusterAutoscalingAutoProvisioni
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Shielded Instance options.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecClusterAutoscalingAutoProvisioningDefaultsShieldedInstanceConfig
@@ -301,7 +342,9 @@ public partial class V1beta1ContainerClusterSpecClusterAutoscalingAutoProvisioni
     [JsonPropertyName("enableSecureBoot")]
     public bool? EnableSecureBoot { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Standard policy for the blue-green upgrade.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy
@@ -318,7 +361,9 @@ public partial class V1beta1ContainerClusterSpecClusterAutoscalingAutoProvisioni
     [JsonPropertyName("batchSoakDuration")]
     public string? BatchSoakDuration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings for blue-green upgrade strategy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettings
@@ -331,7 +376,9 @@ public partial class V1beta1ContainerClusterSpecClusterAutoscalingAutoProvisioni
     [JsonPropertyName("standardRolloutPolicy")]
     public V1beta1ContainerClusterSpecClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy? StandardRolloutPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the upgrade settings for NAP created node pools.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecClusterAutoscalingAutoProvisioningDefaultsUpgradeSettings
@@ -352,7 +399,9 @@ public partial class V1beta1ContainerClusterSpecClusterAutoscalingAutoProvisioni
     [JsonPropertyName("strategy")]
     public string? Strategy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contains defaults for a node pool created by NAP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecClusterAutoscalingAutoProvisioningDefaults
@@ -393,7 +442,9 @@ public partial class V1beta1ContainerClusterSpecClusterAutoscalingAutoProvisioni
     [JsonPropertyName("upgradeSettings")]
     public V1beta1ContainerClusterSpecClusterAutoscalingAutoProvisioningDefaultsUpgradeSettings? UpgradeSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecClusterAutoscalingResourceLimits
@@ -410,7 +461,9 @@ public partial class V1beta1ContainerClusterSpecClusterAutoscalingResourceLimits
     [JsonPropertyName("resourceType")]
     public string ResourceType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to automatically adjust the size of the cluster and create/delete node pools based on the current needs of the cluster's workload. See the guide to using Node Auto-Provisioning for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecClusterAutoscaling
@@ -431,7 +484,9 @@ public partial class V1beta1ContainerClusterSpecClusterAutoscaling
     [JsonPropertyName("resourceLimits")]
     public IList<V1beta1ContainerClusterSpecClusterAutoscalingResourceLimits>? ResourceLimits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Telemetry integration for the cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecClusterTelemetry
@@ -440,7 +495,9 @@ public partial class V1beta1ContainerClusterSpecClusterTelemetry
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Configuration for the confidential nodes feature, which makes nodes run on confidential VMs. Warning: This configuration can't be changed (or added/removed) after cluster creation without deleting and recreating the entire cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecConfidentialNodes
@@ -449,7 +506,9 @@ public partial class V1beta1ContainerClusterSpecConfidentialNodes
     [JsonPropertyName("enabled")]
     public bool Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cost management configuration for the cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecCostManagementConfig
@@ -458,7 +517,9 @@ public partial class V1beta1ContainerClusterSpecCostManagementConfig
     [JsonPropertyName("enabled")]
     public bool Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Application-layer Secrets Encryption settings. The object format is {state = string, key_name = string}. Valid values of state are: "ENCRYPTED"; "DECRYPTED". key_name is the name of a CloudKMS key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecDatabaseEncryption
@@ -471,7 +532,9 @@ public partial class V1beta1ContainerClusterSpecDatabaseEncryption
     [JsonPropertyName("state")]
     public string State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled when defaultSnatStatus is disabled.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecDefaultSnatStatus
@@ -480,7 +543,9 @@ public partial class V1beta1ContainerClusterSpecDefaultSnatStatus
     [JsonPropertyName("disabled")]
     public bool Disabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Configuration for Cloud DNS for Kubernetes Engine.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecDnsConfig
@@ -497,7 +562,9 @@ public partial class V1beta1ContainerClusterSpecDnsConfig
     [JsonPropertyName("clusterDnsScope")]
     public string? ClusterDnsScope { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for Kubernetes Beta APIs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecEnableK8sBetaApis
@@ -506,7 +573,9 @@ public partial class V1beta1ContainerClusterSpecEnableK8sBetaApis
     [JsonPropertyName("enabledApis")]
     public IList<string> EnabledApis { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for GKE Gateway API controller.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecGatewayApiConfig
@@ -515,7 +584,9 @@ public partial class V1beta1ContainerClusterSpecGatewayApiConfig
     [JsonPropertyName("channel")]
     public string Channel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for Identity Service which allows customers to use external identity providers with the K8S API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecIdentityServiceConfig
@@ -524,7 +595,9 @@ public partial class V1beta1ContainerClusterSpecIdentityServiceConfig
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AdditionalPodRangesConfig is the configuration for additional pod secondary ranges supporting the ClusterUpdate message.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecIpAllocationPolicyAdditionalPodRangesConfig
@@ -533,7 +606,9 @@ public partial class V1beta1ContainerClusterSpecIpAllocationPolicyAdditionalPodR
     [JsonPropertyName("podRangeNames")]
     public IList<string> PodRangeNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Configuration for cluster level pod cidr overprovision. Default is disabled=false.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecIpAllocationPolicyPodCidrOverprovisionConfig
@@ -542,7 +617,9 @@ public partial class V1beta1ContainerClusterSpecIpAllocationPolicyPodCidrOverpro
     [JsonPropertyName("disabled")]
     public bool Disabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Configuration of cluster IP allocation for VPC-native clusters. Adding this block enables IP aliasing, making the cluster VPC-native instead of routes-based.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecIpAllocationPolicy
@@ -575,7 +652,9 @@ public partial class V1beta1ContainerClusterSpecIpAllocationPolicy
     [JsonPropertyName("stackType")]
     public string? StackType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Logging configuration for the cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecLoggingConfig
@@ -584,7 +663,9 @@ public partial class V1beta1ContainerClusterSpecLoggingConfig
     [JsonPropertyName("enableComponents")]
     public IList<string> EnableComponents { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Time window specified for daily maintenance operations. Specify start_time in RFC3339 format "HH:MM”, where HH : [00-23] and MM : [00-59] GMT.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecMaintenancePolicyDailyMaintenanceWindow
@@ -597,7 +678,9 @@ public partial class V1beta1ContainerClusterSpecMaintenancePolicyDailyMaintenanc
     [JsonPropertyName("startTime")]
     public string StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Maintenance exclusion related options.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecMaintenancePolicyMaintenanceExclusionExclusionOptions
@@ -606,7 +689,9 @@ public partial class V1beta1ContainerClusterSpecMaintenancePolicyMaintenanceExcl
     [JsonPropertyName("scope")]
     public string Scope { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecMaintenancePolicyMaintenanceExclusion
@@ -627,7 +712,9 @@ public partial class V1beta1ContainerClusterSpecMaintenancePolicyMaintenanceExcl
     [JsonPropertyName("startTime")]
     public string StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Time window for recurring maintenance operations.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecMaintenancePolicyRecurringWindow
@@ -644,7 +731,9 @@ public partial class V1beta1ContainerClusterSpecMaintenancePolicyRecurringWindow
     [JsonPropertyName("startTime")]
     public string StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The maintenance policy to use for the cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecMaintenancePolicy
@@ -661,7 +750,9 @@ public partial class V1beta1ContainerClusterSpecMaintenancePolicy
     [JsonPropertyName("recurringWindow")]
     public V1beta1ContainerClusterSpecMaintenancePolicyRecurringWindow? RecurringWindow { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Whether client certificate authorization is enabled for this cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecMasterAuthClientCertificateConfig
@@ -670,7 +761,9 @@ public partial class V1beta1ContainerClusterSpecMasterAuthClientCertificateConfi
     [JsonPropertyName("issueClientCertificate")]
     public bool IssueClientCertificate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecMasterAuthPasswordValueFromSecretKeyRef
@@ -683,7 +776,9 @@ public partial class V1beta1ContainerClusterSpecMasterAuthPasswordValueFromSecre
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecMasterAuthPasswordValueFrom
@@ -692,7 +787,9 @@ public partial class V1beta1ContainerClusterSpecMasterAuthPasswordValueFrom
     [JsonPropertyName("secretKeyRef")]
     public V1beta1ContainerClusterSpecMasterAuthPasswordValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password to use for HTTP basic authentication when accessing the Kubernetes master endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecMasterAuthPassword
@@ -705,7 +802,9 @@ public partial class V1beta1ContainerClusterSpecMasterAuthPassword
     [JsonPropertyName("valueFrom")]
     public V1beta1ContainerClusterSpecMasterAuthPasswordValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DEPRECATED. Basic authentication was removed for GKE cluster versions &gt;= 1.19. The authentication information for accessing the Kubernetes master. Some values in this block are only returned by the API if your service account has permission to get credentials for your GKE cluster. If you see an unexpected diff unsetting your client cert, ensure you have the container.clusters.getCredentials permission.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecMasterAuth
@@ -734,7 +833,9 @@ public partial class V1beta1ContainerClusterSpecMasterAuth
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecMasterAuthorizedNetworksConfigCidrBlocks
@@ -747,7 +848,9 @@ public partial class V1beta1ContainerClusterSpecMasterAuthorizedNetworksConfigCi
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The desired configuration options for master authorized networks. Omit the nested cidr_blocks attribute to disallow external access (except the cluster node IPs, which GKE automatically whitelists).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecMasterAuthorizedNetworksConfig
@@ -760,7 +863,9 @@ public partial class V1beta1ContainerClusterSpecMasterAuthorizedNetworksConfig
     [JsonPropertyName("gcpPublicCidrsAccessEnabled")]
     public bool? GcpPublicCidrsAccessEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If set, and enable_certificates=true, the GKE Workload Identity Certificates controller and node agent will be deployed in the cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecMeshCertificates
@@ -769,7 +874,9 @@ public partial class V1beta1ContainerClusterSpecMeshCertificates
     [JsonPropertyName("enableCertificates")]
     public bool EnableCertificates { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecMonitoringConfigAdvancedDatapathObservabilityConfig
@@ -782,7 +889,9 @@ public partial class V1beta1ContainerClusterSpecMonitoringConfigAdvancedDatapath
     [JsonPropertyName("relayMode")]
     public string? RelayMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for Google Cloud Managed Services for Prometheus.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecMonitoringConfigManagedPrometheus
@@ -791,7 +900,9 @@ public partial class V1beta1ContainerClusterSpecMonitoringConfigManagedPrometheu
     [JsonPropertyName("enabled")]
     public bool Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Monitoring configuration for the cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecMonitoringConfig
@@ -808,7 +919,9 @@ public partial class V1beta1ContainerClusterSpecMonitoringConfig
     [JsonPropertyName("managedPrometheus")]
     public V1beta1ContainerClusterSpecMonitoringConfigManagedPrometheus? ManagedPrometheus { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration options for the NetworkPolicy feature.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNetworkPolicy
@@ -821,7 +934,9 @@ public partial class V1beta1ContainerClusterSpecNetworkPolicy
     [JsonPropertyName("provider")]
     public string? Provider { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNetworkRef
@@ -838,7 +953,9 @@ public partial class V1beta1ContainerClusterSpecNetworkRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Specifies options for controlling advanced machine features.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNodeConfigAdvancedMachineFeatures
@@ -847,7 +964,9 @@ public partial class V1beta1ContainerClusterSpecNodeConfigAdvancedMachineFeature
     [JsonPropertyName("threadsPerCore")]
     public int ThreadsPerCore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNodeConfigBootDiskKMSCryptoKeyRef
@@ -864,7 +983,9 @@ public partial class V1beta1ContainerClusterSpecNodeConfigBootDiskKMSCryptoKeyRe
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Configuration for the confidential nodes feature, which makes nodes run on confidential VMs. Warning: This configuration can't be changed (or added/removed) after pool creation without deleting and recreating the entire pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNodeConfigConfidentialNodes
@@ -873,7 +994,9 @@ public partial class V1beta1ContainerClusterSpecNodeConfigConfidentialNodes
     [JsonPropertyName("enabled")]
     public bool Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNodeConfigEphemeralStorageConfig
@@ -882,7 +1005,9 @@ public partial class V1beta1ContainerClusterSpecNodeConfigEphemeralStorageConfig
     [JsonPropertyName("localSsdCount")]
     public int LocalSsdCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNodeConfigEphemeralStorageLocalSsdConfig
@@ -891,7 +1016,9 @@ public partial class V1beta1ContainerClusterSpecNodeConfigEphemeralStorageLocalS
     [JsonPropertyName("localSsdCount")]
     public int LocalSsdCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Enable or disable NCCL Fast Socket in the node pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNodeConfigFastSocket
@@ -900,7 +1027,9 @@ public partial class V1beta1ContainerClusterSpecNodeConfigFastSocket
     [JsonPropertyName("enabled")]
     public bool Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. GCFS configuration for this node.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNodeConfigGcfsConfig
@@ -909,7 +1038,9 @@ public partial class V1beta1ContainerClusterSpecNodeConfigGcfsConfig
     [JsonPropertyName("enabled")]
     public bool Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Configuration for auto installation of GPU driver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNodeConfigGuestAcceleratorGpuDriverInstallationConfig
@@ -918,7 +1049,9 @@ public partial class V1beta1ContainerClusterSpecNodeConfigGuestAcceleratorGpuDri
     [JsonPropertyName("gpuDriverVersion")]
     public string GpuDriverVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Configuration for GPU sharing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNodeConfigGuestAcceleratorGpuSharingConfig
@@ -931,7 +1064,9 @@ public partial class V1beta1ContainerClusterSpecNodeConfigGuestAcceleratorGpuSha
     [JsonPropertyName("maxSharedClientsPerGpu")]
     public int MaxSharedClientsPerGpu { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNodeConfigGuestAccelerator
@@ -956,7 +1091,9 @@ public partial class V1beta1ContainerClusterSpecNodeConfigGuestAccelerator
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Enable or disable gvnic in the node pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNodeConfigGvnic
@@ -965,7 +1102,9 @@ public partial class V1beta1ContainerClusterSpecNodeConfigGvnic
     [JsonPropertyName("enabled")]
     public bool Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The maintenance policy for the hosts on which the GKE VMs run on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNodeConfigHostMaintenancePolicy
@@ -974,7 +1113,9 @@ public partial class V1beta1ContainerClusterSpecNodeConfigHostMaintenancePolicy
     [JsonPropertyName("maintenanceInterval")]
     public string MaintenanceInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Node kubelet configs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNodeConfigKubeletConfig
@@ -995,7 +1136,9 @@ public partial class V1beta1ContainerClusterSpecNodeConfigKubeletConfig
     [JsonPropertyName("podPidsLimit")]
     public int? PodPidsLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Parameters that can be configured on Linux nodes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNodeConfigLinuxNodeConfig
@@ -1008,7 +1151,9 @@ public partial class V1beta1ContainerClusterSpecNodeConfigLinuxNodeConfig
     [JsonPropertyName("sysctls")]
     public IDictionary<string, string>? Sysctls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Parameters for raw-block local NVMe SSDs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNodeConfigLocalNvmeSsdBlockConfig
@@ -1017,7 +1162,9 @@ public partial class V1beta1ContainerClusterSpecNodeConfigLocalNvmeSsdBlockConfi
     [JsonPropertyName("localSsdCount")]
     public int LocalSsdCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Setting this field will assign instances of this pool to run on the specified node group. This is useful for running workloads on sole tenant nodes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNodeConfigNodeGroupRef
@@ -1034,7 +1181,9 @@ public partial class V1beta1ContainerClusterSpecNodeConfigNodeGroupRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The reservation affinity configuration for the node pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNodeConfigReservationAffinity
@@ -1051,7 +1200,9 @@ public partial class V1beta1ContainerClusterSpecNodeConfigReservationAffinity
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Sandbox configuration for this node.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNodeConfigSandboxConfig
@@ -1060,7 +1211,9 @@ public partial class V1beta1ContainerClusterSpecNodeConfigSandboxConfig
     [JsonPropertyName("sandboxType")]
     public string SandboxType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNodeConfigServiceAccountRef
@@ -1077,7 +1230,9 @@ public partial class V1beta1ContainerClusterSpecNodeConfigServiceAccountRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Shielded Instance options.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNodeConfigShieldedInstanceConfig
@@ -1090,7 +1245,9 @@ public partial class V1beta1ContainerClusterSpecNodeConfigShieldedInstanceConfig
     [JsonPropertyName("enableSecureBoot")]
     public bool? EnableSecureBoot { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNodeConfigSoleTenantConfigNodeAffinity
@@ -1107,7 +1264,9 @@ public partial class V1beta1ContainerClusterSpecNodeConfigSoleTenantConfigNodeAf
     [JsonPropertyName("values")]
     public IList<string> Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Node affinity options for sole tenant node pools.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNodeConfigSoleTenantConfig
@@ -1116,7 +1275,9 @@ public partial class V1beta1ContainerClusterSpecNodeConfigSoleTenantConfig
     [JsonPropertyName("nodeAffinity")]
     public IList<V1beta1ContainerClusterSpecNodeConfigSoleTenantConfigNodeAffinity> NodeAffinity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNodeConfigTaint
@@ -1133,7 +1294,9 @@ public partial class V1beta1ContainerClusterSpecNodeConfigTaint
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The workload metadata configuration for this node.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNodeConfigWorkloadMetadataConfig
@@ -1146,7 +1309,9 @@ public partial class V1beta1ContainerClusterSpecNodeConfigWorkloadMetadataConfig
     [JsonPropertyName("nodeMetadata")]
     public string? NodeMetadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The configuration of the nodepool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNodeConfig
@@ -1291,7 +1456,9 @@ public partial class V1beta1ContainerClusterSpecNodeConfig
     [JsonPropertyName("workloadMetadataConfig")]
     public V1beta1ContainerClusterSpecNodeConfigWorkloadMetadataConfig? WorkloadMetadataConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Collection of Compute Engine network tags that can be applied to a node's underlying VM instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNodePoolAutoConfigNetworkTags
@@ -1300,7 +1467,9 @@ public partial class V1beta1ContainerClusterSpecNodePoolAutoConfigNetworkTags
     [JsonPropertyName("tags")]
     public IList<string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Node pool configs that apply to all auto-provisioned node pools in autopilot clusters and node auto-provisioning enabled clusters.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNodePoolAutoConfig
@@ -1309,7 +1478,9 @@ public partial class V1beta1ContainerClusterSpecNodePoolAutoConfig
     [JsonPropertyName("networkTags")]
     public V1beta1ContainerClusterSpecNodePoolAutoConfigNetworkTags? NetworkTags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GCFS configuration for this node.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNodePoolDefaultsNodeConfigDefaultsGcfsConfig
@@ -1318,7 +1489,9 @@ public partial class V1beta1ContainerClusterSpecNodePoolDefaultsNodeConfigDefaul
     [JsonPropertyName("enabled")]
     public bool Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Subset of NodeConfig message that has defaults.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNodePoolDefaultsNodeConfigDefaults
@@ -1331,7 +1504,9 @@ public partial class V1beta1ContainerClusterSpecNodePoolDefaultsNodeConfigDefaul
     [JsonPropertyName("loggingVariant")]
     public string? LoggingVariant { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The default nodel pool settings for the entire cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNodePoolDefaults
@@ -1340,7 +1515,9 @@ public partial class V1beta1ContainerClusterSpecNodePoolDefaults
     [JsonPropertyName("nodeConfigDefaults")]
     public V1beta1ContainerClusterSpecNodePoolDefaultsNodeConfigDefaults? NodeConfigDefaults { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Allows filtering to one or more specific event types. If event types are present, those and only those event types will be transmitted to the cluster. Other types will be skipped. If no filter is specified, or no event types are present, all event types will be sent.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNotificationConfigPubsubFilter
@@ -1349,7 +1526,9 @@ public partial class V1beta1ContainerClusterSpecNotificationConfigPubsubFilter
     [JsonPropertyName("eventType")]
     public IList<string> EventType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The PubSubTopic to send the notification to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNotificationConfigPubsubTopicRef
@@ -1366,7 +1545,9 @@ public partial class V1beta1ContainerClusterSpecNotificationConfigPubsubTopicRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Notification config for Cloud Pub/Sub.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNotificationConfigPubsub
@@ -1383,7 +1564,9 @@ public partial class V1beta1ContainerClusterSpecNotificationConfigPubsub
     [JsonPropertyName("topicRef")]
     public V1beta1ContainerClusterSpecNotificationConfigPubsubTopicRef? TopicRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The notification config for sending cluster upgrade notifications.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNotificationConfig
@@ -1392,7 +1575,9 @@ public partial class V1beta1ContainerClusterSpecNotificationConfig
     [JsonPropertyName("pubsub")]
     public V1beta1ContainerClusterSpecNotificationConfigPubsub Pubsub { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for the PodSecurityPolicy feature.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecPodSecurityPolicyConfig
@@ -1401,7 +1586,9 @@ public partial class V1beta1ContainerClusterSpecPodSecurityPolicyConfig
     [JsonPropertyName("enabled")]
     public bool Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Controls cluster master global access settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecPrivateClusterConfigMasterGlobalAccessConfig
@@ -1410,7 +1597,9 @@ public partial class V1beta1ContainerClusterSpecPrivateClusterConfigMasterGlobal
     [JsonPropertyName("enabled")]
     public bool Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Subnetwork in cluster's network where master's endpoint will be provisioned.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecPrivateClusterConfigPrivateEndpointSubnetworkRef
@@ -1427,7 +1616,9 @@ public partial class V1beta1ContainerClusterSpecPrivateClusterConfigPrivateEndpo
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for private clusters, clusters with private nodes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecPrivateClusterConfig
@@ -1464,7 +1655,9 @@ public partial class V1beta1ContainerClusterSpecPrivateClusterConfig
     [JsonPropertyName("publicEndpoint")]
     public string? PublicEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkloadConfig defines which actions are enabled for a cluster's workload configurations.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecProtectConfigWorkloadConfig
@@ -1473,7 +1666,9 @@ public partial class V1beta1ContainerClusterSpecProtectConfigWorkloadConfig
     [JsonPropertyName("auditMode")]
     public string AuditMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Enable/Disable Protect API features for the cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecProtectConfig
@@ -1486,7 +1681,9 @@ public partial class V1beta1ContainerClusterSpecProtectConfig
     [JsonPropertyName("workloadVulnerabilityMode")]
     public string? WorkloadVulnerabilityMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration options for the Release channel feature, which provide more control over automatic upgrades of your GKE clusters. Note that removing this field from your config will not unenroll it. Instead, use the "UNSPECIFIED" channel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecReleaseChannel
@@ -1495,7 +1692,9 @@ public partial class V1beta1ContainerClusterSpecReleaseChannel
     [JsonPropertyName("channel")]
     public string Channel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Parameters for using BigQuery as the destination of resource usage export.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecResourceUsageExportConfigBigqueryDestination
@@ -1504,7 +1703,9 @@ public partial class V1beta1ContainerClusterSpecResourceUsageExportConfigBigquer
     [JsonPropertyName("datasetId")]
     public string DatasetId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for the ResourceUsageExportConfig feature.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecResourceUsageExportConfig
@@ -1521,7 +1722,9 @@ public partial class V1beta1ContainerClusterSpecResourceUsageExportConfig
     [JsonPropertyName("enableResourceConsumptionMetering")]
     public bool? EnableResourceConsumptionMetering { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines the config needed to enable/disable features for the Security Posture API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecSecurityPostureConfig
@@ -1534,7 +1737,9 @@ public partial class V1beta1ContainerClusterSpecSecurityPostureConfig
     [JsonPropertyName("vulnerabilityMode")]
     public string? VulnerabilityMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If set, and enabled=true, services with external ips field will not be blocked.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecServiceExternalIpsConfig
@@ -1543,7 +1748,9 @@ public partial class V1beta1ContainerClusterSpecServiceExternalIpsConfig
     [JsonPropertyName("enabled")]
     public bool Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecSubnetworkRef
@@ -1560,7 +1767,9 @@ public partial class V1beta1ContainerClusterSpecSubnetworkRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecVerticalPodAutoscaling
@@ -1569,7 +1778,9 @@ public partial class V1beta1ContainerClusterSpecVerticalPodAutoscaling
     [JsonPropertyName("enabled")]
     public bool Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecWorkloadIdentityConfig
@@ -1582,7 +1793,9 @@ public partial class V1beta1ContainerClusterSpecWorkloadIdentityConfig
     [JsonPropertyName("workloadPool")]
     public string? WorkloadPool { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpec
@@ -1831,7 +2044,9 @@ public partial class V1beta1ContainerClusterSpec
     [JsonPropertyName("workloadIdentityConfig")]
     public V1beta1ContainerClusterSpecWorkloadIdentityConfig? WorkloadIdentityConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterStatusConditions
@@ -1856,7 +2071,9 @@ public partial class V1beta1ContainerClusterStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DEPRECATED. Basic authentication was removed for GKE cluster versions &gt;= 1.19. The authentication information for accessing the Kubernetes master. Some values in this block are only returned by the API if your service account has permission to get credentials for your GKE cluster. If you see an unexpected diff unsetting your client cert, ensure you have the container.clusters.getCredentials permission.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterStatusObservedStateMasterAuth
@@ -1869,7 +2086,9 @@ public partial class V1beta1ContainerClusterStatusObservedStateMasterAuth
     [JsonPropertyName("clusterCaCertificate")]
     public string? ClusterCaCertificate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for private clusters, clusters with private nodes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterStatusObservedStatePrivateClusterConfig
@@ -1882,7 +2101,9 @@ public partial class V1beta1ContainerClusterStatusObservedStatePrivateClusterCon
     [JsonPropertyName("publicEndpoint")]
     public string? PublicEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The observed state of the underlying GCP resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterStatusObservedState
@@ -1895,7 +2116,9 @@ public partial class V1beta1ContainerClusterStatusObservedState
     [JsonPropertyName("privateClusterConfig")]
     public V1beta1ContainerClusterStatusObservedStatePrivateClusterConfig? PrivateClusterConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterStatus
@@ -1940,7 +2163,9 @@ public partial class V1beta1ContainerClusterStatus
     [JsonPropertyName("tpuIpv4CidrBlock")]
     public string? TpuIpv4CidrBlock { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1970,3 +2195,4 @@ public partial class V1beta1ContainerCluster : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1ContainerClusterStatus? Status { get; set; }
 }
+#nullable disable

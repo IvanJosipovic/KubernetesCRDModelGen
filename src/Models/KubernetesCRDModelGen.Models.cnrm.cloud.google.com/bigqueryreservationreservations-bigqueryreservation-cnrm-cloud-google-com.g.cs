@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigqueryreservation.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>BigQueryReservationReservation is the Schema for the BigQueryReservationReservation API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1BigQueryReservationReservationList : IKubernetesObj
     [JsonPropertyName("items")]
     public IList<V1alpha1BigQueryReservationReservation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The configuration parameters for the auto scaling feature.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryReservationReservationSpecAutoscale
@@ -42,7 +45,9 @@ public partial class V1alpha1BigQueryReservationReservationSpecAutoscale
     [JsonPropertyName("maxSlots")]
     public long? MaxSlots { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. This field is only set for reservations using the managed disaster recovery feature. Users can set this to create a failover reservation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryReservationReservationSpecFailover
@@ -51,7 +56,9 @@ public partial class V1alpha1BigQueryReservationReservationSpecFailover
     [JsonPropertyName("secondaryLocation")]
     public string SecondaryLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryReservationReservationSpecProjectRef
@@ -72,7 +79,9 @@ public partial class V1alpha1BigQueryReservationReservationSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigQueryReservationReservationSpec defines the desired state of BigQueryReservationReservation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryReservationReservationSpec
@@ -113,7 +122,9 @@ public partial class V1alpha1BigQueryReservationReservationSpec
     [JsonPropertyName("slotCapacity")]
     public long? SlotCapacity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryReservationReservationStatusConditions
@@ -138,7 +149,9 @@ public partial class V1alpha1BigQueryReservationReservationStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryReservationReservationStatusObservedStateAutoscale
@@ -147,7 +160,9 @@ public partial class V1alpha1BigQueryReservationReservationStatusObservedStateAu
     [JsonPropertyName("currentSlots")]
     public long? CurrentSlots { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryReservationReservationStatusObservedStateFailover
@@ -164,7 +179,9 @@ public partial class V1alpha1BigQueryReservationReservationStatusObservedStateFa
     [JsonPropertyName("secondaryLocation")]
     public string? SecondaryLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryReservationReservationStatusObservedState
@@ -177,7 +194,9 @@ public partial class V1alpha1BigQueryReservationReservationStatusObservedState
     [JsonPropertyName("failover")]
     public V1alpha1BigQueryReservationReservationStatusObservedStateFailover? Failover { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigQueryReservationReservationStatus defines the config connector machine state of BigQueryReservationReservation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryReservationReservationStatus
@@ -198,7 +217,9 @@ public partial class V1alpha1BigQueryReservationReservationStatus
     [JsonPropertyName("observedState")]
     public V1alpha1BigQueryReservationReservationStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigQueryReservationReservation is the Schema for the BigQueryReservationReservation API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -228,3 +249,4 @@ public partial class V1alpha1BigQueryReservationReservation : IKubernetesObject<
     [JsonPropertyName("status")]
     public V1alpha1BigQueryReservationReservationStatus? Status { get; set; }
 }
+#nullable disable

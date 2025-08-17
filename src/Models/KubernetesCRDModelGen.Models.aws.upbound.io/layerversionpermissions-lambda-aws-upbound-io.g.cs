@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.lambda.aws.upbound.io;
+#nullable enable
 /// <summary>LayerVersionPermission is the Schema for the LayerVersionPermissions API. Manages an AWS Lambda Layer Version Permission.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LayerVersionPermissionList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1LayerVersionPermission> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LayerVersionPermissionSpecForProviderLayerNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1LayerVersionPermissionSpecForProviderLayerNameRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LayerVersion in lambda to populate layerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LayerVersionPermissionSpecForProviderLayerNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1LayerVersionPermissionSpecForProviderLayerNameRef
     [JsonPropertyName("policy")]
     public V1beta1LayerVersionPermissionSpecForProviderLayerNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LayerVersionPermissionSpecForProviderLayerNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1LayerVersionPermissionSpecForProviderLayerNameSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LayerVersion in lambda to populate layerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LayerVersionPermissionSpecForProviderLayerNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1LayerVersionPermissionSpecForProviderLayerNameSelect
     [JsonPropertyName("policy")]
     public V1beta1LayerVersionPermissionSpecForProviderLayerNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LayerVersionPermissionSpecForProviderVersionNumberRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1LayerVersionPermissionSpecForProviderVersionNumberRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LayerVersion in lambda to populate versionNumber.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LayerVersionPermissionSpecForProviderVersionNumberRef
@@ -115,7 +128,9 @@ public partial class V1beta1LayerVersionPermissionSpecForProviderVersionNumberRe
     [JsonPropertyName("policy")]
     public V1beta1LayerVersionPermissionSpecForProviderVersionNumberRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LayerVersionPermissionSpecForProviderVersionNumberSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1LayerVersionPermissionSpecForProviderVersionNumberSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LayerVersion in lambda to populate versionNumber.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LayerVersionPermissionSpecForProviderVersionNumberSelector
@@ -145,7 +162,9 @@ public partial class V1beta1LayerVersionPermissionSpecForProviderVersionNumberSe
     [JsonPropertyName("policy")]
     public V1beta1LayerVersionPermissionSpecForProviderVersionNumberSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LayerVersionPermissionSpecForProvider
@@ -198,7 +217,9 @@ public partial class V1beta1LayerVersionPermissionSpecForProvider
     [JsonPropertyName("versionNumberSelector")]
     public V1beta1LayerVersionPermissionSpecForProviderVersionNumberSelector? VersionNumberSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LayerVersionPermissionSpecInitProviderLayerNameRefPolicy
@@ -211,7 +232,9 @@ public partial class V1beta1LayerVersionPermissionSpecInitProviderLayerNameRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LayerVersion in lambda to populate layerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LayerVersionPermissionSpecInitProviderLayerNameRef
@@ -224,7 +247,9 @@ public partial class V1beta1LayerVersionPermissionSpecInitProviderLayerNameRef
     [JsonPropertyName("policy")]
     public V1beta1LayerVersionPermissionSpecInitProviderLayerNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LayerVersionPermissionSpecInitProviderLayerNameSelectorPolicy
@@ -237,7 +262,9 @@ public partial class V1beta1LayerVersionPermissionSpecInitProviderLayerNameSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LayerVersion in lambda to populate layerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LayerVersionPermissionSpecInitProviderLayerNameSelector
@@ -254,7 +281,9 @@ public partial class V1beta1LayerVersionPermissionSpecInitProviderLayerNameSelec
     [JsonPropertyName("policy")]
     public V1beta1LayerVersionPermissionSpecInitProviderLayerNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LayerVersionPermissionSpecInitProviderVersionNumberRefPolicy
@@ -267,7 +296,9 @@ public partial class V1beta1LayerVersionPermissionSpecInitProviderVersionNumberR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LayerVersion in lambda to populate versionNumber.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LayerVersionPermissionSpecInitProviderVersionNumberRef
@@ -280,7 +311,9 @@ public partial class V1beta1LayerVersionPermissionSpecInitProviderVersionNumberR
     [JsonPropertyName("policy")]
     public V1beta1LayerVersionPermissionSpecInitProviderVersionNumberRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LayerVersionPermissionSpecInitProviderVersionNumberSelectorPolicy
@@ -293,7 +326,9 @@ public partial class V1beta1LayerVersionPermissionSpecInitProviderVersionNumberS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LayerVersion in lambda to populate versionNumber.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LayerVersionPermissionSpecInitProviderVersionNumberSelector
@@ -310,7 +345,9 @@ public partial class V1beta1LayerVersionPermissionSpecInitProviderVersionNumberS
     [JsonPropertyName("policy")]
     public V1beta1LayerVersionPermissionSpecInitProviderVersionNumberSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LayerVersionPermissionSpecInitProvider
@@ -359,7 +396,9 @@ public partial class V1beta1LayerVersionPermissionSpecInitProvider
     [JsonPropertyName("versionNumberSelector")]
     public V1beta1LayerVersionPermissionSpecInitProviderVersionNumberSelector? VersionNumberSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LayerVersionPermissionSpecProviderConfigRefPolicy
@@ -372,7 +411,9 @@ public partial class V1beta1LayerVersionPermissionSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LayerVersionPermissionSpecProviderConfigRef
@@ -385,7 +426,9 @@ public partial class V1beta1LayerVersionPermissionSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1LayerVersionPermissionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LayerVersionPermissionSpecWriteConnectionSecretToRef
@@ -398,7 +441,9 @@ public partial class V1beta1LayerVersionPermissionSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LayerVersionPermissionSpec defines the desired state of LayerVersionPermission</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LayerVersionPermissionSpec
@@ -427,7 +472,9 @@ public partial class V1beta1LayerVersionPermissionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LayerVersionPermissionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LayerVersionPermissionStatusAtProvider
@@ -476,7 +523,9 @@ public partial class V1beta1LayerVersionPermissionStatusAtProvider
     [JsonPropertyName("versionNumber")]
     public double? VersionNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LayerVersionPermissionStatusConditions
@@ -505,7 +554,9 @@ public partial class V1beta1LayerVersionPermissionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LayerVersionPermissionStatus defines the observed state of LayerVersionPermission.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LayerVersionPermissionStatus
@@ -522,7 +573,9 @@ public partial class V1beta1LayerVersionPermissionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LayerVersionPermission is the Schema for the LayerVersionPermissions API. Manages an AWS Lambda Layer Version Permission.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -552,3 +605,4 @@ public partial class V1beta1LayerVersionPermission : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1LayerVersionPermissionStatus? Status { get; set; }
 }
+#nullable disable

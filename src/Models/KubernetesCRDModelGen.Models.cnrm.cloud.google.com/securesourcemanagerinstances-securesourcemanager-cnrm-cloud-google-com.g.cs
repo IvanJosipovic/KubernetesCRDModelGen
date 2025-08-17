@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.securesourcemanager.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>SecureSourceManagerInstance is the Schema for the SecureSourceManagerInstance API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SecureSourceManagerInstanceList : IKubernetesObject<
     [JsonPropertyName("items")]
     public IList<V1beta1SecureSourceManagerInstance> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Immutable. Customer-managed encryption key name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecureSourceManagerInstanceSpecKmsKeyRef
@@ -50,7 +53,9 @@ public partial class V1beta1SecureSourceManagerInstanceSpecKmsKeyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Immutable. CA pool resource, resource must in the format of `projects/{project}/locations/{location}/caPools/{ca_pool}`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecureSourceManagerInstanceSpecPrivateConfigCaPoolRef
@@ -67,7 +72,9 @@ public partial class V1beta1SecureSourceManagerInstanceSpecPrivateConfigCaPoolRe
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. PrivateConfig includes settings for private instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecureSourceManagerInstanceSpecPrivateConfig
@@ -80,7 +87,9 @@ public partial class V1beta1SecureSourceManagerInstanceSpecPrivateConfig
     [JsonPropertyName("isPrivate")]
     public bool? IsPrivate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecureSourceManagerInstanceSpecProjectRef
@@ -101,7 +110,9 @@ public partial class V1beta1SecureSourceManagerInstanceSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecureSourceManagerInstanceSpec defines the desired state of SecureSourceManagerInstance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecureSourceManagerInstanceSpec
@@ -130,7 +141,9 @@ public partial class V1beta1SecureSourceManagerInstanceSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecureSourceManagerInstanceStatusConditions
@@ -155,7 +168,9 @@ public partial class V1beta1SecureSourceManagerInstanceStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. A list of hostnames for this instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecureSourceManagerInstanceStatusObservedStateHostConfig
@@ -176,7 +191,9 @@ public partial class V1beta1SecureSourceManagerInstanceStatusObservedStateHostCo
     [JsonPropertyName("html")]
     public string? Html { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. PrivateConfig includes settings for private instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecureSourceManagerInstanceStatusObservedStatePrivateConfig
@@ -189,7 +206,9 @@ public partial class V1beta1SecureSourceManagerInstanceStatusObservedStatePrivat
     [JsonPropertyName("sshServiceAttachment")]
     public string? SshServiceAttachment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecureSourceManagerInstanceStatusObservedState
@@ -218,7 +237,9 @@ public partial class V1beta1SecureSourceManagerInstanceStatusObservedState
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecureSourceManagerInstanceStatus defines the config connector machine state of SecureSourceManagerInstance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecureSourceManagerInstanceStatus
@@ -239,7 +260,9 @@ public partial class V1beta1SecureSourceManagerInstanceStatus
     [JsonPropertyName("observedState")]
     public V1beta1SecureSourceManagerInstanceStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecureSourceManagerInstance is the Schema for the SecureSourceManagerInstance API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -269,3 +292,4 @@ public partial class V1beta1SecureSourceManagerInstance : IKubernetesObject<V1Ob
     [JsonPropertyName("status")]
     public V1beta1SecureSourceManagerInstanceStatus? Status { get; set; }
 }
+#nullable disable

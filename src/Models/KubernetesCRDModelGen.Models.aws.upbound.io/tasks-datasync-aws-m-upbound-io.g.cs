@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datasync.aws.m.upbound.io;
+#nullable enable
 /// <summary>Task is the Schema for the Tasks API. Manages an AWS DataSync Task</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TaskList : IKubernetesObject<V1ListMeta>, IItems<V1b
     [JsonPropertyName("items")]
     public IList<V1beta1Task> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecForProviderCloudwatchLogGroupArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1TaskSpecForProviderCloudwatchLogGroupArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Group in cloudwatchlogs to populate cloudwatchLogGroupArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecForProviderCloudwatchLogGroupArnRef
@@ -63,7 +68,9 @@ public partial class V1beta1TaskSpecForProviderCloudwatchLogGroupArnRef
     [JsonPropertyName("policy")]
     public V1beta1TaskSpecForProviderCloudwatchLogGroupArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecForProviderCloudwatchLogGroupArnSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1TaskSpecForProviderCloudwatchLogGroupArnSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Group in cloudwatchlogs to populate cloudwatchLogGroupArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecForProviderCloudwatchLogGroupArnSelector
@@ -97,7 +106,9 @@ public partial class V1beta1TaskSpecForProviderCloudwatchLogGroupArnSelector
     [JsonPropertyName("policy")]
     public V1beta1TaskSpecForProviderCloudwatchLogGroupArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecForProviderDestinationLocationArnRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1TaskSpecForProviderDestinationLocationArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LocationS3 in datasync to populate destinationLocationArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecForProviderDestinationLocationArnRef
@@ -127,7 +140,9 @@ public partial class V1beta1TaskSpecForProviderDestinationLocationArnRef
     [JsonPropertyName("policy")]
     public V1beta1TaskSpecForProviderDestinationLocationArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecForProviderDestinationLocationArnSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1TaskSpecForProviderDestinationLocationArnSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LocationS3 in datasync to populate destinationLocationArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecForProviderDestinationLocationArnSelector
@@ -161,7 +178,9 @@ public partial class V1beta1TaskSpecForProviderDestinationLocationArnSelector
     [JsonPropertyName("policy")]
     public V1beta1TaskSpecForProviderDestinationLocationArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Filter rules that determines which files to exclude from a task.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecForProviderExcludes
@@ -174,7 +193,9 @@ public partial class V1beta1TaskSpecForProviderExcludes
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Filter rules that determines which files to include in a task.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecForProviderIncludes
@@ -187,7 +208,9 @@ public partial class V1beta1TaskSpecForProviderIncludes
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecForProviderOptions
@@ -252,7 +275,9 @@ public partial class V1beta1TaskSpecForProviderOptions
     [JsonPropertyName("verifyMode")]
     public string? VerifyMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies a schedule used to periodically transfer files from a source to a destination location.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecForProviderSchedule
@@ -261,7 +286,9 @@ public partial class V1beta1TaskSpecForProviderSchedule
     [JsonPropertyName("scheduleExpression")]
     public string? ScheduleExpression { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecForProviderSourceLocationArnRefPolicy
@@ -274,7 +301,9 @@ public partial class V1beta1TaskSpecForProviderSourceLocationArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LocationS3 in datasync to populate sourceLocationArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecForProviderSourceLocationArnRef
@@ -291,7 +320,9 @@ public partial class V1beta1TaskSpecForProviderSourceLocationArnRef
     [JsonPropertyName("policy")]
     public V1beta1TaskSpecForProviderSourceLocationArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecForProviderSourceLocationArnSelectorPolicy
@@ -304,7 +335,9 @@ public partial class V1beta1TaskSpecForProviderSourceLocationArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LocationS3 in datasync to populate sourceLocationArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecForProviderSourceLocationArnSelector
@@ -325,7 +358,9 @@ public partial class V1beta1TaskSpecForProviderSourceLocationArnSelector
     [JsonPropertyName("policy")]
     public V1beta1TaskSpecForProviderSourceLocationArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block containing the configuration of the reporting level for aspects of your task report. See report_overrides below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecForProviderTaskReportConfigReportOverrides
@@ -346,7 +381,9 @@ public partial class V1beta1TaskSpecForProviderTaskReportConfigReportOverrides
     [JsonPropertyName("verifiedOverride")]
     public string? VerifiedOverride { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block containing the configuration for the Amazon S3 bucket where DataSync uploads your task report. See s3_destination below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecForProviderTaskReportConfigS3Destination
@@ -363,7 +400,9 @@ public partial class V1beta1TaskSpecForProviderTaskReportConfigS3Destination
     [JsonPropertyName("subdirectory")]
     public string? Subdirectory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block containing the configuration of a DataSync Task Report. See task_report_config below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecForProviderTaskReportConfig
@@ -388,7 +427,9 @@ public partial class V1beta1TaskSpecForProviderTaskReportConfig
     [JsonPropertyName("s3ObjectVersioning")]
     public string? S3ObjectVersioning { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecForProvider
@@ -465,7 +506,9 @@ public partial class V1beta1TaskSpecForProvider
     [JsonPropertyName("taskReportConfig")]
     public V1beta1TaskSpecForProviderTaskReportConfig? TaskReportConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecInitProviderCloudwatchLogGroupArnRefPolicy
@@ -478,7 +521,9 @@ public partial class V1beta1TaskSpecInitProviderCloudwatchLogGroupArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Group in cloudwatchlogs to populate cloudwatchLogGroupArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecInitProviderCloudwatchLogGroupArnRef
@@ -495,7 +540,9 @@ public partial class V1beta1TaskSpecInitProviderCloudwatchLogGroupArnRef
     [JsonPropertyName("policy")]
     public V1beta1TaskSpecInitProviderCloudwatchLogGroupArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecInitProviderCloudwatchLogGroupArnSelectorPolicy
@@ -508,7 +555,9 @@ public partial class V1beta1TaskSpecInitProviderCloudwatchLogGroupArnSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Group in cloudwatchlogs to populate cloudwatchLogGroupArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecInitProviderCloudwatchLogGroupArnSelector
@@ -529,7 +578,9 @@ public partial class V1beta1TaskSpecInitProviderCloudwatchLogGroupArnSelector
     [JsonPropertyName("policy")]
     public V1beta1TaskSpecInitProviderCloudwatchLogGroupArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecInitProviderDestinationLocationArnRefPolicy
@@ -542,7 +593,9 @@ public partial class V1beta1TaskSpecInitProviderDestinationLocationArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LocationS3 in datasync to populate destinationLocationArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecInitProviderDestinationLocationArnRef
@@ -559,7 +612,9 @@ public partial class V1beta1TaskSpecInitProviderDestinationLocationArnRef
     [JsonPropertyName("policy")]
     public V1beta1TaskSpecInitProviderDestinationLocationArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecInitProviderDestinationLocationArnSelectorPolicy
@@ -572,7 +627,9 @@ public partial class V1beta1TaskSpecInitProviderDestinationLocationArnSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LocationS3 in datasync to populate destinationLocationArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecInitProviderDestinationLocationArnSelector
@@ -593,7 +650,9 @@ public partial class V1beta1TaskSpecInitProviderDestinationLocationArnSelector
     [JsonPropertyName("policy")]
     public V1beta1TaskSpecInitProviderDestinationLocationArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Filter rules that determines which files to exclude from a task.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecInitProviderExcludes
@@ -606,7 +665,9 @@ public partial class V1beta1TaskSpecInitProviderExcludes
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Filter rules that determines which files to include in a task.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecInitProviderIncludes
@@ -619,7 +680,9 @@ public partial class V1beta1TaskSpecInitProviderIncludes
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecInitProviderOptions
@@ -684,7 +747,9 @@ public partial class V1beta1TaskSpecInitProviderOptions
     [JsonPropertyName("verifyMode")]
     public string? VerifyMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies a schedule used to periodically transfer files from a source to a destination location.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecInitProviderSchedule
@@ -693,7 +758,9 @@ public partial class V1beta1TaskSpecInitProviderSchedule
     [JsonPropertyName("scheduleExpression")]
     public string? ScheduleExpression { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecInitProviderSourceLocationArnRefPolicy
@@ -706,7 +773,9 @@ public partial class V1beta1TaskSpecInitProviderSourceLocationArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LocationS3 in datasync to populate sourceLocationArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecInitProviderSourceLocationArnRef
@@ -723,7 +792,9 @@ public partial class V1beta1TaskSpecInitProviderSourceLocationArnRef
     [JsonPropertyName("policy")]
     public V1beta1TaskSpecInitProviderSourceLocationArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecInitProviderSourceLocationArnSelectorPolicy
@@ -736,7 +807,9 @@ public partial class V1beta1TaskSpecInitProviderSourceLocationArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LocationS3 in datasync to populate sourceLocationArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecInitProviderSourceLocationArnSelector
@@ -757,7 +830,9 @@ public partial class V1beta1TaskSpecInitProviderSourceLocationArnSelector
     [JsonPropertyName("policy")]
     public V1beta1TaskSpecInitProviderSourceLocationArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block containing the configuration of the reporting level for aspects of your task report. See report_overrides below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecInitProviderTaskReportConfigReportOverrides
@@ -778,7 +853,9 @@ public partial class V1beta1TaskSpecInitProviderTaskReportConfigReportOverrides
     [JsonPropertyName("verifiedOverride")]
     public string? VerifiedOverride { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block containing the configuration for the Amazon S3 bucket where DataSync uploads your task report. See s3_destination below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecInitProviderTaskReportConfigS3Destination
@@ -795,7 +872,9 @@ public partial class V1beta1TaskSpecInitProviderTaskReportConfigS3Destination
     [JsonPropertyName("subdirectory")]
     public string? Subdirectory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block containing the configuration of a DataSync Task Report. See task_report_config below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecInitProviderTaskReportConfig
@@ -820,7 +899,9 @@ public partial class V1beta1TaskSpecInitProviderTaskReportConfig
     [JsonPropertyName("s3ObjectVersioning")]
     public string? S3ObjectVersioning { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecInitProvider
@@ -893,7 +974,9 @@ public partial class V1beta1TaskSpecInitProvider
     [JsonPropertyName("taskReportConfig")]
     public V1beta1TaskSpecInitProviderTaskReportConfig? TaskReportConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecProviderConfigRef
@@ -906,7 +989,9 @@ public partial class V1beta1TaskSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpecWriteConnectionSecretToRef
@@ -915,7 +1000,9 @@ public partial class V1beta1TaskSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TaskSpec defines the desired state of Task</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskSpec
@@ -940,7 +1027,9 @@ public partial class V1beta1TaskSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TaskSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Filter rules that determines which files to exclude from a task.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskStatusAtProviderExcludes
@@ -953,7 +1042,9 @@ public partial class V1beta1TaskStatusAtProviderExcludes
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Filter rules that determines which files to include in a task.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskStatusAtProviderIncludes
@@ -966,7 +1057,9 @@ public partial class V1beta1TaskStatusAtProviderIncludes
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskStatusAtProviderOptions
@@ -1031,7 +1124,9 @@ public partial class V1beta1TaskStatusAtProviderOptions
     [JsonPropertyName("verifyMode")]
     public string? VerifyMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies a schedule used to periodically transfer files from a source to a destination location.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskStatusAtProviderSchedule
@@ -1040,7 +1135,9 @@ public partial class V1beta1TaskStatusAtProviderSchedule
     [JsonPropertyName("scheduleExpression")]
     public string? ScheduleExpression { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block containing the configuration of the reporting level for aspects of your task report. See report_overrides below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskStatusAtProviderTaskReportConfigReportOverrides
@@ -1061,7 +1158,9 @@ public partial class V1beta1TaskStatusAtProviderTaskReportConfigReportOverrides
     [JsonPropertyName("verifiedOverride")]
     public string? VerifiedOverride { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block containing the configuration for the Amazon S3 bucket where DataSync uploads your task report. See s3_destination below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskStatusAtProviderTaskReportConfigS3Destination
@@ -1078,7 +1177,9 @@ public partial class V1beta1TaskStatusAtProviderTaskReportConfigS3Destination
     [JsonPropertyName("subdirectory")]
     public string? Subdirectory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block containing the configuration of a DataSync Task Report. See task_report_config below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskStatusAtProviderTaskReportConfig
@@ -1103,7 +1204,9 @@ public partial class V1beta1TaskStatusAtProviderTaskReportConfig
     [JsonPropertyName("s3ObjectVersioning")]
     public string? S3ObjectVersioning { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskStatusAtProvider
@@ -1168,7 +1271,9 @@ public partial class V1beta1TaskStatusAtProvider
     [JsonPropertyName("taskReportConfig")]
     public V1beta1TaskStatusAtProviderTaskReportConfig? TaskReportConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskStatusConditions
@@ -1197,7 +1302,9 @@ public partial class V1beta1TaskStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TaskStatus defines the observed state of Task.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskStatus
@@ -1214,7 +1321,9 @@ public partial class V1beta1TaskStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Task is the Schema for the Tasks API. Manages an AWS DataSync Task</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1244,3 +1353,4 @@ public partial class V1beta1Task : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta
     [JsonPropertyName("status")]
     public V1beta1TaskStatus? Status { get; set; }
 }
+#nullable disable

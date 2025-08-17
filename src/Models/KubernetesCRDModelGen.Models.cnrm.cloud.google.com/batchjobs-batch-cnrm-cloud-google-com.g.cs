@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.batch.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>BatchJob is the Schema for the BatchJob API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1BatchJobList : IKubernetesObject<V1ListMeta>, IItem
     [JsonPropertyName("items")]
     public IList<V1alpha1BatchJob> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecAllocationPolicyInstancesPolicyAccelerators
@@ -54,7 +57,9 @@ public partial class V1alpha1BatchJobSpecAllocationPolicyInstancesPolicyAccelera
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>URL for a VM image to use as the data source for this disk.  For example, the following are all valid URLs:   * Specify the image by its family name:  projects/{project}/global/images/family/{image_family}  * Specify the image version:  projects/{project}/global/images/{image_version}   You can also use Batch customized image in short names.  The following image values are supported for a boot disk:   * `batch-debian`: use Batch Debian images.  * `batch-cos`: use Batch Container-Optimized images.  * `batch-hpc-rocky`: use Batch HPC Rocky Linux images.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecAllocationPolicyInstancesPolicyBootDiskImageRef
@@ -75,7 +80,9 @@ public partial class V1alpha1BatchJobSpecAllocationPolicyInstancesPolicyBootDisk
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Boot disk to be created and attached to each VM by this InstancePolicy. Boot disk will be deleted when the VM is deleted. Batch API now only supports booting from image.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecAllocationPolicyInstancesPolicyBootDisk
@@ -100,7 +107,9 @@ public partial class V1alpha1BatchJobSpecAllocationPolicyInstancesPolicyBootDisk
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>URL for a VM image to use as the data source for this disk.  For example, the following are all valid URLs:   * Specify the image by its family name:  projects/{project}/global/images/family/{image_family}  * Specify the image version:  projects/{project}/global/images/{image_version}   You can also use Batch customized image in short names.  The following image values are supported for a boot disk:   * `batch-debian`: use Batch Debian images.  * `batch-cos`: use Batch Container-Optimized images.  * `batch-hpc-rocky`: use Batch HPC Rocky Linux images.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecAllocationPolicyInstancesPolicyDisksNewDiskImageRef
@@ -121,7 +130,9 @@ public partial class V1alpha1BatchJobSpecAllocationPolicyInstancesPolicyDisksNew
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecAllocationPolicyInstancesPolicyDisksNewDisk
@@ -146,7 +157,9 @@ public partial class V1alpha1BatchJobSpecAllocationPolicyInstancesPolicyDisksNew
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecAllocationPolicyInstancesPolicyDisks
@@ -163,7 +176,9 @@ public partial class V1alpha1BatchJobSpecAllocationPolicyInstancesPolicyDisks
     [JsonPropertyName("newDisk")]
     public V1alpha1BatchJobSpecAllocationPolicyInstancesPolicyDisksNewDisk? NewDisk { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InstancePolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecAllocationPolicyInstancesPolicy
@@ -196,7 +211,9 @@ public partial class V1alpha1BatchJobSpecAllocationPolicyInstancesPolicy
     [JsonPropertyName("reservation")]
     public string? Reservation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecAllocationPolicyInstances
@@ -221,7 +238,9 @@ public partial class V1alpha1BatchJobSpecAllocationPolicyInstances
     [JsonPropertyName("policy")]
     public V1alpha1BatchJobSpecAllocationPolicyInstancesPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Location where compute resources should be allocated for the Job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecAllocationPolicyLocation
@@ -230,7 +249,9 @@ public partial class V1alpha1BatchJobSpecAllocationPolicyLocation
     [JsonPropertyName("allowedLocations")]
     public IList<string>? AllowedLocations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The URL of an existing network resource.  You can specify the network as a full or partial URL.   For example, the following are all valid URLs:   * https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}  * projects/{project}/global/networks/{network}  * global/networks/{network}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecAllocationPolicyNetworkNetworkInterfacesNetworkRef
@@ -247,7 +268,9 @@ public partial class V1alpha1BatchJobSpecAllocationPolicyNetworkNetworkInterface
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The URL of an existing subnetwork resource in the network.  You can specify the subnetwork as a full or partial URL.   For example, the following are all valid URLs:   * https://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetwork}  * projects/{project}/regions/{region}/subnetworks/{subnetwork}  * regions/{region}/subnetworks/{subnetwork}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecAllocationPolicyNetworkNetworkInterfacesSubnetworkRef
@@ -264,7 +287,9 @@ public partial class V1alpha1BatchJobSpecAllocationPolicyNetworkNetworkInterface
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecAllocationPolicyNetworkNetworkInterfaces
@@ -281,7 +306,9 @@ public partial class V1alpha1BatchJobSpecAllocationPolicyNetworkNetworkInterface
     [JsonPropertyName("subnetworkRef")]
     public V1alpha1BatchJobSpecAllocationPolicyNetworkNetworkInterfacesSubnetworkRef? SubnetworkRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The network policy.   If you define an instance template in the `InstancePolicyOrTemplate` field,  Batch will use the network settings in the instance template instead of  this field.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecAllocationPolicyNetwork
@@ -290,7 +317,9 @@ public partial class V1alpha1BatchJobSpecAllocationPolicyNetwork
     [JsonPropertyName("networkInterfaces")]
     public IList<V1alpha1BatchJobSpecAllocationPolicyNetworkNetworkInterfaces>? NetworkInterfaces { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The placement policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecAllocationPolicyPlacement
@@ -303,7 +332,9 @@ public partial class V1alpha1BatchJobSpecAllocationPolicyPlacement
     [JsonPropertyName("maxDistance")]
     public long? MaxDistance { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines the service account for Batch-created VMs. If omitted, the [default  Compute Engine service  account](https://cloud.google.com/compute/docs/access/service-accounts#default_service_account)  is used. Must match the service account specified in any used instance  template configured in the Batch job.   Includes the following fields:   * email: The service account's email address. If not set, the default   Compute Engine service account is used.   * scopes: Additional OAuth scopes to grant the service account, beyond the   default cloud-platform scope. (list of strings)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecAllocationPolicyServiceAccount
@@ -320,7 +351,9 @@ public partial class V1alpha1BatchJobSpecAllocationPolicyServiceAccount
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Compute resource allocation for all TaskGroups in the Job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecAllocationPolicy
@@ -353,7 +386,9 @@ public partial class V1alpha1BatchJobSpecAllocationPolicy
     [JsonPropertyName("tags")]
     public IList<string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. When `destination` is set to `CLOUD_LOGGING`, you can optionally set this field to configure additional settings for Cloud Logging.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecLogsPolicyCloudLoggingOption
@@ -362,7 +397,9 @@ public partial class V1alpha1BatchJobSpecLogsPolicyCloudLoggingOption
     [JsonPropertyName("useGenericTaskMonitoredResource")]
     public bool? UseGenericTaskMonitoredResource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Log preservation policy for the Job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecLogsPolicy
@@ -379,7 +416,9 @@ public partial class V1alpha1BatchJobSpecLogsPolicy
     [JsonPropertyName("logsPath")]
     public string? LogsPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The attribute requirements of messages to be sent to this Pub/Sub topic. Without this field, no message will be sent.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecNotificationsMessage
@@ -396,7 +435,9 @@ public partial class V1alpha1BatchJobSpecNotificationsMessage
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Pub/Sub topic where notifications for the job, like state  changes, will be published. If undefined, no Pub/Sub notifications  are sent for this job.   Specify the topic using the following format:  `projects/{project}/topics/{topic}`.  Notably, if you want to specify a Pub/Sub topic that is in a  different project than the job, your administrator must grant your  project's Batch service agent permission to publish to that topic.   For more information about configuring Pub/Sub notifications for  a job, see  https://cloud.google.com/batch/docs/enable-notifications.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecNotificationsPubsubTopicRef
@@ -413,7 +454,9 @@ public partial class V1alpha1BatchJobSpecNotificationsPubsubTopicRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecNotifications
@@ -426,7 +469,9 @@ public partial class V1alpha1BatchJobSpecNotifications
     [JsonPropertyName("pubsubTopicRef")]
     public V1alpha1BatchJobSpecNotificationsPubsubTopicRef? PubsubTopicRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecProjectRef
@@ -447,7 +492,9 @@ public partial class V1alpha1BatchJobSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The name of the KMS key that will be used to decrypt the cipher text.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecTaskGroupsTaskEnvironmentsEncryptedVariablesKmsKeyRef
@@ -464,7 +511,9 @@ public partial class V1alpha1BatchJobSpecTaskGroupsTaskEnvironmentsEncryptedVari
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An encrypted JSON dictionary where the key/value pairs correspond to environment variable names and their values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecTaskGroupsTaskEnvironmentsEncryptedVariables
@@ -477,7 +526,9 @@ public partial class V1alpha1BatchJobSpecTaskGroupsTaskEnvironmentsEncryptedVari
     [JsonPropertyName("kmsKeyRef")]
     public V1alpha1BatchJobSpecTaskGroupsTaskEnvironmentsEncryptedVariablesKmsKeyRef? KmsKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecTaskGroupsTaskEnvironments
@@ -494,7 +545,9 @@ public partial class V1alpha1BatchJobSpecTaskGroupsTaskEnvironments
     [JsonPropertyName("variables")]
     public IDictionary<string, string>? Variables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ComputeResource requirements.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecComputeResource
@@ -511,7 +564,9 @@ public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecComputeResource
     [JsonPropertyName("memoryMiB")]
     public long? MemoryMiB { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The name of the KMS key that will be used to decrypt the cipher text.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecEnvironmentEncryptedVariablesKmsKeyRef
@@ -528,7 +583,9 @@ public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecEnvironmentEncryptedV
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An encrypted JSON dictionary where the key/value pairs correspond to environment variable names and their values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecEnvironmentEncryptedVariables
@@ -541,7 +598,9 @@ public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecEnvironmentEncryptedV
     [JsonPropertyName("kmsKeyRef")]
     public V1alpha1BatchJobSpecTaskGroupsTaskSpecEnvironmentEncryptedVariablesKmsKeyRef? KmsKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Environment variables to set before running the Task.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecEnvironment
@@ -558,7 +617,9 @@ public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecEnvironment
     [JsonPropertyName("variables")]
     public IDictionary<string, string>? Variables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Conditions that decide why a task failure is dealt with a specific action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecLifecyclePoliciesActionCondition
@@ -567,7 +628,9 @@ public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecLifecyclePoliciesActi
     [JsonPropertyName("exitCodes")]
     public IList<int>? ExitCodes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecLifecyclePolicies
@@ -580,7 +643,9 @@ public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecLifecyclePolicies
     [JsonPropertyName("actionCondition")]
     public V1alpha1BatchJobSpecTaskGroupsTaskSpecLifecyclePoliciesActionCondition? ActionCondition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Barrier runnable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecRunnablesBarrier
@@ -589,7 +654,9 @@ public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecRunnablesBarrier
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Container runnable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecRunnablesContainer
@@ -626,7 +693,9 @@ public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecRunnablesContainer
     [JsonPropertyName("volumes")]
     public IList<string>? Volumes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The name of the KMS key that will be used to decrypt the cipher text.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecRunnablesEnvironmentEncryptedVariablesKmsKeyRef
@@ -643,7 +712,9 @@ public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecRunnablesEnvironmentE
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An encrypted JSON dictionary where the key/value pairs correspond to environment variable names and their values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecRunnablesEnvironmentEncryptedVariables
@@ -656,7 +727,9 @@ public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecRunnablesEnvironmentE
     [JsonPropertyName("kmsKeyRef")]
     public V1alpha1BatchJobSpecTaskGroupsTaskSpecRunnablesEnvironmentEncryptedVariablesKmsKeyRef? KmsKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Environment variables for this Runnable (overrides variables set for the whole Task or TaskGroup).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecRunnablesEnvironment
@@ -673,7 +746,9 @@ public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecRunnablesEnvironment
     [JsonPropertyName("variables")]
     public IDictionary<string, string>? Variables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Script runnable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecRunnablesScript
@@ -686,7 +761,9 @@ public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecRunnablesScript
     [JsonPropertyName("text")]
     public string? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecRunnables
@@ -731,7 +808,9 @@ public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecRunnables
     [JsonPropertyName("timeout")]
     public string? Timeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Google Cloud Storage (GCS) volume.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecVolumesGcs
@@ -740,7 +819,9 @@ public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecVolumesGcs
     [JsonPropertyName("remotePath")]
     public string? RemotePath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Network File System (NFS) volume. For example, a Filestore file share.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecVolumesNfs
@@ -753,7 +834,9 @@ public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecVolumesNfs
     [JsonPropertyName("server")]
     public string? Server { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecVolumes
@@ -778,7 +861,9 @@ public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpecVolumes
     [JsonPropertyName("nfs")]
     public V1alpha1BatchJobSpecTaskGroupsTaskSpecVolumesNfs? Nfs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Tasks in the group share the same task spec.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpec
@@ -815,7 +900,9 @@ public partial class V1alpha1BatchJobSpecTaskGroupsTaskSpec
     [JsonPropertyName("volumes")]
     public IList<V1alpha1BatchJobSpecTaskGroupsTaskSpecVolumes>? Volumes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecTaskGroups
@@ -856,7 +943,9 @@ public partial class V1alpha1BatchJobSpecTaskGroups
     [JsonPropertyName("taskSpec")]
     public V1alpha1BatchJobSpecTaskGroupsTaskSpec? TaskSpec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BatchJobSpec defines the desired state of BatchJob</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpec
@@ -897,7 +986,9 @@ public partial class V1alpha1BatchJobSpec
     [JsonPropertyName("taskGroups")]
     public IList<V1alpha1BatchJobSpecTaskGroups>? TaskGroups { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobStatusConditions
@@ -922,7 +1013,9 @@ public partial class V1alpha1BatchJobStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Task Execution. This field is only defined for task-level status events where the task fails.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobStatusObservedStateStatusStatusEventsTaskExecution
@@ -931,7 +1024,9 @@ public partial class V1alpha1BatchJobStatusObservedStateStatusStatusEventsTaskEx
     [JsonPropertyName("exitCode")]
     public int? ExitCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobStatusObservedStateStatusStatusEvents
@@ -956,7 +1051,9 @@ public partial class V1alpha1BatchJobStatusObservedStateStatusStatusEvents
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Job status. It is read only for users.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobStatusObservedStateStatus
@@ -973,7 +1070,9 @@ public partial class V1alpha1BatchJobStatusObservedStateStatus
     [JsonPropertyName("statusEvents")]
     public IList<V1alpha1BatchJobStatusObservedStateStatusStatusEvents>? StatusEvents { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobStatusObservedStateTaskGroups
@@ -982,7 +1081,9 @@ public partial class V1alpha1BatchJobStatusObservedStateTaskGroups
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobStatusObservedState
@@ -1011,7 +1112,9 @@ public partial class V1alpha1BatchJobStatusObservedState
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BatchJobStatus defines the config connector machine state of BatchJob</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobStatus
@@ -1032,7 +1135,9 @@ public partial class V1alpha1BatchJobStatus
     [JsonPropertyName("observedState")]
     public V1alpha1BatchJobStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BatchJob is the Schema for the BatchJob API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1062,3 +1167,4 @@ public partial class V1alpha1BatchJob : IKubernetesObject<V1ObjectMeta>, ISpec<V
     [JsonPropertyName("status")]
     public V1alpha1BatchJobStatus? Status { get; set; }
 }
+#nullable disable

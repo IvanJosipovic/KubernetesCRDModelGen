@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.eventhub.azure.m.upbound.io;
+#nullable enable
 /// <summary>NamespaceDisasterRecoveryConfig is the Schema for the NamespaceDisasterRecoveryConfigs API. Manages an Disaster Recovery Config for an Event Hub Namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigList : IKubernetesObj
     [JsonPropertyName("items")]
     public IList<V1beta1NamespaceDisasterRecoveryConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderNamespaceNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderNamesp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EventHubNamespace in eventhub to populate namespaceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderNamespaceNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderNamesp
     [JsonPropertyName("policy")]
     public V1beta1NamespaceDisasterRecoveryConfigSpecForProviderNamespaceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderNamespaceNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderNamesp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EventHubNamespace in eventhub to populate namespaceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderNamespaceNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderNamesp
     [JsonPropertyName("policy")]
     public V1beta1NamespaceDisasterRecoveryConfigSpecForProviderNamespaceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPartnerNamespaceIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPartne
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EventHubNamespace in eventhub to populate partnerNamespaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPartnerNamespaceIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPartne
     [JsonPropertyName("policy")]
     public V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPartnerNamespaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPartnerNamespaceIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPartne
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EventHubNamespace in eventhub to populate partnerNamespaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPartnerNamespaceIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPartne
     [JsonPropertyName("policy")]
     public V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPartnerNamespaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderResourceGroupNameRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderResour
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderResourceGroupNameRef
@@ -191,7 +212,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderResour
     [JsonPropertyName("policy")]
     public V1beta1NamespaceDisasterRecoveryConfigSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderResourceGroupNameSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderResour
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderResourceGroupNameSelector
@@ -225,7 +250,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderResour
     [JsonPropertyName("policy")]
     public V1beta1NamespaceDisasterRecoveryConfigSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProvider
@@ -266,7 +293,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1NamespaceDisasterRecoveryConfigSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderPartnerNamespaceIdRefPolicy
@@ -279,7 +308,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderPartn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EventHubNamespace in eventhub to populate partnerNamespaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderPartnerNamespaceIdRef
@@ -296,7 +327,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderPartn
     [JsonPropertyName("policy")]
     public V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderPartnerNamespaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderPartnerNamespaceIdSelectorPolicy
@@ -309,7 +342,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderPartn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EventHubNamespace in eventhub to populate partnerNamespaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderPartnerNamespaceIdSelector
@@ -330,7 +365,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderPartn
     [JsonPropertyName("policy")]
     public V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderPartnerNamespaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecInitProvider
@@ -347,7 +384,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecInitProvider
     [JsonPropertyName("partnerNamespaceIdSelector")]
     public V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderPartnerNamespaceIdSelector? PartnerNamespaceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecProviderConfigRef
@@ -360,7 +399,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecWriteConnectionSecretToRef
@@ -369,7 +410,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecWriteConnectionSe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NamespaceDisasterRecoveryConfigSpec defines the desired state of NamespaceDisasterRecoveryConfig</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpec
@@ -394,7 +437,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1NamespaceDisasterRecoveryConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigStatusAtProvider
@@ -415,7 +460,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigStatusAtProvider
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigStatusConditions
@@ -444,7 +491,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NamespaceDisasterRecoveryConfigStatus defines the observed state of NamespaceDisasterRecoveryConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigStatus
@@ -461,7 +510,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NamespaceDisasterRecoveryConfig is the Schema for the NamespaceDisasterRecoveryConfigs API. Manages an Disaster Recovery Config for an Event Hub Namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -491,3 +542,4 @@ public partial class V1beta1NamespaceDisasterRecoveryConfig : IKubernetesObject<
     [JsonPropertyName("status")]
     public V1beta1NamespaceDisasterRecoveryConfigStatus? Status { get; set; }
 }
+#nullable disable

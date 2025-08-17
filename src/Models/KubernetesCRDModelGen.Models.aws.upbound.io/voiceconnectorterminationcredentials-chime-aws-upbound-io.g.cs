@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.chime.aws.upbound.io;
+#nullable enable
 /// <summary>VoiceConnectorTerminationCredentials is the Schema for the VoiceConnectorTerminationCredentialss API. Adds termination SIP credentials for the specified Amazon Chime Voice Connector.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsList : IKubernet
     [JsonPropertyName("items")]
     public IList<V1beta1VoiceConnectorTerminationCredentials> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RFC2617 compliant password associated with the SIP credentials.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecForProviderCredentialsPasswordSecretRef
@@ -50,7 +53,9 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecForProviderC
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecForProviderCredentials
@@ -63,7 +68,9 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecForProviderC
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecForProviderVoiceConnectorIdRefPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecForProviderV
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VoiceConnector in chime to populate voiceConnectorId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecForProviderVoiceConnectorIdRef
@@ -89,7 +98,9 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecForProviderV
     [JsonPropertyName("policy")]
     public V1beta1VoiceConnectorTerminationCredentialsSpecForProviderVoiceConnectorIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecForProviderVoiceConnectorIdSelectorPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecForProviderV
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VoiceConnector in chime to populate voiceConnectorId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecForProviderVoiceConnectorIdSelector
@@ -119,7 +132,9 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecForProviderV
     [JsonPropertyName("policy")]
     public V1beta1VoiceConnectorTerminationCredentialsSpecForProviderVoiceConnectorIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecForProvider
@@ -144,7 +159,9 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecForProvider
     [JsonPropertyName("voiceConnectorIdSelector")]
     public V1beta1VoiceConnectorTerminationCredentialsSpecForProviderVoiceConnectorIdSelector? VoiceConnectorIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RFC2617 compliant password associated with the SIP credentials.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecInitProviderCredentialsPasswordSecretRef
@@ -161,7 +178,9 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecInitProvider
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecInitProviderCredentials
@@ -174,7 +193,9 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecInitProvider
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecInitProviderVoiceConnectorIdRefPolicy
@@ -187,7 +208,9 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecInitProvider
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VoiceConnector in chime to populate voiceConnectorId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecInitProviderVoiceConnectorIdRef
@@ -200,7 +223,9 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecInitProvider
     [JsonPropertyName("policy")]
     public V1beta1VoiceConnectorTerminationCredentialsSpecInitProviderVoiceConnectorIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecInitProviderVoiceConnectorIdSelectorPolicy
@@ -213,7 +238,9 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecInitProvider
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VoiceConnector in chime to populate voiceConnectorId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecInitProviderVoiceConnectorIdSelector
@@ -230,7 +257,9 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecInitProvider
     [JsonPropertyName("policy")]
     public V1beta1VoiceConnectorTerminationCredentialsSpecInitProviderVoiceConnectorIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecInitProvider
@@ -251,7 +280,9 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecInitProvider
     [JsonPropertyName("voiceConnectorIdSelector")]
     public V1beta1VoiceConnectorTerminationCredentialsSpecInitProviderVoiceConnectorIdSelector? VoiceConnectorIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecProviderConfigRefPolicy
@@ -264,7 +295,9 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecProviderConf
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecProviderConfigRef
@@ -277,7 +310,9 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecProviderConf
     [JsonPropertyName("policy")]
     public V1beta1VoiceConnectorTerminationCredentialsSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecWriteConnectionSecretToRef
@@ -290,7 +325,9 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecWriteConnect
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VoiceConnectorTerminationCredentialsSpec defines the desired state of VoiceConnectorTerminationCredentials</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpec
@@ -319,7 +356,9 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VoiceConnectorTerminationCredentialsSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorTerminationCredentialsStatusAtProviderCredentials
@@ -328,7 +367,9 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsStatusAtProvider
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorTerminationCredentialsStatusAtProvider
@@ -349,7 +390,9 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsStatusAtProvider
     [JsonPropertyName("voiceConnectorId")]
     public string? VoiceConnectorId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorTerminationCredentialsStatusConditions
@@ -378,7 +421,9 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VoiceConnectorTerminationCredentialsStatus defines the observed state of VoiceConnectorTerminationCredentials.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorTerminationCredentialsStatus
@@ -395,7 +440,9 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VoiceConnectorTerminationCredentials is the Schema for the VoiceConnectorTerminationCredentialss API. Adds termination SIP credentials for the specified Amazon Chime Voice Connector.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -425,3 +472,4 @@ public partial class V1beta1VoiceConnectorTerminationCredentials : IKubernetesOb
     [JsonPropertyName("status")]
     public V1beta1VoiceConnectorTerminationCredentialsStatus? Status { get; set; }
 }
+#nullable disable

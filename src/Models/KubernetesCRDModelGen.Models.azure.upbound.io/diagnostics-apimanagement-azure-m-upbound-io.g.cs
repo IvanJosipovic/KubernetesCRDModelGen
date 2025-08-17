@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.m.upbound.io;
+#nullable enable
 /// <summary>Diagnostic is the Schema for the Diagnostics API. Manages an API Management Service Diagnostic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DiagnosticList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1beta1Diagnostic> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecForProviderApiManagementLoggerIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1DiagnosticSpecForProviderApiManagementLoggerIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Logger in apimanagement to populate apiManagementLoggerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecForProviderApiManagementLoggerIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1DiagnosticSpecForProviderApiManagementLoggerIdRef
     [JsonPropertyName("policy")]
     public V1beta1DiagnosticSpecForProviderApiManagementLoggerIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecForProviderApiManagementLoggerIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1DiagnosticSpecForProviderApiManagementLoggerIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Logger in apimanagement to populate apiManagementLoggerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecForProviderApiManagementLoggerIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1DiagnosticSpecForProviderApiManagementLoggerIdSelect
     [JsonPropertyName("policy")]
     public V1beta1DiagnosticSpecForProviderApiManagementLoggerIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecForProviderApiManagementNameRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1DiagnosticSpecForProviderApiManagementNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Management in apimanagement to populate apiManagementName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecForProviderApiManagementNameRef
@@ -127,7 +140,9 @@ public partial class V1beta1DiagnosticSpecForProviderApiManagementNameRef
     [JsonPropertyName("policy")]
     public V1beta1DiagnosticSpecForProviderApiManagementNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecForProviderApiManagementNameSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1DiagnosticSpecForProviderApiManagementNameSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Management in apimanagement to populate apiManagementName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecForProviderApiManagementNameSelector
@@ -161,7 +178,9 @@ public partial class V1beta1DiagnosticSpecForProviderApiManagementNameSelector
     [JsonPropertyName("policy")]
     public V1beta1DiagnosticSpecForProviderApiManagementNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecForProviderBackendRequestDataMaskingHeaders
@@ -174,7 +193,9 @@ public partial class V1beta1DiagnosticSpecForProviderBackendRequestDataMaskingHe
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecForProviderBackendRequestDataMaskingQueryParams
@@ -187,7 +208,9 @@ public partial class V1beta1DiagnosticSpecForProviderBackendRequestDataMaskingQu
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A data_masking block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecForProviderBackendRequestDataMasking
@@ -200,7 +223,9 @@ public partial class V1beta1DiagnosticSpecForProviderBackendRequestDataMasking
     [JsonPropertyName("queryParams")]
     public IList<V1beta1DiagnosticSpecForProviderBackendRequestDataMaskingQueryParams>? QueryParams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A backend_request block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecForProviderBackendRequest
@@ -217,7 +242,9 @@ public partial class V1beta1DiagnosticSpecForProviderBackendRequest
     [JsonPropertyName("headersToLog")]
     public IList<string>? HeadersToLog { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecForProviderBackendResponseDataMaskingHeaders
@@ -230,7 +257,9 @@ public partial class V1beta1DiagnosticSpecForProviderBackendResponseDataMaskingH
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecForProviderBackendResponseDataMaskingQueryParams
@@ -243,7 +272,9 @@ public partial class V1beta1DiagnosticSpecForProviderBackendResponseDataMaskingQ
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A data_masking block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecForProviderBackendResponseDataMasking
@@ -256,7 +287,9 @@ public partial class V1beta1DiagnosticSpecForProviderBackendResponseDataMasking
     [JsonPropertyName("queryParams")]
     public IList<V1beta1DiagnosticSpecForProviderBackendResponseDataMaskingQueryParams>? QueryParams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A backend_response block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecForProviderBackendResponse
@@ -273,7 +306,9 @@ public partial class V1beta1DiagnosticSpecForProviderBackendResponse
     [JsonPropertyName("headersToLog")]
     public IList<string>? HeadersToLog { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecForProviderFrontendRequestDataMaskingHeaders
@@ -286,7 +321,9 @@ public partial class V1beta1DiagnosticSpecForProviderFrontendRequestDataMaskingH
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecForProviderFrontendRequestDataMaskingQueryParams
@@ -299,7 +336,9 @@ public partial class V1beta1DiagnosticSpecForProviderFrontendRequestDataMaskingQ
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A data_masking block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecForProviderFrontendRequestDataMasking
@@ -312,7 +351,9 @@ public partial class V1beta1DiagnosticSpecForProviderFrontendRequestDataMasking
     [JsonPropertyName("queryParams")]
     public IList<V1beta1DiagnosticSpecForProviderFrontendRequestDataMaskingQueryParams>? QueryParams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A frontend_request block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecForProviderFrontendRequest
@@ -329,7 +370,9 @@ public partial class V1beta1DiagnosticSpecForProviderFrontendRequest
     [JsonPropertyName("headersToLog")]
     public IList<string>? HeadersToLog { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecForProviderFrontendResponseDataMaskingHeaders
@@ -342,7 +385,9 @@ public partial class V1beta1DiagnosticSpecForProviderFrontendResponseDataMasking
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecForProviderFrontendResponseDataMaskingQueryParams
@@ -355,7 +400,9 @@ public partial class V1beta1DiagnosticSpecForProviderFrontendResponseDataMasking
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A data_masking block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecForProviderFrontendResponseDataMasking
@@ -368,7 +415,9 @@ public partial class V1beta1DiagnosticSpecForProviderFrontendResponseDataMasking
     [JsonPropertyName("queryParams")]
     public IList<V1beta1DiagnosticSpecForProviderFrontendResponseDataMaskingQueryParams>? QueryParams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A frontend_response block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecForProviderFrontendResponse
@@ -385,7 +434,9 @@ public partial class V1beta1DiagnosticSpecForProviderFrontendResponse
     [JsonPropertyName("headersToLog")]
     public IList<string>? HeadersToLog { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecForProviderResourceGroupNameRefPolicy
@@ -398,7 +449,9 @@ public partial class V1beta1DiagnosticSpecForProviderResourceGroupNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecForProviderResourceGroupNameRef
@@ -415,7 +468,9 @@ public partial class V1beta1DiagnosticSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1DiagnosticSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecForProviderResourceGroupNameSelectorPolicy
@@ -428,7 +483,9 @@ public partial class V1beta1DiagnosticSpecForProviderResourceGroupNameSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecForProviderResourceGroupNameSelector
@@ -449,7 +506,9 @@ public partial class V1beta1DiagnosticSpecForProviderResourceGroupNameSelector
     [JsonPropertyName("policy")]
     public V1beta1DiagnosticSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecForProvider
@@ -530,7 +589,9 @@ public partial class V1beta1DiagnosticSpecForProvider
     [JsonPropertyName("verbosity")]
     public string? Verbosity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecInitProviderApiManagementLoggerIdRefPolicy
@@ -543,7 +604,9 @@ public partial class V1beta1DiagnosticSpecInitProviderApiManagementLoggerIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Logger in apimanagement to populate apiManagementLoggerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecInitProviderApiManagementLoggerIdRef
@@ -560,7 +623,9 @@ public partial class V1beta1DiagnosticSpecInitProviderApiManagementLoggerIdRef
     [JsonPropertyName("policy")]
     public V1beta1DiagnosticSpecInitProviderApiManagementLoggerIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecInitProviderApiManagementLoggerIdSelectorPolicy
@@ -573,7 +638,9 @@ public partial class V1beta1DiagnosticSpecInitProviderApiManagementLoggerIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Logger in apimanagement to populate apiManagementLoggerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecInitProviderApiManagementLoggerIdSelector
@@ -594,7 +661,9 @@ public partial class V1beta1DiagnosticSpecInitProviderApiManagementLoggerIdSelec
     [JsonPropertyName("policy")]
     public V1beta1DiagnosticSpecInitProviderApiManagementLoggerIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecInitProviderBackendRequestDataMaskingHeaders
@@ -607,7 +676,9 @@ public partial class V1beta1DiagnosticSpecInitProviderBackendRequestDataMaskingH
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecInitProviderBackendRequestDataMaskingQueryParams
@@ -620,7 +691,9 @@ public partial class V1beta1DiagnosticSpecInitProviderBackendRequestDataMaskingQ
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A data_masking block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecInitProviderBackendRequestDataMasking
@@ -633,7 +706,9 @@ public partial class V1beta1DiagnosticSpecInitProviderBackendRequestDataMasking
     [JsonPropertyName("queryParams")]
     public IList<V1beta1DiagnosticSpecInitProviderBackendRequestDataMaskingQueryParams>? QueryParams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A backend_request block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecInitProviderBackendRequest
@@ -650,7 +725,9 @@ public partial class V1beta1DiagnosticSpecInitProviderBackendRequest
     [JsonPropertyName("headersToLog")]
     public IList<string>? HeadersToLog { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecInitProviderBackendResponseDataMaskingHeaders
@@ -663,7 +740,9 @@ public partial class V1beta1DiagnosticSpecInitProviderBackendResponseDataMasking
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecInitProviderBackendResponseDataMaskingQueryParams
@@ -676,7 +755,9 @@ public partial class V1beta1DiagnosticSpecInitProviderBackendResponseDataMasking
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A data_masking block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecInitProviderBackendResponseDataMasking
@@ -689,7 +770,9 @@ public partial class V1beta1DiagnosticSpecInitProviderBackendResponseDataMasking
     [JsonPropertyName("queryParams")]
     public IList<V1beta1DiagnosticSpecInitProviderBackendResponseDataMaskingQueryParams>? QueryParams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A backend_response block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecInitProviderBackendResponse
@@ -706,7 +789,9 @@ public partial class V1beta1DiagnosticSpecInitProviderBackendResponse
     [JsonPropertyName("headersToLog")]
     public IList<string>? HeadersToLog { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecInitProviderFrontendRequestDataMaskingHeaders
@@ -719,7 +804,9 @@ public partial class V1beta1DiagnosticSpecInitProviderFrontendRequestDataMasking
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecInitProviderFrontendRequestDataMaskingQueryParams
@@ -732,7 +819,9 @@ public partial class V1beta1DiagnosticSpecInitProviderFrontendRequestDataMasking
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A data_masking block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecInitProviderFrontendRequestDataMasking
@@ -745,7 +834,9 @@ public partial class V1beta1DiagnosticSpecInitProviderFrontendRequestDataMasking
     [JsonPropertyName("queryParams")]
     public IList<V1beta1DiagnosticSpecInitProviderFrontendRequestDataMaskingQueryParams>? QueryParams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A frontend_request block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecInitProviderFrontendRequest
@@ -762,7 +853,9 @@ public partial class V1beta1DiagnosticSpecInitProviderFrontendRequest
     [JsonPropertyName("headersToLog")]
     public IList<string>? HeadersToLog { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecInitProviderFrontendResponseDataMaskingHeaders
@@ -775,7 +868,9 @@ public partial class V1beta1DiagnosticSpecInitProviderFrontendResponseDataMaskin
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecInitProviderFrontendResponseDataMaskingQueryParams
@@ -788,7 +883,9 @@ public partial class V1beta1DiagnosticSpecInitProviderFrontendResponseDataMaskin
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A data_masking block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecInitProviderFrontendResponseDataMasking
@@ -801,7 +898,9 @@ public partial class V1beta1DiagnosticSpecInitProviderFrontendResponseDataMaskin
     [JsonPropertyName("queryParams")]
     public IList<V1beta1DiagnosticSpecInitProviderFrontendResponseDataMaskingQueryParams>? QueryParams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A frontend_response block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecInitProviderFrontendResponse
@@ -818,7 +917,9 @@ public partial class V1beta1DiagnosticSpecInitProviderFrontendResponse
     [JsonPropertyName("headersToLog")]
     public IList<string>? HeadersToLog { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecInitProvider
@@ -875,7 +976,9 @@ public partial class V1beta1DiagnosticSpecInitProvider
     [JsonPropertyName("verbosity")]
     public string? Verbosity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecProviderConfigRef
@@ -888,7 +991,9 @@ public partial class V1beta1DiagnosticSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpecWriteConnectionSecretToRef
@@ -897,7 +1002,9 @@ public partial class V1beta1DiagnosticSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DiagnosticSpec defines the desired state of Diagnostic</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticSpec
@@ -922,7 +1029,9 @@ public partial class V1beta1DiagnosticSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DiagnosticSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticStatusAtProviderBackendRequestDataMaskingHeaders
@@ -935,7 +1044,9 @@ public partial class V1beta1DiagnosticStatusAtProviderBackendRequestDataMaskingH
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticStatusAtProviderBackendRequestDataMaskingQueryParams
@@ -948,7 +1059,9 @@ public partial class V1beta1DiagnosticStatusAtProviderBackendRequestDataMaskingQ
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A data_masking block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticStatusAtProviderBackendRequestDataMasking
@@ -961,7 +1074,9 @@ public partial class V1beta1DiagnosticStatusAtProviderBackendRequestDataMasking
     [JsonPropertyName("queryParams")]
     public IList<V1beta1DiagnosticStatusAtProviderBackendRequestDataMaskingQueryParams>? QueryParams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A backend_request block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticStatusAtProviderBackendRequest
@@ -978,7 +1093,9 @@ public partial class V1beta1DiagnosticStatusAtProviderBackendRequest
     [JsonPropertyName("headersToLog")]
     public IList<string>? HeadersToLog { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticStatusAtProviderBackendResponseDataMaskingHeaders
@@ -991,7 +1108,9 @@ public partial class V1beta1DiagnosticStatusAtProviderBackendResponseDataMasking
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticStatusAtProviderBackendResponseDataMaskingQueryParams
@@ -1004,7 +1123,9 @@ public partial class V1beta1DiagnosticStatusAtProviderBackendResponseDataMasking
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A data_masking block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticStatusAtProviderBackendResponseDataMasking
@@ -1017,7 +1138,9 @@ public partial class V1beta1DiagnosticStatusAtProviderBackendResponseDataMasking
     [JsonPropertyName("queryParams")]
     public IList<V1beta1DiagnosticStatusAtProviderBackendResponseDataMaskingQueryParams>? QueryParams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A backend_response block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticStatusAtProviderBackendResponse
@@ -1034,7 +1157,9 @@ public partial class V1beta1DiagnosticStatusAtProviderBackendResponse
     [JsonPropertyName("headersToLog")]
     public IList<string>? HeadersToLog { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticStatusAtProviderFrontendRequestDataMaskingHeaders
@@ -1047,7 +1172,9 @@ public partial class V1beta1DiagnosticStatusAtProviderFrontendRequestDataMasking
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticStatusAtProviderFrontendRequestDataMaskingQueryParams
@@ -1060,7 +1187,9 @@ public partial class V1beta1DiagnosticStatusAtProviderFrontendRequestDataMasking
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A data_masking block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticStatusAtProviderFrontendRequestDataMasking
@@ -1073,7 +1202,9 @@ public partial class V1beta1DiagnosticStatusAtProviderFrontendRequestDataMasking
     [JsonPropertyName("queryParams")]
     public IList<V1beta1DiagnosticStatusAtProviderFrontendRequestDataMaskingQueryParams>? QueryParams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A frontend_request block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticStatusAtProviderFrontendRequest
@@ -1090,7 +1221,9 @@ public partial class V1beta1DiagnosticStatusAtProviderFrontendRequest
     [JsonPropertyName("headersToLog")]
     public IList<string>? HeadersToLog { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticStatusAtProviderFrontendResponseDataMaskingHeaders
@@ -1103,7 +1236,9 @@ public partial class V1beta1DiagnosticStatusAtProviderFrontendResponseDataMaskin
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticStatusAtProviderFrontendResponseDataMaskingQueryParams
@@ -1116,7 +1251,9 @@ public partial class V1beta1DiagnosticStatusAtProviderFrontendResponseDataMaskin
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A data_masking block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticStatusAtProviderFrontendResponseDataMasking
@@ -1129,7 +1266,9 @@ public partial class V1beta1DiagnosticStatusAtProviderFrontendResponseDataMaskin
     [JsonPropertyName("queryParams")]
     public IList<V1beta1DiagnosticStatusAtProviderFrontendResponseDataMaskingQueryParams>? QueryParams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A frontend_response block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticStatusAtProviderFrontendResponse
@@ -1146,7 +1285,9 @@ public partial class V1beta1DiagnosticStatusAtProviderFrontendResponse
     [JsonPropertyName("headersToLog")]
     public IList<string>? HeadersToLog { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticStatusAtProvider
@@ -1207,7 +1348,9 @@ public partial class V1beta1DiagnosticStatusAtProvider
     [JsonPropertyName("verbosity")]
     public string? Verbosity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticStatusConditions
@@ -1236,7 +1379,9 @@ public partial class V1beta1DiagnosticStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DiagnosticStatus defines the observed state of Diagnostic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiagnosticStatus
@@ -1253,7 +1398,9 @@ public partial class V1beta1DiagnosticStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Diagnostic is the Schema for the Diagnostics API. Manages an API Management Service Diagnostic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1283,3 +1430,4 @@ public partial class V1beta1Diagnostic : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1DiagnosticStatus? Status { get; set; }
 }
+#nullable disable

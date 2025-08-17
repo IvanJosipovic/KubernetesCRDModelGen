@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkconnectivity.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>NetworkConnectivityServiceConnectionPolicy is the Schema for the NetworkConnectivityServiceConnectionPolicy API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1NetworkConnectivityServiceConnectionPolicyList : IK
     [JsonPropertyName("items")]
     public IList<V1alpha1NetworkConnectivityServiceConnectionPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The resource path of the consumer network. Example: - projects/{projectNumOrId}/global/networks/{resourceId}.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkConnectivityServiceConnectionPolicySpecNetworkRef
@@ -50,7 +53,9 @@ public partial class V1alpha1NetworkConnectivityServiceConnectionPolicySpecNetwo
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkConnectivityServiceConnectionPolicySpecProjectRef
@@ -71,7 +76,9 @@ public partial class V1alpha1NetworkConnectivityServiceConnectionPolicySpecProje
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkConnectivityServiceConnectionPolicySpecPscConfigSubnetworkRefs
@@ -88,7 +95,9 @@ public partial class V1alpha1NetworkConnectivityServiceConnectionPolicySpecPscCo
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration used for Private Service Connect connections. Used when Infrastructure is PSC.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkConnectivityServiceConnectionPolicySpecPscConfig
@@ -105,7 +114,9 @@ public partial class V1alpha1NetworkConnectivityServiceConnectionPolicySpecPscCo
     [JsonPropertyName("subnetworkRefs")]
     public IList<V1alpha1NetworkConnectivityServiceConnectionPolicySpecPscConfigSubnetworkRefs>? SubnetworkRefs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkConnectivityServiceConnectionPolicySpec defines the desired state of NetworkConnectivityServiceConnectionPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkConnectivityServiceConnectionPolicySpec
@@ -138,7 +149,9 @@ public partial class V1alpha1NetworkConnectivityServiceConnectionPolicySpec
     [JsonPropertyName("serviceClass")]
     public string? ServiceClass { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkConnectivityServiceConnectionPolicyStatusConditions
@@ -163,7 +176,9 @@ public partial class V1alpha1NetworkConnectivityServiceConnectionPolicyStatusCon
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The most recent error during operating this connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkConnectivityServiceConnectionPolicyStatusObservedStatePscConnectionsError
@@ -176,7 +191,9 @@ public partial class V1alpha1NetworkConnectivityServiceConnectionPolicyStatusObs
     [JsonPropertyName("message")]
     public string? Message { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. The error info for the latest error during operating this connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkConnectivityServiceConnectionPolicyStatusObservedStatePscConnectionsErrorInfo
@@ -193,7 +210,9 @@ public partial class V1alpha1NetworkConnectivityServiceConnectionPolicyStatusObs
     [JsonPropertyName("reason")]
     public string? Reason { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkConnectivityServiceConnectionPolicyStatusObservedStatePscConnections
@@ -242,7 +261,9 @@ public partial class V1alpha1NetworkConnectivityServiceConnectionPolicyStatusObs
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkConnectivityServiceConnectionPolicyStatusObservedState
@@ -267,7 +288,9 @@ public partial class V1alpha1NetworkConnectivityServiceConnectionPolicyStatusObs
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkConnectivityServiceConnectionPolicyStatus defines the config connector machine state of NetworkConnectivityServiceConnectionPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkConnectivityServiceConnectionPolicyStatus
@@ -288,7 +311,9 @@ public partial class V1alpha1NetworkConnectivityServiceConnectionPolicyStatus
     [JsonPropertyName("observedState")]
     public V1alpha1NetworkConnectivityServiceConnectionPolicyStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkConnectivityServiceConnectionPolicy is the Schema for the NetworkConnectivityServiceConnectionPolicy API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -318,3 +343,4 @@ public partial class V1alpha1NetworkConnectivityServiceConnectionPolicy : IKuber
     [JsonPropertyName("status")]
     public V1alpha1NetworkConnectivityServiceConnectionPolicyStatus? Status { get; set; }
 }
+#nullable disable

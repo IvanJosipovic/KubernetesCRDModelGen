@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.elbv2.aws.m.upbound.io;
+#nullable enable
 /// <summary>LBTargetGroup is the Schema for the LBTargetGroups API. Provides a Target Group resource for use with Load Balancers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LBTargetGroupList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1beta1LBTargetGroup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Health Check configuration block. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupSpecForProviderHealthCheck
@@ -74,7 +77,9 @@ public partial class V1beta1LBTargetGroupSpecForProviderHealthCheck
     [JsonPropertyName("unhealthyThreshold")]
     public double? UnhealthyThreshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Stickiness configuration block. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupSpecForProviderStickiness
@@ -95,7 +100,9 @@ public partial class V1beta1LBTargetGroupSpecForProviderStickiness
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupSpecForProviderTargetFailover
@@ -108,7 +115,9 @@ public partial class V1beta1LBTargetGroupSpecForProviderTargetFailover
     [JsonPropertyName("onUnhealthy")]
     public string? OnUnhealthy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block to configure DNS Failover requirements. See DNS Failover below for details on attributes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupSpecForProviderTargetGroupHealthDnsFailover
@@ -121,7 +130,9 @@ public partial class V1beta1LBTargetGroupSpecForProviderTargetGroupHealthDnsFail
     [JsonPropertyName("minimumHealthyTargetsPercentage")]
     public string? MinimumHealthyTargetsPercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block to configure Unhealthy State Routing requirements. See Unhealthy State Routing below for details on attributes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupSpecForProviderTargetGroupHealthUnhealthyStateRouting
@@ -134,7 +145,9 @@ public partial class V1beta1LBTargetGroupSpecForProviderTargetGroupHealthUnhealt
     [JsonPropertyName("minimumHealthyTargetsPercentage")]
     public string? MinimumHealthyTargetsPercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Target health requirements block. See target_group_health for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupSpecForProviderTargetGroupHealth
@@ -147,7 +160,9 @@ public partial class V1beta1LBTargetGroupSpecForProviderTargetGroupHealth
     [JsonPropertyName("unhealthyStateRouting")]
     public V1beta1LBTargetGroupSpecForProviderTargetGroupHealthUnhealthyStateRouting? UnhealthyStateRouting { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupSpecForProviderTargetHealthState
@@ -160,7 +175,9 @@ public partial class V1beta1LBTargetGroupSpecForProviderTargetHealthState
     [JsonPropertyName("unhealthyDrainingInterval")]
     public double? UnhealthyDrainingInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupSpecForProviderVpcIdRefPolicy
@@ -173,7 +190,9 @@ public partial class V1beta1LBTargetGroupSpecForProviderVpcIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupSpecForProviderVpcIdRef
@@ -190,7 +209,9 @@ public partial class V1beta1LBTargetGroupSpecForProviderVpcIdRef
     [JsonPropertyName("policy")]
     public V1beta1LBTargetGroupSpecForProviderVpcIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupSpecForProviderVpcIdSelectorPolicy
@@ -203,7 +224,9 @@ public partial class V1beta1LBTargetGroupSpecForProviderVpcIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupSpecForProviderVpcIdSelector
@@ -224,7 +247,9 @@ public partial class V1beta1LBTargetGroupSpecForProviderVpcIdSelector
     [JsonPropertyName("policy")]
     public V1beta1LBTargetGroupSpecForProviderVpcIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupSpecForProvider
@@ -329,7 +354,9 @@ public partial class V1beta1LBTargetGroupSpecForProvider
     [JsonPropertyName("vpcIdSelector")]
     public V1beta1LBTargetGroupSpecForProviderVpcIdSelector? VpcIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Health Check configuration block. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupSpecInitProviderHealthCheck
@@ -370,7 +397,9 @@ public partial class V1beta1LBTargetGroupSpecInitProviderHealthCheck
     [JsonPropertyName("unhealthyThreshold")]
     public double? UnhealthyThreshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Stickiness configuration block. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupSpecInitProviderStickiness
@@ -391,7 +420,9 @@ public partial class V1beta1LBTargetGroupSpecInitProviderStickiness
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupSpecInitProviderTargetFailover
@@ -404,7 +435,9 @@ public partial class V1beta1LBTargetGroupSpecInitProviderTargetFailover
     [JsonPropertyName("onUnhealthy")]
     public string? OnUnhealthy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block to configure DNS Failover requirements. See DNS Failover below for details on attributes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupSpecInitProviderTargetGroupHealthDnsFailover
@@ -417,7 +450,9 @@ public partial class V1beta1LBTargetGroupSpecInitProviderTargetGroupHealthDnsFai
     [JsonPropertyName("minimumHealthyTargetsPercentage")]
     public string? MinimumHealthyTargetsPercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block to configure Unhealthy State Routing requirements. See Unhealthy State Routing below for details on attributes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupSpecInitProviderTargetGroupHealthUnhealthyStateRouting
@@ -430,7 +465,9 @@ public partial class V1beta1LBTargetGroupSpecInitProviderTargetGroupHealthUnheal
     [JsonPropertyName("minimumHealthyTargetsPercentage")]
     public string? MinimumHealthyTargetsPercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Target health requirements block. See target_group_health for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupSpecInitProviderTargetGroupHealth
@@ -443,7 +480,9 @@ public partial class V1beta1LBTargetGroupSpecInitProviderTargetGroupHealth
     [JsonPropertyName("unhealthyStateRouting")]
     public V1beta1LBTargetGroupSpecInitProviderTargetGroupHealthUnhealthyStateRouting? UnhealthyStateRouting { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupSpecInitProviderTargetHealthState
@@ -456,7 +495,9 @@ public partial class V1beta1LBTargetGroupSpecInitProviderTargetHealthState
     [JsonPropertyName("unhealthyDrainingInterval")]
     public double? UnhealthyDrainingInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupSpecInitProviderVpcIdRefPolicy
@@ -469,7 +510,9 @@ public partial class V1beta1LBTargetGroupSpecInitProviderVpcIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupSpecInitProviderVpcIdRef
@@ -486,7 +529,9 @@ public partial class V1beta1LBTargetGroupSpecInitProviderVpcIdRef
     [JsonPropertyName("policy")]
     public V1beta1LBTargetGroupSpecInitProviderVpcIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupSpecInitProviderVpcIdSelectorPolicy
@@ -499,7 +544,9 @@ public partial class V1beta1LBTargetGroupSpecInitProviderVpcIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupSpecInitProviderVpcIdSelector
@@ -520,7 +567,9 @@ public partial class V1beta1LBTargetGroupSpecInitProviderVpcIdSelector
     [JsonPropertyName("policy")]
     public V1beta1LBTargetGroupSpecInitProviderVpcIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupSpecInitProvider
@@ -621,7 +670,9 @@ public partial class V1beta1LBTargetGroupSpecInitProvider
     [JsonPropertyName("vpcIdSelector")]
     public V1beta1LBTargetGroupSpecInitProviderVpcIdSelector? VpcIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupSpecProviderConfigRef
@@ -634,7 +685,9 @@ public partial class V1beta1LBTargetGroupSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupSpecWriteConnectionSecretToRef
@@ -643,7 +696,9 @@ public partial class V1beta1LBTargetGroupSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LBTargetGroupSpec defines the desired state of LBTargetGroup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupSpec
@@ -668,7 +723,9 @@ public partial class V1beta1LBTargetGroupSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LBTargetGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Health Check configuration block. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupStatusAtProviderHealthCheck
@@ -709,7 +766,9 @@ public partial class V1beta1LBTargetGroupStatusAtProviderHealthCheck
     [JsonPropertyName("unhealthyThreshold")]
     public double? UnhealthyThreshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Stickiness configuration block. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupStatusAtProviderStickiness
@@ -730,7 +789,9 @@ public partial class V1beta1LBTargetGroupStatusAtProviderStickiness
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupStatusAtProviderTargetFailover
@@ -743,7 +804,9 @@ public partial class V1beta1LBTargetGroupStatusAtProviderTargetFailover
     [JsonPropertyName("onUnhealthy")]
     public string? OnUnhealthy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block to configure DNS Failover requirements. See DNS Failover below for details on attributes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupStatusAtProviderTargetGroupHealthDnsFailover
@@ -756,7 +819,9 @@ public partial class V1beta1LBTargetGroupStatusAtProviderTargetGroupHealthDnsFai
     [JsonPropertyName("minimumHealthyTargetsPercentage")]
     public string? MinimumHealthyTargetsPercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block to configure Unhealthy State Routing requirements. See Unhealthy State Routing below for details on attributes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupStatusAtProviderTargetGroupHealthUnhealthyStateRouting
@@ -769,7 +834,9 @@ public partial class V1beta1LBTargetGroupStatusAtProviderTargetGroupHealthUnheal
     [JsonPropertyName("minimumHealthyTargetsPercentage")]
     public string? MinimumHealthyTargetsPercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Target health requirements block. See target_group_health for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupStatusAtProviderTargetGroupHealth
@@ -782,7 +849,9 @@ public partial class V1beta1LBTargetGroupStatusAtProviderTargetGroupHealth
     [JsonPropertyName("unhealthyStateRouting")]
     public V1beta1LBTargetGroupStatusAtProviderTargetGroupHealthUnhealthyStateRouting? UnhealthyStateRouting { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupStatusAtProviderTargetHealthState
@@ -795,7 +864,9 @@ public partial class V1beta1LBTargetGroupStatusAtProviderTargetHealthState
     [JsonPropertyName("unhealthyDrainingInterval")]
     public double? UnhealthyDrainingInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupStatusAtProvider
@@ -912,7 +983,9 @@ public partial class V1beta1LBTargetGroupStatusAtProvider
     [JsonPropertyName("vpcId")]
     public string? VpcId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupStatusConditions
@@ -941,7 +1014,9 @@ public partial class V1beta1LBTargetGroupStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LBTargetGroupStatus defines the observed state of LBTargetGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupStatus
@@ -958,7 +1033,9 @@ public partial class V1beta1LBTargetGroupStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LBTargetGroup is the Schema for the LBTargetGroups API. Provides a Target Group resource for use with Load Balancers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -988,3 +1065,4 @@ public partial class V1beta1LBTargetGroup : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1LBTargetGroupStatus? Status { get; set; }
 }
+#nullable disable

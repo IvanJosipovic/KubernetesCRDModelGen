@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.servicecatalog.aws.m.upbound.io;
+#nullable enable
 /// <summary>PortfolioShare is the Schema for the PortfolioShares API. Manages a Service Catalog Portfolio Share</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PortfolioShareList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1PortfolioShare> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PortfolioShareSpecForProviderPortfolioIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1PortfolioShareSpecForProviderPortfolioIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Portfolio in servicecatalog to populate portfolioId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PortfolioShareSpecForProviderPortfolioIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1PortfolioShareSpecForProviderPortfolioIdRef
     [JsonPropertyName("policy")]
     public V1beta1PortfolioShareSpecForProviderPortfolioIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PortfolioShareSpecForProviderPortfolioIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1PortfolioShareSpecForProviderPortfolioIdSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Portfolio in servicecatalog to populate portfolioId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PortfolioShareSpecForProviderPortfolioIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1PortfolioShareSpecForProviderPortfolioIdSelector
     [JsonPropertyName("policy")]
     public V1beta1PortfolioShareSpecForProviderPortfolioIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PortfolioShareSpecForProvider
@@ -142,7 +153,9 @@ public partial class V1beta1PortfolioShareSpecForProvider
     [JsonPropertyName("waitForAcceptance")]
     public bool? WaitForAcceptance { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PortfolioShareSpecInitProviderPortfolioIdRefPolicy
@@ -155,7 +168,9 @@ public partial class V1beta1PortfolioShareSpecInitProviderPortfolioIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Portfolio in servicecatalog to populate portfolioId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PortfolioShareSpecInitProviderPortfolioIdRef
@@ -172,7 +187,9 @@ public partial class V1beta1PortfolioShareSpecInitProviderPortfolioIdRef
     [JsonPropertyName("policy")]
     public V1beta1PortfolioShareSpecInitProviderPortfolioIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PortfolioShareSpecInitProviderPortfolioIdSelectorPolicy
@@ -185,7 +202,9 @@ public partial class V1beta1PortfolioShareSpecInitProviderPortfolioIdSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Portfolio in servicecatalog to populate portfolioId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PortfolioShareSpecInitProviderPortfolioIdSelector
@@ -206,7 +225,9 @@ public partial class V1beta1PortfolioShareSpecInitProviderPortfolioIdSelector
     [JsonPropertyName("policy")]
     public V1beta1PortfolioShareSpecInitProviderPortfolioIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PortfolioShareSpecInitProvider
@@ -247,7 +268,9 @@ public partial class V1beta1PortfolioShareSpecInitProvider
     [JsonPropertyName("waitForAcceptance")]
     public bool? WaitForAcceptance { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PortfolioShareSpecProviderConfigRef
@@ -260,7 +283,9 @@ public partial class V1beta1PortfolioShareSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PortfolioShareSpecWriteConnectionSecretToRef
@@ -269,7 +294,9 @@ public partial class V1beta1PortfolioShareSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PortfolioShareSpec defines the desired state of PortfolioShare</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PortfolioShareSpec
@@ -294,7 +321,9 @@ public partial class V1beta1PortfolioShareSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1PortfolioShareSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PortfolioShareStatusAtProvider
@@ -339,7 +368,9 @@ public partial class V1beta1PortfolioShareStatusAtProvider
     [JsonPropertyName("waitForAcceptance")]
     public bool? WaitForAcceptance { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PortfolioShareStatusConditions
@@ -368,7 +399,9 @@ public partial class V1beta1PortfolioShareStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PortfolioShareStatus defines the observed state of PortfolioShare.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PortfolioShareStatus
@@ -385,7 +418,9 @@ public partial class V1beta1PortfolioShareStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PortfolioShare is the Schema for the PortfolioShares API. Manages a Service Catalog Portfolio Share</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -415,3 +450,4 @@ public partial class V1beta1PortfolioShare : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1PortfolioShareStatus? Status { get; set; }
 }
+#nullable disable

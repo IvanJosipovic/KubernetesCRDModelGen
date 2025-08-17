@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.s3control.aws.m.upbound.io;
+#nullable enable
 /// <summary>MultiRegionAccessPoint is the Schema for the MultiRegionAccessPoints API. Provides a resource to manage an S3 Multi-Region Access Point associated with specified buckets.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MultiRegionAccessPointList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1MultiRegionAccessPoint> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block to manage the PublicAccessBlock configuration that you want to apply to this Multi-Region Access Point. You can enable the configuration options in any combination. See Public Access Block Configuration below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MultiRegionAccessPointSpecForProviderDetailsPublicAccessBlock
@@ -54,7 +57,9 @@ public partial class V1beta1MultiRegionAccessPointSpecForProviderDetailsPublicAc
     [JsonPropertyName("restrictPublicBuckets")]
     public bool? RestrictPublicBuckets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MultiRegionAccessPointSpecForProviderDetailsRegionBucketRefPolicy
@@ -67,7 +72,9 @@ public partial class V1beta1MultiRegionAccessPointSpecForProviderDetailsRegionBu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MultiRegionAccessPointSpecForProviderDetailsRegionBucketRef
@@ -84,7 +91,9 @@ public partial class V1beta1MultiRegionAccessPointSpecForProviderDetailsRegionBu
     [JsonPropertyName("policy")]
     public V1beta1MultiRegionAccessPointSpecForProviderDetailsRegionBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MultiRegionAccessPointSpecForProviderDetailsRegionBucketSelectorPolicy
@@ -97,7 +106,9 @@ public partial class V1beta1MultiRegionAccessPointSpecForProviderDetailsRegionBu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MultiRegionAccessPointSpecForProviderDetailsRegionBucketSelector
@@ -118,7 +129,9 @@ public partial class V1beta1MultiRegionAccessPointSpecForProviderDetailsRegionBu
     [JsonPropertyName("policy")]
     public V1beta1MultiRegionAccessPointSpecForProviderDetailsRegionBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MultiRegionAccessPointSpecForProviderDetailsRegion
@@ -139,7 +152,9 @@ public partial class V1beta1MultiRegionAccessPointSpecForProviderDetailsRegion
     [JsonPropertyName("bucketSelector")]
     public V1beta1MultiRegionAccessPointSpecForProviderDetailsRegionBucketSelector? BucketSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A configuration block containing details about the Multi-Region Access Point. See Details Configuration Block below for more details</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MultiRegionAccessPointSpecForProviderDetails
@@ -156,7 +171,9 @@ public partial class V1beta1MultiRegionAccessPointSpecForProviderDetails
     [JsonPropertyName("region")]
     public IList<V1beta1MultiRegionAccessPointSpecForProviderDetailsRegion> Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MultiRegionAccessPointSpecForProvider
@@ -173,7 +190,9 @@ public partial class V1beta1MultiRegionAccessPointSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block to manage the PublicAccessBlock configuration that you want to apply to this Multi-Region Access Point. You can enable the configuration options in any combination. See Public Access Block Configuration below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MultiRegionAccessPointSpecInitProviderDetailsPublicAccessBlock
@@ -194,7 +213,9 @@ public partial class V1beta1MultiRegionAccessPointSpecInitProviderDetailsPublicA
     [JsonPropertyName("restrictPublicBuckets")]
     public bool? RestrictPublicBuckets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A configuration block containing details about the Multi-Region Access Point. See Details Configuration Block below for more details</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MultiRegionAccessPointSpecInitProviderDetails
@@ -207,7 +228,9 @@ public partial class V1beta1MultiRegionAccessPointSpecInitProviderDetails
     [JsonPropertyName("publicAccessBlock")]
     public V1beta1MultiRegionAccessPointSpecInitProviderDetailsPublicAccessBlock? PublicAccessBlock { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MultiRegionAccessPointSpecInitProvider
@@ -220,7 +243,9 @@ public partial class V1beta1MultiRegionAccessPointSpecInitProvider
     [JsonPropertyName("details")]
     public V1beta1MultiRegionAccessPointSpecInitProviderDetails? Details { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MultiRegionAccessPointSpecProviderConfigRef
@@ -233,7 +258,9 @@ public partial class V1beta1MultiRegionAccessPointSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MultiRegionAccessPointSpecWriteConnectionSecretToRef
@@ -242,7 +269,9 @@ public partial class V1beta1MultiRegionAccessPointSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MultiRegionAccessPointSpec defines the desired state of MultiRegionAccessPoint</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MultiRegionAccessPointSpec
@@ -267,7 +296,9 @@ public partial class V1beta1MultiRegionAccessPointSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MultiRegionAccessPointSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block to manage the PublicAccessBlock configuration that you want to apply to this Multi-Region Access Point. You can enable the configuration options in any combination. See Public Access Block Configuration below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MultiRegionAccessPointStatusAtProviderDetailsPublicAccessBlock
@@ -288,7 +319,9 @@ public partial class V1beta1MultiRegionAccessPointStatusAtProviderDetailsPublicA
     [JsonPropertyName("restrictPublicBuckets")]
     public bool? RestrictPublicBuckets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MultiRegionAccessPointStatusAtProviderDetailsRegion
@@ -305,7 +338,9 @@ public partial class V1beta1MultiRegionAccessPointStatusAtProviderDetailsRegion
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A configuration block containing details about the Multi-Region Access Point. See Details Configuration Block below for more details</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MultiRegionAccessPointStatusAtProviderDetails
@@ -322,7 +357,9 @@ public partial class V1beta1MultiRegionAccessPointStatusAtProviderDetails
     [JsonPropertyName("region")]
     public IList<V1beta1MultiRegionAccessPointStatusAtProviderDetailsRegion>? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MultiRegionAccessPointStatusAtProvider
@@ -359,7 +396,9 @@ public partial class V1beta1MultiRegionAccessPointStatusAtProvider
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MultiRegionAccessPointStatusConditions
@@ -388,7 +427,9 @@ public partial class V1beta1MultiRegionAccessPointStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MultiRegionAccessPointStatus defines the observed state of MultiRegionAccessPoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MultiRegionAccessPointStatus
@@ -405,7 +446,9 @@ public partial class V1beta1MultiRegionAccessPointStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MultiRegionAccessPoint is the Schema for the MultiRegionAccessPoints API. Provides a resource to manage an S3 Multi-Region Access Point associated with specified buckets.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -435,3 +478,4 @@ public partial class V1beta1MultiRegionAccessPoint : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1MultiRegionAccessPointStatus? Status { get; set; }
 }
+#nullable disable

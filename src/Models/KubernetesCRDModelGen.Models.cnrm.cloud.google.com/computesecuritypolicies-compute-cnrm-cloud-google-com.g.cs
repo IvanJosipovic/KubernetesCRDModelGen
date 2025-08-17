@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ComputeSecurityPolicyList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1ComputeSecurityPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Auto Deploy Config of this security policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSecurityPolicySpecAdaptiveProtectionConfigAutoDeployConfig
@@ -54,7 +57,9 @@ public partial class V1beta1ComputeSecurityPolicySpecAdaptiveProtectionConfigAut
     [JsonPropertyName("loadThreshold")]
     public double? LoadThreshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Layer 7 DDoS Defense Config of this security policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSecurityPolicySpecAdaptiveProtectionConfigLayer7DdosDefenseConfig
@@ -67,7 +72,9 @@ public partial class V1beta1ComputeSecurityPolicySpecAdaptiveProtectionConfigLay
     [JsonPropertyName("ruleVisibility")]
     public string? RuleVisibility { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Adaptive Protection Config of this security policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSecurityPolicySpecAdaptiveProtectionConfig
@@ -80,7 +87,9 @@ public partial class V1beta1ComputeSecurityPolicySpecAdaptiveProtectionConfig
     [JsonPropertyName("layer7DdosDefenseConfig")]
     public V1beta1ComputeSecurityPolicySpecAdaptiveProtectionConfigLayer7DdosDefenseConfig? Layer7DdosDefenseConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Custom configuration to apply the JSON parsing. Only applicable when JSON parsing is set to STANDARD.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSecurityPolicySpecAdvancedOptionsConfigJsonCustomConfig
@@ -89,7 +98,9 @@ public partial class V1beta1ComputeSecurityPolicySpecAdvancedOptionsConfigJsonCu
     [JsonPropertyName("contentTypes")]
     public IList<string> ContentTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Advanced Options Config of this security policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSecurityPolicySpecAdvancedOptionsConfig
@@ -110,7 +121,9 @@ public partial class V1beta1ComputeSecurityPolicySpecAdvancedOptionsConfig
     [JsonPropertyName("userIpRequestHeaders")]
     public IList<string>? UserIpRequestHeaders { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A field to supply a reCAPTCHA site key to be used for all the rules using the redirect action with the type of GOOGLE_RECAPTCHA under the security policy. The specified site key needs to be created from the reCAPTCHA API. The user is responsible for the validity of the specified site key. If not specified, a Google-managed site key is used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSecurityPolicySpecRecaptchaOptionsConfigRedirectSiteKeyRef
@@ -127,7 +140,9 @@ public partial class V1beta1ComputeSecurityPolicySpecRecaptchaOptionsConfigRedir
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>reCAPTCHA configuration options to be applied for the security policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSecurityPolicySpecRecaptchaOptionsConfig
@@ -136,7 +151,9 @@ public partial class V1beta1ComputeSecurityPolicySpecRecaptchaOptionsConfig
     [JsonPropertyName("redirectSiteKeyRef")]
     public V1beta1ComputeSecurityPolicySpecRecaptchaOptionsConfigRedirectSiteKeyRef RedirectSiteKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSecurityPolicySpecRuleHeaderActionRequestHeadersToAdds
@@ -149,7 +166,9 @@ public partial class V1beta1ComputeSecurityPolicySpecRuleHeaderActionRequestHead
     [JsonPropertyName("headerValue")]
     public string? HeaderValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Additional actions that are performed on headers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSecurityPolicySpecRuleHeaderAction
@@ -158,7 +177,9 @@ public partial class V1beta1ComputeSecurityPolicySpecRuleHeaderAction
     [JsonPropertyName("requestHeadersToAdds")]
     public IList<V1beta1ComputeSecurityPolicySpecRuleHeaderActionRequestHeadersToAdds> RequestHeadersToAdds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration options available when specifying versioned_expr. This field must be specified if versioned_expr is specified and cannot be specified if versioned_expr is not specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSecurityPolicySpecRuleMatchConfig
@@ -167,7 +188,9 @@ public partial class V1beta1ComputeSecurityPolicySpecRuleMatchConfig
     [JsonPropertyName("srcIpRanges")]
     public IList<string> SrcIpRanges { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>User defined CEVAL expression. A CEVAL expression is used to specify match criteria such as origin.ip, source.region_code and contents in the request header.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSecurityPolicySpecRuleMatchExpr
@@ -176,7 +199,9 @@ public partial class V1beta1ComputeSecurityPolicySpecRuleMatchExpr
     [JsonPropertyName("expression")]
     public string Expression { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding action is enforced.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSecurityPolicySpecRuleMatch
@@ -193,7 +218,9 @@ public partial class V1beta1ComputeSecurityPolicySpecRuleMatch
     [JsonPropertyName("versionedExpr")]
     public string? VersionedExpr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSecurityPolicySpecRulePreconfiguredWafConfigExclusionRequestCookie
@@ -206,7 +233,9 @@ public partial class V1beta1ComputeSecurityPolicySpecRulePreconfiguredWafConfigE
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSecurityPolicySpecRulePreconfiguredWafConfigExclusionRequestHeader
@@ -219,7 +248,9 @@ public partial class V1beta1ComputeSecurityPolicySpecRulePreconfiguredWafConfigE
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSecurityPolicySpecRulePreconfiguredWafConfigExclusionRequestQueryParam
@@ -232,7 +263,9 @@ public partial class V1beta1ComputeSecurityPolicySpecRulePreconfiguredWafConfigE
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSecurityPolicySpecRulePreconfiguredWafConfigExclusionRequestUri
@@ -245,7 +278,9 @@ public partial class V1beta1ComputeSecurityPolicySpecRulePreconfiguredWafConfigE
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSecurityPolicySpecRulePreconfiguredWafConfigExclusion
@@ -274,7 +309,9 @@ public partial class V1beta1ComputeSecurityPolicySpecRulePreconfiguredWafConfigE
     [JsonPropertyName("targetRuleSet")]
     public string TargetRuleSet { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Preconfigured WAF configuration to be applied for the rule. If the rule does not evaluate preconfigured WAF rules, i.e., if evaluatePreconfiguredWaf() is not used, this field will have no effect.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSecurityPolicySpecRulePreconfiguredWafConfig
@@ -283,7 +320,9 @@ public partial class V1beta1ComputeSecurityPolicySpecRulePreconfiguredWafConfig
     [JsonPropertyName("exclusion")]
     public IList<V1beta1ComputeSecurityPolicySpecRulePreconfiguredWafConfigExclusion>? Exclusion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Can only be specified if the action for the rule is "rate_based_ban". If specified, the key will be banned for the configured 'banDurationSec' when the number of requests that exceed the 'rateLimitThreshold' also exceed this 'banThreshold'.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSecurityPolicySpecRuleRateLimitOptionsBanThreshold
@@ -296,7 +335,9 @@ public partial class V1beta1ComputeSecurityPolicySpecRuleRateLimitOptionsBanThre
     [JsonPropertyName("intervalSec")]
     public int IntervalSec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSecurityPolicySpecRuleRateLimitOptionsEnforceOnKeyConfigs
@@ -309,7 +350,9 @@ public partial class V1beta1ComputeSecurityPolicySpecRuleRateLimitOptionsEnforce
     [JsonPropertyName("enforceOnKeyType")]
     public string? EnforceOnKeyType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Parameters defining the redirect action that is used as the exceed action. Cannot be specified if the exceed action is not redirect.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSecurityPolicySpecRuleRateLimitOptionsExceedRedirectOptions
@@ -322,7 +365,9 @@ public partial class V1beta1ComputeSecurityPolicySpecRuleRateLimitOptionsExceedR
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Threshold at which to begin ratelimiting.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSecurityPolicySpecRuleRateLimitOptionsRateLimitThreshold
@@ -335,7 +380,9 @@ public partial class V1beta1ComputeSecurityPolicySpecRuleRateLimitOptionsRateLim
     [JsonPropertyName("intervalSec")]
     public int IntervalSec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Rate limit threshold for this security policy. Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any other actions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSecurityPolicySpecRuleRateLimitOptions
@@ -376,7 +423,9 @@ public partial class V1beta1ComputeSecurityPolicySpecRuleRateLimitOptions
     [JsonPropertyName("rateLimitThreshold")]
     public V1beta1ComputeSecurityPolicySpecRuleRateLimitOptionsRateLimitThreshold RateLimitThreshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Parameters defining the redirect action. Cannot be specified for any other actions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSecurityPolicySpecRuleRedirectOptions
@@ -389,7 +438,9 @@ public partial class V1beta1ComputeSecurityPolicySpecRuleRedirectOptions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSecurityPolicySpecRule
@@ -430,7 +481,9 @@ public partial class V1beta1ComputeSecurityPolicySpecRule
     [JsonPropertyName("redirectOptions")]
     public V1beta1ComputeSecurityPolicySpecRuleRedirectOptions? RedirectOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSecurityPolicySpec
@@ -463,7 +516,9 @@ public partial class V1beta1ComputeSecurityPolicySpec
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSecurityPolicyStatusConditions
@@ -488,7 +543,9 @@ public partial class V1beta1ComputeSecurityPolicyStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSecurityPolicyStatus
@@ -509,7 +566,9 @@ public partial class V1beta1ComputeSecurityPolicyStatus
     [JsonPropertyName("selfLink")]
     public string? SelfLink { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -539,3 +598,4 @@ public partial class V1beta1ComputeSecurityPolicy : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1ComputeSecurityPolicyStatus? Status { get; set; }
 }
+#nullable disable

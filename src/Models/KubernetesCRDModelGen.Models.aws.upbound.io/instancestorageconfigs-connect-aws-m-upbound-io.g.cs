@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.connect.aws.m.upbound.io;
+#nullable enable
 /// <summary>InstanceStorageConfig is the Schema for the InstanceStorageConfigs API. Provides details about a specific Amazon Connect Instance Storage Config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1InstanceStorageConfigList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1InstanceStorageConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderInstanceIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderInstanceIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in connect to populate instanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderInstanceIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderInstanceIdRef
     [JsonPropertyName("policy")]
     public V1beta1InstanceStorageConfigSpecForProviderInstanceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderInstanceIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderInstanceIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in connect to populate instanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderInstanceIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderInstanceIdSelect
     [JsonPropertyName("policy")]
     public V1beta1InstanceStorageConfigSpecForProviderInstanceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKinesisFirehoseConfigFirehoseArnRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DeliveryStream in firehose to populate firehoseArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKinesisFirehoseConfigFirehoseArnRef
@@ -127,7 +140,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKin
     [JsonPropertyName("policy")]
     public V1beta1InstanceStorageConfigSpecForProviderStorageConfigKinesisFirehoseConfigFirehoseArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKinesisFirehoseConfigFirehoseArnSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DeliveryStream in firehose to populate firehoseArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKinesisFirehoseConfigFirehoseArnSelector
@@ -161,7 +178,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKin
     [JsonPropertyName("policy")]
     public V1beta1InstanceStorageConfigSpecForProviderStorageConfigKinesisFirehoseConfigFirehoseArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that specifies the configuration of the Kinesis Firehose delivery stream. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKinesisFirehoseConfig
@@ -178,7 +197,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKin
     [JsonPropertyName("firehoseArnSelector")]
     public V1beta1InstanceStorageConfigSpecForProviderStorageConfigKinesisFirehoseConfigFirehoseArnSelector? FirehoseArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKinesisStreamConfigStreamArnRefPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Stream in kinesis to populate streamArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKinesisStreamConfigStreamArnRef
@@ -208,7 +231,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKin
     [JsonPropertyName("policy")]
     public V1beta1InstanceStorageConfigSpecForProviderStorageConfigKinesisStreamConfigStreamArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKinesisStreamConfigStreamArnSelectorPolicy
@@ -221,7 +246,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Stream in kinesis to populate streamArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKinesisStreamConfigStreamArnSelector
@@ -242,7 +269,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKin
     [JsonPropertyName("policy")]
     public V1beta1InstanceStorageConfigSpecForProviderStorageConfigKinesisStreamConfigStreamArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that specifies the configuration of the Kinesis data stream. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKinesisStreamConfig
@@ -259,7 +288,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKin
     [JsonPropertyName("streamArnSelector")]
     public V1beta1InstanceStorageConfigSpecForProviderStorageConfigKinesisStreamConfigStreamArnSelector? StreamArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKinesisVideoStreamConfigEncryptionConfigKeyIdRefPolicy
@@ -272,7 +303,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate keyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKinesisVideoStreamConfigEncryptionConfigKeyIdRef
@@ -289,7 +322,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKin
     [JsonPropertyName("policy")]
     public V1beta1InstanceStorageConfigSpecForProviderStorageConfigKinesisVideoStreamConfigEncryptionConfigKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKinesisVideoStreamConfigEncryptionConfigKeyIdSelectorPolicy
@@ -302,7 +337,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate keyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKinesisVideoStreamConfigEncryptionConfigKeyIdSelector
@@ -323,7 +360,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKin
     [JsonPropertyName("policy")]
     public V1beta1InstanceStorageConfigSpecForProviderStorageConfigKinesisVideoStreamConfigEncryptionConfigKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The encryption configuration. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKinesisVideoStreamConfigEncryptionConfig
@@ -344,7 +383,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKin
     [JsonPropertyName("keyIdSelector")]
     public V1beta1InstanceStorageConfigSpecForProviderStorageConfigKinesisVideoStreamConfigEncryptionConfigKeyIdSelector? KeyIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that specifies the configuration of the Kinesis video stream. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKinesisVideoStreamConfig
@@ -361,7 +402,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigKin
     [JsonPropertyName("retentionPeriodHours")]
     public double? RetentionPeriodHours { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigS3ConfigBucketNameRefPolicy
@@ -374,7 +417,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigS3C
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucketName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigS3ConfigBucketNameRef
@@ -391,7 +436,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigS3C
     [JsonPropertyName("policy")]
     public V1beta1InstanceStorageConfigSpecForProviderStorageConfigS3ConfigBucketNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigS3ConfigBucketNameSelectorPolicy
@@ -404,7 +451,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigS3C
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucketName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigS3ConfigBucketNameSelector
@@ -425,7 +474,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigS3C
     [JsonPropertyName("policy")]
     public V1beta1InstanceStorageConfigSpecForProviderStorageConfigS3ConfigBucketNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigS3ConfigEncryptionConfigKeyIdRefPolicy
@@ -438,7 +489,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigS3C
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate keyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigS3ConfigEncryptionConfigKeyIdRef
@@ -455,7 +508,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigS3C
     [JsonPropertyName("policy")]
     public V1beta1InstanceStorageConfigSpecForProviderStorageConfigS3ConfigEncryptionConfigKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigS3ConfigEncryptionConfigKeyIdSelectorPolicy
@@ -468,7 +523,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigS3C
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate keyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigS3ConfigEncryptionConfigKeyIdSelector
@@ -489,7 +546,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigS3C
     [JsonPropertyName("policy")]
     public V1beta1InstanceStorageConfigSpecForProviderStorageConfigS3ConfigEncryptionConfigKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The encryption configuration. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigS3ConfigEncryptionConfig
@@ -510,7 +569,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigS3C
     [JsonPropertyName("keyIdSelector")]
     public V1beta1InstanceStorageConfigSpecForProviderStorageConfigS3ConfigEncryptionConfigKeyIdSelector? KeyIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that specifies the configuration of S3 Bucket. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigS3Config
@@ -535,7 +596,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfigS3C
     [JsonPropertyName("encryptionConfig")]
     public V1beta1InstanceStorageConfigSpecForProviderStorageConfigS3ConfigEncryptionConfig? EncryptionConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the storage configuration options for the Connect Instance. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfig
@@ -560,7 +623,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProviderStorageConfig
     [JsonPropertyName("storageType")]
     public string? StorageType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecForProvider
@@ -589,7 +654,9 @@ public partial class V1beta1InstanceStorageConfigSpecForProvider
     [JsonPropertyName("storageConfig")]
     public V1beta1InstanceStorageConfigSpecForProviderStorageConfig? StorageConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderInstanceIdRefPolicy
@@ -602,7 +669,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderInstanceIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in connect to populate instanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderInstanceIdRef
@@ -619,7 +688,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderInstanceIdRef
     [JsonPropertyName("policy")]
     public V1beta1InstanceStorageConfigSpecInitProviderInstanceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderInstanceIdSelectorPolicy
@@ -632,7 +703,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderInstanceIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in connect to populate instanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderInstanceIdSelector
@@ -653,7 +726,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderInstanceIdSelec
     [JsonPropertyName("policy")]
     public V1beta1InstanceStorageConfigSpecInitProviderInstanceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKinesisFirehoseConfigFirehoseArnRefPolicy
@@ -666,7 +741,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DeliveryStream in firehose to populate firehoseArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKinesisFirehoseConfigFirehoseArnRef
@@ -683,7 +760,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKi
     [JsonPropertyName("policy")]
     public V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKinesisFirehoseConfigFirehoseArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKinesisFirehoseConfigFirehoseArnSelectorPolicy
@@ -696,7 +775,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DeliveryStream in firehose to populate firehoseArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKinesisFirehoseConfigFirehoseArnSelector
@@ -717,7 +798,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKi
     [JsonPropertyName("policy")]
     public V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKinesisFirehoseConfigFirehoseArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that specifies the configuration of the Kinesis Firehose delivery stream. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKinesisFirehoseConfig
@@ -734,7 +817,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKi
     [JsonPropertyName("firehoseArnSelector")]
     public V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKinesisFirehoseConfigFirehoseArnSelector? FirehoseArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKinesisStreamConfigStreamArnRefPolicy
@@ -747,7 +832,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Stream in kinesis to populate streamArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKinesisStreamConfigStreamArnRef
@@ -764,7 +851,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKi
     [JsonPropertyName("policy")]
     public V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKinesisStreamConfigStreamArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKinesisStreamConfigStreamArnSelectorPolicy
@@ -777,7 +866,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Stream in kinesis to populate streamArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKinesisStreamConfigStreamArnSelector
@@ -798,7 +889,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKi
     [JsonPropertyName("policy")]
     public V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKinesisStreamConfigStreamArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that specifies the configuration of the Kinesis data stream. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKinesisStreamConfig
@@ -815,7 +908,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKi
     [JsonPropertyName("streamArnSelector")]
     public V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKinesisStreamConfigStreamArnSelector? StreamArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKinesisVideoStreamConfigEncryptionConfigKeyIdRefPolicy
@@ -828,7 +923,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate keyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKinesisVideoStreamConfigEncryptionConfigKeyIdRef
@@ -845,7 +942,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKi
     [JsonPropertyName("policy")]
     public V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKinesisVideoStreamConfigEncryptionConfigKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKinesisVideoStreamConfigEncryptionConfigKeyIdSelectorPolicy
@@ -858,7 +957,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate keyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKinesisVideoStreamConfigEncryptionConfigKeyIdSelector
@@ -879,7 +980,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKi
     [JsonPropertyName("policy")]
     public V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKinesisVideoStreamConfigEncryptionConfigKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The encryption configuration. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKinesisVideoStreamConfigEncryptionConfig
@@ -900,7 +1003,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKi
     [JsonPropertyName("keyIdSelector")]
     public V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKinesisVideoStreamConfigEncryptionConfigKeyIdSelector? KeyIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that specifies the configuration of the Kinesis video stream. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKinesisVideoStreamConfig
@@ -917,7 +1022,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigKi
     [JsonPropertyName("retentionPeriodHours")]
     public double? RetentionPeriodHours { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigS3ConfigBucketNameRefPolicy
@@ -930,7 +1037,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigS3
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucketName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigS3ConfigBucketNameRef
@@ -947,7 +1056,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigS3
     [JsonPropertyName("policy")]
     public V1beta1InstanceStorageConfigSpecInitProviderStorageConfigS3ConfigBucketNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigS3ConfigBucketNameSelectorPolicy
@@ -960,7 +1071,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigS3
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucketName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigS3ConfigBucketNameSelector
@@ -981,7 +1094,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigS3
     [JsonPropertyName("policy")]
     public V1beta1InstanceStorageConfigSpecInitProviderStorageConfigS3ConfigBucketNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigS3ConfigEncryptionConfigKeyIdRefPolicy
@@ -994,7 +1109,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigS3
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate keyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigS3ConfigEncryptionConfigKeyIdRef
@@ -1011,7 +1128,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigS3
     [JsonPropertyName("policy")]
     public V1beta1InstanceStorageConfigSpecInitProviderStorageConfigS3ConfigEncryptionConfigKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigS3ConfigEncryptionConfigKeyIdSelectorPolicy
@@ -1024,7 +1143,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigS3
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate keyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigS3ConfigEncryptionConfigKeyIdSelector
@@ -1045,7 +1166,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigS3
     [JsonPropertyName("policy")]
     public V1beta1InstanceStorageConfigSpecInitProviderStorageConfigS3ConfigEncryptionConfigKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The encryption configuration. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigS3ConfigEncryptionConfig
@@ -1066,7 +1189,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigS3
     [JsonPropertyName("keyIdSelector")]
     public V1beta1InstanceStorageConfigSpecInitProviderStorageConfigS3ConfigEncryptionConfigKeyIdSelector? KeyIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that specifies the configuration of S3 Bucket. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigS3Config
@@ -1091,7 +1216,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfigS3
     [JsonPropertyName("encryptionConfig")]
     public V1beta1InstanceStorageConfigSpecInitProviderStorageConfigS3ConfigEncryptionConfig? EncryptionConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the storage configuration options for the Connect Instance. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfig
@@ -1116,7 +1243,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProviderStorageConfig
     [JsonPropertyName("storageType")]
     public string? StorageType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecInitProvider
@@ -1141,7 +1270,9 @@ public partial class V1beta1InstanceStorageConfigSpecInitProvider
     [JsonPropertyName("storageConfig")]
     public V1beta1InstanceStorageConfigSpecInitProviderStorageConfig? StorageConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecProviderConfigRef
@@ -1154,7 +1285,9 @@ public partial class V1beta1InstanceStorageConfigSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpecWriteConnectionSecretToRef
@@ -1163,7 +1296,9 @@ public partial class V1beta1InstanceStorageConfigSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InstanceStorageConfigSpec defines the desired state of InstanceStorageConfig</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigSpec
@@ -1188,7 +1323,9 @@ public partial class V1beta1InstanceStorageConfigSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1InstanceStorageConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that specifies the configuration of the Kinesis Firehose delivery stream. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigStatusAtProviderStorageConfigKinesisFirehoseConfig
@@ -1197,7 +1334,9 @@ public partial class V1beta1InstanceStorageConfigStatusAtProviderStorageConfigKi
     [JsonPropertyName("firehoseArn")]
     public string? FirehoseArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that specifies the configuration of the Kinesis data stream. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigStatusAtProviderStorageConfigKinesisStreamConfig
@@ -1206,7 +1345,9 @@ public partial class V1beta1InstanceStorageConfigStatusAtProviderStorageConfigKi
     [JsonPropertyName("streamArn")]
     public string? StreamArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The encryption configuration. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigStatusAtProviderStorageConfigKinesisVideoStreamConfigEncryptionConfig
@@ -1219,7 +1360,9 @@ public partial class V1beta1InstanceStorageConfigStatusAtProviderStorageConfigKi
     [JsonPropertyName("keyId")]
     public string? KeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that specifies the configuration of the Kinesis video stream. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigStatusAtProviderStorageConfigKinesisVideoStreamConfig
@@ -1236,7 +1379,9 @@ public partial class V1beta1InstanceStorageConfigStatusAtProviderStorageConfigKi
     [JsonPropertyName("retentionPeriodHours")]
     public double? RetentionPeriodHours { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The encryption configuration. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigStatusAtProviderStorageConfigS3ConfigEncryptionConfig
@@ -1249,7 +1394,9 @@ public partial class V1beta1InstanceStorageConfigStatusAtProviderStorageConfigS3
     [JsonPropertyName("keyId")]
     public string? KeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that specifies the configuration of S3 Bucket. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigStatusAtProviderStorageConfigS3Config
@@ -1266,7 +1413,9 @@ public partial class V1beta1InstanceStorageConfigStatusAtProviderStorageConfigS3
     [JsonPropertyName("encryptionConfig")]
     public V1beta1InstanceStorageConfigStatusAtProviderStorageConfigS3ConfigEncryptionConfig? EncryptionConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the storage configuration options for the Connect Instance. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigStatusAtProviderStorageConfig
@@ -1291,7 +1440,9 @@ public partial class V1beta1InstanceStorageConfigStatusAtProviderStorageConfig
     [JsonPropertyName("storageType")]
     public string? StorageType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigStatusAtProvider
@@ -1320,7 +1471,9 @@ public partial class V1beta1InstanceStorageConfigStatusAtProvider
     [JsonPropertyName("storageConfig")]
     public V1beta1InstanceStorageConfigStatusAtProviderStorageConfig? StorageConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigStatusConditions
@@ -1349,7 +1502,9 @@ public partial class V1beta1InstanceStorageConfigStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InstanceStorageConfigStatus defines the observed state of InstanceStorageConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStorageConfigStatus
@@ -1366,7 +1521,9 @@ public partial class V1beta1InstanceStorageConfigStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InstanceStorageConfig is the Schema for the InstanceStorageConfigs API. Provides details about a specific Amazon Connect Instance Storage Config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1396,3 +1553,4 @@ public partial class V1beta1InstanceStorageConfig : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1InstanceStorageConfigStatus? Status { get; set; }
 }
+#nullable disable

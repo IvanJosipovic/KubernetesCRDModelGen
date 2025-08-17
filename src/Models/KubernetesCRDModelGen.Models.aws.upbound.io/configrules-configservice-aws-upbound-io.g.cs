@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.configservice.aws.upbound.io;
+#nullable enable
 /// <summary>ConfigRule is the Schema for the ConfigRules API. Provides an AWS Config Rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ConfigRuleList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1beta1ConfigRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleSpecForProviderEvaluationMode
@@ -42,7 +45,9 @@ public partial class V1beta1ConfigRuleSpecForProviderEvaluationMode
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleSpecForProviderScope
@@ -63,7 +68,9 @@ public partial class V1beta1ConfigRuleSpecForProviderScope
     [JsonPropertyName("tagValue")]
     public string? TagValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleSpecForProviderSourceCustomPolicyDetails
@@ -80,7 +87,9 @@ public partial class V1beta1ConfigRuleSpecForProviderSourceCustomPolicyDetails
     [JsonPropertyName("policyText")]
     public string? PolicyText { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleSpecForProviderSourceSourceDetail
@@ -97,7 +106,9 @@ public partial class V1beta1ConfigRuleSpecForProviderSourceSourceDetail
     [JsonPropertyName("messageType")]
     public string? MessageType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleSpecForProviderSourceSourceIdentifierRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1ConfigRuleSpecForProviderSourceSourceIdentifierRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate sourceIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleSpecForProviderSourceSourceIdentifierRef
@@ -123,7 +136,9 @@ public partial class V1beta1ConfigRuleSpecForProviderSourceSourceIdentifierRef
     [JsonPropertyName("policy")]
     public V1beta1ConfigRuleSpecForProviderSourceSourceIdentifierRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleSpecForProviderSourceSourceIdentifierSelectorPolicy
@@ -136,7 +151,9 @@ public partial class V1beta1ConfigRuleSpecForProviderSourceSourceIdentifierSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate sourceIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleSpecForProviderSourceSourceIdentifierSelector
@@ -153,7 +170,9 @@ public partial class V1beta1ConfigRuleSpecForProviderSourceSourceIdentifierSelec
     [JsonPropertyName("policy")]
     public V1beta1ConfigRuleSpecForProviderSourceSourceIdentifierSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleSpecForProviderSource
@@ -182,7 +201,9 @@ public partial class V1beta1ConfigRuleSpecForProviderSource
     [JsonPropertyName("sourceIdentifierSelector")]
     public V1beta1ConfigRuleSpecForProviderSourceSourceIdentifierSelector? SourceIdentifierSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleSpecForProvider
@@ -219,7 +240,9 @@ public partial class V1beta1ConfigRuleSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleSpecInitProviderEvaluationMode
@@ -228,7 +251,9 @@ public partial class V1beta1ConfigRuleSpecInitProviderEvaluationMode
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleSpecInitProviderScope
@@ -249,7 +274,9 @@ public partial class V1beta1ConfigRuleSpecInitProviderScope
     [JsonPropertyName("tagValue")]
     public string? TagValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleSpecInitProviderSourceCustomPolicyDetails
@@ -266,7 +293,9 @@ public partial class V1beta1ConfigRuleSpecInitProviderSourceCustomPolicyDetails
     [JsonPropertyName("policyText")]
     public string? PolicyText { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleSpecInitProviderSourceSourceDetail
@@ -283,7 +312,9 @@ public partial class V1beta1ConfigRuleSpecInitProviderSourceSourceDetail
     [JsonPropertyName("messageType")]
     public string? MessageType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleSpecInitProviderSourceSourceIdentifierRefPolicy
@@ -296,7 +327,9 @@ public partial class V1beta1ConfigRuleSpecInitProviderSourceSourceIdentifierRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate sourceIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleSpecInitProviderSourceSourceIdentifierRef
@@ -309,7 +342,9 @@ public partial class V1beta1ConfigRuleSpecInitProviderSourceSourceIdentifierRef
     [JsonPropertyName("policy")]
     public V1beta1ConfigRuleSpecInitProviderSourceSourceIdentifierRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleSpecInitProviderSourceSourceIdentifierSelectorPolicy
@@ -322,7 +357,9 @@ public partial class V1beta1ConfigRuleSpecInitProviderSourceSourceIdentifierSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate sourceIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleSpecInitProviderSourceSourceIdentifierSelector
@@ -339,7 +376,9 @@ public partial class V1beta1ConfigRuleSpecInitProviderSourceSourceIdentifierSele
     [JsonPropertyName("policy")]
     public V1beta1ConfigRuleSpecInitProviderSourceSourceIdentifierSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleSpecInitProviderSource
@@ -368,7 +407,9 @@ public partial class V1beta1ConfigRuleSpecInitProviderSource
     [JsonPropertyName("sourceIdentifierSelector")]
     public V1beta1ConfigRuleSpecInitProviderSourceSourceIdentifierSelector? SourceIdentifierSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleSpecInitProvider
@@ -401,7 +442,9 @@ public partial class V1beta1ConfigRuleSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleSpecProviderConfigRefPolicy
@@ -414,7 +457,9 @@ public partial class V1beta1ConfigRuleSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleSpecProviderConfigRef
@@ -427,7 +472,9 @@ public partial class V1beta1ConfigRuleSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ConfigRuleSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleSpecWriteConnectionSecretToRef
@@ -440,7 +487,9 @@ public partial class V1beta1ConfigRuleSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigRuleSpec defines the desired state of ConfigRule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleSpec
@@ -469,7 +518,9 @@ public partial class V1beta1ConfigRuleSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ConfigRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleStatusAtProviderEvaluationMode
@@ -478,7 +529,9 @@ public partial class V1beta1ConfigRuleStatusAtProviderEvaluationMode
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleStatusAtProviderScope
@@ -499,7 +552,9 @@ public partial class V1beta1ConfigRuleStatusAtProviderScope
     [JsonPropertyName("tagValue")]
     public string? TagValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleStatusAtProviderSourceCustomPolicyDetails
@@ -516,7 +571,9 @@ public partial class V1beta1ConfigRuleStatusAtProviderSourceCustomPolicyDetails
     [JsonPropertyName("policyText")]
     public string? PolicyText { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleStatusAtProviderSourceSourceDetail
@@ -533,7 +590,9 @@ public partial class V1beta1ConfigRuleStatusAtProviderSourceSourceDetail
     [JsonPropertyName("messageType")]
     public string? MessageType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleStatusAtProviderSource
@@ -554,7 +613,9 @@ public partial class V1beta1ConfigRuleStatusAtProviderSource
     [JsonPropertyName("sourceIdentifier")]
     public string? SourceIdentifier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleStatusAtProvider
@@ -607,7 +668,9 @@ public partial class V1beta1ConfigRuleStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleStatusConditions
@@ -636,7 +699,9 @@ public partial class V1beta1ConfigRuleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigRuleStatus defines the observed state of ConfigRule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleStatus
@@ -653,7 +718,9 @@ public partial class V1beta1ConfigRuleStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigRule is the Schema for the ConfigRules API. Provides an AWS Config Rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -683,3 +750,4 @@ public partial class V1beta1ConfigRule : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1ConfigRuleStatus? Status { get; set; }
 }
+#nullable disable

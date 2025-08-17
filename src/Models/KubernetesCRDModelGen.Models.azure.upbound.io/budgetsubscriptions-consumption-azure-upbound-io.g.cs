@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.consumption.azure.upbound.io;
+#nullable enable
 /// <summary>BudgetSubscription is the Schema for the BudgetSubscriptions API. Manages a Subscription Consumption Budget.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BudgetSubscriptionList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1BudgetSubscription> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecForProviderFilterDimensionValuesRefsPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1BudgetSubscriptionSpecForProviderFilterDimensionValu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecForProviderFilterDimensionValuesRefs
@@ -59,7 +64,9 @@ public partial class V1beta1BudgetSubscriptionSpecForProviderFilterDimensionValu
     [JsonPropertyName("policy")]
     public V1beta1BudgetSubscriptionSpecForProviderFilterDimensionValuesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecForProviderFilterDimensionValuesSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1BudgetSubscriptionSpecForProviderFilterDimensionValu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of ResourceGroup in azure to populate values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecForProviderFilterDimensionValuesSelector
@@ -89,7 +98,9 @@ public partial class V1beta1BudgetSubscriptionSpecForProviderFilterDimensionValu
     [JsonPropertyName("policy")]
     public V1beta1BudgetSubscriptionSpecForProviderFilterDimensionValuesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecForProviderFilterDimension
@@ -114,7 +125,9 @@ public partial class V1beta1BudgetSubscriptionSpecForProviderFilterDimension
     [JsonPropertyName("valuesSelector")]
     public V1beta1BudgetSubscriptionSpecForProviderFilterDimensionValuesSelector? ValuesSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecForProviderFilterTag
@@ -131,7 +144,9 @@ public partial class V1beta1BudgetSubscriptionSpecForProviderFilterTag
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecForProviderFilter
@@ -144,7 +159,9 @@ public partial class V1beta1BudgetSubscriptionSpecForProviderFilter
     [JsonPropertyName("tag")]
     public IList<V1beta1BudgetSubscriptionSpecForProviderFilterTag>? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecForProviderNotificationContactGroupsRefsPolicy
@@ -157,7 +174,9 @@ public partial class V1beta1BudgetSubscriptionSpecForProviderNotificationContact
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecForProviderNotificationContactGroupsRefs
@@ -170,7 +189,9 @@ public partial class V1beta1BudgetSubscriptionSpecForProviderNotificationContact
     [JsonPropertyName("policy")]
     public V1beta1BudgetSubscriptionSpecForProviderNotificationContactGroupsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecForProviderNotificationContactGroupsSelectorPolicy
@@ -183,7 +204,9 @@ public partial class V1beta1BudgetSubscriptionSpecForProviderNotificationContact
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of MonitorActionGroup in insights to populate contactGroups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecForProviderNotificationContactGroupsSelector
@@ -200,7 +223,9 @@ public partial class V1beta1BudgetSubscriptionSpecForProviderNotificationContact
     [JsonPropertyName("policy")]
     public V1beta1BudgetSubscriptionSpecForProviderNotificationContactGroupsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecForProviderNotification
@@ -241,7 +266,9 @@ public partial class V1beta1BudgetSubscriptionSpecForProviderNotification
     [JsonPropertyName("thresholdType")]
     public string? ThresholdType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecForProviderTimePeriod
@@ -254,7 +281,9 @@ public partial class V1beta1BudgetSubscriptionSpecForProviderTimePeriod
     [JsonPropertyName("startDate")]
     public string? StartDate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecForProvider
@@ -287,7 +316,9 @@ public partial class V1beta1BudgetSubscriptionSpecForProvider
     [JsonPropertyName("timePeriod")]
     public IList<V1beta1BudgetSubscriptionSpecForProviderTimePeriod>? TimePeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecInitProviderFilterDimensionValuesRefsPolicy
@@ -300,7 +331,9 @@ public partial class V1beta1BudgetSubscriptionSpecInitProviderFilterDimensionVal
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecInitProviderFilterDimensionValuesRefs
@@ -313,7 +346,9 @@ public partial class V1beta1BudgetSubscriptionSpecInitProviderFilterDimensionVal
     [JsonPropertyName("policy")]
     public V1beta1BudgetSubscriptionSpecInitProviderFilterDimensionValuesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecInitProviderFilterDimensionValuesSelectorPolicy
@@ -326,7 +361,9 @@ public partial class V1beta1BudgetSubscriptionSpecInitProviderFilterDimensionVal
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of ResourceGroup in azure to populate values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecInitProviderFilterDimensionValuesSelector
@@ -343,7 +380,9 @@ public partial class V1beta1BudgetSubscriptionSpecInitProviderFilterDimensionVal
     [JsonPropertyName("policy")]
     public V1beta1BudgetSubscriptionSpecInitProviderFilterDimensionValuesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecInitProviderFilterDimension
@@ -368,7 +407,9 @@ public partial class V1beta1BudgetSubscriptionSpecInitProviderFilterDimension
     [JsonPropertyName("valuesSelector")]
     public V1beta1BudgetSubscriptionSpecInitProviderFilterDimensionValuesSelector? ValuesSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecInitProviderFilterTag
@@ -385,7 +426,9 @@ public partial class V1beta1BudgetSubscriptionSpecInitProviderFilterTag
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecInitProviderFilter
@@ -398,7 +441,9 @@ public partial class V1beta1BudgetSubscriptionSpecInitProviderFilter
     [JsonPropertyName("tag")]
     public IList<V1beta1BudgetSubscriptionSpecInitProviderFilterTag>? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecInitProviderNotificationContactGroupsRefsPolicy
@@ -411,7 +456,9 @@ public partial class V1beta1BudgetSubscriptionSpecInitProviderNotificationContac
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecInitProviderNotificationContactGroupsRefs
@@ -424,7 +471,9 @@ public partial class V1beta1BudgetSubscriptionSpecInitProviderNotificationContac
     [JsonPropertyName("policy")]
     public V1beta1BudgetSubscriptionSpecInitProviderNotificationContactGroupsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecInitProviderNotificationContactGroupsSelectorPolicy
@@ -437,7 +486,9 @@ public partial class V1beta1BudgetSubscriptionSpecInitProviderNotificationContac
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of MonitorActionGroup in insights to populate contactGroups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecInitProviderNotificationContactGroupsSelector
@@ -454,7 +505,9 @@ public partial class V1beta1BudgetSubscriptionSpecInitProviderNotificationContac
     [JsonPropertyName("policy")]
     public V1beta1BudgetSubscriptionSpecInitProviderNotificationContactGroupsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecInitProviderNotification
@@ -495,7 +548,9 @@ public partial class V1beta1BudgetSubscriptionSpecInitProviderNotification
     [JsonPropertyName("thresholdType")]
     public string? ThresholdType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecInitProviderTimePeriod
@@ -508,7 +563,9 @@ public partial class V1beta1BudgetSubscriptionSpecInitProviderTimePeriod
     [JsonPropertyName("startDate")]
     public string? StartDate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecInitProvider
@@ -541,7 +598,9 @@ public partial class V1beta1BudgetSubscriptionSpecInitProvider
     [JsonPropertyName("timePeriod")]
     public IList<V1beta1BudgetSubscriptionSpecInitProviderTimePeriod>? TimePeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecProviderConfigRefPolicy
@@ -554,7 +613,9 @@ public partial class V1beta1BudgetSubscriptionSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecProviderConfigRef
@@ -567,7 +628,9 @@ public partial class V1beta1BudgetSubscriptionSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1BudgetSubscriptionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecWriteConnectionSecretToRef
@@ -580,7 +643,9 @@ public partial class V1beta1BudgetSubscriptionSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BudgetSubscriptionSpec defines the desired state of BudgetSubscription</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpec
@@ -609,7 +674,9 @@ public partial class V1beta1BudgetSubscriptionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BudgetSubscriptionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionStatusAtProviderFilterDimension
@@ -626,7 +693,9 @@ public partial class V1beta1BudgetSubscriptionStatusAtProviderFilterDimension
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionStatusAtProviderFilterTag
@@ -643,7 +712,9 @@ public partial class V1beta1BudgetSubscriptionStatusAtProviderFilterTag
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionStatusAtProviderFilter
@@ -656,7 +727,9 @@ public partial class V1beta1BudgetSubscriptionStatusAtProviderFilter
     [JsonPropertyName("tag")]
     public IList<V1beta1BudgetSubscriptionStatusAtProviderFilterTag>? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionStatusAtProviderNotification
@@ -689,7 +762,9 @@ public partial class V1beta1BudgetSubscriptionStatusAtProviderNotification
     [JsonPropertyName("thresholdType")]
     public string? ThresholdType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionStatusAtProviderTimePeriod
@@ -702,7 +777,9 @@ public partial class V1beta1BudgetSubscriptionStatusAtProviderTimePeriod
     [JsonPropertyName("startDate")]
     public string? StartDate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionStatusAtProvider
@@ -739,7 +816,9 @@ public partial class V1beta1BudgetSubscriptionStatusAtProvider
     [JsonPropertyName("timePeriod")]
     public IList<V1beta1BudgetSubscriptionStatusAtProviderTimePeriod>? TimePeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionStatusConditions
@@ -768,7 +847,9 @@ public partial class V1beta1BudgetSubscriptionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BudgetSubscriptionStatus defines the observed state of BudgetSubscription.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionStatus
@@ -785,7 +866,9 @@ public partial class V1beta1BudgetSubscriptionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BudgetSubscription is the Schema for the BudgetSubscriptions API. Manages a Subscription Consumption Budget.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -815,3 +898,4 @@ public partial class V1beta1BudgetSubscription : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1BudgetSubscriptionStatus? Status { get; set; }
 }
+#nullable disable

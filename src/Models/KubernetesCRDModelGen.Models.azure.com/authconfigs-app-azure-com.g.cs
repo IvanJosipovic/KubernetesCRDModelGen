@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.app.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20240301.AuthConfig Generator information: - Generated from: /app/resource-manager/Microsoft.App/stable/2024-03-01/AuthConfigs.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/authConfigs/{authConfigName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20240301storageAuthConfigList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1api20240301storageAuthConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.EncryptionSettings The configuration settings of the secrets references of encryption key and signing key for ContainerApp Service Authentication/Authorization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecEncryptionSettings
@@ -50,7 +53,9 @@ public partial class V1api20240301storageAuthConfigSpecEncryptionSettings
     [JsonPropertyName("containerAppAuthSigningSecretName")]
     public string? ContainerAppAuthSigningSecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.GlobalValidation The configuration settings that determines the validation flow of users using ContainerApp Service Authentication/Authorization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecGlobalValidation
@@ -71,7 +76,9 @@ public partial class V1api20240301storageAuthConfigSpecGlobalValidation
     [JsonPropertyName("unauthenticatedClientAction")]
     public string? UnauthenticatedClientAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ForwardProxy The configuration settings of a forward proxy used to make the requests.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecHttpSettingsForwardProxy
@@ -92,7 +99,9 @@ public partial class V1api20240301storageAuthConfigSpecHttpSettingsForwardProxy
     [JsonPropertyName("customProtoHeaderName")]
     public string? CustomProtoHeaderName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.HttpSettingsRoutes The configuration settings of the paths HTTP requests.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecHttpSettingsRoutes
@@ -105,7 +114,9 @@ public partial class V1api20240301storageAuthConfigSpecHttpSettingsRoutes
     [JsonPropertyName("apiPrefix")]
     public string? ApiPrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.HttpSettings The configuration settings of the HTTP requests for authentication and authorization requests made against ContainerApp Service Authentication/Authorization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecHttpSettings
@@ -126,7 +137,9 @@ public partial class V1api20240301storageAuthConfigSpecHttpSettings
     [JsonPropertyName("routes")]
     public V1api20240301storageAuthConfigSpecHttpSettingsRoutes? Routes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.LoginScopes The configuration settings of the login flow, including the scopes that should be requested.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecIdentityProvidersAppleLogin
@@ -139,7 +152,9 @@ public partial class V1api20240301storageAuthConfigSpecIdentityProvidersAppleLog
     [JsonPropertyName("scopes")]
     public IList<string>? Scopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AppleRegistration The configuration settings of the registration for the Apple provider</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecIdentityProvidersAppleRegistration
@@ -156,7 +171,9 @@ public partial class V1api20240301storageAuthConfigSpecIdentityProvidersAppleReg
     [JsonPropertyName("clientSecretSettingName")]
     public string? ClientSecretSettingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Apple The configuration settings of the Apple provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecIdentityProvidersApple
@@ -177,7 +194,9 @@ public partial class V1api20240301storageAuthConfigSpecIdentityProvidersApple
     [JsonPropertyName("registration")]
     public V1api20240301storageAuthConfigSpecIdentityProvidersAppleRegistration? Registration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AzureActiveDirectoryLogin The configuration settings of the Azure Active Directory login flow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecIdentityProvidersAzureActiveDirectoryLogin
@@ -194,7 +213,9 @@ public partial class V1api20240301storageAuthConfigSpecIdentityProvidersAzureAct
     [JsonPropertyName("loginParameters")]
     public IList<string>? LoginParameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AzureActiveDirectoryRegistration The configuration settings of the Azure Active Directory app registration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecIdentityProvidersAzureActiveDirectoryRegistration
@@ -227,7 +248,9 @@ public partial class V1api20240301storageAuthConfigSpecIdentityProvidersAzureAct
     [JsonPropertyName("openIdIssuer")]
     public string? OpenIdIssuer { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AllowedPrincipals The configuration settings of the Azure Active Directory allowed principals.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecIdentityProvidersAzureActiveDirectoryValidationDefaultAuthorizationPolicyAllowedPrincipals
@@ -244,7 +267,9 @@ public partial class V1api20240301storageAuthConfigSpecIdentityProvidersAzureAct
     [JsonPropertyName("identities")]
     public IList<string>? Identities { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.DefaultAuthorizationPolicy The configuration settings of the Azure Active Directory default authorization policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecIdentityProvidersAzureActiveDirectoryValidationDefaultAuthorizationPolicy
@@ -261,7 +286,9 @@ public partial class V1api20240301storageAuthConfigSpecIdentityProvidersAzureAct
     [JsonPropertyName("allowedPrincipals")]
     public V1api20240301storageAuthConfigSpecIdentityProvidersAzureActiveDirectoryValidationDefaultAuthorizationPolicyAllowedPrincipals? AllowedPrincipals { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.JwtClaimChecks The configuration settings of the checks that should be made while validating the JWT Claims.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecIdentityProvidersAzureActiveDirectoryValidationJwtClaimChecks
@@ -278,7 +305,9 @@ public partial class V1api20240301storageAuthConfigSpecIdentityProvidersAzureAct
     [JsonPropertyName("allowedGroups")]
     public IList<string>? AllowedGroups { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AzureActiveDirectoryValidation The configuration settings of the Azure Active Directory token validation flow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecIdentityProvidersAzureActiveDirectoryValidation
@@ -299,7 +328,9 @@ public partial class V1api20240301storageAuthConfigSpecIdentityProvidersAzureAct
     [JsonPropertyName("jwtClaimChecks")]
     public V1api20240301storageAuthConfigSpecIdentityProvidersAzureActiveDirectoryValidationJwtClaimChecks? JwtClaimChecks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AzureActiveDirectory The configuration settings of the Azure Active directory provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecIdentityProvidersAzureActiveDirectory
@@ -328,7 +359,9 @@ public partial class V1api20240301storageAuthConfigSpecIdentityProvidersAzureAct
     [JsonPropertyName("validation")]
     public V1api20240301storageAuthConfigSpecIdentityProvidersAzureActiveDirectoryValidation? Validation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AzureStaticWebAppsRegistration The configuration settings of the registration for the Azure Static Web Apps provider</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecIdentityProvidersAzureStaticWebAppsRegistration
@@ -341,7 +374,9 @@ public partial class V1api20240301storageAuthConfigSpecIdentityProvidersAzureSta
     [JsonPropertyName("clientId")]
     public string? ClientId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AzureStaticWebApps The configuration settings of the Azure Static Web Apps provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecIdentityProvidersAzureStaticWebApps
@@ -358,7 +393,9 @@ public partial class V1api20240301storageAuthConfigSpecIdentityProvidersAzureSta
     [JsonPropertyName("registration")]
     public V1api20240301storageAuthConfigSpecIdentityProvidersAzureStaticWebAppsRegistration? Registration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.OpenIdConnectLogin The configuration settings of the login flow of the custom Open ID Connect provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecIdentityProvidersCustomOpenIdConnectProvidersLogin
@@ -375,7 +412,9 @@ public partial class V1api20240301storageAuthConfigSpecIdentityProvidersCustomOp
     [JsonPropertyName("scopes")]
     public IList<string>? Scopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.OpenIdConnectClientCredential The authentication client credentials of the custom Open ID Connect provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecIdentityProvidersCustomOpenIdConnectProvidersRegistrationClientCredential
@@ -392,7 +431,9 @@ public partial class V1api20240301storageAuthConfigSpecIdentityProvidersCustomOp
     [JsonPropertyName("method")]
     public string? Method { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.OpenIdConnectConfig The configuration settings of the endpoints used for the custom Open ID Connect provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecIdentityProvidersCustomOpenIdConnectProvidersRegistrationOpenIdConnectConfiguration
@@ -421,7 +462,9 @@ public partial class V1api20240301storageAuthConfigSpecIdentityProvidersCustomOp
     [JsonPropertyName("wellKnownOpenIdConfiguration")]
     public string? WellKnownOpenIdConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.OpenIdConnectRegistration The configuration settings of the app registration for the custom Open ID Connect provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecIdentityProvidersCustomOpenIdConnectProvidersRegistration
@@ -442,7 +485,9 @@ public partial class V1api20240301storageAuthConfigSpecIdentityProvidersCustomOp
     [JsonPropertyName("openIdConnectConfiguration")]
     public V1api20240301storageAuthConfigSpecIdentityProvidersCustomOpenIdConnectProvidersRegistrationOpenIdConnectConfiguration? OpenIdConnectConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.CustomOpenIdConnectProvider The configuration settings of the custom Open ID Connect provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecIdentityProvidersCustomOpenIdConnectProviders
@@ -463,7 +508,9 @@ public partial class V1api20240301storageAuthConfigSpecIdentityProvidersCustomOp
     [JsonPropertyName("registration")]
     public V1api20240301storageAuthConfigSpecIdentityProvidersCustomOpenIdConnectProvidersRegistration? Registration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.LoginScopes The configuration settings of the login flow, including the scopes that should be requested.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecIdentityProvidersFacebookLogin
@@ -476,7 +523,9 @@ public partial class V1api20240301storageAuthConfigSpecIdentityProvidersFacebook
     [JsonPropertyName("scopes")]
     public IList<string>? Scopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AppRegistration The configuration settings of the app registration for providers that have app ids and app secrets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecIdentityProvidersFacebookRegistration
@@ -493,7 +542,9 @@ public partial class V1api20240301storageAuthConfigSpecIdentityProvidersFacebook
     [JsonPropertyName("appSecretSettingName")]
     public string? AppSecretSettingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Facebook The configuration settings of the Facebook provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecIdentityProvidersFacebook
@@ -518,7 +569,9 @@ public partial class V1api20240301storageAuthConfigSpecIdentityProvidersFacebook
     [JsonPropertyName("registration")]
     public V1api20240301storageAuthConfigSpecIdentityProvidersFacebookRegistration? Registration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.LoginScopes The configuration settings of the login flow, including the scopes that should be requested.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecIdentityProvidersGitHubLogin
@@ -531,7 +584,9 @@ public partial class V1api20240301storageAuthConfigSpecIdentityProvidersGitHubLo
     [JsonPropertyName("scopes")]
     public IList<string>? Scopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ClientRegistration The configuration settings of the app registration for providers that have client ids and client secrets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecIdentityProvidersGitHubRegistration
@@ -548,7 +603,9 @@ public partial class V1api20240301storageAuthConfigSpecIdentityProvidersGitHubRe
     [JsonPropertyName("clientSecretSettingName")]
     public string? ClientSecretSettingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.GitHub The configuration settings of the GitHub provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecIdentityProvidersGitHub
@@ -569,7 +626,9 @@ public partial class V1api20240301storageAuthConfigSpecIdentityProvidersGitHub
     [JsonPropertyName("registration")]
     public V1api20240301storageAuthConfigSpecIdentityProvidersGitHubRegistration? Registration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.LoginScopes The configuration settings of the login flow, including the scopes that should be requested.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecIdentityProvidersGoogleLogin
@@ -582,7 +641,9 @@ public partial class V1api20240301storageAuthConfigSpecIdentityProvidersGoogleLo
     [JsonPropertyName("scopes")]
     public IList<string>? Scopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ClientRegistration The configuration settings of the app registration for providers that have client ids and client secrets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecIdentityProvidersGoogleRegistration
@@ -599,7 +660,9 @@ public partial class V1api20240301storageAuthConfigSpecIdentityProvidersGoogleRe
     [JsonPropertyName("clientSecretSettingName")]
     public string? ClientSecretSettingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AllowedAudiencesValidation The configuration settings of the Allowed Audiences validation flow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecIdentityProvidersGoogleValidation
@@ -612,7 +675,9 @@ public partial class V1api20240301storageAuthConfigSpecIdentityProvidersGoogleVa
     [JsonPropertyName("allowedAudiences")]
     public IList<string>? AllowedAudiences { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Google The configuration settings of the Google provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecIdentityProvidersGoogle
@@ -637,7 +702,9 @@ public partial class V1api20240301storageAuthConfigSpecIdentityProvidersGoogle
     [JsonPropertyName("validation")]
     public V1api20240301storageAuthConfigSpecIdentityProvidersGoogleValidation? Validation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.TwitterRegistration The configuration settings of the app registration for the Twitter provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecIdentityProvidersTwitterRegistration
@@ -654,7 +721,9 @@ public partial class V1api20240301storageAuthConfigSpecIdentityProvidersTwitterR
     [JsonPropertyName("consumerSecretSettingName")]
     public string? ConsumerSecretSettingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Twitter The configuration settings of the Twitter provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecIdentityProvidersTwitter
@@ -671,7 +740,9 @@ public partial class V1api20240301storageAuthConfigSpecIdentityProvidersTwitter
     [JsonPropertyName("registration")]
     public V1api20240301storageAuthConfigSpecIdentityProvidersTwitterRegistration? Registration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.IdentityProviders The configuration settings of each of the identity providers used to configure ContainerApp Service Authentication/Authorization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecIdentityProviders
@@ -712,7 +783,9 @@ public partial class V1api20240301storageAuthConfigSpecIdentityProviders
     [JsonPropertyName("twitter")]
     public V1api20240301storageAuthConfigSpecIdentityProvidersTwitter? Twitter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.CookieExpiration The configuration settings of the session cookie's expiration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecLoginCookieExpiration
@@ -729,7 +802,9 @@ public partial class V1api20240301storageAuthConfigSpecLoginCookieExpiration
     [JsonPropertyName("timeToExpiration")]
     public string? TimeToExpiration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Nonce The configuration settings of the nonce used in the login flow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecLoginNonce
@@ -746,7 +821,9 @@ public partial class V1api20240301storageAuthConfigSpecLoginNonce
     [JsonPropertyName("validateNonce")]
     public bool? ValidateNonce { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.LoginRoutes The routes that specify the endpoints used for login and logout requests.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecLoginRoutes
@@ -759,7 +836,9 @@ public partial class V1api20240301storageAuthConfigSpecLoginRoutes
     [JsonPropertyName("logoutEndpoint")]
     public string? LogoutEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.BlobStorageTokenStore The configuration settings of the storage of the tokens if blob storage is used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecLoginTokenStoreAzureBlobStorage
@@ -772,7 +851,9 @@ public partial class V1api20240301storageAuthConfigSpecLoginTokenStoreAzureBlobS
     [JsonPropertyName("sasUrlSettingName")]
     public string? SasUrlSettingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.TokenStore The configuration settings of the token store.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecLoginTokenStore
@@ -793,7 +874,9 @@ public partial class V1api20240301storageAuthConfigSpecLoginTokenStore
     [JsonPropertyName("tokenRefreshExtensionHours")]
     public double? TokenRefreshExtensionHours { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Login The configuration settings of the login flow of users using ContainerApp Service Authentication/Authorization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecLogin
@@ -826,7 +909,9 @@ public partial class V1api20240301storageAuthConfigSpecLogin
     [JsonPropertyName("tokenStore")]
     public V1api20240301storageAuthConfigSpecLoginTokenStore? TokenStore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecOperatorSpecConfigMapExpressions
@@ -843,7 +928,9 @@ public partial class V1api20240301storageAuthConfigSpecOperatorSpecConfigMapExpr
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecOperatorSpecSecretExpressions
@@ -860,7 +947,9 @@ public partial class V1api20240301storageAuthConfigSpecOperatorSpecSecretExpress
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AuthConfigOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecOperatorSpec
@@ -877,7 +966,9 @@ public partial class V1api20240301storageAuthConfigSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20240301storageAuthConfigSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a app.azure.com/ContainerApp resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecOwner
@@ -890,7 +981,9 @@ public partial class V1api20240301storageAuthConfigSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AuthPlatform The configuration settings of the platform of ContainerApp Service Authentication/Authorization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpecPlatform
@@ -907,7 +1000,9 @@ public partial class V1api20240301storageAuthConfigSpecPlatform
     [JsonPropertyName("runtimeVersion")]
     public string? RuntimeVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AuthConfig_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigSpec
@@ -956,7 +1051,9 @@ public partial class V1api20240301storageAuthConfigSpec
     [JsonPropertyName("platform")]
     public V1api20240301storageAuthConfigSpecPlatform? Platform { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusConditions
@@ -989,7 +1086,9 @@ public partial class V1api20240301storageAuthConfigStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.EncryptionSettings_STATUS The configuration settings of the secrets references of encryption key and signing key for ContainerApp Service Authentication/Authorization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusEncryptionSettings
@@ -1006,7 +1105,9 @@ public partial class V1api20240301storageAuthConfigStatusEncryptionSettings
     [JsonPropertyName("containerAppAuthSigningSecretName")]
     public string? ContainerAppAuthSigningSecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.GlobalValidation_STATUS The configuration settings that determines the validation flow of users using ContainerApp Service Authentication/Authorization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusGlobalValidation
@@ -1027,7 +1128,9 @@ public partial class V1api20240301storageAuthConfigStatusGlobalValidation
     [JsonPropertyName("unauthenticatedClientAction")]
     public string? UnauthenticatedClientAction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ForwardProxy_STATUS The configuration settings of a forward proxy used to make the requests.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusHttpSettingsForwardProxy
@@ -1048,7 +1151,9 @@ public partial class V1api20240301storageAuthConfigStatusHttpSettingsForwardProx
     [JsonPropertyName("customProtoHeaderName")]
     public string? CustomProtoHeaderName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.HttpSettingsRoutes_STATUS The configuration settings of the paths HTTP requests.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusHttpSettingsRoutes
@@ -1061,7 +1166,9 @@ public partial class V1api20240301storageAuthConfigStatusHttpSettingsRoutes
     [JsonPropertyName("apiPrefix")]
     public string? ApiPrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.HttpSettings_STATUS The configuration settings of the HTTP requests for authentication and authorization requests made against ContainerApp Service Authentication/Authorization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusHttpSettings
@@ -1082,7 +1189,9 @@ public partial class V1api20240301storageAuthConfigStatusHttpSettings
     [JsonPropertyName("routes")]
     public V1api20240301storageAuthConfigStatusHttpSettingsRoutes? Routes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.LoginScopes_STATUS The configuration settings of the login flow, including the scopes that should be requested.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusIdentityProvidersAppleLogin
@@ -1095,7 +1204,9 @@ public partial class V1api20240301storageAuthConfigStatusIdentityProvidersAppleL
     [JsonPropertyName("scopes")]
     public IList<string>? Scopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AppleRegistration_STATUS The configuration settings of the registration for the Apple provider</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusIdentityProvidersAppleRegistration
@@ -1112,7 +1223,9 @@ public partial class V1api20240301storageAuthConfigStatusIdentityProvidersAppleR
     [JsonPropertyName("clientSecretSettingName")]
     public string? ClientSecretSettingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Apple_STATUS The configuration settings of the Apple provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusIdentityProvidersApple
@@ -1133,7 +1246,9 @@ public partial class V1api20240301storageAuthConfigStatusIdentityProvidersApple
     [JsonPropertyName("registration")]
     public V1api20240301storageAuthConfigStatusIdentityProvidersAppleRegistration? Registration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AzureActiveDirectoryLogin_STATUS The configuration settings of the Azure Active Directory login flow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusIdentityProvidersAzureActiveDirectoryLogin
@@ -1150,7 +1265,9 @@ public partial class V1api20240301storageAuthConfigStatusIdentityProvidersAzureA
     [JsonPropertyName("loginParameters")]
     public IList<string>? LoginParameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AzureActiveDirectoryRegistration_STATUS The configuration settings of the Azure Active Directory app registration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusIdentityProvidersAzureActiveDirectoryRegistration
@@ -1183,7 +1300,9 @@ public partial class V1api20240301storageAuthConfigStatusIdentityProvidersAzureA
     [JsonPropertyName("openIdIssuer")]
     public string? OpenIdIssuer { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AllowedPrincipals_STATUS The configuration settings of the Azure Active Directory allowed principals.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusIdentityProvidersAzureActiveDirectoryValidationDefaultAuthorizationPolicyAllowedPrincipals
@@ -1200,7 +1319,9 @@ public partial class V1api20240301storageAuthConfigStatusIdentityProvidersAzureA
     [JsonPropertyName("identities")]
     public IList<string>? Identities { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.DefaultAuthorizationPolicy_STATUS The configuration settings of the Azure Active Directory default authorization policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusIdentityProvidersAzureActiveDirectoryValidationDefaultAuthorizationPolicy
@@ -1217,7 +1338,9 @@ public partial class V1api20240301storageAuthConfigStatusIdentityProvidersAzureA
     [JsonPropertyName("allowedPrincipals")]
     public V1api20240301storageAuthConfigStatusIdentityProvidersAzureActiveDirectoryValidationDefaultAuthorizationPolicyAllowedPrincipals? AllowedPrincipals { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.JwtClaimChecks_STATUS The configuration settings of the checks that should be made while validating the JWT Claims.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusIdentityProvidersAzureActiveDirectoryValidationJwtClaimChecks
@@ -1234,7 +1357,9 @@ public partial class V1api20240301storageAuthConfigStatusIdentityProvidersAzureA
     [JsonPropertyName("allowedGroups")]
     public IList<string>? AllowedGroups { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AzureActiveDirectoryValidation_STATUS The configuration settings of the Azure Active Directory token validation flow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusIdentityProvidersAzureActiveDirectoryValidation
@@ -1255,7 +1380,9 @@ public partial class V1api20240301storageAuthConfigStatusIdentityProvidersAzureA
     [JsonPropertyName("jwtClaimChecks")]
     public V1api20240301storageAuthConfigStatusIdentityProvidersAzureActiveDirectoryValidationJwtClaimChecks? JwtClaimChecks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AzureActiveDirectory_STATUS The configuration settings of the Azure Active directory provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusIdentityProvidersAzureActiveDirectory
@@ -1284,7 +1411,9 @@ public partial class V1api20240301storageAuthConfigStatusIdentityProvidersAzureA
     [JsonPropertyName("validation")]
     public V1api20240301storageAuthConfigStatusIdentityProvidersAzureActiveDirectoryValidation? Validation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AzureStaticWebAppsRegistration_STATUS The configuration settings of the registration for the Azure Static Web Apps provider</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusIdentityProvidersAzureStaticWebAppsRegistration
@@ -1297,7 +1426,9 @@ public partial class V1api20240301storageAuthConfigStatusIdentityProvidersAzureS
     [JsonPropertyName("clientId")]
     public string? ClientId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AzureStaticWebApps_STATUS The configuration settings of the Azure Static Web Apps provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusIdentityProvidersAzureStaticWebApps
@@ -1314,7 +1445,9 @@ public partial class V1api20240301storageAuthConfigStatusIdentityProvidersAzureS
     [JsonPropertyName("registration")]
     public V1api20240301storageAuthConfigStatusIdentityProvidersAzureStaticWebAppsRegistration? Registration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.OpenIdConnectLogin_STATUS The configuration settings of the login flow of the custom Open ID Connect provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusIdentityProvidersCustomOpenIdConnectProvidersLogin
@@ -1331,7 +1464,9 @@ public partial class V1api20240301storageAuthConfigStatusIdentityProvidersCustom
     [JsonPropertyName("scopes")]
     public IList<string>? Scopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.OpenIdConnectClientCredential_STATUS The authentication client credentials of the custom Open ID Connect provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusIdentityProvidersCustomOpenIdConnectProvidersRegistrationClientCredential
@@ -1348,7 +1483,9 @@ public partial class V1api20240301storageAuthConfigStatusIdentityProvidersCustom
     [JsonPropertyName("method")]
     public string? Method { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.OpenIdConnectConfig_STATUS The configuration settings of the endpoints used for the custom Open ID Connect provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusIdentityProvidersCustomOpenIdConnectProvidersRegistrationOpenIdConnectConfiguration
@@ -1377,7 +1514,9 @@ public partial class V1api20240301storageAuthConfigStatusIdentityProvidersCustom
     [JsonPropertyName("wellKnownOpenIdConfiguration")]
     public string? WellKnownOpenIdConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.OpenIdConnectRegistration_STATUS The configuration settings of the app registration for the custom Open ID Connect provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusIdentityProvidersCustomOpenIdConnectProvidersRegistration
@@ -1398,7 +1537,9 @@ public partial class V1api20240301storageAuthConfigStatusIdentityProvidersCustom
     [JsonPropertyName("openIdConnectConfiguration")]
     public V1api20240301storageAuthConfigStatusIdentityProvidersCustomOpenIdConnectProvidersRegistrationOpenIdConnectConfiguration? OpenIdConnectConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.CustomOpenIdConnectProvider_STATUS The configuration settings of the custom Open ID Connect provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusIdentityProvidersCustomOpenIdConnectProviders
@@ -1419,7 +1560,9 @@ public partial class V1api20240301storageAuthConfigStatusIdentityProvidersCustom
     [JsonPropertyName("registration")]
     public V1api20240301storageAuthConfigStatusIdentityProvidersCustomOpenIdConnectProvidersRegistration? Registration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.LoginScopes_STATUS The configuration settings of the login flow, including the scopes that should be requested.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusIdentityProvidersFacebookLogin
@@ -1432,7 +1575,9 @@ public partial class V1api20240301storageAuthConfigStatusIdentityProvidersFacebo
     [JsonPropertyName("scopes")]
     public IList<string>? Scopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AppRegistration_STATUS The configuration settings of the app registration for providers that have app ids and app secrets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusIdentityProvidersFacebookRegistration
@@ -1449,7 +1594,9 @@ public partial class V1api20240301storageAuthConfigStatusIdentityProvidersFacebo
     [JsonPropertyName("appSecretSettingName")]
     public string? AppSecretSettingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Facebook_STATUS The configuration settings of the Facebook provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusIdentityProvidersFacebook
@@ -1474,7 +1621,9 @@ public partial class V1api20240301storageAuthConfigStatusIdentityProvidersFacebo
     [JsonPropertyName("registration")]
     public V1api20240301storageAuthConfigStatusIdentityProvidersFacebookRegistration? Registration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.LoginScopes_STATUS The configuration settings of the login flow, including the scopes that should be requested.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusIdentityProvidersGitHubLogin
@@ -1487,7 +1636,9 @@ public partial class V1api20240301storageAuthConfigStatusIdentityProvidersGitHub
     [JsonPropertyName("scopes")]
     public IList<string>? Scopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ClientRegistration_STATUS The configuration settings of the app registration for providers that have client ids and client secrets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusIdentityProvidersGitHubRegistration
@@ -1504,7 +1655,9 @@ public partial class V1api20240301storageAuthConfigStatusIdentityProvidersGitHub
     [JsonPropertyName("clientSecretSettingName")]
     public string? ClientSecretSettingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.GitHub_STATUS The configuration settings of the GitHub provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusIdentityProvidersGitHub
@@ -1525,7 +1678,9 @@ public partial class V1api20240301storageAuthConfigStatusIdentityProvidersGitHub
     [JsonPropertyName("registration")]
     public V1api20240301storageAuthConfigStatusIdentityProvidersGitHubRegistration? Registration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.LoginScopes_STATUS The configuration settings of the login flow, including the scopes that should be requested.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusIdentityProvidersGoogleLogin
@@ -1538,7 +1693,9 @@ public partial class V1api20240301storageAuthConfigStatusIdentityProvidersGoogle
     [JsonPropertyName("scopes")]
     public IList<string>? Scopes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ClientRegistration_STATUS The configuration settings of the app registration for providers that have client ids and client secrets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusIdentityProvidersGoogleRegistration
@@ -1555,7 +1712,9 @@ public partial class V1api20240301storageAuthConfigStatusIdentityProvidersGoogle
     [JsonPropertyName("clientSecretSettingName")]
     public string? ClientSecretSettingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AllowedAudiencesValidation_STATUS The configuration settings of the Allowed Audiences validation flow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusIdentityProvidersGoogleValidation
@@ -1568,7 +1727,9 @@ public partial class V1api20240301storageAuthConfigStatusIdentityProvidersGoogle
     [JsonPropertyName("allowedAudiences")]
     public IList<string>? AllowedAudiences { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Google_STATUS The configuration settings of the Google provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusIdentityProvidersGoogle
@@ -1593,7 +1754,9 @@ public partial class V1api20240301storageAuthConfigStatusIdentityProvidersGoogle
     [JsonPropertyName("validation")]
     public V1api20240301storageAuthConfigStatusIdentityProvidersGoogleValidation? Validation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.TwitterRegistration_STATUS The configuration settings of the app registration for the Twitter provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusIdentityProvidersTwitterRegistration
@@ -1610,7 +1773,9 @@ public partial class V1api20240301storageAuthConfigStatusIdentityProvidersTwitte
     [JsonPropertyName("consumerSecretSettingName")]
     public string? ConsumerSecretSettingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Twitter_STATUS The configuration settings of the Twitter provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusIdentityProvidersTwitter
@@ -1627,7 +1792,9 @@ public partial class V1api20240301storageAuthConfigStatusIdentityProvidersTwitte
     [JsonPropertyName("registration")]
     public V1api20240301storageAuthConfigStatusIdentityProvidersTwitterRegistration? Registration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.IdentityProviders_STATUS The configuration settings of each of the identity providers used to configure ContainerApp Service Authentication/Authorization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusIdentityProviders
@@ -1668,7 +1835,9 @@ public partial class V1api20240301storageAuthConfigStatusIdentityProviders
     [JsonPropertyName("twitter")]
     public V1api20240301storageAuthConfigStatusIdentityProvidersTwitter? Twitter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.CookieExpiration_STATUS The configuration settings of the session cookie's expiration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusLoginCookieExpiration
@@ -1685,7 +1854,9 @@ public partial class V1api20240301storageAuthConfigStatusLoginCookieExpiration
     [JsonPropertyName("timeToExpiration")]
     public string? TimeToExpiration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Nonce_STATUS The configuration settings of the nonce used in the login flow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusLoginNonce
@@ -1702,7 +1873,9 @@ public partial class V1api20240301storageAuthConfigStatusLoginNonce
     [JsonPropertyName("validateNonce")]
     public bool? ValidateNonce { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.LoginRoutes_STATUS The routes that specify the endpoints used for login and logout requests.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusLoginRoutes
@@ -1715,7 +1888,9 @@ public partial class V1api20240301storageAuthConfigStatusLoginRoutes
     [JsonPropertyName("logoutEndpoint")]
     public string? LogoutEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.BlobStorageTokenStore_STATUS The configuration settings of the storage of the tokens if blob storage is used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusLoginTokenStoreAzureBlobStorage
@@ -1728,7 +1903,9 @@ public partial class V1api20240301storageAuthConfigStatusLoginTokenStoreAzureBlo
     [JsonPropertyName("sasUrlSettingName")]
     public string? SasUrlSettingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.TokenStore_STATUS The configuration settings of the token store.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusLoginTokenStore
@@ -1749,7 +1926,9 @@ public partial class V1api20240301storageAuthConfigStatusLoginTokenStore
     [JsonPropertyName("tokenRefreshExtensionHours")]
     public double? TokenRefreshExtensionHours { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Login_STATUS The configuration settings of the login flow of users using ContainerApp Service Authentication/Authorization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusLogin
@@ -1782,7 +1961,9 @@ public partial class V1api20240301storageAuthConfigStatusLogin
     [JsonPropertyName("tokenStore")]
     public V1api20240301storageAuthConfigStatusLoginTokenStore? TokenStore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AuthPlatform_STATUS The configuration settings of the platform of ContainerApp Service Authentication/Authorization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusPlatform
@@ -1799,7 +1980,9 @@ public partial class V1api20240301storageAuthConfigStatusPlatform
     [JsonPropertyName("runtimeVersion")]
     public string? RuntimeVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatusSystemData
@@ -1832,7 +2015,9 @@ public partial class V1api20240301storageAuthConfigStatusSystemData
     [JsonPropertyName("lastModifiedByType")]
     public string? LastModifiedByType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AuthConfig_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageAuthConfigStatus
@@ -1885,7 +2070,9 @@ public partial class V1api20240301storageAuthConfigStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AuthConfig Generator information: - Generated from: /app/resource-manager/Microsoft.App/stable/2024-03-01/AuthConfigs.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/authConfigs/{authConfigName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1915,3 +2102,4 @@ public partial class V1api20240301storageAuthConfig : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1api20240301storageAuthConfigStatus? Status { get; set; }
 }
+#nullable disable

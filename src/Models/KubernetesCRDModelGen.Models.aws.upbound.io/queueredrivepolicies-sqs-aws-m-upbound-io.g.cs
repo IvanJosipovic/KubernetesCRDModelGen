@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sqs.aws.m.upbound.io;
+#nullable enable
 /// <summary>QueueRedrivePolicy is the Schema for the QueueRedrivePolicys API. Provides a SQS Queue Redrive Policy resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1QueueRedrivePolicyList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1QueueRedrivePolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueRedrivePolicySpecForProviderQueueUrlRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1QueueRedrivePolicySpecForProviderQueueUrlRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Queue in sqs to populate queueUrl.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueRedrivePolicySpecForProviderQueueUrlRef
@@ -63,7 +68,9 @@ public partial class V1beta1QueueRedrivePolicySpecForProviderQueueUrlRef
     [JsonPropertyName("policy")]
     public V1beta1QueueRedrivePolicySpecForProviderQueueUrlRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueRedrivePolicySpecForProviderQueueUrlSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1QueueRedrivePolicySpecForProviderQueueUrlSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Queue in sqs to populate queueUrl.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueRedrivePolicySpecForProviderQueueUrlSelector
@@ -97,7 +106,9 @@ public partial class V1beta1QueueRedrivePolicySpecForProviderQueueUrlSelector
     [JsonPropertyName("policy")]
     public V1beta1QueueRedrivePolicySpecForProviderQueueUrlSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueRedrivePolicySpecForProvider
@@ -122,7 +133,9 @@ public partial class V1beta1QueueRedrivePolicySpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueRedrivePolicySpecInitProviderQueueUrlRefPolicy
@@ -135,7 +148,9 @@ public partial class V1beta1QueueRedrivePolicySpecInitProviderQueueUrlRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Queue in sqs to populate queueUrl.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueRedrivePolicySpecInitProviderQueueUrlRef
@@ -152,7 +167,9 @@ public partial class V1beta1QueueRedrivePolicySpecInitProviderQueueUrlRef
     [JsonPropertyName("policy")]
     public V1beta1QueueRedrivePolicySpecInitProviderQueueUrlRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueRedrivePolicySpecInitProviderQueueUrlSelectorPolicy
@@ -165,7 +182,9 @@ public partial class V1beta1QueueRedrivePolicySpecInitProviderQueueUrlSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Queue in sqs to populate queueUrl.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueRedrivePolicySpecInitProviderQueueUrlSelector
@@ -186,7 +205,9 @@ public partial class V1beta1QueueRedrivePolicySpecInitProviderQueueUrlSelector
     [JsonPropertyName("policy")]
     public V1beta1QueueRedrivePolicySpecInitProviderQueueUrlSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueRedrivePolicySpecInitProvider
@@ -207,7 +228,9 @@ public partial class V1beta1QueueRedrivePolicySpecInitProvider
     [JsonPropertyName("redrivePolicy")]
     public string? RedrivePolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueRedrivePolicySpecProviderConfigRef
@@ -220,7 +243,9 @@ public partial class V1beta1QueueRedrivePolicySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueRedrivePolicySpecWriteConnectionSecretToRef
@@ -229,7 +254,9 @@ public partial class V1beta1QueueRedrivePolicySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>QueueRedrivePolicySpec defines the desired state of QueueRedrivePolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueRedrivePolicySpec
@@ -254,7 +281,9 @@ public partial class V1beta1QueueRedrivePolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1QueueRedrivePolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueRedrivePolicyStatusAtProvider
@@ -275,7 +304,9 @@ public partial class V1beta1QueueRedrivePolicyStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueRedrivePolicyStatusConditions
@@ -304,7 +335,9 @@ public partial class V1beta1QueueRedrivePolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>QueueRedrivePolicyStatus defines the observed state of QueueRedrivePolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueRedrivePolicyStatus
@@ -321,7 +354,9 @@ public partial class V1beta1QueueRedrivePolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>QueueRedrivePolicy is the Schema for the QueueRedrivePolicys API. Provides a SQS Queue Redrive Policy resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -351,3 +386,4 @@ public partial class V1beta1QueueRedrivePolicy : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1QueueRedrivePolicyStatus? Status { get; set; }
 }
+#nullable disable

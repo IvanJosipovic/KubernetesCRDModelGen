@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.traefik.io;
+#nullable enable
 /// <summary>IngressRouteUDP is a CRD implementation of a Traefik UDP Router.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1IngressRouteUDPList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1alpha1IngressRouteUDP> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServiceUDP defines an upstream UDP service to proxy traffic to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteUDPSpecRoutesServices
@@ -62,7 +65,9 @@ public partial class V1alpha1IngressRouteUDPSpecRoutesServices
     [JsonPropertyName("weight")]
     public int? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RouteUDP holds the UDP route configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteUDPSpecRoutes
@@ -71,7 +76,9 @@ public partial class V1alpha1IngressRouteUDPSpecRoutes
     [JsonPropertyName("services")]
     public IList<V1alpha1IngressRouteUDPSpecRoutesServices>? Services { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IngressRouteUDPSpec defines the desired state of a IngressRouteUDP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteUDPSpec
@@ -84,7 +91,9 @@ public partial class V1alpha1IngressRouteUDPSpec
     [JsonPropertyName("routes")]
     public IList<V1alpha1IngressRouteUDPSpecRoutes> Routes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IngressRouteUDP is a CRD implementation of a Traefik UDP Router.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -110,3 +119,4 @@ public partial class V1alpha1IngressRouteUDP : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("spec")]
     public V1alpha1IngressRouteUDPSpec Spec { get; set; }
 }
+#nullable disable

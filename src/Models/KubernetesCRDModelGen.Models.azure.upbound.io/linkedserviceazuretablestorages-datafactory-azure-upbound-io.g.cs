@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafactory.azure.upbound.io;
+#nullable enable
 /// <summary>LinkedServiceAzureTableStorage is the Schema for the LinkedServiceAzureTableStorages API. Manages a Linked Service (connection) between an Azure Table Storage and Azure Data Factory.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LinkedServiceAzureTableStorageList : IKubernetesObje
     [JsonPropertyName("items")]
     public IList<V1beta1LinkedServiceAzureTableStorage> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The connection string to an Azure Storage Account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureTableStorageSpecForProviderConnectionStringSecretRef
@@ -50,7 +53,9 @@ public partial class V1beta1LinkedServiceAzureTableStorageSpecForProviderConnect
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureTableStorageSpecForProviderDataFactoryIdRefPolicy
@@ -63,7 +68,9 @@ public partial class V1beta1LinkedServiceAzureTableStorageSpecForProviderDataFac
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Factory in datafactory to populate dataFactoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureTableStorageSpecForProviderDataFactoryIdRef
@@ -76,7 +83,9 @@ public partial class V1beta1LinkedServiceAzureTableStorageSpecForProviderDataFac
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceAzureTableStorageSpecForProviderDataFactoryIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureTableStorageSpecForProviderDataFactoryIdSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1LinkedServiceAzureTableStorageSpecForProviderDataFac
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Factory in datafactory to populate dataFactoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureTableStorageSpecForProviderDataFactoryIdSelector
@@ -106,7 +117,9 @@ public partial class V1beta1LinkedServiceAzureTableStorageSpecForProviderDataFac
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceAzureTableStorageSpecForProviderDataFactoryIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureTableStorageSpecForProvider
@@ -147,7 +160,9 @@ public partial class V1beta1LinkedServiceAzureTableStorageSpecForProvider
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The connection string to an Azure Storage Account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureTableStorageSpecInitProviderConnectionStringSecretRef
@@ -164,7 +179,9 @@ public partial class V1beta1LinkedServiceAzureTableStorageSpecInitProviderConnec
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureTableStorageSpecInitProvider
@@ -193,7 +210,9 @@ public partial class V1beta1LinkedServiceAzureTableStorageSpecInitProvider
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureTableStorageSpecProviderConfigRefPolicy
@@ -206,7 +225,9 @@ public partial class V1beta1LinkedServiceAzureTableStorageSpecProviderConfigRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureTableStorageSpecProviderConfigRef
@@ -219,7 +240,9 @@ public partial class V1beta1LinkedServiceAzureTableStorageSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceAzureTableStorageSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureTableStorageSpecWriteConnectionSecretToRef
@@ -232,7 +255,9 @@ public partial class V1beta1LinkedServiceAzureTableStorageSpecWriteConnectionSec
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LinkedServiceAzureTableStorageSpec defines the desired state of LinkedServiceAzureTableStorage</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureTableStorageSpec
@@ -261,7 +286,9 @@ public partial class V1beta1LinkedServiceAzureTableStorageSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LinkedServiceAzureTableStorageSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureTableStorageStatusAtProvider
@@ -294,7 +321,9 @@ public partial class V1beta1LinkedServiceAzureTableStorageStatusAtProvider
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureTableStorageStatusConditions
@@ -323,7 +352,9 @@ public partial class V1beta1LinkedServiceAzureTableStorageStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LinkedServiceAzureTableStorageStatus defines the observed state of LinkedServiceAzureTableStorage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureTableStorageStatus
@@ -340,7 +371,9 @@ public partial class V1beta1LinkedServiceAzureTableStorageStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LinkedServiceAzureTableStorage is the Schema for the LinkedServiceAzureTableStorages API. Manages a Linked Service (connection) between an Azure Table Storage and Azure Data Factory.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -370,3 +403,4 @@ public partial class V1beta1LinkedServiceAzureTableStorage : IKubernetesObject<V
     [JsonPropertyName("status")]
     public V1beta1LinkedServiceAzureTableStorageStatus? Status { get; set; }
 }
+#nullable disable

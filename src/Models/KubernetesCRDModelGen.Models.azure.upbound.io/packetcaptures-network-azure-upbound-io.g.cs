@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+#nullable enable
 /// <summary>PacketCapture is the Schema for the PacketCaptures API. Configures Packet Capturing against a Virtual Machine using a Network Watcher.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PacketCaptureList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1beta1PacketCapture> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureSpecForProviderFilter
@@ -58,7 +61,9 @@ public partial class V1beta1PacketCaptureSpecForProviderFilter
     [JsonPropertyName("remotePort")]
     public string? RemotePort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureSpecForProviderNetworkWatcherNameRefPolicy
@@ -71,7 +76,9 @@ public partial class V1beta1PacketCaptureSpecForProviderNetworkWatcherNameRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Watcher in network to populate networkWatcherName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureSpecForProviderNetworkWatcherNameRef
@@ -84,7 +91,9 @@ public partial class V1beta1PacketCaptureSpecForProviderNetworkWatcherNameRef
     [JsonPropertyName("policy")]
     public V1beta1PacketCaptureSpecForProviderNetworkWatcherNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureSpecForProviderNetworkWatcherNameSelectorPolicy
@@ -97,7 +106,9 @@ public partial class V1beta1PacketCaptureSpecForProviderNetworkWatcherNameSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Watcher in network to populate networkWatcherName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureSpecForProviderNetworkWatcherNameSelector
@@ -114,7 +125,9 @@ public partial class V1beta1PacketCaptureSpecForProviderNetworkWatcherNameSelect
     [JsonPropertyName("policy")]
     public V1beta1PacketCaptureSpecForProviderNetworkWatcherNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureSpecForProviderResourceGroupNameRefPolicy
@@ -127,7 +140,9 @@ public partial class V1beta1PacketCaptureSpecForProviderResourceGroupNameRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureSpecForProviderResourceGroupNameRef
@@ -140,7 +155,9 @@ public partial class V1beta1PacketCaptureSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1PacketCaptureSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureSpecForProviderResourceGroupNameSelectorPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1PacketCaptureSpecForProviderResourceGroupNameSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureSpecForProviderResourceGroupNameSelector
@@ -170,7 +189,9 @@ public partial class V1beta1PacketCaptureSpecForProviderResourceGroupNameSelecto
     [JsonPropertyName("policy")]
     public V1beta1PacketCaptureSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureSpecForProviderStorageLocationStorageAccountIdRefPolicy
@@ -183,7 +204,9 @@ public partial class V1beta1PacketCaptureSpecForProviderStorageLocationStorageAc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureSpecForProviderStorageLocationStorageAccountIdRef
@@ -196,7 +219,9 @@ public partial class V1beta1PacketCaptureSpecForProviderStorageLocationStorageAc
     [JsonPropertyName("policy")]
     public V1beta1PacketCaptureSpecForProviderStorageLocationStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureSpecForProviderStorageLocationStorageAccountIdSelectorPolicy
@@ -209,7 +234,9 @@ public partial class V1beta1PacketCaptureSpecForProviderStorageLocationStorageAc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureSpecForProviderStorageLocationStorageAccountIdSelector
@@ -226,7 +253,9 @@ public partial class V1beta1PacketCaptureSpecForProviderStorageLocationStorageAc
     [JsonPropertyName("policy")]
     public V1beta1PacketCaptureSpecForProviderStorageLocationStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureSpecForProviderStorageLocation
@@ -247,7 +276,9 @@ public partial class V1beta1PacketCaptureSpecForProviderStorageLocation
     [JsonPropertyName("storageAccountIdSelector")]
     public V1beta1PacketCaptureSpecForProviderStorageLocationStorageAccountIdSelector? StorageAccountIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureSpecForProvider
@@ -300,7 +331,9 @@ public partial class V1beta1PacketCaptureSpecForProvider
     [JsonPropertyName("targetResourceId")]
     public string? TargetResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureSpecInitProviderFilter
@@ -325,7 +358,9 @@ public partial class V1beta1PacketCaptureSpecInitProviderFilter
     [JsonPropertyName("remotePort")]
     public string? RemotePort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureSpecInitProviderStorageLocationStorageAccountIdRefPolicy
@@ -338,7 +373,9 @@ public partial class V1beta1PacketCaptureSpecInitProviderStorageLocationStorageA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureSpecInitProviderStorageLocationStorageAccountIdRef
@@ -351,7 +388,9 @@ public partial class V1beta1PacketCaptureSpecInitProviderStorageLocationStorageA
     [JsonPropertyName("policy")]
     public V1beta1PacketCaptureSpecInitProviderStorageLocationStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureSpecInitProviderStorageLocationStorageAccountIdSelectorPolicy
@@ -364,7 +403,9 @@ public partial class V1beta1PacketCaptureSpecInitProviderStorageLocationStorageA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureSpecInitProviderStorageLocationStorageAccountIdSelector
@@ -381,7 +422,9 @@ public partial class V1beta1PacketCaptureSpecInitProviderStorageLocationStorageA
     [JsonPropertyName("policy")]
     public V1beta1PacketCaptureSpecInitProviderStorageLocationStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureSpecInitProviderStorageLocation
@@ -402,7 +445,9 @@ public partial class V1beta1PacketCaptureSpecInitProviderStorageLocation
     [JsonPropertyName("storageAccountIdSelector")]
     public V1beta1PacketCaptureSpecInitProviderStorageLocationStorageAccountIdSelector? StorageAccountIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureSpecInitProvider
@@ -431,7 +476,9 @@ public partial class V1beta1PacketCaptureSpecInitProvider
     [JsonPropertyName("targetResourceId")]
     public string? TargetResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureSpecProviderConfigRefPolicy
@@ -444,7 +491,9 @@ public partial class V1beta1PacketCaptureSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureSpecProviderConfigRef
@@ -457,7 +506,9 @@ public partial class V1beta1PacketCaptureSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1PacketCaptureSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureSpecWriteConnectionSecretToRef
@@ -470,7 +521,9 @@ public partial class V1beta1PacketCaptureSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PacketCaptureSpec defines the desired state of PacketCapture</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureSpec
@@ -499,7 +552,9 @@ public partial class V1beta1PacketCaptureSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1PacketCaptureSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureStatusAtProviderFilter
@@ -524,7 +579,9 @@ public partial class V1beta1PacketCaptureStatusAtProviderFilter
     [JsonPropertyName("remotePort")]
     public string? RemotePort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureStatusAtProviderStorageLocation
@@ -541,7 +598,9 @@ public partial class V1beta1PacketCaptureStatusAtProviderStorageLocation
     [JsonPropertyName("storagePath")]
     public string? StoragePath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureStatusAtProvider
@@ -582,7 +641,9 @@ public partial class V1beta1PacketCaptureStatusAtProvider
     [JsonPropertyName("targetResourceId")]
     public string? TargetResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureStatusConditions
@@ -611,7 +672,9 @@ public partial class V1beta1PacketCaptureStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PacketCaptureStatus defines the observed state of PacketCapture.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PacketCaptureStatus
@@ -628,7 +691,9 @@ public partial class V1beta1PacketCaptureStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PacketCapture is the Schema for the PacketCaptures API. Configures Packet Capturing against a Virtual Machine using a Network Watcher.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -658,3 +723,4 @@ public partial class V1beta1PacketCapture : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1PacketCaptureStatus? Status { get; set; }
 }
+#nullable disable

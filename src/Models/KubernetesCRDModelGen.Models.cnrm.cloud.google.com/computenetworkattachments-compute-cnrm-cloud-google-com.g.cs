@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>ComputeNetworkAttachment is the Schema for the ComputeNetworkAttachment API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1ComputeNetworkAttachmentList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1alpha1ComputeNetworkAttachment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkAttachmentSpecProducerAcceptLists
@@ -54,7 +57,9 @@ public partial class V1alpha1ComputeNetworkAttachmentSpecProducerAcceptLists
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkAttachmentSpecProducerRejectLists
@@ -75,7 +80,9 @@ public partial class V1alpha1ComputeNetworkAttachmentSpecProducerRejectLists
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkAttachmentSpecProjectRef
@@ -96,7 +103,9 @@ public partial class V1alpha1ComputeNetworkAttachmentSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkAttachmentSpecSubnetworkRefs
@@ -113,7 +122,9 @@ public partial class V1alpha1ComputeNetworkAttachmentSpecSubnetworkRefs
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ComputeNetworkAttachmentSpec defines the desired state of ComputeNetworkAttachment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkAttachmentSpec
@@ -154,7 +165,9 @@ public partial class V1alpha1ComputeNetworkAttachmentSpec
     [JsonPropertyName("subnetworkRefs")]
     public IList<V1alpha1ComputeNetworkAttachmentSpecSubnetworkRefs>? SubnetworkRefs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkAttachmentStatusConditions
@@ -179,7 +192,9 @@ public partial class V1alpha1ComputeNetworkAttachmentStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkAttachmentStatusObservedStateConnectionEndpoints
@@ -212,7 +227,9 @@ public partial class V1alpha1ComputeNetworkAttachmentStatusObservedStateConnecti
     [JsonPropertyName("subnetworkCIDRRange")]
     public string? SubnetworkCIDRRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkAttachmentStatusObservedState
@@ -249,7 +266,9 @@ public partial class V1alpha1ComputeNetworkAttachmentStatusObservedState
     [JsonPropertyName("selfLinkWithID")]
     public string? SelfLinkWithID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ComputeNetworkAttachmentStatus defines the config connector machine state of ComputeNetworkAttachment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkAttachmentStatus
@@ -270,7 +289,9 @@ public partial class V1alpha1ComputeNetworkAttachmentStatus
     [JsonPropertyName("observedState")]
     public V1alpha1ComputeNetworkAttachmentStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ComputeNetworkAttachment is the Schema for the ComputeNetworkAttachment API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -300,3 +321,4 @@ public partial class V1alpha1ComputeNetworkAttachment : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1alpha1ComputeNetworkAttachmentStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.asset.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>AssetSavedQuery is the Schema for the AssetSavedQuery API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1AssetSavedQueryList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1alpha1AssetSavedQuery> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Specifies roles or permissions for analysis. This is optional.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AssetSavedQuerySpecContentIamPolicyAnalysisQueryAccessSelector
@@ -46,7 +49,9 @@ public partial class V1alpha1AssetSavedQuerySpecContentIamPolicyAnalysisQueryAcc
     [JsonPropertyName("roles")]
     public IList<string>? Roles { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The hypothetical context for IAM conditions evaluation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AssetSavedQuerySpecContentIamPolicyAnalysisQueryConditionContext
@@ -55,7 +60,9 @@ public partial class V1alpha1AssetSavedQuerySpecContentIamPolicyAnalysisQueryCon
     [JsonPropertyName("accessTime")]
     public string? AccessTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Specifies an identity for analysis.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AssetSavedQuerySpecContentIamPolicyAnalysisQueryIdentitySelector
@@ -64,7 +71,9 @@ public partial class V1alpha1AssetSavedQuerySpecContentIamPolicyAnalysisQueryIde
     [JsonPropertyName("identity")]
     public string Identity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The query options.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AssetSavedQuerySpecContentIamPolicyAnalysisQueryOptions
@@ -93,7 +102,9 @@ public partial class V1alpha1AssetSavedQuerySpecContentIamPolicyAnalysisQueryOpt
     [JsonPropertyName("outputResourceEdges")]
     public bool? OutputResourceEdges { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Specifies a resource for analysis.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AssetSavedQuerySpecContentIamPolicyAnalysisQueryResourceSelector
@@ -102,7 +113,9 @@ public partial class V1alpha1AssetSavedQuerySpecContentIamPolicyAnalysisQueryRes
     [JsonPropertyName("fullResourceName")]
     public string FullResourceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An IAM Policy Analysis query, which could be used in the [AssetService.AnalyzeIamPolicy][google.cloud.asset.v1.AssetService.AnalyzeIamPolicy] RPC or the [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning] RPC.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AssetSavedQuerySpecContentIamPolicyAnalysisQuery
@@ -131,7 +144,9 @@ public partial class V1alpha1AssetSavedQuerySpecContentIamPolicyAnalysisQuery
     [JsonPropertyName("scope")]
     public string Scope { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The query content.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AssetSavedQuerySpecContent
@@ -140,7 +155,9 @@ public partial class V1alpha1AssetSavedQuerySpecContent
     [JsonPropertyName("iamPolicyAnalysisQuery")]
     public V1alpha1AssetSavedQuerySpecContentIamPolicyAnalysisQuery? IamPolicyAnalysisQuery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FolderRef represents the Folder that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AssetSavedQuerySpecFolderRef
@@ -157,7 +174,9 @@ public partial class V1alpha1AssetSavedQuerySpecFolderRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OrganizationRef represents the Organization that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AssetSavedQuerySpecOrganizationRef
@@ -166,7 +185,9 @@ public partial class V1alpha1AssetSavedQuerySpecOrganizationRef
     [JsonPropertyName("external")]
     public string External { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AssetSavedQuerySpecProjectRef
@@ -187,7 +208,9 @@ public partial class V1alpha1AssetSavedQuerySpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AssetSavedQuerySpec defines the desired state of AssetSavedQuery</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AssetSavedQuerySpec
@@ -220,7 +243,9 @@ public partial class V1alpha1AssetSavedQuerySpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AssetSavedQueryStatusConditions
@@ -245,7 +270,9 @@ public partial class V1alpha1AssetSavedQueryStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AssetSavedQueryStatusObservedState
@@ -266,7 +293,9 @@ public partial class V1alpha1AssetSavedQueryStatusObservedState
     [JsonPropertyName("lastUpdater")]
     public string? LastUpdater { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AssetSavedQueryStatus defines the config connector machine state of AssetSavedQuery</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AssetSavedQueryStatus
@@ -287,7 +316,9 @@ public partial class V1alpha1AssetSavedQueryStatus
     [JsonPropertyName("observedState")]
     public V1alpha1AssetSavedQueryStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AssetSavedQuery is the Schema for the AssetSavedQuery API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -317,3 +348,4 @@ public partial class V1alpha1AssetSavedQuery : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1alpha1AssetSavedQueryStatus? Status { get; set; }
 }
+#nullable disable

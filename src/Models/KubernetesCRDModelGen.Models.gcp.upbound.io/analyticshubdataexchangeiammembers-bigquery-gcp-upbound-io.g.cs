@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigquery.gcp.upbound.io;
+#nullable enable
 /// <summary>AnalyticsHubDataExchangeIAMMember is the Schema for the AnalyticsHubDataExchangeIAMMembers API. &lt;no value&gt;</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AnalyticsHubDataExchangeIAMMemberList : IKubernetesO
     [JsonPropertyName("items")]
     public IList<V1beta1AnalyticsHubDataExchangeIAMMember> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpecForProviderCondition
@@ -50,7 +53,9 @@ public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpecForProviderCond
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpecForProviderDataExchangeIdRefPolicy
@@ -63,7 +68,9 @@ public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpecForProviderData
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a AnalyticsHubDataExchange in bigquery to populate dataExchangeId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpecForProviderDataExchangeIdRef
@@ -76,7 +83,9 @@ public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpecForProviderData
     [JsonPropertyName("policy")]
     public V1beta1AnalyticsHubDataExchangeIAMMemberSpecForProviderDataExchangeIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpecForProviderDataExchangeIdSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpecForProviderData
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a AnalyticsHubDataExchange in bigquery to populate dataExchangeId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpecForProviderDataExchangeIdSelector
@@ -106,7 +117,9 @@ public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpecForProviderData
     [JsonPropertyName("policy")]
     public V1beta1AnalyticsHubDataExchangeIAMMemberSpecForProviderDataExchangeIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpecForProvider
@@ -143,7 +156,9 @@ public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpecForProvider
     [JsonPropertyName("role")]
     public string? Role { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpecInitProviderCondition
@@ -160,7 +175,9 @@ public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpecInitProviderCon
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpecInitProviderDataExchangeIdRefPolicy
@@ -173,7 +190,9 @@ public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpecInitProviderDat
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a AnalyticsHubDataExchange in bigquery to populate dataExchangeId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpecInitProviderDataExchangeIdRef
@@ -186,7 +205,9 @@ public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpecInitProviderDat
     [JsonPropertyName("policy")]
     public V1beta1AnalyticsHubDataExchangeIAMMemberSpecInitProviderDataExchangeIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpecInitProviderDataExchangeIdSelectorPolicy
@@ -199,7 +220,9 @@ public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpecInitProviderDat
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a AnalyticsHubDataExchange in bigquery to populate dataExchangeId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpecInitProviderDataExchangeIdSelector
@@ -216,7 +239,9 @@ public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpecInitProviderDat
     [JsonPropertyName("policy")]
     public V1beta1AnalyticsHubDataExchangeIAMMemberSpecInitProviderDataExchangeIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpecInitProvider
@@ -253,7 +278,9 @@ public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpecInitProvider
     [JsonPropertyName("role")]
     public string? Role { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpecProviderConfigRefPolicy
@@ -266,7 +293,9 @@ public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpecProviderConfigR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpecProviderConfigRef
@@ -279,7 +308,9 @@ public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpecProviderConfigR
     [JsonPropertyName("policy")]
     public V1beta1AnalyticsHubDataExchangeIAMMemberSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpecWriteConnectionSecretToRef
@@ -292,7 +323,9 @@ public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpecWriteConnection
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AnalyticsHubDataExchangeIAMMemberSpec defines the desired state of AnalyticsHubDataExchangeIAMMember</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpec
@@ -321,7 +354,9 @@ public partial class V1beta1AnalyticsHubDataExchangeIAMMemberSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AnalyticsHubDataExchangeIAMMemberSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeIAMMemberStatusAtProviderCondition
@@ -338,7 +373,9 @@ public partial class V1beta1AnalyticsHubDataExchangeIAMMemberStatusAtProviderCon
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeIAMMemberStatusAtProvider
@@ -375,7 +412,9 @@ public partial class V1beta1AnalyticsHubDataExchangeIAMMemberStatusAtProvider
     [JsonPropertyName("role")]
     public string? Role { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeIAMMemberStatusConditions
@@ -404,7 +443,9 @@ public partial class V1beta1AnalyticsHubDataExchangeIAMMemberStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AnalyticsHubDataExchangeIAMMemberStatus defines the observed state of AnalyticsHubDataExchangeIAMMember.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeIAMMemberStatus
@@ -421,7 +462,9 @@ public partial class V1beta1AnalyticsHubDataExchangeIAMMemberStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AnalyticsHubDataExchangeIAMMember is the Schema for the AnalyticsHubDataExchangeIAMMembers API. &lt;no value&gt;</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -451,3 +494,4 @@ public partial class V1beta1AnalyticsHubDataExchangeIAMMember : IKubernetesObjec
     [JsonPropertyName("status")]
     public V1beta1AnalyticsHubDataExchangeIAMMemberStatus? Status { get; set; }
 }
+#nullable disable

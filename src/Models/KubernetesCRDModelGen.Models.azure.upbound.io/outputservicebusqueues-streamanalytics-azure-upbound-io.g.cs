@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.streamanalytics.azure.upbound.io;
+#nullable enable
 /// <summary>OutputServiceBusQueue is the Schema for the OutputServiceBusQueues API. Manages a Stream Analytics Output to a ServiceBus Queue.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1OutputServiceBusQueueList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1OutputServiceBusQueue> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecForProviderQueueNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1OutputServiceBusQueueSpecForProviderQueueNameRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Queue in servicebus to populate queueName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecForProviderQueueNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1OutputServiceBusQueueSpecForProviderQueueNameRef
     [JsonPropertyName("policy")]
     public V1beta1OutputServiceBusQueueSpecForProviderQueueNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecForProviderQueueNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1OutputServiceBusQueueSpecForProviderQueueNameSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Queue in servicebus to populate queueName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecForProviderQueueNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1OutputServiceBusQueueSpecForProviderQueueNameSelecto
     [JsonPropertyName("policy")]
     public V1beta1OutputServiceBusQueueSpecForProviderQueueNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecForProviderResourceGroupNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1OutputServiceBusQueueSpecForProviderResourceGroupNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecForProviderResourceGroupNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1OutputServiceBusQueueSpecForProviderResourceGroupNam
     [JsonPropertyName("policy")]
     public V1beta1OutputServiceBusQueueSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecForProviderResourceGroupNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1OutputServiceBusQueueSpecForProviderResourceGroupNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecForProviderResourceGroupNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1OutputServiceBusQueueSpecForProviderResourceGroupNam
     [JsonPropertyName("policy")]
     public V1beta1OutputServiceBusQueueSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecForProviderSerialization
@@ -166,7 +185,9 @@ public partial class V1beta1OutputServiceBusQueueSpecForProviderSerialization
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecForProviderServicebusNamespaceRefPolicy
@@ -179,7 +200,9 @@ public partial class V1beta1OutputServiceBusQueueSpecForProviderServicebusNamesp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceBusNamespace in servicebus to populate servicebusNamespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecForProviderServicebusNamespaceRef
@@ -192,7 +215,9 @@ public partial class V1beta1OutputServiceBusQueueSpecForProviderServicebusNamesp
     [JsonPropertyName("policy")]
     public V1beta1OutputServiceBusQueueSpecForProviderServicebusNamespaceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecForProviderServicebusNamespaceSelectorPolicy
@@ -205,7 +230,9 @@ public partial class V1beta1OutputServiceBusQueueSpecForProviderServicebusNamesp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceBusNamespace in servicebus to populate servicebusNamespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecForProviderServicebusNamespaceSelector
@@ -222,7 +249,9 @@ public partial class V1beta1OutputServiceBusQueueSpecForProviderServicebusNamesp
     [JsonPropertyName("policy")]
     public V1beta1OutputServiceBusQueueSpecForProviderServicebusNamespaceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The shared access policy key for the specified shared access policy. Required if authentication_mode is ConnectionString.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecForProviderSharedAccessPolicyKeySecretRef
@@ -239,7 +268,9 @@ public partial class V1beta1OutputServiceBusQueueSpecForProviderSharedAccessPoli
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecForProviderStreamAnalyticsJobNameRefPolicy
@@ -252,7 +283,9 @@ public partial class V1beta1OutputServiceBusQueueSpecForProviderStreamAnalyticsJ
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecForProviderStreamAnalyticsJobNameRef
@@ -265,7 +298,9 @@ public partial class V1beta1OutputServiceBusQueueSpecForProviderStreamAnalyticsJ
     [JsonPropertyName("policy")]
     public V1beta1OutputServiceBusQueueSpecForProviderStreamAnalyticsJobNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecForProviderStreamAnalyticsJobNameSelectorPolicy
@@ -278,7 +313,9 @@ public partial class V1beta1OutputServiceBusQueueSpecForProviderStreamAnalyticsJ
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecForProviderStreamAnalyticsJobNameSelector
@@ -295,7 +332,9 @@ public partial class V1beta1OutputServiceBusQueueSpecForProviderStreamAnalyticsJ
     [JsonPropertyName("policy")]
     public V1beta1OutputServiceBusQueueSpecForProviderStreamAnalyticsJobNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecForProvider
@@ -376,7 +415,9 @@ public partial class V1beta1OutputServiceBusQueueSpecForProvider
     [JsonPropertyName("systemPropertyColumns")]
     public IDictionary<string, string>? SystemPropertyColumns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderQueueNameRefPolicy
@@ -389,7 +430,9 @@ public partial class V1beta1OutputServiceBusQueueSpecInitProviderQueueNameRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Queue in servicebus to populate queueName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderQueueNameRef
@@ -402,7 +445,9 @@ public partial class V1beta1OutputServiceBusQueueSpecInitProviderQueueNameRef
     [JsonPropertyName("policy")]
     public V1beta1OutputServiceBusQueueSpecInitProviderQueueNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderQueueNameSelectorPolicy
@@ -415,7 +460,9 @@ public partial class V1beta1OutputServiceBusQueueSpecInitProviderQueueNameSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Queue in servicebus to populate queueName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderQueueNameSelector
@@ -432,7 +479,9 @@ public partial class V1beta1OutputServiceBusQueueSpecInitProviderQueueNameSelect
     [JsonPropertyName("policy")]
     public V1beta1OutputServiceBusQueueSpecInitProviderQueueNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderResourceGroupNameRefPolicy
@@ -445,7 +494,9 @@ public partial class V1beta1OutputServiceBusQueueSpecInitProviderResourceGroupNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderResourceGroupNameRef
@@ -458,7 +509,9 @@ public partial class V1beta1OutputServiceBusQueueSpecInitProviderResourceGroupNa
     [JsonPropertyName("policy")]
     public V1beta1OutputServiceBusQueueSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderResourceGroupNameSelectorPolicy
@@ -471,7 +524,9 @@ public partial class V1beta1OutputServiceBusQueueSpecInitProviderResourceGroupNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderResourceGroupNameSelector
@@ -488,7 +543,9 @@ public partial class V1beta1OutputServiceBusQueueSpecInitProviderResourceGroupNa
     [JsonPropertyName("policy")]
     public V1beta1OutputServiceBusQueueSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderSerialization
@@ -509,7 +566,9 @@ public partial class V1beta1OutputServiceBusQueueSpecInitProviderSerialization
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderServicebusNamespaceRefPolicy
@@ -522,7 +581,9 @@ public partial class V1beta1OutputServiceBusQueueSpecInitProviderServicebusNames
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceBusNamespace in servicebus to populate servicebusNamespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderServicebusNamespaceRef
@@ -535,7 +596,9 @@ public partial class V1beta1OutputServiceBusQueueSpecInitProviderServicebusNames
     [JsonPropertyName("policy")]
     public V1beta1OutputServiceBusQueueSpecInitProviderServicebusNamespaceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderServicebusNamespaceSelectorPolicy
@@ -548,7 +611,9 @@ public partial class V1beta1OutputServiceBusQueueSpecInitProviderServicebusNames
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceBusNamespace in servicebus to populate servicebusNamespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderServicebusNamespaceSelector
@@ -565,7 +630,9 @@ public partial class V1beta1OutputServiceBusQueueSpecInitProviderServicebusNames
     [JsonPropertyName("policy")]
     public V1beta1OutputServiceBusQueueSpecInitProviderServicebusNamespaceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderStreamAnalyticsJobNameRefPolicy
@@ -578,7 +645,9 @@ public partial class V1beta1OutputServiceBusQueueSpecInitProviderStreamAnalytics
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderStreamAnalyticsJobNameRef
@@ -591,7 +660,9 @@ public partial class V1beta1OutputServiceBusQueueSpecInitProviderStreamAnalytics
     [JsonPropertyName("policy")]
     public V1beta1OutputServiceBusQueueSpecInitProviderStreamAnalyticsJobNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderStreamAnalyticsJobNameSelectorPolicy
@@ -604,7 +675,9 @@ public partial class V1beta1OutputServiceBusQueueSpecInitProviderStreamAnalytics
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderStreamAnalyticsJobNameSelector
@@ -621,7 +694,9 @@ public partial class V1beta1OutputServiceBusQueueSpecInitProviderStreamAnalytics
     [JsonPropertyName("policy")]
     public V1beta1OutputServiceBusQueueSpecInitProviderStreamAnalyticsJobNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecInitProvider
@@ -698,7 +773,9 @@ public partial class V1beta1OutputServiceBusQueueSpecInitProvider
     [JsonPropertyName("systemPropertyColumns")]
     public IDictionary<string, string>? SystemPropertyColumns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecProviderConfigRefPolicy
@@ -711,7 +788,9 @@ public partial class V1beta1OutputServiceBusQueueSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecProviderConfigRef
@@ -724,7 +803,9 @@ public partial class V1beta1OutputServiceBusQueueSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1OutputServiceBusQueueSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecWriteConnectionSecretToRef
@@ -737,7 +818,9 @@ public partial class V1beta1OutputServiceBusQueueSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OutputServiceBusQueueSpec defines the desired state of OutputServiceBusQueue</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpec
@@ -766,7 +849,9 @@ public partial class V1beta1OutputServiceBusQueueSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1OutputServiceBusQueueSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueStatusAtProviderSerialization
@@ -787,7 +872,9 @@ public partial class V1beta1OutputServiceBusQueueStatusAtProviderSerialization
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueStatusAtProvider
@@ -836,7 +923,9 @@ public partial class V1beta1OutputServiceBusQueueStatusAtProvider
     [JsonPropertyName("systemPropertyColumns")]
     public IDictionary<string, string>? SystemPropertyColumns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueStatusConditions
@@ -865,7 +954,9 @@ public partial class V1beta1OutputServiceBusQueueStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OutputServiceBusQueueStatus defines the observed state of OutputServiceBusQueue.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueStatus
@@ -882,7 +973,9 @@ public partial class V1beta1OutputServiceBusQueueStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OutputServiceBusQueue is the Schema for the OutputServiceBusQueues API. Manages a Stream Analytics Output to a ServiceBus Queue.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -912,3 +1005,4 @@ public partial class V1beta1OutputServiceBusQueue : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1OutputServiceBusQueueStatus? Status { get; set; }
 }
+#nullable disable

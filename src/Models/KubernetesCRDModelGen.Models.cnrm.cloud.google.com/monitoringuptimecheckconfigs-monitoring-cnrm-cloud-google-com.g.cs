@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.monitoring.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MonitoringUptimeCheckConfigList : IKubernetesObject<
     [JsonPropertyName("items")]
     public IList<V1beta1MonitoringUptimeCheckConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringUptimeCheckConfigSpecContentMatchers
@@ -46,7 +49,9 @@ public partial class V1beta1MonitoringUptimeCheckConfigSpecContentMatchers
     [JsonPropertyName("matcher")]
     public string? Matcher { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringUptimeCheckConfigSpecHttpCheckAuthInfoPasswordValueFromSecretKeyRef
@@ -59,7 +64,9 @@ public partial class V1beta1MonitoringUptimeCheckConfigSpecHttpCheckAuthInfoPass
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringUptimeCheckConfigSpecHttpCheckAuthInfoPasswordValueFrom
@@ -68,7 +75,9 @@ public partial class V1beta1MonitoringUptimeCheckConfigSpecHttpCheckAuthInfoPass
     [JsonPropertyName("secretKeyRef")]
     public V1beta1MonitoringUptimeCheckConfigSpecHttpCheckAuthInfoPasswordValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringUptimeCheckConfigSpecHttpCheckAuthInfoPassword
@@ -81,7 +90,9 @@ public partial class V1beta1MonitoringUptimeCheckConfigSpecHttpCheckAuthInfoPass
     [JsonPropertyName("valueFrom")]
     public V1beta1MonitoringUptimeCheckConfigSpecHttpCheckAuthInfoPasswordValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The authentication information. Optional when creating an HTTP check; defaults to empty.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringUptimeCheckConfigSpecHttpCheckAuthInfo
@@ -94,7 +105,9 @@ public partial class V1beta1MonitoringUptimeCheckConfigSpecHttpCheckAuthInfo
     [JsonPropertyName("username")]
     public string Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contains information needed to make an HTTP or HTTPS check.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringUptimeCheckConfigSpecHttpCheck
@@ -139,7 +152,9 @@ public partial class V1beta1MonitoringUptimeCheckConfigSpecHttpCheck
     [JsonPropertyName("validateSsl")]
     public bool? ValidateSsl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The [monitored resource](https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for Uptime checks:   `uptime_url`,   `gce_instance`,   `gae_app`,   `aws_ec2_instance`,   `aws_elb_load_balancer`</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringUptimeCheckConfigSpecMonitoredResource
@@ -152,7 +167,9 @@ public partial class V1beta1MonitoringUptimeCheckConfigSpecMonitoredResource
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringUptimeCheckConfigSpecProjectRef
@@ -169,7 +186,9 @@ public partial class V1beta1MonitoringUptimeCheckConfigSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringUptimeCheckConfigSpecResourceGroupGroupRef
@@ -186,7 +205,9 @@ public partial class V1beta1MonitoringUptimeCheckConfigSpecResourceGroupGroupRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The group resource associated with the configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringUptimeCheckConfigSpecResourceGroup
@@ -199,7 +220,9 @@ public partial class V1beta1MonitoringUptimeCheckConfigSpecResourceGroup
     [JsonPropertyName("resourceType")]
     public string? ResourceType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contains information needed to make a TCP check.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringUptimeCheckConfigSpecTcpCheck
@@ -208,7 +231,9 @@ public partial class V1beta1MonitoringUptimeCheckConfigSpecTcpCheck
     [JsonPropertyName("port")]
     public long Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringUptimeCheckConfigSpec
@@ -257,7 +282,9 @@ public partial class V1beta1MonitoringUptimeCheckConfigSpec
     [JsonPropertyName("timeout")]
     public string Timeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringUptimeCheckConfigStatusConditions
@@ -282,7 +309,9 @@ public partial class V1beta1MonitoringUptimeCheckConfigStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringUptimeCheckConfigStatus
@@ -295,7 +324,9 @@ public partial class V1beta1MonitoringUptimeCheckConfigStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -325,3 +356,4 @@ public partial class V1beta1MonitoringUptimeCheckConfig : IKubernetesObject<V1Ob
     [JsonPropertyName("status")]
     public V1beta1MonitoringUptimeCheckConfigStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.secretmanager.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>SecretManagerSecretVersion is the Schema for the SecretManagerSecretVersion API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SecretManagerSecretVersionList : IKubernetesObject<V
     [JsonPropertyName("items")]
     public IList<V1beta1SecretManagerSecretVersion> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretVersionSpecSecretDataValueFromSecretKeyRef
@@ -46,7 +49,9 @@ public partial class V1beta1SecretManagerSecretVersionSpecSecretDataValueFromSec
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretVersionSpecSecretDataValueFrom
@@ -55,7 +60,9 @@ public partial class V1beta1SecretManagerSecretVersionSpecSecretDataValueFrom
     [JsonPropertyName("secretKeyRef")]
     public V1beta1SecretManagerSecretVersionSpecSecretDataValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The actual secret data. Config Connector supports secret data stored in Kubernetes secret or plain data (base64)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretVersionSpecSecretData
@@ -68,7 +75,9 @@ public partial class V1beta1SecretManagerSecretVersionSpecSecretData
     [JsonPropertyName("valueFrom")]
     public V1beta1SecretManagerSecretVersionSpecSecretDataValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The resource name of the [Secret][google.cloud.secretmanager.v1.Secret] to create a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] for.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretVersionSpecSecretRef
@@ -85,7 +94,9 @@ public partial class V1beta1SecretManagerSecretVersionSpecSecretRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretManagerSecretVersionSpec defines the desired state of SecretManagerSecretVersion</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretVersionSpec
@@ -114,7 +125,9 @@ public partial class V1beta1SecretManagerSecretVersionSpec
     [JsonPropertyName("secretRef")]
     public V1beta1SecretManagerSecretVersionSpecSecretRef? SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretVersionStatusConditions
@@ -139,7 +152,9 @@ public partial class V1beta1SecretManagerSecretVersionStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. The customer-managed encryption status of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. Only populated if customer-managed encryption is used and [Secret][google.cloud.secretmanager.v1.Secret] is a Regionalised Secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretVersionStatusObservedStateCustomerManagedEncryption
@@ -148,7 +163,9 @@ public partial class V1beta1SecretManagerSecretVersionStatusObservedStateCustome
     [JsonPropertyName("kmsKeyVersionName")]
     public string? KmsKeyVersionName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. The customer-managed encryption status of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. Only populated if customer-managed encryption is used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretVersionStatusObservedStateReplicationStatusAutomaticCustomerManagedEncryption
@@ -157,7 +174,9 @@ public partial class V1beta1SecretManagerSecretVersionStatusObservedStateReplica
     [JsonPropertyName("kmsKeyVersionName")]
     public string? KmsKeyVersionName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the replication status of a  [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] with  automatic replication.   Only populated if the parent  [Secret][google.cloud.secretmanager.v1.Secret] has an automatic  replication policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretVersionStatusObservedStateReplicationStatusAutomatic
@@ -166,7 +185,9 @@ public partial class V1beta1SecretManagerSecretVersionStatusObservedStateReplica
     [JsonPropertyName("customerManagedEncryption")]
     public V1beta1SecretManagerSecretVersionStatusObservedStateReplicationStatusAutomaticCustomerManagedEncryption? CustomerManagedEncryption { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. The customer-managed encryption status of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. Only populated if customer-managed encryption is used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretVersionStatusObservedStateReplicationStatusUserManagedReplicasCustomerManagedEncryption
@@ -175,7 +196,9 @@ public partial class V1beta1SecretManagerSecretVersionStatusObservedStateReplica
     [JsonPropertyName("kmsKeyVersionName")]
     public string? KmsKeyVersionName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretVersionStatusObservedStateReplicationStatusUserManagedReplicas
@@ -188,7 +211,9 @@ public partial class V1beta1SecretManagerSecretVersionStatusObservedStateReplica
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the replication status of a  [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] with  user-managed replication.   Only populated if the parent  [Secret][google.cloud.secretmanager.v1.Secret] has a user-managed  replication policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretVersionStatusObservedStateReplicationStatusUserManaged
@@ -197,7 +222,9 @@ public partial class V1beta1SecretManagerSecretVersionStatusObservedStateReplica
     [JsonPropertyName("replicas")]
     public IList<V1beta1SecretManagerSecretVersionStatusObservedStateReplicationStatusUserManagedReplicas>? Replicas { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The replication status of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretVersionStatusObservedStateReplicationStatus
@@ -210,7 +237,9 @@ public partial class V1beta1SecretManagerSecretVersionStatusObservedStateReplica
     [JsonPropertyName("userManaged")]
     public V1beta1SecretManagerSecretVersionStatusObservedStateReplicationStatusUserManaged? UserManaged { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretVersionStatusObservedState
@@ -243,7 +272,9 @@ public partial class V1beta1SecretManagerSecretVersionStatusObservedState
     [JsonPropertyName("scheduledDestroyTime")]
     public string? ScheduledDestroyTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretManagerSecretVersionStatus defines the config connector machine state of SecretManagerSecretVersion</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretVersionStatus
@@ -280,7 +311,9 @@ public partial class V1beta1SecretManagerSecretVersionStatus
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretManagerSecretVersion is the Schema for the SecretManagerSecretVersion API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -310,3 +343,4 @@ public partial class V1beta1SecretManagerSecretVersion : IKubernetesObject<V1Obj
     [JsonPropertyName("status")]
     public V1beta1SecretManagerSecretVersionStatus? Status { get; set; }
 }
+#nullable disable

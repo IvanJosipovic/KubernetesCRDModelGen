@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sns.aws.upbound.io;
+#nullable enable
 /// <summary>TopicSubscription is the Schema for the TopicSubscriptions API. Provides a resource for subscribing to SNS topics.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TopicSubscriptionList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1TopicSubscription> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionSpecForProviderEndpointRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1TopicSubscriptionSpecForProviderEndpointRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Queue in sqs to populate endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionSpecForProviderEndpointRef
@@ -59,7 +64,9 @@ public partial class V1beta1TopicSubscriptionSpecForProviderEndpointRef
     [JsonPropertyName("policy")]
     public V1beta1TopicSubscriptionSpecForProviderEndpointRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionSpecForProviderEndpointSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1TopicSubscriptionSpecForProviderEndpointSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Queue in sqs to populate endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionSpecForProviderEndpointSelector
@@ -89,7 +98,9 @@ public partial class V1beta1TopicSubscriptionSpecForProviderEndpointSelector
     [JsonPropertyName("policy")]
     public V1beta1TopicSubscriptionSpecForProviderEndpointSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionSpecForProviderSubscriptionRoleArnRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1TopicSubscriptionSpecForProviderSubscriptionRoleArnR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate subscriptionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionSpecForProviderSubscriptionRoleArnRef
@@ -115,7 +128,9 @@ public partial class V1beta1TopicSubscriptionSpecForProviderSubscriptionRoleArnR
     [JsonPropertyName("policy")]
     public V1beta1TopicSubscriptionSpecForProviderSubscriptionRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionSpecForProviderSubscriptionRoleArnSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1TopicSubscriptionSpecForProviderSubscriptionRoleArnS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate subscriptionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionSpecForProviderSubscriptionRoleArnSelector
@@ -145,7 +162,9 @@ public partial class V1beta1TopicSubscriptionSpecForProviderSubscriptionRoleArnS
     [JsonPropertyName("policy")]
     public V1beta1TopicSubscriptionSpecForProviderSubscriptionRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionSpecForProviderTopicArnRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1TopicSubscriptionSpecForProviderTopicArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in sns to populate topicArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionSpecForProviderTopicArnRef
@@ -171,7 +192,9 @@ public partial class V1beta1TopicSubscriptionSpecForProviderTopicArnRef
     [JsonPropertyName("policy")]
     public V1beta1TopicSubscriptionSpecForProviderTopicArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionSpecForProviderTopicArnSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1TopicSubscriptionSpecForProviderTopicArnSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in sns to populate topicArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionSpecForProviderTopicArnSelector
@@ -201,7 +226,9 @@ public partial class V1beta1TopicSubscriptionSpecForProviderTopicArnSelector
     [JsonPropertyName("policy")]
     public V1beta1TopicSubscriptionSpecForProviderTopicArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionSpecForProvider
@@ -282,7 +309,9 @@ public partial class V1beta1TopicSubscriptionSpecForProvider
     [JsonPropertyName("topicArnSelector")]
     public V1beta1TopicSubscriptionSpecForProviderTopicArnSelector? TopicArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionSpecInitProviderEndpointRefPolicy
@@ -295,7 +324,9 @@ public partial class V1beta1TopicSubscriptionSpecInitProviderEndpointRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Queue in sqs to populate endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionSpecInitProviderEndpointRef
@@ -308,7 +339,9 @@ public partial class V1beta1TopicSubscriptionSpecInitProviderEndpointRef
     [JsonPropertyName("policy")]
     public V1beta1TopicSubscriptionSpecInitProviderEndpointRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionSpecInitProviderEndpointSelectorPolicy
@@ -321,7 +354,9 @@ public partial class V1beta1TopicSubscriptionSpecInitProviderEndpointSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Queue in sqs to populate endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionSpecInitProviderEndpointSelector
@@ -338,7 +373,9 @@ public partial class V1beta1TopicSubscriptionSpecInitProviderEndpointSelector
     [JsonPropertyName("policy")]
     public V1beta1TopicSubscriptionSpecInitProviderEndpointSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionSpecInitProviderSubscriptionRoleArnRefPolicy
@@ -351,7 +388,9 @@ public partial class V1beta1TopicSubscriptionSpecInitProviderSubscriptionRoleArn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate subscriptionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionSpecInitProviderSubscriptionRoleArnRef
@@ -364,7 +403,9 @@ public partial class V1beta1TopicSubscriptionSpecInitProviderSubscriptionRoleArn
     [JsonPropertyName("policy")]
     public V1beta1TopicSubscriptionSpecInitProviderSubscriptionRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionSpecInitProviderSubscriptionRoleArnSelectorPolicy
@@ -377,7 +418,9 @@ public partial class V1beta1TopicSubscriptionSpecInitProviderSubscriptionRoleArn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate subscriptionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionSpecInitProviderSubscriptionRoleArnSelector
@@ -394,7 +437,9 @@ public partial class V1beta1TopicSubscriptionSpecInitProviderSubscriptionRoleArn
     [JsonPropertyName("policy")]
     public V1beta1TopicSubscriptionSpecInitProviderSubscriptionRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionSpecInitProviderTopicArnRefPolicy
@@ -407,7 +452,9 @@ public partial class V1beta1TopicSubscriptionSpecInitProviderTopicArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in sns to populate topicArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionSpecInitProviderTopicArnRef
@@ -420,7 +467,9 @@ public partial class V1beta1TopicSubscriptionSpecInitProviderTopicArnRef
     [JsonPropertyName("policy")]
     public V1beta1TopicSubscriptionSpecInitProviderTopicArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionSpecInitProviderTopicArnSelectorPolicy
@@ -433,7 +482,9 @@ public partial class V1beta1TopicSubscriptionSpecInitProviderTopicArnSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in sns to populate topicArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionSpecInitProviderTopicArnSelector
@@ -450,7 +501,9 @@ public partial class V1beta1TopicSubscriptionSpecInitProviderTopicArnSelector
     [JsonPropertyName("policy")]
     public V1beta1TopicSubscriptionSpecInitProviderTopicArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionSpecInitProvider
@@ -527,7 +580,9 @@ public partial class V1beta1TopicSubscriptionSpecInitProvider
     [JsonPropertyName("topicArnSelector")]
     public V1beta1TopicSubscriptionSpecInitProviderTopicArnSelector? TopicArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionSpecProviderConfigRefPolicy
@@ -540,7 +595,9 @@ public partial class V1beta1TopicSubscriptionSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionSpecProviderConfigRef
@@ -553,7 +610,9 @@ public partial class V1beta1TopicSubscriptionSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1TopicSubscriptionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionSpecWriteConnectionSecretToRef
@@ -566,7 +625,9 @@ public partial class V1beta1TopicSubscriptionSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TopicSubscriptionSpec defines the desired state of TopicSubscription</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionSpec
@@ -595,7 +656,9 @@ public partial class V1beta1TopicSubscriptionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TopicSubscriptionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionStatusAtProvider
@@ -672,7 +735,9 @@ public partial class V1beta1TopicSubscriptionStatusAtProvider
     [JsonPropertyName("topicArn")]
     public string? TopicArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionStatusConditions
@@ -701,7 +766,9 @@ public partial class V1beta1TopicSubscriptionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TopicSubscriptionStatus defines the observed state of TopicSubscription.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSubscriptionStatus
@@ -718,7 +785,9 @@ public partial class V1beta1TopicSubscriptionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TopicSubscription is the Schema for the TopicSubscriptions API. Provides a resource for subscribing to SNS topics.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -748,3 +817,4 @@ public partial class V1beta1TopicSubscription : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1TopicSubscriptionStatus? Status { get; set; }
 }
+#nullable disable

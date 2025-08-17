@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gkebackup.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>GKEBackupBackup is the Schema for the GKEBackupBackup API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1GKEBackupBackupList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1alpha1GKEBackupBackup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The BackupPlan from which this Backup is created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupBackupSpecBackupPlanRef
@@ -50,7 +53,9 @@ public partial class V1alpha1GKEBackupBackupSpecBackupPlanRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GKEBackupBackupSpec defines the desired state of GKEBackupBackup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupBackupSpec
@@ -79,7 +84,9 @@ public partial class V1alpha1GKEBackupBackupSpec
     [JsonPropertyName("retainDays")]
     public int? RetainDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupBackupStatusConditions
@@ -104,7 +111,9 @@ public partial class V1alpha1GKEBackupBackupStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Information about the GKE cluster from which this Backup was created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupBackupStatusObservedStateClusterMetadata
@@ -129,7 +138,9 @@ public partial class V1alpha1GKEBackupBackupStatusObservedStateClusterMetadata
     [JsonPropertyName("k8sVersion")]
     public string? K8sVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. The customer managed encryption key that was used to encrypt the Backup's artifacts.  Inherited from the parent BackupPlan's [encryption_key][google.cloud.gkebackup.v1.BackupPlan.BackupConfig.encryption_key] value.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupBackupStatusObservedStateEncryptionKey
@@ -138,7 +149,9 @@ public partial class V1alpha1GKEBackupBackupStatusObservedStateEncryptionKey
     [JsonPropertyName("gcpKMSEncryptionKey")]
     public string? GcpKMSEncryptionKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupBackupStatusObservedStateSelectedApplicationsNamespacedNames
@@ -151,7 +164,9 @@ public partial class V1alpha1GKEBackupBackupStatusObservedStateSelectedApplicati
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. If set, the list of ProtectedApplications whose resources were included in the Backup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupBackupStatusObservedStateSelectedApplications
@@ -160,7 +175,9 @@ public partial class V1alpha1GKEBackupBackupStatusObservedStateSelectedApplicati
     [JsonPropertyName("namespacedNames")]
     public IList<V1alpha1GKEBackupBackupStatusObservedStateSelectedApplicationsNamespacedNames>? NamespacedNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. If set, the list of namespaces that were included in the Backup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupBackupStatusObservedStateSelectedNamespaces
@@ -169,7 +186,9 @@ public partial class V1alpha1GKEBackupBackupStatusObservedStateSelectedNamespace
     [JsonPropertyName("namespaces")]
     public IList<string>? Namespaces { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupBackupStatusObservedState
@@ -266,7 +285,9 @@ public partial class V1alpha1GKEBackupBackupStatusObservedState
     [JsonPropertyName("volumeCount")]
     public int? VolumeCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GKEBackupBackupStatus defines the config connector machine state of GKEBackupBackup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupBackupStatus
@@ -287,7 +308,9 @@ public partial class V1alpha1GKEBackupBackupStatus
     [JsonPropertyName("observedState")]
     public V1alpha1GKEBackupBackupStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GKEBackupBackup is the Schema for the GKEBackupBackup API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -317,3 +340,4 @@ public partial class V1alpha1GKEBackupBackup : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1alpha1GKEBackupBackupStatus? Status { get; set; }
 }
+#nullable disable

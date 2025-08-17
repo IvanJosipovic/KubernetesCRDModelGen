@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.m.upbound.io;
+#nullable enable
 /// <summary>RegionURLMap is the Schema for the RegionURLMaps API. UrlMaps are used to route requests to a backend service based on rules that you define for the host and path of an incoming URL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RegionURLMapList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1RegionURLMap> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionCorsPolicy
@@ -70,7 +73,9 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionCorsPol
     [JsonPropertyName("maxAge")]
     public double? MaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for how client requests are aborted as part of fault injection. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionFaultInjectionPolicyAbort
@@ -83,7 +88,9 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionFaultIn
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the value of the fixed delay interval. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionFaultInjectionPolicyDelayFixedDelay
@@ -96,7 +103,9 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionFaultIn
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for how client requests are delayed as part of fault injection, before being sent to a backend service. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionFaultInjectionPolicyDelay
@@ -109,7 +118,9 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionFaultIn
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted by the Loadbalancer for a percentage of requests. timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionFaultInjectionPolicy
@@ -122,7 +133,9 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionFaultIn
     [JsonPropertyName("delay")]
     public V1beta1RegionURLMapSpecForProviderDefaultRouteActionFaultInjectionPolicyDelay? Delay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy
@@ -135,7 +148,9 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequest
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegionBackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRef
@@ -152,7 +167,9 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequest
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy
@@ -165,7 +182,9 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequest
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegionBackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelector
@@ -186,7 +205,9 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequest
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicy
@@ -203,7 +224,9 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequest
     [JsonPropertyName("backendServiceSelector")]
     public V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelector? BackendServiceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies a non-zero timeout per retry attempt. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRetryPolicyPerTryTimeout
@@ -216,7 +239,9 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRetryPo
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the retry policy associated with this route. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRetryPolicy
@@ -233,7 +258,9 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRetryPo
     [JsonPropertyName("retryConditions")]
     public IList<string>? RetryConditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the timeout for the selected route. Timeout is computed from the time the request has been fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries. If not specified, will use the largest timeout among all backend services associated with the route. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionTimeout
@@ -246,7 +273,9 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionTimeout
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The spec to modify the URL of the request, prior to forwarding the request to the matched service. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionUrlRewrite
@@ -259,7 +288,9 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionUrlRewr
     [JsonPropertyName("pathPrefixRewrite")]
     public string? PathPrefixRewrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesBackendServiceRefPolicy
@@ -272,7 +303,9 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeighte
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegionBackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesBackendServiceRef
@@ -289,7 +322,9 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeighte
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesBackendServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesBackendServiceSelectorPolicy
@@ -302,7 +337,9 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeighte
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegionBackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesBackendServiceSelector
@@ -323,7 +360,9 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeighte
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesBackendServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
@@ -340,7 +379,9 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeighte
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
@@ -357,7 +398,9 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeighte
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesHeaderAction
@@ -378,7 +421,9 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeighte
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServices
@@ -403,7 +448,9 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeighte
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>defaultRouteAction takes effect when none of the hostRules match. The load balancer performs advanced routing actions, such as URL rewrites and header transformations, before forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction or defaultUrlRedirect must be set. URL maps for Classic external HTTP(S) load balancers only support the urlRewrite action within defaultRouteAction. defaultRouteAction has no effect when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteAction
@@ -436,7 +483,9 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteAction
     [JsonPropertyName("weightedBackendServices")]
     public IList<V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultServiceRefPolicy
@@ -449,7 +498,9 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultServiceRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegionBackendService in compute to populate defaultService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultServiceRef
@@ -466,7 +517,9 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultServiceRef
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecForProviderDefaultServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultServiceSelectorPolicy
@@ -479,7 +532,9 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultServiceSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegionBackendService in compute to populate defaultService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultServiceSelector
@@ -500,7 +555,9 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultServiceSelector
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecForProviderDefaultServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>When none of the specified hostRules match, the request is redirected to a URL specified by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or defaultRouteAction must not be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderDefaultUrlRedirect
@@ -529,7 +586,9 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultUrlRedirect
     [JsonPropertyName("stripQuery")]
     public bool? StripQuery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderHostRule
@@ -546,7 +605,9 @@ public partial class V1beta1RegionURLMapSpecForProviderHostRule
     [JsonPropertyName("pathMatcher")]
     public string? PathMatcher { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteActionCorsPolicy
@@ -583,7 +644,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteAc
     [JsonPropertyName("maxAge")]
     public double? MaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for how client requests are aborted as part of fault injection. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteActionFaultInjectionPolicyAbort
@@ -596,7 +659,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteAc
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the value of the fixed delay interval. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay
@@ -609,7 +674,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteAc
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for how client requests are delayed as part of fault injection, before being sent to a backend service. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteActionFaultInjectionPolicyDelay
@@ -622,7 +689,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteAc
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted by the Loadbalancer for a percentage of requests. timeout and retry_policy will be ignored by clients that are configured with a fault_injection_policy. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteActionFaultInjectionPolicy
@@ -635,7 +704,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteAc
     [JsonPropertyName("delay")]
     public V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteActionFaultInjectionPolicyDelay? Delay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the maximum duration (timeout) for streams on the selected route. Unlike the Timeout field where the timeout duration starts from the time the request has been fully processed (known as end-of-stream), the duration in this field is computed from the beginning of the stream until the response has been processed, including all retries. A stream that does not complete in this duration is closed. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteActionMaxStreamDuration
@@ -648,7 +719,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteAc
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy
@@ -661,7 +734,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteAc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegionBackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceRef
@@ -678,7 +753,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteAc
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy
@@ -691,7 +768,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteAc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegionBackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceSelector
@@ -712,7 +791,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteAc
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteActionRequestMirrorPolicy
@@ -729,7 +810,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteAc
     [JsonPropertyName("backendServiceSelector")]
     public V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceSelector? BackendServiceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies a non-zero timeout per retry attempt. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout
@@ -742,7 +825,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteAc
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the retry policy associated with this route. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteActionRetryPolicy
@@ -759,7 +844,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteAc
     [JsonPropertyName("retryConditions")]
     public IList<string>? RetryConditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the timeout for the selected route. Timeout is computed from the time the request is has been fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries. If not specified, the default value is 15 seconds. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteActionTimeout
@@ -772,7 +859,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteAc
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The spec to modify the URL of the request, prior to forwarding the request to the matched service Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteActionUrlRewrite
@@ -789,7 +878,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteAc
     [JsonPropertyName("pathTemplateRewrite")]
     public string? PathTemplateRewrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteActionWeightedBackendServicesBackendServiceRefPolicy
@@ -802,7 +893,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteAc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegionBackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteActionWeightedBackendServicesBackendServiceRef
@@ -819,7 +912,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteAc
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteActionWeightedBackendServicesBackendServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteActionWeightedBackendServicesBackendServiceSelectorPolicy
@@ -832,7 +927,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteAc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegionBackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteActionWeightedBackendServicesBackendServiceSelector
@@ -853,7 +950,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteAc
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteActionWeightedBackendServicesBackendServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
@@ -870,7 +969,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteAc
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
@@ -887,7 +988,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteAc
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteActionWeightedBackendServicesHeaderAction
@@ -908,7 +1011,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteAc
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteActionWeightedBackendServices
@@ -933,7 +1038,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteAc
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction or defaultUrlRedirect must be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteAction
@@ -970,7 +1077,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteAc
     [JsonPropertyName("weightedBackendServices")]
     public IList<V1beta1RegionURLMapSpecForProviderPathMatcherDefaultRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceRefPolicy
@@ -983,7 +1092,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultService
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegionBackendService in compute to populate defaultService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceRef
@@ -1000,7 +1111,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultService
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceSelectorPolicy
@@ -1013,7 +1126,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultService
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegionBackendService in compute to populate defaultService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceSelector
@@ -1034,7 +1149,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultService
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>When none of the specified hostRules match, the request is redirected to a URL specified by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or defaultRouteAction must not be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultUrlRedirect
@@ -1063,7 +1180,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultUrlRedi
     [JsonPropertyName("stripQuery")]
     public bool? StripQuery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionCorsPolicy
@@ -1100,7 +1219,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     [JsonPropertyName("maxAge")]
     public double? MaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for how client requests are aborted as part of fault injection. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort
@@ -1113,7 +1234,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the value of the fixed delay interval. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay
@@ -1126,7 +1249,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for how client requests are delayed as part of fault injection, before being sent to a backend service. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay
@@ -1139,7 +1264,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted by the Loadbalancer for a percentage of requests. timeout and retry_policy will be ignored by clients that are configured with a fault_injection_policy. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionFaultInjectionPolicy
@@ -1152,7 +1279,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     [JsonPropertyName("delay")]
     public V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay? Delay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRefPolicy
@@ -1165,7 +1294,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegionBackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRef
@@ -1182,7 +1313,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy
@@ -1195,7 +1328,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegionBackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelector
@@ -1216,7 +1351,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicy
@@ -1233,7 +1370,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     [JsonPropertyName("backendServiceSelector")]
     public V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelector? BackendServiceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies a non-zero timeout per retry attempt. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout
@@ -1246,7 +1385,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the retry policy associated with this route. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRetryPolicy
@@ -1263,7 +1404,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     [JsonPropertyName("retryConditions")]
     public IList<string>? RetryConditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the timeout for the selected route. Timeout is computed from the time the request is has been fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries. If not specified, the default value is 15 seconds. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionTimeout
@@ -1276,7 +1419,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The spec to modify the URL of the request, prior to forwarding the request to the matched service Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionUrlRewrite
@@ -1289,7 +1434,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     [JsonPropertyName("pathPrefixRewrite")]
     public string? PathPrefixRewrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRefPolicy
@@ -1302,7 +1449,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegionBackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRef
@@ -1319,7 +1468,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelectorPolicy
@@ -1332,7 +1483,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegionBackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelector
@@ -1353,7 +1506,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
@@ -1370,7 +1525,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
@@ -1387,7 +1544,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction
@@ -1408,7 +1567,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServices
@@ -1433,7 +1594,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>In response to a matching matchRule, the load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If  routeAction specifies any weightedBackendServices, service must not be set. Conversely if service is set, routeAction cannot contain any  weightedBackendServices. Only one of routeAction or urlRedirect must be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteAction
@@ -1466,7 +1629,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     [JsonPropertyName("weightedBackendServices")]
     public IList<V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceRefPolicy
@@ -1479,7 +1644,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegionBackendService in compute to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceRef
@@ -1496,7 +1663,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServic
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceSelectorPolicy
@@ -1509,7 +1678,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegionBackendService in compute to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceSelector
@@ -1530,7 +1701,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServic
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>When this rule is matched, the request is redirected to a URL specified by urlRedirect. If urlRedirect is specified, service or routeAction must not be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleUrlRedirect
@@ -1559,7 +1732,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleUrlRed
     [JsonPropertyName("stripQuery")]
     public bool? StripQuery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRule
@@ -1588,7 +1763,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRule
     [JsonPropertyName("urlRedirect")]
     public V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleUrlRedirect? UrlRedirect { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesHeaderActionRequestHeadersToAdd
@@ -1605,7 +1782,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesHead
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesHeaderActionResponseHeadersToAdd
@@ -1622,7 +1801,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesHead
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesHeaderAction
@@ -1643,7 +1824,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesHead
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The header value must be an integer and its value must be in the range specified in rangeMatch. If the header does not contain an integer, number or is empty, the match fails. For example for a range [-5, 0]</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch
@@ -1656,7 +1839,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatc
     [JsonPropertyName("rangeStart")]
     public double? RangeStart { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatchRulesHeaderMatches
@@ -1693,7 +1878,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatc
     [JsonPropertyName("suffixMatch")]
     public string? SuffixMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels
@@ -1706,7 +1893,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatc
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatchRulesMetadataFilters
@@ -1719,7 +1908,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatc
     [JsonPropertyName("filterMatchCriteria")]
     public string? FilterMatchCriteria { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatchRulesQueryParameterMatches
@@ -1740,7 +1931,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatc
     [JsonPropertyName("regexMatch")]
     public string? RegexMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatchRules
@@ -1777,7 +1970,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatc
     [JsonPropertyName("regexMatch")]
     public string? RegexMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionCorsPolicy
@@ -1814,7 +2009,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     [JsonPropertyName("maxAge")]
     public double? MaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for how client requests are aborted as part of fault injection. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort
@@ -1827,7 +2024,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the value of the fixed delay interval. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay
@@ -1840,7 +2039,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for how client requests are delayed as part of fault injection, before being sent to a backend service. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay
@@ -1853,7 +2054,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted by the Loadbalancer for a percentage of requests. timeout and retry_policy will be ignored by clients that are configured with a fault_injection_policy. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicy
@@ -1866,7 +2069,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     [JsonPropertyName("delay")]
     public V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay? Delay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionRequestMirrorPolicy
@@ -1875,7 +2080,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     [JsonPropertyName("backendService")]
     public string? BackendService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies a non-zero timeout per retry attempt. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout
@@ -1888,7 +2095,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the retry policy associated with this route. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionRetryPolicy
@@ -1905,7 +2114,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     [JsonPropertyName("retryConditions")]
     public IList<string>? RetryConditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the timeout for the selected route. Timeout is computed from the time the request is has been fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries. If not specified, the default value is 15 seconds. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionTimeout
@@ -1918,7 +2129,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The spec to modify the URL of the request, prior to forwarding the request to the matched service Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionUrlRewrite
@@ -1935,7 +2148,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     [JsonPropertyName("pathTemplateRewrite")]
     public string? PathTemplateRewrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
@@ -1952,7 +2167,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
@@ -1969,7 +2186,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction
@@ -1990,7 +2209,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionWeightedBackendServices
@@ -2007,7 +2228,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>In response to a matching matchRule, the load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If  routeAction specifies any weightedBackendServices, service must not be set. Conversely if service is set, routeAction cannot contain any  weightedBackendServices. Only one of routeAction or urlRedirect must be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteAction
@@ -2040,7 +2263,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     [JsonPropertyName("weightedBackendServices")]
     public IList<V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceRefPolicy
@@ -2053,7 +2278,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServ
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegionBackendService in compute to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceRef
@@ -2070,7 +2297,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServ
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceSelectorPolicy
@@ -2083,7 +2312,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServ
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegionBackendService in compute to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceSelector
@@ -2104,7 +2335,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServ
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>When this rule is matched, the request is redirected to a URL specified by urlRedirect. If urlRedirect is specified, service or routeAction must not be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesUrlRedirect
@@ -2133,7 +2366,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesUrlR
     [JsonPropertyName("stripQuery")]
     public bool? StripQuery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRules
@@ -2170,7 +2405,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRules
     [JsonPropertyName("urlRedirect")]
     public V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesUrlRedirect? UrlRedirect { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcher
@@ -2211,7 +2448,9 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcher
     [JsonPropertyName("routeRules")]
     public IList<V1beta1RegionURLMapSpecForProviderPathMatcherRouteRules>? RouteRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderTestServiceRefPolicy
@@ -2224,7 +2463,9 @@ public partial class V1beta1RegionURLMapSpecForProviderTestServiceRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegionBackendService in compute to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderTestServiceRef
@@ -2241,7 +2482,9 @@ public partial class V1beta1RegionURLMapSpecForProviderTestServiceRef
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecForProviderTestServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderTestServiceSelectorPolicy
@@ -2254,7 +2497,9 @@ public partial class V1beta1RegionURLMapSpecForProviderTestServiceSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegionBackendService in compute to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderTestServiceSelector
@@ -2275,7 +2520,9 @@ public partial class V1beta1RegionURLMapSpecForProviderTestServiceSelector
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecForProviderTestServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProviderTest
@@ -2304,7 +2551,9 @@ public partial class V1beta1RegionURLMapSpecForProviderTest
     [JsonPropertyName("serviceSelector")]
     public V1beta1RegionURLMapSpecForProviderTestServiceSelector? ServiceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecForProvider
@@ -2353,7 +2602,9 @@ public partial class V1beta1RegionURLMapSpecForProvider
     [JsonPropertyName("test")]
     public IList<V1beta1RegionURLMapSpecForProviderTest>? Test { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionCorsPolicy
@@ -2390,7 +2641,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionCorsPo
     [JsonPropertyName("maxAge")]
     public double? MaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for how client requests are aborted as part of fault injection. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionFaultInjectionPolicyAbort
@@ -2403,7 +2656,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionFaultI
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the value of the fixed delay interval. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionFaultInjectionPolicyDelayFixedDelay
@@ -2416,7 +2671,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionFaultI
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for how client requests are delayed as part of fault injection, before being sent to a backend service. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionFaultInjectionPolicyDelay
@@ -2429,7 +2686,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionFaultI
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted by the Loadbalancer for a percentage of requests. timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionFaultInjectionPolicy
@@ -2442,7 +2701,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionFaultI
     [JsonPropertyName("delay")]
     public V1beta1RegionURLMapSpecInitProviderDefaultRouteActionFaultInjectionPolicyDelay? Delay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy
@@ -2455,7 +2716,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionReques
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegionBackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRef
@@ -2472,7 +2735,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionReques
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy
@@ -2485,7 +2750,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionReques
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegionBackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelector
@@ -2506,7 +2773,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionReques
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicy
@@ -2523,7 +2792,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionReques
     [JsonPropertyName("backendServiceSelector")]
     public V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelector? BackendServiceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies a non-zero timeout per retry attempt. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRetryPolicyPerTryTimeout
@@ -2536,7 +2807,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRetryP
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the retry policy associated with this route. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRetryPolicy
@@ -2553,7 +2826,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRetryP
     [JsonPropertyName("retryConditions")]
     public IList<string>? RetryConditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the timeout for the selected route. Timeout is computed from the time the request has been fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries. If not specified, will use the largest timeout among all backend services associated with the route. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionTimeout
@@ -2566,7 +2841,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionTimeou
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The spec to modify the URL of the request, prior to forwarding the request to the matched service. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionUrlRewrite
@@ -2579,7 +2856,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionUrlRew
     [JsonPropertyName("pathPrefixRewrite")]
     public string? PathPrefixRewrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesBackendServiceRefPolicy
@@ -2592,7 +2871,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeight
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegionBackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesBackendServiceRef
@@ -2609,7 +2890,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeight
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesBackendServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesBackendServiceSelectorPolicy
@@ -2622,7 +2905,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeight
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegionBackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesBackendServiceSelector
@@ -2643,7 +2928,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeight
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesBackendServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
@@ -2660,7 +2947,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeight
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
@@ -2677,7 +2966,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeight
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesHeaderAction
@@ -2698,7 +2989,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeight
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServices
@@ -2723,7 +3016,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeight
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>defaultRouteAction takes effect when none of the hostRules match. The load balancer performs advanced routing actions, such as URL rewrites and header transformations, before forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction or defaultUrlRedirect must be set. URL maps for Classic external HTTP(S) load balancers only support the urlRewrite action within defaultRouteAction. defaultRouteAction has no effect when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteAction
@@ -2756,7 +3051,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteAction
     [JsonPropertyName("weightedBackendServices")]
     public IList<V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultServiceRefPolicy
@@ -2769,7 +3066,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultServiceRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegionBackendService in compute to populate defaultService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultServiceRef
@@ -2786,7 +3085,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultServiceRef
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecInitProviderDefaultServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultServiceSelectorPolicy
@@ -2799,7 +3100,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultServiceSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegionBackendService in compute to populate defaultService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultServiceSelector
@@ -2820,7 +3123,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultServiceSelector
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecInitProviderDefaultServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>When none of the specified hostRules match, the request is redirected to a URL specified by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or defaultRouteAction must not be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultUrlRedirect
@@ -2849,7 +3154,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultUrlRedirect
     [JsonPropertyName("stripQuery")]
     public bool? StripQuery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderHostRule
@@ -2866,7 +3173,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderHostRule
     [JsonPropertyName("pathMatcher")]
     public string? PathMatcher { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteActionCorsPolicy
@@ -2903,7 +3212,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteA
     [JsonPropertyName("maxAge")]
     public double? MaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for how client requests are aborted as part of fault injection. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteActionFaultInjectionPolicyAbort
@@ -2916,7 +3227,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteA
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the value of the fixed delay interval. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay
@@ -2929,7 +3242,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteA
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for how client requests are delayed as part of fault injection, before being sent to a backend service. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteActionFaultInjectionPolicyDelay
@@ -2942,7 +3257,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteA
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted by the Loadbalancer for a percentage of requests. timeout and retry_policy will be ignored by clients that are configured with a fault_injection_policy. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteActionFaultInjectionPolicy
@@ -2955,7 +3272,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteA
     [JsonPropertyName("delay")]
     public V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteActionFaultInjectionPolicyDelay? Delay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the maximum duration (timeout) for streams on the selected route. Unlike the Timeout field where the timeout duration starts from the time the request has been fully processed (known as end-of-stream), the duration in this field is computed from the beginning of the stream until the response has been processed, including all retries. A stream that does not complete in this duration is closed. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteActionMaxStreamDuration
@@ -2968,7 +3287,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteA
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy
@@ -2981,7 +3302,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegionBackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceRef
@@ -2998,7 +3321,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteA
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy
@@ -3011,7 +3336,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegionBackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceSelector
@@ -3032,7 +3359,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteA
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteActionRequestMirrorPolicy
@@ -3049,7 +3378,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteA
     [JsonPropertyName("backendServiceSelector")]
     public V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceSelector? BackendServiceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies a non-zero timeout per retry attempt. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout
@@ -3062,7 +3393,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteA
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the retry policy associated with this route. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteActionRetryPolicy
@@ -3079,7 +3412,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteA
     [JsonPropertyName("retryConditions")]
     public IList<string>? RetryConditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the timeout for the selected route. Timeout is computed from the time the request is has been fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries. If not specified, the default value is 15 seconds. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteActionTimeout
@@ -3092,7 +3427,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteA
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The spec to modify the URL of the request, prior to forwarding the request to the matched service Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteActionUrlRewrite
@@ -3109,7 +3446,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteA
     [JsonPropertyName("pathTemplateRewrite")]
     public string? PathTemplateRewrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteActionWeightedBackendServicesBackendServiceRefPolicy
@@ -3122,7 +3461,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegionBackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteActionWeightedBackendServicesBackendServiceRef
@@ -3139,7 +3480,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteA
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteActionWeightedBackendServicesBackendServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteActionWeightedBackendServicesBackendServiceSelectorPolicy
@@ -3152,7 +3495,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegionBackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteActionWeightedBackendServicesBackendServiceSelector
@@ -3173,7 +3518,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteA
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteActionWeightedBackendServicesBackendServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
@@ -3190,7 +3537,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteA
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
@@ -3207,7 +3556,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteA
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteActionWeightedBackendServicesHeaderAction
@@ -3228,7 +3579,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteA
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteActionWeightedBackendServices
@@ -3253,7 +3606,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteA
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction or defaultUrlRedirect must be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteAction
@@ -3290,7 +3645,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteA
     [JsonPropertyName("weightedBackendServices")]
     public IList<V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceRefPolicy
@@ -3303,7 +3660,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegionBackendService in compute to populate defaultService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceRef
@@ -3320,7 +3679,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServic
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceSelectorPolicy
@@ -3333,7 +3694,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegionBackendService in compute to populate defaultService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceSelector
@@ -3354,7 +3717,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServic
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>When none of the specified hostRules match, the request is redirected to a URL specified by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or defaultRouteAction must not be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultUrlRedirect
@@ -3383,7 +3748,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultUrlRed
     [JsonPropertyName("stripQuery")]
     public bool? StripQuery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionCorsPolicy
@@ -3420,7 +3787,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     [JsonPropertyName("maxAge")]
     public double? MaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for how client requests are aborted as part of fault injection. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort
@@ -3433,7 +3802,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the value of the fixed delay interval. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay
@@ -3446,7 +3817,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for how client requests are delayed as part of fault injection, before being sent to a backend service. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay
@@ -3459,7 +3832,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted by the Loadbalancer for a percentage of requests. timeout and retry_policy will be ignored by clients that are configured with a fault_injection_policy. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionFaultInjectionPolicy
@@ -3472,7 +3847,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     [JsonPropertyName("delay")]
     public V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay? Delay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRefPolicy
@@ -3485,7 +3862,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegionBackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRef
@@ -3502,7 +3881,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy
@@ -3515,7 +3896,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegionBackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelector
@@ -3536,7 +3919,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicy
@@ -3553,7 +3938,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     [JsonPropertyName("backendServiceSelector")]
     public V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelector? BackendServiceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies a non-zero timeout per retry attempt. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout
@@ -3566,7 +3953,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the retry policy associated with this route. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRetryPolicy
@@ -3583,7 +3972,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     [JsonPropertyName("retryConditions")]
     public IList<string>? RetryConditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the timeout for the selected route. Timeout is computed from the time the request is has been fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries. If not specified, the default value is 15 seconds. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionTimeout
@@ -3596,7 +3987,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The spec to modify the URL of the request, prior to forwarding the request to the matched service Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionUrlRewrite
@@ -3609,7 +4002,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     [JsonPropertyName("pathPrefixRewrite")]
     public string? PathPrefixRewrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRefPolicy
@@ -3622,7 +4017,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegionBackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRef
@@ -3639,7 +4036,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelectorPolicy
@@ -3652,7 +4051,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegionBackendService in compute to populate backendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelector
@@ -3673,7 +4074,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
@@ -3690,7 +4093,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
@@ -3707,7 +4112,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction
@@ -3728,7 +4135,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServices
@@ -3753,7 +4162,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>In response to a matching matchRule, the load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If  routeAction specifies any weightedBackendServices, service must not be set. Conversely if service is set, routeAction cannot contain any  weightedBackendServices. Only one of routeAction or urlRedirect must be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteAction
@@ -3786,7 +4197,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     [JsonPropertyName("weightedBackendServices")]
     public IList<V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceRefPolicy
@@ -3799,7 +4212,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegionBackendService in compute to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceRef
@@ -3816,7 +4231,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServi
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceSelectorPolicy
@@ -3829,7 +4246,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegionBackendService in compute to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceSelector
@@ -3850,7 +4269,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServi
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>When this rule is matched, the request is redirected to a URL specified by urlRedirect. If urlRedirect is specified, service or routeAction must not be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleUrlRedirect
@@ -3879,7 +4300,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleUrlRe
     [JsonPropertyName("stripQuery")]
     public bool? StripQuery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRule
@@ -3908,7 +4331,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRule
     [JsonPropertyName("urlRedirect")]
     public V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleUrlRedirect? UrlRedirect { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesHeaderActionRequestHeadersToAdd
@@ -3925,7 +4350,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesHea
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesHeaderActionResponseHeadersToAdd
@@ -3942,7 +4369,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesHea
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesHeaderAction
@@ -3963,7 +4392,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesHea
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The header value must be an integer and its value must be in the range specified in rangeMatch. If the header does not contain an integer, number or is empty, the match fails. For example for a range [-5, 0]</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch
@@ -3976,7 +4407,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMat
     [JsonPropertyName("rangeStart")]
     public double? RangeStart { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMatchRulesHeaderMatches
@@ -4013,7 +4446,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMat
     [JsonPropertyName("suffixMatch")]
     public string? SuffixMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels
@@ -4026,7 +4461,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMat
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMatchRulesMetadataFilters
@@ -4039,7 +4476,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMat
     [JsonPropertyName("filterMatchCriteria")]
     public string? FilterMatchCriteria { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMatchRulesQueryParameterMatches
@@ -4060,7 +4499,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMat
     [JsonPropertyName("regexMatch")]
     public string? RegexMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMatchRules
@@ -4097,7 +4538,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMat
     [JsonPropertyName("regexMatch")]
     public string? RegexMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionCorsPolicy
@@ -4134,7 +4577,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     [JsonPropertyName("maxAge")]
     public double? MaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for how client requests are aborted as part of fault injection. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort
@@ -4147,7 +4592,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the value of the fixed delay interval. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay
@@ -4160,7 +4607,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for how client requests are delayed as part of fault injection, before being sent to a backend service. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay
@@ -4173,7 +4622,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted by the Loadbalancer for a percentage of requests. timeout and retry_policy will be ignored by clients that are configured with a fault_injection_policy. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicy
@@ -4186,7 +4637,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     [JsonPropertyName("delay")]
     public V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay? Delay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionRequestMirrorPolicy
@@ -4195,7 +4648,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     [JsonPropertyName("backendService")]
     public string? BackendService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies a non-zero timeout per retry attempt. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout
@@ -4208,7 +4663,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the retry policy associated with this route. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionRetryPolicy
@@ -4225,7 +4682,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     [JsonPropertyName("retryConditions")]
     public IList<string>? RetryConditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the timeout for the selected route. Timeout is computed from the time the request is has been fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries. If not specified, the default value is 15 seconds. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionTimeout
@@ -4238,7 +4697,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The spec to modify the URL of the request, prior to forwarding the request to the matched service Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionUrlRewrite
@@ -4255,7 +4716,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     [JsonPropertyName("pathTemplateRewrite")]
     public string? PathTemplateRewrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
@@ -4272,7 +4735,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
@@ -4289,7 +4754,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction
@@ -4310,7 +4777,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionWeightedBackendServices
@@ -4327,7 +4796,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>In response to a matching matchRule, the load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If  routeAction specifies any weightedBackendServices, service must not be set. Conversely if service is set, routeAction cannot contain any  weightedBackendServices. Only one of routeAction or urlRedirect must be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteAction
@@ -4360,7 +4831,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     [JsonPropertyName("weightedBackendServices")]
     public IList<V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceRefPolicy
@@ -4373,7 +4846,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesSer
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegionBackendService in compute to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceRef
@@ -4390,7 +4865,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesSer
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceSelectorPolicy
@@ -4403,7 +4880,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesSer
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegionBackendService in compute to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceSelector
@@ -4424,7 +4903,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesSer
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>When this rule is matched, the request is redirected to a URL specified by urlRedirect. If urlRedirect is specified, service or routeAction must not be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesUrlRedirect
@@ -4453,7 +4934,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesUrl
     [JsonPropertyName("stripQuery")]
     public bool? StripQuery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRules
@@ -4490,7 +4973,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRules
     [JsonPropertyName("urlRedirect")]
     public V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesUrlRedirect? UrlRedirect { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcher
@@ -4531,7 +5016,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcher
     [JsonPropertyName("routeRules")]
     public IList<V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRules>? RouteRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderTestServiceRefPolicy
@@ -4544,7 +5031,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderTestServiceRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RegionBackendService in compute to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderTestServiceRef
@@ -4561,7 +5050,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderTestServiceRef
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecInitProviderTestServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderTestServiceSelectorPolicy
@@ -4574,7 +5065,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderTestServiceSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RegionBackendService in compute to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderTestServiceSelector
@@ -4595,7 +5088,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderTestServiceSelector
     [JsonPropertyName("policy")]
     public V1beta1RegionURLMapSpecInitProviderTestServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProviderTest
@@ -4624,7 +5119,9 @@ public partial class V1beta1RegionURLMapSpecInitProviderTest
     [JsonPropertyName("serviceSelector")]
     public V1beta1RegionURLMapSpecInitProviderTestServiceSelector? ServiceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecInitProvider
@@ -4669,7 +5166,9 @@ public partial class V1beta1RegionURLMapSpecInitProvider
     [JsonPropertyName("test")]
     public IList<V1beta1RegionURLMapSpecInitProviderTest>? Test { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecProviderConfigRef
@@ -4682,7 +5181,9 @@ public partial class V1beta1RegionURLMapSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpecWriteConnectionSecretToRef
@@ -4691,7 +5192,9 @@ public partial class V1beta1RegionURLMapSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegionURLMapSpec defines the desired state of RegionURLMap</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapSpec
@@ -4716,7 +5219,9 @@ public partial class V1beta1RegionURLMapSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RegionURLMapSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionCorsPolicy
@@ -4753,7 +5258,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionCorsPo
     [JsonPropertyName("maxAge")]
     public double? MaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for how client requests are aborted as part of fault injection. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionFaultInjectionPolicyAbort
@@ -4766,7 +5273,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionFaultI
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the value of the fixed delay interval. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionFaultInjectionPolicyDelayFixedDelay
@@ -4779,7 +5288,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionFaultI
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for how client requests are delayed as part of fault injection, before being sent to a backend service. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionFaultInjectionPolicyDelay
@@ -4792,7 +5303,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionFaultI
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted by the Loadbalancer for a percentage of requests. timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionFaultInjectionPolicy
@@ -4805,7 +5318,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionFaultI
     [JsonPropertyName("delay")]
     public V1beta1RegionURLMapStatusAtProviderDefaultRouteActionFaultInjectionPolicyDelay? Delay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionRequestMirrorPolicy
@@ -4814,7 +5329,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionReques
     [JsonPropertyName("backendService")]
     public string? BackendService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies a non-zero timeout per retry attempt. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionRetryPolicyPerTryTimeout
@@ -4827,7 +5344,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionRetryP
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the retry policy associated with this route. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionRetryPolicy
@@ -4844,7 +5363,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionRetryP
     [JsonPropertyName("retryConditions")]
     public IList<string>? RetryConditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the timeout for the selected route. Timeout is computed from the time the request has been fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries. If not specified, will use the largest timeout among all backend services associated with the route. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionTimeout
@@ -4857,7 +5378,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionTimeou
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The spec to modify the URL of the request, prior to forwarding the request to the matched service. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionUrlRewrite
@@ -4870,7 +5393,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionUrlRew
     [JsonPropertyName("pathPrefixRewrite")]
     public string? PathPrefixRewrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
@@ -4887,7 +5412,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionWeight
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
@@ -4904,7 +5431,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionWeight
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionWeightedBackendServicesHeaderAction
@@ -4925,7 +5454,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionWeight
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionWeightedBackendServices
@@ -4942,7 +5473,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionWeight
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>defaultRouteAction takes effect when none of the hostRules match. The load balancer performs advanced routing actions, such as URL rewrites and header transformations, before forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction or defaultUrlRedirect must be set. URL maps for Classic external HTTP(S) load balancers only support the urlRewrite action within defaultRouteAction. defaultRouteAction has no effect when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteAction
@@ -4975,7 +5508,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteAction
     [JsonPropertyName("weightedBackendServices")]
     public IList<V1beta1RegionURLMapStatusAtProviderDefaultRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>When none of the specified hostRules match, the request is redirected to a URL specified by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or defaultRouteAction must not be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultUrlRedirect
@@ -5004,7 +5539,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultUrlRedirect
     [JsonPropertyName("stripQuery")]
     public bool? StripQuery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderHostRule
@@ -5021,7 +5558,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderHostRule
     [JsonPropertyName("pathMatcher")]
     public string? PathMatcher { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteActionCorsPolicy
@@ -5058,7 +5597,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteA
     [JsonPropertyName("maxAge")]
     public double? MaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for how client requests are aborted as part of fault injection. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteActionFaultInjectionPolicyAbort
@@ -5071,7 +5612,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteA
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the value of the fixed delay interval. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay
@@ -5084,7 +5627,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteA
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for how client requests are delayed as part of fault injection, before being sent to a backend service. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteActionFaultInjectionPolicyDelay
@@ -5097,7 +5642,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteA
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted by the Loadbalancer for a percentage of requests. timeout and retry_policy will be ignored by clients that are configured with a fault_injection_policy. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteActionFaultInjectionPolicy
@@ -5110,7 +5657,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteA
     [JsonPropertyName("delay")]
     public V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteActionFaultInjectionPolicyDelay? Delay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the maximum duration (timeout) for streams on the selected route. Unlike the Timeout field where the timeout duration starts from the time the request has been fully processed (known as end-of-stream), the duration in this field is computed from the beginning of the stream until the response has been processed, including all retries. A stream that does not complete in this duration is closed. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteActionMaxStreamDuration
@@ -5123,7 +5672,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteA
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteActionRequestMirrorPolicy
@@ -5132,7 +5683,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteA
     [JsonPropertyName("backendService")]
     public string? BackendService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies a non-zero timeout per retry attempt. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout
@@ -5145,7 +5698,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteA
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the retry policy associated with this route. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteActionRetryPolicy
@@ -5162,7 +5717,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteA
     [JsonPropertyName("retryConditions")]
     public IList<string>? RetryConditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the timeout for the selected route. Timeout is computed from the time the request is has been fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries. If not specified, the default value is 15 seconds. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteActionTimeout
@@ -5175,7 +5732,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteA
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The spec to modify the URL of the request, prior to forwarding the request to the matched service Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteActionUrlRewrite
@@ -5192,7 +5751,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteA
     [JsonPropertyName("pathTemplateRewrite")]
     public string? PathTemplateRewrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
@@ -5209,7 +5770,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteA
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
@@ -5226,7 +5789,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteA
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteActionWeightedBackendServicesHeaderAction
@@ -5247,7 +5812,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteA
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteActionWeightedBackendServices
@@ -5264,7 +5831,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteA
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction or defaultUrlRedirect must be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteAction
@@ -5301,7 +5870,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteA
     [JsonPropertyName("weightedBackendServices")]
     public IList<V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>When none of the specified hostRules match, the request is redirected to a URL specified by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or defaultRouteAction must not be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultUrlRedirect
@@ -5330,7 +5901,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultUrlRed
     [JsonPropertyName("stripQuery")]
     public bool? StripQuery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionCorsPolicy
@@ -5367,7 +5940,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
     [JsonPropertyName("maxAge")]
     public double? MaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for how client requests are aborted as part of fault injection. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort
@@ -5380,7 +5955,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the value of the fixed delay interval. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay
@@ -5393,7 +5970,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for how client requests are delayed as part of fault injection, before being sent to a backend service. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay
@@ -5406,7 +5985,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted by the Loadbalancer for a percentage of requests. timeout and retry_policy will be ignored by clients that are configured with a fault_injection_policy. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionFaultInjectionPolicy
@@ -5419,7 +6000,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
     [JsonPropertyName("delay")]
     public V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay? Delay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionRequestMirrorPolicy
@@ -5428,7 +6011,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
     [JsonPropertyName("backendService")]
     public string? BackendService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies a non-zero timeout per retry attempt. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout
@@ -5441,7 +6026,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the retry policy associated with this route. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionRetryPolicy
@@ -5458,7 +6045,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
     [JsonPropertyName("retryConditions")]
     public IList<string>? RetryConditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the timeout for the selected route. Timeout is computed from the time the request is has been fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries. If not specified, the default value is 15 seconds. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionTimeout
@@ -5471,7 +6060,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The spec to modify the URL of the request, prior to forwarding the request to the matched service Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionUrlRewrite
@@ -5484,7 +6075,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
     [JsonPropertyName("pathPrefixRewrite")]
     public string? PathPrefixRewrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
@@ -5501,7 +6094,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
@@ -5518,7 +6113,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction
@@ -5539,7 +6136,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionWeightedBackendServices
@@ -5556,7 +6155,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>In response to a matching matchRule, the load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If  routeAction specifies any weightedBackendServices, service must not be set. Conversely if service is set, routeAction cannot contain any  weightedBackendServices. Only one of routeAction or urlRedirect must be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteAction
@@ -5589,7 +6190,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
     [JsonPropertyName("weightedBackendServices")]
     public IList<V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>When this rule is matched, the request is redirected to a URL specified by urlRedirect. If urlRedirect is specified, service or routeAction must not be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleUrlRedirect
@@ -5618,7 +6221,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleUrlRe
     [JsonPropertyName("stripQuery")]
     public bool? StripQuery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRule
@@ -5639,7 +6244,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRule
     [JsonPropertyName("urlRedirect")]
     public V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleUrlRedirect? UrlRedirect { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesHeaderActionRequestHeadersToAdd
@@ -5656,7 +6263,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesHea
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesHeaderActionResponseHeadersToAdd
@@ -5673,7 +6282,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesHea
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesHeaderAction
@@ -5694,7 +6305,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesHea
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The header value must be an integer and its value must be in the range specified in rangeMatch. If the header does not contain an integer, number or is empty, the match fails. For example for a range [-5, 0]</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch
@@ -5707,7 +6320,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMat
     [JsonPropertyName("rangeStart")]
     public double? RangeStart { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMatchRulesHeaderMatches
@@ -5744,7 +6359,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMat
     [JsonPropertyName("suffixMatch")]
     public string? SuffixMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels
@@ -5757,7 +6374,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMat
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMatchRulesMetadataFilters
@@ -5770,7 +6389,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMat
     [JsonPropertyName("filterMatchCriteria")]
     public string? FilterMatchCriteria { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMatchRulesQueryParameterMatches
@@ -5791,7 +6412,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMat
     [JsonPropertyName("regexMatch")]
     public string? RegexMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMatchRules
@@ -5828,7 +6451,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMat
     [JsonPropertyName("regexMatch")]
     public string? RegexMatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionCorsPolicy
@@ -5865,7 +6490,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
     [JsonPropertyName("maxAge")]
     public double? MaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for how client requests are aborted as part of fault injection. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort
@@ -5878,7 +6505,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the value of the fixed delay interval. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay
@@ -5891,7 +6520,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for how client requests are delayed as part of fault injection, before being sent to a backend service. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay
@@ -5904,7 +6535,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted by the Loadbalancer for a percentage of requests. timeout and retry_policy will be ignored by clients that are configured with a fault_injection_policy. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicy
@@ -5917,7 +6550,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
     [JsonPropertyName("delay")]
     public V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay? Delay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionRequestMirrorPolicy
@@ -5926,7 +6561,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
     [JsonPropertyName("backendService")]
     public string? BackendService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies a non-zero timeout per retry attempt. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout
@@ -5939,7 +6576,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the retry policy associated with this route. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionRetryPolicy
@@ -5956,7 +6595,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
     [JsonPropertyName("retryConditions")]
     public IList<string>? RetryConditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the timeout for the selected route. Timeout is computed from the time the request is has been fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries. If not specified, the default value is 15 seconds. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionTimeout
@@ -5969,7 +6610,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
     [JsonPropertyName("seconds")]
     public string? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The spec to modify the URL of the request, prior to forwarding the request to the matched service Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionUrlRewrite
@@ -5986,7 +6629,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
     [JsonPropertyName("pathTemplateRewrite")]
     public string? PathTemplateRewrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
@@ -6003,7 +6648,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
@@ -6020,7 +6667,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction
@@ -6041,7 +6690,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
     [JsonPropertyName("responseHeadersToRemove")]
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionWeightedBackendServices
@@ -6058,7 +6709,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>In response to a matching matchRule, the load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If  routeAction specifies any weightedBackendServices, service must not be set. Conversely if service is set, routeAction cannot contain any  weightedBackendServices. Only one of routeAction or urlRedirect must be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteAction
@@ -6091,7 +6744,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
     [JsonPropertyName("weightedBackendServices")]
     public IList<V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>When this rule is matched, the request is redirected to a URL specified by urlRedirect. If urlRedirect is specified, service or routeAction must not be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesUrlRedirect
@@ -6120,7 +6775,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesUrl
     [JsonPropertyName("stripQuery")]
     public bool? StripQuery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRules
@@ -6149,7 +6806,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRules
     [JsonPropertyName("urlRedirect")]
     public V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesUrlRedirect? UrlRedirect { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcher
@@ -6182,7 +6841,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcher
     [JsonPropertyName("routeRules")]
     public IList<V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRules>? RouteRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProviderTest
@@ -6203,7 +6864,9 @@ public partial class V1beta1RegionURLMapStatusAtProviderTest
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusAtProvider
@@ -6264,7 +6927,9 @@ public partial class V1beta1RegionURLMapStatusAtProvider
     [JsonPropertyName("test")]
     public IList<V1beta1RegionURLMapStatusAtProviderTest>? Test { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatusConditions
@@ -6293,7 +6958,9 @@ public partial class V1beta1RegionURLMapStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegionURLMapStatus defines the observed state of RegionURLMap.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionURLMapStatus
@@ -6310,7 +6977,9 @@ public partial class V1beta1RegionURLMapStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegionURLMap is the Schema for the RegionURLMaps API. UrlMaps are used to route requests to a backend service based on rules that you define for the host and path of an incoming URL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -6340,3 +7009,4 @@ public partial class V1beta1RegionURLMap : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1RegionURLMapStatus? Status { get; set; }
 }
+#nullable disable

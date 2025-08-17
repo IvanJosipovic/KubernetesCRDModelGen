@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.configcontroller.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ConfigControllerInstanceList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1ConfigControllerInstance> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigControllerInstanceSpecManagementConfigFullManagementConfigNetworkRef
@@ -50,7 +53,9 @@ public partial class V1beta1ConfigControllerInstanceSpecManagementConfigFullMana
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Configuration of the full (Autopilot) cluster management</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigControllerInstanceSpecManagementConfigFullManagementConfig
@@ -83,7 +88,9 @@ public partial class V1beta1ConfigControllerInstanceSpecManagementConfigFullMana
     [JsonPropertyName("servicesNamedRange")]
     public string? ServicesNamedRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigControllerInstanceSpecManagementConfigStandardManagementConfigNetworkRef
@@ -100,7 +107,9 @@ public partial class V1beta1ConfigControllerInstanceSpecManagementConfigStandard
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Configuration of the standard (GKE) cluster management</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigControllerInstanceSpecManagementConfigStandardManagementConfig
@@ -133,7 +142,9 @@ public partial class V1beta1ConfigControllerInstanceSpecManagementConfigStandard
     [JsonPropertyName("servicesNamedRange")]
     public string? ServicesNamedRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Configuration of the cluster management</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigControllerInstanceSpecManagementConfig
@@ -146,7 +157,9 @@ public partial class V1beta1ConfigControllerInstanceSpecManagementConfig
     [JsonPropertyName("standardManagementConfig")]
     public V1beta1ConfigControllerInstanceSpecManagementConfigStandardManagementConfig? StandardManagementConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigControllerInstanceSpecProjectRef
@@ -163,7 +176,9 @@ public partial class V1beta1ConfigControllerInstanceSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigControllerInstanceSpec
@@ -188,7 +203,9 @@ public partial class V1beta1ConfigControllerInstanceSpec
     [JsonPropertyName("usePrivateEndpoint")]
     public bool? UsePrivateEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigControllerInstanceStatusConditions
@@ -213,7 +230,9 @@ public partial class V1beta1ConfigControllerInstanceStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigControllerInstanceStatus
@@ -234,7 +253,9 @@ public partial class V1beta1ConfigControllerInstanceStatus
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -264,3 +285,4 @@ public partial class V1beta1ConfigControllerInstance : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1ConfigControllerInstanceStatus? Status { get; set; }
 }
+#nullable disable

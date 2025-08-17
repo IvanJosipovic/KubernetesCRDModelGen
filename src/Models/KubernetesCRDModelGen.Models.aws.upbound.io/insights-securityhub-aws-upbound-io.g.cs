@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.securityhub.aws.upbound.io;
+#nullable enable
 /// <summary>Insight is the Schema for the Insights API. Provides a Security Hub custom insight resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1InsightList : IKubernetesObject<V1ListMeta>, IItems<
     [JsonPropertyName("items")]
     public IList<V1beta1Insight> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersAwsAccountId
@@ -46,7 +49,9 @@ public partial class V1beta1InsightSpecForProviderFiltersAwsAccountId
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersCompanyName
@@ -59,7 +64,9 @@ public partial class V1beta1InsightSpecForProviderFiltersCompanyName
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersComplianceStatus
@@ -72,7 +79,9 @@ public partial class V1beta1InsightSpecForProviderFiltersComplianceStatus
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersConfidence
@@ -89,7 +98,9 @@ public partial class V1beta1InsightSpecForProviderFiltersConfidence
     [JsonPropertyName("lte")]
     public string? Lte { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersCreatedAtDateRange
@@ -102,7 +113,9 @@ public partial class V1beta1InsightSpecForProviderFiltersCreatedAtDateRange
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersCreatedAt
@@ -119,7 +132,9 @@ public partial class V1beta1InsightSpecForProviderFiltersCreatedAt
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersCriticality
@@ -136,7 +151,9 @@ public partial class V1beta1InsightSpecForProviderFiltersCriticality
     [JsonPropertyName("lte")]
     public string? Lte { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersDescription
@@ -149,7 +166,9 @@ public partial class V1beta1InsightSpecForProviderFiltersDescription
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersFindingProviderFieldsConfidence
@@ -166,7 +185,9 @@ public partial class V1beta1InsightSpecForProviderFiltersFindingProviderFieldsCo
     [JsonPropertyName("lte")]
     public string? Lte { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersFindingProviderFieldsCriticality
@@ -183,7 +204,9 @@ public partial class V1beta1InsightSpecForProviderFiltersFindingProviderFieldsCr
     [JsonPropertyName("lte")]
     public string? Lte { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersFindingProviderFieldsRelatedFindingsId
@@ -196,7 +219,9 @@ public partial class V1beta1InsightSpecForProviderFiltersFindingProviderFieldsRe
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersFindingProviderFieldsRelatedFindingsProductArn
@@ -209,7 +234,9 @@ public partial class V1beta1InsightSpecForProviderFiltersFindingProviderFieldsRe
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersFindingProviderFieldsSeverityLabel
@@ -222,7 +249,9 @@ public partial class V1beta1InsightSpecForProviderFiltersFindingProviderFieldsSe
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersFindingProviderFieldsSeverityOriginal
@@ -235,7 +264,9 @@ public partial class V1beta1InsightSpecForProviderFiltersFindingProviderFieldsSe
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersFindingProviderFieldsTypes
@@ -248,7 +279,9 @@ public partial class V1beta1InsightSpecForProviderFiltersFindingProviderFieldsTy
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersFirstObservedAtDateRange
@@ -261,7 +294,9 @@ public partial class V1beta1InsightSpecForProviderFiltersFirstObservedAtDateRang
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersFirstObservedAt
@@ -278,7 +313,9 @@ public partial class V1beta1InsightSpecForProviderFiltersFirstObservedAt
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersGeneratorId
@@ -291,7 +328,9 @@ public partial class V1beta1InsightSpecForProviderFiltersGeneratorId
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersId
@@ -304,7 +343,9 @@ public partial class V1beta1InsightSpecForProviderFiltersId
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersKeyword
@@ -313,7 +354,9 @@ public partial class V1beta1InsightSpecForProviderFiltersKeyword
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersLastObservedAtDateRange
@@ -326,7 +369,9 @@ public partial class V1beta1InsightSpecForProviderFiltersLastObservedAtDateRange
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersLastObservedAt
@@ -343,7 +388,9 @@ public partial class V1beta1InsightSpecForProviderFiltersLastObservedAt
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersMalwareName
@@ -356,7 +403,9 @@ public partial class V1beta1InsightSpecForProviderFiltersMalwareName
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersMalwarePath
@@ -369,7 +418,9 @@ public partial class V1beta1InsightSpecForProviderFiltersMalwarePath
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersMalwareState
@@ -382,7 +433,9 @@ public partial class V1beta1InsightSpecForProviderFiltersMalwareState
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersMalwareType
@@ -395,7 +448,9 @@ public partial class V1beta1InsightSpecForProviderFiltersMalwareType
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersNetworkDestinationDomain
@@ -408,7 +463,9 @@ public partial class V1beta1InsightSpecForProviderFiltersNetworkDestinationDomai
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersNetworkDestinationIpv4
@@ -417,7 +474,9 @@ public partial class V1beta1InsightSpecForProviderFiltersNetworkDestinationIpv4
     [JsonPropertyName("cidr")]
     public string? Cidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersNetworkDestinationIpv6
@@ -426,7 +485,9 @@ public partial class V1beta1InsightSpecForProviderFiltersNetworkDestinationIpv6
     [JsonPropertyName("cidr")]
     public string? Cidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersNetworkDestinationPort
@@ -443,7 +504,9 @@ public partial class V1beta1InsightSpecForProviderFiltersNetworkDestinationPort
     [JsonPropertyName("lte")]
     public string? Lte { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersNetworkDirection
@@ -456,7 +519,9 @@ public partial class V1beta1InsightSpecForProviderFiltersNetworkDirection
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersNetworkProtocol
@@ -469,7 +534,9 @@ public partial class V1beta1InsightSpecForProviderFiltersNetworkProtocol
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersNetworkSourceDomain
@@ -482,7 +549,9 @@ public partial class V1beta1InsightSpecForProviderFiltersNetworkSourceDomain
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersNetworkSourceIpv4
@@ -491,7 +560,9 @@ public partial class V1beta1InsightSpecForProviderFiltersNetworkSourceIpv4
     [JsonPropertyName("cidr")]
     public string? Cidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersNetworkSourceIpv6
@@ -500,7 +571,9 @@ public partial class V1beta1InsightSpecForProviderFiltersNetworkSourceIpv6
     [JsonPropertyName("cidr")]
     public string? Cidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersNetworkSourceMac
@@ -513,7 +586,9 @@ public partial class V1beta1InsightSpecForProviderFiltersNetworkSourceMac
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersNetworkSourcePort
@@ -530,7 +605,9 @@ public partial class V1beta1InsightSpecForProviderFiltersNetworkSourcePort
     [JsonPropertyName("lte")]
     public string? Lte { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersNoteText
@@ -543,7 +620,9 @@ public partial class V1beta1InsightSpecForProviderFiltersNoteText
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersNoteUpdatedAtDateRange
@@ -556,7 +635,9 @@ public partial class V1beta1InsightSpecForProviderFiltersNoteUpdatedAtDateRange
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersNoteUpdatedAt
@@ -573,7 +654,9 @@ public partial class V1beta1InsightSpecForProviderFiltersNoteUpdatedAt
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersNoteUpdatedBy
@@ -586,7 +669,9 @@ public partial class V1beta1InsightSpecForProviderFiltersNoteUpdatedBy
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersProcessLaunchedAtDateRange
@@ -599,7 +684,9 @@ public partial class V1beta1InsightSpecForProviderFiltersProcessLaunchedAtDateRa
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersProcessLaunchedAt
@@ -616,7 +703,9 @@ public partial class V1beta1InsightSpecForProviderFiltersProcessLaunchedAt
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersProcessName
@@ -629,7 +718,9 @@ public partial class V1beta1InsightSpecForProviderFiltersProcessName
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersProcessParentPid
@@ -646,7 +737,9 @@ public partial class V1beta1InsightSpecForProviderFiltersProcessParentPid
     [JsonPropertyName("lte")]
     public string? Lte { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersProcessPath
@@ -659,7 +752,9 @@ public partial class V1beta1InsightSpecForProviderFiltersProcessPath
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersProcessPid
@@ -676,7 +771,9 @@ public partial class V1beta1InsightSpecForProviderFiltersProcessPid
     [JsonPropertyName("lte")]
     public string? Lte { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersProcessTerminatedAtDateRange
@@ -689,7 +786,9 @@ public partial class V1beta1InsightSpecForProviderFiltersProcessTerminatedAtDate
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersProcessTerminatedAt
@@ -706,7 +805,9 @@ public partial class V1beta1InsightSpecForProviderFiltersProcessTerminatedAt
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersProductArn
@@ -719,7 +820,9 @@ public partial class V1beta1InsightSpecForProviderFiltersProductArn
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersProductFields
@@ -736,7 +839,9 @@ public partial class V1beta1InsightSpecForProviderFiltersProductFields
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersProductName
@@ -749,7 +854,9 @@ public partial class V1beta1InsightSpecForProviderFiltersProductName
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersRecommendationText
@@ -762,7 +869,9 @@ public partial class V1beta1InsightSpecForProviderFiltersRecommendationText
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersRecordState
@@ -775,7 +884,9 @@ public partial class V1beta1InsightSpecForProviderFiltersRecordState
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersRelatedFindingsId
@@ -788,7 +899,9 @@ public partial class V1beta1InsightSpecForProviderFiltersRelatedFindingsId
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersRelatedFindingsProductArn
@@ -801,7 +914,9 @@ public partial class V1beta1InsightSpecForProviderFiltersRelatedFindingsProductA
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceIamInstanceProfileArn
@@ -814,7 +929,9 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceI
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceImageId
@@ -827,7 +944,9 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceI
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceIpv4Addresses
@@ -836,7 +955,9 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceI
     [JsonPropertyName("cidr")]
     public string? Cidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceIpv6Addresses
@@ -845,7 +966,9 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceI
     [JsonPropertyName("cidr")]
     public string? Cidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceKeyName
@@ -858,7 +981,9 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceK
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceLaunchedAtDateRange
@@ -871,7 +996,9 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceL
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceLaunchedAt
@@ -888,7 +1015,9 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceL
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceSubnetId
@@ -901,7 +1030,9 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceS
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceType
@@ -914,7 +1045,9 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceT
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceVpcId
@@ -927,7 +1060,9 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsEc2InstanceV
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsIamAccessKeyCreatedAtDateRange
@@ -940,7 +1075,9 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsIamAccessKey
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsIamAccessKeyCreatedAt
@@ -957,7 +1094,9 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsIamAccessKey
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsIamAccessKeyStatus
@@ -970,7 +1109,9 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsIamAccessKey
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsIamAccessKeyUserName
@@ -983,7 +1124,9 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsIamAccessKey
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsS3BucketOwnerId
@@ -996,7 +1139,9 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsS3BucketOwne
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceAwsS3BucketOwnerName
@@ -1009,7 +1154,9 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceAwsS3BucketOwne
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceContainerImageId
@@ -1022,7 +1169,9 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceContainerImageI
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceContainerImageName
@@ -1035,7 +1184,9 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceContainerImageN
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceContainerLaunchedAtDateRange
@@ -1048,7 +1199,9 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceContainerLaunch
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceContainerLaunchedAt
@@ -1065,7 +1218,9 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceContainerLaunch
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceContainerName
@@ -1078,7 +1233,9 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceContainerName
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceDetailsOther
@@ -1095,7 +1252,9 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceDetailsOther
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceId
@@ -1108,7 +1267,9 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceId
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourcePartition
@@ -1121,7 +1282,9 @@ public partial class V1beta1InsightSpecForProviderFiltersResourcePartition
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceRegion
@@ -1134,7 +1297,9 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceRegion
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceTags
@@ -1151,7 +1316,9 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceTags
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersResourceType
@@ -1164,7 +1331,9 @@ public partial class V1beta1InsightSpecForProviderFiltersResourceType
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersSeverityLabel
@@ -1177,7 +1346,9 @@ public partial class V1beta1InsightSpecForProviderFiltersSeverityLabel
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersSourceUrl
@@ -1190,7 +1361,9 @@ public partial class V1beta1InsightSpecForProviderFiltersSourceUrl
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersThreatIntelIndicatorCategory
@@ -1203,7 +1376,9 @@ public partial class V1beta1InsightSpecForProviderFiltersThreatIntelIndicatorCat
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersThreatIntelIndicatorLastObservedAtDateRange
@@ -1216,7 +1391,9 @@ public partial class V1beta1InsightSpecForProviderFiltersThreatIntelIndicatorLas
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersThreatIntelIndicatorLastObservedAt
@@ -1233,7 +1410,9 @@ public partial class V1beta1InsightSpecForProviderFiltersThreatIntelIndicatorLas
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersThreatIntelIndicatorSource
@@ -1246,7 +1425,9 @@ public partial class V1beta1InsightSpecForProviderFiltersThreatIntelIndicatorSou
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersThreatIntelIndicatorSourceUrl
@@ -1259,7 +1440,9 @@ public partial class V1beta1InsightSpecForProviderFiltersThreatIntelIndicatorSou
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersThreatIntelIndicatorType
@@ -1272,7 +1455,9 @@ public partial class V1beta1InsightSpecForProviderFiltersThreatIntelIndicatorTyp
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersThreatIntelIndicatorValue
@@ -1285,7 +1470,9 @@ public partial class V1beta1InsightSpecForProviderFiltersThreatIntelIndicatorVal
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersTitle
@@ -1298,7 +1485,9 @@ public partial class V1beta1InsightSpecForProviderFiltersTitle
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersType
@@ -1311,7 +1500,9 @@ public partial class V1beta1InsightSpecForProviderFiltersType
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersUpdatedAtDateRange
@@ -1324,7 +1515,9 @@ public partial class V1beta1InsightSpecForProviderFiltersUpdatedAtDateRange
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersUpdatedAt
@@ -1341,7 +1534,9 @@ public partial class V1beta1InsightSpecForProviderFiltersUpdatedAt
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersUserDefinedValues
@@ -1358,7 +1553,9 @@ public partial class V1beta1InsightSpecForProviderFiltersUserDefinedValues
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersVerificationState
@@ -1371,7 +1568,9 @@ public partial class V1beta1InsightSpecForProviderFiltersVerificationState
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFiltersWorkflowStatus
@@ -1384,7 +1583,9 @@ public partial class V1beta1InsightSpecForProviderFiltersWorkflowStatus
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProviderFilters
@@ -1741,7 +1942,9 @@ public partial class V1beta1InsightSpecForProviderFilters
     [JsonPropertyName("workflowStatus")]
     public IList<V1beta1InsightSpecForProviderFiltersWorkflowStatus>? WorkflowStatus { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecForProvider
@@ -1762,7 +1965,9 @@ public partial class V1beta1InsightSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersAwsAccountId
@@ -1775,7 +1980,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersAwsAccountId
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersCompanyName
@@ -1788,7 +1995,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersCompanyName
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersComplianceStatus
@@ -1801,7 +2010,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersComplianceStatus
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersConfidence
@@ -1818,7 +2029,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersConfidence
     [JsonPropertyName("lte")]
     public string? Lte { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersCreatedAtDateRange
@@ -1831,7 +2044,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersCreatedAtDateRange
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersCreatedAt
@@ -1848,7 +2063,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersCreatedAt
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersCriticality
@@ -1865,7 +2082,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersCriticality
     [JsonPropertyName("lte")]
     public string? Lte { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersDescription
@@ -1878,7 +2097,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersDescription
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersFindingProviderFieldsConfidence
@@ -1895,7 +2116,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersFindingProviderFieldsC
     [JsonPropertyName("lte")]
     public string? Lte { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersFindingProviderFieldsCriticality
@@ -1912,7 +2135,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersFindingProviderFieldsC
     [JsonPropertyName("lte")]
     public string? Lte { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersFindingProviderFieldsRelatedFindingsId
@@ -1925,7 +2150,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersFindingProviderFieldsR
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersFindingProviderFieldsRelatedFindingsProductArn
@@ -1938,7 +2165,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersFindingProviderFieldsR
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersFindingProviderFieldsSeverityLabel
@@ -1951,7 +2180,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersFindingProviderFieldsS
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersFindingProviderFieldsSeverityOriginal
@@ -1964,7 +2195,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersFindingProviderFieldsS
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersFindingProviderFieldsTypes
@@ -1977,7 +2210,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersFindingProviderFieldsT
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersFirstObservedAtDateRange
@@ -1990,7 +2225,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersFirstObservedAtDateRan
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersFirstObservedAt
@@ -2007,7 +2244,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersFirstObservedAt
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersGeneratorId
@@ -2020,7 +2259,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersGeneratorId
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersId
@@ -2033,7 +2274,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersId
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersKeyword
@@ -2042,7 +2285,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersKeyword
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersLastObservedAtDateRange
@@ -2055,7 +2300,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersLastObservedAtDateRang
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersLastObservedAt
@@ -2072,7 +2319,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersLastObservedAt
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersMalwareName
@@ -2085,7 +2334,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersMalwareName
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersMalwarePath
@@ -2098,7 +2349,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersMalwarePath
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersMalwareState
@@ -2111,7 +2364,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersMalwareState
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersMalwareType
@@ -2124,7 +2379,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersMalwareType
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersNetworkDestinationDomain
@@ -2137,7 +2394,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersNetworkDestinationDoma
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersNetworkDestinationIpv4
@@ -2146,7 +2405,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersNetworkDestinationIpv4
     [JsonPropertyName("cidr")]
     public string? Cidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersNetworkDestinationIpv6
@@ -2155,7 +2416,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersNetworkDestinationIpv6
     [JsonPropertyName("cidr")]
     public string? Cidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersNetworkDestinationPort
@@ -2172,7 +2435,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersNetworkDestinationPort
     [JsonPropertyName("lte")]
     public string? Lte { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersNetworkDirection
@@ -2185,7 +2450,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersNetworkDirection
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersNetworkProtocol
@@ -2198,7 +2465,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersNetworkProtocol
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersNetworkSourceDomain
@@ -2211,7 +2480,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersNetworkSourceDomain
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersNetworkSourceIpv4
@@ -2220,7 +2491,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersNetworkSourceIpv4
     [JsonPropertyName("cidr")]
     public string? Cidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersNetworkSourceIpv6
@@ -2229,7 +2502,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersNetworkSourceIpv6
     [JsonPropertyName("cidr")]
     public string? Cidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersNetworkSourceMac
@@ -2242,7 +2517,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersNetworkSourceMac
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersNetworkSourcePort
@@ -2259,7 +2536,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersNetworkSourcePort
     [JsonPropertyName("lte")]
     public string? Lte { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersNoteText
@@ -2272,7 +2551,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersNoteText
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersNoteUpdatedAtDateRange
@@ -2285,7 +2566,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersNoteUpdatedAtDateRange
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersNoteUpdatedAt
@@ -2302,7 +2585,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersNoteUpdatedAt
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersNoteUpdatedBy
@@ -2315,7 +2600,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersNoteUpdatedBy
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersProcessLaunchedAtDateRange
@@ -2328,7 +2615,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersProcessLaunchedAtDateR
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersProcessLaunchedAt
@@ -2345,7 +2634,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersProcessLaunchedAt
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersProcessName
@@ -2358,7 +2649,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersProcessName
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersProcessParentPid
@@ -2375,7 +2668,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersProcessParentPid
     [JsonPropertyName("lte")]
     public string? Lte { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersProcessPath
@@ -2388,7 +2683,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersProcessPath
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersProcessPid
@@ -2405,7 +2702,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersProcessPid
     [JsonPropertyName("lte")]
     public string? Lte { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersProcessTerminatedAtDateRange
@@ -2418,7 +2717,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersProcessTerminatedAtDat
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersProcessTerminatedAt
@@ -2435,7 +2736,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersProcessTerminatedAt
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersProductArn
@@ -2448,7 +2751,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersProductArn
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersProductFields
@@ -2465,7 +2770,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersProductFields
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersProductName
@@ -2478,7 +2785,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersProductName
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersRecommendationText
@@ -2491,7 +2800,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersRecommendationText
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersRecordState
@@ -2504,7 +2815,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersRecordState
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersRelatedFindingsId
@@ -2517,7 +2830,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersRelatedFindingsId
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersRelatedFindingsProductArn
@@ -2530,7 +2845,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersRelatedFindingsProduct
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2InstanceIamInstanceProfileArn
@@ -2543,7 +2860,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2Instance
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2InstanceImageId
@@ -2556,7 +2875,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2Instance
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2InstanceIpv4Addresses
@@ -2565,7 +2886,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2Instance
     [JsonPropertyName("cidr")]
     public string? Cidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2InstanceIpv6Addresses
@@ -2574,7 +2897,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2Instance
     [JsonPropertyName("cidr")]
     public string? Cidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2InstanceKeyName
@@ -2587,7 +2912,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2Instance
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2InstanceLaunchedAtDateRange
@@ -2600,7 +2927,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2Instance
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2InstanceLaunchedAt
@@ -2617,7 +2946,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2Instance
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2InstanceSubnetId
@@ -2630,7 +2961,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2Instance
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2InstanceType
@@ -2643,7 +2976,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2Instance
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2InstanceVpcId
@@ -2656,7 +2991,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsEc2Instance
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsIamAccessKeyCreatedAtDateRange
@@ -2669,7 +3006,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsIamAccessKe
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsIamAccessKeyCreatedAt
@@ -2686,7 +3025,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsIamAccessKe
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsIamAccessKeyStatus
@@ -2699,7 +3040,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsIamAccessKe
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsIamAccessKeyUserName
@@ -2712,7 +3055,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsIamAccessKe
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsS3BucketOwnerId
@@ -2725,7 +3070,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsS3BucketOwn
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsS3BucketOwnerName
@@ -2738,7 +3085,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceAwsS3BucketOwn
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceContainerImageId
@@ -2751,7 +3100,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceContainerImage
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceContainerImageName
@@ -2764,7 +3115,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceContainerImage
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceContainerLaunchedAtDateRange
@@ -2777,7 +3130,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceContainerLaunc
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceContainerLaunchedAt
@@ -2794,7 +3149,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceContainerLaunc
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceContainerName
@@ -2807,7 +3164,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceContainerName
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceDetailsOther
@@ -2824,7 +3183,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceDetailsOther
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceId
@@ -2837,7 +3198,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceId
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourcePartition
@@ -2850,7 +3213,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourcePartition
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceRegion
@@ -2863,7 +3228,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceRegion
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceTags
@@ -2880,7 +3247,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceTags
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersResourceType
@@ -2893,7 +3262,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersResourceType
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersSeverityLabel
@@ -2906,7 +3277,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersSeverityLabel
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersSourceUrl
@@ -2919,7 +3292,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersSourceUrl
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersThreatIntelIndicatorCategory
@@ -2932,7 +3307,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersThreatIntelIndicatorCa
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersThreatIntelIndicatorLastObservedAtDateRange
@@ -2945,7 +3322,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersThreatIntelIndicatorLa
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersThreatIntelIndicatorLastObservedAt
@@ -2962,7 +3341,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersThreatIntelIndicatorLa
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersThreatIntelIndicatorSource
@@ -2975,7 +3356,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersThreatIntelIndicatorSo
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersThreatIntelIndicatorSourceUrl
@@ -2988,7 +3371,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersThreatIntelIndicatorSo
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersThreatIntelIndicatorType
@@ -3001,7 +3386,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersThreatIntelIndicatorTy
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersThreatIntelIndicatorValue
@@ -3014,7 +3401,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersThreatIntelIndicatorVa
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersTitle
@@ -3027,7 +3416,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersTitle
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersType
@@ -3040,7 +3431,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersType
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersUpdatedAtDateRange
@@ -3053,7 +3446,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersUpdatedAtDateRange
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersUpdatedAt
@@ -3070,7 +3465,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersUpdatedAt
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersUserDefinedValues
@@ -3087,7 +3484,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersUserDefinedValues
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersVerificationState
@@ -3100,7 +3499,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersVerificationState
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFiltersWorkflowStatus
@@ -3113,7 +3514,9 @@ public partial class V1beta1InsightSpecInitProviderFiltersWorkflowStatus
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProviderFilters
@@ -3470,7 +3873,9 @@ public partial class V1beta1InsightSpecInitProviderFilters
     [JsonPropertyName("workflowStatus")]
     public IList<V1beta1InsightSpecInitProviderFiltersWorkflowStatus>? WorkflowStatus { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecInitProvider
@@ -3487,7 +3892,9 @@ public partial class V1beta1InsightSpecInitProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecProviderConfigRefPolicy
@@ -3500,7 +3907,9 @@ public partial class V1beta1InsightSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecProviderConfigRef
@@ -3513,7 +3922,9 @@ public partial class V1beta1InsightSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1InsightSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpecWriteConnectionSecretToRef
@@ -3526,7 +3937,9 @@ public partial class V1beta1InsightSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InsightSpec defines the desired state of Insight</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightSpec
@@ -3555,7 +3968,9 @@ public partial class V1beta1InsightSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1InsightSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersAwsAccountId
@@ -3568,7 +3983,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersAwsAccountId
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersCompanyName
@@ -3581,7 +3998,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersCompanyName
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersComplianceStatus
@@ -3594,7 +4013,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersComplianceStatus
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersConfidence
@@ -3611,7 +4032,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersConfidence
     [JsonPropertyName("lte")]
     public string? Lte { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersCreatedAtDateRange
@@ -3624,7 +4047,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersCreatedAtDateRange
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersCreatedAt
@@ -3641,7 +4066,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersCreatedAt
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersCriticality
@@ -3658,7 +4085,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersCriticality
     [JsonPropertyName("lte")]
     public string? Lte { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersDescription
@@ -3671,7 +4100,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersDescription
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersFindingProviderFieldsConfidence
@@ -3688,7 +4119,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersFindingProviderFieldsC
     [JsonPropertyName("lte")]
     public string? Lte { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersFindingProviderFieldsCriticality
@@ -3705,7 +4138,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersFindingProviderFieldsC
     [JsonPropertyName("lte")]
     public string? Lte { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersFindingProviderFieldsRelatedFindingsId
@@ -3718,7 +4153,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersFindingProviderFieldsR
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersFindingProviderFieldsRelatedFindingsProductArn
@@ -3731,7 +4168,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersFindingProviderFieldsR
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersFindingProviderFieldsSeverityLabel
@@ -3744,7 +4183,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersFindingProviderFieldsS
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersFindingProviderFieldsSeverityOriginal
@@ -3757,7 +4198,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersFindingProviderFieldsS
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersFindingProviderFieldsTypes
@@ -3770,7 +4213,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersFindingProviderFieldsT
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersFirstObservedAtDateRange
@@ -3783,7 +4228,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersFirstObservedAtDateRan
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersFirstObservedAt
@@ -3800,7 +4247,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersFirstObservedAt
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersGeneratorId
@@ -3813,7 +4262,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersGeneratorId
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersId
@@ -3826,7 +4277,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersId
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersKeyword
@@ -3835,7 +4288,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersKeyword
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersLastObservedAtDateRange
@@ -3848,7 +4303,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersLastObservedAtDateRang
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersLastObservedAt
@@ -3865,7 +4322,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersLastObservedAt
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersMalwareName
@@ -3878,7 +4337,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersMalwareName
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersMalwarePath
@@ -3891,7 +4352,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersMalwarePath
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersMalwareState
@@ -3904,7 +4367,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersMalwareState
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersMalwareType
@@ -3917,7 +4382,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersMalwareType
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersNetworkDestinationDomain
@@ -3930,7 +4397,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersNetworkDestinationDoma
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersNetworkDestinationIpv4
@@ -3939,7 +4408,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersNetworkDestinationIpv4
     [JsonPropertyName("cidr")]
     public string? Cidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersNetworkDestinationIpv6
@@ -3948,7 +4419,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersNetworkDestinationIpv6
     [JsonPropertyName("cidr")]
     public string? Cidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersNetworkDestinationPort
@@ -3965,7 +4438,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersNetworkDestinationPort
     [JsonPropertyName("lte")]
     public string? Lte { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersNetworkDirection
@@ -3978,7 +4453,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersNetworkDirection
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersNetworkProtocol
@@ -3991,7 +4468,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersNetworkProtocol
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersNetworkSourceDomain
@@ -4004,7 +4483,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersNetworkSourceDomain
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersNetworkSourceIpv4
@@ -4013,7 +4494,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersNetworkSourceIpv4
     [JsonPropertyName("cidr")]
     public string? Cidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersNetworkSourceIpv6
@@ -4022,7 +4505,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersNetworkSourceIpv6
     [JsonPropertyName("cidr")]
     public string? Cidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersNetworkSourceMac
@@ -4035,7 +4520,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersNetworkSourceMac
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersNetworkSourcePort
@@ -4052,7 +4539,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersNetworkSourcePort
     [JsonPropertyName("lte")]
     public string? Lte { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersNoteText
@@ -4065,7 +4554,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersNoteText
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersNoteUpdatedAtDateRange
@@ -4078,7 +4569,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersNoteUpdatedAtDateRange
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersNoteUpdatedAt
@@ -4095,7 +4588,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersNoteUpdatedAt
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersNoteUpdatedBy
@@ -4108,7 +4603,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersNoteUpdatedBy
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersProcessLaunchedAtDateRange
@@ -4121,7 +4618,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersProcessLaunchedAtDateR
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersProcessLaunchedAt
@@ -4138,7 +4637,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersProcessLaunchedAt
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersProcessName
@@ -4151,7 +4652,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersProcessName
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersProcessParentPid
@@ -4168,7 +4671,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersProcessParentPid
     [JsonPropertyName("lte")]
     public string? Lte { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersProcessPath
@@ -4181,7 +4686,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersProcessPath
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersProcessPid
@@ -4198,7 +4705,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersProcessPid
     [JsonPropertyName("lte")]
     public string? Lte { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersProcessTerminatedAtDateRange
@@ -4211,7 +4720,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersProcessTerminatedAtDat
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersProcessTerminatedAt
@@ -4228,7 +4739,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersProcessTerminatedAt
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersProductArn
@@ -4241,7 +4754,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersProductArn
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersProductFields
@@ -4258,7 +4773,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersProductFields
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersProductName
@@ -4271,7 +4788,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersProductName
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersRecommendationText
@@ -4284,7 +4803,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersRecommendationText
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersRecordState
@@ -4297,7 +4818,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersRecordState
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersRelatedFindingsId
@@ -4310,7 +4833,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersRelatedFindingsId
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersRelatedFindingsProductArn
@@ -4323,7 +4848,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersRelatedFindingsProduct
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2InstanceIamInstanceProfileArn
@@ -4336,7 +4863,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2Instance
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2InstanceImageId
@@ -4349,7 +4878,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2Instance
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2InstanceIpv4Addresses
@@ -4358,7 +4889,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2Instance
     [JsonPropertyName("cidr")]
     public string? Cidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2InstanceIpv6Addresses
@@ -4367,7 +4900,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2Instance
     [JsonPropertyName("cidr")]
     public string? Cidr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2InstanceKeyName
@@ -4380,7 +4915,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2Instance
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2InstanceLaunchedAtDateRange
@@ -4393,7 +4930,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2Instance
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2InstanceLaunchedAt
@@ -4410,7 +4949,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2Instance
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2InstanceSubnetId
@@ -4423,7 +4964,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2Instance
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2InstanceType
@@ -4436,7 +4979,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2Instance
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2InstanceVpcId
@@ -4449,7 +4994,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsEc2Instance
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsIamAccessKeyCreatedAtDateRange
@@ -4462,7 +5009,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsIamAccessKe
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsIamAccessKeyCreatedAt
@@ -4479,7 +5028,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsIamAccessKe
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsIamAccessKeyStatus
@@ -4492,7 +5043,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsIamAccessKe
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsIamAccessKeyUserName
@@ -4505,7 +5058,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsIamAccessKe
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsS3BucketOwnerId
@@ -4518,7 +5073,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsS3BucketOwn
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsS3BucketOwnerName
@@ -4531,7 +5088,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceAwsS3BucketOwn
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceContainerImageId
@@ -4544,7 +5103,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceContainerImage
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceContainerImageName
@@ -4557,7 +5118,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceContainerImage
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceContainerLaunchedAtDateRange
@@ -4570,7 +5133,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceContainerLaunc
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceContainerLaunchedAt
@@ -4587,7 +5152,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceContainerLaunc
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceContainerName
@@ -4600,7 +5167,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceContainerName
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceDetailsOther
@@ -4617,7 +5186,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceDetailsOther
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceId
@@ -4630,7 +5201,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceId
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourcePartition
@@ -4643,7 +5216,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourcePartition
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceRegion
@@ -4656,7 +5231,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceRegion
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceTags
@@ -4673,7 +5250,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceTags
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersResourceType
@@ -4686,7 +5265,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersResourceType
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersSeverityLabel
@@ -4699,7 +5280,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersSeverityLabel
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersSourceUrl
@@ -4712,7 +5295,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersSourceUrl
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersThreatIntelIndicatorCategory
@@ -4725,7 +5310,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersThreatIntelIndicatorCa
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersThreatIntelIndicatorLastObservedAtDateRange
@@ -4738,7 +5325,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersThreatIntelIndicatorLa
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersThreatIntelIndicatorLastObservedAt
@@ -4755,7 +5344,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersThreatIntelIndicatorLa
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersThreatIntelIndicatorSource
@@ -4768,7 +5359,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersThreatIntelIndicatorSo
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersThreatIntelIndicatorSourceUrl
@@ -4781,7 +5374,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersThreatIntelIndicatorSo
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersThreatIntelIndicatorType
@@ -4794,7 +5389,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersThreatIntelIndicatorTy
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersThreatIntelIndicatorValue
@@ -4807,7 +5404,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersThreatIntelIndicatorVa
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersTitle
@@ -4820,7 +5419,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersTitle
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersType
@@ -4833,7 +5434,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersType
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersUpdatedAtDateRange
@@ -4846,7 +5449,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersUpdatedAtDateRange
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersUpdatedAt
@@ -4863,7 +5468,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersUpdatedAt
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersUserDefinedValues
@@ -4880,7 +5487,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersUserDefinedValues
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersVerificationState
@@ -4893,7 +5502,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersVerificationState
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFiltersWorkflowStatus
@@ -4906,7 +5517,9 @@ public partial class V1beta1InsightStatusAtProviderFiltersWorkflowStatus
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProviderFilters
@@ -5263,7 +5876,9 @@ public partial class V1beta1InsightStatusAtProviderFilters
     [JsonPropertyName("workflowStatus")]
     public IList<V1beta1InsightStatusAtProviderFiltersWorkflowStatus>? WorkflowStatus { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusAtProvider
@@ -5292,7 +5907,9 @@ public partial class V1beta1InsightStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatusConditions
@@ -5321,7 +5938,9 @@ public partial class V1beta1InsightStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InsightStatus defines the observed state of Insight.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InsightStatus
@@ -5338,7 +5957,9 @@ public partial class V1beta1InsightStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Insight is the Schema for the Insights API. Provides a Security Hub custom insight resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -5368,3 +5989,4 @@ public partial class V1beta1Insight : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     [JsonPropertyName("status")]
     public V1beta1InsightStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ssm.aws.m.upbound.io;
+#nullable enable
 /// <summary>DefaultPatchBaseline is the Schema for the DefaultPatchBaselines API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DefaultPatchBaselineList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1DefaultPatchBaseline> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultPatchBaselineSpecForProviderBaselineIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1DefaultPatchBaselineSpecForProviderBaselineIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PatchBaseline in ssm to populate baselineId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultPatchBaselineSpecForProviderBaselineIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1DefaultPatchBaselineSpecForProviderBaselineIdRef
     [JsonPropertyName("policy")]
     public V1beta1DefaultPatchBaselineSpecForProviderBaselineIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultPatchBaselineSpecForProviderBaselineIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1DefaultPatchBaselineSpecForProviderBaselineIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PatchBaseline in ssm to populate baselineId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultPatchBaselineSpecForProviderBaselineIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1DefaultPatchBaselineSpecForProviderBaselineIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1DefaultPatchBaselineSpecForProviderBaselineIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultPatchBaselineSpecForProviderOperatingSystemRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1DefaultPatchBaselineSpecForProviderOperatingSystemRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PatchBaseline in ssm to populate operatingSystem.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultPatchBaselineSpecForProviderOperatingSystemRef
@@ -127,7 +140,9 @@ public partial class V1beta1DefaultPatchBaselineSpecForProviderOperatingSystemRe
     [JsonPropertyName("policy")]
     public V1beta1DefaultPatchBaselineSpecForProviderOperatingSystemRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultPatchBaselineSpecForProviderOperatingSystemSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1DefaultPatchBaselineSpecForProviderOperatingSystemSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PatchBaseline in ssm to populate operatingSystem.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultPatchBaselineSpecForProviderOperatingSystemSelector
@@ -161,7 +178,9 @@ public partial class V1beta1DefaultPatchBaselineSpecForProviderOperatingSystemSe
     [JsonPropertyName("policy")]
     public V1beta1DefaultPatchBaselineSpecForProviderOperatingSystemSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultPatchBaselineSpecForProvider
@@ -194,7 +213,9 @@ public partial class V1beta1DefaultPatchBaselineSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultPatchBaselineSpecInitProviderBaselineIdRefPolicy
@@ -207,7 +228,9 @@ public partial class V1beta1DefaultPatchBaselineSpecInitProviderBaselineIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PatchBaseline in ssm to populate baselineId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultPatchBaselineSpecInitProviderBaselineIdRef
@@ -224,7 +247,9 @@ public partial class V1beta1DefaultPatchBaselineSpecInitProviderBaselineIdRef
     [JsonPropertyName("policy")]
     public V1beta1DefaultPatchBaselineSpecInitProviderBaselineIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultPatchBaselineSpecInitProviderBaselineIdSelectorPolicy
@@ -237,7 +262,9 @@ public partial class V1beta1DefaultPatchBaselineSpecInitProviderBaselineIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PatchBaseline in ssm to populate baselineId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultPatchBaselineSpecInitProviderBaselineIdSelector
@@ -258,7 +285,9 @@ public partial class V1beta1DefaultPatchBaselineSpecInitProviderBaselineIdSelect
     [JsonPropertyName("policy")]
     public V1beta1DefaultPatchBaselineSpecInitProviderBaselineIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultPatchBaselineSpecInitProviderOperatingSystemRefPolicy
@@ -271,7 +300,9 @@ public partial class V1beta1DefaultPatchBaselineSpecInitProviderOperatingSystemR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PatchBaseline in ssm to populate operatingSystem.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultPatchBaselineSpecInitProviderOperatingSystemRef
@@ -288,7 +319,9 @@ public partial class V1beta1DefaultPatchBaselineSpecInitProviderOperatingSystemR
     [JsonPropertyName("policy")]
     public V1beta1DefaultPatchBaselineSpecInitProviderOperatingSystemRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultPatchBaselineSpecInitProviderOperatingSystemSelectorPolicy
@@ -301,7 +334,9 @@ public partial class V1beta1DefaultPatchBaselineSpecInitProviderOperatingSystemS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PatchBaseline in ssm to populate operatingSystem.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultPatchBaselineSpecInitProviderOperatingSystemSelector
@@ -322,7 +357,9 @@ public partial class V1beta1DefaultPatchBaselineSpecInitProviderOperatingSystemS
     [JsonPropertyName("policy")]
     public V1beta1DefaultPatchBaselineSpecInitProviderOperatingSystemSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultPatchBaselineSpecInitProvider
@@ -351,7 +388,9 @@ public partial class V1beta1DefaultPatchBaselineSpecInitProvider
     [JsonPropertyName("operatingSystemSelector")]
     public V1beta1DefaultPatchBaselineSpecInitProviderOperatingSystemSelector? OperatingSystemSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultPatchBaselineSpecProviderConfigRef
@@ -364,7 +403,9 @@ public partial class V1beta1DefaultPatchBaselineSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultPatchBaselineSpecWriteConnectionSecretToRef
@@ -373,7 +414,9 @@ public partial class V1beta1DefaultPatchBaselineSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DefaultPatchBaselineSpec defines the desired state of DefaultPatchBaseline</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultPatchBaselineSpec
@@ -398,7 +441,9 @@ public partial class V1beta1DefaultPatchBaselineSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DefaultPatchBaselineSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultPatchBaselineStatusAtProvider
@@ -419,7 +464,9 @@ public partial class V1beta1DefaultPatchBaselineStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultPatchBaselineStatusConditions
@@ -448,7 +495,9 @@ public partial class V1beta1DefaultPatchBaselineStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DefaultPatchBaselineStatus defines the observed state of DefaultPatchBaseline.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultPatchBaselineStatus
@@ -465,7 +514,9 @@ public partial class V1beta1DefaultPatchBaselineStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DefaultPatchBaseline is the Schema for the DefaultPatchBaselines API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -495,3 +546,4 @@ public partial class V1beta1DefaultPatchBaseline : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1DefaultPatchBaselineStatus? Status { get; set; }
 }
+#nullable disable

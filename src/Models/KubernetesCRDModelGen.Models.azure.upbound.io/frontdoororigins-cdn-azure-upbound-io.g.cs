@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cdn.azure.upbound.io;
+#nullable enable
 /// <summary>FrontdoorOrigin is the Schema for the FrontdoorOrigins API. Manages a Front Door (standard/premium) Origin.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FrontdoorOriginList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1FrontdoorOrigin> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecForProviderCdnFrontdoorOriginGroupIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1FrontdoorOriginSpecForProviderCdnFrontdoorOriginGrou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a FrontdoorOriginGroup in cdn to populate cdnFrontdoorOriginGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecForProviderCdnFrontdoorOriginGroupIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1FrontdoorOriginSpecForProviderCdnFrontdoorOriginGrou
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorOriginSpecForProviderCdnFrontdoorOriginGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecForProviderCdnFrontdoorOriginGroupIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1FrontdoorOriginSpecForProviderCdnFrontdoorOriginGrou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a FrontdoorOriginGroup in cdn to populate cdnFrontdoorOriginGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecForProviderCdnFrontdoorOriginGroupIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1FrontdoorOriginSpecForProviderCdnFrontdoorOriginGrou
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorOriginSpecForProviderCdnFrontdoorOriginGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecForProviderHostNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1FrontdoorOriginSpecForProviderHostNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate hostName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecForProviderHostNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1FrontdoorOriginSpecForProviderHostNameRef
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorOriginSpecForProviderHostNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecForProviderHostNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1FrontdoorOriginSpecForProviderHostNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate hostName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecForProviderHostNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1FrontdoorOriginSpecForProviderHostNameSelector
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorOriginSpecForProviderHostNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecForProviderOriginHostHeaderRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1FrontdoorOriginSpecForProviderOriginHostHeaderRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate originHostHeader.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecForProviderOriginHostHeaderRef
@@ -171,7 +192,9 @@ public partial class V1beta1FrontdoorOriginSpecForProviderOriginHostHeaderRef
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorOriginSpecForProviderOriginHostHeaderRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecForProviderOriginHostHeaderSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1FrontdoorOriginSpecForProviderOriginHostHeaderSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate originHostHeader.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecForProviderOriginHostHeaderSelector
@@ -201,7 +226,9 @@ public partial class V1beta1FrontdoorOriginSpecForProviderOriginHostHeaderSelect
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorOriginSpecForProviderOriginHostHeaderSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkLocationRefPolicy
@@ -214,7 +241,9 @@ public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkLocationRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate location.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkLocationRef
@@ -227,7 +256,9 @@ public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkLocationRef
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorOriginSpecForProviderPrivateLinkLocationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkLocationSelectorPolicy
@@ -240,7 +271,9 @@ public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkLocationSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate location.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkLocationSelector
@@ -257,7 +290,9 @@ public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkLocationSel
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorOriginSpecForProviderPrivateLinkLocationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkPrivateLinkTargetIdRefPolicy
@@ -270,7 +305,9 @@ public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkPrivateLink
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate privateLinkTargetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkPrivateLinkTargetIdRef
@@ -283,7 +320,9 @@ public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkPrivateLink
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorOriginSpecForProviderPrivateLinkPrivateLinkTargetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkPrivateLinkTargetIdSelectorPolicy
@@ -296,7 +335,9 @@ public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkPrivateLink
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate privateLinkTargetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkPrivateLinkTargetIdSelector
@@ -313,7 +354,9 @@ public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkPrivateLink
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorOriginSpecForProviderPrivateLinkPrivateLinkTargetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLink
@@ -350,7 +393,9 @@ public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLink
     [JsonPropertyName("targetType")]
     public string? TargetType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecForProvider
@@ -419,7 +464,9 @@ public partial class V1beta1FrontdoorOriginSpecForProvider
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecInitProviderHostNameRefPolicy
@@ -432,7 +479,9 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderHostNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate hostName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecInitProviderHostNameRef
@@ -445,7 +494,9 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderHostNameRef
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorOriginSpecInitProviderHostNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecInitProviderHostNameSelectorPolicy
@@ -458,7 +509,9 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderHostNameSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate hostName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecInitProviderHostNameSelector
@@ -475,7 +528,9 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderHostNameSelector
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorOriginSpecInitProviderHostNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecInitProviderOriginHostHeaderRefPolicy
@@ -488,7 +543,9 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderOriginHostHeaderRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate originHostHeader.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecInitProviderOriginHostHeaderRef
@@ -501,7 +558,9 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderOriginHostHeaderRef
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorOriginSpecInitProviderOriginHostHeaderRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecInitProviderOriginHostHeaderSelectorPolicy
@@ -514,7 +573,9 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderOriginHostHeaderSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate originHostHeader.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecInitProviderOriginHostHeaderSelector
@@ -531,7 +592,9 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderOriginHostHeaderSelec
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorOriginSpecInitProviderOriginHostHeaderSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkLocationRefPolicy
@@ -544,7 +607,9 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkLocationRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate location.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkLocationRef
@@ -557,7 +622,9 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkLocationRe
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorOriginSpecInitProviderPrivateLinkLocationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkLocationSelectorPolicy
@@ -570,7 +637,9 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkLocationSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate location.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkLocationSelector
@@ -587,7 +656,9 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkLocationSe
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorOriginSpecInitProviderPrivateLinkLocationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkPrivateLinkTargetIdRefPolicy
@@ -600,7 +671,9 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkPrivateLin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate privateLinkTargetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkPrivateLinkTargetIdRef
@@ -613,7 +686,9 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkPrivateLin
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorOriginSpecInitProviderPrivateLinkPrivateLinkTargetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkPrivateLinkTargetIdSelectorPolicy
@@ -626,7 +701,9 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkPrivateLin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate privateLinkTargetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkPrivateLinkTargetIdSelector
@@ -643,7 +720,9 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkPrivateLin
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorOriginSpecInitProviderPrivateLinkPrivateLinkTargetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLink
@@ -680,7 +759,9 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLink
     [JsonPropertyName("targetType")]
     public string? TargetType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecInitProvider
@@ -737,7 +818,9 @@ public partial class V1beta1FrontdoorOriginSpecInitProvider
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecProviderConfigRefPolicy
@@ -750,7 +833,9 @@ public partial class V1beta1FrontdoorOriginSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecProviderConfigRef
@@ -763,7 +848,9 @@ public partial class V1beta1FrontdoorOriginSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorOriginSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpecWriteConnectionSecretToRef
@@ -776,7 +863,9 @@ public partial class V1beta1FrontdoorOriginSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FrontdoorOriginSpec defines the desired state of FrontdoorOrigin</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginSpec
@@ -805,7 +894,9 @@ public partial class V1beta1FrontdoorOriginSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1FrontdoorOriginSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginStatusAtProviderPrivateLink
@@ -826,7 +917,9 @@ public partial class V1beta1FrontdoorOriginStatusAtProviderPrivateLink
     [JsonPropertyName("targetType")]
     public string? TargetType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginStatusAtProvider
@@ -875,7 +968,9 @@ public partial class V1beta1FrontdoorOriginStatusAtProvider
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginStatusConditions
@@ -904,7 +999,9 @@ public partial class V1beta1FrontdoorOriginStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FrontdoorOriginStatus defines the observed state of FrontdoorOrigin.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorOriginStatus
@@ -921,7 +1018,9 @@ public partial class V1beta1FrontdoorOriginStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FrontdoorOrigin is the Schema for the FrontdoorOrigins API. Manages a Front Door (standard/premium) Origin.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -951,3 +1050,4 @@ public partial class V1beta1FrontdoorOrigin : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1FrontdoorOriginStatus? Status { get; set; }
 }
+#nullable disable

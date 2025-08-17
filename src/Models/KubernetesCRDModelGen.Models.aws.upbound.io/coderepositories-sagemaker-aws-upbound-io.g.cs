@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sagemaker.aws.upbound.io;
+#nullable enable
 /// <summary>CodeRepository is the Schema for the CodeRepositorys API. Provides a SageMaker AI Code Repository resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1CodeRepositoryList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1CodeRepository> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeRepositorySpecForProviderGitConfigSecretArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1CodeRepositorySpecForProviderGitConfigSecretArnRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Secret in secretsmanager to populate secretArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeRepositorySpecForProviderGitConfigSecretArnRef
@@ -59,7 +64,9 @@ public partial class V1beta1CodeRepositorySpecForProviderGitConfigSecretArnRef
     [JsonPropertyName("policy")]
     public V1beta1CodeRepositorySpecForProviderGitConfigSecretArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeRepositorySpecForProviderGitConfigSecretArnSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1CodeRepositorySpecForProviderGitConfigSecretArnSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Secret in secretsmanager to populate secretArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeRepositorySpecForProviderGitConfigSecretArnSelector
@@ -89,7 +98,9 @@ public partial class V1beta1CodeRepositorySpecForProviderGitConfigSecretArnSelec
     [JsonPropertyName("policy")]
     public V1beta1CodeRepositorySpecForProviderGitConfigSecretArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeRepositorySpecForProviderGitConfig
@@ -114,7 +125,9 @@ public partial class V1beta1CodeRepositorySpecForProviderGitConfig
     [JsonPropertyName("secretArnSelector")]
     public V1beta1CodeRepositorySpecForProviderGitConfigSecretArnSelector? SecretArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeRepositorySpecForProvider
@@ -131,7 +144,9 @@ public partial class V1beta1CodeRepositorySpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeRepositorySpecInitProviderGitConfigSecretArnRefPolicy
@@ -144,7 +159,9 @@ public partial class V1beta1CodeRepositorySpecInitProviderGitConfigSecretArnRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Secret in secretsmanager to populate secretArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeRepositorySpecInitProviderGitConfigSecretArnRef
@@ -157,7 +174,9 @@ public partial class V1beta1CodeRepositorySpecInitProviderGitConfigSecretArnRef
     [JsonPropertyName("policy")]
     public V1beta1CodeRepositorySpecInitProviderGitConfigSecretArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeRepositorySpecInitProviderGitConfigSecretArnSelectorPolicy
@@ -170,7 +189,9 @@ public partial class V1beta1CodeRepositorySpecInitProviderGitConfigSecretArnSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Secret in secretsmanager to populate secretArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeRepositorySpecInitProviderGitConfigSecretArnSelector
@@ -187,7 +208,9 @@ public partial class V1beta1CodeRepositorySpecInitProviderGitConfigSecretArnSele
     [JsonPropertyName("policy")]
     public V1beta1CodeRepositorySpecInitProviderGitConfigSecretArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeRepositorySpecInitProviderGitConfig
@@ -212,7 +235,9 @@ public partial class V1beta1CodeRepositorySpecInitProviderGitConfig
     [JsonPropertyName("secretArnSelector")]
     public V1beta1CodeRepositorySpecInitProviderGitConfigSecretArnSelector? SecretArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeRepositorySpecInitProvider
@@ -225,7 +250,9 @@ public partial class V1beta1CodeRepositorySpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeRepositorySpecProviderConfigRefPolicy
@@ -238,7 +265,9 @@ public partial class V1beta1CodeRepositorySpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeRepositorySpecProviderConfigRef
@@ -251,7 +280,9 @@ public partial class V1beta1CodeRepositorySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1CodeRepositorySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeRepositorySpecWriteConnectionSecretToRef
@@ -264,7 +295,9 @@ public partial class V1beta1CodeRepositorySpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CodeRepositorySpec defines the desired state of CodeRepository</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeRepositorySpec
@@ -293,7 +326,9 @@ public partial class V1beta1CodeRepositorySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1CodeRepositorySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeRepositoryStatusAtProviderGitConfig
@@ -310,7 +345,9 @@ public partial class V1beta1CodeRepositoryStatusAtProviderGitConfig
     [JsonPropertyName("secretArn")]
     public string? SecretArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeRepositoryStatusAtProvider
@@ -339,7 +376,9 @@ public partial class V1beta1CodeRepositoryStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeRepositoryStatusConditions
@@ -368,7 +407,9 @@ public partial class V1beta1CodeRepositoryStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CodeRepositoryStatus defines the observed state of CodeRepository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeRepositoryStatus
@@ -385,7 +426,9 @@ public partial class V1beta1CodeRepositoryStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CodeRepository is the Schema for the CodeRepositorys API. Provides a SageMaker AI Code Repository resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -415,3 +458,4 @@ public partial class V1beta1CodeRepository : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1CodeRepositoryStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudplatform.gcp.m.upbound.io;
+#nullable enable
 /// <summary>ProjectUsageExportBucket is the Schema for the ProjectUsageExportBuckets API. Manages a project's usage export bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ProjectUsageExportBucketList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1ProjectUsageExportBucket> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectUsageExportBucketSpecForProviderBucketNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ProjectUsageExportBucketSpecForProviderBucketNameRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in storage to populate bucketName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectUsageExportBucketSpecForProviderBucketNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1ProjectUsageExportBucketSpecForProviderBucketNameRef
     [JsonPropertyName("policy")]
     public V1beta1ProjectUsageExportBucketSpecForProviderBucketNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectUsageExportBucketSpecForProviderBucketNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1ProjectUsageExportBucketSpecForProviderBucketNameSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in storage to populate bucketName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectUsageExportBucketSpecForProviderBucketNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1ProjectUsageExportBucketSpecForProviderBucketNameSel
     [JsonPropertyName("policy")]
     public V1beta1ProjectUsageExportBucketSpecForProviderBucketNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectUsageExportBucketSpecForProviderProjectRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1ProjectUsageExportBucketSpecForProviderProjectRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Project in cloudplatform to populate project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectUsageExportBucketSpecForProviderProjectRef
@@ -127,7 +140,9 @@ public partial class V1beta1ProjectUsageExportBucketSpecForProviderProjectRef
     [JsonPropertyName("policy")]
     public V1beta1ProjectUsageExportBucketSpecForProviderProjectRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectUsageExportBucketSpecForProviderProjectSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1ProjectUsageExportBucketSpecForProviderProjectSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Project in cloudplatform to populate project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectUsageExportBucketSpecForProviderProjectSelector
@@ -161,7 +178,9 @@ public partial class V1beta1ProjectUsageExportBucketSpecForProviderProjectSelect
     [JsonPropertyName("policy")]
     public V1beta1ProjectUsageExportBucketSpecForProviderProjectSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectUsageExportBucketSpecForProvider
@@ -194,7 +213,9 @@ public partial class V1beta1ProjectUsageExportBucketSpecForProvider
     [JsonPropertyName("projectSelector")]
     public V1beta1ProjectUsageExportBucketSpecForProviderProjectSelector? ProjectSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectUsageExportBucketSpecInitProviderBucketNameRefPolicy
@@ -207,7 +228,9 @@ public partial class V1beta1ProjectUsageExportBucketSpecInitProviderBucketNameRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in storage to populate bucketName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectUsageExportBucketSpecInitProviderBucketNameRef
@@ -224,7 +247,9 @@ public partial class V1beta1ProjectUsageExportBucketSpecInitProviderBucketNameRe
     [JsonPropertyName("policy")]
     public V1beta1ProjectUsageExportBucketSpecInitProviderBucketNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectUsageExportBucketSpecInitProviderBucketNameSelectorPolicy
@@ -237,7 +262,9 @@ public partial class V1beta1ProjectUsageExportBucketSpecInitProviderBucketNameSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in storage to populate bucketName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectUsageExportBucketSpecInitProviderBucketNameSelector
@@ -258,7 +285,9 @@ public partial class V1beta1ProjectUsageExportBucketSpecInitProviderBucketNameSe
     [JsonPropertyName("policy")]
     public V1beta1ProjectUsageExportBucketSpecInitProviderBucketNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectUsageExportBucketSpecInitProviderProjectRefPolicy
@@ -271,7 +300,9 @@ public partial class V1beta1ProjectUsageExportBucketSpecInitProviderProjectRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Project in cloudplatform to populate project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectUsageExportBucketSpecInitProviderProjectRef
@@ -288,7 +319,9 @@ public partial class V1beta1ProjectUsageExportBucketSpecInitProviderProjectRef
     [JsonPropertyName("policy")]
     public V1beta1ProjectUsageExportBucketSpecInitProviderProjectRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectUsageExportBucketSpecInitProviderProjectSelectorPolicy
@@ -301,7 +334,9 @@ public partial class V1beta1ProjectUsageExportBucketSpecInitProviderProjectSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Project in cloudplatform to populate project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectUsageExportBucketSpecInitProviderProjectSelector
@@ -322,7 +357,9 @@ public partial class V1beta1ProjectUsageExportBucketSpecInitProviderProjectSelec
     [JsonPropertyName("policy")]
     public V1beta1ProjectUsageExportBucketSpecInitProviderProjectSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectUsageExportBucketSpecInitProvider
@@ -355,7 +392,9 @@ public partial class V1beta1ProjectUsageExportBucketSpecInitProvider
     [JsonPropertyName("projectSelector")]
     public V1beta1ProjectUsageExportBucketSpecInitProviderProjectSelector? ProjectSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectUsageExportBucketSpecProviderConfigRef
@@ -368,7 +407,9 @@ public partial class V1beta1ProjectUsageExportBucketSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectUsageExportBucketSpecWriteConnectionSecretToRef
@@ -377,7 +418,9 @@ public partial class V1beta1ProjectUsageExportBucketSpecWriteConnectionSecretToR
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProjectUsageExportBucketSpec defines the desired state of ProjectUsageExportBucket</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectUsageExportBucketSpec
@@ -402,7 +445,9 @@ public partial class V1beta1ProjectUsageExportBucketSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ProjectUsageExportBucketSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectUsageExportBucketStatusAtProvider
@@ -423,7 +468,9 @@ public partial class V1beta1ProjectUsageExportBucketStatusAtProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectUsageExportBucketStatusConditions
@@ -452,7 +499,9 @@ public partial class V1beta1ProjectUsageExportBucketStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProjectUsageExportBucketStatus defines the observed state of ProjectUsageExportBucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectUsageExportBucketStatus
@@ -469,7 +518,9 @@ public partial class V1beta1ProjectUsageExportBucketStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProjectUsageExportBucket is the Schema for the ProjectUsageExportBuckets API. Manages a project's usage export bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -499,3 +550,4 @@ public partial class V1beta1ProjectUsageExportBucket : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1ProjectUsageExportBucketStatus? Status { get; set; }
 }
+#nullable disable

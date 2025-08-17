@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+#nullable enable
 /// <summary>PerInstanceConfig is the Schema for the PerInstanceConfigs API. A config defined for a single managed instance that belongs to an instance group manager.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PerInstanceConfigList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1PerInstanceConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecForProviderInstanceGroupManagerRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1PerInstanceConfigSpecForProviderInstanceGroupManager
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a InstanceGroupManager in compute to populate instanceGroupManager.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecForProviderInstanceGroupManagerRef
@@ -59,7 +64,9 @@ public partial class V1beta1PerInstanceConfigSpecForProviderInstanceGroupManager
     [JsonPropertyName("policy")]
     public V1beta1PerInstanceConfigSpecForProviderInstanceGroupManagerRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecForProviderInstanceGroupManagerSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1PerInstanceConfigSpecForProviderInstanceGroupManager
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a InstanceGroupManager in compute to populate instanceGroupManager.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecForProviderInstanceGroupManagerSelector
@@ -89,7 +98,9 @@ public partial class V1beta1PerInstanceConfigSpecForProviderInstanceGroupManager
     [JsonPropertyName("policy")]
     public V1beta1PerInstanceConfigSpecForProviderInstanceGroupManagerSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateDiskSourceRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateDiskSo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Disk in compute to populate source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateDiskSourceRef
@@ -115,7 +128,9 @@ public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateDiskSo
     [JsonPropertyName("policy")]
     public V1beta1PerInstanceConfigSpecForProviderPreservedStateDiskSourceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateDiskSourceSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateDiskSo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Disk in compute to populate source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateDiskSourceSelector
@@ -145,7 +162,9 @@ public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateDiskSo
     [JsonPropertyName("policy")]
     public V1beta1PerInstanceConfigSpecForProviderPreservedStateDiskSourceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateDisk
@@ -174,7 +193,9 @@ public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateDisk
     [JsonPropertyName("sourceSelector")]
     public V1beta1PerInstanceConfigSpecForProviderPreservedStateDiskSourceSelector? SourceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateExternalIpIpAddress
@@ -183,7 +204,9 @@ public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateExtern
     [JsonPropertyName("address")]
     public string? Address { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateExternalIp
@@ -200,7 +223,9 @@ public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateExtern
     [JsonPropertyName("ipAddress")]
     public IList<V1beta1PerInstanceConfigSpecForProviderPreservedStateExternalIpIpAddress>? IpAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateInternalIpIpAddress
@@ -209,7 +234,9 @@ public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateIntern
     [JsonPropertyName("address")]
     public string? Address { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateInternalIp
@@ -226,7 +253,9 @@ public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateIntern
     [JsonPropertyName("ipAddress")]
     public IList<V1beta1PerInstanceConfigSpecForProviderPreservedStateInternalIpIpAddress>? IpAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecForProviderPreservedState
@@ -247,7 +276,9 @@ public partial class V1beta1PerInstanceConfigSpecForProviderPreservedState
     [JsonPropertyName("metadata")]
     public IDictionary<string, string>? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecForProviderZoneRefPolicy
@@ -260,7 +291,9 @@ public partial class V1beta1PerInstanceConfigSpecForProviderZoneRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a InstanceGroupManager in compute to populate zone.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecForProviderZoneRef
@@ -273,7 +306,9 @@ public partial class V1beta1PerInstanceConfigSpecForProviderZoneRef
     [JsonPropertyName("policy")]
     public V1beta1PerInstanceConfigSpecForProviderZoneRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecForProviderZoneSelectorPolicy
@@ -286,7 +321,9 @@ public partial class V1beta1PerInstanceConfigSpecForProviderZoneSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a InstanceGroupManager in compute to populate zone.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecForProviderZoneSelector
@@ -303,7 +340,9 @@ public partial class V1beta1PerInstanceConfigSpecForProviderZoneSelector
     [JsonPropertyName("policy")]
     public V1beta1PerInstanceConfigSpecForProviderZoneSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecForProvider
@@ -360,7 +399,9 @@ public partial class V1beta1PerInstanceConfigSpecForProvider
     [JsonPropertyName("zoneSelector")]
     public V1beta1PerInstanceConfigSpecForProviderZoneSelector? ZoneSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecInitProviderInstanceGroupManagerRefPolicy
@@ -373,7 +414,9 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderInstanceGroupManage
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a InstanceGroupManager in compute to populate instanceGroupManager.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecInitProviderInstanceGroupManagerRef
@@ -386,7 +429,9 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderInstanceGroupManage
     [JsonPropertyName("policy")]
     public V1beta1PerInstanceConfigSpecInitProviderInstanceGroupManagerRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecInitProviderInstanceGroupManagerSelectorPolicy
@@ -399,7 +444,9 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderInstanceGroupManage
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a InstanceGroupManager in compute to populate instanceGroupManager.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecInitProviderInstanceGroupManagerSelector
@@ -416,7 +463,9 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderInstanceGroupManage
     [JsonPropertyName("policy")]
     public V1beta1PerInstanceConfigSpecInitProviderInstanceGroupManagerSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateDiskSourceRefPolicy
@@ -429,7 +478,9 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateDiskS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Disk in compute to populate source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateDiskSourceRef
@@ -442,7 +493,9 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateDiskS
     [JsonPropertyName("policy")]
     public V1beta1PerInstanceConfigSpecInitProviderPreservedStateDiskSourceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateDiskSourceSelectorPolicy
@@ -455,7 +508,9 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateDiskS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Disk in compute to populate source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateDiskSourceSelector
@@ -472,7 +527,9 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateDiskS
     [JsonPropertyName("policy")]
     public V1beta1PerInstanceConfigSpecInitProviderPreservedStateDiskSourceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateDisk
@@ -501,7 +558,9 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateDisk
     [JsonPropertyName("sourceSelector")]
     public V1beta1PerInstanceConfigSpecInitProviderPreservedStateDiskSourceSelector? SourceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateExternalIpIpAddress
@@ -510,7 +569,9 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateExter
     [JsonPropertyName("address")]
     public string? Address { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateExternalIp
@@ -527,7 +588,9 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateExter
     [JsonPropertyName("ipAddress")]
     public IList<V1beta1PerInstanceConfigSpecInitProviderPreservedStateExternalIpIpAddress>? IpAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateInternalIpIpAddress
@@ -536,7 +599,9 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateInter
     [JsonPropertyName("address")]
     public string? Address { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateInternalIp
@@ -553,7 +618,9 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateInter
     [JsonPropertyName("ipAddress")]
     public IList<V1beta1PerInstanceConfigSpecInitProviderPreservedStateInternalIpIpAddress>? IpAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedState
@@ -574,7 +641,9 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedState
     [JsonPropertyName("metadata")]
     public IDictionary<string, string>? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecInitProviderZoneRefPolicy
@@ -587,7 +656,9 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderZoneRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a InstanceGroupManager in compute to populate zone.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecInitProviderZoneRef
@@ -600,7 +671,9 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderZoneRef
     [JsonPropertyName("policy")]
     public V1beta1PerInstanceConfigSpecInitProviderZoneRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecInitProviderZoneSelectorPolicy
@@ -613,7 +686,9 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderZoneSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a InstanceGroupManager in compute to populate zone.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecInitProviderZoneSelector
@@ -630,7 +705,9 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderZoneSelector
     [JsonPropertyName("policy")]
     public V1beta1PerInstanceConfigSpecInitProviderZoneSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecInitProvider
@@ -687,7 +764,9 @@ public partial class V1beta1PerInstanceConfigSpecInitProvider
     [JsonPropertyName("zoneSelector")]
     public V1beta1PerInstanceConfigSpecInitProviderZoneSelector? ZoneSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecProviderConfigRefPolicy
@@ -700,7 +779,9 @@ public partial class V1beta1PerInstanceConfigSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecProviderConfigRef
@@ -713,7 +794,9 @@ public partial class V1beta1PerInstanceConfigSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1PerInstanceConfigSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpecWriteConnectionSecretToRef
@@ -726,7 +809,9 @@ public partial class V1beta1PerInstanceConfigSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PerInstanceConfigSpec defines the desired state of PerInstanceConfig</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigSpec
@@ -755,7 +840,9 @@ public partial class V1beta1PerInstanceConfigSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1PerInstanceConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigStatusAtProviderPreservedStateDisk
@@ -776,7 +863,9 @@ public partial class V1beta1PerInstanceConfigStatusAtProviderPreservedStateDisk
     [JsonPropertyName("source")]
     public string? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigStatusAtProviderPreservedStateExternalIpIpAddress
@@ -785,7 +874,9 @@ public partial class V1beta1PerInstanceConfigStatusAtProviderPreservedStateExter
     [JsonPropertyName("address")]
     public string? Address { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigStatusAtProviderPreservedStateExternalIp
@@ -802,7 +893,9 @@ public partial class V1beta1PerInstanceConfigStatusAtProviderPreservedStateExter
     [JsonPropertyName("ipAddress")]
     public IList<V1beta1PerInstanceConfigStatusAtProviderPreservedStateExternalIpIpAddress>? IpAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigStatusAtProviderPreservedStateInternalIpIpAddress
@@ -811,7 +904,9 @@ public partial class V1beta1PerInstanceConfigStatusAtProviderPreservedStateInter
     [JsonPropertyName("address")]
     public string? Address { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigStatusAtProviderPreservedStateInternalIp
@@ -828,7 +923,9 @@ public partial class V1beta1PerInstanceConfigStatusAtProviderPreservedStateInter
     [JsonPropertyName("ipAddress")]
     public IList<V1beta1PerInstanceConfigStatusAtProviderPreservedStateInternalIpIpAddress>? IpAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigStatusAtProviderPreservedState
@@ -849,7 +946,9 @@ public partial class V1beta1PerInstanceConfigStatusAtProviderPreservedState
     [JsonPropertyName("metadata")]
     public IDictionary<string, string>? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigStatusAtProvider
@@ -894,7 +993,9 @@ public partial class V1beta1PerInstanceConfigStatusAtProvider
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigStatusConditions
@@ -923,7 +1024,9 @@ public partial class V1beta1PerInstanceConfigStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PerInstanceConfigStatus defines the observed state of PerInstanceConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PerInstanceConfigStatus
@@ -940,7 +1043,9 @@ public partial class V1beta1PerInstanceConfigStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PerInstanceConfig is the Schema for the PerInstanceConfigs API. A config defined for a single managed instance that belongs to an instance group manager.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -970,3 +1075,4 @@ public partial class V1beta1PerInstanceConfig : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1PerInstanceConfigStatus? Status { get; set; }
 }
+#nullable disable

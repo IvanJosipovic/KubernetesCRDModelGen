@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.run.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RunServiceList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1beta1RunService> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings for the Binary Authorization feature.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecBinaryAuthorization
@@ -46,7 +49,9 @@ public partial class V1beta1RunServiceSpecBinaryAuthorization
     [JsonPropertyName("useDefault")]
     public bool? UseDefault { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecProjectRef
@@ -63,7 +68,9 @@ public partial class V1beta1RunServiceSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The name of the secret in Cloud Secret Manager. Format: {secretName} if the secret is in the same project. projects/{project}/secrets/{secretName} if the secret is in a different project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateContainersEnvValueSourceSecretKeyRefSecretRef
@@ -80,7 +87,9 @@ public partial class V1beta1RunServiceSpecTemplateContainersEnvValueSourceSecret
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateContainersEnvValueSourceSecretKeyRefVersionRef
@@ -97,7 +106,9 @@ public partial class V1beta1RunServiceSpecTemplateContainersEnvValueSourceSecret
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a secret and a specific version from Cloud Secret Manager.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateContainersEnvValueSourceSecretKeyRef
@@ -110,7 +121,9 @@ public partial class V1beta1RunServiceSpecTemplateContainersEnvValueSourceSecret
     [JsonPropertyName("versionRef")]
     public V1beta1RunServiceSpecTemplateContainersEnvValueSourceSecretKeyRefVersionRef? VersionRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source for the environment variable's value.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateContainersEnvValueSource
@@ -119,7 +132,9 @@ public partial class V1beta1RunServiceSpecTemplateContainersEnvValueSource
     [JsonPropertyName("secretKeyRef")]
     public V1beta1RunServiceSpecTemplateContainersEnvValueSourceSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateContainersEnv
@@ -136,7 +151,9 @@ public partial class V1beta1RunServiceSpecTemplateContainersEnv
     [JsonPropertyName("valueSource")]
     public V1beta1RunServiceSpecTemplateContainersEnvValueSource? ValueSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GRPC specifies an action involving a GRPC port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateContainersLivenessProbeGrpc
@@ -149,7 +166,9 @@ public partial class V1beta1RunServiceSpecTemplateContainersLivenessProbeGrpc
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateContainersLivenessProbeHttpGetHttpHeaders
@@ -162,7 +181,9 @@ public partial class V1beta1RunServiceSpecTemplateContainersLivenessProbeHttpGet
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies the http request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateContainersLivenessProbeHttpGet
@@ -179,7 +200,9 @@ public partial class V1beta1RunServiceSpecTemplateContainersLivenessProbeHttpGet
     [JsonPropertyName("port")]
     public int? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Periodic probe of container liveness. Container will be restarted if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateContainersLivenessProbe
@@ -208,7 +231,9 @@ public partial class V1beta1RunServiceSpecTemplateContainersLivenessProbe
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateContainersPorts
@@ -221,7 +246,9 @@ public partial class V1beta1RunServiceSpecTemplateContainersPorts
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Compute Resource requirements by this container. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateContainersResources
@@ -238,7 +265,9 @@ public partial class V1beta1RunServiceSpecTemplateContainersResources
     [JsonPropertyName("startupCpuBoost")]
     public bool? StartupCpuBoost { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GRPC specifies an action involving a GRPC port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateContainersStartupProbeGrpc
@@ -251,7 +280,9 @@ public partial class V1beta1RunServiceSpecTemplateContainersStartupProbeGrpc
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateContainersStartupProbeHttpGetHttpHeaders
@@ -264,7 +295,9 @@ public partial class V1beta1RunServiceSpecTemplateContainersStartupProbeHttpGetH
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies the http request to perform. Exactly one of HTTPGet or TCPSocket must be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateContainersStartupProbeHttpGet
@@ -281,7 +314,9 @@ public partial class V1beta1RunServiceSpecTemplateContainersStartupProbeHttpGet
     [JsonPropertyName("port")]
     public int? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TCPSocket specifies an action involving a TCP port. Exactly one of HTTPGet or TCPSocket must be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateContainersStartupProbeTcpSocket
@@ -290,7 +325,9 @@ public partial class V1beta1RunServiceSpecTemplateContainersStartupProbeTcpSocke
     [JsonPropertyName("port")]
     public int? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Startup probe of application within the container. All other probes are disabled if a startup probe is provided, until it succeeds. Container will not be added to service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateContainersStartupProbe
@@ -323,7 +360,9 @@ public partial class V1beta1RunServiceSpecTemplateContainersStartupProbe
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateContainersVolumeMounts
@@ -336,7 +375,9 @@ public partial class V1beta1RunServiceSpecTemplateContainersVolumeMounts
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateContainers
@@ -389,7 +430,9 @@ public partial class V1beta1RunServiceSpecTemplateContainers
     [JsonPropertyName("workingDir")]
     public string? WorkingDir { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A reference to a customer managed encryption key (CMEK) to use to encrypt this container image. For more information, go to https://cloud.google.com/run/docs/securing/using-cmek</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateEncryptionKeyRef
@@ -406,7 +449,9 @@ public partial class V1beta1RunServiceSpecTemplateEncryptionKeyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Scaling settings for this Revision.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateScaling
@@ -419,7 +464,9 @@ public partial class V1beta1RunServiceSpecTemplateScaling
     [JsonPropertyName("minInstanceCount")]
     public int? MinInstanceCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project's default service account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateServiceAccountRef
@@ -436,7 +483,9 @@ public partial class V1beta1RunServiceSpecTemplateServiceAccountRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Cloud SQL instance connection names, as can be found in https://console.cloud.google.com/sql/instances. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run. Format: {project}:{location}:{instance}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateVolumesCloudSqlInstanceInstances
@@ -453,7 +502,9 @@ public partial class V1beta1RunServiceSpecTemplateVolumesCloudSqlInstanceInstanc
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>For Cloud SQL volumes, contains the specific instances that should be mounted. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateVolumesCloudSqlInstance
@@ -462,7 +513,9 @@ public partial class V1beta1RunServiceSpecTemplateVolumesCloudSqlInstance
     [JsonPropertyName("instances")]
     public IList<V1beta1RunServiceSpecTemplateVolumesCloudSqlInstanceInstances>? Instances { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Ephemeral storage used as a shared volume.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateVolumesEmptyDir
@@ -475,7 +528,9 @@ public partial class V1beta1RunServiceSpecTemplateVolumesEmptyDir
     [JsonPropertyName("sizeLimit")]
     public string? SizeLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateVolumesSecretItemsVersionRef
@@ -492,7 +547,9 @@ public partial class V1beta1RunServiceSpecTemplateVolumesSecretItemsVersionRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateVolumesSecretItems
@@ -509,7 +566,9 @@ public partial class V1beta1RunServiceSpecTemplateVolumesSecretItems
     [JsonPropertyName("versionRef")]
     public V1beta1RunServiceSpecTemplateVolumesSecretItemsVersionRef? VersionRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The name of the secret in Cloud Secret Manager. Format: {secret} if the secret is in the same project. projects/{project}/secrets/{secret} if the secret is in a different project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateVolumesSecretSecretRef
@@ -526,7 +585,9 @@ public partial class V1beta1RunServiceSpecTemplateVolumesSecretSecretRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateVolumesSecret
@@ -543,7 +604,9 @@ public partial class V1beta1RunServiceSpecTemplateVolumesSecret
     [JsonPropertyName("secretRef")]
     public V1beta1RunServiceSpecTemplateVolumesSecretSecretRef SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateVolumes
@@ -564,7 +627,9 @@ public partial class V1beta1RunServiceSpecTemplateVolumes
     [JsonPropertyName("secret")]
     public V1beta1RunServiceSpecTemplateVolumesSecret? Secret { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPC Access connector name. Format: projects/{project}/locations/{location}/connectors/{connector}, where {project} can be project id or number.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateVpcAccessConnectorRef
@@ -581,7 +646,9 @@ public partial class V1beta1RunServiceSpecTemplateVpcAccessConnectorRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The VPC network that the Cloud Run resource will be able to send traffic to. At least one of network or subnetwork must be specified. If both network and subnetwork are specified, the given VPC subnetwork must belong to the given VPC network. If network is not specified, it will be looked up from the subnetwork.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateVpcAccessNetworkInterfacesNetworkRef
@@ -598,7 +665,9 @@ public partial class V1beta1RunServiceSpecTemplateVpcAccessNetworkInterfacesNetw
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The VPC subnetwork that the Cloud Run resource will get IPs from. At least one of network or subnetwork must be specified. If both network and subnetwork are specified, the given VPC subnetwork must belong to the given VPC network. If subnetwork is not specified, the subnetwork with the same name with the network will be used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateVpcAccessNetworkInterfacesSubnetworkRef
@@ -615,7 +684,9 @@ public partial class V1beta1RunServiceSpecTemplateVpcAccessNetworkInterfacesSubn
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateVpcAccessNetworkInterfaces
@@ -632,7 +703,9 @@ public partial class V1beta1RunServiceSpecTemplateVpcAccessNetworkInterfaces
     [JsonPropertyName("tags")]
     public IList<string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPC Access configuration to use for this Task. For more information, visit https://cloud.google.com/run/docs/configuring/connecting-vpc.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplateVpcAccess
@@ -649,7 +722,9 @@ public partial class V1beta1RunServiceSpecTemplateVpcAccess
     [JsonPropertyName("networkInterfaces")]
     public IList<V1beta1RunServiceSpecTemplateVpcAccessNetworkInterfaces>? NetworkInterfaces { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The template used to create revisions for this Service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTemplate
@@ -706,7 +781,9 @@ public partial class V1beta1RunServiceSpecTemplate
     [JsonPropertyName("vpcAccess")]
     public V1beta1RunServiceSpecTemplateVpcAccess? VpcAccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpecTraffic
@@ -727,7 +804,9 @@ public partial class V1beta1RunServiceSpecTraffic
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceSpec
@@ -784,7 +863,9 @@ public partial class V1beta1RunServiceSpec
     [JsonPropertyName("traffic")]
     public IList<V1beta1RunServiceSpecTraffic>? Traffic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceStatusConditions
@@ -809,7 +890,9 @@ public partial class V1beta1RunServiceStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Condition of this Service, containing its readiness status, and detailed error information in case it did not reach a serving state. See comments in reconciling for additional information on reconciliation process in Cloud Run.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceStatusTerminalCondition
@@ -842,7 +925,9 @@ public partial class V1beta1RunServiceStatusTerminalCondition
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceStatusTrafficStatuses
@@ -867,7 +952,9 @@ public partial class V1beta1RunServiceStatusTrafficStatuses
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunServiceStatus
@@ -936,7 +1023,9 @@ public partial class V1beta1RunServiceStatus
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -966,3 +1055,4 @@ public partial class V1beta1RunService : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1RunServiceStatus? Status { get; set; }
 }
+#nullable disable

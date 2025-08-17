@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storagecache.azure.upbound.io;
+#nullable enable
 /// <summary>HPCCacheBlobNFSTarget is the Schema for the HPCCacheBlobNFSTargets API. Manages a Blob NFSv3 Target within a HPC Cache.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1HPCCacheBlobNFSTargetList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1HPCCacheBlobNFSTarget> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobNFSTargetSpecForProviderCacheNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1HPCCacheBlobNFSTargetSpecForProviderCacheNameRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a HPCCache in storagecache to populate cacheName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobNFSTargetSpecForProviderCacheNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1HPCCacheBlobNFSTargetSpecForProviderCacheNameRef
     [JsonPropertyName("policy")]
     public V1beta1HPCCacheBlobNFSTargetSpecForProviderCacheNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobNFSTargetSpecForProviderCacheNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1HPCCacheBlobNFSTargetSpecForProviderCacheNameSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a HPCCache in storagecache to populate cacheName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobNFSTargetSpecForProviderCacheNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1HPCCacheBlobNFSTargetSpecForProviderCacheNameSelecto
     [JsonPropertyName("policy")]
     public V1beta1HPCCacheBlobNFSTargetSpecForProviderCacheNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobNFSTargetSpecForProviderResourceGroupNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1HPCCacheBlobNFSTargetSpecForProviderResourceGroupNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobNFSTargetSpecForProviderResourceGroupNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1HPCCacheBlobNFSTargetSpecForProviderResourceGroupNam
     [JsonPropertyName("policy")]
     public V1beta1HPCCacheBlobNFSTargetSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobNFSTargetSpecForProviderResourceGroupNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1HPCCacheBlobNFSTargetSpecForProviderResourceGroupNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobNFSTargetSpecForProviderResourceGroupNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1HPCCacheBlobNFSTargetSpecForProviderResourceGroupNam
     [JsonPropertyName("policy")]
     public V1beta1HPCCacheBlobNFSTargetSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobNFSTargetSpecForProvider
@@ -198,7 +217,9 @@ public partial class V1beta1HPCCacheBlobNFSTargetSpecForProvider
     [JsonPropertyName("writeBackTimerInSeconds")]
     public double? WriteBackTimerInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobNFSTargetSpecInitProviderCacheNameRefPolicy
@@ -211,7 +232,9 @@ public partial class V1beta1HPCCacheBlobNFSTargetSpecInitProviderCacheNameRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a HPCCache in storagecache to populate cacheName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobNFSTargetSpecInitProviderCacheNameRef
@@ -224,7 +247,9 @@ public partial class V1beta1HPCCacheBlobNFSTargetSpecInitProviderCacheNameRef
     [JsonPropertyName("policy")]
     public V1beta1HPCCacheBlobNFSTargetSpecInitProviderCacheNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobNFSTargetSpecInitProviderCacheNameSelectorPolicy
@@ -237,7 +262,9 @@ public partial class V1beta1HPCCacheBlobNFSTargetSpecInitProviderCacheNameSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a HPCCache in storagecache to populate cacheName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobNFSTargetSpecInitProviderCacheNameSelector
@@ -254,7 +281,9 @@ public partial class V1beta1HPCCacheBlobNFSTargetSpecInitProviderCacheNameSelect
     [JsonPropertyName("policy")]
     public V1beta1HPCCacheBlobNFSTargetSpecInitProviderCacheNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobNFSTargetSpecInitProvider
@@ -295,7 +324,9 @@ public partial class V1beta1HPCCacheBlobNFSTargetSpecInitProvider
     [JsonPropertyName("writeBackTimerInSeconds")]
     public double? WriteBackTimerInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobNFSTargetSpecProviderConfigRefPolicy
@@ -308,7 +339,9 @@ public partial class V1beta1HPCCacheBlobNFSTargetSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobNFSTargetSpecProviderConfigRef
@@ -321,7 +354,9 @@ public partial class V1beta1HPCCacheBlobNFSTargetSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1HPCCacheBlobNFSTargetSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobNFSTargetSpecWriteConnectionSecretToRef
@@ -334,7 +369,9 @@ public partial class V1beta1HPCCacheBlobNFSTargetSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HPCCacheBlobNFSTargetSpec defines the desired state of HPCCacheBlobNFSTarget</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobNFSTargetSpec
@@ -363,7 +400,9 @@ public partial class V1beta1HPCCacheBlobNFSTargetSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1HPCCacheBlobNFSTargetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobNFSTargetStatusAtProvider
@@ -404,7 +443,9 @@ public partial class V1beta1HPCCacheBlobNFSTargetStatusAtProvider
     [JsonPropertyName("writeBackTimerInSeconds")]
     public double? WriteBackTimerInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobNFSTargetStatusConditions
@@ -433,7 +474,9 @@ public partial class V1beta1HPCCacheBlobNFSTargetStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HPCCacheBlobNFSTargetStatus defines the observed state of HPCCacheBlobNFSTarget.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheBlobNFSTargetStatus
@@ -450,7 +493,9 @@ public partial class V1beta1HPCCacheBlobNFSTargetStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HPCCacheBlobNFSTarget is the Schema for the HPCCacheBlobNFSTargets API. Manages a Blob NFSv3 Target within a HPC Cache.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -480,3 +525,4 @@ public partial class V1beta1HPCCacheBlobNFSTarget : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1HPCCacheBlobNFSTargetStatus? Status { get; set; }
 }
+#nullable disable

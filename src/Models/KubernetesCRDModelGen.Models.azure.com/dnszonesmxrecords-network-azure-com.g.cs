@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20180501.DnsZonesMXRecord Generator information: - Generated from: /dns/resource-manager/Microsoft.Network/stable/2018-05-01/dns.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/MX/{relativeRecordSetName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20180501storageDnsZonesMXRecordList : IKubernetesObjec
     [JsonPropertyName("items")]
     public IList<V1api20180501storageDnsZonesMXRecord> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180501.AaaaRecord An AAAA record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordSpecAAAARecords
@@ -46,7 +49,9 @@ public partial class V1api20180501storageDnsZonesMXRecordSpecAAAARecords
     [JsonPropertyName("ipv6Address")]
     public string? Ipv6Address { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180501.ARecord An A record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordSpecARecords
@@ -59,7 +64,9 @@ public partial class V1api20180501storageDnsZonesMXRecordSpecARecords
     [JsonPropertyName("ipv4Address")]
     public string? Ipv4Address { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180501.CnameRecord A CNAME record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordSpecCNAMERecord
@@ -72,7 +79,9 @@ public partial class V1api20180501storageDnsZonesMXRecordSpecCNAMERecord
     [JsonPropertyName("cname")]
     public string? Cname { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180501.MxRecord An MX record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordSpecMXRecords
@@ -89,7 +98,9 @@ public partial class V1api20180501storageDnsZonesMXRecordSpecMXRecords
     [JsonPropertyName("preference")]
     public int? Preference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180501.NsRecord An NS record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordSpecNSRecords
@@ -102,7 +113,9 @@ public partial class V1api20180501storageDnsZonesMXRecordSpecNSRecords
     [JsonPropertyName("nsdname")]
     public string? Nsdname { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180501.PtrRecord A PTR record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordSpecPTRRecords
@@ -115,7 +128,9 @@ public partial class V1api20180501storageDnsZonesMXRecordSpecPTRRecords
     [JsonPropertyName("ptrdname")]
     public string? Ptrdname { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180501.SoaRecord An SOA record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordSpecSOARecord
@@ -152,7 +167,9 @@ public partial class V1api20180501storageDnsZonesMXRecordSpecSOARecord
     [JsonPropertyName("serialNumber")]
     public int? SerialNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180501.SrvRecord An SRV record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordSpecSRVRecords
@@ -177,7 +194,9 @@ public partial class V1api20180501storageDnsZonesMXRecordSpecSRVRecords
     [JsonPropertyName("weight")]
     public int? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180501.TxtRecord A TXT record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordSpecTXTRecords
@@ -190,7 +209,9 @@ public partial class V1api20180501storageDnsZonesMXRecordSpecTXTRecords
     [JsonPropertyName("value")]
     public IList<string>? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180501.CaaRecord A CAA record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordSpecCaaRecords
@@ -211,7 +232,9 @@ public partial class V1api20180501storageDnsZonesMXRecordSpecCaaRecords
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordSpecOperatorSpecConfigMapExpressions
@@ -228,7 +251,9 @@ public partial class V1api20180501storageDnsZonesMXRecordSpecOperatorSpecConfigM
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordSpecOperatorSpecSecretExpressions
@@ -245,7 +270,9 @@ public partial class V1api20180501storageDnsZonesMXRecordSpecOperatorSpecSecretE
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180501.DnsZonesMXRecordOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordSpecOperatorSpec
@@ -262,7 +289,9 @@ public partial class V1api20180501storageDnsZonesMXRecordSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20180501storageDnsZonesMXRecordSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a network.azure.com/DnsZone resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordSpecOwner
@@ -275,7 +304,9 @@ public partial class V1api20180501storageDnsZonesMXRecordSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource Id.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordSpecTargetResourceReference
@@ -296,7 +327,9 @@ public partial class V1api20180501storageDnsZonesMXRecordSpecTargetResourceRefer
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180501.SubResource A reference to a another resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordSpecTargetResource
@@ -309,7 +342,9 @@ public partial class V1api20180501storageDnsZonesMXRecordSpecTargetResource
     [JsonPropertyName("reference")]
     public V1api20180501storageDnsZonesMXRecordSpecTargetResourceReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180501.DnsZonesMXRecord_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordSpec
@@ -386,7 +421,9 @@ public partial class V1api20180501storageDnsZonesMXRecordSpec
     [JsonPropertyName("targetResource")]
     public V1api20180501storageDnsZonesMXRecordSpecTargetResource? TargetResource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180501.AaaaRecord_STATUS An AAAA record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordStatusAAAARecords
@@ -399,7 +436,9 @@ public partial class V1api20180501storageDnsZonesMXRecordStatusAAAARecords
     [JsonPropertyName("ipv6Address")]
     public string? Ipv6Address { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180501.ARecord_STATUS An A record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordStatusARecords
@@ -412,7 +451,9 @@ public partial class V1api20180501storageDnsZonesMXRecordStatusARecords
     [JsonPropertyName("ipv4Address")]
     public string? Ipv4Address { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180501.CnameRecord_STATUS A CNAME record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordStatusCNAMERecord
@@ -425,7 +466,9 @@ public partial class V1api20180501storageDnsZonesMXRecordStatusCNAMERecord
     [JsonPropertyName("cname")]
     public string? Cname { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180501.MxRecord_STATUS An MX record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordStatusMXRecords
@@ -442,7 +485,9 @@ public partial class V1api20180501storageDnsZonesMXRecordStatusMXRecords
     [JsonPropertyName("preference")]
     public int? Preference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180501.NsRecord_STATUS An NS record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordStatusNSRecords
@@ -455,7 +500,9 @@ public partial class V1api20180501storageDnsZonesMXRecordStatusNSRecords
     [JsonPropertyName("nsdname")]
     public string? Nsdname { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180501.PtrRecord_STATUS A PTR record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordStatusPTRRecords
@@ -468,7 +515,9 @@ public partial class V1api20180501storageDnsZonesMXRecordStatusPTRRecords
     [JsonPropertyName("ptrdname")]
     public string? Ptrdname { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180501.SoaRecord_STATUS An SOA record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordStatusSOARecord
@@ -505,7 +554,9 @@ public partial class V1api20180501storageDnsZonesMXRecordStatusSOARecord
     [JsonPropertyName("serialNumber")]
     public int? SerialNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180501.SrvRecord_STATUS An SRV record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordStatusSRVRecords
@@ -530,7 +581,9 @@ public partial class V1api20180501storageDnsZonesMXRecordStatusSRVRecords
     [JsonPropertyName("weight")]
     public int? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180501.TxtRecord_STATUS A TXT record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordStatusTXTRecords
@@ -543,7 +596,9 @@ public partial class V1api20180501storageDnsZonesMXRecordStatusTXTRecords
     [JsonPropertyName("value")]
     public IList<string>? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180501.CaaRecord_STATUS A CAA record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordStatusCaaRecords
@@ -564,7 +619,9 @@ public partial class V1api20180501storageDnsZonesMXRecordStatusCaaRecords
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordStatusConditions
@@ -597,7 +654,9 @@ public partial class V1api20180501storageDnsZonesMXRecordStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180501.SubResource_STATUS A reference to a another resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordStatusTargetResource
@@ -610,7 +669,9 @@ public partial class V1api20180501storageDnsZonesMXRecordStatusTargetResource
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180501.DnsZonesMXRecord_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordStatus
@@ -699,7 +760,9 @@ public partial class V1api20180501storageDnsZonesMXRecordStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20180501.DnsZonesMXRecord Generator information: - Generated from: /dns/resource-manager/Microsoft.Network/stable/2018-05-01/dns.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/MX/{relativeRecordSetName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -729,3 +792,4 @@ public partial class V1api20180501storageDnsZonesMXRecord : IKubernetesObject<V1
     [JsonPropertyName("status")]
     public V1api20180501storageDnsZonesMXRecordStatus? Status { get; set; }
 }
+#nullable disable

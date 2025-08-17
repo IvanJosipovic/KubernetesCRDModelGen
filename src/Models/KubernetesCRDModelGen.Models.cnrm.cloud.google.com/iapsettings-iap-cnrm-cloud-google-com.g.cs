@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iap.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>IAPSettings is the Schema for the IAPSettings API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1IAPSettingsList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1IAPSettings> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings to configure and enable allowed domains.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPSettingsSpecAccessSettingsAllowedDomainsSettings
@@ -46,7 +49,9 @@ public partial class V1beta1IAPSettingsSpecAccessSettingsAllowedDomainsSettings
     [JsonPropertyName("enable")]
     public bool? Enable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration to allow cross-origin requests via IAP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPSettingsSpecAccessSettingsCorsSettings
@@ -55,7 +60,9 @@ public partial class V1beta1IAPSettingsSpecAccessSettingsCorsSettings
     [JsonPropertyName("allowHTTPOptions")]
     public bool? AllowHTTPOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GCIP claims and endpoint configurations for 3p identity providers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPSettingsSpecAccessSettingsGcipSettings
@@ -68,7 +75,9 @@ public partial class V1beta1IAPSettingsSpecAccessSettingsGcipSettings
     [JsonPropertyName("tenantIDs")]
     public IList<string>? TenantIDs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings to configure IAP's OAuth behavior.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPSettingsSpecAccessSettingsOauthSettings
@@ -81,7 +90,9 @@ public partial class V1beta1IAPSettingsSpecAccessSettingsOauthSettings
     [JsonPropertyName("programmaticClients")]
     public IList<string>? ProgrammaticClients { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings to configure reauthentication policies in IAP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPSettingsSpecAccessSettingsReauthSettings
@@ -98,7 +109,9 @@ public partial class V1beta1IAPSettingsSpecAccessSettingsReauthSettings
     [JsonPropertyName("policyType")]
     public string? PolicyType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Top level wrapper for all access related setting in IAP</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPSettingsSpecAccessSettings
@@ -123,7 +136,9 @@ public partial class V1beta1IAPSettingsSpecAccessSettings
     [JsonPropertyName("reauthSettings")]
     public V1beta1IAPSettingsSpecAccessSettingsReauthSettings? ReauthSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPSettingsSpecAppEngineRefApplicationRef
@@ -132,7 +147,9 @@ public partial class V1beta1IAPSettingsSpecAppEngineRefApplicationRef
     [JsonPropertyName("external")]
     public string? External { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPSettingsSpecAppEngineRefProjectRef
@@ -153,7 +170,9 @@ public partial class V1beta1IAPSettingsSpecAppEngineRefProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. If specified, settings apply to the service</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPSettingsSpecAppEngineRefServiceRef
@@ -162,7 +181,9 @@ public partial class V1beta1IAPSettingsSpecAppEngineRefServiceRef
     [JsonPropertyName("external")]
     public string? External { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. If specified, settings apply to the version</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPSettingsSpecAppEngineRefVersionRef
@@ -171,7 +192,9 @@ public partial class V1beta1IAPSettingsSpecAppEngineRefVersionRef
     [JsonPropertyName("external")]
     public string? External { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Project-wide App Engine service settings</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPSettingsSpecAppEngineRef
@@ -192,7 +215,9 @@ public partial class V1beta1IAPSettingsSpecAppEngineRef
     [JsonPropertyName("versionRef")]
     public V1beta1IAPSettingsSpecAppEngineRefVersionRef? VersionRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Customization for Access Denied page.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPSettingsSpecApplicationSettingsAccessDeniedPageSettings
@@ -209,7 +234,9 @@ public partial class V1beta1IAPSettingsSpecApplicationSettingsAccessDeniedPageSe
     [JsonPropertyName("remediationTokenGenerationEnabled")]
     public bool? RemediationTokenGenerationEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings to configure attribute propagation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPSettingsSpecApplicationSettingsAttributePropagationSettings
@@ -226,7 +253,9 @@ public partial class V1beta1IAPSettingsSpecApplicationSettingsAttributePropagati
     [JsonPropertyName("outputCredentials")]
     public IList<string>? OutputCredentials { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings to configure IAP's behavior for a service mesh.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPSettingsSpecApplicationSettingsCsmSettings
@@ -235,7 +264,9 @@ public partial class V1beta1IAPSettingsSpecApplicationSettingsCsmSettings
     [JsonPropertyName("rctokenAud")]
     public string? RctokenAud { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Top level wrapper for all application related settings in IAP</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPSettingsSpecApplicationSettings
@@ -256,7 +287,9 @@ public partial class V1beta1IAPSettingsSpecApplicationSettings
     [JsonPropertyName("csmSettings")]
     public V1beta1IAPSettingsSpecApplicationSettingsCsmSettings? CsmSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPSettingsSpecComputeServiceRefProjectRef
@@ -277,7 +310,9 @@ public partial class V1beta1IAPSettingsSpecComputeServiceRefProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. If specified, settings apply to the service</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPSettingsSpecComputeServiceRefServiceRef
@@ -294,7 +329,9 @@ public partial class V1beta1IAPSettingsSpecComputeServiceRefServiceRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Project-wide Compute service settings</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPSettingsSpecComputeServiceRef
@@ -311,7 +348,9 @@ public partial class V1beta1IAPSettingsSpecComputeServiceRef
     [JsonPropertyName("serviceRef")]
     public V1beta1IAPSettingsSpecComputeServiceRefServiceRef? ServiceRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Folder-level settings</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPSettingsSpecFolderRef
@@ -328,7 +367,9 @@ public partial class V1beta1IAPSettingsSpecFolderRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Organization-level settings</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPSettingsSpecOrganizationRef
@@ -337,7 +378,9 @@ public partial class V1beta1IAPSettingsSpecOrganizationRef
     [JsonPropertyName("external")]
     public string External { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Project-level settings</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPSettingsSpecProjectRef
@@ -358,7 +401,9 @@ public partial class V1beta1IAPSettingsSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPSettingsSpecProjectWebRefProjectRef
@@ -379,7 +424,9 @@ public partial class V1beta1IAPSettingsSpecProjectWebRefProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Project-wide web service settings</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPSettingsSpecProjectWebRef
@@ -388,7 +435,9 @@ public partial class V1beta1IAPSettingsSpecProjectWebRef
     [JsonPropertyName("projectRef")]
     public V1beta1IAPSettingsSpecProjectWebRefProjectRef ProjectRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IAPSettingsSpec defines the desired state of IAPSettings</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPSettingsSpec
@@ -429,7 +478,9 @@ public partial class V1beta1IAPSettingsSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPSettingsStatusConditions
@@ -454,7 +505,9 @@ public partial class V1beta1IAPSettingsStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IAPSettingsStatus defines the config connector machine state of IAPSettings</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPSettingsStatus
@@ -471,7 +524,9 @@ public partial class V1beta1IAPSettingsStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IAPSettings is the Schema for the IAPSettings API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -501,3 +556,4 @@ public partial class V1beta1IAPSettings : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1IAPSettingsStatus? Status { get; set; }
 }
+#nullable disable

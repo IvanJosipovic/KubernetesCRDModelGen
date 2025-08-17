@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+#nullable enable
 /// <summary>VirtualNetworkGatewayConnection is the Schema for the VirtualNetworkGatewayConnections API. Manages a connection in an existing Virtual Network Gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionList : IKubernetesObj
     [JsonPropertyName("items")]
     public IList<V1beta1VirtualNetworkGatewayConnection> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The authorization key associated with the Express Route Circuit. This field is required only if the type is an ExpressRoute connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderAuthorizationKeySecretRef
@@ -50,7 +53,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderAuthor
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderCustomBgpAddresses
@@ -63,7 +68,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderCustom
     [JsonPropertyName("secondary")]
     public string? Secondary { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderIpsecPolicy
@@ -100,7 +107,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderIpsecP
     [JsonPropertyName("saLifetime")]
     public double? SaLifetime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderLocalNetworkGatewayIdRefPolicy
@@ -113,7 +122,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderLocalN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LocalNetworkGateway in network to populate localNetworkGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderLocalNetworkGatewayIdRef
@@ -126,7 +137,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderLocalN
     [JsonPropertyName("policy")]
     public V1beta1VirtualNetworkGatewayConnectionSpecForProviderLocalNetworkGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderLocalNetworkGatewayIdSelectorPolicy
@@ -139,7 +152,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderLocalN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LocalNetworkGateway in network to populate localNetworkGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderLocalNetworkGatewayIdSelector
@@ -156,7 +171,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderLocalN
     [JsonPropertyName("policy")]
     public V1beta1VirtualNetworkGatewayConnectionSpecForProviderLocalNetworkGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderPeerVirtualNetworkGatewayIdRefPolicy
@@ -169,7 +186,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderPeerVi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualNetworkGateway in network to populate peerVirtualNetworkGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderPeerVirtualNetworkGatewayIdRef
@@ -182,7 +201,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderPeerVi
     [JsonPropertyName("policy")]
     public V1beta1VirtualNetworkGatewayConnectionSpecForProviderPeerVirtualNetworkGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderPeerVirtualNetworkGatewayIdSelectorPolicy
@@ -195,7 +216,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderPeerVi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualNetworkGateway in network to populate peerVirtualNetworkGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderPeerVirtualNetworkGatewayIdSelector
@@ -212,7 +235,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderPeerVi
     [JsonPropertyName("policy")]
     public V1beta1VirtualNetworkGatewayConnectionSpecForProviderPeerVirtualNetworkGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderResourceGroupNameRefPolicy
@@ -225,7 +250,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderResour
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderResourceGroupNameRef
@@ -238,7 +265,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderResour
     [JsonPropertyName("policy")]
     public V1beta1VirtualNetworkGatewayConnectionSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderResourceGroupNameSelectorPolicy
@@ -251,7 +280,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderResour
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderResourceGroupNameSelector
@@ -268,7 +299,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderResour
     [JsonPropertyName("policy")]
     public V1beta1VirtualNetworkGatewayConnectionSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The shared IPSec key. A key could be provided if a Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderSharedKeySecretRef
@@ -285,7 +318,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderShared
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderTrafficSelectorPolicy
@@ -298,7 +333,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderTraffi
     [JsonPropertyName("remoteAddressCidrs")]
     public IList<string>? RemoteAddressCidrs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderVirtualNetworkGatewayIdRefPolicy
@@ -311,7 +348,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderVirtua
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualNetworkGateway in network to populate virtualNetworkGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderVirtualNetworkGatewayIdRef
@@ -324,7 +363,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderVirtua
     [JsonPropertyName("policy")]
     public V1beta1VirtualNetworkGatewayConnectionSpecForProviderVirtualNetworkGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderVirtualNetworkGatewayIdSelectorPolicy
@@ -337,7 +378,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderVirtua
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualNetworkGateway in network to populate virtualNetworkGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderVirtualNetworkGatewayIdSelector
@@ -354,7 +397,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProviderVirtua
     [JsonPropertyName("policy")]
     public V1beta1VirtualNetworkGatewayConnectionSpecForProviderVirtualNetworkGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProvider
@@ -487,7 +532,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProvider
     [JsonPropertyName("virtualNetworkGatewayIdSelector")]
     public V1beta1VirtualNetworkGatewayConnectionSpecForProviderVirtualNetworkGatewayIdSelector? VirtualNetworkGatewayIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The authorization key associated with the Express Route Circuit. This field is required only if the type is an ExpressRoute connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderAuthorizationKeySecretRef
@@ -504,7 +551,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderAutho
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderCustomBgpAddresses
@@ -517,7 +566,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderCusto
     [JsonPropertyName("secondary")]
     public string? Secondary { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderIpsecPolicy
@@ -554,7 +605,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderIpsec
     [JsonPropertyName("saLifetime")]
     public double? SaLifetime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderLocalNetworkGatewayIdRefPolicy
@@ -567,7 +620,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderLocal
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LocalNetworkGateway in network to populate localNetworkGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderLocalNetworkGatewayIdRef
@@ -580,7 +635,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderLocal
     [JsonPropertyName("policy")]
     public V1beta1VirtualNetworkGatewayConnectionSpecInitProviderLocalNetworkGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderLocalNetworkGatewayIdSelectorPolicy
@@ -593,7 +650,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderLocal
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LocalNetworkGateway in network to populate localNetworkGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderLocalNetworkGatewayIdSelector
@@ -610,7 +669,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderLocal
     [JsonPropertyName("policy")]
     public V1beta1VirtualNetworkGatewayConnectionSpecInitProviderLocalNetworkGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderPeerVirtualNetworkGatewayIdRefPolicy
@@ -623,7 +684,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderPeerV
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualNetworkGateway in network to populate peerVirtualNetworkGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderPeerVirtualNetworkGatewayIdRef
@@ -636,7 +699,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderPeerV
     [JsonPropertyName("policy")]
     public V1beta1VirtualNetworkGatewayConnectionSpecInitProviderPeerVirtualNetworkGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderPeerVirtualNetworkGatewayIdSelectorPolicy
@@ -649,7 +714,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderPeerV
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualNetworkGateway in network to populate peerVirtualNetworkGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderPeerVirtualNetworkGatewayIdSelector
@@ -666,7 +733,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderPeerV
     [JsonPropertyName("policy")]
     public V1beta1VirtualNetworkGatewayConnectionSpecInitProviderPeerVirtualNetworkGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The shared IPSec key. A key could be provided if a Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderSharedKeySecretRef
@@ -683,7 +752,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderShare
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderTrafficSelectorPolicy
@@ -696,7 +767,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderTraff
     [JsonPropertyName("remoteAddressCidrs")]
     public IList<string>? RemoteAddressCidrs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderVirtualNetworkGatewayIdRefPolicy
@@ -709,7 +782,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderVirtu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualNetworkGateway in network to populate virtualNetworkGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderVirtualNetworkGatewayIdRef
@@ -722,7 +797,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderVirtu
     [JsonPropertyName("policy")]
     public V1beta1VirtualNetworkGatewayConnectionSpecInitProviderVirtualNetworkGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderVirtualNetworkGatewayIdSelectorPolicy
@@ -735,7 +812,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderVirtu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualNetworkGateway in network to populate virtualNetworkGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderVirtualNetworkGatewayIdSelector
@@ -752,7 +831,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderVirtu
     [JsonPropertyName("policy")]
     public V1beta1VirtualNetworkGatewayConnectionSpecInitProviderVirtualNetworkGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProvider
@@ -873,7 +954,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProvider
     [JsonPropertyName("virtualNetworkGatewayIdSelector")]
     public V1beta1VirtualNetworkGatewayConnectionSpecInitProviderVirtualNetworkGatewayIdSelector? VirtualNetworkGatewayIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecProviderConfigRefPolicy
@@ -886,7 +969,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecProviderConfigRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecProviderConfigRef
@@ -899,7 +984,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1VirtualNetworkGatewayConnectionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecWriteConnectionSecretToRef
@@ -912,7 +999,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecWriteConnectionSe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualNetworkGatewayConnectionSpec defines the desired state of VirtualNetworkGatewayConnection</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpec
@@ -941,7 +1030,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VirtualNetworkGatewayConnectionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionStatusAtProviderCustomBgpAddresses
@@ -954,7 +1045,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionStatusAtProviderCusto
     [JsonPropertyName("secondary")]
     public string? Secondary { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionStatusAtProviderIpsecPolicy
@@ -991,7 +1084,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionStatusAtProviderIpsec
     [JsonPropertyName("saLifetime")]
     public double? SaLifetime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionStatusAtProviderTrafficSelectorPolicy
@@ -1004,7 +1099,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionStatusAtProviderTraff
     [JsonPropertyName("remoteAddressCidrs")]
     public IList<string>? RemoteAddressCidrs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionStatusAtProvider
@@ -1101,7 +1198,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionStatusAtProvider
     [JsonPropertyName("virtualNetworkGatewayId")]
     public string? VirtualNetworkGatewayId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionStatusConditions
@@ -1130,7 +1229,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualNetworkGatewayConnectionStatus defines the observed state of VirtualNetworkGatewayConnection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionStatus
@@ -1147,7 +1248,9 @@ public partial class V1beta1VirtualNetworkGatewayConnectionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualNetworkGatewayConnection is the Schema for the VirtualNetworkGatewayConnections API. Manages a connection in an existing Virtual Network Gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1177,3 +1280,4 @@ public partial class V1beta1VirtualNetworkGatewayConnection : IKubernetesObject<
     [JsonPropertyName("status")]
     public V1beta1VirtualNetworkGatewayConnectionStatus? Status { get; set; }
 }
+#nullable disable

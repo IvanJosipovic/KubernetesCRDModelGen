@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.managedkafka.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>ManagedKafkaCluster is the Schema for the ManagedKafkaCluster API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ManagedKafkaClusterList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1ManagedKafkaCluster> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Capacity configuration for the Kafka cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedKafkaClusterSpecCapacityConfig
@@ -46,7 +49,9 @@ public partial class V1beta1ManagedKafkaClusterSpecCapacityConfig
     [JsonPropertyName("vcpuCount")]
     public long VcpuCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Reference to the VPC subnet in which to create Private Service Connect  (PSC) endpoints for the Kafka brokers and bootstrap address.   The subnet must be located in the same region as the Kafka cluster. The  project may differ. Multiple subnets from the same parent network must not  be specified.   The CIDR range of the subnet must be within the IPv4 address ranges for  private networks, as specified in RFC 1918.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedKafkaClusterSpecGcpConfigAccessConfigNetworkConfigsSubnetworkRef
@@ -63,7 +68,9 @@ public partial class V1beta1ManagedKafkaClusterSpecGcpConfigAccessConfigNetworkC
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedKafkaClusterSpecGcpConfigAccessConfigNetworkConfigs
@@ -72,7 +79,9 @@ public partial class V1beta1ManagedKafkaClusterSpecGcpConfigAccessConfigNetworkC
     [JsonPropertyName("subnetworkRef")]
     public V1beta1ManagedKafkaClusterSpecGcpConfigAccessConfigNetworkConfigsSubnetworkRef SubnetworkRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Access configuration for the Kafka cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedKafkaClusterSpecGcpConfigAccessConfig
@@ -81,7 +90,9 @@ public partial class V1beta1ManagedKafkaClusterSpecGcpConfigAccessConfig
     [JsonPropertyName("networkConfigs")]
     public IList<V1beta1ManagedKafkaClusterSpecGcpConfigAccessConfigNetworkConfigs> NetworkConfigs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Immutable. The Cloud KMS Key name to use for encryption. The key must be located in the same region as the cluster and cannot be changed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedKafkaClusterSpecGcpConfigKmsKeyRef
@@ -98,7 +109,9 @@ public partial class V1beta1ManagedKafkaClusterSpecGcpConfigKmsKeyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Configuration properties for a Kafka cluster deployed to Google Cloud Platform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedKafkaClusterSpecGcpConfig
@@ -111,7 +124,9 @@ public partial class V1beta1ManagedKafkaClusterSpecGcpConfig
     [JsonPropertyName("kmsKeyRef")]
     public V1beta1ManagedKafkaClusterSpecGcpConfigKmsKeyRef? KmsKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedKafkaClusterSpecProjectRef
@@ -132,7 +147,9 @@ public partial class V1beta1ManagedKafkaClusterSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Rebalance configuration for the Kafka cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedKafkaClusterSpecRebalanceConfig
@@ -141,7 +158,9 @@ public partial class V1beta1ManagedKafkaClusterSpecRebalanceConfig
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedKafkaClusterSpec defines the desired state of ManagedKafkaCluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedKafkaClusterSpec
@@ -174,7 +193,9 @@ public partial class V1beta1ManagedKafkaClusterSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedKafkaClusterStatusConditions
@@ -199,7 +220,9 @@ public partial class V1beta1ManagedKafkaClusterStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedKafkaClusterStatusObservedState
@@ -216,7 +239,9 @@ public partial class V1beta1ManagedKafkaClusterStatusObservedState
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedKafkaClusterStatus defines the config connector machine state of ManagedKafkaCluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedKafkaClusterStatus
@@ -237,7 +262,9 @@ public partial class V1beta1ManagedKafkaClusterStatus
     [JsonPropertyName("observedState")]
     public V1beta1ManagedKafkaClusterStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedKafkaCluster is the Schema for the ManagedKafkaCluster API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -267,3 +294,4 @@ public partial class V1beta1ManagedKafkaCluster : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1ManagedKafkaClusterStatus? Status { get; set; }
 }
+#nullable disable

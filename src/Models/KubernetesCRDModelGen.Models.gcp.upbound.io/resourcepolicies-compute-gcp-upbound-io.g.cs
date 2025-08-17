@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+#nullable enable
 /// <summary>ResourcePolicy is the Schema for the ResourcePolicys API. A policy that can be attached to a resource to specify or schedule actions on that resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ResourcePolicyList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1ResourcePolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderDiskConsistencyGroupPolicy
@@ -42,7 +45,9 @@ public partial class V1beta1ResourcePolicySpecForProviderDiskConsistencyGroupPol
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderGroupPlacementPolicy
@@ -63,7 +68,9 @@ public partial class V1beta1ResourcePolicySpecForProviderGroupPlacementPolicy
     [JsonPropertyName("vmCount")]
     public double? VmCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderInstanceSchedulePolicyVmStartSchedule
@@ -72,7 +79,9 @@ public partial class V1beta1ResourcePolicySpecForProviderInstanceSchedulePolicyV
     [JsonPropertyName("schedule")]
     public string? Schedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderInstanceSchedulePolicyVmStopSchedule
@@ -81,7 +90,9 @@ public partial class V1beta1ResourcePolicySpecForProviderInstanceSchedulePolicyV
     [JsonPropertyName("schedule")]
     public string? Schedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderInstanceSchedulePolicy
@@ -106,7 +117,9 @@ public partial class V1beta1ResourcePolicySpecForProviderInstanceSchedulePolicy
     [JsonPropertyName("vmStopSchedule")]
     public IList<V1beta1ResourcePolicySpecForProviderInstanceSchedulePolicyVmStopSchedule>? VmStopSchedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyRetentionPolicy
@@ -119,7 +132,9 @@ public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyR
     [JsonPropertyName("onSourceDiskDelete")]
     public string? OnSourceDiskDelete { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyScheduleDailySchedule
@@ -132,7 +147,9 @@ public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyS
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyScheduleHourlySchedule
@@ -145,7 +162,9 @@ public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyS
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks
@@ -158,7 +177,9 @@ public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyS
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyScheduleWeeklySchedule
@@ -167,7 +188,9 @@ public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyS
     [JsonPropertyName("dayOfWeeks")]
     public IList<V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks>? DayOfWeeks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicySchedule
@@ -184,7 +207,9 @@ public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyS
     [JsonPropertyName("weeklySchedule")]
     public IList<V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyScheduleWeeklySchedule>? WeeklySchedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicySnapshotProperties
@@ -205,7 +230,9 @@ public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyS
     [JsonPropertyName("storageLocations")]
     public IList<string>? StorageLocations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicy
@@ -222,7 +249,9 @@ public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicy
     [JsonPropertyName("snapshotProperties")]
     public IList<V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicySnapshotProperties>? SnapshotProperties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderWorkloadPolicy
@@ -239,7 +268,9 @@ public partial class V1beta1ResourcePolicySpecForProviderWorkloadPolicy
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProvider
@@ -276,7 +307,9 @@ public partial class V1beta1ResourcePolicySpecForProvider
     [JsonPropertyName("workloadPolicy")]
     public IList<V1beta1ResourcePolicySpecForProviderWorkloadPolicy>? WorkloadPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderDiskConsistencyGroupPolicy
@@ -285,7 +318,9 @@ public partial class V1beta1ResourcePolicySpecInitProviderDiskConsistencyGroupPo
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderGroupPlacementPolicy
@@ -306,7 +341,9 @@ public partial class V1beta1ResourcePolicySpecInitProviderGroupPlacementPolicy
     [JsonPropertyName("vmCount")]
     public double? VmCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderInstanceSchedulePolicyVmStartSchedule
@@ -315,7 +352,9 @@ public partial class V1beta1ResourcePolicySpecInitProviderInstanceSchedulePolicy
     [JsonPropertyName("schedule")]
     public string? Schedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderInstanceSchedulePolicyVmStopSchedule
@@ -324,7 +363,9 @@ public partial class V1beta1ResourcePolicySpecInitProviderInstanceSchedulePolicy
     [JsonPropertyName("schedule")]
     public string? Schedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderInstanceSchedulePolicy
@@ -349,7 +390,9 @@ public partial class V1beta1ResourcePolicySpecInitProviderInstanceSchedulePolicy
     [JsonPropertyName("vmStopSchedule")]
     public IList<V1beta1ResourcePolicySpecInitProviderInstanceSchedulePolicyVmStopSchedule>? VmStopSchedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicyRetentionPolicy
@@ -362,7 +405,9 @@ public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicy
     [JsonPropertyName("onSourceDiskDelete")]
     public string? OnSourceDiskDelete { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicyScheduleDailySchedule
@@ -375,7 +420,9 @@ public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicy
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicyScheduleHourlySchedule
@@ -388,7 +435,9 @@ public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicy
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks
@@ -401,7 +450,9 @@ public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicy
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicyScheduleWeeklySchedule
@@ -410,7 +461,9 @@ public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicy
     [JsonPropertyName("dayOfWeeks")]
     public IList<V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks>? DayOfWeeks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicySchedule
@@ -427,7 +480,9 @@ public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicy
     [JsonPropertyName("weeklySchedule")]
     public IList<V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicyScheduleWeeklySchedule>? WeeklySchedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicySnapshotProperties
@@ -448,7 +503,9 @@ public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicy
     [JsonPropertyName("storageLocations")]
     public IList<string>? StorageLocations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicy
@@ -465,7 +522,9 @@ public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicy
     [JsonPropertyName("snapshotProperties")]
     public IList<V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicySnapshotProperties>? SnapshotProperties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderWorkloadPolicy
@@ -482,7 +541,9 @@ public partial class V1beta1ResourcePolicySpecInitProviderWorkloadPolicy
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProvider
@@ -515,7 +576,9 @@ public partial class V1beta1ResourcePolicySpecInitProvider
     [JsonPropertyName("workloadPolicy")]
     public IList<V1beta1ResourcePolicySpecInitProviderWorkloadPolicy>? WorkloadPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecProviderConfigRefPolicy
@@ -528,7 +591,9 @@ public partial class V1beta1ResourcePolicySpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecProviderConfigRef
@@ -541,7 +606,9 @@ public partial class V1beta1ResourcePolicySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ResourcePolicySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecWriteConnectionSecretToRef
@@ -554,7 +621,9 @@ public partial class V1beta1ResourcePolicySpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourcePolicySpec defines the desired state of ResourcePolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpec
@@ -583,7 +652,9 @@ public partial class V1beta1ResourcePolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ResourcePolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderDiskConsistencyGroupPolicy
@@ -592,7 +663,9 @@ public partial class V1beta1ResourcePolicyStatusAtProviderDiskConsistencyGroupPo
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderGroupPlacementPolicy
@@ -613,7 +686,9 @@ public partial class V1beta1ResourcePolicyStatusAtProviderGroupPlacementPolicy
     [JsonPropertyName("vmCount")]
     public double? VmCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderInstanceSchedulePolicyVmStartSchedule
@@ -622,7 +697,9 @@ public partial class V1beta1ResourcePolicyStatusAtProviderInstanceSchedulePolicy
     [JsonPropertyName("schedule")]
     public string? Schedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderInstanceSchedulePolicyVmStopSchedule
@@ -631,7 +708,9 @@ public partial class V1beta1ResourcePolicyStatusAtProviderInstanceSchedulePolicy
     [JsonPropertyName("schedule")]
     public string? Schedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderInstanceSchedulePolicy
@@ -656,7 +735,9 @@ public partial class V1beta1ResourcePolicyStatusAtProviderInstanceSchedulePolicy
     [JsonPropertyName("vmStopSchedule")]
     public IList<V1beta1ResourcePolicyStatusAtProviderInstanceSchedulePolicyVmStopSchedule>? VmStopSchedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicyRetentionPolicy
@@ -669,7 +750,9 @@ public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicy
     [JsonPropertyName("onSourceDiskDelete")]
     public string? OnSourceDiskDelete { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicyScheduleDailySchedule
@@ -682,7 +765,9 @@ public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicy
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicyScheduleHourlySchedule
@@ -695,7 +780,9 @@ public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicy
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks
@@ -708,7 +795,9 @@ public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicy
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicyScheduleWeeklySchedule
@@ -717,7 +806,9 @@ public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicy
     [JsonPropertyName("dayOfWeeks")]
     public IList<V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks>? DayOfWeeks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicySchedule
@@ -734,7 +825,9 @@ public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicy
     [JsonPropertyName("weeklySchedule")]
     public IList<V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicyScheduleWeeklySchedule>? WeeklySchedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicySnapshotProperties
@@ -755,7 +848,9 @@ public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicy
     [JsonPropertyName("storageLocations")]
     public IList<string>? StorageLocations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicy
@@ -772,7 +867,9 @@ public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicy
     [JsonPropertyName("snapshotProperties")]
     public IList<V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicySnapshotProperties>? SnapshotProperties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderWorkloadPolicy
@@ -789,7 +886,9 @@ public partial class V1beta1ResourcePolicyStatusAtProviderWorkloadPolicy
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProvider
@@ -834,7 +933,9 @@ public partial class V1beta1ResourcePolicyStatusAtProvider
     [JsonPropertyName("workloadPolicy")]
     public IList<V1beta1ResourcePolicyStatusAtProviderWorkloadPolicy>? WorkloadPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusConditions
@@ -863,7 +964,9 @@ public partial class V1beta1ResourcePolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourcePolicyStatus defines the observed state of ResourcePolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatus
@@ -880,7 +983,9 @@ public partial class V1beta1ResourcePolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourcePolicy is the Schema for the ResourcePolicys API. A policy that can be attached to a resource to specify or schedule actions on that resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -910,3 +1015,4 @@ public partial class V1beta1ResourcePolicy : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1ResourcePolicyStatus? Status { get; set; }
 }
+#nullable disable

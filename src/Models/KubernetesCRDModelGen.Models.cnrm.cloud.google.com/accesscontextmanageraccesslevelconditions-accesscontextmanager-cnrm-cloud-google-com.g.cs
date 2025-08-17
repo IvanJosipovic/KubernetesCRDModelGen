@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.accesscontextmanager.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1AccessContextManagerAccessLevelConditionList : IKub
     [JsonPropertyName("items")]
     public IList<V1alpha1AccessContextManagerAccessLevelCondition> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessContextManagerAccessLevelConditionSpecAccessLevelRef
@@ -50,7 +53,9 @@ public partial class V1alpha1AccessContextManagerAccessLevelConditionSpecAccessL
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessContextManagerAccessLevelConditionSpecDevicePolicyOsConstraints
@@ -63,7 +68,9 @@ public partial class V1alpha1AccessContextManagerAccessLevelConditionSpecDeviceP
     [JsonPropertyName("osType")]
     public string OsType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessContextManagerAccessLevelConditionSpecDevicePolicy
@@ -92,7 +99,9 @@ public partial class V1alpha1AccessContextManagerAccessLevelConditionSpecDeviceP
     [JsonPropertyName("requireScreenLock")]
     public bool? RequireScreenLock { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessContextManagerAccessLevelConditionSpec
@@ -129,7 +138,9 @@ public partial class V1alpha1AccessContextManagerAccessLevelConditionSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessContextManagerAccessLevelConditionStatusConditions
@@ -154,7 +165,9 @@ public partial class V1alpha1AccessContextManagerAccessLevelConditionStatusCondi
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessContextManagerAccessLevelConditionStatus
@@ -167,7 +180,9 @@ public partial class V1alpha1AccessContextManagerAccessLevelConditionStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -197,3 +212,4 @@ public partial class V1alpha1AccessContextManagerAccessLevelCondition : IKuberne
     [JsonPropertyName("status")]
     public V1alpha1AccessContextManagerAccessLevelConditionStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identityplatform.gcp.m.upbound.io;
+#nullable enable
 /// <summary>OAuthIdPConfig is the Schema for the OAuthIdPConfigs API. OIDC IdP configuration for a Identity Toolkit project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1OAuthIdPConfigList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1OAuthIdPConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The client id of an OAuth client.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OAuthIdPConfigSpecForProviderClientIdSecretRef
@@ -46,7 +49,9 @@ public partial class V1beta1OAuthIdPConfigSpecForProviderClientIdSecretRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The client secret of the OAuth client, to enable OIDC code flow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OAuthIdPConfigSpecForProviderClientSecretSecretRef
@@ -59,7 +64,9 @@ public partial class V1beta1OAuthIdPConfigSpecForProviderClientSecretSecretRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The response type to request for in the OAuth authorization flow. You can set either idToken or code to true, but not both. Setting both types to be simultaneously true ({code: true, idToken: true}) is not yet supported. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OAuthIdPConfigSpecForProviderResponseType
@@ -72,7 +79,9 @@ public partial class V1beta1OAuthIdPConfigSpecForProviderResponseType
     [JsonPropertyName("idToken")]
     public bool? IdToken { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OAuthIdPConfigSpecForProvider
@@ -109,7 +118,9 @@ public partial class V1beta1OAuthIdPConfigSpecForProvider
     [JsonPropertyName("responseType")]
     public V1beta1OAuthIdPConfigSpecForProviderResponseType? ResponseType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The client id of an OAuth client.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OAuthIdPConfigSpecInitProviderClientIdSecretRef
@@ -122,7 +133,9 @@ public partial class V1beta1OAuthIdPConfigSpecInitProviderClientIdSecretRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The client secret of the OAuth client, to enable OIDC code flow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OAuthIdPConfigSpecInitProviderClientSecretSecretRef
@@ -135,7 +148,9 @@ public partial class V1beta1OAuthIdPConfigSpecInitProviderClientSecretSecretRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The response type to request for in the OAuth authorization flow. You can set either idToken or code to true, but not both. Setting both types to be simultaneously true ({code: true, idToken: true}) is not yet supported. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OAuthIdPConfigSpecInitProviderResponseType
@@ -148,7 +163,9 @@ public partial class V1beta1OAuthIdPConfigSpecInitProviderResponseType
     [JsonPropertyName("idToken")]
     public bool? IdToken { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OAuthIdPConfigSpecInitProvider
@@ -185,7 +202,9 @@ public partial class V1beta1OAuthIdPConfigSpecInitProvider
     [JsonPropertyName("responseType")]
     public V1beta1OAuthIdPConfigSpecInitProviderResponseType? ResponseType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OAuthIdPConfigSpecProviderConfigRef
@@ -198,7 +217,9 @@ public partial class V1beta1OAuthIdPConfigSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OAuthIdPConfigSpecWriteConnectionSecretToRef
@@ -207,7 +228,9 @@ public partial class V1beta1OAuthIdPConfigSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OAuthIdPConfigSpec defines the desired state of OAuthIdPConfig</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OAuthIdPConfigSpec
@@ -232,7 +255,9 @@ public partial class V1beta1OAuthIdPConfigSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1OAuthIdPConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The response type to request for in the OAuth authorization flow. You can set either idToken or code to true, but not both. Setting both types to be simultaneously true ({code: true, idToken: true}) is not yet supported. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OAuthIdPConfigStatusAtProviderResponseType
@@ -245,7 +270,9 @@ public partial class V1beta1OAuthIdPConfigStatusAtProviderResponseType
     [JsonPropertyName("idToken")]
     public bool? IdToken { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OAuthIdPConfigStatusAtProvider
@@ -278,7 +305,9 @@ public partial class V1beta1OAuthIdPConfigStatusAtProvider
     [JsonPropertyName("responseType")]
     public V1beta1OAuthIdPConfigStatusAtProviderResponseType? ResponseType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OAuthIdPConfigStatusConditions
@@ -307,7 +336,9 @@ public partial class V1beta1OAuthIdPConfigStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OAuthIdPConfigStatus defines the observed state of OAuthIdPConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OAuthIdPConfigStatus
@@ -324,7 +355,9 @@ public partial class V1beta1OAuthIdPConfigStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OAuthIdPConfig is the Schema for the OAuthIdPConfigs API. OIDC IdP configuration for a Identity Toolkit project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -354,3 +387,4 @@ public partial class V1beta1OAuthIdPConfig : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1OAuthIdPConfigStatus? Status { get; set; }
 }
+#nullable disable

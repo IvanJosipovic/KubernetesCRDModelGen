@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.secretmanager.gcp.upbound.io;
+#nullable enable
 /// <summary>Secret is the Schema for the Secrets API. A Secret is a logical secret whose value and versions can be accessed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SecretList : IKubernetesObject<V1ListMeta>, IItems<V
     [JsonPropertyName("items")]
     public IList<V1beta1Secret> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretSpecForProviderReplicationAutoCustomerManagedEncryption
@@ -42,7 +45,9 @@ public partial class V1beta1SecretSpecForProviderReplicationAutoCustomerManagedE
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretSpecForProviderReplicationAuto
@@ -51,7 +56,9 @@ public partial class V1beta1SecretSpecForProviderReplicationAuto
     [JsonPropertyName("customerManagedEncryption")]
     public IList<V1beta1SecretSpecForProviderReplicationAutoCustomerManagedEncryption>? CustomerManagedEncryption { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretSpecForProviderReplicationUserManagedReplicasCustomerManagedEncryption
@@ -60,7 +67,9 @@ public partial class V1beta1SecretSpecForProviderReplicationUserManagedReplicasC
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretSpecForProviderReplicationUserManagedReplicas
@@ -73,7 +82,9 @@ public partial class V1beta1SecretSpecForProviderReplicationUserManagedReplicas
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretSpecForProviderReplicationUserManaged
@@ -82,7 +93,9 @@ public partial class V1beta1SecretSpecForProviderReplicationUserManaged
     [JsonPropertyName("replicas")]
     public IList<V1beta1SecretSpecForProviderReplicationUserManagedReplicas>? Replicas { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretSpecForProviderReplication
@@ -95,7 +108,9 @@ public partial class V1beta1SecretSpecForProviderReplication
     [JsonPropertyName("userManaged")]
     public IList<V1beta1SecretSpecForProviderReplicationUserManaged>? UserManaged { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretSpecForProviderRotation
@@ -108,7 +123,9 @@ public partial class V1beta1SecretSpecForProviderRotation
     [JsonPropertyName("rotationPeriod")]
     public string? RotationPeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretSpecForProviderTopics
@@ -117,7 +134,9 @@ public partial class V1beta1SecretSpecForProviderTopics
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretSpecForProvider
@@ -166,7 +185,9 @@ public partial class V1beta1SecretSpecForProvider
     [JsonPropertyName("versionDestroyTtl")]
     public string? VersionDestroyTtl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretSpecInitProviderReplicationAutoCustomerManagedEncryption
@@ -175,7 +196,9 @@ public partial class V1beta1SecretSpecInitProviderReplicationAutoCustomerManaged
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretSpecInitProviderReplicationAuto
@@ -184,7 +207,9 @@ public partial class V1beta1SecretSpecInitProviderReplicationAuto
     [JsonPropertyName("customerManagedEncryption")]
     public IList<V1beta1SecretSpecInitProviderReplicationAutoCustomerManagedEncryption>? CustomerManagedEncryption { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretSpecInitProviderReplicationUserManagedReplicasCustomerManagedEncryption
@@ -193,7 +218,9 @@ public partial class V1beta1SecretSpecInitProviderReplicationUserManagedReplicas
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretSpecInitProviderReplicationUserManagedReplicas
@@ -206,7 +233,9 @@ public partial class V1beta1SecretSpecInitProviderReplicationUserManagedReplicas
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretSpecInitProviderReplicationUserManaged
@@ -215,7 +244,9 @@ public partial class V1beta1SecretSpecInitProviderReplicationUserManaged
     [JsonPropertyName("replicas")]
     public IList<V1beta1SecretSpecInitProviderReplicationUserManagedReplicas>? Replicas { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretSpecInitProviderReplication
@@ -228,7 +259,9 @@ public partial class V1beta1SecretSpecInitProviderReplication
     [JsonPropertyName("userManaged")]
     public IList<V1beta1SecretSpecInitProviderReplicationUserManaged>? UserManaged { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretSpecInitProviderRotation
@@ -241,7 +274,9 @@ public partial class V1beta1SecretSpecInitProviderRotation
     [JsonPropertyName("rotationPeriod")]
     public string? RotationPeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretSpecInitProviderTopics
@@ -250,7 +285,9 @@ public partial class V1beta1SecretSpecInitProviderTopics
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretSpecInitProvider
@@ -299,7 +336,9 @@ public partial class V1beta1SecretSpecInitProvider
     [JsonPropertyName("versionDestroyTtl")]
     public string? VersionDestroyTtl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretSpecProviderConfigRefPolicy
@@ -312,7 +351,9 @@ public partial class V1beta1SecretSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretSpecProviderConfigRef
@@ -325,7 +366,9 @@ public partial class V1beta1SecretSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1SecretSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretSpecWriteConnectionSecretToRef
@@ -338,7 +381,9 @@ public partial class V1beta1SecretSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretSpec defines the desired state of Secret</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretSpec
@@ -367,7 +412,9 @@ public partial class V1beta1SecretSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SecretSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretStatusAtProviderReplicationAutoCustomerManagedEncryption
@@ -376,7 +423,9 @@ public partial class V1beta1SecretStatusAtProviderReplicationAutoCustomerManaged
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretStatusAtProviderReplicationAuto
@@ -385,7 +434,9 @@ public partial class V1beta1SecretStatusAtProviderReplicationAuto
     [JsonPropertyName("customerManagedEncryption")]
     public IList<V1beta1SecretStatusAtProviderReplicationAutoCustomerManagedEncryption>? CustomerManagedEncryption { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretStatusAtProviderReplicationUserManagedReplicasCustomerManagedEncryption
@@ -394,7 +445,9 @@ public partial class V1beta1SecretStatusAtProviderReplicationUserManagedReplicas
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretStatusAtProviderReplicationUserManagedReplicas
@@ -407,7 +460,9 @@ public partial class V1beta1SecretStatusAtProviderReplicationUserManagedReplicas
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretStatusAtProviderReplicationUserManaged
@@ -416,7 +471,9 @@ public partial class V1beta1SecretStatusAtProviderReplicationUserManaged
     [JsonPropertyName("replicas")]
     public IList<V1beta1SecretStatusAtProviderReplicationUserManagedReplicas>? Replicas { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretStatusAtProviderReplication
@@ -429,7 +486,9 @@ public partial class V1beta1SecretStatusAtProviderReplication
     [JsonPropertyName("userManaged")]
     public IList<V1beta1SecretStatusAtProviderReplicationUserManaged>? UserManaged { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretStatusAtProviderRotation
@@ -442,7 +501,9 @@ public partial class V1beta1SecretStatusAtProviderRotation
     [JsonPropertyName("rotationPeriod")]
     public string? RotationPeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretStatusAtProviderTopics
@@ -451,7 +512,9 @@ public partial class V1beta1SecretStatusAtProviderTopics
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretStatusAtProvider
@@ -524,7 +587,9 @@ public partial class V1beta1SecretStatusAtProvider
     [JsonPropertyName("versionDestroyTtl")]
     public string? VersionDestroyTtl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretStatusConditions
@@ -553,7 +618,9 @@ public partial class V1beta1SecretStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretStatus defines the observed state of Secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretStatus
@@ -570,7 +637,9 @@ public partial class V1beta1SecretStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Secret is the Schema for the Secrets API. A Secret is a logical secret whose value and versions can be accessed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -600,3 +669,4 @@ public partial class V1beta1Secret : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     [JsonPropertyName("status")]
     public V1beta1SecretStatus? Status { get; set; }
 }
+#nullable disable

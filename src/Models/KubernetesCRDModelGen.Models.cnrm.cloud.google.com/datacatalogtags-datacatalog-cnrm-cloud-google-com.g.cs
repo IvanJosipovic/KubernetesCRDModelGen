@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datacatalog.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>DataCatalogTag is the Schema for the DataCatalogTag API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1DataCatalogTagList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1alpha1DataCatalogTag> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Reference to the DataCatalogEntry that owns this Tag. The entry must be in the same project and location as the tag.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogTagSpecEntryRef
@@ -50,7 +53,9 @@ public partial class V1alpha1DataCatalogTagSpecEntryRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The value of a tag field with an enum type.   This value must be one of the allowed values listed in this enum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogTagSpecFieldsEnumValue
@@ -59,7 +64,9 @@ public partial class V1alpha1DataCatalogTagSpecFieldsEnumValue
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogTagSpecFields
@@ -88,7 +95,9 @@ public partial class V1alpha1DataCatalogTagSpecFields
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The resource name of the tag template this tag uses.   This field cannot be modified after creation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogTagSpecTemplateRef
@@ -105,7 +114,9 @@ public partial class V1alpha1DataCatalogTagSpecTemplateRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataCatalogTagSpec defines the desired state of DataCatalogTag</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogTagSpec
@@ -130,7 +141,9 @@ public partial class V1alpha1DataCatalogTagSpec
     [JsonPropertyName("templateRef")]
     public V1alpha1DataCatalogTagSpecTemplateRef TemplateRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogTagStatusConditions
@@ -155,7 +168,9 @@ public partial class V1alpha1DataCatalogTagStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogTagStatusObservedState
@@ -168,7 +183,9 @@ public partial class V1alpha1DataCatalogTagStatusObservedState
     [JsonPropertyName("templateDisplayName")]
     public string? TemplateDisplayName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataCatalogTagStatus defines the config connector machine state of DataCatalogTag</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogTagStatus
@@ -189,7 +206,9 @@ public partial class V1alpha1DataCatalogTagStatus
     [JsonPropertyName("observedState")]
     public V1alpha1DataCatalogTagStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataCatalogTag is the Schema for the DataCatalogTag API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -219,3 +238,4 @@ public partial class V1alpha1DataCatalogTag : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1alpha1DataCatalogTagStatus? Status { get; set; }
 }
+#nullable disable

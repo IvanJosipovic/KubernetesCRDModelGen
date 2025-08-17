@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.accesscontextmanager.gcp.m.upbound.io;
+#nullable enable
 /// <summary>AccessLevel is the Schema for the AccessLevels API. An AccessLevel is a label that can be applied to requests to GCP services, along with a list of requirements necessary for the label to be applied.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AccessLevelList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1AccessLevel> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelSpecForProviderBasicConditionsDevicePolicyOsConstraints
@@ -50,7 +53,9 @@ public partial class V1beta1AccessLevelSpecForProviderBasicConditionsDevicePolic
     [JsonPropertyName("requireVerifiedChromeOs")]
     public bool? RequireVerifiedChromeOs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelSpecForProviderBasicConditionsDevicePolicy
@@ -79,7 +84,9 @@ public partial class V1beta1AccessLevelSpecForProviderBasicConditionsDevicePolic
     [JsonPropertyName("requireScreenLock")]
     public bool? RequireScreenLock { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sub networks within a VPC network. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelSpecForProviderBasicConditionsVpcNetworkSourcesVpcSubnetwork
@@ -92,7 +99,9 @@ public partial class V1beta1AccessLevelSpecForProviderBasicConditionsVpcNetworkS
     [JsonPropertyName("vpcIpSubnetworks")]
     public IList<string>? VpcIpSubnetworks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelSpecForProviderBasicConditionsVpcNetworkSources
@@ -101,7 +110,9 @@ public partial class V1beta1AccessLevelSpecForProviderBasicConditionsVpcNetworkS
     [JsonPropertyName("vpcSubnetwork")]
     public V1beta1AccessLevelSpecForProviderBasicConditionsVpcNetworkSourcesVpcSubnetwork? VpcSubnetwork { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelSpecForProviderBasicConditions
@@ -134,7 +145,9 @@ public partial class V1beta1AccessLevelSpecForProviderBasicConditions
     [JsonPropertyName("vpcNetworkSources")]
     public IList<V1beta1AccessLevelSpecForProviderBasicConditionsVpcNetworkSources>? VpcNetworkSources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A set of predefined conditions for the access level and a combining function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelSpecForProviderBasic
@@ -147,7 +160,9 @@ public partial class V1beta1AccessLevelSpecForProviderBasic
     [JsonPropertyName("conditions")]
     public IList<V1beta1AccessLevelSpecForProviderBasicConditions>? Conditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language. This page details the objects and attributes that are used to the build the CEL expressions for custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelSpecForProviderCustomExpr
@@ -168,7 +183,9 @@ public partial class V1beta1AccessLevelSpecForProviderCustomExpr
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request. See CEL spec at: https://github.com/google/cel-spec. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelSpecForProviderCustom
@@ -177,7 +194,9 @@ public partial class V1beta1AccessLevelSpecForProviderCustom
     [JsonPropertyName("expr")]
     public V1beta1AccessLevelSpecForProviderCustomExpr? Expr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelSpecForProvider
@@ -206,7 +225,9 @@ public partial class V1beta1AccessLevelSpecForProvider
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelSpecInitProviderBasicConditionsDevicePolicyOsConstraints
@@ -223,7 +244,9 @@ public partial class V1beta1AccessLevelSpecInitProviderBasicConditionsDevicePoli
     [JsonPropertyName("requireVerifiedChromeOs")]
     public bool? RequireVerifiedChromeOs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelSpecInitProviderBasicConditionsDevicePolicy
@@ -252,7 +275,9 @@ public partial class V1beta1AccessLevelSpecInitProviderBasicConditionsDevicePoli
     [JsonPropertyName("requireScreenLock")]
     public bool? RequireScreenLock { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sub networks within a VPC network. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelSpecInitProviderBasicConditionsVpcNetworkSourcesVpcSubnetwork
@@ -265,7 +290,9 @@ public partial class V1beta1AccessLevelSpecInitProviderBasicConditionsVpcNetwork
     [JsonPropertyName("vpcIpSubnetworks")]
     public IList<string>? VpcIpSubnetworks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelSpecInitProviderBasicConditionsVpcNetworkSources
@@ -274,7 +301,9 @@ public partial class V1beta1AccessLevelSpecInitProviderBasicConditionsVpcNetwork
     [JsonPropertyName("vpcSubnetwork")]
     public V1beta1AccessLevelSpecInitProviderBasicConditionsVpcNetworkSourcesVpcSubnetwork? VpcSubnetwork { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelSpecInitProviderBasicConditions
@@ -307,7 +336,9 @@ public partial class V1beta1AccessLevelSpecInitProviderBasicConditions
     [JsonPropertyName("vpcNetworkSources")]
     public IList<V1beta1AccessLevelSpecInitProviderBasicConditionsVpcNetworkSources>? VpcNetworkSources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A set of predefined conditions for the access level and a combining function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelSpecInitProviderBasic
@@ -320,7 +351,9 @@ public partial class V1beta1AccessLevelSpecInitProviderBasic
     [JsonPropertyName("conditions")]
     public IList<V1beta1AccessLevelSpecInitProviderBasicConditions>? Conditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language. This page details the objects and attributes that are used to the build the CEL expressions for custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelSpecInitProviderCustomExpr
@@ -341,7 +374,9 @@ public partial class V1beta1AccessLevelSpecInitProviderCustomExpr
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request. See CEL spec at: https://github.com/google/cel-spec. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelSpecInitProviderCustom
@@ -350,7 +385,9 @@ public partial class V1beta1AccessLevelSpecInitProviderCustom
     [JsonPropertyName("expr")]
     public V1beta1AccessLevelSpecInitProviderCustomExpr? Expr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelSpecInitProvider
@@ -379,7 +416,9 @@ public partial class V1beta1AccessLevelSpecInitProvider
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelSpecProviderConfigRef
@@ -392,7 +431,9 @@ public partial class V1beta1AccessLevelSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelSpecWriteConnectionSecretToRef
@@ -401,7 +442,9 @@ public partial class V1beta1AccessLevelSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AccessLevelSpec defines the desired state of AccessLevel</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelSpec
@@ -426,7 +469,9 @@ public partial class V1beta1AccessLevelSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AccessLevelSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelStatusAtProviderBasicConditionsDevicePolicyOsConstraints
@@ -443,7 +488,9 @@ public partial class V1beta1AccessLevelStatusAtProviderBasicConditionsDevicePoli
     [JsonPropertyName("requireVerifiedChromeOs")]
     public bool? RequireVerifiedChromeOs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelStatusAtProviderBasicConditionsDevicePolicy
@@ -472,7 +519,9 @@ public partial class V1beta1AccessLevelStatusAtProviderBasicConditionsDevicePoli
     [JsonPropertyName("requireScreenLock")]
     public bool? RequireScreenLock { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sub networks within a VPC network. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelStatusAtProviderBasicConditionsVpcNetworkSourcesVpcSubnetwork
@@ -485,7 +534,9 @@ public partial class V1beta1AccessLevelStatusAtProviderBasicConditionsVpcNetwork
     [JsonPropertyName("vpcIpSubnetworks")]
     public IList<string>? VpcIpSubnetworks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelStatusAtProviderBasicConditionsVpcNetworkSources
@@ -494,7 +545,9 @@ public partial class V1beta1AccessLevelStatusAtProviderBasicConditionsVpcNetwork
     [JsonPropertyName("vpcSubnetwork")]
     public V1beta1AccessLevelStatusAtProviderBasicConditionsVpcNetworkSourcesVpcSubnetwork? VpcSubnetwork { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelStatusAtProviderBasicConditions
@@ -527,7 +580,9 @@ public partial class V1beta1AccessLevelStatusAtProviderBasicConditions
     [JsonPropertyName("vpcNetworkSources")]
     public IList<V1beta1AccessLevelStatusAtProviderBasicConditionsVpcNetworkSources>? VpcNetworkSources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A set of predefined conditions for the access level and a combining function. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelStatusAtProviderBasic
@@ -540,7 +595,9 @@ public partial class V1beta1AccessLevelStatusAtProviderBasic
     [JsonPropertyName("conditions")]
     public IList<V1beta1AccessLevelStatusAtProviderBasicConditions>? Conditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language. This page details the objects and attributes that are used to the build the CEL expressions for custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelStatusAtProviderCustomExpr
@@ -561,7 +618,9 @@ public partial class V1beta1AccessLevelStatusAtProviderCustomExpr
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request. See CEL spec at: https://github.com/google/cel-spec. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelStatusAtProviderCustom
@@ -570,7 +629,9 @@ public partial class V1beta1AccessLevelStatusAtProviderCustom
     [JsonPropertyName("expr")]
     public V1beta1AccessLevelStatusAtProviderCustomExpr? Expr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelStatusAtProvider
@@ -603,7 +664,9 @@ public partial class V1beta1AccessLevelStatusAtProvider
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelStatusConditions
@@ -632,7 +695,9 @@ public partial class V1beta1AccessLevelStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AccessLevelStatus defines the observed state of AccessLevel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelStatus
@@ -649,7 +714,9 @@ public partial class V1beta1AccessLevelStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AccessLevel is the Schema for the AccessLevels API. An AccessLevel is a label that can be applied to requests to GCP services, along with a list of requirements necessary for the label to be applied.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -679,3 +746,4 @@ public partial class V1beta1AccessLevel : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1AccessLevelStatus? Status { get; set; }
 }
+#nullable disable

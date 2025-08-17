@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datashare.azure.upbound.io;
+#nullable enable
 /// <summary>DataSetBlobStorage is the Schema for the DataSetBlobStorages API. Manages a Data Share Blob Storage Dataset.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DataSetBlobStorageList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1DataSetBlobStorage> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecForProviderContainerNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1DataSetBlobStorageSpecForProviderContainerNameRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Container in storage to populate containerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecForProviderContainerNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1DataSetBlobStorageSpecForProviderContainerNameRef
     [JsonPropertyName("policy")]
     public V1beta1DataSetBlobStorageSpecForProviderContainerNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecForProviderContainerNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1DataSetBlobStorageSpecForProviderContainerNameSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Container in storage to populate containerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecForProviderContainerNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1DataSetBlobStorageSpecForProviderContainerNameSelect
     [JsonPropertyName("policy")]
     public V1beta1DataSetBlobStorageSpecForProviderContainerNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecForProviderDataShareIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1DataSetBlobStorageSpecForProviderDataShareIdRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DataShare in datashare to populate dataShareId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecForProviderDataShareIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1DataSetBlobStorageSpecForProviderDataShareIdRef
     [JsonPropertyName("policy")]
     public V1beta1DataSetBlobStorageSpecForProviderDataShareIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecForProviderDataShareIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1DataSetBlobStorageSpecForProviderDataShareIdSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DataShare in datashare to populate dataShareId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecForProviderDataShareIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1DataSetBlobStorageSpecForProviderDataShareIdSelector
     [JsonPropertyName("policy")]
     public V1beta1DataSetBlobStorageSpecForProviderDataShareIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecForProviderStorageAccountNameRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1DataSetBlobStorageSpecForProviderStorageAccountNameR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecForProviderStorageAccountNameRef
@@ -171,7 +192,9 @@ public partial class V1beta1DataSetBlobStorageSpecForProviderStorageAccountNameR
     [JsonPropertyName("policy")]
     public V1beta1DataSetBlobStorageSpecForProviderStorageAccountNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecForProviderStorageAccountNameSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1DataSetBlobStorageSpecForProviderStorageAccountNameS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecForProviderStorageAccountNameSelector
@@ -201,7 +226,9 @@ public partial class V1beta1DataSetBlobStorageSpecForProviderStorageAccountNameS
     [JsonPropertyName("policy")]
     public V1beta1DataSetBlobStorageSpecForProviderStorageAccountNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecForProviderStorageAccountResourceGroupNameRefPolicy
@@ -214,7 +241,9 @@ public partial class V1beta1DataSetBlobStorageSpecForProviderStorageAccountResou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecForProviderStorageAccountResourceGroupNameRef
@@ -227,7 +256,9 @@ public partial class V1beta1DataSetBlobStorageSpecForProviderStorageAccountResou
     [JsonPropertyName("policy")]
     public V1beta1DataSetBlobStorageSpecForProviderStorageAccountResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecForProviderStorageAccountResourceGroupNameSelectorPolicy
@@ -240,7 +271,9 @@ public partial class V1beta1DataSetBlobStorageSpecForProviderStorageAccountResou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecForProviderStorageAccountResourceGroupNameSelector
@@ -257,7 +290,9 @@ public partial class V1beta1DataSetBlobStorageSpecForProviderStorageAccountResou
     [JsonPropertyName("policy")]
     public V1beta1DataSetBlobStorageSpecForProviderStorageAccountResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecForProviderStorageAccount
@@ -290,7 +325,9 @@ public partial class V1beta1DataSetBlobStorageSpecForProviderStorageAccount
     [JsonPropertyName("subscriptionId")]
     public string? SubscriptionId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecForProvider
@@ -331,7 +368,9 @@ public partial class V1beta1DataSetBlobStorageSpecForProvider
     [JsonPropertyName("storageAccount")]
     public IList<V1beta1DataSetBlobStorageSpecForProviderStorageAccount>? StorageAccount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecInitProviderContainerNameRefPolicy
@@ -344,7 +383,9 @@ public partial class V1beta1DataSetBlobStorageSpecInitProviderContainerNameRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Container in storage to populate containerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecInitProviderContainerNameRef
@@ -357,7 +398,9 @@ public partial class V1beta1DataSetBlobStorageSpecInitProviderContainerNameRef
     [JsonPropertyName("policy")]
     public V1beta1DataSetBlobStorageSpecInitProviderContainerNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecInitProviderContainerNameSelectorPolicy
@@ -370,7 +413,9 @@ public partial class V1beta1DataSetBlobStorageSpecInitProviderContainerNameSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Container in storage to populate containerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecInitProviderContainerNameSelector
@@ -387,7 +432,9 @@ public partial class V1beta1DataSetBlobStorageSpecInitProviderContainerNameSelec
     [JsonPropertyName("policy")]
     public V1beta1DataSetBlobStorageSpecInitProviderContainerNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecInitProviderStorageAccountNameRefPolicy
@@ -400,7 +447,9 @@ public partial class V1beta1DataSetBlobStorageSpecInitProviderStorageAccountName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecInitProviderStorageAccountNameRef
@@ -413,7 +462,9 @@ public partial class V1beta1DataSetBlobStorageSpecInitProviderStorageAccountName
     [JsonPropertyName("policy")]
     public V1beta1DataSetBlobStorageSpecInitProviderStorageAccountNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecInitProviderStorageAccountNameSelectorPolicy
@@ -426,7 +477,9 @@ public partial class V1beta1DataSetBlobStorageSpecInitProviderStorageAccountName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecInitProviderStorageAccountNameSelector
@@ -443,7 +496,9 @@ public partial class V1beta1DataSetBlobStorageSpecInitProviderStorageAccountName
     [JsonPropertyName("policy")]
     public V1beta1DataSetBlobStorageSpecInitProviderStorageAccountNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecInitProviderStorageAccountResourceGroupNameRefPolicy
@@ -456,7 +511,9 @@ public partial class V1beta1DataSetBlobStorageSpecInitProviderStorageAccountReso
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecInitProviderStorageAccountResourceGroupNameRef
@@ -469,7 +526,9 @@ public partial class V1beta1DataSetBlobStorageSpecInitProviderStorageAccountReso
     [JsonPropertyName("policy")]
     public V1beta1DataSetBlobStorageSpecInitProviderStorageAccountResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecInitProviderStorageAccountResourceGroupNameSelectorPolicy
@@ -482,7 +541,9 @@ public partial class V1beta1DataSetBlobStorageSpecInitProviderStorageAccountReso
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecInitProviderStorageAccountResourceGroupNameSelector
@@ -499,7 +560,9 @@ public partial class V1beta1DataSetBlobStorageSpecInitProviderStorageAccountReso
     [JsonPropertyName("policy")]
     public V1beta1DataSetBlobStorageSpecInitProviderStorageAccountResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecInitProviderStorageAccount
@@ -532,7 +595,9 @@ public partial class V1beta1DataSetBlobStorageSpecInitProviderStorageAccount
     [JsonPropertyName("subscriptionId")]
     public string? SubscriptionId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecInitProvider
@@ -561,7 +626,9 @@ public partial class V1beta1DataSetBlobStorageSpecInitProvider
     [JsonPropertyName("storageAccount")]
     public IList<V1beta1DataSetBlobStorageSpecInitProviderStorageAccount>? StorageAccount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecProviderConfigRefPolicy
@@ -574,7 +641,9 @@ public partial class V1beta1DataSetBlobStorageSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecProviderConfigRef
@@ -587,7 +656,9 @@ public partial class V1beta1DataSetBlobStorageSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1DataSetBlobStorageSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpecWriteConnectionSecretToRef
@@ -600,7 +671,9 @@ public partial class V1beta1DataSetBlobStorageSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataSetBlobStorageSpec defines the desired state of DataSetBlobStorage</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageSpec
@@ -629,7 +702,9 @@ public partial class V1beta1DataSetBlobStorageSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DataSetBlobStorageSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageStatusAtProviderStorageAccount
@@ -646,7 +721,9 @@ public partial class V1beta1DataSetBlobStorageStatusAtProviderStorageAccount
     [JsonPropertyName("subscriptionId")]
     public string? SubscriptionId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageStatusAtProvider
@@ -679,7 +756,9 @@ public partial class V1beta1DataSetBlobStorageStatusAtProvider
     [JsonPropertyName("storageAccount")]
     public IList<V1beta1DataSetBlobStorageStatusAtProviderStorageAccount>? StorageAccount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageStatusConditions
@@ -708,7 +787,9 @@ public partial class V1beta1DataSetBlobStorageStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataSetBlobStorageStatus defines the observed state of DataSetBlobStorage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBlobStorageStatus
@@ -725,7 +806,9 @@ public partial class V1beta1DataSetBlobStorageStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataSetBlobStorage is the Schema for the DataSetBlobStorages API. Manages a Data Share Blob Storage Dataset.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -755,3 +838,4 @@ public partial class V1beta1DataSetBlobStorage : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1DataSetBlobStorageStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.directconnect.aws.upbound.io;
+#nullable enable
 /// <summary>PublicVirtualInterface is the Schema for the PublicVirtualInterfaces API. Provides a Direct Connect public virtual interface resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PublicVirtualInterfaceList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1PublicVirtualInterface> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PublicVirtualInterfaceSpecForProviderConnectionIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1PublicVirtualInterfaceSpecForProviderConnectionIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Connection in directconnect to populate connectionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PublicVirtualInterfaceSpecForProviderConnectionIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1PublicVirtualInterfaceSpecForProviderConnectionIdRef
     [JsonPropertyName("policy")]
     public V1beta1PublicVirtualInterfaceSpecForProviderConnectionIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PublicVirtualInterfaceSpecForProviderConnectionIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1PublicVirtualInterfaceSpecForProviderConnectionIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Connection in directconnect to populate connectionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PublicVirtualInterfaceSpecForProviderConnectionIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1PublicVirtualInterfaceSpecForProviderConnectionIdSel
     [JsonPropertyName("policy")]
     public V1beta1PublicVirtualInterfaceSpecForProviderConnectionIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PublicVirtualInterfaceSpecForProvider
@@ -146,7 +157,9 @@ public partial class V1beta1PublicVirtualInterfaceSpecForProvider
     [JsonPropertyName("vlan")]
     public double? Vlan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PublicVirtualInterfaceSpecInitProviderConnectionIdRefPolicy
@@ -159,7 +172,9 @@ public partial class V1beta1PublicVirtualInterfaceSpecInitProviderConnectionIdRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Connection in directconnect to populate connectionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PublicVirtualInterfaceSpecInitProviderConnectionIdRef
@@ -172,7 +187,9 @@ public partial class V1beta1PublicVirtualInterfaceSpecInitProviderConnectionIdRe
     [JsonPropertyName("policy")]
     public V1beta1PublicVirtualInterfaceSpecInitProviderConnectionIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PublicVirtualInterfaceSpecInitProviderConnectionIdSelectorPolicy
@@ -185,7 +202,9 @@ public partial class V1beta1PublicVirtualInterfaceSpecInitProviderConnectionIdSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Connection in directconnect to populate connectionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PublicVirtualInterfaceSpecInitProviderConnectionIdSelector
@@ -202,7 +221,9 @@ public partial class V1beta1PublicVirtualInterfaceSpecInitProviderConnectionIdSe
     [JsonPropertyName("policy")]
     public V1beta1PublicVirtualInterfaceSpecInitProviderConnectionIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PublicVirtualInterfaceSpecInitProvider
@@ -255,7 +276,9 @@ public partial class V1beta1PublicVirtualInterfaceSpecInitProvider
     [JsonPropertyName("vlan")]
     public double? Vlan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PublicVirtualInterfaceSpecProviderConfigRefPolicy
@@ -268,7 +291,9 @@ public partial class V1beta1PublicVirtualInterfaceSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PublicVirtualInterfaceSpecProviderConfigRef
@@ -281,7 +306,9 @@ public partial class V1beta1PublicVirtualInterfaceSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1PublicVirtualInterfaceSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PublicVirtualInterfaceSpecWriteConnectionSecretToRef
@@ -294,7 +321,9 @@ public partial class V1beta1PublicVirtualInterfaceSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PublicVirtualInterfaceSpec defines the desired state of PublicVirtualInterface</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PublicVirtualInterfaceSpec
@@ -323,7 +352,9 @@ public partial class V1beta1PublicVirtualInterfaceSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1PublicVirtualInterfaceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PublicVirtualInterfaceStatusAtProvider
@@ -392,7 +423,9 @@ public partial class V1beta1PublicVirtualInterfaceStatusAtProvider
     [JsonPropertyName("vlan")]
     public double? Vlan { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PublicVirtualInterfaceStatusConditions
@@ -421,7 +454,9 @@ public partial class V1beta1PublicVirtualInterfaceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PublicVirtualInterfaceStatus defines the observed state of PublicVirtualInterface.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PublicVirtualInterfaceStatus
@@ -438,7 +473,9 @@ public partial class V1beta1PublicVirtualInterfaceStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PublicVirtualInterface is the Schema for the PublicVirtualInterfaces API. Provides a Direct Connect public virtual interface resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -468,3 +505,4 @@ public partial class V1beta1PublicVirtualInterface : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1PublicVirtualInterfaceStatus? Status { get; set; }
 }
+#nullable disable

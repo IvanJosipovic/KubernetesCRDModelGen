@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.acme.certmanager.io;
+#nullable enable
 /// <summary>Order is a type to represent an Order with an ACME server</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1OrderList : IKubernetesObject<V1ListMeta>, IItems<V1Order
     [JsonPropertyName("items")]
     public IList<V1Order> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IssuerRef references a properly configured ACME-type Issuer which should be used to create this Order. If the Issuer does not exist, processing will be retried. If the Issuer is not an 'ACME' Issuer, an error will be returned and the Order will be marked as failed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1OrderSpecIssuerRef
@@ -50,7 +53,9 @@ public partial class V1OrderSpecIssuerRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1OrderSpec
@@ -83,7 +88,9 @@ public partial class V1OrderSpec
     [JsonPropertyName("request")]
     public string Request { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Challenge specifies a challenge offered by the ACME server for an Order. An appropriate Challenge resource can be created to perform the ACME challenge process.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1OrderStatusAuthorizationsChallenges
@@ -100,7 +107,9 @@ public partial class V1OrderStatusAuthorizationsChallenges
     [JsonPropertyName("url")]
     public string Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ACMEAuthorization contains data returned from the ACME server on an authorization that must be completed in order validate a DNS name on an ACME Order resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1OrderStatusAuthorizations
@@ -125,7 +134,9 @@ public partial class V1OrderStatusAuthorizations
     [JsonPropertyName("wildcard")]
     public bool? Wildcard { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1OrderStatus
@@ -158,7 +169,9 @@ public partial class V1OrderStatus
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Order is a type to represent an Order with an ACME server</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -188,3 +201,4 @@ public partial class V1Order : IKubernetesObject<V1ObjectMeta>, ISpec<V1OrderSpe
     [JsonPropertyName("status")]
     public V1OrderStatus? Status { get; set; }
 }
+#nullable disable

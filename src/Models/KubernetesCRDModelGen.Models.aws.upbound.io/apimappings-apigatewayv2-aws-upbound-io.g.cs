@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigatewayv2.aws.upbound.io;
+#nullable enable
 /// <summary>APIMapping is the Schema for the APIMappings API. Manages an Amazon API Gateway Version 2 API mapping.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1APIMappingList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1beta1APIMapping> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingSpecForProviderApiIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1APIMappingSpecForProviderApiIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a API in apigatewayv2 to populate apiId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingSpecForProviderApiIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1APIMappingSpecForProviderApiIdRef
     [JsonPropertyName("policy")]
     public V1beta1APIMappingSpecForProviderApiIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingSpecForProviderApiIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1APIMappingSpecForProviderApiIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a API in apigatewayv2 to populate apiId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingSpecForProviderApiIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1APIMappingSpecForProviderApiIdSelector
     [JsonPropertyName("policy")]
     public V1beta1APIMappingSpecForProviderApiIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingSpecForProviderDomainNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1APIMappingSpecForProviderDomainNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DomainName in apigatewayv2 to populate domainName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingSpecForProviderDomainNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1APIMappingSpecForProviderDomainNameRef
     [JsonPropertyName("policy")]
     public V1beta1APIMappingSpecForProviderDomainNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingSpecForProviderDomainNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1APIMappingSpecForProviderDomainNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DomainName in apigatewayv2 to populate domainName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingSpecForProviderDomainNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1APIMappingSpecForProviderDomainNameSelector
     [JsonPropertyName("policy")]
     public V1beta1APIMappingSpecForProviderDomainNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingSpecForProviderStageRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1APIMappingSpecForProviderStageRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Stage in apigatewayv2 to populate stage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingSpecForProviderStageRef
@@ -171,7 +192,9 @@ public partial class V1beta1APIMappingSpecForProviderStageRef
     [JsonPropertyName("policy")]
     public V1beta1APIMappingSpecForProviderStageRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingSpecForProviderStageSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1APIMappingSpecForProviderStageSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Stage in apigatewayv2 to populate stage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingSpecForProviderStageSelector
@@ -201,7 +226,9 @@ public partial class V1beta1APIMappingSpecForProviderStageSelector
     [JsonPropertyName("policy")]
     public V1beta1APIMappingSpecForProviderStageSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingSpecForProvider
@@ -250,7 +277,9 @@ public partial class V1beta1APIMappingSpecForProvider
     [JsonPropertyName("stageSelector")]
     public V1beta1APIMappingSpecForProviderStageSelector? StageSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingSpecInitProviderApiIdRefPolicy
@@ -263,7 +292,9 @@ public partial class V1beta1APIMappingSpecInitProviderApiIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a API in apigatewayv2 to populate apiId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingSpecInitProviderApiIdRef
@@ -276,7 +307,9 @@ public partial class V1beta1APIMappingSpecInitProviderApiIdRef
     [JsonPropertyName("policy")]
     public V1beta1APIMappingSpecInitProviderApiIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingSpecInitProviderApiIdSelectorPolicy
@@ -289,7 +322,9 @@ public partial class V1beta1APIMappingSpecInitProviderApiIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a API in apigatewayv2 to populate apiId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingSpecInitProviderApiIdSelector
@@ -306,7 +341,9 @@ public partial class V1beta1APIMappingSpecInitProviderApiIdSelector
     [JsonPropertyName("policy")]
     public V1beta1APIMappingSpecInitProviderApiIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingSpecInitProviderDomainNameRefPolicy
@@ -319,7 +356,9 @@ public partial class V1beta1APIMappingSpecInitProviderDomainNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DomainName in apigatewayv2 to populate domainName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingSpecInitProviderDomainNameRef
@@ -332,7 +371,9 @@ public partial class V1beta1APIMappingSpecInitProviderDomainNameRef
     [JsonPropertyName("policy")]
     public V1beta1APIMappingSpecInitProviderDomainNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingSpecInitProviderDomainNameSelectorPolicy
@@ -345,7 +386,9 @@ public partial class V1beta1APIMappingSpecInitProviderDomainNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DomainName in apigatewayv2 to populate domainName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingSpecInitProviderDomainNameSelector
@@ -362,7 +405,9 @@ public partial class V1beta1APIMappingSpecInitProviderDomainNameSelector
     [JsonPropertyName("policy")]
     public V1beta1APIMappingSpecInitProviderDomainNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingSpecInitProviderStageRefPolicy
@@ -375,7 +420,9 @@ public partial class V1beta1APIMappingSpecInitProviderStageRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Stage in apigatewayv2 to populate stage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingSpecInitProviderStageRef
@@ -388,7 +435,9 @@ public partial class V1beta1APIMappingSpecInitProviderStageRef
     [JsonPropertyName("policy")]
     public V1beta1APIMappingSpecInitProviderStageRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingSpecInitProviderStageSelectorPolicy
@@ -401,7 +450,9 @@ public partial class V1beta1APIMappingSpecInitProviderStageSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Stage in apigatewayv2 to populate stage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingSpecInitProviderStageSelector
@@ -418,7 +469,9 @@ public partial class V1beta1APIMappingSpecInitProviderStageSelector
     [JsonPropertyName("policy")]
     public V1beta1APIMappingSpecInitProviderStageSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingSpecInitProvider
@@ -463,7 +516,9 @@ public partial class V1beta1APIMappingSpecInitProvider
     [JsonPropertyName("stageSelector")]
     public V1beta1APIMappingSpecInitProviderStageSelector? StageSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingSpecProviderConfigRefPolicy
@@ -476,7 +531,9 @@ public partial class V1beta1APIMappingSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingSpecProviderConfigRef
@@ -489,7 +546,9 @@ public partial class V1beta1APIMappingSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1APIMappingSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingSpecWriteConnectionSecretToRef
@@ -502,7 +561,9 @@ public partial class V1beta1APIMappingSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>APIMappingSpec defines the desired state of APIMapping</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingSpec
@@ -531,7 +592,9 @@ public partial class V1beta1APIMappingSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1APIMappingSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingStatusAtProvider
@@ -560,7 +623,9 @@ public partial class V1beta1APIMappingStatusAtProvider
     [JsonPropertyName("stage")]
     public string? Stage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingStatusConditions
@@ -589,7 +654,9 @@ public partial class V1beta1APIMappingStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>APIMappingStatus defines the observed state of APIMapping.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIMappingStatus
@@ -606,7 +673,9 @@ public partial class V1beta1APIMappingStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>APIMapping is the Schema for the APIMappings API. Manages an Amazon API Gateway Version 2 API mapping.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -636,3 +705,4 @@ public partial class V1beta1APIMapping : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1APIMappingStatus? Status { get; set; }
 }
+#nullable disable

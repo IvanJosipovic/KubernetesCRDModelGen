@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkmanager.aws.m.upbound.io;
+#nullable enable
 /// <summary>VPCAttachment is the Schema for the VPCAttachments API. Manages a Network Manager VPC attachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VPCAttachmentList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1beta1VPCAttachment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecForProviderCoreNetworkIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1VPCAttachmentSpecForProviderCoreNetworkIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CoreNetwork in networkmanager to populate coreNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecForProviderCoreNetworkIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1VPCAttachmentSpecForProviderCoreNetworkIdRef
     [JsonPropertyName("policy")]
     public V1beta1VPCAttachmentSpecForProviderCoreNetworkIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecForProviderCoreNetworkIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1VPCAttachmentSpecForProviderCoreNetworkIdSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CoreNetwork in networkmanager to populate coreNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecForProviderCoreNetworkIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1VPCAttachmentSpecForProviderCoreNetworkIdSelector
     [JsonPropertyName("policy")]
     public V1beta1VPCAttachmentSpecForProviderCoreNetworkIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options for the VPC attachment. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecForProviderOptions
@@ -110,7 +121,9 @@ public partial class V1beta1VPCAttachmentSpecForProviderOptions
     [JsonPropertyName("ipv6Support")]
     public bool? Ipv6Support { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecForProviderSubnetArnsRefsPolicy
@@ -123,7 +136,9 @@ public partial class V1beta1VPCAttachmentSpecForProviderSubnetArnsRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecForProviderSubnetArnsRefs
@@ -140,7 +155,9 @@ public partial class V1beta1VPCAttachmentSpecForProviderSubnetArnsRefs
     [JsonPropertyName("policy")]
     public V1beta1VPCAttachmentSpecForProviderSubnetArnsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecForProviderSubnetArnsSelectorPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1VPCAttachmentSpecForProviderSubnetArnsSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetArns.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecForProviderSubnetArnsSelector
@@ -174,7 +193,9 @@ public partial class V1beta1VPCAttachmentSpecForProviderSubnetArnsSelector
     [JsonPropertyName("policy")]
     public V1beta1VPCAttachmentSpecForProviderSubnetArnsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecForProviderVpcArnRefPolicy
@@ -187,7 +208,9 @@ public partial class V1beta1VPCAttachmentSpecForProviderVpcArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate vpcArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecForProviderVpcArnRef
@@ -204,7 +227,9 @@ public partial class V1beta1VPCAttachmentSpecForProviderVpcArnRef
     [JsonPropertyName("policy")]
     public V1beta1VPCAttachmentSpecForProviderVpcArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecForProviderVpcArnSelectorPolicy
@@ -217,7 +242,9 @@ public partial class V1beta1VPCAttachmentSpecForProviderVpcArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate vpcArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecForProviderVpcArnSelector
@@ -238,7 +265,9 @@ public partial class V1beta1VPCAttachmentSpecForProviderVpcArnSelector
     [JsonPropertyName("policy")]
     public V1beta1VPCAttachmentSpecForProviderVpcArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecForProvider
@@ -287,7 +316,9 @@ public partial class V1beta1VPCAttachmentSpecForProvider
     [JsonPropertyName("vpcArnSelector")]
     public V1beta1VPCAttachmentSpecForProviderVpcArnSelector? VpcArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecInitProviderCoreNetworkIdRefPolicy
@@ -300,7 +331,9 @@ public partial class V1beta1VPCAttachmentSpecInitProviderCoreNetworkIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CoreNetwork in networkmanager to populate coreNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecInitProviderCoreNetworkIdRef
@@ -317,7 +350,9 @@ public partial class V1beta1VPCAttachmentSpecInitProviderCoreNetworkIdRef
     [JsonPropertyName("policy")]
     public V1beta1VPCAttachmentSpecInitProviderCoreNetworkIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecInitProviderCoreNetworkIdSelectorPolicy
@@ -330,7 +365,9 @@ public partial class V1beta1VPCAttachmentSpecInitProviderCoreNetworkIdSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CoreNetwork in networkmanager to populate coreNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecInitProviderCoreNetworkIdSelector
@@ -351,7 +388,9 @@ public partial class V1beta1VPCAttachmentSpecInitProviderCoreNetworkIdSelector
     [JsonPropertyName("policy")]
     public V1beta1VPCAttachmentSpecInitProviderCoreNetworkIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options for the VPC attachment. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecInitProviderOptions
@@ -364,7 +403,9 @@ public partial class V1beta1VPCAttachmentSpecInitProviderOptions
     [JsonPropertyName("ipv6Support")]
     public bool? Ipv6Support { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecInitProviderSubnetArnsRefsPolicy
@@ -377,7 +418,9 @@ public partial class V1beta1VPCAttachmentSpecInitProviderSubnetArnsRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecInitProviderSubnetArnsRefs
@@ -394,7 +437,9 @@ public partial class V1beta1VPCAttachmentSpecInitProviderSubnetArnsRefs
     [JsonPropertyName("policy")]
     public V1beta1VPCAttachmentSpecInitProviderSubnetArnsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecInitProviderSubnetArnsSelectorPolicy
@@ -407,7 +452,9 @@ public partial class V1beta1VPCAttachmentSpecInitProviderSubnetArnsSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetArns.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecInitProviderSubnetArnsSelector
@@ -428,7 +475,9 @@ public partial class V1beta1VPCAttachmentSpecInitProviderSubnetArnsSelector
     [JsonPropertyName("policy")]
     public V1beta1VPCAttachmentSpecInitProviderSubnetArnsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecInitProviderVpcArnRefPolicy
@@ -441,7 +490,9 @@ public partial class V1beta1VPCAttachmentSpecInitProviderVpcArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate vpcArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecInitProviderVpcArnRef
@@ -458,7 +509,9 @@ public partial class V1beta1VPCAttachmentSpecInitProviderVpcArnRef
     [JsonPropertyName("policy")]
     public V1beta1VPCAttachmentSpecInitProviderVpcArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecInitProviderVpcArnSelectorPolicy
@@ -471,7 +524,9 @@ public partial class V1beta1VPCAttachmentSpecInitProviderVpcArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate vpcArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecInitProviderVpcArnSelector
@@ -492,7 +547,9 @@ public partial class V1beta1VPCAttachmentSpecInitProviderVpcArnSelector
     [JsonPropertyName("policy")]
     public V1beta1VPCAttachmentSpecInitProviderVpcArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecInitProvider
@@ -541,7 +598,9 @@ public partial class V1beta1VPCAttachmentSpecInitProvider
     [JsonPropertyName("vpcArnSelector")]
     public V1beta1VPCAttachmentSpecInitProviderVpcArnSelector? VpcArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecProviderConfigRef
@@ -554,7 +613,9 @@ public partial class V1beta1VPCAttachmentSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecWriteConnectionSecretToRef
@@ -563,7 +624,9 @@ public partial class V1beta1VPCAttachmentSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPCAttachmentSpec defines the desired state of VPCAttachment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpec
@@ -588,7 +651,9 @@ public partial class V1beta1VPCAttachmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VPCAttachmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options for the VPC attachment. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentStatusAtProviderOptions
@@ -601,7 +666,9 @@ public partial class V1beta1VPCAttachmentStatusAtProviderOptions
     [JsonPropertyName("ipv6Support")]
     public bool? Ipv6Support { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentStatusAtProvider
@@ -670,7 +737,9 @@ public partial class V1beta1VPCAttachmentStatusAtProvider
     [JsonPropertyName("vpcArn")]
     public string? VpcArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentStatusConditions
@@ -699,7 +768,9 @@ public partial class V1beta1VPCAttachmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPCAttachmentStatus defines the observed state of VPCAttachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentStatus
@@ -716,7 +787,9 @@ public partial class V1beta1VPCAttachmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPCAttachment is the Schema for the VPCAttachments API. Manages a Network Manager VPC attachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -746,3 +819,4 @@ public partial class V1beta1VPCAttachment : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1VPCAttachmentStatus? Status { get; set; }
 }
+#nullable disable

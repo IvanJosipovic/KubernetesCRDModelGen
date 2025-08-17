@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.servicediscovery.aws.upbound.io;
+#nullable enable
 /// <summary>PrivateDNSNamespace is the Schema for the PrivateDNSNamespaces API. Provides a Service Discovery Private DNS Namespace resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PrivateDNSNamespaceList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1PrivateDNSNamespace> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSNamespaceSpecForProviderVpcRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1PrivateDNSNamespaceSpecForProviderVpcRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate vpc.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSNamespaceSpecForProviderVpcRef
@@ -59,7 +64,9 @@ public partial class V1beta1PrivateDNSNamespaceSpecForProviderVpcRef
     [JsonPropertyName("policy")]
     public V1beta1PrivateDNSNamespaceSpecForProviderVpcRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSNamespaceSpecForProviderVpcSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1PrivateDNSNamespaceSpecForProviderVpcSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate vpc.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSNamespaceSpecForProviderVpcSelector
@@ -89,7 +98,9 @@ public partial class V1beta1PrivateDNSNamespaceSpecForProviderVpcSelector
     [JsonPropertyName("policy")]
     public V1beta1PrivateDNSNamespaceSpecForProviderVpcSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSNamespaceSpecForProvider
@@ -122,7 +133,9 @@ public partial class V1beta1PrivateDNSNamespaceSpecForProvider
     [JsonPropertyName("vpcSelector")]
     public V1beta1PrivateDNSNamespaceSpecForProviderVpcSelector? VpcSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSNamespaceSpecInitProviderVpcRefPolicy
@@ -135,7 +148,9 @@ public partial class V1beta1PrivateDNSNamespaceSpecInitProviderVpcRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate vpc.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSNamespaceSpecInitProviderVpcRef
@@ -148,7 +163,9 @@ public partial class V1beta1PrivateDNSNamespaceSpecInitProviderVpcRef
     [JsonPropertyName("policy")]
     public V1beta1PrivateDNSNamespaceSpecInitProviderVpcRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSNamespaceSpecInitProviderVpcSelectorPolicy
@@ -161,7 +178,9 @@ public partial class V1beta1PrivateDNSNamespaceSpecInitProviderVpcSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate vpc.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSNamespaceSpecInitProviderVpcSelector
@@ -178,7 +197,9 @@ public partial class V1beta1PrivateDNSNamespaceSpecInitProviderVpcSelector
     [JsonPropertyName("policy")]
     public V1beta1PrivateDNSNamespaceSpecInitProviderVpcSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSNamespaceSpecInitProvider
@@ -207,7 +228,9 @@ public partial class V1beta1PrivateDNSNamespaceSpecInitProvider
     [JsonPropertyName("vpcSelector")]
     public V1beta1PrivateDNSNamespaceSpecInitProviderVpcSelector? VpcSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSNamespaceSpecProviderConfigRefPolicy
@@ -220,7 +243,9 @@ public partial class V1beta1PrivateDNSNamespaceSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSNamespaceSpecProviderConfigRef
@@ -233,7 +258,9 @@ public partial class V1beta1PrivateDNSNamespaceSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1PrivateDNSNamespaceSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSNamespaceSpecWriteConnectionSecretToRef
@@ -246,7 +273,9 @@ public partial class V1beta1PrivateDNSNamespaceSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivateDNSNamespaceSpec defines the desired state of PrivateDNSNamespace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSNamespaceSpec
@@ -275,7 +304,9 @@ public partial class V1beta1PrivateDNSNamespaceSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1PrivateDNSNamespaceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSNamespaceStatusAtProvider
@@ -316,7 +347,9 @@ public partial class V1beta1PrivateDNSNamespaceStatusAtProvider
     [JsonPropertyName("vpc")]
     public string? Vpc { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSNamespaceStatusConditions
@@ -345,7 +378,9 @@ public partial class V1beta1PrivateDNSNamespaceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivateDNSNamespaceStatus defines the observed state of PrivateDNSNamespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSNamespaceStatus
@@ -362,7 +397,9 @@ public partial class V1beta1PrivateDNSNamespaceStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivateDNSNamespace is the Schema for the PrivateDNSNamespaces API. Provides a Service Discovery Private DNS Namespace resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -392,3 +429,4 @@ public partial class V1beta1PrivateDNSNamespace : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1PrivateDNSNamespaceStatus? Status { get; set; }
 }
+#nullable disable

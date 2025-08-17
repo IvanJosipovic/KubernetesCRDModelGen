@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iot.aws.upbound.io;
+#nullable enable
 /// <summary>ThingGroupMembership is the Schema for the ThingGroupMemberships API. Adds an IoT Thing to an IoT Thing Group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ThingGroupMembershipList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1ThingGroupMembership> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingGroupMembershipSpecForProvider
@@ -54,7 +57,9 @@ public partial class V1beta1ThingGroupMembershipSpecForProvider
     [JsonPropertyName("thingName")]
     public string? ThingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingGroupMembershipSpecInitProvider
@@ -71,7 +76,9 @@ public partial class V1beta1ThingGroupMembershipSpecInitProvider
     [JsonPropertyName("thingName")]
     public string? ThingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingGroupMembershipSpecProviderConfigRefPolicy
@@ -84,7 +91,9 @@ public partial class V1beta1ThingGroupMembershipSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingGroupMembershipSpecProviderConfigRef
@@ -97,7 +106,9 @@ public partial class V1beta1ThingGroupMembershipSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ThingGroupMembershipSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingGroupMembershipSpecWriteConnectionSecretToRef
@@ -110,7 +121,9 @@ public partial class V1beta1ThingGroupMembershipSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ThingGroupMembershipSpec defines the desired state of ThingGroupMembership</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingGroupMembershipSpec
@@ -139,7 +152,9 @@ public partial class V1beta1ThingGroupMembershipSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ThingGroupMembershipSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingGroupMembershipStatusAtProvider
@@ -164,7 +179,9 @@ public partial class V1beta1ThingGroupMembershipStatusAtProvider
     [JsonPropertyName("thingName")]
     public string? ThingName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingGroupMembershipStatusConditions
@@ -193,7 +210,9 @@ public partial class V1beta1ThingGroupMembershipStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ThingGroupMembershipStatus defines the observed state of ThingGroupMembership.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingGroupMembershipStatus
@@ -210,7 +229,9 @@ public partial class V1beta1ThingGroupMembershipStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ThingGroupMembership is the Schema for the ThingGroupMemberships API. Adds an IoT Thing to an IoT Thing Group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -240,3 +261,4 @@ public partial class V1beta1ThingGroupMembership : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1ThingGroupMembershipStatus? Status { get; set; }
 }
+#nullable disable

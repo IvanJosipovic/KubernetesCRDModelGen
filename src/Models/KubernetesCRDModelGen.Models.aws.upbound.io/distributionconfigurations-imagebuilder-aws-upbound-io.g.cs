@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.imagebuilder.aws.upbound.io;
+#nullable enable
 /// <summary>DistributionConfiguration is the Schema for the DistributionConfigurations API. Manage an Image Builder Distribution Configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DistributionConfigurationList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1beta1DistributionConfiguration> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecForProviderDistributionAmiDistributionConfigurationLaunchPermission
@@ -54,7 +57,9 @@ public partial class V1beta1DistributionConfigurationSpecForProviderDistribution
     [JsonPropertyName("userIds")]
     public IList<string>? UserIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecForProviderDistributionAmiDistributionConfiguration
@@ -83,7 +88,9 @@ public partial class V1beta1DistributionConfigurationSpecForProviderDistribution
     [JsonPropertyName("targetAccountIds")]
     public IList<string>? TargetAccountIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecForProviderDistributionContainerDistributionConfigurationTargetRepository
@@ -96,7 +103,9 @@ public partial class V1beta1DistributionConfigurationSpecForProviderDistribution
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecForProviderDistributionContainerDistributionConfiguration
@@ -113,7 +122,9 @@ public partial class V1beta1DistributionConfigurationSpecForProviderDistribution
     [JsonPropertyName("targetRepository")]
     public IList<V1beta1DistributionConfigurationSpecForProviderDistributionContainerDistributionConfigurationTargetRepository>? TargetRepository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecForProviderDistributionFastLaunchConfigurationLaunchTemplate
@@ -130,7 +141,9 @@ public partial class V1beta1DistributionConfigurationSpecForProviderDistribution
     [JsonPropertyName("launchTemplateVersion")]
     public string? LaunchTemplateVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecForProviderDistributionFastLaunchConfigurationSnapshotConfiguration
@@ -139,7 +152,9 @@ public partial class V1beta1DistributionConfigurationSpecForProviderDistribution
     [JsonPropertyName("targetResourceCount")]
     public double? TargetResourceCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecForProviderDistributionFastLaunchConfiguration
@@ -164,7 +179,9 @@ public partial class V1beta1DistributionConfigurationSpecForProviderDistribution
     [JsonPropertyName("snapshotConfiguration")]
     public IList<V1beta1DistributionConfigurationSpecForProviderDistributionFastLaunchConfigurationSnapshotConfiguration>? SnapshotConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecForProviderDistributionLaunchTemplateConfiguration
@@ -181,7 +198,9 @@ public partial class V1beta1DistributionConfigurationSpecForProviderDistribution
     [JsonPropertyName("launchTemplateId")]
     public string? LaunchTemplateId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecForProviderDistributionS3ExportConfiguration
@@ -202,7 +221,9 @@ public partial class V1beta1DistributionConfigurationSpecForProviderDistribution
     [JsonPropertyName("s3Prefix")]
     public string? S3Prefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecForProviderDistributionSsmParameterConfiguration
@@ -219,7 +240,9 @@ public partial class V1beta1DistributionConfigurationSpecForProviderDistribution
     [JsonPropertyName("parameterName")]
     public string? ParameterName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecForProviderDistribution
@@ -256,7 +279,9 @@ public partial class V1beta1DistributionConfigurationSpecForProviderDistribution
     [JsonPropertyName("ssmParameterConfiguration")]
     public IList<V1beta1DistributionConfigurationSpecForProviderDistributionSsmParameterConfiguration>? SsmParameterConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecForProvider
@@ -281,7 +306,9 @@ public partial class V1beta1DistributionConfigurationSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecInitProviderDistributionAmiDistributionConfigurationLaunchPermission
@@ -302,7 +329,9 @@ public partial class V1beta1DistributionConfigurationSpecInitProviderDistributio
     [JsonPropertyName("userIds")]
     public IList<string>? UserIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecInitProviderDistributionAmiDistributionConfiguration
@@ -331,7 +360,9 @@ public partial class V1beta1DistributionConfigurationSpecInitProviderDistributio
     [JsonPropertyName("targetAccountIds")]
     public IList<string>? TargetAccountIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecInitProviderDistributionContainerDistributionConfigurationTargetRepository
@@ -344,7 +375,9 @@ public partial class V1beta1DistributionConfigurationSpecInitProviderDistributio
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecInitProviderDistributionContainerDistributionConfiguration
@@ -361,7 +394,9 @@ public partial class V1beta1DistributionConfigurationSpecInitProviderDistributio
     [JsonPropertyName("targetRepository")]
     public IList<V1beta1DistributionConfigurationSpecInitProviderDistributionContainerDistributionConfigurationTargetRepository>? TargetRepository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecInitProviderDistributionFastLaunchConfigurationLaunchTemplate
@@ -378,7 +413,9 @@ public partial class V1beta1DistributionConfigurationSpecInitProviderDistributio
     [JsonPropertyName("launchTemplateVersion")]
     public string? LaunchTemplateVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecInitProviderDistributionFastLaunchConfigurationSnapshotConfiguration
@@ -387,7 +424,9 @@ public partial class V1beta1DistributionConfigurationSpecInitProviderDistributio
     [JsonPropertyName("targetResourceCount")]
     public double? TargetResourceCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecInitProviderDistributionFastLaunchConfiguration
@@ -412,7 +451,9 @@ public partial class V1beta1DistributionConfigurationSpecInitProviderDistributio
     [JsonPropertyName("snapshotConfiguration")]
     public IList<V1beta1DistributionConfigurationSpecInitProviderDistributionFastLaunchConfigurationSnapshotConfiguration>? SnapshotConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecInitProviderDistributionLaunchTemplateConfiguration
@@ -429,7 +470,9 @@ public partial class V1beta1DistributionConfigurationSpecInitProviderDistributio
     [JsonPropertyName("launchTemplateId")]
     public string? LaunchTemplateId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecInitProviderDistributionS3ExportConfiguration
@@ -450,7 +493,9 @@ public partial class V1beta1DistributionConfigurationSpecInitProviderDistributio
     [JsonPropertyName("s3Prefix")]
     public string? S3Prefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecInitProviderDistributionSsmParameterConfiguration
@@ -467,7 +512,9 @@ public partial class V1beta1DistributionConfigurationSpecInitProviderDistributio
     [JsonPropertyName("parameterName")]
     public string? ParameterName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecInitProviderDistribution
@@ -500,7 +547,9 @@ public partial class V1beta1DistributionConfigurationSpecInitProviderDistributio
     [JsonPropertyName("ssmParameterConfiguration")]
     public IList<V1beta1DistributionConfigurationSpecInitProviderDistributionSsmParameterConfiguration>? SsmParameterConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecInitProvider
@@ -521,7 +570,9 @@ public partial class V1beta1DistributionConfigurationSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecProviderConfigRefPolicy
@@ -534,7 +585,9 @@ public partial class V1beta1DistributionConfigurationSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecProviderConfigRef
@@ -547,7 +600,9 @@ public partial class V1beta1DistributionConfigurationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1DistributionConfigurationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecWriteConnectionSecretToRef
@@ -560,7 +615,9 @@ public partial class V1beta1DistributionConfigurationSpecWriteConnectionSecretTo
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DistributionConfigurationSpec defines the desired state of DistributionConfiguration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpec
@@ -589,7 +646,9 @@ public partial class V1beta1DistributionConfigurationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DistributionConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationStatusAtProviderDistributionAmiDistributionConfigurationLaunchPermission
@@ -610,7 +669,9 @@ public partial class V1beta1DistributionConfigurationStatusAtProviderDistributio
     [JsonPropertyName("userIds")]
     public IList<string>? UserIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationStatusAtProviderDistributionAmiDistributionConfiguration
@@ -639,7 +700,9 @@ public partial class V1beta1DistributionConfigurationStatusAtProviderDistributio
     [JsonPropertyName("targetAccountIds")]
     public IList<string>? TargetAccountIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationStatusAtProviderDistributionContainerDistributionConfigurationTargetRepository
@@ -652,7 +715,9 @@ public partial class V1beta1DistributionConfigurationStatusAtProviderDistributio
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationStatusAtProviderDistributionContainerDistributionConfiguration
@@ -669,7 +734,9 @@ public partial class V1beta1DistributionConfigurationStatusAtProviderDistributio
     [JsonPropertyName("targetRepository")]
     public IList<V1beta1DistributionConfigurationStatusAtProviderDistributionContainerDistributionConfigurationTargetRepository>? TargetRepository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationStatusAtProviderDistributionFastLaunchConfigurationLaunchTemplate
@@ -686,7 +753,9 @@ public partial class V1beta1DistributionConfigurationStatusAtProviderDistributio
     [JsonPropertyName("launchTemplateVersion")]
     public string? LaunchTemplateVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationStatusAtProviderDistributionFastLaunchConfigurationSnapshotConfiguration
@@ -695,7 +764,9 @@ public partial class V1beta1DistributionConfigurationStatusAtProviderDistributio
     [JsonPropertyName("targetResourceCount")]
     public double? TargetResourceCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationStatusAtProviderDistributionFastLaunchConfiguration
@@ -720,7 +791,9 @@ public partial class V1beta1DistributionConfigurationStatusAtProviderDistributio
     [JsonPropertyName("snapshotConfiguration")]
     public IList<V1beta1DistributionConfigurationStatusAtProviderDistributionFastLaunchConfigurationSnapshotConfiguration>? SnapshotConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationStatusAtProviderDistributionLaunchTemplateConfiguration
@@ -737,7 +810,9 @@ public partial class V1beta1DistributionConfigurationStatusAtProviderDistributio
     [JsonPropertyName("launchTemplateId")]
     public string? LaunchTemplateId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationStatusAtProviderDistributionS3ExportConfiguration
@@ -758,7 +833,9 @@ public partial class V1beta1DistributionConfigurationStatusAtProviderDistributio
     [JsonPropertyName("s3Prefix")]
     public string? S3Prefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationStatusAtProviderDistributionSsmParameterConfiguration
@@ -775,7 +852,9 @@ public partial class V1beta1DistributionConfigurationStatusAtProviderDistributio
     [JsonPropertyName("parameterName")]
     public string? ParameterName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationStatusAtProviderDistribution
@@ -812,7 +891,9 @@ public partial class V1beta1DistributionConfigurationStatusAtProviderDistributio
     [JsonPropertyName("ssmParameterConfiguration")]
     public IList<V1beta1DistributionConfigurationStatusAtProviderDistributionSsmParameterConfiguration>? SsmParameterConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationStatusAtProvider
@@ -857,7 +938,9 @@ public partial class V1beta1DistributionConfigurationStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationStatusConditions
@@ -886,7 +969,9 @@ public partial class V1beta1DistributionConfigurationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DistributionConfigurationStatus defines the observed state of DistributionConfiguration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationStatus
@@ -903,7 +988,9 @@ public partial class V1beta1DistributionConfigurationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DistributionConfiguration is the Schema for the DistributionConfigurations API. Manage an Image Builder Distribution Configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -933,3 +1020,4 @@ public partial class V1beta1DistributionConfiguration : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1beta1DistributionConfigurationStatus? Status { get; set; }
 }
+#nullable disable

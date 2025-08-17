@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hub.traefik.io;
+#nullable enable
 /// <summary>AccessControlPolicy defines an access control policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1AccessControlPolicyList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1alpha1AccessControlPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KeySource defines how to extract API keys from requests.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessControlPolicySpecApiKeyKeySource
@@ -54,7 +57,9 @@ public partial class V1alpha1AccessControlPolicySpecApiKeyKeySource
     [JsonPropertyName("query")]
     public string? Query { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AccessControlPolicyAPIKeyKey defines an API key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessControlPolicySpecApiKeyKeys
@@ -71,7 +76,9 @@ public partial class V1alpha1AccessControlPolicySpecApiKeyKeys
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AccessControlPolicyAPIKey configure an APIKey control policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessControlPolicySpecApiKey
@@ -88,7 +95,9 @@ public partial class V1alpha1AccessControlPolicySpecApiKey
     [JsonPropertyName("keys")]
     public IList<V1alpha1AccessControlPolicySpecApiKeyKeys>? Keys { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AccessControlPolicyBasicAuth holds the HTTP basic authentication configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessControlPolicySpecBasicAuth
@@ -109,7 +118,9 @@ public partial class V1alpha1AccessControlPolicySpecBasicAuth
     [JsonPropertyName("users")]
     public IList<string>? Users { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AccessControlPolicyJWT configures a JWT access control policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessControlPolicySpecJwt
@@ -150,7 +161,9 @@ public partial class V1alpha1AccessControlPolicySpecJwt
     [JsonPropertyName("tokenQueryKey")]
     public string? TokenQueryKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TLS configures TLS communication with the Authorization Server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessControlPolicySpecOAuthIntroClientConfigTls
@@ -163,7 +176,9 @@ public partial class V1alpha1AccessControlPolicySpecOAuthIntroClientConfigTls
     [JsonPropertyName("insecureSkipVerify")]
     public bool? InsecureSkipVerify { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AccessControlOAuthIntroClientConfig configures the OAuth 2.0 client for issuing token introspection requests.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessControlPolicySpecOAuthIntroClientConfig
@@ -192,7 +207,9 @@ public partial class V1alpha1AccessControlPolicySpecOAuthIntroClientConfig
     [JsonPropertyName("url")]
     public string Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TokenSource describes how to extract tokens from HTTP requests. If multiple sources are set, the order is the following: header &gt; query &gt; cookie.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessControlPolicySpecOAuthIntroTokenSource
@@ -213,7 +230,9 @@ public partial class V1alpha1AccessControlPolicySpecOAuthIntroTokenSource
     [JsonPropertyName("query")]
     public string? Query { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AccessControlOAuthIntro configures an OAuth 2.0 Token Introspection access control policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessControlPolicySpecOAuthIntro
@@ -234,7 +253,9 @@ public partial class V1alpha1AccessControlPolicySpecOAuthIntro
     [JsonPropertyName("tokenSource")]
     public V1alpha1AccessControlPolicySpecOAuthIntroTokenSource TokenSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessControlPolicySpecOidcSecret
@@ -247,7 +268,9 @@ public partial class V1alpha1AccessControlPolicySpecOidcSecret
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Session holds session configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessControlPolicySpecOidcSession
@@ -272,7 +295,9 @@ public partial class V1alpha1AccessControlPolicySpecOidcSession
     [JsonPropertyName("secure")]
     public bool? Secure { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StateCookie holds state cookie configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessControlPolicySpecOidcStateCookie
@@ -293,7 +318,9 @@ public partial class V1alpha1AccessControlPolicySpecOidcStateCookie
     [JsonPropertyName("secure")]
     public bool? Secure { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AccessControlPolicyOIDC holds the OIDC authentication configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessControlPolicySpecOidc
@@ -346,7 +373,9 @@ public partial class V1alpha1AccessControlPolicySpecOidc
     [JsonPropertyName("stateCookie")]
     public V1alpha1AccessControlPolicySpecOidcStateCookie? StateCookie { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessControlPolicySpecOidcGoogleSecret
@@ -359,7 +388,9 @@ public partial class V1alpha1AccessControlPolicySpecOidcGoogleSecret
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Session holds session configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessControlPolicySpecOidcGoogleSession
@@ -384,7 +415,9 @@ public partial class V1alpha1AccessControlPolicySpecOidcGoogleSession
     [JsonPropertyName("secure")]
     public bool? Secure { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StateCookie holds state cookie configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessControlPolicySpecOidcGoogleStateCookie
@@ -405,7 +438,9 @@ public partial class V1alpha1AccessControlPolicySpecOidcGoogleStateCookie
     [JsonPropertyName("secure")]
     public bool? Secure { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AccessControlPolicyOIDCGoogle holds the Google OIDC authentication configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessControlPolicySpecOidcGoogle
@@ -446,7 +481,9 @@ public partial class V1alpha1AccessControlPolicySpecOidcGoogle
     [JsonPropertyName("stateCookie")]
     public V1alpha1AccessControlPolicySpecOidcGoogleStateCookie? StateCookie { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AccessControlPolicySpec configures an access control policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessControlPolicySpec
@@ -475,7 +512,9 @@ public partial class V1alpha1AccessControlPolicySpec
     [JsonPropertyName("oidcGoogle")]
     public V1alpha1AccessControlPolicySpecOidcGoogle? OidcGoogle { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The current status of this access control policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessControlPolicyStatus
@@ -492,7 +531,9 @@ public partial class V1alpha1AccessControlPolicyStatus
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AccessControlPolicy defines an access control policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -522,3 +563,4 @@ public partial class V1alpha1AccessControlPolicy : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1alpha1AccessControlPolicyStatus? Status { get; set; }
 }
+#nullable disable

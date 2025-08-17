@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafactory.azure.upbound.io;
+#nullable enable
 /// <summary>LinkedServiceKeyVault is the Schema for the LinkedServiceKeyVaults API. Manages a Linked Service (connection) between Key Vault and Azure Data Factory.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LinkedServiceKeyVaultList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1LinkedServiceKeyVault> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKeyVaultSpecForProviderDataFactoryIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1LinkedServiceKeyVaultSpecForProviderDataFactoryIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Factory in datafactory to populate dataFactoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKeyVaultSpecForProviderDataFactoryIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1LinkedServiceKeyVaultSpecForProviderDataFactoryIdRef
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceKeyVaultSpecForProviderDataFactoryIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKeyVaultSpecForProviderDataFactoryIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1LinkedServiceKeyVaultSpecForProviderDataFactoryIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Factory in datafactory to populate dataFactoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKeyVaultSpecForProviderDataFactoryIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1LinkedServiceKeyVaultSpecForProviderDataFactoryIdSel
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceKeyVaultSpecForProviderDataFactoryIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKeyVaultSpecForProviderKeyVaultIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1LinkedServiceKeyVaultSpecForProviderKeyVaultIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Vault in keyvault to populate keyVaultId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKeyVaultSpecForProviderKeyVaultIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1LinkedServiceKeyVaultSpecForProviderKeyVaultIdRef
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceKeyVaultSpecForProviderKeyVaultIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKeyVaultSpecForProviderKeyVaultIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1LinkedServiceKeyVaultSpecForProviderKeyVaultIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Vault in keyvault to populate keyVaultId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKeyVaultSpecForProviderKeyVaultIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1LinkedServiceKeyVaultSpecForProviderKeyVaultIdSelect
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceKeyVaultSpecForProviderKeyVaultIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKeyVaultSpecForProvider
@@ -194,7 +213,9 @@ public partial class V1beta1LinkedServiceKeyVaultSpecForProvider
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKeyVaultSpecInitProviderKeyVaultIdRefPolicy
@@ -207,7 +228,9 @@ public partial class V1beta1LinkedServiceKeyVaultSpecInitProviderKeyVaultIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Vault in keyvault to populate keyVaultId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKeyVaultSpecInitProviderKeyVaultIdRef
@@ -220,7 +243,9 @@ public partial class V1beta1LinkedServiceKeyVaultSpecInitProviderKeyVaultIdRef
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceKeyVaultSpecInitProviderKeyVaultIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKeyVaultSpecInitProviderKeyVaultIdSelectorPolicy
@@ -233,7 +258,9 @@ public partial class V1beta1LinkedServiceKeyVaultSpecInitProviderKeyVaultIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Vault in keyvault to populate keyVaultId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKeyVaultSpecInitProviderKeyVaultIdSelector
@@ -250,7 +277,9 @@ public partial class V1beta1LinkedServiceKeyVaultSpecInitProviderKeyVaultIdSelec
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceKeyVaultSpecInitProviderKeyVaultIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKeyVaultSpecInitProvider
@@ -287,7 +316,9 @@ public partial class V1beta1LinkedServiceKeyVaultSpecInitProvider
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKeyVaultSpecProviderConfigRefPolicy
@@ -300,7 +331,9 @@ public partial class V1beta1LinkedServiceKeyVaultSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKeyVaultSpecProviderConfigRef
@@ -313,7 +346,9 @@ public partial class V1beta1LinkedServiceKeyVaultSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceKeyVaultSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKeyVaultSpecWriteConnectionSecretToRef
@@ -326,7 +361,9 @@ public partial class V1beta1LinkedServiceKeyVaultSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LinkedServiceKeyVaultSpec defines the desired state of LinkedServiceKeyVault</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKeyVaultSpec
@@ -355,7 +392,9 @@ public partial class V1beta1LinkedServiceKeyVaultSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LinkedServiceKeyVaultSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKeyVaultStatusAtProvider
@@ -392,7 +431,9 @@ public partial class V1beta1LinkedServiceKeyVaultStatusAtProvider
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKeyVaultStatusConditions
@@ -421,7 +462,9 @@ public partial class V1beta1LinkedServiceKeyVaultStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LinkedServiceKeyVaultStatus defines the observed state of LinkedServiceKeyVault.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKeyVaultStatus
@@ -438,7 +481,9 @@ public partial class V1beta1LinkedServiceKeyVaultStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LinkedServiceKeyVault is the Schema for the LinkedServiceKeyVaults API. Manages a Linked Service (connection) between Key Vault and Azure Data Factory.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -468,3 +513,4 @@ public partial class V1beta1LinkedServiceKeyVault : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1LinkedServiceKeyVaultStatus? Status { get; set; }
 }
+#nullable disable

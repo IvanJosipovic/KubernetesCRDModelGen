@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ComputeNetworkEndpointGroupList : IKubernetesObject<
     [JsonPropertyName("items")]
     public IList<V1beta1ComputeNetworkEndpointGroup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The network to which all network endpoints in the NEG belong. Uses "default" project network if unspecified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNetworkEndpointGroupSpecNetworkRef
@@ -50,7 +53,9 @@ public partial class V1beta1ComputeNetworkEndpointGroupSpecNetworkRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional subnetwork to which all network endpoints in the NEG belong.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNetworkEndpointGroupSpecSubnetworkRef
@@ -67,7 +72,9 @@ public partial class V1beta1ComputeNetworkEndpointGroupSpecSubnetworkRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNetworkEndpointGroupSpec
@@ -100,7 +107,9 @@ public partial class V1beta1ComputeNetworkEndpointGroupSpec
     [JsonPropertyName("subnetworkRef")]
     public V1beta1ComputeNetworkEndpointGroupSpecSubnetworkRef? SubnetworkRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNetworkEndpointGroupStatusConditions
@@ -125,7 +134,9 @@ public partial class V1beta1ComputeNetworkEndpointGroupStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNetworkEndpointGroupStatus
@@ -146,7 +157,9 @@ public partial class V1beta1ComputeNetworkEndpointGroupStatus
     [JsonPropertyName("size")]
     public int? Size { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -176,3 +189,4 @@ public partial class V1beta1ComputeNetworkEndpointGroup : IKubernetesObject<V1Ob
     [JsonPropertyName("status")]
     public V1beta1ComputeNetworkEndpointGroupStatus? Status { get; set; }
 }
+#nullable disable

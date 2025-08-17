@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+#nullable enable
 /// <summary>EBSSnapshotCopy is the Schema for the EBSSnapshotCopys API. Duplicates an existing Amazon snapshot</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1EBSSnapshotCopyList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1EBSSnapshotCopy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotCopySpecForProviderKmsKeyIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1EBSSnapshotCopySpecForProviderKmsKeyIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotCopySpecForProviderKmsKeyIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1EBSSnapshotCopySpecForProviderKmsKeyIdRef
     [JsonPropertyName("policy")]
     public V1beta1EBSSnapshotCopySpecForProviderKmsKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotCopySpecForProviderKmsKeyIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1EBSSnapshotCopySpecForProviderKmsKeyIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotCopySpecForProviderKmsKeyIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1EBSSnapshotCopySpecForProviderKmsKeyIdSelector
     [JsonPropertyName("policy")]
     public V1beta1EBSSnapshotCopySpecForProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotCopySpecForProviderSourceSnapshotIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1EBSSnapshotCopySpecForProviderSourceSnapshotIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EBSSnapshot in ec2 to populate sourceSnapshotId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotCopySpecForProviderSourceSnapshotIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1EBSSnapshotCopySpecForProviderSourceSnapshotIdRef
     [JsonPropertyName("policy")]
     public V1beta1EBSSnapshotCopySpecForProviderSourceSnapshotIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotCopySpecForProviderSourceSnapshotIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1EBSSnapshotCopySpecForProviderSourceSnapshotIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EBSSnapshot in ec2 to populate sourceSnapshotId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotCopySpecForProviderSourceSnapshotIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1EBSSnapshotCopySpecForProviderSourceSnapshotIdSelect
     [JsonPropertyName("policy")]
     public V1beta1EBSSnapshotCopySpecForProviderSourceSnapshotIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotCopySpecForProvider
@@ -210,7 +229,9 @@ public partial class V1beta1EBSSnapshotCopySpecForProvider
     [JsonPropertyName("temporaryRestoreDays")]
     public double? TemporaryRestoreDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotCopySpecInitProviderKmsKeyIdRefPolicy
@@ -223,7 +244,9 @@ public partial class V1beta1EBSSnapshotCopySpecInitProviderKmsKeyIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotCopySpecInitProviderKmsKeyIdRef
@@ -236,7 +259,9 @@ public partial class V1beta1EBSSnapshotCopySpecInitProviderKmsKeyIdRef
     [JsonPropertyName("policy")]
     public V1beta1EBSSnapshotCopySpecInitProviderKmsKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotCopySpecInitProviderKmsKeyIdSelectorPolicy
@@ -249,7 +274,9 @@ public partial class V1beta1EBSSnapshotCopySpecInitProviderKmsKeyIdSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotCopySpecInitProviderKmsKeyIdSelector
@@ -266,7 +293,9 @@ public partial class V1beta1EBSSnapshotCopySpecInitProviderKmsKeyIdSelector
     [JsonPropertyName("policy")]
     public V1beta1EBSSnapshotCopySpecInitProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotCopySpecInitProviderSourceSnapshotIdRefPolicy
@@ -279,7 +308,9 @@ public partial class V1beta1EBSSnapshotCopySpecInitProviderSourceSnapshotIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EBSSnapshot in ec2 to populate sourceSnapshotId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotCopySpecInitProviderSourceSnapshotIdRef
@@ -292,7 +323,9 @@ public partial class V1beta1EBSSnapshotCopySpecInitProviderSourceSnapshotIdRef
     [JsonPropertyName("policy")]
     public V1beta1EBSSnapshotCopySpecInitProviderSourceSnapshotIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotCopySpecInitProviderSourceSnapshotIdSelectorPolicy
@@ -305,7 +338,9 @@ public partial class V1beta1EBSSnapshotCopySpecInitProviderSourceSnapshotIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EBSSnapshot in ec2 to populate sourceSnapshotId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotCopySpecInitProviderSourceSnapshotIdSelector
@@ -322,7 +357,9 @@ public partial class V1beta1EBSSnapshotCopySpecInitProviderSourceSnapshotIdSelec
     [JsonPropertyName("policy")]
     public V1beta1EBSSnapshotCopySpecInitProviderSourceSnapshotIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotCopySpecInitProvider
@@ -383,7 +420,9 @@ public partial class V1beta1EBSSnapshotCopySpecInitProvider
     [JsonPropertyName("temporaryRestoreDays")]
     public double? TemporaryRestoreDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotCopySpecProviderConfigRefPolicy
@@ -396,7 +435,9 @@ public partial class V1beta1EBSSnapshotCopySpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotCopySpecProviderConfigRef
@@ -409,7 +450,9 @@ public partial class V1beta1EBSSnapshotCopySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1EBSSnapshotCopySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotCopySpecWriteConnectionSecretToRef
@@ -422,7 +465,9 @@ public partial class V1beta1EBSSnapshotCopySpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EBSSnapshotCopySpec defines the desired state of EBSSnapshotCopy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotCopySpec
@@ -451,7 +496,9 @@ public partial class V1beta1EBSSnapshotCopySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1EBSSnapshotCopySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotCopyStatusAtProvider
@@ -536,7 +583,9 @@ public partial class V1beta1EBSSnapshotCopyStatusAtProvider
     [JsonPropertyName("volumeSize")]
     public double? VolumeSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotCopyStatusConditions
@@ -565,7 +614,9 @@ public partial class V1beta1EBSSnapshotCopyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EBSSnapshotCopyStatus defines the observed state of EBSSnapshotCopy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotCopyStatus
@@ -582,7 +633,9 @@ public partial class V1beta1EBSSnapshotCopyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EBSSnapshotCopy is the Schema for the EBSSnapshotCopys API. Duplicates an existing Amazon snapshot</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -612,3 +665,4 @@ public partial class V1beta1EBSSnapshotCopy : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1EBSSnapshotCopyStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ram.aws.upbound.io;
+#nullable enable
 /// <summary>PrincipalAssociation is the Schema for the PrincipalAssociations API. Provides a Resource Access Manager (RAM) principal association.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PrincipalAssociationList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1PrincipalAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalAssociationSpecForProviderPrincipalRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1PrincipalAssociationSpecForProviderPrincipalRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Organization in organizations to populate principal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalAssociationSpecForProviderPrincipalRef
@@ -59,7 +64,9 @@ public partial class V1beta1PrincipalAssociationSpecForProviderPrincipalRef
     [JsonPropertyName("policy")]
     public V1beta1PrincipalAssociationSpecForProviderPrincipalRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalAssociationSpecForProviderPrincipalSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1PrincipalAssociationSpecForProviderPrincipalSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Organization in organizations to populate principal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalAssociationSpecForProviderPrincipalSelector
@@ -89,7 +98,9 @@ public partial class V1beta1PrincipalAssociationSpecForProviderPrincipalSelector
     [JsonPropertyName("policy")]
     public V1beta1PrincipalAssociationSpecForProviderPrincipalSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalAssociationSpecForProviderResourceShareArnRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1PrincipalAssociationSpecForProviderResourceShareArnR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceShare in ram to populate resourceShareArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalAssociationSpecForProviderResourceShareArnRef
@@ -115,7 +128,9 @@ public partial class V1beta1PrincipalAssociationSpecForProviderResourceShareArnR
     [JsonPropertyName("policy")]
     public V1beta1PrincipalAssociationSpecForProviderResourceShareArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalAssociationSpecForProviderResourceShareArnSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1PrincipalAssociationSpecForProviderResourceShareArnS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceShare in ram to populate resourceShareArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalAssociationSpecForProviderResourceShareArnSelector
@@ -145,7 +162,9 @@ public partial class V1beta1PrincipalAssociationSpecForProviderResourceShareArnS
     [JsonPropertyName("policy")]
     public V1beta1PrincipalAssociationSpecForProviderResourceShareArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalAssociationSpecForProvider
@@ -178,7 +197,9 @@ public partial class V1beta1PrincipalAssociationSpecForProvider
     [JsonPropertyName("resourceShareArnSelector")]
     public V1beta1PrincipalAssociationSpecForProviderResourceShareArnSelector? ResourceShareArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalAssociationSpecInitProviderPrincipalRefPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1PrincipalAssociationSpecInitProviderPrincipalRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Organization in organizations to populate principal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalAssociationSpecInitProviderPrincipalRef
@@ -204,7 +227,9 @@ public partial class V1beta1PrincipalAssociationSpecInitProviderPrincipalRef
     [JsonPropertyName("policy")]
     public V1beta1PrincipalAssociationSpecInitProviderPrincipalRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalAssociationSpecInitProviderPrincipalSelectorPolicy
@@ -217,7 +242,9 @@ public partial class V1beta1PrincipalAssociationSpecInitProviderPrincipalSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Organization in organizations to populate principal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalAssociationSpecInitProviderPrincipalSelector
@@ -234,7 +261,9 @@ public partial class V1beta1PrincipalAssociationSpecInitProviderPrincipalSelecto
     [JsonPropertyName("policy")]
     public V1beta1PrincipalAssociationSpecInitProviderPrincipalSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalAssociationSpecInitProviderResourceShareArnRefPolicy
@@ -247,7 +276,9 @@ public partial class V1beta1PrincipalAssociationSpecInitProviderResourceShareArn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceShare in ram to populate resourceShareArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalAssociationSpecInitProviderResourceShareArnRef
@@ -260,7 +291,9 @@ public partial class V1beta1PrincipalAssociationSpecInitProviderResourceShareArn
     [JsonPropertyName("policy")]
     public V1beta1PrincipalAssociationSpecInitProviderResourceShareArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalAssociationSpecInitProviderResourceShareArnSelectorPolicy
@@ -273,7 +306,9 @@ public partial class V1beta1PrincipalAssociationSpecInitProviderResourceShareArn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceShare in ram to populate resourceShareArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalAssociationSpecInitProviderResourceShareArnSelector
@@ -290,7 +325,9 @@ public partial class V1beta1PrincipalAssociationSpecInitProviderResourceShareArn
     [JsonPropertyName("policy")]
     public V1beta1PrincipalAssociationSpecInitProviderResourceShareArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalAssociationSpecInitProvider
@@ -319,7 +356,9 @@ public partial class V1beta1PrincipalAssociationSpecInitProvider
     [JsonPropertyName("resourceShareArnSelector")]
     public V1beta1PrincipalAssociationSpecInitProviderResourceShareArnSelector? ResourceShareArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalAssociationSpecProviderConfigRefPolicy
@@ -332,7 +371,9 @@ public partial class V1beta1PrincipalAssociationSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalAssociationSpecProviderConfigRef
@@ -345,7 +386,9 @@ public partial class V1beta1PrincipalAssociationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1PrincipalAssociationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalAssociationSpecWriteConnectionSecretToRef
@@ -358,7 +401,9 @@ public partial class V1beta1PrincipalAssociationSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrincipalAssociationSpec defines the desired state of PrincipalAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalAssociationSpec
@@ -387,7 +432,9 @@ public partial class V1beta1PrincipalAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1PrincipalAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalAssociationStatusAtProvider
@@ -408,7 +455,9 @@ public partial class V1beta1PrincipalAssociationStatusAtProvider
     [JsonPropertyName("resourceShareArn")]
     public string? ResourceShareArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalAssociationStatusConditions
@@ -437,7 +486,9 @@ public partial class V1beta1PrincipalAssociationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrincipalAssociationStatus defines the observed state of PrincipalAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalAssociationStatus
@@ -454,7 +505,9 @@ public partial class V1beta1PrincipalAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrincipalAssociation is the Schema for the PrincipalAssociations API. Provides a Resource Access Manager (RAM) principal association.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -484,3 +537,4 @@ public partial class V1beta1PrincipalAssociation : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1PrincipalAssociationStatus? Status { get; set; }
 }
+#nullable disable

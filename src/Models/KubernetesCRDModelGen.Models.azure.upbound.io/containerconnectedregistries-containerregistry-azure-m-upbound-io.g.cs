@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerregistry.azure.m.upbound.io;
+#nullable enable
 /// <summary>ContainerConnectedRegistry is the Schema for the ContainerConnectedRegistrys API. Manages a Container Connected Registry.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ContainerConnectedRegistryList : IKubernetesObject<V
     [JsonPropertyName("items")]
     public IList<V1beta1ContainerConnectedRegistry> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerConnectedRegistrySpecForProviderContainerRegistryIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ContainerConnectedRegistrySpecForProviderContainerRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Registry in containerregistry to populate containerRegistryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerConnectedRegistrySpecForProviderContainerRegistryIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1ContainerConnectedRegistrySpecForProviderContainerRe
     [JsonPropertyName("policy")]
     public V1beta1ContainerConnectedRegistrySpecForProviderContainerRegistryIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerConnectedRegistrySpecForProviderContainerRegistryIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1ContainerConnectedRegistrySpecForProviderContainerRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Registry in containerregistry to populate containerRegistryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerConnectedRegistrySpecForProviderContainerRegistryIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1ContainerConnectedRegistrySpecForProviderContainerRe
     [JsonPropertyName("policy")]
     public V1beta1ContainerConnectedRegistrySpecForProviderContainerRegistryIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerConnectedRegistrySpecForProviderNotification
@@ -118,7 +129,9 @@ public partial class V1beta1ContainerConnectedRegistrySpecForProviderNotificatio
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerConnectedRegistrySpecForProviderSyncTokenIdRefPolicy
@@ -131,7 +144,9 @@ public partial class V1beta1ContainerConnectedRegistrySpecForProviderSyncTokenId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Token in containerregistry to populate syncTokenId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerConnectedRegistrySpecForProviderSyncTokenIdRef
@@ -148,7 +163,9 @@ public partial class V1beta1ContainerConnectedRegistrySpecForProviderSyncTokenId
     [JsonPropertyName("policy")]
     public V1beta1ContainerConnectedRegistrySpecForProviderSyncTokenIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerConnectedRegistrySpecForProviderSyncTokenIdSelectorPolicy
@@ -161,7 +178,9 @@ public partial class V1beta1ContainerConnectedRegistrySpecForProviderSyncTokenId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Token in containerregistry to populate syncTokenId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerConnectedRegistrySpecForProviderSyncTokenIdSelector
@@ -182,7 +201,9 @@ public partial class V1beta1ContainerConnectedRegistrySpecForProviderSyncTokenId
     [JsonPropertyName("policy")]
     public V1beta1ContainerConnectedRegistrySpecForProviderSyncTokenIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerConnectedRegistrySpecForProvider
@@ -247,7 +268,9 @@ public partial class V1beta1ContainerConnectedRegistrySpecForProvider
     [JsonPropertyName("syncWindow")]
     public string? SyncWindow { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerConnectedRegistrySpecInitProviderContainerRegistryIdRefPolicy
@@ -260,7 +283,9 @@ public partial class V1beta1ContainerConnectedRegistrySpecInitProviderContainerR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Registry in containerregistry to populate containerRegistryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerConnectedRegistrySpecInitProviderContainerRegistryIdRef
@@ -277,7 +302,9 @@ public partial class V1beta1ContainerConnectedRegistrySpecInitProviderContainerR
     [JsonPropertyName("policy")]
     public V1beta1ContainerConnectedRegistrySpecInitProviderContainerRegistryIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerConnectedRegistrySpecInitProviderContainerRegistryIdSelectorPolicy
@@ -290,7 +317,9 @@ public partial class V1beta1ContainerConnectedRegistrySpecInitProviderContainerR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Registry in containerregistry to populate containerRegistryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerConnectedRegistrySpecInitProviderContainerRegistryIdSelector
@@ -311,7 +340,9 @@ public partial class V1beta1ContainerConnectedRegistrySpecInitProviderContainerR
     [JsonPropertyName("policy")]
     public V1beta1ContainerConnectedRegistrySpecInitProviderContainerRegistryIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerConnectedRegistrySpecInitProviderNotification
@@ -332,7 +363,9 @@ public partial class V1beta1ContainerConnectedRegistrySpecInitProviderNotificati
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerConnectedRegistrySpecInitProviderSyncTokenIdRefPolicy
@@ -345,7 +378,9 @@ public partial class V1beta1ContainerConnectedRegistrySpecInitProviderSyncTokenI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Token in containerregistry to populate syncTokenId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerConnectedRegistrySpecInitProviderSyncTokenIdRef
@@ -362,7 +397,9 @@ public partial class V1beta1ContainerConnectedRegistrySpecInitProviderSyncTokenI
     [JsonPropertyName("policy")]
     public V1beta1ContainerConnectedRegistrySpecInitProviderSyncTokenIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerConnectedRegistrySpecInitProviderSyncTokenIdSelectorPolicy
@@ -375,7 +412,9 @@ public partial class V1beta1ContainerConnectedRegistrySpecInitProviderSyncTokenI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Token in containerregistry to populate syncTokenId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerConnectedRegistrySpecInitProviderSyncTokenIdSelector
@@ -396,7 +435,9 @@ public partial class V1beta1ContainerConnectedRegistrySpecInitProviderSyncTokenI
     [JsonPropertyName("policy")]
     public V1beta1ContainerConnectedRegistrySpecInitProviderSyncTokenIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerConnectedRegistrySpecInitProvider
@@ -461,7 +502,9 @@ public partial class V1beta1ContainerConnectedRegistrySpecInitProvider
     [JsonPropertyName("syncWindow")]
     public string? SyncWindow { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerConnectedRegistrySpecProviderConfigRef
@@ -474,7 +517,9 @@ public partial class V1beta1ContainerConnectedRegistrySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerConnectedRegistrySpecWriteConnectionSecretToRef
@@ -483,7 +528,9 @@ public partial class V1beta1ContainerConnectedRegistrySpecWriteConnectionSecretT
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerConnectedRegistrySpec defines the desired state of ContainerConnectedRegistry</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerConnectedRegistrySpec
@@ -508,7 +555,9 @@ public partial class V1beta1ContainerConnectedRegistrySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ContainerConnectedRegistrySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerConnectedRegistryStatusAtProviderNotification
@@ -529,7 +578,9 @@ public partial class V1beta1ContainerConnectedRegistryStatusAtProviderNotificati
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerConnectedRegistryStatusAtProvider
@@ -582,7 +633,9 @@ public partial class V1beta1ContainerConnectedRegistryStatusAtProvider
     [JsonPropertyName("syncWindow")]
     public string? SyncWindow { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerConnectedRegistryStatusConditions
@@ -611,7 +664,9 @@ public partial class V1beta1ContainerConnectedRegistryStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerConnectedRegistryStatus defines the observed state of ContainerConnectedRegistry.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerConnectedRegistryStatus
@@ -628,7 +683,9 @@ public partial class V1beta1ContainerConnectedRegistryStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerConnectedRegistry is the Schema for the ContainerConnectedRegistrys API. Manages a Container Connected Registry.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -658,3 +715,4 @@ public partial class V1beta1ContainerConnectedRegistry : IKubernetesObject<V1Obj
     [JsonPropertyName("status")]
     public V1beta1ContainerConnectedRegistryStatus? Status { get; set; }
 }
+#nullable disable

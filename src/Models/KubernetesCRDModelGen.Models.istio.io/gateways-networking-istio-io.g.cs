@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networking.istio.io;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1GatewayList : IKubernetesObject<V1ListMeta>, IItems<V1Gat
     [JsonPropertyName("items")]
     public IList<V1Gateway> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Port on which the proxy should listen for incoming connections.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewaySpecServersPort
@@ -54,7 +57,9 @@ public partial class V1GatewaySpecServersPort
     [JsonPropertyName("targetPort")]
     public int? TargetPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewaySpecServersTlsTlsCertificates
@@ -71,7 +76,9 @@ public partial class V1GatewaySpecServersTlsTlsCertificates
     [JsonPropertyName("serverCertificate")]
     public string? ServerCertificate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Set of TLS related options that govern the server's behavior.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewaySpecServersTls
@@ -136,7 +143,9 @@ public partial class V1GatewaySpecServersTls
     [JsonPropertyName("verifyCertificateSpki")]
     public IList<string>? VerifyCertificateSpki { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewaySpecServers
@@ -165,7 +174,9 @@ public partial class V1GatewaySpecServers
     [JsonPropertyName("tls")]
     public V1GatewaySpecServersTls? Tls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration affecting edge load balancer. See more details at: https://istio.io/docs/reference/config/networking/gateway.html</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewaySpec
@@ -178,7 +189,9 @@ public partial class V1GatewaySpec
     [JsonPropertyName("servers")]
     public IList<V1GatewaySpecServers>? Servers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -208,3 +221,4 @@ public partial class V1Gateway : IKubernetesObject<V1ObjectMeta>, ISpec<V1Gatewa
     [JsonPropertyName("status")]
     public JsonNode? Status { get; set; }
 }
+#nullable disable

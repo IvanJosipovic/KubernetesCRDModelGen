@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.traefik.io;
+#nullable enable
 /// <summary>TraefikService is the CRD implementation of a Traefik Service. TraefikService object allows to: - Apply weight to Services on load-balancing - Mirror traffic on services More info: https://doc.traefik.io/traefik/v3.5/routing/providers/kubernetes-crd/#kind-traefikservice</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1TraefikServiceList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1alpha1TraefikService> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Healthcheck defines health checks for ExternalName services.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecMirroringHealthCheck
@@ -86,7 +89,9 @@ public partial class V1alpha1TraefikServiceSpecMirroringHealthCheck
     [JsonPropertyName("unhealthyInterval")]
     public IntstrIntOrString? UnhealthyInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Healthcheck defines health checks for ExternalName services.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecMirroringMirrorsHealthCheck
@@ -139,7 +144,9 @@ public partial class V1alpha1TraefikServiceSpecMirroringMirrorsHealthCheck
     [JsonPropertyName("unhealthyInterval")]
     public IntstrIntOrString? UnhealthyInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResponseForwarding defines how Traefik forwards the response from the upstream Kubernetes Service to the client.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecMirroringMirrorsResponseForwarding
@@ -148,7 +155,9 @@ public partial class V1alpha1TraefikServiceSpecMirroringMirrorsResponseForwardin
     [JsonPropertyName("flushInterval")]
     public string? FlushInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cookie defines the sticky cookie configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecMirroringMirrorsStickyCookie
@@ -181,7 +190,9 @@ public partial class V1alpha1TraefikServiceSpecMirroringMirrorsStickyCookie
     [JsonPropertyName("secure")]
     public bool? Secure { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.5/routing/services/#sticky-sessions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecMirroringMirrorsSticky
@@ -190,7 +201,9 @@ public partial class V1alpha1TraefikServiceSpecMirroringMirrorsSticky
     [JsonPropertyName("cookie")]
     public V1alpha1TraefikServiceSpecMirroringMirrorsStickyCookie? Cookie { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MirrorService holds the mirror configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecMirroringMirrors
@@ -255,7 +268,9 @@ public partial class V1alpha1TraefikServiceSpecMirroringMirrors
     [JsonPropertyName("weight")]
     public int? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResponseForwarding defines how Traefik forwards the response from the upstream Kubernetes Service to the client.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecMirroringResponseForwarding
@@ -264,7 +279,9 @@ public partial class V1alpha1TraefikServiceSpecMirroringResponseForwarding
     [JsonPropertyName("flushInterval")]
     public string? FlushInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cookie defines the sticky cookie configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecMirroringStickyCookie
@@ -297,7 +314,9 @@ public partial class V1alpha1TraefikServiceSpecMirroringStickyCookie
     [JsonPropertyName("secure")]
     public bool? Secure { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.5/routing/services/#sticky-sessions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecMirroringSticky
@@ -306,7 +325,9 @@ public partial class V1alpha1TraefikServiceSpecMirroringSticky
     [JsonPropertyName("cookie")]
     public V1alpha1TraefikServiceSpecMirroringStickyCookie? Cookie { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Mirroring defines the Mirroring service configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecMirroring
@@ -379,7 +400,9 @@ public partial class V1alpha1TraefikServiceSpecMirroring
     [JsonPropertyName("weight")]
     public int? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Healthcheck defines health checks for ExternalName services.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecWeightedServicesHealthCheck
@@ -432,7 +455,9 @@ public partial class V1alpha1TraefikServiceSpecWeightedServicesHealthCheck
     [JsonPropertyName("unhealthyInterval")]
     public IntstrIntOrString? UnhealthyInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResponseForwarding defines how Traefik forwards the response from the upstream Kubernetes Service to the client.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecWeightedServicesResponseForwarding
@@ -441,7 +466,9 @@ public partial class V1alpha1TraefikServiceSpecWeightedServicesResponseForwardin
     [JsonPropertyName("flushInterval")]
     public string? FlushInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cookie defines the sticky cookie configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecWeightedServicesStickyCookie
@@ -474,7 +501,9 @@ public partial class V1alpha1TraefikServiceSpecWeightedServicesStickyCookie
     [JsonPropertyName("secure")]
     public bool? Secure { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.5/routing/services/#sticky-sessions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecWeightedServicesSticky
@@ -483,7 +512,9 @@ public partial class V1alpha1TraefikServiceSpecWeightedServicesSticky
     [JsonPropertyName("cookie")]
     public V1alpha1TraefikServiceSpecWeightedServicesStickyCookie? Cookie { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Service defines an upstream HTTP service to proxy traffic to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecWeightedServices
@@ -544,7 +575,9 @@ public partial class V1alpha1TraefikServiceSpecWeightedServices
     [JsonPropertyName("weight")]
     public int? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cookie defines the sticky cookie configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecWeightedStickyCookie
@@ -577,7 +610,9 @@ public partial class V1alpha1TraefikServiceSpecWeightedStickyCookie
     [JsonPropertyName("secure")]
     public bool? Secure { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sticky defines whether sticky sessions are enabled. More info: https://doc.traefik.io/traefik/v3.5/routing/providers/kubernetes-crd/#stickiness-and-load-balancing</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecWeightedSticky
@@ -586,7 +621,9 @@ public partial class V1alpha1TraefikServiceSpecWeightedSticky
     [JsonPropertyName("cookie")]
     public V1alpha1TraefikServiceSpecWeightedStickyCookie? Cookie { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Weighted defines the Weighted Round Robin configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecWeighted
@@ -599,7 +636,9 @@ public partial class V1alpha1TraefikServiceSpecWeighted
     [JsonPropertyName("sticky")]
     public V1alpha1TraefikServiceSpecWeightedSticky? Sticky { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TraefikServiceSpec defines the desired state of a TraefikService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpec
@@ -612,7 +651,9 @@ public partial class V1alpha1TraefikServiceSpec
     [JsonPropertyName("weighted")]
     public V1alpha1TraefikServiceSpecWeighted? Weighted { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TraefikService is the CRD implementation of a Traefik Service. TraefikService object allows to: - Apply weight to Services on load-balancing - Mirror traffic on services More info: https://doc.traefik.io/traefik/v3.5/routing/providers/kubernetes-crd/#kind-traefikservice</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -638,3 +679,4 @@ public partial class V1alpha1TraefikService : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("spec")]
     public V1alpha1TraefikServiceSpec Spec { get; set; }
 }
+#nullable disable

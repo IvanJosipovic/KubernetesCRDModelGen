@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.argoproj.io;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1AnalysisTemplateList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1alpha1AnalysisTemplate> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecArgsValueFromFieldRef
@@ -42,7 +45,9 @@ public partial class V1alpha1AnalysisTemplateSpecArgsValueFromFieldRef
     [JsonPropertyName("fieldPath")]
     public string FieldPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecArgsValueFromSecretKeyRef
@@ -55,7 +60,9 @@ public partial class V1alpha1AnalysisTemplateSpecArgsValueFromSecretKeyRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecArgsValueFrom
@@ -68,7 +75,9 @@ public partial class V1alpha1AnalysisTemplateSpecArgsValueFrom
     [JsonPropertyName("secretKeyRef")]
     public V1alpha1AnalysisTemplateSpecArgsValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecArgs
@@ -85,7 +94,9 @@ public partial class V1alpha1AnalysisTemplateSpecArgs
     [JsonPropertyName("valueFrom")]
     public V1alpha1AnalysisTemplateSpecArgsValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecDryRun
@@ -94,7 +105,9 @@ public partial class V1alpha1AnalysisTemplateSpecDryRun
     [JsonPropertyName("metricName")]
     public string MetricName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMeasurementRetention
@@ -107,7 +120,9 @@ public partial class V1alpha1AnalysisTemplateSpecMeasurementRetention
     [JsonPropertyName("metricName")]
     public string MetricName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderCloudWatchMetricDataQueriesMetricStatMetricDimensions
@@ -120,7 +135,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderCloudWatchMetric
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderCloudWatchMetricDataQueriesMetricStatMetric
@@ -137,7 +154,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderCloudWatchMetric
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderCloudWatchMetricDataQueriesMetricStat
@@ -158,7 +177,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderCloudWatchMetric
     [JsonPropertyName("unit")]
     public string? Unit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderCloudWatchMetricDataQueries
@@ -187,7 +208,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderCloudWatchMetric
     [JsonPropertyName("returnData")]
     public bool? ReturnData { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderCloudWatch
@@ -200,7 +223,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderCloudWatch
     [JsonPropertyName("metricDataQueries")]
     public IList<V1alpha1AnalysisTemplateSpecMetricsProviderCloudWatchMetricDataQueries> MetricDataQueries { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderDatadogSecretRef
@@ -213,7 +238,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderDatadogSecretRef
     [JsonPropertyName("namespaced")]
     public bool? Namespaced { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderDatadog
@@ -246,7 +273,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderDatadog
     [JsonPropertyName("secretRef")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderDatadogSecretRef? SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderGraphite
@@ -259,7 +288,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderGraphite
     [JsonPropertyName("query")]
     public string? Query { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderInfluxdb
@@ -272,7 +303,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderInfluxdb
     [JsonPropertyName("query")]
     public string? Query { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobMetadata
@@ -285,7 +318,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobMetadata
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecPodFailurePolicyRulesOnExitCodes
@@ -302,7 +337,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecPodFailur
     [JsonPropertyName("values")]
     public IList<int> Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecPodFailurePolicyRulesOnPodConditions
@@ -315,7 +352,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecPodFailur
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecPodFailurePolicyRules
@@ -332,7 +371,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecPodFailur
     [JsonPropertyName("onPodConditions")]
     public IList<V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecPodFailurePolicyRulesOnPodConditions>? OnPodConditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecPodFailurePolicy
@@ -341,7 +382,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecPodFailur
     [JsonPropertyName("rules")]
     public IList<V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecPodFailurePolicyRules> Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecSelectorMatchExpressions
@@ -358,7 +401,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecSelectorM
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecSelector
@@ -371,7 +416,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecSelector
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateMetadata
@@ -384,7 +431,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateM
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchExpressions
@@ -401,7 +450,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchFields
@@ -418,7 +469,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreference
@@ -431,7 +484,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("matchFields")]
     public IList<V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchFields>? MatchFields { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecution
@@ -444,7 +499,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("weight")]
     public int Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchExpressions
@@ -461,7 +518,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchFields
@@ -478,7 +537,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTerms
@@ -491,7 +552,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("matchFields")]
     public IList<V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchFields>? MatchFields { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution
@@ -500,7 +563,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("nodeSelectorTerms")]
     public IList<V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTerms> NodeSelectorTerms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityNodeAffinity
@@ -513,7 +578,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("requiredDuringSchedulingIgnoredDuringExecution")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
@@ -530,7 +597,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
@@ -543,7 +612,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
@@ -560,7 +631,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
@@ -573,7 +646,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
@@ -602,7 +677,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("topologyKey")]
     public string TopologyKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecution
@@ -615,7 +692,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("weight")]
     public int Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
@@ -632,7 +711,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
@@ -645,7 +726,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
@@ -662,7 +745,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
@@ -675,7 +760,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecution
@@ -704,7 +791,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("topologyKey")]
     public string TopologyKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityPodAffinity
@@ -717,7 +806,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("requiredDuringSchedulingIgnoredDuringExecution")]
     public IList<V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecution>? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
@@ -734,7 +825,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
@@ -747,7 +840,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
@@ -764,7 +859,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
@@ -777,7 +874,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
@@ -806,7 +905,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("topologyKey")]
     public string TopologyKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecution
@@ -819,7 +920,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("weight")]
     public int Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
@@ -836,7 +939,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
@@ -849,7 +954,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
@@ -866,7 +973,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
@@ -879,7 +988,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecution
@@ -908,7 +1019,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("topologyKey")]
     public string TopologyKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityPodAntiAffinity
@@ -921,7 +1034,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("requiredDuringSchedulingIgnoredDuringExecution")]
     public IList<V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecution>? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinity
@@ -938,7 +1053,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("podAntiAffinity")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecAffinityPodAntiAffinity? PodAntiAffinity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersEnvValueFromConfigMapKeyRef
@@ -955,7 +1072,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersEnvValueFromFieldRef
@@ -968,7 +1087,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("fieldPath")]
     public string FieldPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersEnvValueFromResourceFieldRef
@@ -985,7 +1106,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("resource")]
     public string Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersEnvValueFromSecretKeyRef
@@ -1002,7 +1125,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersEnvValueFrom
@@ -1023,7 +1148,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("secretKeyRef")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersEnvValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersEnv
@@ -1040,7 +1167,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("valueFrom")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersEnvValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersEnvFromConfigMapRef
@@ -1053,7 +1182,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersEnvFromSecretRef
@@ -1066,7 +1197,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersEnvFrom
@@ -1083,7 +1216,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("secretRef")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersEnvFromSecretRef? SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersLifecyclePostStartExec
@@ -1092,7 +1227,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersLifecyclePostStartHttpGetHttpHeaders
@@ -1105,7 +1242,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersLifecyclePostStartHttpGet
@@ -1130,7 +1269,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersLifecyclePostStartSleep
@@ -1139,7 +1280,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("seconds")]
     public long Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersLifecyclePostStartTcpSocket
@@ -1152,7 +1295,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersLifecyclePostStart
@@ -1173,7 +1318,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("tcpSocket")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersLifecyclePostStartTcpSocket? TcpSocket { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersLifecyclePreStopExec
@@ -1182,7 +1329,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersLifecyclePreStopHttpGetHttpHeaders
@@ -1195,7 +1344,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersLifecyclePreStopHttpGet
@@ -1220,7 +1371,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersLifecyclePreStopSleep
@@ -1229,7 +1382,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("seconds")]
     public long Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersLifecyclePreStopTcpSocket
@@ -1242,7 +1397,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersLifecyclePreStop
@@ -1263,7 +1420,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("tcpSocket")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersLifecyclePreStopTcpSocket? TcpSocket { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersLifecycle
@@ -1276,7 +1435,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("preStop")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersLifecyclePreStop? PreStop { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersLivenessProbeExec
@@ -1285,7 +1446,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersLivenessProbeGrpc
@@ -1298,7 +1461,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersLivenessProbeHttpGetHttpHeaders
@@ -1311,7 +1476,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersLivenessProbeHttpGet
@@ -1336,7 +1503,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersLivenessProbeTcpSocket
@@ -1349,7 +1518,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersLivenessProbe
@@ -1394,7 +1565,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersPorts
@@ -1419,7 +1592,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersReadinessProbeExec
@@ -1428,7 +1603,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersReadinessProbeGrpc
@@ -1441,7 +1618,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersReadinessProbeHttpGetHttpHeaders
@@ -1454,7 +1633,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersReadinessProbeHttpGet
@@ -1479,7 +1660,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersReadinessProbeTcpSocket
@@ -1492,7 +1675,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersReadinessProbe
@@ -1537,7 +1722,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersResizePolicy
@@ -1550,7 +1737,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("restartPolicy")]
     public string RestartPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersResourcesClaims
@@ -1559,7 +1748,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersResources
@@ -1576,7 +1767,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("requests")]
     public JsonNode? Requests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersSecurityContextCapabilities
@@ -1589,7 +1782,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("drop")]
     public IList<string>? Drop { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersSecurityContextSeLinuxOptions
@@ -1610,7 +1805,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("user")]
     public string? User { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersSecurityContextSeccompProfile
@@ -1623,7 +1820,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersSecurityContextWindowsOptions
@@ -1644,7 +1843,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("runAsUserName")]
     public string? RunAsUserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersSecurityContext
@@ -1693,7 +1894,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("windowsOptions")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersSecurityContextWindowsOptions? WindowsOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersStartupProbeExec
@@ -1702,7 +1905,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersStartupProbeGrpc
@@ -1715,7 +1920,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersStartupProbeHttpGetHttpHeaders
@@ -1728,7 +1935,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersStartupProbeHttpGet
@@ -1753,7 +1962,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersStartupProbeTcpSocket
@@ -1766,7 +1977,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersStartupProbe
@@ -1811,7 +2024,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersVolumeDevices
@@ -1824,7 +2039,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainersVolumeMounts
@@ -1853,7 +2070,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("subPathExpr")]
     public string? SubPathExpr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecContainers
@@ -1954,7 +2173,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("workingDir")]
     public string? WorkingDir { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecDnsConfigOptions
@@ -1967,7 +2188,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecDnsConfig
@@ -1984,7 +2207,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("searches")]
     public IList<string>? Searches { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersEnvValueFromConfigMapKeyRef
@@ -2001,7 +2226,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersEnvValueFromFieldRef
@@ -2014,7 +2241,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("fieldPath")]
     public string FieldPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersEnvValueFromResourceFieldRef
@@ -2031,7 +2260,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("resource")]
     public string Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersEnvValueFromSecretKeyRef
@@ -2048,7 +2279,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersEnvValueFrom
@@ -2069,7 +2302,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("secretKeyRef")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersEnvValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersEnv
@@ -2086,7 +2321,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("valueFrom")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersEnvValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersEnvFromConfigMapRef
@@ -2099,7 +2336,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersEnvFromSecretRef
@@ -2112,7 +2351,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersEnvFrom
@@ -2129,7 +2370,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("secretRef")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersEnvFromSecretRef? SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecyclePostStartExec
@@ -2138,7 +2381,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecyclePostStartHttpGetHttpHeaders
@@ -2151,7 +2396,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecyclePostStartHttpGet
@@ -2176,7 +2423,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecyclePostStartSleep
@@ -2185,7 +2434,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("seconds")]
     public long Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecyclePostStartTcpSocket
@@ -2198,7 +2449,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecyclePostStart
@@ -2219,7 +2472,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("tcpSocket")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecyclePostStartTcpSocket? TcpSocket { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecyclePreStopExec
@@ -2228,7 +2483,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecyclePreStopHttpGetHttpHeaders
@@ -2241,7 +2498,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecyclePreStopHttpGet
@@ -2266,7 +2525,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecyclePreStopSleep
@@ -2275,7 +2536,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("seconds")]
     public long Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecyclePreStopTcpSocket
@@ -2288,7 +2551,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecyclePreStop
@@ -2309,7 +2574,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("tcpSocket")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecyclePreStopTcpSocket? TcpSocket { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecycle
@@ -2322,7 +2589,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("preStop")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecyclePreStop? PreStop { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLivenessProbeExec
@@ -2331,7 +2600,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLivenessProbeGrpc
@@ -2344,7 +2615,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLivenessProbeHttpGetHttpHeaders
@@ -2357,7 +2630,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLivenessProbeHttpGet
@@ -2382,7 +2657,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLivenessProbeTcpSocket
@@ -2395,7 +2672,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLivenessProbe
@@ -2440,7 +2719,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersPorts
@@ -2465,7 +2746,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersReadinessProbeExec
@@ -2474,7 +2757,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersReadinessProbeGrpc
@@ -2487,7 +2772,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersReadinessProbeHttpGetHttpHeaders
@@ -2500,7 +2787,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersReadinessProbeHttpGet
@@ -2525,7 +2814,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersReadinessProbeTcpSocket
@@ -2538,7 +2829,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersReadinessProbe
@@ -2583,7 +2876,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersResizePolicy
@@ -2596,7 +2891,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("restartPolicy")]
     public string RestartPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersResourcesClaims
@@ -2605,7 +2902,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersResources
@@ -2622,7 +2921,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("requests")]
     public JsonNode? Requests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersSecurityContextCapabilities
@@ -2635,7 +2936,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("drop")]
     public IList<string>? Drop { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersSecurityContextSeLinuxOptions
@@ -2656,7 +2959,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("user")]
     public string? User { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersSecurityContextSeccompProfile
@@ -2669,7 +2974,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersSecurityContextWindowsOptions
@@ -2690,7 +2997,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("runAsUserName")]
     public string? RunAsUserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersSecurityContext
@@ -2739,7 +3048,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("windowsOptions")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersSecurityContextWindowsOptions? WindowsOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersStartupProbeExec
@@ -2748,7 +3059,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersStartupProbeGrpc
@@ -2761,7 +3074,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersStartupProbeHttpGetHttpHeaders
@@ -2774,7 +3089,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersStartupProbeHttpGet
@@ -2799,7 +3116,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersStartupProbeTcpSocket
@@ -2812,7 +3131,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersStartupProbe
@@ -2857,7 +3178,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersVolumeDevices
@@ -2870,7 +3193,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersVolumeMounts
@@ -2899,7 +3224,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("subPathExpr")]
     public string? SubPathExpr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecEphemeralContainers
@@ -3004,7 +3331,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("workingDir")]
     public string? WorkingDir { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecHostAliases
@@ -3017,7 +3346,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("ip")]
     public string? Ip { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecImagePullSecrets
@@ -3026,7 +3357,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersEnvValueFromConfigMapKeyRef
@@ -3043,7 +3376,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersEnvValueFromFieldRef
@@ -3056,7 +3391,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("fieldPath")]
     public string FieldPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersEnvValueFromResourceFieldRef
@@ -3073,7 +3410,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("resource")]
     public string Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersEnvValueFromSecretKeyRef
@@ -3090,7 +3429,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersEnvValueFrom
@@ -3111,7 +3452,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("secretKeyRef")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersEnvValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersEnv
@@ -3128,7 +3471,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("valueFrom")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersEnvValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersEnvFromConfigMapRef
@@ -3141,7 +3486,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersEnvFromSecretRef
@@ -3154,7 +3501,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersEnvFrom
@@ -3171,7 +3520,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("secretRef")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersEnvFromSecretRef? SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecyclePostStartExec
@@ -3180,7 +3531,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecyclePostStartHttpGetHttpHeaders
@@ -3193,7 +3546,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecyclePostStartHttpGet
@@ -3218,7 +3573,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecyclePostStartSleep
@@ -3227,7 +3584,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("seconds")]
     public long Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecyclePostStartTcpSocket
@@ -3240,7 +3599,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecyclePostStart
@@ -3261,7 +3622,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("tcpSocket")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecyclePostStartTcpSocket? TcpSocket { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecyclePreStopExec
@@ -3270,7 +3633,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecyclePreStopHttpGetHttpHeaders
@@ -3283,7 +3648,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecyclePreStopHttpGet
@@ -3308,7 +3675,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecyclePreStopSleep
@@ -3317,7 +3686,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("seconds")]
     public long Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecyclePreStopTcpSocket
@@ -3330,7 +3701,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecyclePreStop
@@ -3351,7 +3724,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("tcpSocket")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecyclePreStopTcpSocket? TcpSocket { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecycle
@@ -3364,7 +3739,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("preStop")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecyclePreStop? PreStop { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersLivenessProbeExec
@@ -3373,7 +3750,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersLivenessProbeGrpc
@@ -3386,7 +3765,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersLivenessProbeHttpGetHttpHeaders
@@ -3399,7 +3780,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersLivenessProbeHttpGet
@@ -3424,7 +3807,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersLivenessProbeTcpSocket
@@ -3437,7 +3822,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersLivenessProbe
@@ -3482,7 +3869,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersPorts
@@ -3507,7 +3896,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersReadinessProbeExec
@@ -3516,7 +3907,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersReadinessProbeGrpc
@@ -3529,7 +3922,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersReadinessProbeHttpGetHttpHeaders
@@ -3542,7 +3937,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersReadinessProbeHttpGet
@@ -3567,7 +3964,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersReadinessProbeTcpSocket
@@ -3580,7 +3979,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersReadinessProbe
@@ -3625,7 +4026,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersResizePolicy
@@ -3638,7 +4041,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("restartPolicy")]
     public string RestartPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersResourcesClaims
@@ -3647,7 +4052,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersResources
@@ -3664,7 +4071,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("requests")]
     public JsonNode? Requests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersSecurityContextCapabilities
@@ -3677,7 +4086,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("drop")]
     public IList<string>? Drop { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersSecurityContextSeLinuxOptions
@@ -3698,7 +4109,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("user")]
     public string? User { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersSecurityContextSeccompProfile
@@ -3711,7 +4124,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersSecurityContextWindowsOptions
@@ -3732,7 +4147,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("runAsUserName")]
     public string? RunAsUserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersSecurityContext
@@ -3781,7 +4198,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("windowsOptions")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersSecurityContextWindowsOptions? WindowsOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersStartupProbeExec
@@ -3790,7 +4209,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersStartupProbeGrpc
@@ -3803,7 +4224,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersStartupProbeHttpGetHttpHeaders
@@ -3816,7 +4239,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersStartupProbeHttpGet
@@ -3841,7 +4266,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersStartupProbeTcpSocket
@@ -3854,7 +4281,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersStartupProbe
@@ -3899,7 +4328,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersVolumeDevices
@@ -3912,7 +4343,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainersVolumeMounts
@@ -3941,7 +4374,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("subPathExpr")]
     public string? SubPathExpr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecInitContainers
@@ -4042,7 +4477,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("workingDir")]
     public string? WorkingDir { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecOs
@@ -4051,7 +4488,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecReadinessGates
@@ -4060,7 +4499,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("conditionType")]
     public string ConditionType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecResourceClaimsSource
@@ -4073,7 +4514,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("resourceClaimTemplateName")]
     public string? ResourceClaimTemplateName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecResourceClaims
@@ -4086,7 +4529,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("source")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecResourceClaimsSource? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecSchedulingGates
@@ -4095,7 +4540,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecSecurityContextSeLinuxOptions
@@ -4116,7 +4563,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("user")]
     public string? User { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecSecurityContextSeccompProfile
@@ -4129,7 +4578,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecSecurityContextSysctls
@@ -4142,7 +4593,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecSecurityContextWindowsOptions
@@ -4163,7 +4616,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("runAsUserName")]
     public string? RunAsUserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecSecurityContext
@@ -4208,7 +4663,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("windowsOptions")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecSecurityContextWindowsOptions? WindowsOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecTolerations
@@ -4233,7 +4690,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecTopologySpreadConstraintsLabelSelectorMatchExpressions
@@ -4250,7 +4709,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecTopologySpreadConstraintsLabelSelector
@@ -4263,7 +4724,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpecTopologySpreadConstraints
@@ -4300,7 +4763,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("whenUnsatisfiable")]
     public string WhenUnsatisfiable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpec
@@ -4461,7 +4926,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateS
     [JsonPropertyName("volumes")]
     public JsonNode? Volumes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplate
@@ -4474,7 +4941,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplate
     [JsonPropertyName("spec")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderJobSpecTemplateSpec? Spec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpec
@@ -4535,7 +5004,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJobSpec
     [JsonPropertyName("ttlSecondsAfterFinished")]
     public int? TtlSecondsAfterFinished { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJob
@@ -4548,7 +5019,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderJob
     [JsonPropertyName("spec")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderJobSpec Spec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderKayentaScopesControlScope
@@ -4573,7 +5046,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderKayentaScopesCon
     [JsonPropertyName("step")]
     public long Step { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderKayentaScopesExperimentScope
@@ -4598,7 +5073,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderKayentaScopesExp
     [JsonPropertyName("step")]
     public long Step { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderKayentaScopes
@@ -4615,7 +5092,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderKayentaScopes
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderKayentaThreshold
@@ -4628,7 +5107,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderKayentaThreshold
     [JsonPropertyName("pass")]
     public long Pass { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderKayenta
@@ -4665,7 +5146,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderKayenta
     [JsonPropertyName("threshold")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderKayentaThreshold Threshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderNewRelic
@@ -4682,7 +5165,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderNewRelic
     [JsonPropertyName("timeout")]
     public long? Timeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderPrometheusAuthenticationOauth2
@@ -4703,7 +5188,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderPrometheusAuthen
     [JsonPropertyName("tokenUrl")]
     public string? TokenUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderPrometheusAuthenticationSigv4
@@ -4720,7 +5207,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderPrometheusAuthen
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderPrometheusAuthentication
@@ -4733,7 +5222,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderPrometheusAuthen
     [JsonPropertyName("sigv4")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderPrometheusAuthenticationSigv4? Sigv4 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderPrometheusHeaders
@@ -4746,7 +5237,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderPrometheusHeader
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderPrometheusRangeQuery
@@ -4763,7 +5256,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderPrometheusRangeQ
     [JsonPropertyName("step")]
     public string? Step { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderPrometheus
@@ -4796,7 +5291,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderPrometheus
     [JsonPropertyName("timeout")]
     public long? Timeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderSkywalking
@@ -4813,7 +5310,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderSkywalking
     [JsonPropertyName("query")]
     public string? Query { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderWavefront
@@ -4826,7 +5325,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderWavefront
     [JsonPropertyName("query")]
     public string? Query { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderWebAuthenticationOauth2
@@ -4847,7 +5348,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderWebAuthenticatio
     [JsonPropertyName("tokenUrl")]
     public string? TokenUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderWebAuthenticationSigv4
@@ -4864,7 +5367,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderWebAuthenticatio
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderWebAuthentication
@@ -4877,7 +5382,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderWebAuthenticatio
     [JsonPropertyName("sigv4")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderWebAuthenticationSigv4? Sigv4 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderWebHeaders
@@ -4890,7 +5397,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderWebHeaders
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderWeb
@@ -4931,7 +5440,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderWeb
     [JsonPropertyName("url")]
     public string Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProvider
@@ -4984,7 +5495,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProvider
     [JsonPropertyName("web")]
     public V1alpha1AnalysisTemplateSpecMetricsProviderWeb? Web { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetrics
@@ -5033,7 +5546,9 @@ public partial class V1alpha1AnalysisTemplateSpecMetrics
     [JsonPropertyName("successCondition")]
     public string? SuccessCondition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecTemplates
@@ -5046,7 +5561,9 @@ public partial class V1alpha1AnalysisTemplateSpecTemplates
     [JsonPropertyName("templateName")]
     public string? TemplateName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpec
@@ -5071,7 +5588,9 @@ public partial class V1alpha1AnalysisTemplateSpec
     [JsonPropertyName("templates")]
     public IList<V1alpha1AnalysisTemplateSpecTemplates>? Templates { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -5097,3 +5616,4 @@ public partial class V1alpha1AnalysisTemplate : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("spec")]
     public V1alpha1AnalysisTemplateSpec Spec { get; set; }
 }
+#nullable disable

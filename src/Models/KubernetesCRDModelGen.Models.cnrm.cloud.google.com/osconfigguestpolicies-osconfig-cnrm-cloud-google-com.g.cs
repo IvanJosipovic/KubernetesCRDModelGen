@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.osconfig.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1OSConfigGuestPolicyList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1OSConfigGuestPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecAssignmentGroupLabels
@@ -42,7 +45,9 @@ public partial class V1beta1OSConfigGuestPolicySpecAssignmentGroupLabels
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecAssignmentInstances
@@ -59,7 +64,9 @@ public partial class V1beta1OSConfigGuestPolicySpecAssignmentInstances
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecAssignmentOsTypes
@@ -76,7 +83,9 @@ public partial class V1beta1OSConfigGuestPolicySpecAssignmentOsTypes
     [JsonPropertyName("osVersion")]
     public string? OsVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the VMs that are assigned this policy. This allows you to target sets or groups of VMs by different parameters such as labels, names, OS, or zones. Empty assignments will target ALL VMs underneath this policy. Conflict Management Policies that exist higher up in the resource hierarchy (closer to the Org) will override those lower down if there is a conflict. At the same level in the resource hierarchy (ie. within a project), the service will prevent the creation of multiple policies that conflict with each other. If there are multiple policies that specify the same config (eg. package, software recipe, repository, etc.), the service will ensure that no VM could potentially receive instructions from both policies. To create multiple policies that specify different versions of a package or different configs for different Operating Systems, each policy must be mutually exclusive in their targeting according to labels, OS, or other criteria. Different configs are identified for conflicts in different ways. Packages are identified by their name and the package manager(s) they target. Package repositories are identified by their unique id where applicable. Some package managers don't have a unique identifier for repositories and where that's the case, no uniqueness is validated by the service. Note that if OS Inventory is disabled, a VM will not be assigned a policy that targets by OS because the service will see this VM's OS as unknown.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecAssignment
@@ -101,7 +110,9 @@ public partial class V1beta1OSConfigGuestPolicySpecAssignment
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An Apt Repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecPackageRepositoriesApt
@@ -126,7 +137,9 @@ public partial class V1beta1OSConfigGuestPolicySpecPackageRepositoriesApt
     [JsonPropertyName("uri")]
     public string Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Goo Repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecPackageRepositoriesGoo
@@ -139,7 +152,9 @@ public partial class V1beta1OSConfigGuestPolicySpecPackageRepositoriesGoo
     [JsonPropertyName("url")]
     public string Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Yum Repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecPackageRepositoriesYum
@@ -160,7 +175,9 @@ public partial class V1beta1OSConfigGuestPolicySpecPackageRepositoriesYum
     [JsonPropertyName("id")]
     public string Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Zypper Repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecPackageRepositoriesZypper
@@ -181,7 +198,9 @@ public partial class V1beta1OSConfigGuestPolicySpecPackageRepositoriesZypper
     [JsonPropertyName("id")]
     public string Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecPackageRepositories
@@ -202,7 +221,9 @@ public partial class V1beta1OSConfigGuestPolicySpecPackageRepositories
     [JsonPropertyName("zypper")]
     public V1beta1OSConfigGuestPolicySpecPackageRepositoriesZypper? Zypper { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecPackages
@@ -219,7 +240,9 @@ public partial class V1beta1OSConfigGuestPolicySpecPackages
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecRecipesArtifactsGcsBucketRef
@@ -236,7 +259,9 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesArtifactsGcsBucketRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Google Cloud Storage artifact.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecRecipesArtifactsGcs
@@ -253,7 +278,9 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesArtifactsGcs
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A generic remote artifact.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecRecipesArtifactsRemote
@@ -266,7 +293,9 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesArtifactsRemote
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecRecipesArtifacts
@@ -287,7 +316,9 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesArtifacts
     [JsonPropertyName("remote")]
     public V1beta1OSConfigGuestPolicySpecRecipesArtifactsRemote? Remote { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Extracts an archive into the specified directory.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallStepsArchiveExtraction
@@ -304,7 +335,9 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallStepsArchiveExt
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Installs a deb file via dpkg.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallStepsDpkgInstallation
@@ -313,7 +346,9 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallStepsDpkgInstal
     [JsonPropertyName("artifactId")]
     public string? ArtifactId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Copies a file onto the instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallStepsFileCopy
@@ -334,7 +369,9 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallStepsFileCopy
     [JsonPropertyName("permissions")]
     public string? Permissions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Executes an artifact or local file.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallStepsFileExec
@@ -355,7 +392,9 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallStepsFileExec
     [JsonPropertyName("localPath")]
     public string? LocalPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Installs an MSI file.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallStepsMsiInstallation
@@ -372,7 +411,9 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallStepsMsiInstall
     [JsonPropertyName("flags")]
     public IList<string>? Flags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Installs an rpm file via the rpm utility.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallStepsRpmInstallation
@@ -381,7 +422,9 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallStepsRpmInstall
     [JsonPropertyName("artifactId")]
     public string? ArtifactId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Runs commands in a shell.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallStepsScriptRun
@@ -398,7 +441,9 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallStepsScriptRun
     [JsonPropertyName("script")]
     public string? Script { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallSteps
@@ -431,7 +476,9 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallSteps
     [JsonPropertyName("scriptRun")]
     public V1beta1OSConfigGuestPolicySpecRecipesInstallStepsScriptRun? ScriptRun { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Extracts an archive into the specified directory.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsArchiveExtraction
@@ -448,7 +495,9 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsArchiveExtr
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Installs a deb file via dpkg.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsDpkgInstallation
@@ -457,7 +506,9 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsDpkgInstall
     [JsonPropertyName("artifactId")]
     public string? ArtifactId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Copies a file onto the instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsFileCopy
@@ -478,7 +529,9 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsFileCopy
     [JsonPropertyName("permissions")]
     public string? Permissions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Executes an artifact or local file.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsFileExec
@@ -499,7 +552,9 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsFileExec
     [JsonPropertyName("localPath")]
     public string? LocalPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Installs an MSI file.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsMsiInstallation
@@ -516,7 +571,9 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsMsiInstalla
     [JsonPropertyName("flags")]
     public IList<string>? Flags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Installs an rpm file via the rpm utility.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsRpmInstallation
@@ -525,7 +582,9 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsRpmInstalla
     [JsonPropertyName("artifactId")]
     public string? ArtifactId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Runs commands in a shell.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsScriptRun
@@ -542,7 +601,9 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsScriptRun
     [JsonPropertyName("script")]
     public string? Script { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateSteps
@@ -575,7 +636,9 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateSteps
     [JsonPropertyName("scriptRun")]
     public V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsScriptRun? ScriptRun { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpecRecipes
@@ -604,7 +667,9 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipes
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicySpec
@@ -633,7 +698,9 @@ public partial class V1beta1OSConfigGuestPolicySpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicyStatusConditions
@@ -658,7 +725,9 @@ public partial class V1beta1OSConfigGuestPolicyStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OSConfigGuestPolicyStatus
@@ -683,7 +752,9 @@ public partial class V1beta1OSConfigGuestPolicyStatus
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -713,3 +784,4 @@ public partial class V1beta1OSConfigGuestPolicy : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1OSConfigGuestPolicyStatus? Status { get; set; }
 }
+#nullable disable

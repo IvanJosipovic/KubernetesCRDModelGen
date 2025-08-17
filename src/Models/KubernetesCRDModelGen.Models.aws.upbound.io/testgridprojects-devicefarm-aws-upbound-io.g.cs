@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.devicefarm.aws.upbound.io;
+#nullable enable
 /// <summary>TestGridProject is the Schema for the TestGridProjects API. Provides a Devicefarm test_grid_project</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TestGridProjectList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1TestGridProject> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecForProviderVpcConfigSecurityGroupIdRefsPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1TestGridProjectSpecForProviderVpcConfigSecurityGroup
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecForProviderVpcConfigSecurityGroupIdRefs
@@ -59,7 +64,9 @@ public partial class V1beta1TestGridProjectSpecForProviderVpcConfigSecurityGroup
     [JsonPropertyName("policy")]
     public V1beta1TestGridProjectSpecForProviderVpcConfigSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecForProviderVpcConfigSecurityGroupIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1TestGridProjectSpecForProviderVpcConfigSecurityGroup
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecForProviderVpcConfigSecurityGroupIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1TestGridProjectSpecForProviderVpcConfigSecurityGroup
     [JsonPropertyName("policy")]
     public V1beta1TestGridProjectSpecForProviderVpcConfigSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecForProviderVpcConfigSubnetIdRefsPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1TestGridProjectSpecForProviderVpcConfigSubnetIdRefsP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecForProviderVpcConfigSubnetIdRefs
@@ -115,7 +128,9 @@ public partial class V1beta1TestGridProjectSpecForProviderVpcConfigSubnetIdRefs
     [JsonPropertyName("policy")]
     public V1beta1TestGridProjectSpecForProviderVpcConfigSubnetIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecForProviderVpcConfigSubnetIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1TestGridProjectSpecForProviderVpcConfigSubnetIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecForProviderVpcConfigSubnetIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1TestGridProjectSpecForProviderVpcConfigSubnetIdSelec
     [JsonPropertyName("policy")]
     public V1beta1TestGridProjectSpecForProviderVpcConfigSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecForProviderVpcConfigVpcIdRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1TestGridProjectSpecForProviderVpcConfigVpcIdRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecForProviderVpcConfigVpcIdRef
@@ -171,7 +192,9 @@ public partial class V1beta1TestGridProjectSpecForProviderVpcConfigVpcIdRef
     [JsonPropertyName("policy")]
     public V1beta1TestGridProjectSpecForProviderVpcConfigVpcIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecForProviderVpcConfigVpcIdSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1TestGridProjectSpecForProviderVpcConfigVpcIdSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecForProviderVpcConfigVpcIdSelector
@@ -201,7 +226,9 @@ public partial class V1beta1TestGridProjectSpecForProviderVpcConfigVpcIdSelector
     [JsonPropertyName("policy")]
     public V1beta1TestGridProjectSpecForProviderVpcConfigVpcIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecForProviderVpcConfig
@@ -242,7 +269,9 @@ public partial class V1beta1TestGridProjectSpecForProviderVpcConfig
     [JsonPropertyName("vpcIdSelector")]
     public V1beta1TestGridProjectSpecForProviderVpcConfigVpcIdSelector? VpcIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecForProvider
@@ -267,7 +296,9 @@ public partial class V1beta1TestGridProjectSpecForProvider
     [JsonPropertyName("vpcConfig")]
     public IList<V1beta1TestGridProjectSpecForProviderVpcConfig>? VpcConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigSecurityGroupIdRefsPolicy
@@ -280,7 +311,9 @@ public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigSecurityGrou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigSecurityGroupIdRefs
@@ -293,7 +326,9 @@ public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigSecurityGrou
     [JsonPropertyName("policy")]
     public V1beta1TestGridProjectSpecInitProviderVpcConfigSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigSecurityGroupIdSelectorPolicy
@@ -306,7 +341,9 @@ public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigSecurityGrou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigSecurityGroupIdSelector
@@ -323,7 +360,9 @@ public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigSecurityGrou
     [JsonPropertyName("policy")]
     public V1beta1TestGridProjectSpecInitProviderVpcConfigSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigSubnetIdRefsPolicy
@@ -336,7 +375,9 @@ public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigSubnetIdRefs
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigSubnetIdRefs
@@ -349,7 +390,9 @@ public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigSubnetIdRefs
     [JsonPropertyName("policy")]
     public V1beta1TestGridProjectSpecInitProviderVpcConfigSubnetIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigSubnetIdSelectorPolicy
@@ -362,7 +405,9 @@ public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigSubnetIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigSubnetIdSelector
@@ -379,7 +424,9 @@ public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigSubnetIdSele
     [JsonPropertyName("policy")]
     public V1beta1TestGridProjectSpecInitProviderVpcConfigSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigVpcIdRefPolicy
@@ -392,7 +439,9 @@ public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigVpcIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigVpcIdRef
@@ -405,7 +454,9 @@ public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigVpcIdRef
     [JsonPropertyName("policy")]
     public V1beta1TestGridProjectSpecInitProviderVpcConfigVpcIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigVpcIdSelectorPolicy
@@ -418,7 +469,9 @@ public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigVpcIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigVpcIdSelector
@@ -435,7 +488,9 @@ public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigVpcIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1TestGridProjectSpecInitProviderVpcConfigVpcIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecInitProviderVpcConfig
@@ -476,7 +531,9 @@ public partial class V1beta1TestGridProjectSpecInitProviderVpcConfig
     [JsonPropertyName("vpcIdSelector")]
     public V1beta1TestGridProjectSpecInitProviderVpcConfigVpcIdSelector? VpcIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecInitProvider
@@ -497,7 +554,9 @@ public partial class V1beta1TestGridProjectSpecInitProvider
     [JsonPropertyName("vpcConfig")]
     public IList<V1beta1TestGridProjectSpecInitProviderVpcConfig>? VpcConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecProviderConfigRefPolicy
@@ -510,7 +569,9 @@ public partial class V1beta1TestGridProjectSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecProviderConfigRef
@@ -523,7 +584,9 @@ public partial class V1beta1TestGridProjectSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1TestGridProjectSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpecWriteConnectionSecretToRef
@@ -536,7 +599,9 @@ public partial class V1beta1TestGridProjectSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TestGridProjectSpec defines the desired state of TestGridProject</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectSpec
@@ -565,7 +630,9 @@ public partial class V1beta1TestGridProjectSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TestGridProjectSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectStatusAtProviderVpcConfig
@@ -582,7 +649,9 @@ public partial class V1beta1TestGridProjectStatusAtProviderVpcConfig
     [JsonPropertyName("vpcId")]
     public string? VpcId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectStatusAtProvider
@@ -619,7 +688,9 @@ public partial class V1beta1TestGridProjectStatusAtProvider
     [JsonPropertyName("vpcConfig")]
     public IList<V1beta1TestGridProjectStatusAtProviderVpcConfig>? VpcConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectStatusConditions
@@ -648,7 +719,9 @@ public partial class V1beta1TestGridProjectStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TestGridProjectStatus defines the observed state of TestGridProject.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TestGridProjectStatus
@@ -665,7 +738,9 @@ public partial class V1beta1TestGridProjectStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TestGridProject is the Schema for the TestGridProjects API. Provides a Devicefarm test_grid_project</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -695,3 +770,4 @@ public partial class V1beta1TestGridProject : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1TestGridProjectStatus? Status { get; set; }
 }
+#nullable disable

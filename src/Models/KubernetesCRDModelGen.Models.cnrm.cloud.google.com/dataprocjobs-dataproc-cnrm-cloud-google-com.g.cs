@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataproc.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>DataprocJob is the Schema for the DataprocJob API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1DataprocJobList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1alpha1DataprocJob> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Driver scheduling configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpecDriverSchedulingConfig
@@ -46,13 +49,17 @@ public partial class V1alpha1DataprocJobSpecDriverSchedulingConfig
     [JsonPropertyName("vcores")]
     public int? Vcores { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The runtime log config for job execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpecFlinkJobLoggingConfig
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Job is a Flink job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpecFlinkJob
@@ -85,13 +92,17 @@ public partial class V1alpha1DataprocJobSpecFlinkJob
     [JsonPropertyName("savepointURI")]
     public string? SavepointURI { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The runtime log config for job execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpecHadoopJobLoggingConfig
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Job is a Hadoop job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpecHadoopJob
@@ -128,7 +139,9 @@ public partial class V1alpha1DataprocJobSpecHadoopJob
     [JsonPropertyName("properties")]
     public IDictionary<string, string>? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A list of queries.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpecHiveJobQueryList
@@ -137,7 +150,9 @@ public partial class V1alpha1DataprocJobSpecHiveJobQueryList
     [JsonPropertyName("queries")]
     public IList<string>? Queries { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Job is a Hive job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpecHiveJob
@@ -166,7 +181,9 @@ public partial class V1alpha1DataprocJobSpecHiveJob
     [JsonPropertyName("scriptVariables")]
     public IDictionary<string, string>? ScriptVariables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpecParentProjectRef
@@ -187,7 +204,9 @@ public partial class V1alpha1DataprocJobSpecParentProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpecParent
@@ -200,13 +219,17 @@ public partial class V1alpha1DataprocJobSpecParent
     [JsonPropertyName("projectRef")]
     public V1alpha1DataprocJobSpecParentProjectRef? ProjectRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The runtime log config for job execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpecPigJobLoggingConfig
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A list of queries.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpecPigJobQueryList
@@ -215,7 +238,9 @@ public partial class V1alpha1DataprocJobSpecPigJobQueryList
     [JsonPropertyName("queries")]
     public IList<string>? Queries { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Job is a Pig job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpecPigJob
@@ -248,7 +273,9 @@ public partial class V1alpha1DataprocJobSpecPigJob
     [JsonPropertyName("scriptVariables")]
     public IDictionary<string, string>? ScriptVariables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Job information, including how, when, and where to run the job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpecPlacement
@@ -261,13 +288,17 @@ public partial class V1alpha1DataprocJobSpecPlacement
     [JsonPropertyName("clusterName")]
     public string? ClusterName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The runtime log config for job execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpecPrestoJobLoggingConfig
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A list of queries.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpecPrestoJobQueryList
@@ -276,7 +307,9 @@ public partial class V1alpha1DataprocJobSpecPrestoJobQueryList
     [JsonPropertyName("queries")]
     public IList<string>? Queries { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Job is a Presto job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpecPrestoJob
@@ -309,13 +342,17 @@ public partial class V1alpha1DataprocJobSpecPrestoJob
     [JsonPropertyName("queryList")]
     public V1alpha1DataprocJobSpecPrestoJobQueryList? QueryList { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The runtime log config for job execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpecPysparkJobLoggingConfig
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Job is a PySpark job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpecPysparkJob
@@ -352,7 +389,9 @@ public partial class V1alpha1DataprocJobSpecPysparkJob
     [JsonPropertyName("pythonFileURIs")]
     public IList<string>? PythonFileURIs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The fully qualified reference to the job, which can be used to obtain the equivalent REST path of the job resource. If this property is not specified when a job is created, the server generates a &lt;code&gt;job_id&lt;/code&gt;.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpecReference
@@ -365,7 +404,9 @@ public partial class V1alpha1DataprocJobSpecReference
     [JsonPropertyName("projectID")]
     public string? ProjectID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Job scheduling configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpecScheduling
@@ -378,13 +419,17 @@ public partial class V1alpha1DataprocJobSpecScheduling
     [JsonPropertyName("maxFailuresTotal")]
     public int? MaxFailuresTotal { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The runtime log config for job execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpecSparkJobLoggingConfig
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Job is a Spark job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpecSparkJob
@@ -421,13 +466,17 @@ public partial class V1alpha1DataprocJobSpecSparkJob
     [JsonPropertyName("properties")]
     public IDictionary<string, string>? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The runtime log config for job execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpecSparkRJobLoggingConfig
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Job is a SparkR job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpecSparkRJob
@@ -456,13 +505,17 @@ public partial class V1alpha1DataprocJobSpecSparkRJob
     [JsonPropertyName("properties")]
     public IDictionary<string, string>? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The runtime log config for job execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpecSparkSQLJobLoggingConfig
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A list of queries.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpecSparkSQLJobQueryList
@@ -471,7 +524,9 @@ public partial class V1alpha1DataprocJobSpecSparkSQLJobQueryList
     [JsonPropertyName("queries")]
     public IList<string>? Queries { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Job is a SparkSql job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpecSparkSQLJob
@@ -500,13 +555,17 @@ public partial class V1alpha1DataprocJobSpecSparkSQLJob
     [JsonPropertyName("scriptVariables")]
     public IDictionary<string, string>? ScriptVariables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The runtime log config for job execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpecTrinoJobLoggingConfig
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A list of queries.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpecTrinoJobQueryList
@@ -515,7 +574,9 @@ public partial class V1alpha1DataprocJobSpecTrinoJobQueryList
     [JsonPropertyName("queries")]
     public IList<string>? Queries { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Job is a Trino job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpecTrinoJob
@@ -548,7 +609,9 @@ public partial class V1alpha1DataprocJobSpecTrinoJob
     [JsonPropertyName("queryList")]
     public V1alpha1DataprocJobSpecTrinoJobQueryList? QueryList { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataprocJobSpec defines the desired state of DataprocJob</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobSpec
@@ -621,7 +684,9 @@ public partial class V1alpha1DataprocJobSpec
     [JsonPropertyName("trinoJob")]
     public V1alpha1DataprocJobSpecTrinoJob? TrinoJob { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobStatusConditions
@@ -646,7 +711,9 @@ public partial class V1alpha1DataprocJobStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Job information, including how, when, and where to run the job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobStatusObservedStatePlacement
@@ -655,7 +722,9 @@ public partial class V1alpha1DataprocJobStatusObservedStatePlacement
     [JsonPropertyName("clusterUuid")]
     public string? ClusterUuid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. The job status. Additional application-specific status information might be contained in the &lt;code&gt;type_job&lt;/code&gt; and &lt;code&gt;yarn_applications&lt;/code&gt; fields.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobStatusObservedStateStatus
@@ -676,7 +745,9 @@ public partial class V1alpha1DataprocJobStatusObservedStateStatus
     [JsonPropertyName("substate")]
     public string? Substate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobStatusObservedStateStatusHistory
@@ -697,7 +768,9 @@ public partial class V1alpha1DataprocJobStatusObservedStateStatusHistory
     [JsonPropertyName("substate")]
     public string? Substate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobStatusObservedStateYarnApplications
@@ -718,7 +791,9 @@ public partial class V1alpha1DataprocJobStatusObservedStateYarnApplications
     [JsonPropertyName("trackingURL")]
     public string? TrackingURL { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobStatusObservedState
@@ -755,7 +830,9 @@ public partial class V1alpha1DataprocJobStatusObservedState
     [JsonPropertyName("yarnApplications")]
     public IList<V1alpha1DataprocJobStatusObservedStateYarnApplications>? YarnApplications { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataprocJobStatus defines the config connector machine state of DataprocJob</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocJobStatus
@@ -776,7 +853,9 @@ public partial class V1alpha1DataprocJobStatus
     [JsonPropertyName("observedState")]
     public V1alpha1DataprocJobStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataprocJob is the Schema for the DataprocJob API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -806,3 +885,4 @@ public partial class V1alpha1DataprocJob : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1alpha1DataprocJobStatus? Status { get; set; }
 }
+#nullable disable

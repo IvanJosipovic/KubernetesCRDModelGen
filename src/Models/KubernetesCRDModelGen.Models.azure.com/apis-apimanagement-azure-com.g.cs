@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20220801.Api Generator information: - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/stable/2022-08-01/apimapis.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20220801storageApiList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1api20220801storageApi> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Identifier for existing API Version Set. Omit this value to create a new Version Set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageApiSpecApiVersionSetReference
@@ -54,7 +57,9 @@ public partial class V1api20220801storageApiSpecApiVersionSetReference
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.ApiVersionSetContractDetails An API Version Set contains the common configuration for a set of API Versions relating</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageApiSpecApiVersionSet
@@ -87,7 +92,9 @@ public partial class V1api20220801storageApiSpecApiVersionSet
     [JsonPropertyName("versioningScheme")]
     public string? VersioningScheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.OAuth2AuthenticationSettingsContract API OAuth2 Authentication settings details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageApiSpecAuthenticationSettingsOAuth2
@@ -104,7 +111,9 @@ public partial class V1api20220801storageApiSpecAuthenticationSettingsOAuth2
     [JsonPropertyName("scope")]
     public string? Scope { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.OAuth2AuthenticationSettingsContract API OAuth2 Authentication settings details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageApiSpecAuthenticationSettingsOAuth2AuthenticationSettings
@@ -121,7 +130,9 @@ public partial class V1api20220801storageApiSpecAuthenticationSettingsOAuth2Auth
     [JsonPropertyName("scope")]
     public string? Scope { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.OpenIdAuthenticationSettingsContract API OAuth2 Authentication settings details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageApiSpecAuthenticationSettingsOpenid
@@ -138,7 +149,9 @@ public partial class V1api20220801storageApiSpecAuthenticationSettingsOpenid
     [JsonPropertyName("openidProviderId")]
     public string? OpenidProviderId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.OpenIdAuthenticationSettingsContract API OAuth2 Authentication settings details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageApiSpecAuthenticationSettingsOpenidAuthenticationSettings
@@ -155,7 +168,9 @@ public partial class V1api20220801storageApiSpecAuthenticationSettingsOpenidAuth
     [JsonPropertyName("openidProviderId")]
     public string? OpenidProviderId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.AuthenticationSettingsContract API Authentication Settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageApiSpecAuthenticationSettings
@@ -180,7 +195,9 @@ public partial class V1api20220801storageApiSpecAuthenticationSettings
     [JsonPropertyName("openidAuthenticationSettings")]
     public IList<V1api20220801storageApiSpecAuthenticationSettingsOpenidAuthenticationSettings>? OpenidAuthenticationSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.ApiContactInformation API contact information</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageApiSpecContact
@@ -201,7 +218,9 @@ public partial class V1api20220801storageApiSpecContact
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.ApiLicenseInformation API license information</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageApiSpecLicense
@@ -218,7 +237,9 @@ public partial class V1api20220801storageApiSpecLicense
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageApiSpecOperatorSpecConfigMapExpressions
@@ -235,7 +256,9 @@ public partial class V1api20220801storageApiSpecOperatorSpecConfigMapExpressions
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageApiSpecOperatorSpecSecretExpressions
@@ -252,7 +275,9 @@ public partial class V1api20220801storageApiSpecOperatorSpecSecretExpressions
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.ApiOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageApiSpecOperatorSpec
@@ -269,7 +294,9 @@ public partial class V1api20220801storageApiSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20220801storageApiSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a apimanagement.azure.com/Service resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageApiSpecOwner
@@ -282,7 +309,9 @@ public partial class V1api20220801storageApiSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SourceApiReference: API identifier of the source API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageApiSpecSourceApiReference
@@ -303,7 +332,9 @@ public partial class V1api20220801storageApiSpecSourceApiReference
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.SubscriptionKeyParameterNamesContract Subscription key parameter names details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageApiSpecSubscriptionKeyParameterNames
@@ -320,7 +351,9 @@ public partial class V1api20220801storageApiSpecSubscriptionKeyParameterNames
     [JsonPropertyName("query")]
     public string? Query { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.ApiCreateOrUpdateProperties_WsdlSelector</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageApiSpecWsdlSelector
@@ -337,7 +370,9 @@ public partial class V1api20220801storageApiSpecWsdlSelector
     [JsonPropertyName("wsdlServiceName")]
     public string? WsdlServiceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.Api_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageApiSpec
@@ -462,7 +497,9 @@ public partial class V1api20220801storageApiSpec
     [JsonPropertyName("wsdlSelector")]
     public V1api20220801storageApiSpecWsdlSelector? WsdlSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.ApiVersionSetContractDetails_STATUS An API Version Set contains the common configuration for a set of API Versions relating</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageApiStatusApiVersionSet
@@ -495,7 +532,9 @@ public partial class V1api20220801storageApiStatusApiVersionSet
     [JsonPropertyName("versioningScheme")]
     public string? VersioningScheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.OAuth2AuthenticationSettingsContract_STATUS API OAuth2 Authentication settings details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageApiStatusAuthenticationSettingsOAuth2
@@ -512,7 +551,9 @@ public partial class V1api20220801storageApiStatusAuthenticationSettingsOAuth2
     [JsonPropertyName("scope")]
     public string? Scope { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.OAuth2AuthenticationSettingsContract_STATUS API OAuth2 Authentication settings details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageApiStatusAuthenticationSettingsOAuth2AuthenticationSettings
@@ -529,7 +570,9 @@ public partial class V1api20220801storageApiStatusAuthenticationSettingsOAuth2Au
     [JsonPropertyName("scope")]
     public string? Scope { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.OpenIdAuthenticationSettingsContract_STATUS API OAuth2 Authentication settings details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageApiStatusAuthenticationSettingsOpenid
@@ -546,7 +589,9 @@ public partial class V1api20220801storageApiStatusAuthenticationSettingsOpenid
     [JsonPropertyName("openidProviderId")]
     public string? OpenidProviderId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.OpenIdAuthenticationSettingsContract_STATUS API OAuth2 Authentication settings details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageApiStatusAuthenticationSettingsOpenidAuthenticationSettings
@@ -563,7 +608,9 @@ public partial class V1api20220801storageApiStatusAuthenticationSettingsOpenidAu
     [JsonPropertyName("openidProviderId")]
     public string? OpenidProviderId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.AuthenticationSettingsContract_STATUS API Authentication Settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageApiStatusAuthenticationSettings
@@ -588,7 +635,9 @@ public partial class V1api20220801storageApiStatusAuthenticationSettings
     [JsonPropertyName("openidAuthenticationSettings")]
     public IList<V1api20220801storageApiStatusAuthenticationSettingsOpenidAuthenticationSettings>? OpenidAuthenticationSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageApiStatusConditions
@@ -621,7 +670,9 @@ public partial class V1api20220801storageApiStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.ApiContactInformation_STATUS API contact information</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageApiStatusContact
@@ -642,7 +693,9 @@ public partial class V1api20220801storageApiStatusContact
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.ApiLicenseInformation_STATUS API license information</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageApiStatusLicense
@@ -659,7 +712,9 @@ public partial class V1api20220801storageApiStatusLicense
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.SubscriptionKeyParameterNamesContract_STATUS Subscription key parameter names details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageApiStatusSubscriptionKeyParameterNames
@@ -676,7 +731,9 @@ public partial class V1api20220801storageApiStatusSubscriptionKeyParameterNames
     [JsonPropertyName("query")]
     public string? Query { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.Api_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageApiStatus
@@ -785,7 +842,9 @@ public partial class V1api20220801storageApiStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.Api Generator information: - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/stable/2022-08-01/apimapis.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/apis/{apiId}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -815,3 +874,4 @@ public partial class V1api20220801storageApi : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1api20220801storageApiStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20240601.PrivateDnsZonesPTRRecord Generator information: - Generated from: /privatedns/resource-manager/Microsoft.Network/stable/2024-06-01/privatedns.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateZoneName}/PTR/{relativeRecordSetName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20240601storagePrivateDnsZonesPTRRecordList : IKuberne
     [JsonPropertyName("items")]
     public IList<V1api20240601storagePrivateDnsZonesPTRRecord> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240601.ARecord An A record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesPTRRecordSpecARecords
@@ -46,7 +49,9 @@ public partial class V1api20240601storagePrivateDnsZonesPTRRecordSpecARecords
     [JsonPropertyName("ipv4Address")]
     public string? Ipv4Address { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240601.AaaaRecord An AAAA record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesPTRRecordSpecAaaaRecords
@@ -59,7 +64,9 @@ public partial class V1api20240601storagePrivateDnsZonesPTRRecordSpecAaaaRecords
     [JsonPropertyName("ipv6Address")]
     public string? Ipv6Address { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240601.CnameRecord A CNAME record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesPTRRecordSpecCnameRecord
@@ -72,7 +79,9 @@ public partial class V1api20240601storagePrivateDnsZonesPTRRecordSpecCnameRecord
     [JsonPropertyName("cname")]
     public string? Cname { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240601.MxRecord An MX record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesPTRRecordSpecMxRecords
@@ -89,7 +98,9 @@ public partial class V1api20240601storagePrivateDnsZonesPTRRecordSpecMxRecords
     [JsonPropertyName("preference")]
     public int? Preference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesPTRRecordSpecOperatorSpecConfigMapExpressions
@@ -106,7 +117,9 @@ public partial class V1api20240601storagePrivateDnsZonesPTRRecordSpecOperatorSpe
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesPTRRecordSpecOperatorSpecSecretExpressions
@@ -123,7 +136,9 @@ public partial class V1api20240601storagePrivateDnsZonesPTRRecordSpecOperatorSpe
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240601.PrivateDnsZonesPTRRecordOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesPTRRecordSpecOperatorSpec
@@ -140,7 +155,9 @@ public partial class V1api20240601storagePrivateDnsZonesPTRRecordSpecOperatorSpe
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20240601storagePrivateDnsZonesPTRRecordSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a network.azure.com/PrivateDnsZone resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesPTRRecordSpecOwner
@@ -153,7 +170,9 @@ public partial class V1api20240601storagePrivateDnsZonesPTRRecordSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240601.PtrRecord A PTR record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesPTRRecordSpecPtrRecords
@@ -166,7 +185,9 @@ public partial class V1api20240601storagePrivateDnsZonesPTRRecordSpecPtrRecords
     [JsonPropertyName("ptrdname")]
     public string? Ptrdname { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240601.SoaRecord An SOA record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesPTRRecordSpecSoaRecord
@@ -203,7 +224,9 @@ public partial class V1api20240601storagePrivateDnsZonesPTRRecordSpecSoaRecord
     [JsonPropertyName("serialNumber")]
     public int? SerialNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240601.SrvRecord An SRV record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesPTRRecordSpecSrvRecords
@@ -228,7 +251,9 @@ public partial class V1api20240601storagePrivateDnsZonesPTRRecordSpecSrvRecords
     [JsonPropertyName("weight")]
     public int? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240601.TxtRecord A TXT record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesPTRRecordSpecTxtRecords
@@ -241,7 +266,9 @@ public partial class V1api20240601storagePrivateDnsZonesPTRRecordSpecTxtRecords
     [JsonPropertyName("value")]
     public IList<string>? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240601.PrivateDnsZonesPTRRecord_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesPTRRecordSpec
@@ -310,7 +337,9 @@ public partial class V1api20240601storagePrivateDnsZonesPTRRecordSpec
     [JsonPropertyName("txtRecords")]
     public IList<V1api20240601storagePrivateDnsZonesPTRRecordSpecTxtRecords>? TxtRecords { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240601.ARecord_STATUS An A record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesPTRRecordStatusARecords
@@ -323,7 +352,9 @@ public partial class V1api20240601storagePrivateDnsZonesPTRRecordStatusARecords
     [JsonPropertyName("ipv4Address")]
     public string? Ipv4Address { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240601.AaaaRecord_STATUS An AAAA record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesPTRRecordStatusAaaaRecords
@@ -336,7 +367,9 @@ public partial class V1api20240601storagePrivateDnsZonesPTRRecordStatusAaaaRecor
     [JsonPropertyName("ipv6Address")]
     public string? Ipv6Address { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240601.CnameRecord_STATUS A CNAME record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesPTRRecordStatusCnameRecord
@@ -349,7 +382,9 @@ public partial class V1api20240601storagePrivateDnsZonesPTRRecordStatusCnameReco
     [JsonPropertyName("cname")]
     public string? Cname { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesPTRRecordStatusConditions
@@ -382,7 +417,9 @@ public partial class V1api20240601storagePrivateDnsZonesPTRRecordStatusCondition
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240601.MxRecord_STATUS An MX record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesPTRRecordStatusMxRecords
@@ -399,7 +436,9 @@ public partial class V1api20240601storagePrivateDnsZonesPTRRecordStatusMxRecords
     [JsonPropertyName("preference")]
     public int? Preference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240601.PtrRecord_STATUS A PTR record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesPTRRecordStatusPtrRecords
@@ -412,7 +451,9 @@ public partial class V1api20240601storagePrivateDnsZonesPTRRecordStatusPtrRecord
     [JsonPropertyName("ptrdname")]
     public string? Ptrdname { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240601.SoaRecord_STATUS An SOA record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesPTRRecordStatusSoaRecord
@@ -449,7 +490,9 @@ public partial class V1api20240601storagePrivateDnsZonesPTRRecordStatusSoaRecord
     [JsonPropertyName("serialNumber")]
     public int? SerialNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240601.SrvRecord_STATUS An SRV record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesPTRRecordStatusSrvRecords
@@ -474,7 +517,9 @@ public partial class V1api20240601storagePrivateDnsZonesPTRRecordStatusSrvRecord
     [JsonPropertyName("weight")]
     public int? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240601.TxtRecord_STATUS A TXT record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesPTRRecordStatusTxtRecords
@@ -487,7 +532,9 @@ public partial class V1api20240601storagePrivateDnsZonesPTRRecordStatusTxtRecord
     [JsonPropertyName("value")]
     public IList<string>? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240601.PrivateDnsZonesPTRRecord_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesPTRRecordStatus
@@ -564,7 +611,9 @@ public partial class V1api20240601storagePrivateDnsZonesPTRRecordStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240601.PrivateDnsZonesPTRRecord Generator information: - Generated from: /privatedns/resource-manager/Microsoft.Network/stable/2024-06-01/privatedns.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateZoneName}/PTR/{relativeRecordSetName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -594,3 +643,4 @@ public partial class V1api20240601storagePrivateDnsZonesPTRRecord : IKubernetesO
     [JsonPropertyName("status")]
     public V1api20240601storagePrivateDnsZonesPTRRecordStatus? Status { get; set; }
 }
+#nullable disable

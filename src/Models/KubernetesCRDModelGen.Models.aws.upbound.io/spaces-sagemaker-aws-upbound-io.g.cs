@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sagemaker.aws.upbound.io;
+#nullable enable
 /// <summary>Space is the Schema for the Spaces API. Provides a SageMaker AI Space resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SpaceList : IKubernetesObject<V1ListMeta>, IItems<V1
     [JsonPropertyName("items")]
     public IList<V1beta1Space> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderDomainIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SpaceSpecForProviderDomainIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Domain in sagemaker to populate domainId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderDomainIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1SpaceSpecForProviderDomainIdRef
     [JsonPropertyName("policy")]
     public V1beta1SpaceSpecForProviderDomainIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderDomainIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1SpaceSpecForProviderDomainIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Domain in sagemaker to populate domainId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderDomainIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1SpaceSpecForProviderDomainIdSelector
     [JsonPropertyName("policy")]
     public V1beta1SpaceSpecForProviderDomainIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderOwnershipSettings
@@ -98,7 +109,9 @@ public partial class V1beta1SpaceSpecForProviderOwnershipSettings
     [JsonPropertyName("ownerUserProfileName")]
     public string? OwnerUserProfileName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettings
@@ -107,7 +120,9 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsCodeEditorAppSettin
     [JsonPropertyName("idleTimeoutInMinutes")]
     public double? IdleTimeoutInMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsCodeEditorAppSettingsAppLifecycleManagement
@@ -116,7 +131,9 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsCodeEditorAppSettin
     [JsonPropertyName("idleSettings")]
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettings>? IdleSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsCodeEditorAppSettingsDefaultResourceSpec
@@ -141,7 +158,9 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsCodeEditorAppSettin
     [JsonPropertyName("sagemakerImageVersionArn")]
     public string? SagemakerImageVersionArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsCodeEditorAppSettings
@@ -154,7 +173,9 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsCodeEditorAppSettin
     [JsonPropertyName("defaultResourceSpec")]
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsCodeEditorAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsCustomFileSystemEfsFileSystem
@@ -163,7 +184,9 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsCustomFileSystemEfs
     [JsonPropertyName("fileSystemId")]
     public string? FileSystemId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsCustomFileSystem
@@ -172,7 +195,9 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsCustomFileSystem
     [JsonPropertyName("efsFileSystem")]
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsCustomFileSystemEfsFileSystem>? EfsFileSystem { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettings
@@ -181,7 +206,9 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettin
     [JsonPropertyName("idleTimeoutInMinutes")]
     public double? IdleTimeoutInMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettingsAppLifecycleManagement
@@ -190,7 +217,9 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettin
     [JsonPropertyName("idleSettings")]
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettings>? IdleSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettingsCodeRepository
@@ -199,7 +228,9 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettin
     [JsonPropertyName("repositoryUrl")]
     public string? RepositoryUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettingsDefaultResourceSpec
@@ -224,7 +255,9 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettin
     [JsonPropertyName("sagemakerImageVersionArn")]
     public string? SagemakerImageVersionArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettings
@@ -241,7 +274,9 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettin
     [JsonPropertyName("defaultResourceSpec")]
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterServerAppSettingsCodeRepository
@@ -250,7 +285,9 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterServerAppSet
     [JsonPropertyName("repositoryUrl")]
     public string? RepositoryUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterServerAppSettingsDefaultResourceSpec
@@ -275,7 +312,9 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterServerAppSet
     [JsonPropertyName("sagemakerImageVersionArn")]
     public string? SagemakerImageVersionArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterServerAppSettings
@@ -292,7 +331,9 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterServerAppSet
     [JsonPropertyName("lifecycleConfigArns")]
     public IList<string>? LifecycleConfigArns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsKernelGatewayAppSettingsCustomImage
@@ -309,7 +350,9 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsKernelGatewayAppSet
     [JsonPropertyName("imageVersionNumber")]
     public double? ImageVersionNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpec
@@ -334,7 +377,9 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsKernelGatewayAppSet
     [JsonPropertyName("sagemakerImageVersionArn")]
     public string? SagemakerImageVersionArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsKernelGatewayAppSettings
@@ -351,7 +396,9 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsKernelGatewayAppSet
     [JsonPropertyName("lifecycleConfigArns")]
     public IList<string>? LifecycleConfigArns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsSpaceStorageSettingsEbsStorageSettings
@@ -360,7 +407,9 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsSpaceStorageSetting
     [JsonPropertyName("ebsVolumeSizeInGb")]
     public double? EbsVolumeSizeInGb { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsSpaceStorageSettings
@@ -369,7 +418,9 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsSpaceStorageSetting
     [JsonPropertyName("ebsStorageSettings")]
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsSpaceStorageSettingsEbsStorageSettings>? EbsStorageSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSettings
@@ -402,7 +453,9 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettings
     [JsonPropertyName("spaceStorageSettings")]
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsSpaceStorageSettings>? SpaceStorageSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSharingSettings
@@ -411,7 +464,9 @@ public partial class V1beta1SpaceSpecForProviderSpaceSharingSettings
     [JsonPropertyName("sharingType")]
     public string? SharingType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProvider
@@ -456,7 +511,9 @@ public partial class V1beta1SpaceSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderDomainIdRefPolicy
@@ -469,7 +526,9 @@ public partial class V1beta1SpaceSpecInitProviderDomainIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Domain in sagemaker to populate domainId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderDomainIdRef
@@ -482,7 +541,9 @@ public partial class V1beta1SpaceSpecInitProviderDomainIdRef
     [JsonPropertyName("policy")]
     public V1beta1SpaceSpecInitProviderDomainIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderDomainIdSelectorPolicy
@@ -495,7 +556,9 @@ public partial class V1beta1SpaceSpecInitProviderDomainIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Domain in sagemaker to populate domainId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderDomainIdSelector
@@ -512,7 +575,9 @@ public partial class V1beta1SpaceSpecInitProviderDomainIdSelector
     [JsonPropertyName("policy")]
     public V1beta1SpaceSpecInitProviderDomainIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderOwnershipSettings
@@ -521,7 +586,9 @@ public partial class V1beta1SpaceSpecInitProviderOwnershipSettings
     [JsonPropertyName("ownerUserProfileName")]
     public string? OwnerUserProfileName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettings
@@ -530,7 +597,9 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCodeEditorAppSetti
     [JsonPropertyName("idleTimeoutInMinutes")]
     public double? IdleTimeoutInMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCodeEditorAppSettingsAppLifecycleManagement
@@ -539,7 +608,9 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCodeEditorAppSetti
     [JsonPropertyName("idleSettings")]
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettings>? IdleSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCodeEditorAppSettingsDefaultResourceSpec
@@ -564,7 +635,9 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCodeEditorAppSetti
     [JsonPropertyName("sagemakerImageVersionArn")]
     public string? SagemakerImageVersionArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCodeEditorAppSettings
@@ -577,7 +650,9 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCodeEditorAppSetti
     [JsonPropertyName("defaultResourceSpec")]
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsCodeEditorAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCustomFileSystemEfsFileSystem
@@ -586,7 +661,9 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCustomFileSystemEf
     [JsonPropertyName("fileSystemId")]
     public string? FileSystemId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCustomFileSystem
@@ -595,7 +672,9 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCustomFileSystem
     [JsonPropertyName("efsFileSystem")]
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsCustomFileSystemEfsFileSystem>? EfsFileSystem { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettings
@@ -604,7 +683,9 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSetti
     [JsonPropertyName("idleTimeoutInMinutes")]
     public double? IdleTimeoutInMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSettingsAppLifecycleManagement
@@ -613,7 +694,9 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSetti
     [JsonPropertyName("idleSettings")]
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettings>? IdleSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSettingsCodeRepository
@@ -622,7 +705,9 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSetti
     [JsonPropertyName("repositoryUrl")]
     public string? RepositoryUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSettingsDefaultResourceSpec
@@ -647,7 +732,9 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSetti
     [JsonPropertyName("sagemakerImageVersionArn")]
     public string? SagemakerImageVersionArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSettings
@@ -664,7 +751,9 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSetti
     [JsonPropertyName("defaultResourceSpec")]
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterServerAppSettingsCodeRepository
@@ -673,7 +762,9 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterServerAppSe
     [JsonPropertyName("repositoryUrl")]
     public string? RepositoryUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterServerAppSettingsDefaultResourceSpec
@@ -698,7 +789,9 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterServerAppSe
     [JsonPropertyName("sagemakerImageVersionArn")]
     public string? SagemakerImageVersionArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterServerAppSettings
@@ -715,7 +808,9 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterServerAppSe
     [JsonPropertyName("lifecycleConfigArns")]
     public IList<string>? LifecycleConfigArns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsKernelGatewayAppSettingsCustomImage
@@ -732,7 +827,9 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsKernelGatewayAppSe
     [JsonPropertyName("imageVersionNumber")]
     public double? ImageVersionNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpec
@@ -757,7 +854,9 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsKernelGatewayAppSe
     [JsonPropertyName("sagemakerImageVersionArn")]
     public string? SagemakerImageVersionArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsKernelGatewayAppSettings
@@ -774,7 +873,9 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsKernelGatewayAppSe
     [JsonPropertyName("lifecycleConfigArns")]
     public IList<string>? LifecycleConfigArns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsSpaceStorageSettingsEbsStorageSettings
@@ -783,7 +884,9 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsSpaceStorageSettin
     [JsonPropertyName("ebsVolumeSizeInGb")]
     public double? EbsVolumeSizeInGb { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsSpaceStorageSettings
@@ -792,7 +895,9 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsSpaceStorageSettin
     [JsonPropertyName("ebsStorageSettings")]
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsSpaceStorageSettingsEbsStorageSettings>? EbsStorageSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSettings
@@ -825,7 +930,9 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettings
     [JsonPropertyName("spaceStorageSettings")]
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsSpaceStorageSettings>? SpaceStorageSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSharingSettings
@@ -834,7 +941,9 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSharingSettings
     [JsonPropertyName("sharingType")]
     public string? SharingType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProvider
@@ -875,7 +984,9 @@ public partial class V1beta1SpaceSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecProviderConfigRefPolicy
@@ -888,7 +999,9 @@ public partial class V1beta1SpaceSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecProviderConfigRef
@@ -901,7 +1014,9 @@ public partial class V1beta1SpaceSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1SpaceSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecWriteConnectionSecretToRef
@@ -914,7 +1029,9 @@ public partial class V1beta1SpaceSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpaceSpec defines the desired state of Space</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpec
@@ -943,7 +1060,9 @@ public partial class V1beta1SpaceSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SpaceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderOwnershipSettings
@@ -952,7 +1071,9 @@ public partial class V1beta1SpaceStatusAtProviderOwnershipSettings
     [JsonPropertyName("ownerUserProfileName")]
     public string? OwnerUserProfileName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettings
@@ -961,7 +1082,9 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCodeEditorAppSetti
     [JsonPropertyName("idleTimeoutInMinutes")]
     public double? IdleTimeoutInMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCodeEditorAppSettingsAppLifecycleManagement
@@ -970,7 +1093,9 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCodeEditorAppSetti
     [JsonPropertyName("idleSettings")]
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettings>? IdleSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCodeEditorAppSettingsDefaultResourceSpec
@@ -995,7 +1120,9 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCodeEditorAppSetti
     [JsonPropertyName("sagemakerImageVersionArn")]
     public string? SagemakerImageVersionArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCodeEditorAppSettings
@@ -1008,7 +1135,9 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCodeEditorAppSetti
     [JsonPropertyName("defaultResourceSpec")]
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsCodeEditorAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCustomFileSystemEfsFileSystem
@@ -1017,7 +1146,9 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCustomFileSystemEf
     [JsonPropertyName("fileSystemId")]
     public string? FileSystemId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCustomFileSystem
@@ -1026,7 +1157,9 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCustomFileSystem
     [JsonPropertyName("efsFileSystem")]
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsCustomFileSystemEfsFileSystem>? EfsFileSystem { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettings
@@ -1035,7 +1168,9 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSetti
     [JsonPropertyName("idleTimeoutInMinutes")]
     public double? IdleTimeoutInMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSettingsAppLifecycleManagement
@@ -1044,7 +1179,9 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSetti
     [JsonPropertyName("idleSettings")]
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettings>? IdleSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSettingsCodeRepository
@@ -1053,7 +1190,9 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSetti
     [JsonPropertyName("repositoryUrl")]
     public string? RepositoryUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSettingsDefaultResourceSpec
@@ -1078,7 +1217,9 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSetti
     [JsonPropertyName("sagemakerImageVersionArn")]
     public string? SagemakerImageVersionArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSettings
@@ -1095,7 +1236,9 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSetti
     [JsonPropertyName("defaultResourceSpec")]
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterServerAppSettingsCodeRepository
@@ -1104,7 +1247,9 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterServerAppSe
     [JsonPropertyName("repositoryUrl")]
     public string? RepositoryUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterServerAppSettingsDefaultResourceSpec
@@ -1129,7 +1274,9 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterServerAppSe
     [JsonPropertyName("sagemakerImageVersionArn")]
     public string? SagemakerImageVersionArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterServerAppSettings
@@ -1146,7 +1293,9 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterServerAppSe
     [JsonPropertyName("lifecycleConfigArns")]
     public IList<string>? LifecycleConfigArns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsKernelGatewayAppSettingsCustomImage
@@ -1163,7 +1312,9 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsKernelGatewayAppSe
     [JsonPropertyName("imageVersionNumber")]
     public double? ImageVersionNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpec
@@ -1188,7 +1339,9 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsKernelGatewayAppSe
     [JsonPropertyName("sagemakerImageVersionArn")]
     public string? SagemakerImageVersionArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsKernelGatewayAppSettings
@@ -1205,7 +1358,9 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsKernelGatewayAppSe
     [JsonPropertyName("lifecycleConfigArns")]
     public IList<string>? LifecycleConfigArns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsSpaceStorageSettingsEbsStorageSettings
@@ -1214,7 +1369,9 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsSpaceStorageSettin
     [JsonPropertyName("ebsVolumeSizeInGb")]
     public double? EbsVolumeSizeInGb { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsSpaceStorageSettings
@@ -1223,7 +1380,9 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsSpaceStorageSettin
     [JsonPropertyName("ebsStorageSettings")]
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsSpaceStorageSettingsEbsStorageSettings>? EbsStorageSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSettings
@@ -1256,7 +1415,9 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettings
     [JsonPropertyName("spaceStorageSettings")]
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsSpaceStorageSettings>? SpaceStorageSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSharingSettings
@@ -1265,7 +1426,9 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSharingSettings
     [JsonPropertyName("sharingType")]
     public string? SharingType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProvider
@@ -1322,7 +1485,9 @@ public partial class V1beta1SpaceStatusAtProvider
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusConditions
@@ -1351,7 +1516,9 @@ public partial class V1beta1SpaceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpaceStatus defines the observed state of Space.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatus
@@ -1368,7 +1535,9 @@ public partial class V1beta1SpaceStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Space is the Schema for the Spaces API. Provides a SageMaker AI Space resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1398,3 +1567,4 @@ public partial class V1beta1Space : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     [JsonPropertyName("status")]
     public V1beta1SpaceStatus? Status { get; set; }
 }
+#nullable disable

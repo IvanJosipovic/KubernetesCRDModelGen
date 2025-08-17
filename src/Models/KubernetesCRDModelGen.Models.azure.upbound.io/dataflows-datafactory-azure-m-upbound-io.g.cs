@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafactory.azure.m.upbound.io;
+#nullable enable
 /// <summary>DataFlow is the Schema for the DataFlows API. Manages a Data Flow inside an Azure Data Factory.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DataFlowList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1beta1DataFlow> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecForProviderDataFactoryIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1DataFlowSpecForProviderDataFactoryIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Factory in datafactory to populate dataFactoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecForProviderDataFactoryIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1DataFlowSpecForProviderDataFactoryIdRef
     [JsonPropertyName("policy")]
     public V1beta1DataFlowSpecForProviderDataFactoryIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecForProviderDataFactoryIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1DataFlowSpecForProviderDataFactoryIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Factory in datafactory to populate dataFactoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecForProviderDataFactoryIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1DataFlowSpecForProviderDataFactoryIdSelector
     [JsonPropertyName("policy")]
     public V1beta1DataFlowSpecForProviderDataFactoryIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecForProviderSinkDatasetNameRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1DataFlowSpecForProviderSinkDatasetNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DataSetJSON in datafactory to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecForProviderSinkDatasetNameRef
@@ -127,7 +140,9 @@ public partial class V1beta1DataFlowSpecForProviderSinkDatasetNameRef
     [JsonPropertyName("policy")]
     public V1beta1DataFlowSpecForProviderSinkDatasetNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecForProviderSinkDatasetNameSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1DataFlowSpecForProviderSinkDatasetNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DataSetJSON in datafactory to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecForProviderSinkDatasetNameSelector
@@ -161,7 +178,9 @@ public partial class V1beta1DataFlowSpecForProviderSinkDatasetNameSelector
     [JsonPropertyName("policy")]
     public V1beta1DataFlowSpecForProviderSinkDatasetNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A dataset block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecForProviderSinkDataset
@@ -182,7 +201,9 @@ public partial class V1beta1DataFlowSpecForProviderSinkDataset
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A flowlet block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecForProviderSinkFlowlet
@@ -199,7 +220,9 @@ public partial class V1beta1DataFlowSpecForProviderSinkFlowlet
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A linked_service block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecForProviderSinkLinkedService
@@ -212,7 +235,9 @@ public partial class V1beta1DataFlowSpecForProviderSinkLinkedService
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A rejected_linked_service block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecForProviderSinkRejectedLinkedService
@@ -225,7 +250,9 @@ public partial class V1beta1DataFlowSpecForProviderSinkRejectedLinkedService
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A schema_linked_service block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecForProviderSinkSchemaLinkedService
@@ -238,7 +265,9 @@ public partial class V1beta1DataFlowSpecForProviderSinkSchemaLinkedService
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecForProviderSink
@@ -271,7 +300,9 @@ public partial class V1beta1DataFlowSpecForProviderSink
     [JsonPropertyName("schemaLinkedService")]
     public V1beta1DataFlowSpecForProviderSinkSchemaLinkedService? SchemaLinkedService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecForProviderSourceDatasetNameRefPolicy
@@ -284,7 +315,9 @@ public partial class V1beta1DataFlowSpecForProviderSourceDatasetNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DataSetJSON in datafactory to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecForProviderSourceDatasetNameRef
@@ -301,7 +334,9 @@ public partial class V1beta1DataFlowSpecForProviderSourceDatasetNameRef
     [JsonPropertyName("policy")]
     public V1beta1DataFlowSpecForProviderSourceDatasetNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecForProviderSourceDatasetNameSelectorPolicy
@@ -314,7 +349,9 @@ public partial class V1beta1DataFlowSpecForProviderSourceDatasetNameSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DataSetJSON in datafactory to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecForProviderSourceDatasetNameSelector
@@ -335,7 +372,9 @@ public partial class V1beta1DataFlowSpecForProviderSourceDatasetNameSelector
     [JsonPropertyName("policy")]
     public V1beta1DataFlowSpecForProviderSourceDatasetNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A dataset block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecForProviderSourceDataset
@@ -356,7 +395,9 @@ public partial class V1beta1DataFlowSpecForProviderSourceDataset
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A flowlet block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecForProviderSourceFlowlet
@@ -373,7 +414,9 @@ public partial class V1beta1DataFlowSpecForProviderSourceFlowlet
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A linked_service block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecForProviderSourceLinkedService
@@ -386,7 +429,9 @@ public partial class V1beta1DataFlowSpecForProviderSourceLinkedService
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A rejected_linked_service block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecForProviderSourceRejectedLinkedService
@@ -399,7 +444,9 @@ public partial class V1beta1DataFlowSpecForProviderSourceRejectedLinkedService
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A schema_linked_service block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecForProviderSourceSchemaLinkedService
@@ -412,7 +459,9 @@ public partial class V1beta1DataFlowSpecForProviderSourceSchemaLinkedService
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecForProviderSource
@@ -445,7 +494,9 @@ public partial class V1beta1DataFlowSpecForProviderSource
     [JsonPropertyName("schemaLinkedService")]
     public V1beta1DataFlowSpecForProviderSourceSchemaLinkedService? SchemaLinkedService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A dataset block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecForProviderTransformationDataset
@@ -458,7 +509,9 @@ public partial class V1beta1DataFlowSpecForProviderTransformationDataset
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A flowlet block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecForProviderTransformationFlowlet
@@ -475,7 +528,9 @@ public partial class V1beta1DataFlowSpecForProviderTransformationFlowlet
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A linked_service block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecForProviderTransformationLinkedService
@@ -488,7 +543,9 @@ public partial class V1beta1DataFlowSpecForProviderTransformationLinkedService
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecForProviderTransformation
@@ -513,7 +570,9 @@ public partial class V1beta1DataFlowSpecForProviderTransformation
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecForProvider
@@ -562,7 +621,9 @@ public partial class V1beta1DataFlowSpecForProvider
     [JsonPropertyName("transformation")]
     public IList<V1beta1DataFlowSpecForProviderTransformation>? Transformation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecInitProviderSinkDatasetNameRefPolicy
@@ -575,7 +636,9 @@ public partial class V1beta1DataFlowSpecInitProviderSinkDatasetNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DataSetJSON in datafactory to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecInitProviderSinkDatasetNameRef
@@ -592,7 +655,9 @@ public partial class V1beta1DataFlowSpecInitProviderSinkDatasetNameRef
     [JsonPropertyName("policy")]
     public V1beta1DataFlowSpecInitProviderSinkDatasetNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecInitProviderSinkDatasetNameSelectorPolicy
@@ -605,7 +670,9 @@ public partial class V1beta1DataFlowSpecInitProviderSinkDatasetNameSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DataSetJSON in datafactory to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecInitProviderSinkDatasetNameSelector
@@ -626,7 +693,9 @@ public partial class V1beta1DataFlowSpecInitProviderSinkDatasetNameSelector
     [JsonPropertyName("policy")]
     public V1beta1DataFlowSpecInitProviderSinkDatasetNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A dataset block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecInitProviderSinkDataset
@@ -647,7 +716,9 @@ public partial class V1beta1DataFlowSpecInitProviderSinkDataset
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A flowlet block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecInitProviderSinkFlowlet
@@ -664,7 +735,9 @@ public partial class V1beta1DataFlowSpecInitProviderSinkFlowlet
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A linked_service block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecInitProviderSinkLinkedService
@@ -677,7 +750,9 @@ public partial class V1beta1DataFlowSpecInitProviderSinkLinkedService
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A rejected_linked_service block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecInitProviderSinkRejectedLinkedService
@@ -690,7 +765,9 @@ public partial class V1beta1DataFlowSpecInitProviderSinkRejectedLinkedService
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A schema_linked_service block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecInitProviderSinkSchemaLinkedService
@@ -703,7 +780,9 @@ public partial class V1beta1DataFlowSpecInitProviderSinkSchemaLinkedService
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecInitProviderSink
@@ -736,7 +815,9 @@ public partial class V1beta1DataFlowSpecInitProviderSink
     [JsonPropertyName("schemaLinkedService")]
     public V1beta1DataFlowSpecInitProviderSinkSchemaLinkedService? SchemaLinkedService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecInitProviderSourceDatasetNameRefPolicy
@@ -749,7 +830,9 @@ public partial class V1beta1DataFlowSpecInitProviderSourceDatasetNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DataSetJSON in datafactory to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecInitProviderSourceDatasetNameRef
@@ -766,7 +849,9 @@ public partial class V1beta1DataFlowSpecInitProviderSourceDatasetNameRef
     [JsonPropertyName("policy")]
     public V1beta1DataFlowSpecInitProviderSourceDatasetNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecInitProviderSourceDatasetNameSelectorPolicy
@@ -779,7 +864,9 @@ public partial class V1beta1DataFlowSpecInitProviderSourceDatasetNameSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DataSetJSON in datafactory to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecInitProviderSourceDatasetNameSelector
@@ -800,7 +887,9 @@ public partial class V1beta1DataFlowSpecInitProviderSourceDatasetNameSelector
     [JsonPropertyName("policy")]
     public V1beta1DataFlowSpecInitProviderSourceDatasetNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A dataset block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecInitProviderSourceDataset
@@ -821,7 +910,9 @@ public partial class V1beta1DataFlowSpecInitProviderSourceDataset
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A flowlet block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecInitProviderSourceFlowlet
@@ -838,7 +929,9 @@ public partial class V1beta1DataFlowSpecInitProviderSourceFlowlet
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A linked_service block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecInitProviderSourceLinkedService
@@ -851,7 +944,9 @@ public partial class V1beta1DataFlowSpecInitProviderSourceLinkedService
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A rejected_linked_service block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecInitProviderSourceRejectedLinkedService
@@ -864,7 +959,9 @@ public partial class V1beta1DataFlowSpecInitProviderSourceRejectedLinkedService
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A schema_linked_service block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecInitProviderSourceSchemaLinkedService
@@ -877,7 +974,9 @@ public partial class V1beta1DataFlowSpecInitProviderSourceSchemaLinkedService
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecInitProviderSource
@@ -910,7 +1009,9 @@ public partial class V1beta1DataFlowSpecInitProviderSource
     [JsonPropertyName("schemaLinkedService")]
     public V1beta1DataFlowSpecInitProviderSourceSchemaLinkedService? SchemaLinkedService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A dataset block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecInitProviderTransformationDataset
@@ -923,7 +1024,9 @@ public partial class V1beta1DataFlowSpecInitProviderTransformationDataset
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A flowlet block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecInitProviderTransformationFlowlet
@@ -940,7 +1043,9 @@ public partial class V1beta1DataFlowSpecInitProviderTransformationFlowlet
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A linked_service block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecInitProviderTransformationLinkedService
@@ -953,7 +1058,9 @@ public partial class V1beta1DataFlowSpecInitProviderTransformationLinkedService
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecInitProviderTransformation
@@ -978,7 +1085,9 @@ public partial class V1beta1DataFlowSpecInitProviderTransformation
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecInitProvider
@@ -1015,7 +1124,9 @@ public partial class V1beta1DataFlowSpecInitProvider
     [JsonPropertyName("transformation")]
     public IList<V1beta1DataFlowSpecInitProviderTransformation>? Transformation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecProviderConfigRef
@@ -1028,7 +1139,9 @@ public partial class V1beta1DataFlowSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpecWriteConnectionSecretToRef
@@ -1037,7 +1150,9 @@ public partial class V1beta1DataFlowSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataFlowSpec defines the desired state of DataFlow</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowSpec
@@ -1062,7 +1177,9 @@ public partial class V1beta1DataFlowSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DataFlowSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A dataset block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowStatusAtProviderSinkDataset
@@ -1075,7 +1192,9 @@ public partial class V1beta1DataFlowStatusAtProviderSinkDataset
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A flowlet block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowStatusAtProviderSinkFlowlet
@@ -1092,7 +1211,9 @@ public partial class V1beta1DataFlowStatusAtProviderSinkFlowlet
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A linked_service block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowStatusAtProviderSinkLinkedService
@@ -1105,7 +1226,9 @@ public partial class V1beta1DataFlowStatusAtProviderSinkLinkedService
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A rejected_linked_service block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowStatusAtProviderSinkRejectedLinkedService
@@ -1118,7 +1241,9 @@ public partial class V1beta1DataFlowStatusAtProviderSinkRejectedLinkedService
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A schema_linked_service block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowStatusAtProviderSinkSchemaLinkedService
@@ -1131,7 +1256,9 @@ public partial class V1beta1DataFlowStatusAtProviderSinkSchemaLinkedService
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowStatusAtProviderSink
@@ -1164,7 +1291,9 @@ public partial class V1beta1DataFlowStatusAtProviderSink
     [JsonPropertyName("schemaLinkedService")]
     public V1beta1DataFlowStatusAtProviderSinkSchemaLinkedService? SchemaLinkedService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A dataset block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowStatusAtProviderSourceDataset
@@ -1177,7 +1306,9 @@ public partial class V1beta1DataFlowStatusAtProviderSourceDataset
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A flowlet block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowStatusAtProviderSourceFlowlet
@@ -1194,7 +1325,9 @@ public partial class V1beta1DataFlowStatusAtProviderSourceFlowlet
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A linked_service block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowStatusAtProviderSourceLinkedService
@@ -1207,7 +1340,9 @@ public partial class V1beta1DataFlowStatusAtProviderSourceLinkedService
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A rejected_linked_service block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowStatusAtProviderSourceRejectedLinkedService
@@ -1220,7 +1355,9 @@ public partial class V1beta1DataFlowStatusAtProviderSourceRejectedLinkedService
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A schema_linked_service block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowStatusAtProviderSourceSchemaLinkedService
@@ -1233,7 +1370,9 @@ public partial class V1beta1DataFlowStatusAtProviderSourceSchemaLinkedService
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowStatusAtProviderSource
@@ -1266,7 +1405,9 @@ public partial class V1beta1DataFlowStatusAtProviderSource
     [JsonPropertyName("schemaLinkedService")]
     public V1beta1DataFlowStatusAtProviderSourceSchemaLinkedService? SchemaLinkedService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A dataset block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowStatusAtProviderTransformationDataset
@@ -1279,7 +1420,9 @@ public partial class V1beta1DataFlowStatusAtProviderTransformationDataset
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A flowlet block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowStatusAtProviderTransformationFlowlet
@@ -1296,7 +1439,9 @@ public partial class V1beta1DataFlowStatusAtProviderTransformationFlowlet
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A linked_service block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowStatusAtProviderTransformationLinkedService
@@ -1309,7 +1454,9 @@ public partial class V1beta1DataFlowStatusAtProviderTransformationLinkedService
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowStatusAtProviderTransformation
@@ -1334,7 +1481,9 @@ public partial class V1beta1DataFlowStatusAtProviderTransformation
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowStatusAtProvider
@@ -1379,7 +1528,9 @@ public partial class V1beta1DataFlowStatusAtProvider
     [JsonPropertyName("transformation")]
     public IList<V1beta1DataFlowStatusAtProviderTransformation>? Transformation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowStatusConditions
@@ -1408,7 +1559,9 @@ public partial class V1beta1DataFlowStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataFlowStatus defines the observed state of DataFlow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataFlowStatus
@@ -1425,7 +1578,9 @@ public partial class V1beta1DataFlowStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataFlow is the Schema for the DataFlows API. Manages a Data Flow inside an Azure Data Factory.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1455,3 +1610,4 @@ public partial class V1beta1DataFlow : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1beta1DataFlowStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigtable.gcp.m.upbound.io;
+#nullable enable
 /// <summary>AppProfile is the Schema for the AppProfiles API. App profile is a configuration object describing how Cloud Bigtable should treat traffic from a particular end user application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AppProfileList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1beta1AppProfile> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies that this app profile is intended for read-only usage via the Data Boost feature. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppProfileSpecForProviderDataBoostIsolationReadOnly
@@ -42,7 +45,9 @@ public partial class V1beta1AppProfileSpecForProviderDataBoostIsolationReadOnly
     [JsonPropertyName("computeBillingOwner")]
     public string? ComputeBillingOwner { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppProfileSpecForProviderInstanceRefPolicy
@@ -55,7 +60,9 @@ public partial class V1beta1AppProfileSpecForProviderInstanceRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in bigtable to populate instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppProfileSpecForProviderInstanceRef
@@ -72,7 +79,9 @@ public partial class V1beta1AppProfileSpecForProviderInstanceRef
     [JsonPropertyName("policy")]
     public V1beta1AppProfileSpecForProviderInstanceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppProfileSpecForProviderInstanceSelectorPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1AppProfileSpecForProviderInstanceSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in bigtable to populate instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppProfileSpecForProviderInstanceSelector
@@ -106,7 +117,9 @@ public partial class V1beta1AppProfileSpecForProviderInstanceSelector
     [JsonPropertyName("policy")]
     public V1beta1AppProfileSpecForProviderInstanceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Use a single-cluster routing policy. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppProfileSpecForProviderSingleClusterRouting
@@ -119,7 +132,9 @@ public partial class V1beta1AppProfileSpecForProviderSingleClusterRouting
     [JsonPropertyName("clusterId")]
     public string? ClusterId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The standard options used for isolating this app profile's traffic from other use cases. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppProfileSpecForProviderStandardIsolation
@@ -128,7 +143,9 @@ public partial class V1beta1AppProfileSpecForProviderStandardIsolation
     [JsonPropertyName("priority")]
     public string? Priority { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppProfileSpecForProvider
@@ -181,7 +198,9 @@ public partial class V1beta1AppProfileSpecForProvider
     [JsonPropertyName("standardIsolation")]
     public V1beta1AppProfileSpecForProviderStandardIsolation? StandardIsolation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies that this app profile is intended for read-only usage via the Data Boost feature. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppProfileSpecInitProviderDataBoostIsolationReadOnly
@@ -190,7 +209,9 @@ public partial class V1beta1AppProfileSpecInitProviderDataBoostIsolationReadOnly
     [JsonPropertyName("computeBillingOwner")]
     public string? ComputeBillingOwner { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Use a single-cluster routing policy. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppProfileSpecInitProviderSingleClusterRouting
@@ -203,7 +224,9 @@ public partial class V1beta1AppProfileSpecInitProviderSingleClusterRouting
     [JsonPropertyName("clusterId")]
     public string? ClusterId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The standard options used for isolating this app profile's traffic from other use cases. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppProfileSpecInitProviderStandardIsolation
@@ -212,7 +235,9 @@ public partial class V1beta1AppProfileSpecInitProviderStandardIsolation
     [JsonPropertyName("priority")]
     public string? Priority { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppProfileSpecInitProvider
@@ -253,7 +278,9 @@ public partial class V1beta1AppProfileSpecInitProvider
     [JsonPropertyName("standardIsolation")]
     public V1beta1AppProfileSpecInitProviderStandardIsolation? StandardIsolation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppProfileSpecProviderConfigRef
@@ -266,7 +293,9 @@ public partial class V1beta1AppProfileSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppProfileSpecWriteConnectionSecretToRef
@@ -275,7 +304,9 @@ public partial class V1beta1AppProfileSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppProfileSpec defines the desired state of AppProfile</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppProfileSpec
@@ -300,7 +331,9 @@ public partial class V1beta1AppProfileSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AppProfileSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies that this app profile is intended for read-only usage via the Data Boost feature. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppProfileStatusAtProviderDataBoostIsolationReadOnly
@@ -309,7 +342,9 @@ public partial class V1beta1AppProfileStatusAtProviderDataBoostIsolationReadOnly
     [JsonPropertyName("computeBillingOwner")]
     public string? ComputeBillingOwner { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Use a single-cluster routing policy. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppProfileStatusAtProviderSingleClusterRouting
@@ -322,7 +357,9 @@ public partial class V1beta1AppProfileStatusAtProviderSingleClusterRouting
     [JsonPropertyName("clusterId")]
     public string? ClusterId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The standard options used for isolating this app profile's traffic from other use cases. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppProfileStatusAtProviderStandardIsolation
@@ -331,7 +368,9 @@ public partial class V1beta1AppProfileStatusAtProviderStandardIsolation
     [JsonPropertyName("priority")]
     public string? Priority { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppProfileStatusAtProvider
@@ -384,7 +423,9 @@ public partial class V1beta1AppProfileStatusAtProvider
     [JsonPropertyName("standardIsolation")]
     public V1beta1AppProfileStatusAtProviderStandardIsolation? StandardIsolation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppProfileStatusConditions
@@ -413,7 +454,9 @@ public partial class V1beta1AppProfileStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppProfileStatus defines the observed state of AppProfile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppProfileStatus
@@ -430,7 +473,9 @@ public partial class V1beta1AppProfileStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppProfile is the Schema for the AppProfiles API. App profile is a configuration object describing how Cloud Bigtable should treat traffic from a particular end user application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -460,3 +505,4 @@ public partial class V1beta1AppProfile : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1AppProfileStatus? Status { get; set; }
 }
+#nullable disable

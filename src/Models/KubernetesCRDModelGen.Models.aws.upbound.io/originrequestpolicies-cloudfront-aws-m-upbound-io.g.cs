@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudfront.aws.m.upbound.io;
+#nullable enable
 /// <summary>OriginRequestPolicy is the Schema for the OriginRequestPolicys API. Determines the values that CloudFront includes in requests that it sends to the origin.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1OriginRequestPolicyList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1OriginRequestPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OriginRequestPolicySpecForProviderCookiesConfigCookies
@@ -42,7 +45,9 @@ public partial class V1beta1OriginRequestPolicySpecForProviderCookiesConfigCooki
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OriginRequestPolicySpecForProviderCookiesConfig
@@ -55,7 +60,9 @@ public partial class V1beta1OriginRequestPolicySpecForProviderCookiesConfig
     [JsonPropertyName("cookies")]
     public V1beta1OriginRequestPolicySpecForProviderCookiesConfigCookies? Cookies { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OriginRequestPolicySpecForProviderHeadersConfigHeaders
@@ -64,7 +71,9 @@ public partial class V1beta1OriginRequestPolicySpecForProviderHeadersConfigHeade
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that determines whether any HTTP headers (and if so, which headers) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OriginRequestPolicySpecForProviderHeadersConfig
@@ -77,7 +86,9 @@ public partial class V1beta1OriginRequestPolicySpecForProviderHeadersConfig
     [JsonPropertyName("headers")]
     public V1beta1OriginRequestPolicySpecForProviderHeadersConfigHeaders? Headers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OriginRequestPolicySpecForProviderQueryStringsConfigQueryStrings
@@ -86,7 +97,9 @@ public partial class V1beta1OriginRequestPolicySpecForProviderQueryStringsConfig
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Query String Config for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OriginRequestPolicySpecForProviderQueryStringsConfig
@@ -99,7 +112,9 @@ public partial class V1beta1OriginRequestPolicySpecForProviderQueryStringsConfig
     [JsonPropertyName("queryStrings")]
     public V1beta1OriginRequestPolicySpecForProviderQueryStringsConfigQueryStrings? QueryStrings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OriginRequestPolicySpecForProvider
@@ -120,7 +135,9 @@ public partial class V1beta1OriginRequestPolicySpecForProvider
     [JsonPropertyName("queryStringsConfig")]
     public V1beta1OriginRequestPolicySpecForProviderQueryStringsConfig? QueryStringsConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OriginRequestPolicySpecInitProviderCookiesConfigCookies
@@ -129,7 +146,9 @@ public partial class V1beta1OriginRequestPolicySpecInitProviderCookiesConfigCook
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OriginRequestPolicySpecInitProviderCookiesConfig
@@ -142,7 +161,9 @@ public partial class V1beta1OriginRequestPolicySpecInitProviderCookiesConfig
     [JsonPropertyName("cookies")]
     public V1beta1OriginRequestPolicySpecInitProviderCookiesConfigCookies? Cookies { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OriginRequestPolicySpecInitProviderHeadersConfigHeaders
@@ -151,7 +172,9 @@ public partial class V1beta1OriginRequestPolicySpecInitProviderHeadersConfigHead
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that determines whether any HTTP headers (and if so, which headers) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OriginRequestPolicySpecInitProviderHeadersConfig
@@ -164,7 +187,9 @@ public partial class V1beta1OriginRequestPolicySpecInitProviderHeadersConfig
     [JsonPropertyName("headers")]
     public V1beta1OriginRequestPolicySpecInitProviderHeadersConfigHeaders? Headers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OriginRequestPolicySpecInitProviderQueryStringsConfigQueryStrings
@@ -173,7 +198,9 @@ public partial class V1beta1OriginRequestPolicySpecInitProviderQueryStringsConfi
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Query String Config for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OriginRequestPolicySpecInitProviderQueryStringsConfig
@@ -186,7 +213,9 @@ public partial class V1beta1OriginRequestPolicySpecInitProviderQueryStringsConfi
     [JsonPropertyName("queryStrings")]
     public V1beta1OriginRequestPolicySpecInitProviderQueryStringsConfigQueryStrings? QueryStrings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OriginRequestPolicySpecInitProvider
@@ -207,7 +236,9 @@ public partial class V1beta1OriginRequestPolicySpecInitProvider
     [JsonPropertyName("queryStringsConfig")]
     public V1beta1OriginRequestPolicySpecInitProviderQueryStringsConfig? QueryStringsConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OriginRequestPolicySpecProviderConfigRef
@@ -220,7 +251,9 @@ public partial class V1beta1OriginRequestPolicySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OriginRequestPolicySpecWriteConnectionSecretToRef
@@ -229,7 +262,9 @@ public partial class V1beta1OriginRequestPolicySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OriginRequestPolicySpec defines the desired state of OriginRequestPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OriginRequestPolicySpec
@@ -254,7 +289,9 @@ public partial class V1beta1OriginRequestPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1OriginRequestPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OriginRequestPolicyStatusAtProviderCookiesConfigCookies
@@ -263,7 +300,9 @@ public partial class V1beta1OriginRequestPolicyStatusAtProviderCookiesConfigCook
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OriginRequestPolicyStatusAtProviderCookiesConfig
@@ -276,7 +315,9 @@ public partial class V1beta1OriginRequestPolicyStatusAtProviderCookiesConfig
     [JsonPropertyName("cookies")]
     public V1beta1OriginRequestPolicyStatusAtProviderCookiesConfigCookies? Cookies { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OriginRequestPolicyStatusAtProviderHeadersConfigHeaders
@@ -285,7 +326,9 @@ public partial class V1beta1OriginRequestPolicyStatusAtProviderHeadersConfigHead
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that determines whether any HTTP headers (and if so, which headers) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OriginRequestPolicyStatusAtProviderHeadersConfig
@@ -298,7 +341,9 @@ public partial class V1beta1OriginRequestPolicyStatusAtProviderHeadersConfig
     [JsonPropertyName("headers")]
     public V1beta1OriginRequestPolicyStatusAtProviderHeadersConfigHeaders? Headers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OriginRequestPolicyStatusAtProviderQueryStringsConfigQueryStrings
@@ -307,7 +352,9 @@ public partial class V1beta1OriginRequestPolicyStatusAtProviderQueryStringsConfi
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Query String Config for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OriginRequestPolicyStatusAtProviderQueryStringsConfig
@@ -320,7 +367,9 @@ public partial class V1beta1OriginRequestPolicyStatusAtProviderQueryStringsConfi
     [JsonPropertyName("queryStrings")]
     public V1beta1OriginRequestPolicyStatusAtProviderQueryStringsConfigQueryStrings? QueryStrings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OriginRequestPolicyStatusAtProvider
@@ -353,7 +402,9 @@ public partial class V1beta1OriginRequestPolicyStatusAtProvider
     [JsonPropertyName("queryStringsConfig")]
     public V1beta1OriginRequestPolicyStatusAtProviderQueryStringsConfig? QueryStringsConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OriginRequestPolicyStatusConditions
@@ -382,7 +433,9 @@ public partial class V1beta1OriginRequestPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OriginRequestPolicyStatus defines the observed state of OriginRequestPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OriginRequestPolicyStatus
@@ -399,7 +452,9 @@ public partial class V1beta1OriginRequestPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OriginRequestPolicy is the Schema for the OriginRequestPolicys API. Determines the values that CloudFront includes in requests that it sends to the origin.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -429,3 +484,4 @@ public partial class V1beta1OriginRequestPolicy : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1OriginRequestPolicyStatus? Status { get; set; }
 }
+#nullable disable

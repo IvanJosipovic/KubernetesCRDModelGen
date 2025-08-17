@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafactory.azure.upbound.io;
+#nullable enable
 /// <summary>LinkedServiceAzureDatabricks is the Schema for the LinkedServiceAzureDatabrickss API. Manages a Linked Service (connection) between Azure Databricks and Azure Data Factory.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksList : IKubernetesObject
     [JsonPropertyName("items")]
     public IList<V1beta1LinkedServiceAzureDatabricks> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Authenticate to ADB via an access token.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderAccessTokenSecretRef
@@ -50,7 +53,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderAccessTok
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderDataFactoryIdRefPolicy
@@ -63,7 +68,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderDataFacto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Factory in datafactory to populate dataFactoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderDataFactoryIdRef
@@ -76,7 +83,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderDataFacto
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceAzureDatabricksSpecForProviderDataFactoryIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderDataFactoryIdSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderDataFacto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Factory in datafactory to populate dataFactoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderDataFactoryIdSelector
@@ -106,7 +117,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderDataFacto
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceAzureDatabricksSpecForProviderDataFactoryIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderInstancePool
@@ -127,7 +140,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderInstanceP
     [JsonPropertyName("minNumberOfWorkers")]
     public double? MinNumberOfWorkers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderKeyVaultPassword
@@ -140,7 +155,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderKeyVaultP
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderMsiWorkSpaceResourceIdRefPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderMsiWorkSp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in databricks to populate msiWorkSpaceResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderMsiWorkSpaceResourceIdRef
@@ -166,7 +185,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderMsiWorkSp
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceAzureDatabricksSpecForProviderMsiWorkSpaceResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderMsiWorkSpaceResourceIdSelectorPolicy
@@ -179,7 +200,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderMsiWorkSp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in databricks to populate msiWorkSpaceResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderMsiWorkSpaceResourceIdSelector
@@ -196,7 +219,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderMsiWorkSp
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceAzureDatabricksSpecForProviderMsiWorkSpaceResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderNewClusterConfig
@@ -241,7 +266,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderNewCluste
     [JsonPropertyName("sparkEnvironmentVariables")]
     public IDictionary<string, string>? SparkEnvironmentVariables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksSpecForProvider
@@ -314,7 +341,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecForProvider
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksSpecInitProviderInstancePool
@@ -335,7 +364,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecInitProviderInstance
     [JsonPropertyName("minNumberOfWorkers")]
     public double? MinNumberOfWorkers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksSpecInitProviderKeyVaultPassword
@@ -348,7 +379,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecInitProviderKeyVault
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksSpecInitProviderMsiWorkSpaceResourceIdRefPolicy
@@ -361,7 +394,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecInitProviderMsiWorkS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in databricks to populate msiWorkSpaceResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksSpecInitProviderMsiWorkSpaceResourceIdRef
@@ -374,7 +409,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecInitProviderMsiWorkS
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceAzureDatabricksSpecInitProviderMsiWorkSpaceResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksSpecInitProviderMsiWorkSpaceResourceIdSelectorPolicy
@@ -387,7 +424,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecInitProviderMsiWorkS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in databricks to populate msiWorkSpaceResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksSpecInitProviderMsiWorkSpaceResourceIdSelector
@@ -404,7 +443,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecInitProviderMsiWorkS
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceAzureDatabricksSpecInitProviderMsiWorkSpaceResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksSpecInitProviderNewClusterConfig
@@ -449,7 +490,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecInitProviderNewClust
     [JsonPropertyName("sparkEnvironmentVariables")]
     public IDictionary<string, string>? SparkEnvironmentVariables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksSpecInitProvider
@@ -506,7 +549,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecInitProvider
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksSpecProviderConfigRefPolicy
@@ -519,7 +564,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecProviderConfigRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksSpecProviderConfigRef
@@ -532,7 +579,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceAzureDatabricksSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksSpecWriteConnectionSecretToRef
@@ -545,7 +594,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecWriteConnectionSecre
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LinkedServiceAzureDatabricksSpec defines the desired state of LinkedServiceAzureDatabricks</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksSpec
@@ -574,7 +625,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LinkedServiceAzureDatabricksSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksStatusAtProviderInstancePool
@@ -595,7 +648,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksStatusAtProviderInstance
     [JsonPropertyName("minNumberOfWorkers")]
     public double? MinNumberOfWorkers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksStatusAtProviderKeyVaultPassword
@@ -608,7 +663,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksStatusAtProviderKeyVault
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksStatusAtProviderNewClusterConfig
@@ -653,7 +710,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksStatusAtProviderNewClust
     [JsonPropertyName("sparkEnvironmentVariables")]
     public IDictionary<string, string>? SparkEnvironmentVariables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksStatusAtProvider
@@ -710,7 +769,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksStatusAtProvider
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksStatusConditions
@@ -739,7 +800,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LinkedServiceAzureDatabricksStatus defines the observed state of LinkedServiceAzureDatabricks.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceAzureDatabricksStatus
@@ -756,7 +819,9 @@ public partial class V1beta1LinkedServiceAzureDatabricksStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LinkedServiceAzureDatabricks is the Schema for the LinkedServiceAzureDatabrickss API. Manages a Linked Service (connection) between Azure Databricks and Azure Data Factory.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -786,3 +851,4 @@ public partial class V1beta1LinkedServiceAzureDatabricks : IKubernetesObject<V1O
     [JsonPropertyName("status")]
     public V1beta1LinkedServiceAzureDatabricksStatus? Status { get; set; }
 }
+#nullable disable

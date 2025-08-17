@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.glue.aws.m.upbound.io;
+#nullable enable
 /// <summary>UserDefinedFunction is the Schema for the UserDefinedFunctions API. Provides a Glue User Defined Function.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1UserDefinedFunctionList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1UserDefinedFunction> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserDefinedFunctionSpecForProviderDatabaseNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1UserDefinedFunctionSpecForProviderDatabaseNameRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CatalogDatabase in glue to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserDefinedFunctionSpecForProviderDatabaseNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1UserDefinedFunctionSpecForProviderDatabaseNameRef
     [JsonPropertyName("policy")]
     public V1beta1UserDefinedFunctionSpecForProviderDatabaseNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserDefinedFunctionSpecForProviderDatabaseNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1UserDefinedFunctionSpecForProviderDatabaseNameSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CatalogDatabase in glue to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserDefinedFunctionSpecForProviderDatabaseNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1UserDefinedFunctionSpecForProviderDatabaseNameSelect
     [JsonPropertyName("policy")]
     public V1beta1UserDefinedFunctionSpecForProviderDatabaseNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserDefinedFunctionSpecForProviderResourceUris
@@ -110,7 +121,9 @@ public partial class V1beta1UserDefinedFunctionSpecForProviderResourceUris
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserDefinedFunctionSpecForProvider
@@ -151,7 +164,9 @@ public partial class V1beta1UserDefinedFunctionSpecForProvider
     [JsonPropertyName("resourceUris")]
     public IList<V1beta1UserDefinedFunctionSpecForProviderResourceUris>? ResourceUris { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserDefinedFunctionSpecInitProviderResourceUris
@@ -164,7 +179,9 @@ public partial class V1beta1UserDefinedFunctionSpecInitProviderResourceUris
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserDefinedFunctionSpecInitProvider
@@ -185,7 +202,9 @@ public partial class V1beta1UserDefinedFunctionSpecInitProvider
     [JsonPropertyName("resourceUris")]
     public IList<V1beta1UserDefinedFunctionSpecInitProviderResourceUris>? ResourceUris { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserDefinedFunctionSpecProviderConfigRef
@@ -198,7 +217,9 @@ public partial class V1beta1UserDefinedFunctionSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserDefinedFunctionSpecWriteConnectionSecretToRef
@@ -207,7 +228,9 @@ public partial class V1beta1UserDefinedFunctionSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UserDefinedFunctionSpec defines the desired state of UserDefinedFunction</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserDefinedFunctionSpec
@@ -232,7 +255,9 @@ public partial class V1beta1UserDefinedFunctionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1UserDefinedFunctionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserDefinedFunctionStatusAtProviderResourceUris
@@ -245,7 +270,9 @@ public partial class V1beta1UserDefinedFunctionStatusAtProviderResourceUris
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserDefinedFunctionStatusAtProvider
@@ -290,7 +317,9 @@ public partial class V1beta1UserDefinedFunctionStatusAtProvider
     [JsonPropertyName("resourceUris")]
     public IList<V1beta1UserDefinedFunctionStatusAtProviderResourceUris>? ResourceUris { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserDefinedFunctionStatusConditions
@@ -319,7 +348,9 @@ public partial class V1beta1UserDefinedFunctionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UserDefinedFunctionStatus defines the observed state of UserDefinedFunction.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserDefinedFunctionStatus
@@ -336,7 +367,9 @@ public partial class V1beta1UserDefinedFunctionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UserDefinedFunction is the Schema for the UserDefinedFunctions API. Provides a Glue User Defined Function.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -366,3 +399,4 @@ public partial class V1beta1UserDefinedFunction : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1UserDefinedFunctionStatus? Status { get; set; }
 }
+#nullable disable

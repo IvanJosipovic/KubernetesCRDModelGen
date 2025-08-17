@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigqueryanalyticshub.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>BigQueryAnalyticsHubDataExchange is the Schema for the BigQueryAnalyticsHubDataExchange API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BigQueryAnalyticsHubDataExchangeList : IKubernetesOb
     [JsonPropertyName("items")]
     public IList<V1beta1BigQueryAnalyticsHubDataExchange> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryAnalyticsHubDataExchangeSpecProjectRef
@@ -54,7 +57,9 @@ public partial class V1beta1BigQueryAnalyticsHubDataExchangeSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigQueryAnalyticsHubDataExchangeSpec defines the desired state of BigQueryAnalyticsHubDataExchange</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryAnalyticsHubDataExchangeSpec
@@ -91,7 +96,9 @@ public partial class V1beta1BigQueryAnalyticsHubDataExchangeSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryAnalyticsHubDataExchangeStatusConditions
@@ -116,7 +123,9 @@ public partial class V1beta1BigQueryAnalyticsHubDataExchangeStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryAnalyticsHubDataExchangeStatusObservedState
@@ -125,7 +134,9 @@ public partial class V1beta1BigQueryAnalyticsHubDataExchangeStatusObservedState
     [JsonPropertyName("listingCount")]
     public long? ListingCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigQueryAnalyticsHubDataExchangeStatus defines the config connector machine state of BigQueryAnalyticsHubDataExchange</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryAnalyticsHubDataExchangeStatus
@@ -146,7 +157,9 @@ public partial class V1beta1BigQueryAnalyticsHubDataExchangeStatus
     [JsonPropertyName("observedState")]
     public V1beta1BigQueryAnalyticsHubDataExchangeStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigQueryAnalyticsHubDataExchange is the Schema for the BigQueryAnalyticsHubDataExchange API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -176,3 +189,4 @@ public partial class V1beta1BigQueryAnalyticsHubDataExchange : IKubernetesObject
     [JsonPropertyName("status")]
     public V1beta1BigQueryAnalyticsHubDataExchangeStatus? Status { get; set; }
 }
+#nullable disable

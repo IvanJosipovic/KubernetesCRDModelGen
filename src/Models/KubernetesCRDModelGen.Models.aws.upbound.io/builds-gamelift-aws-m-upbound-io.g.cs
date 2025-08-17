@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gamelift.aws.m.upbound.io;
+#nullable enable
 /// <summary>Build is the Schema for the Builds API. Provides a GameLift Build resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BuildList : IKubernetesObject<V1ListMeta>, IItems<V1
     [JsonPropertyName("items")]
     public IList<V1beta1Build> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpecForProviderStorageLocationBucketRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1BuildSpecForProviderStorageLocationBucketRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpecForProviderStorageLocationBucketRef
@@ -63,7 +68,9 @@ public partial class V1beta1BuildSpecForProviderStorageLocationBucketRef
     [JsonPropertyName("policy")]
     public V1beta1BuildSpecForProviderStorageLocationBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpecForProviderStorageLocationBucketSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1BuildSpecForProviderStorageLocationBucketSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpecForProviderStorageLocationBucketSelector
@@ -97,7 +106,9 @@ public partial class V1beta1BuildSpecForProviderStorageLocationBucketSelector
     [JsonPropertyName("policy")]
     public V1beta1BuildSpecForProviderStorageLocationBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpecForProviderStorageLocationKeyRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1BuildSpecForProviderStorageLocationKeyRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Object in s3 to populate key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpecForProviderStorageLocationKeyRef
@@ -127,7 +140,9 @@ public partial class V1beta1BuildSpecForProviderStorageLocationKeyRef
     [JsonPropertyName("policy")]
     public V1beta1BuildSpecForProviderStorageLocationKeyRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpecForProviderStorageLocationKeySelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1BuildSpecForProviderStorageLocationKeySelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Object in s3 to populate key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpecForProviderStorageLocationKeySelector
@@ -161,7 +178,9 @@ public partial class V1beta1BuildSpecForProviderStorageLocationKeySelector
     [JsonPropertyName("policy")]
     public V1beta1BuildSpecForProviderStorageLocationKeySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpecForProviderStorageLocationRoleArnRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1BuildSpecForProviderStorageLocationRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpecForProviderStorageLocationRoleArnRef
@@ -191,7 +212,9 @@ public partial class V1beta1BuildSpecForProviderStorageLocationRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1BuildSpecForProviderStorageLocationRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpecForProviderStorageLocationRoleArnSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1BuildSpecForProviderStorageLocationRoleArnSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpecForProviderStorageLocationRoleArnSelector
@@ -225,7 +250,9 @@ public partial class V1beta1BuildSpecForProviderStorageLocationRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1BuildSpecForProviderStorageLocationRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information indicating where your game build files are stored. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpecForProviderStorageLocation
@@ -270,7 +297,9 @@ public partial class V1beta1BuildSpecForProviderStorageLocation
     [JsonPropertyName("roleArnSelector")]
     public V1beta1BuildSpecForProviderStorageLocationRoleArnSelector? RoleArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpecForProvider
@@ -299,7 +328,9 @@ public partial class V1beta1BuildSpecForProvider
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpecInitProviderStorageLocationBucketRefPolicy
@@ -312,7 +343,9 @@ public partial class V1beta1BuildSpecInitProviderStorageLocationBucketRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpecInitProviderStorageLocationBucketRef
@@ -329,7 +362,9 @@ public partial class V1beta1BuildSpecInitProviderStorageLocationBucketRef
     [JsonPropertyName("policy")]
     public V1beta1BuildSpecInitProviderStorageLocationBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpecInitProviderStorageLocationBucketSelectorPolicy
@@ -342,7 +377,9 @@ public partial class V1beta1BuildSpecInitProviderStorageLocationBucketSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpecInitProviderStorageLocationBucketSelector
@@ -363,7 +400,9 @@ public partial class V1beta1BuildSpecInitProviderStorageLocationBucketSelector
     [JsonPropertyName("policy")]
     public V1beta1BuildSpecInitProviderStorageLocationBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpecInitProviderStorageLocationKeyRefPolicy
@@ -376,7 +415,9 @@ public partial class V1beta1BuildSpecInitProviderStorageLocationKeyRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Object in s3 to populate key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpecInitProviderStorageLocationKeyRef
@@ -393,7 +434,9 @@ public partial class V1beta1BuildSpecInitProviderStorageLocationKeyRef
     [JsonPropertyName("policy")]
     public V1beta1BuildSpecInitProviderStorageLocationKeyRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpecInitProviderStorageLocationKeySelectorPolicy
@@ -406,7 +449,9 @@ public partial class V1beta1BuildSpecInitProviderStorageLocationKeySelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Object in s3 to populate key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpecInitProviderStorageLocationKeySelector
@@ -427,7 +472,9 @@ public partial class V1beta1BuildSpecInitProviderStorageLocationKeySelector
     [JsonPropertyName("policy")]
     public V1beta1BuildSpecInitProviderStorageLocationKeySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpecInitProviderStorageLocationRoleArnRefPolicy
@@ -440,7 +487,9 @@ public partial class V1beta1BuildSpecInitProviderStorageLocationRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpecInitProviderStorageLocationRoleArnRef
@@ -457,7 +506,9 @@ public partial class V1beta1BuildSpecInitProviderStorageLocationRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1BuildSpecInitProviderStorageLocationRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpecInitProviderStorageLocationRoleArnSelectorPolicy
@@ -470,7 +521,9 @@ public partial class V1beta1BuildSpecInitProviderStorageLocationRoleArnSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpecInitProviderStorageLocationRoleArnSelector
@@ -491,7 +544,9 @@ public partial class V1beta1BuildSpecInitProviderStorageLocationRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1BuildSpecInitProviderStorageLocationRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information indicating where your game build files are stored. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpecInitProviderStorageLocation
@@ -536,7 +591,9 @@ public partial class V1beta1BuildSpecInitProviderStorageLocation
     [JsonPropertyName("roleArnSelector")]
     public V1beta1BuildSpecInitProviderStorageLocationRoleArnSelector? RoleArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpecInitProvider
@@ -561,7 +618,9 @@ public partial class V1beta1BuildSpecInitProvider
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpecProviderConfigRef
@@ -574,7 +633,9 @@ public partial class V1beta1BuildSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpecWriteConnectionSecretToRef
@@ -583,7 +644,9 @@ public partial class V1beta1BuildSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BuildSpec defines the desired state of Build</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildSpec
@@ -608,7 +671,9 @@ public partial class V1beta1BuildSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BuildSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information indicating where your game build files are stored. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildStatusAtProviderStorageLocation
@@ -629,7 +694,9 @@ public partial class V1beta1BuildStatusAtProviderStorageLocation
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildStatusAtProvider
@@ -670,7 +737,9 @@ public partial class V1beta1BuildStatusAtProvider
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildStatusConditions
@@ -699,7 +768,9 @@ public partial class V1beta1BuildStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BuildStatus defines the observed state of Build.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BuildStatus
@@ -716,7 +787,9 @@ public partial class V1beta1BuildStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Build is the Schema for the Builds API. Provides a GameLift Build resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -746,3 +819,4 @@ public partial class V1beta1Build : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     [JsonPropertyName("status")]
     public V1beta1BuildStatus? Status { get; set; }
 }
+#nullable disable

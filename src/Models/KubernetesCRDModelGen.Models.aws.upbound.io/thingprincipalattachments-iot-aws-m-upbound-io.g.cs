@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iot.aws.m.upbound.io;
+#nullable enable
 /// <summary>ThingPrincipalAttachment is the Schema for the ThingPrincipalAttachments API. Provides AWS IoT Thing Principal attachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ThingPrincipalAttachmentList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1ThingPrincipalAttachment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingPrincipalAttachmentSpecForProviderPrincipalRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ThingPrincipalAttachmentSpecForProviderPrincipalRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Certificate in iot to populate principal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingPrincipalAttachmentSpecForProviderPrincipalRef
@@ -63,7 +68,9 @@ public partial class V1beta1ThingPrincipalAttachmentSpecForProviderPrincipalRef
     [JsonPropertyName("policy")]
     public V1beta1ThingPrincipalAttachmentSpecForProviderPrincipalRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingPrincipalAttachmentSpecForProviderPrincipalSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1ThingPrincipalAttachmentSpecForProviderPrincipalSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Certificate in iot to populate principal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingPrincipalAttachmentSpecForProviderPrincipalSelector
@@ -97,7 +106,9 @@ public partial class V1beta1ThingPrincipalAttachmentSpecForProviderPrincipalSele
     [JsonPropertyName("policy")]
     public V1beta1ThingPrincipalAttachmentSpecForProviderPrincipalSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingPrincipalAttachmentSpecForProviderThingRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1ThingPrincipalAttachmentSpecForProviderThingRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Thing in iot to populate thing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingPrincipalAttachmentSpecForProviderThingRef
@@ -127,7 +140,9 @@ public partial class V1beta1ThingPrincipalAttachmentSpecForProviderThingRef
     [JsonPropertyName("policy")]
     public V1beta1ThingPrincipalAttachmentSpecForProviderThingRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingPrincipalAttachmentSpecForProviderThingSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1ThingPrincipalAttachmentSpecForProviderThingSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Thing in iot to populate thing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingPrincipalAttachmentSpecForProviderThingSelector
@@ -161,7 +178,9 @@ public partial class V1beta1ThingPrincipalAttachmentSpecForProviderThingSelector
     [JsonPropertyName("policy")]
     public V1beta1ThingPrincipalAttachmentSpecForProviderThingSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingPrincipalAttachmentSpecForProvider
@@ -194,7 +213,9 @@ public partial class V1beta1ThingPrincipalAttachmentSpecForProvider
     [JsonPropertyName("thingSelector")]
     public V1beta1ThingPrincipalAttachmentSpecForProviderThingSelector? ThingSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingPrincipalAttachmentSpecInitProviderPrincipalRefPolicy
@@ -207,7 +228,9 @@ public partial class V1beta1ThingPrincipalAttachmentSpecInitProviderPrincipalRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Certificate in iot to populate principal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingPrincipalAttachmentSpecInitProviderPrincipalRef
@@ -224,7 +247,9 @@ public partial class V1beta1ThingPrincipalAttachmentSpecInitProviderPrincipalRef
     [JsonPropertyName("policy")]
     public V1beta1ThingPrincipalAttachmentSpecInitProviderPrincipalRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingPrincipalAttachmentSpecInitProviderPrincipalSelectorPolicy
@@ -237,7 +262,9 @@ public partial class V1beta1ThingPrincipalAttachmentSpecInitProviderPrincipalSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Certificate in iot to populate principal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingPrincipalAttachmentSpecInitProviderPrincipalSelector
@@ -258,7 +285,9 @@ public partial class V1beta1ThingPrincipalAttachmentSpecInitProviderPrincipalSel
     [JsonPropertyName("policy")]
     public V1beta1ThingPrincipalAttachmentSpecInitProviderPrincipalSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingPrincipalAttachmentSpecInitProviderThingRefPolicy
@@ -271,7 +300,9 @@ public partial class V1beta1ThingPrincipalAttachmentSpecInitProviderThingRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Thing in iot to populate thing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingPrincipalAttachmentSpecInitProviderThingRef
@@ -288,7 +319,9 @@ public partial class V1beta1ThingPrincipalAttachmentSpecInitProviderThingRef
     [JsonPropertyName("policy")]
     public V1beta1ThingPrincipalAttachmentSpecInitProviderThingRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingPrincipalAttachmentSpecInitProviderThingSelectorPolicy
@@ -301,7 +334,9 @@ public partial class V1beta1ThingPrincipalAttachmentSpecInitProviderThingSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Thing in iot to populate thing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingPrincipalAttachmentSpecInitProviderThingSelector
@@ -322,7 +357,9 @@ public partial class V1beta1ThingPrincipalAttachmentSpecInitProviderThingSelecto
     [JsonPropertyName("policy")]
     public V1beta1ThingPrincipalAttachmentSpecInitProviderThingSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingPrincipalAttachmentSpecInitProvider
@@ -351,7 +388,9 @@ public partial class V1beta1ThingPrincipalAttachmentSpecInitProvider
     [JsonPropertyName("thingSelector")]
     public V1beta1ThingPrincipalAttachmentSpecInitProviderThingSelector? ThingSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingPrincipalAttachmentSpecProviderConfigRef
@@ -364,7 +403,9 @@ public partial class V1beta1ThingPrincipalAttachmentSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingPrincipalAttachmentSpecWriteConnectionSecretToRef
@@ -373,7 +414,9 @@ public partial class V1beta1ThingPrincipalAttachmentSpecWriteConnectionSecretToR
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ThingPrincipalAttachmentSpec defines the desired state of ThingPrincipalAttachment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingPrincipalAttachmentSpec
@@ -398,7 +441,9 @@ public partial class V1beta1ThingPrincipalAttachmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ThingPrincipalAttachmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingPrincipalAttachmentStatusAtProvider
@@ -419,7 +464,9 @@ public partial class V1beta1ThingPrincipalAttachmentStatusAtProvider
     [JsonPropertyName("thing")]
     public string? Thing { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingPrincipalAttachmentStatusConditions
@@ -448,7 +495,9 @@ public partial class V1beta1ThingPrincipalAttachmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ThingPrincipalAttachmentStatus defines the observed state of ThingPrincipalAttachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingPrincipalAttachmentStatus
@@ -465,7 +514,9 @@ public partial class V1beta1ThingPrincipalAttachmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ThingPrincipalAttachment is the Schema for the ThingPrincipalAttachments API. Provides AWS IoT Thing Principal attachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -495,3 +546,4 @@ public partial class V1beta1ThingPrincipalAttachment : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1ThingPrincipalAttachmentStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1NetworkPolicyList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1NetworkPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecEgressDestinationServiceAccounts
@@ -46,7 +49,9 @@ public partial class V1NetworkPolicySpecEgressDestinationServiceAccounts
     [JsonPropertyName("selector")]
     public string? Selector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecEgressDestinationServices
@@ -59,7 +64,9 @@ public partial class V1NetworkPolicySpecEgressDestinationServices
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecEgressDestination
@@ -100,7 +107,9 @@ public partial class V1NetworkPolicySpecEgressDestination
     [JsonPropertyName("services")]
     public V1NetworkPolicySpecEgressDestinationServices? Services { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecEgressHttpPaths
@@ -113,7 +122,9 @@ public partial class V1NetworkPolicySpecEgressHttpPaths
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecEgressHttp
@@ -126,7 +137,9 @@ public partial class V1NetworkPolicySpecEgressHttp
     [JsonPropertyName("paths")]
     public IList<V1NetworkPolicySpecEgressHttpPaths>? Paths { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecEgressIcmp
@@ -139,7 +152,9 @@ public partial class V1NetworkPolicySpecEgressIcmp
     [JsonPropertyName("type")]
     public int? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecEgressMetadata
@@ -148,7 +163,9 @@ public partial class V1NetworkPolicySpecEgressMetadata
     [JsonPropertyName("annotations")]
     public IDictionary<string, string>? Annotations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecEgressNotICMP
@@ -161,7 +178,9 @@ public partial class V1NetworkPolicySpecEgressNotICMP
     [JsonPropertyName("type")]
     public int? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecEgressSourceServiceAccounts
@@ -174,7 +193,9 @@ public partial class V1NetworkPolicySpecEgressSourceServiceAccounts
     [JsonPropertyName("selector")]
     public string? Selector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecEgressSourceServices
@@ -187,7 +208,9 @@ public partial class V1NetworkPolicySpecEgressSourceServices
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecEgressSource
@@ -228,7 +251,9 @@ public partial class V1NetworkPolicySpecEgressSource
     [JsonPropertyName("services")]
     public V1NetworkPolicySpecEgressSourceServices? Services { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecEgress
@@ -273,7 +298,9 @@ public partial class V1NetworkPolicySpecEgress
     [JsonPropertyName("source")]
     public V1NetworkPolicySpecEgressSource? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecIngressDestinationServiceAccounts
@@ -286,7 +313,9 @@ public partial class V1NetworkPolicySpecIngressDestinationServiceAccounts
     [JsonPropertyName("selector")]
     public string? Selector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecIngressDestinationServices
@@ -299,7 +328,9 @@ public partial class V1NetworkPolicySpecIngressDestinationServices
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecIngressDestination
@@ -340,7 +371,9 @@ public partial class V1NetworkPolicySpecIngressDestination
     [JsonPropertyName("services")]
     public V1NetworkPolicySpecIngressDestinationServices? Services { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecIngressHttpPaths
@@ -353,7 +386,9 @@ public partial class V1NetworkPolicySpecIngressHttpPaths
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecIngressHttp
@@ -366,7 +401,9 @@ public partial class V1NetworkPolicySpecIngressHttp
     [JsonPropertyName("paths")]
     public IList<V1NetworkPolicySpecIngressHttpPaths>? Paths { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecIngressIcmp
@@ -379,7 +416,9 @@ public partial class V1NetworkPolicySpecIngressIcmp
     [JsonPropertyName("type")]
     public int? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecIngressMetadata
@@ -388,7 +427,9 @@ public partial class V1NetworkPolicySpecIngressMetadata
     [JsonPropertyName("annotations")]
     public IDictionary<string, string>? Annotations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecIngressNotICMP
@@ -401,7 +442,9 @@ public partial class V1NetworkPolicySpecIngressNotICMP
     [JsonPropertyName("type")]
     public int? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecIngressSourceServiceAccounts
@@ -414,7 +457,9 @@ public partial class V1NetworkPolicySpecIngressSourceServiceAccounts
     [JsonPropertyName("selector")]
     public string? Selector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecIngressSourceServices
@@ -427,7 +472,9 @@ public partial class V1NetworkPolicySpecIngressSourceServices
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecIngressSource
@@ -468,7 +515,9 @@ public partial class V1NetworkPolicySpecIngressSource
     [JsonPropertyName("services")]
     public V1NetworkPolicySpecIngressSourceServices? Services { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecIngress
@@ -513,7 +562,9 @@ public partial class V1NetworkPolicySpecIngress
     [JsonPropertyName("source")]
     public V1NetworkPolicySpecIngressSource? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpec
@@ -550,7 +601,9 @@ public partial class V1NetworkPolicySpec
     [JsonPropertyName("types")]
     public IList<string>? Types { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -576,3 +629,4 @@ public partial class V1NetworkPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("spec")]
     public V1NetworkPolicySpec? Spec { get; set; }
 }
+#nullable disable

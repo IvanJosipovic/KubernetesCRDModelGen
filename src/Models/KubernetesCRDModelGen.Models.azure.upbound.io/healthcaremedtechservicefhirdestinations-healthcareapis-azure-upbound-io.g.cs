@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.healthcareapis.azure.upbound.io;
+#nullable enable
 /// <summary>HealthcareMedtechServiceFHIRDestination is the Schema for the HealthcareMedtechServiceFHIRDestinations API. Manages a Healthcare Med Tech (Internet of Medical Things) Service Fhir Destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1HealthcareMedtechServiceFHIRDestinationList : IKuber
     [JsonPropertyName("items")]
     public IList<V1beta1HealthcareMedtechServiceFHIRDestination> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecForProviderDestinationFhirServiceIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecForProvid
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a HealthcareFHIRService in healthcareapis to populate destinationFhirServiceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecForProviderDestinationFhirServiceIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecForProvid
     [JsonPropertyName("policy")]
     public V1beta1HealthcareMedtechServiceFHIRDestinationSpecForProviderDestinationFhirServiceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecForProviderDestinationFhirServiceIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecForProvid
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a HealthcareFHIRService in healthcareapis to populate destinationFhirServiceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecForProviderDestinationFhirServiceIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecForProvid
     [JsonPropertyName("policy")]
     public V1beta1HealthcareMedtechServiceFHIRDestinationSpecForProviderDestinationFhirServiceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecForProviderMedtechServiceIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecForProvid
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a HealthcareMedtechService in healthcareapis to populate medtechServiceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecForProviderMedtechServiceIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecForProvid
     [JsonPropertyName("policy")]
     public V1beta1HealthcareMedtechServiceFHIRDestinationSpecForProviderMedtechServiceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecForProviderMedtechServiceIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecForProvid
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a HealthcareMedtechService in healthcareapis to populate medtechServiceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecForProviderMedtechServiceIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecForProvid
     [JsonPropertyName("policy")]
     public V1beta1HealthcareMedtechServiceFHIRDestinationSpecForProviderMedtechServiceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecForProvider
@@ -186,7 +205,9 @@ public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecForProvid
     [JsonPropertyName("medtechServiceIdSelector")]
     public V1beta1HealthcareMedtechServiceFHIRDestinationSpecForProviderMedtechServiceIdSelector? MedtechServiceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecInitProviderDestinationFhirServiceIdRefPolicy
@@ -199,7 +220,9 @@ public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecInitProvi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a HealthcareFHIRService in healthcareapis to populate destinationFhirServiceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecInitProviderDestinationFhirServiceIdRef
@@ -212,7 +235,9 @@ public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecInitProvi
     [JsonPropertyName("policy")]
     public V1beta1HealthcareMedtechServiceFHIRDestinationSpecInitProviderDestinationFhirServiceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecInitProviderDestinationFhirServiceIdSelectorPolicy
@@ -225,7 +250,9 @@ public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecInitProvi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a HealthcareFHIRService in healthcareapis to populate destinationFhirServiceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecInitProviderDestinationFhirServiceIdSelector
@@ -242,7 +269,9 @@ public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecInitProvi
     [JsonPropertyName("policy")]
     public V1beta1HealthcareMedtechServiceFHIRDestinationSpecInitProviderDestinationFhirServiceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecInitProvider
@@ -271,7 +300,9 @@ public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecInitProvi
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecProviderConfigRefPolicy
@@ -284,7 +315,9 @@ public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecProviderC
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecProviderConfigRef
@@ -297,7 +330,9 @@ public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecProviderC
     [JsonPropertyName("policy")]
     public V1beta1HealthcareMedtechServiceFHIRDestinationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecWriteConnectionSecretToRef
@@ -310,7 +345,9 @@ public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpecWriteConn
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HealthcareMedtechServiceFHIRDestinationSpec defines the desired state of HealthcareMedtechServiceFHIRDestination</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpec
@@ -339,7 +376,9 @@ public partial class V1beta1HealthcareMedtechServiceFHIRDestinationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1HealthcareMedtechServiceFHIRDestinationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceFHIRDestinationStatusAtProvider
@@ -368,7 +407,9 @@ public partial class V1beta1HealthcareMedtechServiceFHIRDestinationStatusAtProvi
     [JsonPropertyName("medtechServiceId")]
     public string? MedtechServiceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceFHIRDestinationStatusConditions
@@ -397,7 +438,9 @@ public partial class V1beta1HealthcareMedtechServiceFHIRDestinationStatusConditi
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HealthcareMedtechServiceFHIRDestinationStatus defines the observed state of HealthcareMedtechServiceFHIRDestination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceFHIRDestinationStatus
@@ -414,7 +457,9 @@ public partial class V1beta1HealthcareMedtechServiceFHIRDestinationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HealthcareMedtechServiceFHIRDestination is the Schema for the HealthcareMedtechServiceFHIRDestinations API. Manages a Healthcare Med Tech (Internet of Medical Things) Service Fhir Destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -444,3 +489,4 @@ public partial class V1beta1HealthcareMedtechServiceFHIRDestination : IKubernete
     [JsonPropertyName("status")]
     public V1beta1HealthcareMedtechServiceFHIRDestinationStatus? Status { get; set; }
 }
+#nullable disable

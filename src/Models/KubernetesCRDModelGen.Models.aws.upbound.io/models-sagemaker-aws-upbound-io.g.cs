@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sagemaker.aws.upbound.io;
+#nullable enable
 /// <summary>Model is the Schema for the Models API. Provides a SageMaker AI model resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ModelList : IKubernetesObject<V1ListMeta>, IItems<V1
     [JsonPropertyName("items")]
     public IList<V1beta1Model> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecForProviderContainerImageConfigRepositoryAuthConfig
@@ -42,7 +45,9 @@ public partial class V1beta1ModelSpecForProviderContainerImageConfigRepositoryAu
     [JsonPropertyName("repositoryCredentialsProviderArn")]
     public string? RepositoryCredentialsProviderArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecForProviderContainerImageConfig
@@ -55,7 +60,9 @@ public partial class V1beta1ModelSpecForProviderContainerImageConfig
     [JsonPropertyName("repositoryAuthConfig")]
     public IList<V1beta1ModelSpecForProviderContainerImageConfigRepositoryAuthConfig>? RepositoryAuthConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecForProviderContainerModelDataSourceS3DataSourceModelAccessConfig
@@ -64,7 +71,9 @@ public partial class V1beta1ModelSpecForProviderContainerModelDataSourceS3DataSo
     [JsonPropertyName("acceptEula")]
     public bool? AcceptEula { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecForProviderContainerModelDataSourceS3DataSource
@@ -85,7 +94,9 @@ public partial class V1beta1ModelSpecForProviderContainerModelDataSourceS3DataSo
     [JsonPropertyName("s3Uri")]
     public string? S3Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecForProviderContainerModelDataSource
@@ -94,7 +105,9 @@ public partial class V1beta1ModelSpecForProviderContainerModelDataSource
     [JsonPropertyName("s3DataSource")]
     public IList<V1beta1ModelSpecForProviderContainerModelDataSourceS3DataSource>? S3DataSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecForProviderContainerMultiModelConfig
@@ -103,7 +116,9 @@ public partial class V1beta1ModelSpecForProviderContainerMultiModelConfig
     [JsonPropertyName("modelCacheSetting")]
     public string? ModelCacheSetting { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecForProviderContainer
@@ -148,7 +163,9 @@ public partial class V1beta1ModelSpecForProviderContainer
     [JsonPropertyName("multiModelConfig")]
     public IList<V1beta1ModelSpecForProviderContainerMultiModelConfig>? MultiModelConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecForProviderExecutionRoleArnRefPolicy
@@ -161,7 +178,9 @@ public partial class V1beta1ModelSpecForProviderExecutionRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate executionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecForProviderExecutionRoleArnRef
@@ -174,7 +193,9 @@ public partial class V1beta1ModelSpecForProviderExecutionRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1ModelSpecForProviderExecutionRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecForProviderExecutionRoleArnSelectorPolicy
@@ -187,7 +208,9 @@ public partial class V1beta1ModelSpecForProviderExecutionRoleArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate executionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecForProviderExecutionRoleArnSelector
@@ -204,7 +227,9 @@ public partial class V1beta1ModelSpecForProviderExecutionRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1ModelSpecForProviderExecutionRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecForProviderInferenceExecutionConfig
@@ -213,7 +238,9 @@ public partial class V1beta1ModelSpecForProviderInferenceExecutionConfig
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecForProviderPrimaryContainerImageConfigRepositoryAuthConfig
@@ -222,7 +249,9 @@ public partial class V1beta1ModelSpecForProviderPrimaryContainerImageConfigRepos
     [JsonPropertyName("repositoryCredentialsProviderArn")]
     public string? RepositoryCredentialsProviderArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecForProviderPrimaryContainerImageConfig
@@ -235,7 +264,9 @@ public partial class V1beta1ModelSpecForProviderPrimaryContainerImageConfig
     [JsonPropertyName("repositoryAuthConfig")]
     public IList<V1beta1ModelSpecForProviderPrimaryContainerImageConfigRepositoryAuthConfig>? RepositoryAuthConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecForProviderPrimaryContainerModelDataSourceS3DataSourceModelAccessConfig
@@ -244,7 +275,9 @@ public partial class V1beta1ModelSpecForProviderPrimaryContainerModelDataSourceS
     [JsonPropertyName("acceptEula")]
     public bool? AcceptEula { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecForProviderPrimaryContainerModelDataSourceS3DataSource
@@ -265,7 +298,9 @@ public partial class V1beta1ModelSpecForProviderPrimaryContainerModelDataSourceS
     [JsonPropertyName("s3Uri")]
     public string? S3Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecForProviderPrimaryContainerModelDataSource
@@ -274,7 +309,9 @@ public partial class V1beta1ModelSpecForProviderPrimaryContainerModelDataSource
     [JsonPropertyName("s3DataSource")]
     public IList<V1beta1ModelSpecForProviderPrimaryContainerModelDataSourceS3DataSource>? S3DataSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecForProviderPrimaryContainerMultiModelConfig
@@ -283,7 +320,9 @@ public partial class V1beta1ModelSpecForProviderPrimaryContainerMultiModelConfig
     [JsonPropertyName("modelCacheSetting")]
     public string? ModelCacheSetting { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecForProviderPrimaryContainer
@@ -328,7 +367,9 @@ public partial class V1beta1ModelSpecForProviderPrimaryContainer
     [JsonPropertyName("multiModelConfig")]
     public IList<V1beta1ModelSpecForProviderPrimaryContainerMultiModelConfig>? MultiModelConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecForProviderVpcConfig
@@ -341,7 +382,9 @@ public partial class V1beta1ModelSpecForProviderVpcConfig
     [JsonPropertyName("subnets")]
     public IList<string>? Subnets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecForProvider
@@ -386,7 +429,9 @@ public partial class V1beta1ModelSpecForProvider
     [JsonPropertyName("vpcConfig")]
     public IList<V1beta1ModelSpecForProviderVpcConfig>? VpcConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecInitProviderContainerImageConfigRepositoryAuthConfig
@@ -395,7 +440,9 @@ public partial class V1beta1ModelSpecInitProviderContainerImageConfigRepositoryA
     [JsonPropertyName("repositoryCredentialsProviderArn")]
     public string? RepositoryCredentialsProviderArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecInitProviderContainerImageConfig
@@ -408,7 +455,9 @@ public partial class V1beta1ModelSpecInitProviderContainerImageConfig
     [JsonPropertyName("repositoryAuthConfig")]
     public IList<V1beta1ModelSpecInitProviderContainerImageConfigRepositoryAuthConfig>? RepositoryAuthConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecInitProviderContainerModelDataSourceS3DataSourceModelAccessConfig
@@ -417,7 +466,9 @@ public partial class V1beta1ModelSpecInitProviderContainerModelDataSourceS3DataS
     [JsonPropertyName("acceptEula")]
     public bool? AcceptEula { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecInitProviderContainerModelDataSourceS3DataSource
@@ -438,7 +489,9 @@ public partial class V1beta1ModelSpecInitProviderContainerModelDataSourceS3DataS
     [JsonPropertyName("s3Uri")]
     public string? S3Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecInitProviderContainerModelDataSource
@@ -447,7 +500,9 @@ public partial class V1beta1ModelSpecInitProviderContainerModelDataSource
     [JsonPropertyName("s3DataSource")]
     public IList<V1beta1ModelSpecInitProviderContainerModelDataSourceS3DataSource>? S3DataSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecInitProviderContainerMultiModelConfig
@@ -456,7 +511,9 @@ public partial class V1beta1ModelSpecInitProviderContainerMultiModelConfig
     [JsonPropertyName("modelCacheSetting")]
     public string? ModelCacheSetting { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecInitProviderContainer
@@ -501,7 +558,9 @@ public partial class V1beta1ModelSpecInitProviderContainer
     [JsonPropertyName("multiModelConfig")]
     public IList<V1beta1ModelSpecInitProviderContainerMultiModelConfig>? MultiModelConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecInitProviderExecutionRoleArnRefPolicy
@@ -514,7 +573,9 @@ public partial class V1beta1ModelSpecInitProviderExecutionRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate executionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecInitProviderExecutionRoleArnRef
@@ -527,7 +588,9 @@ public partial class V1beta1ModelSpecInitProviderExecutionRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1ModelSpecInitProviderExecutionRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecInitProviderExecutionRoleArnSelectorPolicy
@@ -540,7 +603,9 @@ public partial class V1beta1ModelSpecInitProviderExecutionRoleArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate executionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecInitProviderExecutionRoleArnSelector
@@ -557,7 +622,9 @@ public partial class V1beta1ModelSpecInitProviderExecutionRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1ModelSpecInitProviderExecutionRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecInitProviderInferenceExecutionConfig
@@ -566,7 +633,9 @@ public partial class V1beta1ModelSpecInitProviderInferenceExecutionConfig
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecInitProviderPrimaryContainerImageConfigRepositoryAuthConfig
@@ -575,7 +644,9 @@ public partial class V1beta1ModelSpecInitProviderPrimaryContainerImageConfigRepo
     [JsonPropertyName("repositoryCredentialsProviderArn")]
     public string? RepositoryCredentialsProviderArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecInitProviderPrimaryContainerImageConfig
@@ -588,7 +659,9 @@ public partial class V1beta1ModelSpecInitProviderPrimaryContainerImageConfig
     [JsonPropertyName("repositoryAuthConfig")]
     public IList<V1beta1ModelSpecInitProviderPrimaryContainerImageConfigRepositoryAuthConfig>? RepositoryAuthConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecInitProviderPrimaryContainerModelDataSourceS3DataSourceModelAccessConfig
@@ -597,7 +670,9 @@ public partial class V1beta1ModelSpecInitProviderPrimaryContainerModelDataSource
     [JsonPropertyName("acceptEula")]
     public bool? AcceptEula { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecInitProviderPrimaryContainerModelDataSourceS3DataSource
@@ -618,7 +693,9 @@ public partial class V1beta1ModelSpecInitProviderPrimaryContainerModelDataSource
     [JsonPropertyName("s3Uri")]
     public string? S3Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecInitProviderPrimaryContainerModelDataSource
@@ -627,7 +704,9 @@ public partial class V1beta1ModelSpecInitProviderPrimaryContainerModelDataSource
     [JsonPropertyName("s3DataSource")]
     public IList<V1beta1ModelSpecInitProviderPrimaryContainerModelDataSourceS3DataSource>? S3DataSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecInitProviderPrimaryContainerMultiModelConfig
@@ -636,7 +715,9 @@ public partial class V1beta1ModelSpecInitProviderPrimaryContainerMultiModelConfi
     [JsonPropertyName("modelCacheSetting")]
     public string? ModelCacheSetting { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecInitProviderPrimaryContainer
@@ -681,7 +762,9 @@ public partial class V1beta1ModelSpecInitProviderPrimaryContainer
     [JsonPropertyName("multiModelConfig")]
     public IList<V1beta1ModelSpecInitProviderPrimaryContainerMultiModelConfig>? MultiModelConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecInitProviderVpcConfig
@@ -694,7 +777,9 @@ public partial class V1beta1ModelSpecInitProviderVpcConfig
     [JsonPropertyName("subnets")]
     public IList<string>? Subnets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecInitProvider
@@ -735,7 +820,9 @@ public partial class V1beta1ModelSpecInitProvider
     [JsonPropertyName("vpcConfig")]
     public IList<V1beta1ModelSpecInitProviderVpcConfig>? VpcConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecProviderConfigRefPolicy
@@ -748,7 +835,9 @@ public partial class V1beta1ModelSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecProviderConfigRef
@@ -761,7 +850,9 @@ public partial class V1beta1ModelSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ModelSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecWriteConnectionSecretToRef
@@ -774,7 +865,9 @@ public partial class V1beta1ModelSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ModelSpec defines the desired state of Model</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpec
@@ -803,7 +896,9 @@ public partial class V1beta1ModelSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ModelSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelStatusAtProviderContainerImageConfigRepositoryAuthConfig
@@ -812,7 +907,9 @@ public partial class V1beta1ModelStatusAtProviderContainerImageConfigRepositoryA
     [JsonPropertyName("repositoryCredentialsProviderArn")]
     public string? RepositoryCredentialsProviderArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelStatusAtProviderContainerImageConfig
@@ -825,7 +922,9 @@ public partial class V1beta1ModelStatusAtProviderContainerImageConfig
     [JsonPropertyName("repositoryAuthConfig")]
     public IList<V1beta1ModelStatusAtProviderContainerImageConfigRepositoryAuthConfig>? RepositoryAuthConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelStatusAtProviderContainerModelDataSourceS3DataSourceModelAccessConfig
@@ -834,7 +933,9 @@ public partial class V1beta1ModelStatusAtProviderContainerModelDataSourceS3DataS
     [JsonPropertyName("acceptEula")]
     public bool? AcceptEula { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelStatusAtProviderContainerModelDataSourceS3DataSource
@@ -855,7 +956,9 @@ public partial class V1beta1ModelStatusAtProviderContainerModelDataSourceS3DataS
     [JsonPropertyName("s3Uri")]
     public string? S3Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelStatusAtProviderContainerModelDataSource
@@ -864,7 +967,9 @@ public partial class V1beta1ModelStatusAtProviderContainerModelDataSource
     [JsonPropertyName("s3DataSource")]
     public IList<V1beta1ModelStatusAtProviderContainerModelDataSourceS3DataSource>? S3DataSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelStatusAtProviderContainerMultiModelConfig
@@ -873,7 +978,9 @@ public partial class V1beta1ModelStatusAtProviderContainerMultiModelConfig
     [JsonPropertyName("modelCacheSetting")]
     public string? ModelCacheSetting { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelStatusAtProviderContainer
@@ -918,7 +1025,9 @@ public partial class V1beta1ModelStatusAtProviderContainer
     [JsonPropertyName("multiModelConfig")]
     public IList<V1beta1ModelStatusAtProviderContainerMultiModelConfig>? MultiModelConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelStatusAtProviderInferenceExecutionConfig
@@ -927,7 +1036,9 @@ public partial class V1beta1ModelStatusAtProviderInferenceExecutionConfig
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelStatusAtProviderPrimaryContainerImageConfigRepositoryAuthConfig
@@ -936,7 +1047,9 @@ public partial class V1beta1ModelStatusAtProviderPrimaryContainerImageConfigRepo
     [JsonPropertyName("repositoryCredentialsProviderArn")]
     public string? RepositoryCredentialsProviderArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelStatusAtProviderPrimaryContainerImageConfig
@@ -949,7 +1062,9 @@ public partial class V1beta1ModelStatusAtProviderPrimaryContainerImageConfig
     [JsonPropertyName("repositoryAuthConfig")]
     public IList<V1beta1ModelStatusAtProviderPrimaryContainerImageConfigRepositoryAuthConfig>? RepositoryAuthConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelStatusAtProviderPrimaryContainerModelDataSourceS3DataSourceModelAccessConfig
@@ -958,7 +1073,9 @@ public partial class V1beta1ModelStatusAtProviderPrimaryContainerModelDataSource
     [JsonPropertyName("acceptEula")]
     public bool? AcceptEula { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelStatusAtProviderPrimaryContainerModelDataSourceS3DataSource
@@ -979,7 +1096,9 @@ public partial class V1beta1ModelStatusAtProviderPrimaryContainerModelDataSource
     [JsonPropertyName("s3Uri")]
     public string? S3Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelStatusAtProviderPrimaryContainerModelDataSource
@@ -988,7 +1107,9 @@ public partial class V1beta1ModelStatusAtProviderPrimaryContainerModelDataSource
     [JsonPropertyName("s3DataSource")]
     public IList<V1beta1ModelStatusAtProviderPrimaryContainerModelDataSourceS3DataSource>? S3DataSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelStatusAtProviderPrimaryContainerMultiModelConfig
@@ -997,7 +1118,9 @@ public partial class V1beta1ModelStatusAtProviderPrimaryContainerMultiModelConfi
     [JsonPropertyName("modelCacheSetting")]
     public string? ModelCacheSetting { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelStatusAtProviderPrimaryContainer
@@ -1042,7 +1165,9 @@ public partial class V1beta1ModelStatusAtProviderPrimaryContainer
     [JsonPropertyName("multiModelConfig")]
     public IList<V1beta1ModelStatusAtProviderPrimaryContainerMultiModelConfig>? MultiModelConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelStatusAtProviderVpcConfig
@@ -1055,7 +1180,9 @@ public partial class V1beta1ModelStatusAtProviderVpcConfig
     [JsonPropertyName("subnets")]
     public IList<string>? Subnets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelStatusAtProvider
@@ -1104,7 +1231,9 @@ public partial class V1beta1ModelStatusAtProvider
     [JsonPropertyName("vpcConfig")]
     public IList<V1beta1ModelStatusAtProviderVpcConfig>? VpcConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelStatusConditions
@@ -1133,7 +1262,9 @@ public partial class V1beta1ModelStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ModelStatus defines the observed state of Model.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelStatus
@@ -1150,7 +1281,9 @@ public partial class V1beta1ModelStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Model is the Schema for the Models API. Provides a SageMaker AI model resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1180,3 +1313,4 @@ public partial class V1beta1Model : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     [JsonPropertyName("status")]
     public V1beta1ModelStatus? Status { get; set; }
 }
+#nullable disable

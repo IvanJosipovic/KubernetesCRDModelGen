@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cache.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20230801.RedisPatchSchedule Generator information: - Generated from: /redis/resource-manager/Microsoft.Cache/stable/2023-08-01/redis.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/patchSchedules/default</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20230801storageRedisPatchScheduleList : IKubernetesObj
     [JsonPropertyName("items")]
     public IList<V1api20230801storageRedisPatchSchedule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230801storageRedisPatchScheduleSpecOperatorSpecConfigMapExpressions
@@ -50,7 +53,9 @@ public partial class V1api20230801storageRedisPatchScheduleSpecOperatorSpecConfi
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230801storageRedisPatchScheduleSpecOperatorSpecSecretExpressions
@@ -67,7 +72,9 @@ public partial class V1api20230801storageRedisPatchScheduleSpecOperatorSpecSecre
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230801.RedisPatchScheduleOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230801storageRedisPatchScheduleSpecOperatorSpec
@@ -84,7 +91,9 @@ public partial class V1api20230801storageRedisPatchScheduleSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20230801storageRedisPatchScheduleSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a cache.azure.com/Redis resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230801storageRedisPatchScheduleSpecOwner
@@ -97,7 +106,9 @@ public partial class V1api20230801storageRedisPatchScheduleSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230801.ScheduleEntry Patch schedule entry for a Premium Redis Cache.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230801storageRedisPatchScheduleSpecScheduleEntries
@@ -118,7 +129,9 @@ public partial class V1api20230801storageRedisPatchScheduleSpecScheduleEntries
     [JsonPropertyName("startHourUtc")]
     public int? StartHourUtc { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230801.RedisPatchSchedule_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230801storageRedisPatchScheduleSpec
@@ -143,7 +156,9 @@ public partial class V1api20230801storageRedisPatchScheduleSpec
     [JsonPropertyName("scheduleEntries")]
     public IList<V1api20230801storageRedisPatchScheduleSpecScheduleEntries>? ScheduleEntries { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230801storageRedisPatchScheduleStatusConditions
@@ -176,7 +191,9 @@ public partial class V1api20230801storageRedisPatchScheduleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230801.ScheduleEntry_STATUS Patch schedule entry for a Premium Redis Cache.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230801storageRedisPatchScheduleStatusScheduleEntries
@@ -197,7 +214,9 @@ public partial class V1api20230801storageRedisPatchScheduleStatusScheduleEntries
     [JsonPropertyName("startHourUtc")]
     public int? StartHourUtc { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230801.RedisPatchSchedule_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230801storageRedisPatchScheduleStatus
@@ -230,7 +249,9 @@ public partial class V1api20230801storageRedisPatchScheduleStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230801.RedisPatchSchedule Generator information: - Generated from: /redis/resource-manager/Microsoft.Cache/stable/2023-08-01/redis.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/patchSchedules/default</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -260,3 +281,4 @@ public partial class V1api20230801storageRedisPatchSchedule : IKubernetesObject<
     [JsonPropertyName("status")]
     public V1api20230801storageRedisPatchScheduleStatus? Status { get; set; }
 }
+#nullable disable

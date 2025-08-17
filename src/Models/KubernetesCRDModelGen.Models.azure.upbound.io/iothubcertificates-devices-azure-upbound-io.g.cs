@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.devices.azure.upbound.io;
+#nullable enable
 /// <summary>IOTHubCertificate is the Schema for the IOTHubCertificates API. Manages an IoTHub Certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1IOTHubCertificateList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1IOTHubCertificate> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Base-64 representation of the X509 leaf certificate .cer file or just a .pem file content.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubCertificateSpecForProviderCertificateContentSecretRef
@@ -50,7 +53,9 @@ public partial class V1beta1IOTHubCertificateSpecForProviderCertificateContentSe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubCertificateSpecForProviderIothubNameRefPolicy
@@ -63,7 +68,9 @@ public partial class V1beta1IOTHubCertificateSpecForProviderIothubNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a IOTHub in devices to populate iothubName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubCertificateSpecForProviderIothubNameRef
@@ -76,7 +83,9 @@ public partial class V1beta1IOTHubCertificateSpecForProviderIothubNameRef
     [JsonPropertyName("policy")]
     public V1beta1IOTHubCertificateSpecForProviderIothubNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubCertificateSpecForProviderIothubNameSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1IOTHubCertificateSpecForProviderIothubNameSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a IOTHub in devices to populate iothubName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubCertificateSpecForProviderIothubNameSelector
@@ -106,7 +117,9 @@ public partial class V1beta1IOTHubCertificateSpecForProviderIothubNameSelector
     [JsonPropertyName("policy")]
     public V1beta1IOTHubCertificateSpecForProviderIothubNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubCertificateSpecForProviderResourceGroupNameRefPolicy
@@ -119,7 +132,9 @@ public partial class V1beta1IOTHubCertificateSpecForProviderResourceGroupNameRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubCertificateSpecForProviderResourceGroupNameRef
@@ -132,7 +147,9 @@ public partial class V1beta1IOTHubCertificateSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1IOTHubCertificateSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubCertificateSpecForProviderResourceGroupNameSelectorPolicy
@@ -145,7 +162,9 @@ public partial class V1beta1IOTHubCertificateSpecForProviderResourceGroupNameSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubCertificateSpecForProviderResourceGroupNameSelector
@@ -162,7 +181,9 @@ public partial class V1beta1IOTHubCertificateSpecForProviderResourceGroupNameSel
     [JsonPropertyName("policy")]
     public V1beta1IOTHubCertificateSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubCertificateSpecForProvider
@@ -199,7 +220,9 @@ public partial class V1beta1IOTHubCertificateSpecForProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1IOTHubCertificateSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Base-64 representation of the X509 leaf certificate .cer file or just a .pem file content.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubCertificateSpecInitProviderCertificateContentSecretRef
@@ -216,7 +239,9 @@ public partial class V1beta1IOTHubCertificateSpecInitProviderCertificateContentS
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubCertificateSpecInitProvider
@@ -229,7 +254,9 @@ public partial class V1beta1IOTHubCertificateSpecInitProvider
     [JsonPropertyName("isVerified")]
     public bool? IsVerified { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubCertificateSpecProviderConfigRefPolicy
@@ -242,7 +269,9 @@ public partial class V1beta1IOTHubCertificateSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubCertificateSpecProviderConfigRef
@@ -255,7 +284,9 @@ public partial class V1beta1IOTHubCertificateSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1IOTHubCertificateSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubCertificateSpecWriteConnectionSecretToRef
@@ -268,7 +299,9 @@ public partial class V1beta1IOTHubCertificateSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IOTHubCertificateSpec defines the desired state of IOTHubCertificate</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubCertificateSpec
@@ -297,7 +330,9 @@ public partial class V1beta1IOTHubCertificateSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1IOTHubCertificateSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubCertificateStatusAtProvider
@@ -318,7 +353,9 @@ public partial class V1beta1IOTHubCertificateStatusAtProvider
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubCertificateStatusConditions
@@ -347,7 +384,9 @@ public partial class V1beta1IOTHubCertificateStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IOTHubCertificateStatus defines the observed state of IOTHubCertificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubCertificateStatus
@@ -364,7 +403,9 @@ public partial class V1beta1IOTHubCertificateStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IOTHubCertificate is the Schema for the IOTHubCertificates API. Manages an IoTHub Certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -394,3 +435,4 @@ public partial class V1beta1IOTHubCertificate : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1IOTHubCertificateStatus? Status { get; set; }
 }
+#nullable disable

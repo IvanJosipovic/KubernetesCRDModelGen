@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataform.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>DataformRepository is the Schema for the dataform API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DataformRepositoryList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1DataformRepository> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The name of the Secret Manager secret version to use as an authentication token for Git operations. Must be in the format projects/* /secrets/* /versions/*.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataformRepositorySpecGitRemoteSettingsAuthenticationTokenSecretVersionRef
@@ -50,7 +53,9 @@ public partial class V1beta1DataformRepositorySpecGitRemoteSettingsAuthenticatio
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The name of the Secret Manager secret version to use as a ssh private key for Git operations. Must be in the format projects/*/secrets/*/versions/* .</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataformRepositorySpecGitRemoteSettingsSshAuthenticationConfigUserPrivateKeySecretVersionRef
@@ -67,7 +72,9 @@ public partial class V1beta1DataformRepositorySpecGitRemoteSettingsSshAuthentica
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Authentication fields for remote uris using SSH protocol.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataformRepositorySpecGitRemoteSettingsSshAuthenticationConfig
@@ -80,7 +87,9 @@ public partial class V1beta1DataformRepositorySpecGitRemoteSettingsSshAuthentica
     [JsonPropertyName("userPrivateKeySecretVersionRef")]
     public V1beta1DataformRepositorySpecGitRemoteSettingsSshAuthenticationConfigUserPrivateKeySecretVersionRef UserPrivateKeySecretVersionRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. If set, configures this repository to be linked to a Git remote.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataformRepositorySpecGitRemoteSettings
@@ -101,7 +110,9 @@ public partial class V1beta1DataformRepositorySpecGitRemoteSettings
     [JsonPropertyName("url")]
     public string Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The name of the Secret Manager secret version to be used to interpolate variables into the .npmrc file for package installation operations.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataformRepositorySpecNpmrcEnvironmentVariablesSecretVersionRef
@@ -118,7 +129,9 @@ public partial class V1beta1DataformRepositorySpecNpmrcEnvironmentVariablesSecre
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataformRepositorySpecProjectRef
@@ -139,7 +152,9 @@ public partial class V1beta1DataformRepositorySpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The service account reference to run workflow invocations under.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataformRepositorySpecServiceAccountRef
@@ -156,7 +171,9 @@ public partial class V1beta1DataformRepositorySpecServiceAccountRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. If set, fields of workspaceCompilationOverrides override the default compilation settings that are specified in dataform.json when creating workspace-scoped compilation results.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataformRepositorySpecWorkspaceCompilationOverrides
@@ -173,7 +190,9 @@ public partial class V1beta1DataformRepositorySpecWorkspaceCompilationOverrides
     [JsonPropertyName("tablePrefix")]
     public string? TablePrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataformRepositorySpec
@@ -214,7 +233,9 @@ public partial class V1beta1DataformRepositorySpec
     [JsonPropertyName("workspaceCompilationOverrides")]
     public V1beta1DataformRepositorySpecWorkspaceCompilationOverrides? WorkspaceCompilationOverrides { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataformRepositoryStatusConditions
@@ -239,13 +260,17 @@ public partial class V1beta1DataformRepositoryStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataformRepositoryStatusObservedState
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataformRepositoryStatus
@@ -266,7 +291,9 @@ public partial class V1beta1DataformRepositoryStatus
     [JsonPropertyName("observedState")]
     public V1beta1DataformRepositoryStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataformRepository is the Schema for the dataform API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -296,3 +323,4 @@ public partial class V1beta1DataformRepository : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1DataformRepositoryStatus? Status { get; set; }
 }
+#nullable disable

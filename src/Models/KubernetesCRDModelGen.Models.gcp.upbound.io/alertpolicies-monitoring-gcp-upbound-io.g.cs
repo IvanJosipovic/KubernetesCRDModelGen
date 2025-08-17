@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.monitoring.gcp.upbound.io;
+#nullable enable
 /// <summary>AlertPolicy is the Schema for the AlertPolicys API. A description of the conditions under which some aspect of your system is considered to be "unhealthy" and the ways to notify people or services about this state.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AlertPolicyList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1AlertPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecForProviderAlertStrategyNotificationChannelStrategy
@@ -46,7 +49,9 @@ public partial class V1beta1AlertPolicySpecForProviderAlertStrategyNotificationC
     [JsonPropertyName("renotifyInterval")]
     public string? RenotifyInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecForProviderAlertStrategyNotificationRateLimit
@@ -55,7 +60,9 @@ public partial class V1beta1AlertPolicySpecForProviderAlertStrategyNotificationR
     [JsonPropertyName("period")]
     public string? Period { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecForProviderAlertStrategy
@@ -76,7 +83,9 @@ public partial class V1beta1AlertPolicySpecForProviderAlertStrategy
     [JsonPropertyName("notificationRateLimit")]
     public IList<V1beta1AlertPolicySpecForProviderAlertStrategyNotificationRateLimit>? NotificationRateLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecForProviderConditionsConditionAbsentAggregations
@@ -97,7 +106,9 @@ public partial class V1beta1AlertPolicySpecForProviderConditionsConditionAbsentA
     [JsonPropertyName("perSeriesAligner")]
     public string? PerSeriesAligner { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecForProviderConditionsConditionAbsentTrigger
@@ -110,7 +121,9 @@ public partial class V1beta1AlertPolicySpecForProviderConditionsConditionAbsentT
     [JsonPropertyName("percent")]
     public double? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecForProviderConditionsConditionAbsent
@@ -131,7 +144,9 @@ public partial class V1beta1AlertPolicySpecForProviderConditionsConditionAbsent
     [JsonPropertyName("trigger")]
     public IList<V1beta1AlertPolicySpecForProviderConditionsConditionAbsentTrigger>? Trigger { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecForProviderConditionsConditionMatchedLog
@@ -144,7 +159,9 @@ public partial class V1beta1AlertPolicySpecForProviderConditionsConditionMatched
     [JsonPropertyName("labelExtractors")]
     public IDictionary<string, string>? LabelExtractors { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecForProviderConditionsConditionMonitoringQueryLanguageTrigger
@@ -157,7 +174,9 @@ public partial class V1beta1AlertPolicySpecForProviderConditionsConditionMonitor
     [JsonPropertyName("percent")]
     public double? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecForProviderConditionsConditionMonitoringQueryLanguage
@@ -178,7 +197,9 @@ public partial class V1beta1AlertPolicySpecForProviderConditionsConditionMonitor
     [JsonPropertyName("trigger")]
     public IList<V1beta1AlertPolicySpecForProviderConditionsConditionMonitoringQueryLanguageTrigger>? Trigger { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecForProviderConditionsConditionPrometheusQueryLanguage
@@ -211,7 +232,9 @@ public partial class V1beta1AlertPolicySpecForProviderConditionsConditionPrometh
     [JsonPropertyName("ruleGroup")]
     public string? RuleGroup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecForProviderConditionsConditionSqlBooleanTest
@@ -220,7 +243,9 @@ public partial class V1beta1AlertPolicySpecForProviderConditionsConditionSqlBool
     [JsonPropertyName("column")]
     public string? Column { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecForProviderConditionsConditionSqlDailyExecutionTime
@@ -241,7 +266,9 @@ public partial class V1beta1AlertPolicySpecForProviderConditionsConditionSqlDail
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecForProviderConditionsConditionSqlDaily
@@ -254,7 +281,9 @@ public partial class V1beta1AlertPolicySpecForProviderConditionsConditionSqlDail
     [JsonPropertyName("periodicity")]
     public double? Periodicity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecForProviderConditionsConditionSqlHourly
@@ -267,7 +296,9 @@ public partial class V1beta1AlertPolicySpecForProviderConditionsConditionSqlHour
     [JsonPropertyName("periodicity")]
     public double? Periodicity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecForProviderConditionsConditionSqlMinutes
@@ -276,7 +307,9 @@ public partial class V1beta1AlertPolicySpecForProviderConditionsConditionSqlMinu
     [JsonPropertyName("periodicity")]
     public double? Periodicity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecForProviderConditionsConditionSqlRowCountTest
@@ -289,7 +322,9 @@ public partial class V1beta1AlertPolicySpecForProviderConditionsConditionSqlRowC
     [JsonPropertyName("threshold")]
     public double? Threshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecForProviderConditionsConditionSql
@@ -318,7 +353,9 @@ public partial class V1beta1AlertPolicySpecForProviderConditionsConditionSql
     [JsonPropertyName("rowCountTest")]
     public IList<V1beta1AlertPolicySpecForProviderConditionsConditionSqlRowCountTest>? RowCountTest { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecForProviderConditionsConditionThresholdAggregations
@@ -339,7 +376,9 @@ public partial class V1beta1AlertPolicySpecForProviderConditionsConditionThresho
     [JsonPropertyName("perSeriesAligner")]
     public string? PerSeriesAligner { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecForProviderConditionsConditionThresholdDenominatorAggregations
@@ -360,7 +399,9 @@ public partial class V1beta1AlertPolicySpecForProviderConditionsConditionThresho
     [JsonPropertyName("perSeriesAligner")]
     public string? PerSeriesAligner { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecForProviderConditionsConditionThresholdForecastOptions
@@ -369,7 +410,9 @@ public partial class V1beta1AlertPolicySpecForProviderConditionsConditionThresho
     [JsonPropertyName("forecastHorizon")]
     public string? ForecastHorizon { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecForProviderConditionsConditionThresholdTrigger
@@ -382,7 +425,9 @@ public partial class V1beta1AlertPolicySpecForProviderConditionsConditionThresho
     [JsonPropertyName("percent")]
     public double? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecForProviderConditionsConditionThreshold
@@ -427,7 +472,9 @@ public partial class V1beta1AlertPolicySpecForProviderConditionsConditionThresho
     [JsonPropertyName("trigger")]
     public IList<V1beta1AlertPolicySpecForProviderConditionsConditionThresholdTrigger>? Trigger { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecForProviderConditions
@@ -460,7 +507,9 @@ public partial class V1beta1AlertPolicySpecForProviderConditions
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecForProviderDocumentationLinks
@@ -473,7 +522,9 @@ public partial class V1beta1AlertPolicySpecForProviderDocumentationLinks
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecForProviderDocumentation
@@ -494,7 +545,9 @@ public partial class V1beta1AlertPolicySpecForProviderDocumentation
     [JsonPropertyName("subject")]
     public string? Subject { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecForProvider
@@ -539,7 +592,9 @@ public partial class V1beta1AlertPolicySpecForProvider
     [JsonPropertyName("userLabels")]
     public IDictionary<string, string>? UserLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecInitProviderAlertStrategyNotificationChannelStrategy
@@ -552,7 +607,9 @@ public partial class V1beta1AlertPolicySpecInitProviderAlertStrategyNotification
     [JsonPropertyName("renotifyInterval")]
     public string? RenotifyInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecInitProviderAlertStrategyNotificationRateLimit
@@ -561,7 +618,9 @@ public partial class V1beta1AlertPolicySpecInitProviderAlertStrategyNotification
     [JsonPropertyName("period")]
     public string? Period { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecInitProviderAlertStrategy
@@ -582,7 +641,9 @@ public partial class V1beta1AlertPolicySpecInitProviderAlertStrategy
     [JsonPropertyName("notificationRateLimit")]
     public IList<V1beta1AlertPolicySpecInitProviderAlertStrategyNotificationRateLimit>? NotificationRateLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionAbsentAggregations
@@ -603,7 +664,9 @@ public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionAbsent
     [JsonPropertyName("perSeriesAligner")]
     public string? PerSeriesAligner { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionAbsentTrigger
@@ -616,7 +679,9 @@ public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionAbsent
     [JsonPropertyName("percent")]
     public double? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionAbsent
@@ -637,7 +702,9 @@ public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionAbsent
     [JsonPropertyName("trigger")]
     public IList<V1beta1AlertPolicySpecInitProviderConditionsConditionAbsentTrigger>? Trigger { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionMatchedLog
@@ -650,7 +717,9 @@ public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionMatche
     [JsonPropertyName("labelExtractors")]
     public IDictionary<string, string>? LabelExtractors { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionMonitoringQueryLanguageTrigger
@@ -663,7 +732,9 @@ public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionMonito
     [JsonPropertyName("percent")]
     public double? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionMonitoringQueryLanguage
@@ -684,7 +755,9 @@ public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionMonito
     [JsonPropertyName("trigger")]
     public IList<V1beta1AlertPolicySpecInitProviderConditionsConditionMonitoringQueryLanguageTrigger>? Trigger { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionPrometheusQueryLanguage
@@ -717,7 +790,9 @@ public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionPromet
     [JsonPropertyName("ruleGroup")]
     public string? RuleGroup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionSqlBooleanTest
@@ -726,7 +801,9 @@ public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionSqlBoo
     [JsonPropertyName("column")]
     public string? Column { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionSqlDailyExecutionTime
@@ -747,7 +824,9 @@ public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionSqlDai
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionSqlDaily
@@ -760,7 +839,9 @@ public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionSqlDai
     [JsonPropertyName("periodicity")]
     public double? Periodicity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionSqlHourly
@@ -773,7 +854,9 @@ public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionSqlHou
     [JsonPropertyName("periodicity")]
     public double? Periodicity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionSqlMinutes
@@ -782,7 +865,9 @@ public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionSqlMin
     [JsonPropertyName("periodicity")]
     public double? Periodicity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionSqlRowCountTest
@@ -795,7 +880,9 @@ public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionSqlRow
     [JsonPropertyName("threshold")]
     public double? Threshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionSql
@@ -824,7 +911,9 @@ public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionSql
     [JsonPropertyName("rowCountTest")]
     public IList<V1beta1AlertPolicySpecInitProviderConditionsConditionSqlRowCountTest>? RowCountTest { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionThresholdAggregations
@@ -845,7 +934,9 @@ public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionThresh
     [JsonPropertyName("perSeriesAligner")]
     public string? PerSeriesAligner { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionThresholdDenominatorAggregations
@@ -866,7 +957,9 @@ public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionThresh
     [JsonPropertyName("perSeriesAligner")]
     public string? PerSeriesAligner { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionThresholdForecastOptions
@@ -875,7 +968,9 @@ public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionThresh
     [JsonPropertyName("forecastHorizon")]
     public string? ForecastHorizon { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionThresholdTrigger
@@ -888,7 +983,9 @@ public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionThresh
     [JsonPropertyName("percent")]
     public double? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionThreshold
@@ -933,7 +1030,9 @@ public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionThresh
     [JsonPropertyName("trigger")]
     public IList<V1beta1AlertPolicySpecInitProviderConditionsConditionThresholdTrigger>? Trigger { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecInitProviderConditions
@@ -966,7 +1065,9 @@ public partial class V1beta1AlertPolicySpecInitProviderConditions
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecInitProviderDocumentationLinks
@@ -979,7 +1080,9 @@ public partial class V1beta1AlertPolicySpecInitProviderDocumentationLinks
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecInitProviderDocumentation
@@ -1000,7 +1103,9 @@ public partial class V1beta1AlertPolicySpecInitProviderDocumentation
     [JsonPropertyName("subject")]
     public string? Subject { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecInitProvider
@@ -1045,7 +1150,9 @@ public partial class V1beta1AlertPolicySpecInitProvider
     [JsonPropertyName("userLabels")]
     public IDictionary<string, string>? UserLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecProviderConfigRefPolicy
@@ -1058,7 +1165,9 @@ public partial class V1beta1AlertPolicySpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecProviderConfigRef
@@ -1071,7 +1180,9 @@ public partial class V1beta1AlertPolicySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1AlertPolicySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpecWriteConnectionSecretToRef
@@ -1084,7 +1195,9 @@ public partial class V1beta1AlertPolicySpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AlertPolicySpec defines the desired state of AlertPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicySpec
@@ -1113,7 +1226,9 @@ public partial class V1beta1AlertPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AlertPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicyStatusAtProviderAlertStrategyNotificationChannelStrategy
@@ -1126,7 +1241,9 @@ public partial class V1beta1AlertPolicyStatusAtProviderAlertStrategyNotification
     [JsonPropertyName("renotifyInterval")]
     public string? RenotifyInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicyStatusAtProviderAlertStrategyNotificationRateLimit
@@ -1135,7 +1252,9 @@ public partial class V1beta1AlertPolicyStatusAtProviderAlertStrategyNotification
     [JsonPropertyName("period")]
     public string? Period { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicyStatusAtProviderAlertStrategy
@@ -1156,7 +1275,9 @@ public partial class V1beta1AlertPolicyStatusAtProviderAlertStrategy
     [JsonPropertyName("notificationRateLimit")]
     public IList<V1beta1AlertPolicyStatusAtProviderAlertStrategyNotificationRateLimit>? NotificationRateLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionAbsentAggregations
@@ -1177,7 +1298,9 @@ public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionAbsent
     [JsonPropertyName("perSeriesAligner")]
     public string? PerSeriesAligner { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionAbsentTrigger
@@ -1190,7 +1313,9 @@ public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionAbsent
     [JsonPropertyName("percent")]
     public double? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionAbsent
@@ -1211,7 +1336,9 @@ public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionAbsent
     [JsonPropertyName("trigger")]
     public IList<V1beta1AlertPolicyStatusAtProviderConditionsConditionAbsentTrigger>? Trigger { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionMatchedLog
@@ -1224,7 +1351,9 @@ public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionMatche
     [JsonPropertyName("labelExtractors")]
     public IDictionary<string, string>? LabelExtractors { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionMonitoringQueryLanguageTrigger
@@ -1237,7 +1366,9 @@ public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionMonito
     [JsonPropertyName("percent")]
     public double? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionMonitoringQueryLanguage
@@ -1258,7 +1389,9 @@ public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionMonito
     [JsonPropertyName("trigger")]
     public IList<V1beta1AlertPolicyStatusAtProviderConditionsConditionMonitoringQueryLanguageTrigger>? Trigger { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionPrometheusQueryLanguage
@@ -1291,7 +1424,9 @@ public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionPromet
     [JsonPropertyName("ruleGroup")]
     public string? RuleGroup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionSqlBooleanTest
@@ -1300,7 +1435,9 @@ public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionSqlBoo
     [JsonPropertyName("column")]
     public string? Column { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionSqlDailyExecutionTime
@@ -1321,7 +1458,9 @@ public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionSqlDai
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionSqlDaily
@@ -1334,7 +1473,9 @@ public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionSqlDai
     [JsonPropertyName("periodicity")]
     public double? Periodicity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionSqlHourly
@@ -1347,7 +1488,9 @@ public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionSqlHou
     [JsonPropertyName("periodicity")]
     public double? Periodicity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionSqlMinutes
@@ -1356,7 +1499,9 @@ public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionSqlMin
     [JsonPropertyName("periodicity")]
     public double? Periodicity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionSqlRowCountTest
@@ -1369,7 +1514,9 @@ public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionSqlRow
     [JsonPropertyName("threshold")]
     public double? Threshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionSql
@@ -1398,7 +1545,9 @@ public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionSql
     [JsonPropertyName("rowCountTest")]
     public IList<V1beta1AlertPolicyStatusAtProviderConditionsConditionSqlRowCountTest>? RowCountTest { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionThresholdAggregations
@@ -1419,7 +1568,9 @@ public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionThresh
     [JsonPropertyName("perSeriesAligner")]
     public string? PerSeriesAligner { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionThresholdDenominatorAggregations
@@ -1440,7 +1591,9 @@ public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionThresh
     [JsonPropertyName("perSeriesAligner")]
     public string? PerSeriesAligner { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionThresholdForecastOptions
@@ -1449,7 +1602,9 @@ public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionThresh
     [JsonPropertyName("forecastHorizon")]
     public string? ForecastHorizon { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionThresholdTrigger
@@ -1462,7 +1617,9 @@ public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionThresh
     [JsonPropertyName("percent")]
     public double? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionThreshold
@@ -1507,7 +1664,9 @@ public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionThresh
     [JsonPropertyName("trigger")]
     public IList<V1beta1AlertPolicyStatusAtProviderConditionsConditionThresholdTrigger>? Trigger { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicyStatusAtProviderConditions
@@ -1544,7 +1703,9 @@ public partial class V1beta1AlertPolicyStatusAtProviderConditions
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicyStatusAtProviderCreationRecord
@@ -1557,7 +1718,9 @@ public partial class V1beta1AlertPolicyStatusAtProviderCreationRecord
     [JsonPropertyName("mutatedBy")]
     public string? MutatedBy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicyStatusAtProviderDocumentationLinks
@@ -1570,7 +1733,9 @@ public partial class V1beta1AlertPolicyStatusAtProviderDocumentationLinks
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicyStatusAtProviderDocumentation
@@ -1591,7 +1756,9 @@ public partial class V1beta1AlertPolicyStatusAtProviderDocumentation
     [JsonPropertyName("subject")]
     public string? Subject { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicyStatusAtProvider
@@ -1648,7 +1815,9 @@ public partial class V1beta1AlertPolicyStatusAtProvider
     [JsonPropertyName("userLabels")]
     public IDictionary<string, string>? UserLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicyStatusConditions
@@ -1677,7 +1846,9 @@ public partial class V1beta1AlertPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AlertPolicyStatus defines the observed state of AlertPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlertPolicyStatus
@@ -1694,7 +1865,9 @@ public partial class V1beta1AlertPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AlertPolicy is the Schema for the AlertPolicys API. A description of the conditions under which some aspect of your system is considered to be "unhealthy" and the ways to notify people or services about this state.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1724,3 +1897,4 @@ public partial class V1beta1AlertPolicy : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1AlertPolicyStatus? Status { get; set; }
 }
+#nullable disable
