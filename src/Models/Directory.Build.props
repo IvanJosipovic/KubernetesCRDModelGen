@@ -17,6 +17,7 @@
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <NoWarn>CS1591,CS8618</NoWarn>
+        <WarningsAsErrors>$(WarningsAsErrors);CS8784;CS8785</WarningsAsErrors>
     </PropertyGroup>
 
     <ItemGroup>
@@ -27,5 +28,6 @@
         <None Include="..\..\..\README.md" Pack="true" PackagePath="\" />
         <AdditionalFiles Include="*.yaml" />
         <ProjectReference Include="..\..\KubernetesCRDModelGen.SourceGenerator\KubernetesCRDModelGen.SourceGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" PrivateAssets="all" />
+        <ProjectReference Include="..\..\KubernetesCRDModelGen.Base\KubernetesCRDModelGen.Base.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" PrivateAssets="all" />
     </ItemGroup>
 </Project>
