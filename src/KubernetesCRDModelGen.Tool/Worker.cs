@@ -1,4 +1,3 @@
-
 using k8s.Models;
 using k8s;
 using KubernetesCRDModelGen;
@@ -26,7 +25,7 @@ namespace Worker
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            string folderPath = configuration.GetValue<string>("FolderPath");
+            string? folderPath = configuration.GetValue<string>("FolderPath");
 
             if (string.IsNullOrEmpty(folderPath))
             {
@@ -73,11 +72,11 @@ namespace Worker
                                 var crd = KubernetesYaml.Deserialize<V1CustomResourceDefinition>(yaml);
                                 var code = generator.GenerateCode(crd, @namespace);
 
-                                var filename = RemoveIllegalFileNameCharacters($"{crd.Metadata.Name.Replace(".", "-")}.g.cs");
+                                var filename = CodeGenerator.RemoveIllegalFileNameCharacters($"{crd.Metadata.Name.Replace(".", "-")}.g.cs");
 
                                 logger.LogInformation("Generating: {file}", filename);
 
-                                await File.WriteAllTextAsync(Path.Combine(folderPath, filename), code);
+                                await File.WriteAllTextAsync(Path.Combine(folderPath, filename), code, stoppingToken);
                             }
                             catch (Exception e)
                             {
@@ -96,20 +95,9 @@ namespace Worker
                 }
             }
 
-            logger.LogInformation("Tool complated at: {time}", DateTimeOffset.Now);
+            logger.LogInformation("Tool completed at: {time}", DateTimeOffset.Now);
             Environment.ExitCode = 0;
             appLifetime.StopApplication();
-        }
-
-        public static string RemoveIllegalFileNameCharacters(string fileName)
-        {
-            if (string.IsNullOrEmpty(fileName))
-                throw new ArgumentException("File name cannot be null or empty", nameof(fileName));
-
-            // Remove invalid characters from the input
-            string sanitizedFileName = new([.. fileName.Where(c => !Path.GetInvalidFileNameChars().Contains(c))]);
-
-            return sanitizedFileName;
         }
     }
 }

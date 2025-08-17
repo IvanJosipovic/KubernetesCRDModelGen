@@ -16,6 +16,7 @@
         <IsPackable>true</IsPackable>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <PackageReadmeFile>README.md</PackageReadmeFile>
+        <NoWarn>CS1591,CS8618</NoWarn>
     </PropertyGroup>
 
     <ItemGroup>
@@ -24,5 +25,7 @@
 
     <ItemGroup>
         <None Include="..\..\..\README.md" Pack="true" PackagePath="\" />
+        <AdditionalFiles Include="*.yaml" />
+        <ProjectReference Include="..\..\KubernetesCRDModelGen.SourceGenerator\KubernetesCRDModelGen.SourceGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" PrivateAssets="all" />
     </ItemGroup>
 </Project>
