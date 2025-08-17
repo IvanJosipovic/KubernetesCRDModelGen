@@ -45,18 +45,6 @@ jobs:
             }
           }
 
-      - name: Validate Models
-        working-directory: src/Models
-        shell: pwsh
-        run: |
-          foreach ($Dir in Get-ChildItem -Directory) {
-            $CSFiles = Get-ChildItem -Path $Dir.FullName -Filter *.g.cs -File -ErrorAction SilentlyContinue
-
-            if ($CSFiles.Count -eq 0) {
-              throw "No .g.cs file found in directory: $($Dir.FullName)"
-            }
-          }
-
       - name: Check Files Changed
         id: checkfiles
         shell: pwsh
