@@ -71,7 +71,9 @@ public class CodeGenerator : ICodeGenerator
 
         var types = new List<BaseTypeDeclarationSyntax>();
 
-        var @class = SyntaxFactory.ClassDeclaration(CleanIdentifier((isRoot ? version : string.Empty) + " " + kind))
+        var className = CleanIdentifier((isRoot ? version : string.Empty) + " " + kind);
+
+        var @class = SyntaxFactory.ClassDeclaration(className)
                         .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.PartialKeyword))
                         .AddAttributeLists(SyntaxFactory.AttributeList()
                             .AddAttributes(
@@ -122,7 +124,7 @@ public class CodeGenerator : ICodeGenerator
 
             @classList = @classList.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName("IKubernetesObject<V1ListMeta>")));
 
-            @classList = @classList.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName($"IItems<{CleanIdentifier(version + " " + kind)}>")));
+            @classList = @classList.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName($"IItems<{className}>")));
 
             // Create an attribute syntax for the KubernetesEntity attribute
             var kubernetesEntityAttribute = SyntaxFactory.Attribute(
@@ -212,28 +214,29 @@ public class CodeGenerator : ICodeGenerator
                     .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.ConstKeyword));
 
             // Create a property declaration for ApiVersion
-            var apiVersion = CreateProperty("string", "apiVersion");
+            var apiVersion = CreateProperty("string", "apiVersion", "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources");
 
             // Create a property declaration for Kind
-            var kindProp = CreateProperty("string", "kind");
+            var kindProp = CreateProperty("string", "kind", "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds");
 
             // Create a property declaration for Metadata
-            var metaProp = CreateProperty("V1ObjectMeta", "metadata");
-
-            // Create a property declaration for List Metadata
-            var metaListProp = CreateProperty("V1ListMeta", "metadata");
-
-            // Create a property declaration for List Kind
-            var kindListProp = CreateProperty($"IList<{CleanIdentifier(version + " " + kind)}>", "items");
+            var metaProp = CreateProperty("V1ObjectMeta", "metadata", "Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata");
 
             @class = @class.AddMembers(kubeApiVersion, kubeKind, kubeGroup, kubePluralName, apiVersion, kindProp, metaProp);
+
+            // Create a property declaration for List Metadata
+            var metaListProp = CreateProperty("V1ListMeta", "metadata", "ListMeta describes metadata that synthetic resources must have, including lists and various status objects. A resource may have only one of {ObjectMeta, ListMeta}.");
+
+            // Create a property declaration for List Kind
+            var kindListProp = CreateProperty($"IList<{className}>", "items", $"List of {className} objects.");
+
             @classList = @classList.AddMembers(kubeApiVersion, kubeListKind, kubeGroup, kubePluralName, apiVersion, kindProp, metaListProp, kindListProp);
             types.Add(@classList);
         }
 
         if (schema.Extensions != null && schema.Extensions.TryGetValue(KubePreserveUnknownFields, out var preserve) && preserve is JsonNodeExtension preserve1 && preserve1.Node.GetValueKind() == JsonValueKind.True)
-        {            // Create property
-
+        {
+            // Create property
             var property = SyntaxFactory.PropertyDeclaration(
                     SyntaxFactory.NullableType(
                         SyntaxFactory.ParseTypeName("IDictionary<string, JsonElement>")
