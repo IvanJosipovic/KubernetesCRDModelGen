@@ -64,6 +64,7 @@ We publish the following premade packages
 | argoproj.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.argoproj.io/) |
 | aws.upbound.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.aws.upbound.io/) |
 | azure.com | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.azure.com/)  |
+| azuread.upbound.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.azuread.upbound.io/) |
 | azure.upbound.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.azure.upbound.io/) |
 | cnrm.cloud.google.com | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.cnrm.cloud.google.com/) |
 | crossplane.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.crossplane.io/) |
@@ -76,6 +77,7 @@ We publish the following premade packages
 | jetstack.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.jetstack.io/) |
 | keda.sh | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.keda.sh/) |
 | knative.dev | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.knative.dev/) |
+| kubernetes.crossplane.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.kubernetes.crossplane.io/) |
 | kubevirt.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.kubevirt.io/) |
 | postgresql.cnpg.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.postgresql.cnpg.io/) |
 | projectcalico.org | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.projectcalico.org/) |
