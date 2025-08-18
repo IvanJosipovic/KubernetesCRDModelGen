@@ -87,7 +87,6 @@ We publish the following premade packages
 | storage.k8s.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.storage.k8s.io) |
 | tf.upbound.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.tf.upbound.io/) |
 | traefik.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.traefik.io/) |
-| upbound.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.upbound.io/) |
 | vault.upbound.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.vault.upbound.io/) |
 
 ## Type Mappings
