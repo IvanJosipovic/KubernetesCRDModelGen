@@ -3,8 +3,8 @@
     <PropertyGroup>
         <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
         <Authors>Ivan Josipovic</Authors>
-        <Description>Converts Custom Resource Definition Yaml files to Models</Description>
-        <PackageTags>Kubernetes Yaml CRD Converts Custom Resource Model</PackageTags>
+        <Description>Converts Kubernetes Custom Resource Definition Yaml files to Models</Description>
+        <PackageTags>Kubernetes CRD CustomResourceDefinition Model Convert Yaml</PackageTags>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <LangVersion>latest</LangVersion>
@@ -38,7 +38,7 @@
 
     <Target Name="EmbedResolveReferences" AfterTargets="ResolveReferences">
         <ItemGroup>
-            <FilesToEmbed Include="@(ReferencePath)" Condition="('%(ReferencePath.Filename)' == 'KubernetesClient' Or '%(ReferencePath.Filename)' == 'System.Text.Json' Or '%(ReferencePath.Filename)' == 'System.Runtime')" />
+            <FilesToEmbed Include="@(ReferencePath)" Condition="('%(ReferencePath.Filename)' == 'KubernetesClient' Or '%(ReferencePath.Filename)' == 'System.Text.Json' Or '%(ReferencePath.Filename)' == 'System.Runtime' Or '%(ReferencePath.Filename)' == 'System.Runtime.Serialization.Primitives')" />
 
             <XmlFilesToEmbed Include="@(FilesToEmbed-&gt;'%(RelativeDir)%(FileName).xml'-&gt; Exists())" Condition="('%(FilesToEmbed.Filename)' == 'KubernetesClient')" />
 

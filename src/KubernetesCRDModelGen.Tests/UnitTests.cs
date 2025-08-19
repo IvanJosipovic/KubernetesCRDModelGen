@@ -1278,7 +1278,7 @@ spec:
         itemType.Should().Be<IntstrIntOrString>();
     }
 
-    [Fact(Skip = "Enum Support")]
+    [Fact]
     public void TestEnumDuplicate()
     {
         var yaml = @"
@@ -1339,7 +1339,7 @@ spec:
         members[2].GetCustomAttribute<EnumMemberAttribute>().Value.Should().Be("Always-");
     }
 
-    [Fact(Skip = "Enum Support")]
+    [Fact]
     public void TestEnumString()
     {
         var yaml = @"
@@ -1400,7 +1400,7 @@ spec:
         members[2].GetCustomAttribute<EnumMemberAttribute>().Value.Should().Be("never");
     }
 
-    [Fact(Skip = "Enum Support")]
+    [Fact]
     public void TestEnumArray()
     {
         var yaml = @"
@@ -1465,7 +1465,61 @@ spec:
         members[2].GetCustomAttribute<EnumMemberAttribute>().Value.Should().Be("test_test");
     }
 
-    [Fact(Skip = "Enum Support")]
+    [Fact]
+    public void TestEnumStringEmpty()
+    {
+        var yaml = @"
+    apiVersion: apiextensions.k8s.io/v1
+    kind: CustomResourceDefinition
+    metadata:
+      name: tests.kubeui.com
+    spec:
+      group: kubeui.com
+      names:
+        plural: tests
+        singular: test
+        kind: Test
+        listKind: TestList
+      scope: Namespaced
+      versions:
+        - name: v1beta1
+          served: true
+          storage: true
+          schema:
+            openAPIV3Schema:
+              type: object
+              properties:
+                apiVersion:
+                  type: string
+                kind:
+                  type: string
+                metadata:
+                  type: object
+                spec:
+                  type: object
+                  properties:
+                    testEnum:
+                      enum:
+                      - always
+                      - ''
+                      - never
+                      type: string
+    ";
+        var code = GetCode(yaml);
+        var type = GetTypeYaml(yaml, "Test");
+
+        var specType = type.GetProperty("Spec").PropertyType;
+
+        var enumType = specType.GetProperty("TestEnum").PropertyType;
+
+        enumType.Should().Be<string>();
+    }
+
+    /// <summary>
+    /// Enums with blank values are not supported by JsonStringEnumConverter
+    /// https://github.com/dotnet/runtime/issues/107367
+    /// </summary>
+    [Fact(Skip = "Enums with empty values are not supported")]
     public void TestEnumStringEmptyJson()
     {
         var yaml = @"
@@ -1538,7 +1592,11 @@ spec:
         testJson2.Should().Be(testJson);
     }
 
-    [Fact(Skip = "Enum Support")]
+    /// <summary>
+    /// Enums with blank values are not supported by JsonStringEnumConverter
+    /// https://github.com/dotnet/runtime/issues/107367
+    /// </summary>
+    [Fact(Skip = "Enums with empty values are not supported")]
     public void TestEnumStringEmptyYaml()
     {
         var yaml = @"
@@ -1612,7 +1670,7 @@ spec:
         testYaml2.Should().Be(testYaml);
     }
 
-    [Fact(Skip = "Enum Support")]
+    [Fact]
     public void TestEnumDeSerializeJson()
     {
         var yaml = @"
@@ -1679,7 +1737,7 @@ spec:
         spec.GetType().GetProperty("TestEnum")!.GetValue(spec)!.Should().Be(Enum.Parse(enumType, "TestTest"));
     }
 
-    [Fact(Skip = "Enum Support")]
+    [Fact]
     public void TestEnumArrayDeSerializeJson()
     {
         var yaml = @"
@@ -1753,7 +1811,7 @@ spec:
         ((IList)prop)[0].Should().Be(Enum.Parse(enumType, "TestTest"));
     }
 
-    [Fact(Skip = "Enum Support")]
+    [Fact]
     public void TestEnumSerializeJson()
     {
         var yaml = @"
@@ -1816,7 +1874,7 @@ spec:
         objJson.Should().Be("""{"apiVersion":"v1beta1","kind":"Test","spec":{"testEnum":"test_test"}}""");
     }
 
-    [Fact(Skip = "Enum Support")]
+    [Fact]
     public void TestEnumArraySerializeJson()
     {
         var yaml = @"
@@ -1885,7 +1943,7 @@ spec:
         objJson.Should().Be("""{"apiVersion":"v1beta1","kind":"Test","spec":{"testEnum":["test_test"]}}""");
     }
 
-    [Fact(Skip = "Enum Support")]
+    [Fact]
     public void TestEnumDeSerializeYaml()
     {
         var yaml = @"
@@ -1949,7 +2007,7 @@ spec:
         spec.GetType().GetProperty("TestEnum")!.GetValue(spec)!.Should().Be(Enum.Parse(enumType, "TestTest"));
     }
 
-    [Fact(Skip = "Enum Support")]
+    [Fact]
     public void TestEnumArrayDeSerializeYaml()
     {
         var yaml = @"
@@ -2018,7 +2076,7 @@ spec:
         list[0].Should().Be(Enum.Parse(enumType, "TestTest"));
     }
 
-    [Fact(Skip = "Enum Support")]
+    [Fact]
     public void TestEnumSerializeYaml()
     {
         var yaml = @"
@@ -2086,7 +2144,7 @@ spec:
 """);
     }
 
-    [Fact(Skip = "Enum Support")]
+    [Fact]
     public void TestEnumArraySerializeYaml()
     {
         var yaml = @"

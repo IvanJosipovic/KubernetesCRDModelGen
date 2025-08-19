@@ -3,7 +3,7 @@
         <TargetFrameworks>net8.0</TargetFrameworks>
         <Authors>Ivan Josipovic</Authors>
         <Description>Kubernetes Custom Resource Definition Models</Description>
-        <PackageTags>Kubernetes Custom Resource Definition Models</PackageTags>
+        <PackageTags>Kubernetes CustomResourceDefinition CRD Models</PackageTags>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <LangVersion>latest</LangVersion>

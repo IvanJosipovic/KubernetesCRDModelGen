@@ -2,12 +2,21 @@
 
     <PropertyGroup>
         <TargetFrameworks>netstandard2.0</TargetFrameworks>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
-        <LangVersion>latest</LangVersion>
-        <IncludeSymbols>true</IncludeSymbols>
-        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<Authors>Ivan Josipovic</Authors>
+		<Description>Converts Kubernetes OpenApi Schema to Models</Description>
+		<PackageTags>Kubernetes V1JSONSchemaProps JSONSchemaProps Open Api Schema CRD CustomResourceDefinition Model JSON</PackageTags>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<LangVersion>latest</LangVersion>
+		<RepositoryUrl>https://github.com/IvanJosipovic/KubernetesCRDModelGen</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<IsPackable>true</IsPackable>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
     <ItemGroup>
@@ -17,6 +26,7 @@
     </ItemGroup>
 
     <ItemGroup>
+		<None Include="..\..\README.md" Pack="true" PackagePath="\" />
         <InternalsVisibleTo Include="KubernetesCRDModelGen.Tests" />
     </ItemGroup>
 </Project>
