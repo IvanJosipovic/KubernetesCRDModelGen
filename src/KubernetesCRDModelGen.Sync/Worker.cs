@@ -4,6 +4,7 @@ using ICSharpCode.SharpZipLib.Zip;
 using k8s;
 using k8s.Models;
 using System.Net.Http.Json;
+using System.Reflection;
 using System.Text;
 using YamlDotNet.Core;
 using YamlDotNet.Core.Events;
@@ -190,39 +191,59 @@ public class Worker : BackgroundService
 
     private void ProcessYamlStream(Config config, Stream stream)
     {
-        var serializer = new SerializerBuilder().Build();
-        var deserializer = new DeserializerBuilder()
-            .WithNodeTypeResolver(new MapTagsToObject())
-            .Build();
-
-        var txt = new StreamReader(stream);
-        var parser = new Parser(txt);
-        parser.Consume<StreamStart>();
-
-        while (parser.Accept<DocumentStart>(out var start))
+        try
         {
-            var doc = deserializer.Deserialize(parser);
-            var yaml = serializer.Serialize(doc);
+            var txt = new StreamReader(stream);
+            var crds = LoadAllFromString(txt.ReadToEnd());
 
-            if (yaml.Trim().Equals("---")) continue;
-
-            try
+            foreach (object resource in crds)
             {
-                var meta = KubernetesYaml.Deserialize<GenericObject>(yaml);
-                var key = $"{meta.ApiVersion}/{meta.Kind}";
-
-                if (key == $"{V1CustomResourceDefinition.KubeGroup}/{V1CustomResourceDefinition.KubeApiVersion}/{V1CustomResourceDefinition.KubeKind}")
+                if (resource is V1CustomResourceDefinition crd)
                 {
-                    var filePath = Path.Combine(GetProjectPath(config), meta.Name() + ".yaml");
+                    var filePath = Path.Combine(GetProjectPath(config), crd.Name() + ".yaml");
 
-                    File.WriteAllText(filePath, yaml);
+                    File.WriteAllText(filePath, KubernetesYaml.Serialize(crd));
                 }
             }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error processing yaml");
-            }
         }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error processing yaml");
+        }
+    }
+
+    private static IDeserializer GetDeserializer(bool strict)
+    {
+        var type = typeof(k8s.KubernetesYaml);
+        var method = type.GetMethod("GetDeserializer", BindingFlags.NonPublic | BindingFlags.Static);
+        if (method == null)
+        {
+            throw new Exception("GetDeserializer Method Not Found");
+        }
+        return (IDeserializer)method.Invoke(null, [strict]);
+    }
+
+    private static List<object> LoadAllFromString(string content)
+    {
+        var parser = new MergingParser(new Parser(new StringReader(content)));
+        var deserializer = GetDeserializer(false);
+        parser.Consume<StreamStart>();
+
+        var results = new List<object>();
+
+        while (parser.Accept<DocumentStart>(out _))
+        {
+            var obj = deserializer.Deserialize(parser, typeof(V1CustomResourceDefinition)) as V1CustomResourceDefinition;
+
+            if (obj == null || obj.Kind != V1CustomResourceDefinition.KubeKind || obj.ApiVersion != $"{V1CustomResourceDefinition.KubeGroup}/{V1CustomResourceDefinition.KubeApiVersion}")
+            {
+                continue;
+            }
+
+            results.Add(obj);
+        }
+
+        return results;
     }
 
     private static string GetName(Config config)
