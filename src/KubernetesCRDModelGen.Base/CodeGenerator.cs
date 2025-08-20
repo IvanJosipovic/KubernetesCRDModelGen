@@ -18,7 +18,7 @@ public class CodeGenerator : ICodeGenerator
 
     private const string KubeIntOrString = "x-kubernetes-int-or-string";
 
-    private bool EnumSupport = false;
+    private bool EnumSupport = true;
 
     /// <summary>
     /// Initializes a new instance of the <see cref="CodeGenerator"/> class.
@@ -350,7 +350,7 @@ public class CodeGenerator : ICodeGenerator
                 }
             case JsonSchemaType.Null | JsonSchemaType.String:
             case JsonSchemaType.String:
-                if (EnumSupport && schema.Enum != null && schema.Enum.Any())
+                if (EnumSupport && schema.Enum != null && schema.Enum.Any() && schema.Enum.All(x => !string.IsNullOrEmpty(x.GetValue<string>())))
                     return GenerateEnum(schema, types, parentClassName, propertyName);
                 return "string";
             case JsonSchemaType.Null | JsonSchemaType.Number:
@@ -368,7 +368,7 @@ public class CodeGenerator : ICodeGenerator
             case JsonSchemaType.Null | JsonSchemaType.Array:
             case JsonSchemaType.Array:
 
-                if (EnumSupport && schema.Enum != null && schema.Enum.Any())
+                if (EnumSupport && schema.Enum != null && schema.Enum.Any() && schema.Enum.All(x => !string.IsNullOrEmpty(x.GetValue<string>())))
                 {
                     return $"IList<{GenerateEnum(schema, types, parentClassName, propertyName)}>";
                 }
@@ -388,11 +388,11 @@ public class CodeGenerator : ICodeGenerator
                 [
                     SyntaxFactory.Attribute(
                         SyntaxFactory.ParseName("global::System.CodeDom.Compiler.GeneratedCode"))
-                        .WithArgumentList(SyntaxFactory.AttributeArgumentList(SyntaxFactory.SeparatedList(new[]
-                        {
+                        .WithArgumentList(SyntaxFactory.AttributeArgumentList(SyntaxFactory.SeparatedList(
+                        [
                             SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("KubernetesCRDModelGen.Tool"))),
                             SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("1.0.0.0")))
-                        }))),
+                        ]))),
                 ])
             )
             .WithLeadingTrivia(
@@ -476,12 +476,12 @@ public class CodeGenerator : ICodeGenerator
         propDecleration = propDecleration.WithAccessorList(
             SyntaxFactory.AccessorList(
                 SyntaxFactory.List(
-                    new AccessorDeclarationSyntax[]{
-                                SyntaxFactory.AccessorDeclaration(SyntaxKind.GetAccessorDeclaration)
-                                    .WithSemicolonToken(SyntaxFactory.Token(SyntaxKind.SemicolonToken)),
-                                SyntaxFactory.AccessorDeclaration(SyntaxKind.SetAccessorDeclaration)
-                                    .WithSemicolonToken(SyntaxFactory.Token(SyntaxKind.SemicolonToken))
-                    })));
+                    [
+                        SyntaxFactory.AccessorDeclaration(SyntaxKind.GetAccessorDeclaration)
+                            .WithSemicolonToken(SyntaxFactory.Token(SyntaxKind.SemicolonToken)),
+                        SyntaxFactory.AccessorDeclaration(SyntaxKind.SetAccessorDeclaration)
+                            .WithSemicolonToken(SyntaxFactory.Token(SyntaxKind.SemicolonToken))
+                    ])));
 
         propDecleration = propDecleration.AddAttributeLists(
             SyntaxFactory.AttributeList(
@@ -611,4 +611,5 @@ public class CodeGenerator : ICodeGenerator
         string sanitizedFileName = new([.. fileName.Where(c => !Path.GetInvalidFileNameChars().Contains(c))]);
 
         return sanitizedFileName;
-    }}
+    }
+}
