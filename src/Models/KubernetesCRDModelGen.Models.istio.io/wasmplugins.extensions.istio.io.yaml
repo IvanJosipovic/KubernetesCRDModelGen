@@ -35,9 +35,8 @@ spec:
             description: 'Extend the functionality provided by the Istio proxy through WebAssembly filters. See more details at: https://istio.io/docs/reference/config/proxy_extensions/wasm-plugin.html'
             properties:
               failStrategy:
-                description: >-
+                description: |-
                   Specifies the failure behavior for the plugin due to fatal errors.
-
 
                   Valid Options: FAIL_CLOSE, FAIL_OPEN, FAIL_RELOAD
                 enum:
@@ -46,9 +45,8 @@ spec:
                 - FAIL_RELOAD
                 type: string
               imagePullPolicy:
-                description: >-
+                description: |-
                   The pull behaviour to be applied when fetching Wasm module by either OCI image or `http/https`.
-
 
                   Valid Options: IfNotPresent, Always
                 enum:
@@ -66,9 +64,8 @@ spec:
                 items:
                   properties:
                     mode:
-                      description: >-
+                      description: |-
                         Criteria for selecting traffic by their direction.
-
 
                         Valid Options: CLIENT, SERVER, CLIENT_AND_SERVER
                       enum:
@@ -95,9 +92,8 @@ spec:
                   type: object
                 type: array
               phase:
-                description: >-
+                description: |-
                   Determines where in the filter chain this `WasmPlugin` is to be injected.
-
 
                   Valid Options: AUTHN, AUTHZ, STATS
                 enum:
@@ -204,9 +200,8 @@ spec:
                 maxItems: 16
                 type: array
               type:
-                description: >-
+                description: |-
                   Specifies the type of Wasm Extension to be used.
-
 
                   Valid Options: HTTP, NETWORK
                 enum:
@@ -220,9 +215,8 @@ spec:
                 type: string
                 x-kubernetes-validations:
                 - message: url must have schema one of [http, https, file, oci]
-                  rule: >-
+                  rule: |-
                     isURL(self) ? (url(self).getScheme() in ["", "http", "https", "oci", "file"]) : (isURL("http://" + self) &&
-
                     url("http://" + self).getScheme() in ["", "http", "https", "oci", "file"])
               verificationKey:
                 type: string
@@ -243,9 +237,8 @@ spec:
                           maxLength: 2048
                           type: string
                         valueFrom:
-                          description: >-
+                          description: |-
                             Source for the environment variable's value.
-
 
                             Valid Options: INLINE, HOST
                           enum:
@@ -317,9 +310,8 @@ spec:
                       description: A url pointing to the Istio documentation for this specific error type.
                       type: string
                     level:
-                      description: >-
+                      description: |-
                         Represents how severe a message is.
-
 
                         Valid Options: UNKNOWN, ERROR, WARNING, INFO
                       enum:

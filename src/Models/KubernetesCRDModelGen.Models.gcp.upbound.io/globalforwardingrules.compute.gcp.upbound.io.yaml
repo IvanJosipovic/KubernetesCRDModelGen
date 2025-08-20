@@ -36,25 +36,18 @@ spec:
         description: GlobalForwardingRule is the Schema for the GlobalForwardingRules API. Represents a GlobalForwardingRule resource.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -64,19 +57,13 @@ spec:
             properties:
               deletionPolicy:
                 default: Delete
-                description: >-
+                description: |-
                   DeletionPolicy specifies what will happen to the underlying external
-
                   when this managed resource is deleted - either "Delete" or "Orphan" the
-
                   external resource.
-
                   This field is planned to be deprecated in favor of the ManagementPolicies
-
                   field in a future release. Currently, both could be set independently and
-
                   non-default values would be honored if the feature flag is enabled.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
                 enum:
                 - Orphan
@@ -85,59 +72,39 @@ spec:
               forProvider:
                 properties:
                   description:
-                    description: >-
+                    description: |-
                       An optional description of this resource. Provide this property when
-
                       you create the resource.
                     type: string
                   externalManagedBackendBucketMigrationState:
-                    description: >-
+                    description: |-
                       Specifies the canary migration state for the backend buckets attached to this forwarding rule.
-
                       Possible values are PREPARE, TEST_BY_PERCENTAGE, and TEST_ALL_TRAFFIC.
-
                       To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to
-
                       PREPARE. The state must be changed to TEST_ALL_TRAFFIC before the loadBalancingScheme can be
-
                       changed to EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate
-
                       traffic to backend buckets attached to this forwarding rule by percentage using
-
                       externalManagedBackendBucketMigrationTestingPercentage.
-
                       Rolling back a migration requires the states to be set in reverse order. So changing the
-
                       scheme from EXTERNAL_MANAGED to EXTERNAL requires the state to be set to TEST_ALL_TRAFFIC at
-
                       the same time. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate some traffic
-
                       back to EXTERNAL or PREPARE can be used to migrate all traffic back to EXTERNAL.
-
                       Possible values are: PREPARE, TEST_BY_PERCENTAGE, TEST_ALL_TRAFFIC.
                     type: string
                   externalManagedBackendBucketMigrationTestingPercentage:
-                    description: >-
+                    description: |-
                       Determines the fraction of requests to backend buckets that should be processed by the Global
-
                       external Application Load Balancer.
-
                       The value of this field must be in the range [0, 100].
-
                       This value can only be set if the loadBalancingScheme in the forwarding rule is set to
-
                       EXTERNAL (when using the Classic ALB) and the migration state is TEST_BY_PERCENTAGE.
                     type: number
                   ipAddress:
-                    description: >-
+                    description: |-
                       IP address for which this forwarding rule accepts traffic. When a client
-
                       sends traffic to this IP address, the forwarding rule directs the traffic
-
                       to the referenced target.
-
                       While creating a forwarding rule, specifying an IPAddress is
-
                       required under the following circumstances:
                     type: string
                   ipAddressRef:
@@ -151,26 +118,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -184,9 +145,8 @@ spec:
                     description: Selector for a GlobalAddress in compute to populate ipAddress.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -199,26 +159,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -227,29 +181,20 @@ spec:
                         type: object
                     type: object
                   ipProtocol:
-                    description: >-
+                    description: |-
                       The IP protocol to which this rule applies.
-
                       For protocol forwarding, valid
-
                       options are TCP, UDP, ESP,
-
                       AH, SCTP, ICMP and
-
                       L3_DEFAULT.
-
                       The valid IP protocols are different for different load balancing products
-
                       as described in Load balancing
-
                       features.
-
                       Possible values are: TCP, UDP, ESP, AH, SCTP, ICMP.
                     type: string
                   ipVersion:
-                    description: >-
+                    description: |-
                       The IP Version that will be used by this global forwarding rule.
-
                       Possible values are: IPV4, IPV6.
                     type: string
                   labels:
@@ -259,127 +204,82 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   loadBalancingScheme:
-                    description: >-
+                    description: |-
                       Specifies the forwarding rule type.
-
                       For more information about forwarding rules, refer to
-
                       Forwarding rule concepts.
-
                       Default value is EXTERNAL.
-
                       Possible values are: EXTERNAL, EXTERNAL_MANAGED, INTERNAL_MANAGED, INTERNAL_SELF_MANAGED.
                     type: string
                   metadataFilters:
-                    description: >-
+                    description: |-
                       Opaque filter criteria used by Loadbalancer to restrict routing
-
                       configuration to a limited set xDS compliant clients. In their xDS
-
                       requests to Loadbalancer, xDS clients present node metadata. If a
-
                       match takes place, the relevant routing configuration is made available
-
                       to those proxies.
-
                       For each metadataFilter in this list, if its filterMatchCriteria is set
-
                       to MATCH_ANY, at least one of the filterLabels must match the
-
                       corresponding label provided in the metadata. If its filterMatchCriteria
-
                       is set to MATCH_ALL, then all of its filterLabels must match with
-
                       corresponding labels in the provided metadata.
-
                       metadataFilters specified here can be overridden by those specified in
-
                       the UrlMap that this ForwardingRule references.
-
                       metadataFilters only applies to Loadbalancers that have their
-
                       loadBalancingScheme set to INTERNAL_SELF_MANAGED.
-
                       Structure is documented below.
                     items:
                       properties:
                         filterLabels:
-                          description: >-
+                          description: |-
                             The list of label value pairs that must match labels in the
-
                             provided metadata based on filterMatchCriteria
-
                             This list must not be empty and can have at the most 64 entries.
-
                             Structure is documented below.
                           items:
                             properties:
                               name:
-                                description: >-
+                                description: |-
                                   Name of the resource; provided by the client when the resource is created.
-
                                   The name must be 1-63 characters long, and comply with
-
                                   RFC1035.
-
                                   Specifically, the name must be 1-63 characters long and match the regular
-
                                   expression [a-z]([-a-z0-9]*[a-z0-9])? which means the first
-
                                   character must be a lowercase letter, and all following characters must
-
                                   be a dash, lowercase letter, or digit, except the last character, which
-
                                   cannot be a dash.
-
                                   For Private Service Connect forwarding rules that forward traffic to Google
-
                                   APIs, the forwarding rule name must be a 1-20 characters string with
-
                                   lowercase letters and numbers and must start with a letter.
                                 type: string
                               value:
-                                description: >-
+                                description: |-
                                   The value that the label must match. The value has a maximum
-
                                   length of 1024 characters.
                                 type: string
                             type: object
                           type: array
                         filterMatchCriteria:
-                          description: >-
+                          description: |-
                             Specifies how individual filterLabel matches within the list of
-
                             filterLabels contribute towards the overall metadataFilter match.
-
                             MATCH_ANY - At least one of the filterLabels must have a matching
-
                             label in the provided metadata.
-
                             MATCH_ALL - All filterLabels must have matching labels in the
-
                             provided metadata.
-
                             Possible values are: MATCH_ANY, MATCH_ALL.
                           type: string
                       type: object
                     type: array
                   network:
-                    description: >-
+                    description: |-
                       This field is not used for external load balancing.
-
                       For Internal TCP/UDP Load Balancing, this field identifies the network that
-
                       the load balanced IP should belong to for this Forwarding Rule.
-
                       If the subnetwork is specified, the network of the subnetwork will be used.
-
                       If neither subnetwork nor this field is specified, the default network will
-
                       be used.
-
                       For Private Service Connect forwarding rules that forward traffic to Google
-
                       APIs, a network must be provided.
                     type: string
                   networkRef:
@@ -393,26 +293,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -426,9 +320,8 @@ spec:
                     description: Selector for a Network in compute to populate network.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -441,26 +334,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -469,25 +356,16 @@ spec:
                         type: object
                     type: object
                   networkTier:
-                    description: >-
+                    description: |-
                       This signifies the networking tier used for configuring
-
                       this load balancer and can only take the following values:
-
                       PREMIUM, STANDARD.
-
                       For regional ForwardingRule, the valid values are PREMIUM and
-
                       STANDARD. For GlobalForwardingRule, the valid value is
-
                       PREMIUM.
-
                       If this field is not specified, it is assumed to be PREMIUM.
-
                       If IPAddress is specified, this value must be equal to the
-
                       networkTier of the Address.
-
                       Possible values are: PREMIUM, STANDARD.
                     type: string
                   noAutomateDnsZone:
@@ -497,9 +375,8 @@ spec:
                     description: 'The portRange field has the following limitations:'
                     type: string
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   projectRef:
@@ -513,26 +390,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -546,9 +417,8 @@ spec:
                     description: Selector for a Network in compute to populate project.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -561,26 +431,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -589,11 +453,9 @@ spec:
                         type: object
                     type: object
                   serviceDirectoryRegistrations:
-                    description: >-
+                    description: |-
                       Service Directory resources to register this forwarding rule with.
-
                       Currently, only supports a single Service Directory resource.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -601,13 +463,10 @@ spec:
                           description: Service Directory namespace to register the forwarding rule under.
                           type: string
                         serviceDirectoryRegion:
-                          description: >-
+                          description: |-
                             [Optional] Service Directory region to register this global forwarding rule under.
-
                             Default to "us-central1". Only used for PSC for Google APIs. All PSC for
-
                             Google APIs Forwarding Rules on the same network should use the same Service
-
                             Directory region.
                           type: string
                       type: object
@@ -618,17 +477,12 @@ spec:
                       type: string
                     type: array
                   subnetwork:
-                    description: >-
+                    description: |-
                       This field identifies the subnetwork that the load balanced IP should
-
                       belong to for this Forwarding Rule, used in internal load balancing and
-
                       network load balancing with IPv6.
-
                       If the network specified is in auto subnet mode, this field is optional.
-
                       However, a subnetwork must be specified if the network is in custom subnet
-
                       mode or when creating external forwarding rule with IPv6.
                     type: string
                   subnetworkRef:
@@ -642,26 +496,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -675,9 +523,8 @@ spec:
                     description: Selector for a Subnetwork in compute to populate subnetwork.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -690,26 +537,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -718,15 +559,11 @@ spec:
                         type: object
                     type: object
                   target:
-                    description: >-
+                    description: |-
                       The URL of the target resource to receive the matched traffic.  For
-
                       regional forwarding rules, this target must be in the same region as the
-
                       forwarding rule. For global forwarding rules, this target must be a global
-
                       load balancing resource.
-
                       The forwarded traffic must be of a type appropriate to the target object.
                     type: string
                   targetRef:
@@ -740,26 +577,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -773,9 +604,8 @@ spec:
                     description: Selector for a TargetSSLProxy in compute to populate target.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -788,26 +618,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -817,81 +641,52 @@ spec:
                     type: object
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   description:
-                    description: >-
+                    description: |-
                       An optional description of this resource. Provide this property when
-
                       you create the resource.
                     type: string
                   externalManagedBackendBucketMigrationState:
-                    description: >-
+                    description: |-
                       Specifies the canary migration state for the backend buckets attached to this forwarding rule.
-
                       Possible values are PREPARE, TEST_BY_PERCENTAGE, and TEST_ALL_TRAFFIC.
-
                       To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to
-
                       PREPARE. The state must be changed to TEST_ALL_TRAFFIC before the loadBalancingScheme can be
-
                       changed to EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate
-
                       traffic to backend buckets attached to this forwarding rule by percentage using
-
                       externalManagedBackendBucketMigrationTestingPercentage.
-
                       Rolling back a migration requires the states to be set in reverse order. So changing the
-
                       scheme from EXTERNAL_MANAGED to EXTERNAL requires the state to be set to TEST_ALL_TRAFFIC at
-
                       the same time. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate some traffic
-
                       back to EXTERNAL or PREPARE can be used to migrate all traffic back to EXTERNAL.
-
                       Possible values are: PREPARE, TEST_BY_PERCENTAGE, TEST_ALL_TRAFFIC.
                     type: string
                   externalManagedBackendBucketMigrationTestingPercentage:
-                    description: >-
+                    description: |-
                       Determines the fraction of requests to backend buckets that should be processed by the Global
-
                       external Application Load Balancer.
-
                       The value of this field must be in the range [0, 100].
-
                       This value can only be set if the loadBalancingScheme in the forwarding rule is set to
-
                       EXTERNAL (when using the Classic ALB) and the migration state is TEST_BY_PERCENTAGE.
                     type: number
                   ipAddress:
-                    description: >-
+                    description: |-
                       IP address for which this forwarding rule accepts traffic. When a client
-
                       sends traffic to this IP address, the forwarding rule directs the traffic
-
                       to the referenced target.
-
                       While creating a forwarding rule, specifying an IPAddress is
-
                       required under the following circumstances:
                     type: string
                   ipAddressRef:
@@ -905,26 +700,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -938,9 +727,8 @@ spec:
                     description: Selector for a GlobalAddress in compute to populate ipAddress.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -953,26 +741,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -981,29 +763,20 @@ spec:
                         type: object
                     type: object
                   ipProtocol:
-                    description: >-
+                    description: |-
                       The IP protocol to which this rule applies.
-
                       For protocol forwarding, valid
-
                       options are TCP, UDP, ESP,
-
                       AH, SCTP, ICMP and
-
                       L3_DEFAULT.
-
                       The valid IP protocols are different for different load balancing products
-
                       as described in Load balancing
-
                       features.
-
                       Possible values are: TCP, UDP, ESP, AH, SCTP, ICMP.
                     type: string
                   ipVersion:
-                    description: >-
+                    description: |-
                       The IP Version that will be used by this global forwarding rule.
-
                       Possible values are: IPV4, IPV6.
                     type: string
                   labels:
@@ -1013,127 +786,82 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   loadBalancingScheme:
-                    description: >-
+                    description: |-
                       Specifies the forwarding rule type.
-
                       For more information about forwarding rules, refer to
-
                       Forwarding rule concepts.
-
                       Default value is EXTERNAL.
-
                       Possible values are: EXTERNAL, EXTERNAL_MANAGED, INTERNAL_MANAGED, INTERNAL_SELF_MANAGED.
                     type: string
                   metadataFilters:
-                    description: >-
+                    description: |-
                       Opaque filter criteria used by Loadbalancer to restrict routing
-
                       configuration to a limited set xDS compliant clients. In their xDS
-
                       requests to Loadbalancer, xDS clients present node metadata. If a
-
                       match takes place, the relevant routing configuration is made available
-
                       to those proxies.
-
                       For each metadataFilter in this list, if its filterMatchCriteria is set
-
                       to MATCH_ANY, at least one of the filterLabels must match the
-
                       corresponding label provided in the metadata. If its filterMatchCriteria
-
                       is set to MATCH_ALL, then all of its filterLabels must match with
-
                       corresponding labels in the provided metadata.
-
                       metadataFilters specified here can be overridden by those specified in
-
                       the UrlMap that this ForwardingRule references.
-
                       metadataFilters only applies to Loadbalancers that have their
-
                       loadBalancingScheme set to INTERNAL_SELF_MANAGED.
-
                       Structure is documented below.
                     items:
                       properties:
                         filterLabels:
-                          description: >-
+                          description: |-
                             The list of label value pairs that must match labels in the
-
                             provided metadata based on filterMatchCriteria
-
                             This list must not be empty and can have at the most 64 entries.
-
                             Structure is documented below.
                           items:
                             properties:
                               name:
-                                description: >-
+                                description: |-
                                   Name of the resource; provided by the client when the resource is created.
-
                                   The name must be 1-63 characters long, and comply with
-
                                   RFC1035.
-
                                   Specifically, the name must be 1-63 characters long and match the regular
-
                                   expression [a-z]([-a-z0-9]*[a-z0-9])? which means the first
-
                                   character must be a lowercase letter, and all following characters must
-
                                   be a dash, lowercase letter, or digit, except the last character, which
-
                                   cannot be a dash.
-
                                   For Private Service Connect forwarding rules that forward traffic to Google
-
                                   APIs, the forwarding rule name must be a 1-20 characters string with
-
                                   lowercase letters and numbers and must start with a letter.
                                 type: string
                               value:
-                                description: >-
+                                description: |-
                                   The value that the label must match. The value has a maximum
-
                                   length of 1024 characters.
                                 type: string
                             type: object
                           type: array
                         filterMatchCriteria:
-                          description: >-
+                          description: |-
                             Specifies how individual filterLabel matches within the list of
-
                             filterLabels contribute towards the overall metadataFilter match.
-
                             MATCH_ANY - At least one of the filterLabels must have a matching
-
                             label in the provided metadata.
-
                             MATCH_ALL - All filterLabels must have matching labels in the
-
                             provided metadata.
-
                             Possible values are: MATCH_ANY, MATCH_ALL.
                           type: string
                       type: object
                     type: array
                   network:
-                    description: >-
+                    description: |-
                       This field is not used for external load balancing.
-
                       For Internal TCP/UDP Load Balancing, this field identifies the network that
-
                       the load balanced IP should belong to for this Forwarding Rule.
-
                       If the subnetwork is specified, the network of the subnetwork will be used.
-
                       If neither subnetwork nor this field is specified, the default network will
-
                       be used.
-
                       For Private Service Connect forwarding rules that forward traffic to Google
-
                       APIs, a network must be provided.
                     type: string
                   networkRef:
@@ -1147,26 +875,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1180,9 +902,8 @@ spec:
                     description: Selector for a Network in compute to populate network.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -1195,26 +916,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1223,25 +938,16 @@ spec:
                         type: object
                     type: object
                   networkTier:
-                    description: >-
+                    description: |-
                       This signifies the networking tier used for configuring
-
                       this load balancer and can only take the following values:
-
                       PREMIUM, STANDARD.
-
                       For regional ForwardingRule, the valid values are PREMIUM and
-
                       STANDARD. For GlobalForwardingRule, the valid value is
-
                       PREMIUM.
-
                       If this field is not specified, it is assumed to be PREMIUM.
-
                       If IPAddress is specified, this value must be equal to the
-
                       networkTier of the Address.
-
                       Possible values are: PREMIUM, STANDARD.
                     type: string
                   noAutomateDnsZone:
@@ -1251,9 +957,8 @@ spec:
                     description: 'The portRange field has the following limitations:'
                     type: string
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   projectRef:
@@ -1267,26 +972,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1300,9 +999,8 @@ spec:
                     description: Selector for a Network in compute to populate project.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -1315,26 +1013,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1343,11 +1035,9 @@ spec:
                         type: object
                     type: object
                   serviceDirectoryRegistrations:
-                    description: >-
+                    description: |-
                       Service Directory resources to register this forwarding rule with.
-
                       Currently, only supports a single Service Directory resource.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -1355,13 +1045,10 @@ spec:
                           description: Service Directory namespace to register the forwarding rule under.
                           type: string
                         serviceDirectoryRegion:
-                          description: >-
+                          description: |-
                             [Optional] Service Directory region to register this global forwarding rule under.
-
                             Default to "us-central1". Only used for PSC for Google APIs. All PSC for
-
                             Google APIs Forwarding Rules on the same network should use the same Service
-
                             Directory region.
                           type: string
                       type: object
@@ -1372,17 +1059,12 @@ spec:
                       type: string
                     type: array
                   subnetwork:
-                    description: >-
+                    description: |-
                       This field identifies the subnetwork that the load balanced IP should
-
                       belong to for this Forwarding Rule, used in internal load balancing and
-
                       network load balancing with IPv6.
-
                       If the network specified is in auto subnet mode, this field is optional.
-
                       However, a subnetwork must be specified if the network is in custom subnet
-
                       mode or when creating external forwarding rule with IPv6.
                     type: string
                   subnetworkRef:
@@ -1396,26 +1078,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1429,9 +1105,8 @@ spec:
                     description: Selector for a Subnetwork in compute to populate subnetwork.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -1444,26 +1119,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1472,15 +1141,11 @@ spec:
                         type: object
                     type: object
                   target:
-                    description: >-
+                    description: |-
                       The URL of the target resource to receive the matched traffic.  For
-
                       regional forwarding rules, this target must be in the same region as the
-
                       forwarding rule. For global forwarding rules, this target must be a global
-
                       load balancing resource.
-
                       The forwarded traffic must be of a type appropriate to the target object.
                     type: string
                   targetRef:
@@ -1494,26 +1159,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1527,9 +1186,8 @@ spec:
                     description: Selector for a TargetSSLProxy in compute to populate target.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -1542,26 +1200,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1573,30 +1225,20 @@ spec:
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   This field is planned to replace the DeletionPolicy field in a future
-
                   release. Currently, both could be set independently and non-default
-
                   values would be honored if the feature flag is enabled. If both are
-
                   custom, the DeletionPolicy field will be ignored.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -1610,11 +1252,9 @@ spec:
               providerConfigRef:
                 default:
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   name:
@@ -1625,26 +1265,20 @@ spec:
                     properties:
                       resolution:
                         default: Required
-                        description: >-
+                        description: |-
                           Resolution specifies whether resolution of this reference is required.
-
                           The default is 'Required', which means the reconcile will fail if the
-
                           reference cannot be resolved. 'Optional' means this reference will be
-
                           a no-op if it cannot be resolved.
                         enum:
                         - Required
                         - Optional
                         type: string
                       resolve:
-                        description: >-
+                        description: |-
                           Resolve specifies when this reference should be resolved. The default
-
                           is 'IfNotPresent', which will attempt to resolve the reference only when
-
                           the corresponding field is not present. Use 'Always' to resolve the
-
                           reference on every reconcile.
                         enum:
                         - Always
@@ -1655,13 +1289,10 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   name:
@@ -1686,9 +1317,8 @@ spec:
                     description: '[Output Only] The URL for the corresponding base Forwarding Rule. By base Forwarding Rule, we mean the Forwarding Rule that has the same IP address, protocol, and port settings with the current Forwarding Rule, but without sourceIPRanges specified. Always empty if the current Forwarding Rule does not have sourceIPRanges specified.'
                     type: string
                   description:
-                    description: >-
+                    description: |-
                       An optional description of this resource. Provide this property when
-
                       you create the resource.
                     type: string
                   effectiveLabels:
@@ -1698,41 +1328,26 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   externalManagedBackendBucketMigrationState:
-                    description: >-
+                    description: |-
                       Specifies the canary migration state for the backend buckets attached to this forwarding rule.
-
                       Possible values are PREPARE, TEST_BY_PERCENTAGE, and TEST_ALL_TRAFFIC.
-
                       To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to
-
                       PREPARE. The state must be changed to TEST_ALL_TRAFFIC before the loadBalancingScheme can be
-
                       changed to EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate
-
                       traffic to backend buckets attached to this forwarding rule by percentage using
-
                       externalManagedBackendBucketMigrationTestingPercentage.
-
                       Rolling back a migration requires the states to be set in reverse order. So changing the
-
                       scheme from EXTERNAL_MANAGED to EXTERNAL requires the state to be set to TEST_ALL_TRAFFIC at
-
                       the same time. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate some traffic
-
                       back to EXTERNAL or PREPARE can be used to migrate all traffic back to EXTERNAL.
-
                       Possible values are: PREPARE, TEST_BY_PERCENTAGE, TEST_ALL_TRAFFIC.
                     type: string
                   externalManagedBackendBucketMigrationTestingPercentage:
-                    description: >-
+                    description: |-
                       Determines the fraction of requests to backend buckets that should be processed by the Global
-
                       external Application Load Balancer.
-
                       The value of this field must be in the range [0, 100].
-
                       This value can only be set if the loadBalancingScheme in the forwarding rule is set to
-
                       EXTERNAL (when using the Classic ALB) and the migration state is TEST_BY_PERCENTAGE.
                     type: number
                   forwardingRuleId:
@@ -1742,47 +1357,33 @@ spec:
                     description: an identifier for the resource with format projects/{{project}}/global/forwardingRules/{{name}}
                     type: string
                   ipAddress:
-                    description: >-
+                    description: |-
                       IP address for which this forwarding rule accepts traffic. When a client
-
                       sends traffic to this IP address, the forwarding rule directs the traffic
-
                       to the referenced target.
-
                       While creating a forwarding rule, specifying an IPAddress is
-
                       required under the following circumstances:
                     type: string
                   ipProtocol:
-                    description: >-
+                    description: |-
                       The IP protocol to which this rule applies.
-
                       For protocol forwarding, valid
-
                       options are TCP, UDP, ESP,
-
                       AH, SCTP, ICMP and
-
                       L3_DEFAULT.
-
                       The valid IP protocols are different for different load balancing products
-
                       as described in Load balancing
-
                       features.
-
                       Possible values are: TCP, UDP, ESP, AH, SCTP, ICMP.
                     type: string
                   ipVersion:
-                    description: >-
+                    description: |-
                       The IP Version that will be used by this global forwarding rule.
-
                       Possible values are: IPV4, IPV6.
                     type: string
                   labelFingerprint:
-                    description: >-
+                    description: |-
                       The fingerprint used for optimistic locking of this resource.  Used
-
                       internally during updates.
                     type: string
                   labels:
@@ -1792,149 +1393,95 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   loadBalancingScheme:
-                    description: >-
+                    description: |-
                       Specifies the forwarding rule type.
-
                       For more information about forwarding rules, refer to
-
                       Forwarding rule concepts.
-
                       Default value is EXTERNAL.
-
                       Possible values are: EXTERNAL, EXTERNAL_MANAGED, INTERNAL_MANAGED, INTERNAL_SELF_MANAGED.
                     type: string
                   metadataFilters:
-                    description: >-
+                    description: |-
                       Opaque filter criteria used by Loadbalancer to restrict routing
-
                       configuration to a limited set xDS compliant clients. In their xDS
-
                       requests to Loadbalancer, xDS clients present node metadata. If a
-
                       match takes place, the relevant routing configuration is made available
-
                       to those proxies.
-
                       For each metadataFilter in this list, if its filterMatchCriteria is set
-
                       to MATCH_ANY, at least one of the filterLabels must match the
-
                       corresponding label provided in the metadata. If its filterMatchCriteria
-
                       is set to MATCH_ALL, then all of its filterLabels must match with
-
                       corresponding labels in the provided metadata.
-
                       metadataFilters specified here can be overridden by those specified in
-
                       the UrlMap that this ForwardingRule references.
-
                       metadataFilters only applies to Loadbalancers that have their
-
                       loadBalancingScheme set to INTERNAL_SELF_MANAGED.
-
                       Structure is documented below.
                     items:
                       properties:
                         filterLabels:
-                          description: >-
+                          description: |-
                             The list of label value pairs that must match labels in the
-
                             provided metadata based on filterMatchCriteria
-
                             This list must not be empty and can have at the most 64 entries.
-
                             Structure is documented below.
                           items:
                             properties:
                               name:
-                                description: >-
+                                description: |-
                                   Name of the resource; provided by the client when the resource is created.
-
                                   The name must be 1-63 characters long, and comply with
-
                                   RFC1035.
-
                                   Specifically, the name must be 1-63 characters long and match the regular
-
                                   expression [a-z]([-a-z0-9]*[a-z0-9])? which means the first
-
                                   character must be a lowercase letter, and all following characters must
-
                                   be a dash, lowercase letter, or digit, except the last character, which
-
                                   cannot be a dash.
-
                                   For Private Service Connect forwarding rules that forward traffic to Google
-
                                   APIs, the forwarding rule name must be a 1-20 characters string with
-
                                   lowercase letters and numbers and must start with a letter.
                                 type: string
                               value:
-                                description: >-
+                                description: |-
                                   The value that the label must match. The value has a maximum
-
                                   length of 1024 characters.
                                 type: string
                             type: object
                           type: array
                         filterMatchCriteria:
-                          description: >-
+                          description: |-
                             Specifies how individual filterLabel matches within the list of
-
                             filterLabels contribute towards the overall metadataFilter match.
-
                             MATCH_ANY - At least one of the filterLabels must have a matching
-
                             label in the provided metadata.
-
                             MATCH_ALL - All filterLabels must have matching labels in the
-
                             provided metadata.
-
                             Possible values are: MATCH_ANY, MATCH_ALL.
                           type: string
                       type: object
                     type: array
                   network:
-                    description: >-
+                    description: |-
                       This field is not used for external load balancing.
-
                       For Internal TCP/UDP Load Balancing, this field identifies the network that
-
                       the load balanced IP should belong to for this Forwarding Rule.
-
                       If the subnetwork is specified, the network of the subnetwork will be used.
-
                       If neither subnetwork nor this field is specified, the default network will
-
                       be used.
-
                       For Private Service Connect forwarding rules that forward traffic to Google
-
                       APIs, a network must be provided.
                     type: string
                   networkTier:
-                    description: >-
+                    description: |-
                       This signifies the networking tier used for configuring
-
                       this load balancer and can only take the following values:
-
                       PREMIUM, STANDARD.
-
                       For regional ForwardingRule, the valid values are PREMIUM and
-
                       STANDARD. For GlobalForwardingRule, the valid value is
-
                       PREMIUM.
-
                       If this field is not specified, it is assumed to be PREMIUM.
-
                       If IPAddress is specified, this value must be equal to the
-
                       networkTier of the Address.
-
                       Possible values are: PREMIUM, STANDARD.
                     type: string
                   noAutomateDnsZone:
@@ -1944,9 +1491,8 @@ spec:
                     description: 'The portRange field has the following limitations:'
                     type: string
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   pscConnectionId:
@@ -1959,11 +1505,9 @@ spec:
                     description: The URI of the created resource.
                     type: string
                   serviceDirectoryRegistrations:
-                    description: >-
+                    description: |-
                       Service Directory resources to register this forwarding rule with.
-
                       Currently, only supports a single Service Directory resource.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -1971,13 +1515,10 @@ spec:
                           description: Service Directory namespace to register the forwarding rule under.
                           type: string
                         serviceDirectoryRegion:
-                          description: >-
+                          description: |-
                             [Optional] Service Directory region to register this global forwarding rule under.
-
                             Default to "us-central1". Only used for PSC for Google APIs. All PSC for
-
                             Google APIs Forwarding Rules on the same network should use the same Service
-
                             Directory region.
                           type: string
                       type: object
@@ -1988,37 +1529,27 @@ spec:
                       type: string
                     type: array
                   subnetwork:
-                    description: >-
+                    description: |-
                       This field identifies the subnetwork that the load balanced IP should
-
                       belong to for this Forwarding Rule, used in internal load balancing and
-
                       network load balancing with IPv6.
-
                       If the network specified is in auto subnet mode, this field is optional.
-
                       However, a subnetwork must be specified if the network is in custom subnet
-
                       mode or when creating external forwarding rule with IPv6.
                     type: string
                   target:
-                    description: >-
+                    description: |-
                       The URL of the target resource to receive the matched traffic.  For
-
                       regional forwarding rules, this target must be in the same region as the
-
                       forwarding rule. For global forwarding rules, this target must be a global
-
                       load balancing resource.
-
                       The forwarded traffic must be of a type appropriate to the target object.
                     type: string
                   terraformLabels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       The combination of labels configured directly on the resource
-
                       and default labels configured on the provider.
                     type: object
                     x-kubernetes-map-type: granular
@@ -2029,24 +1560,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -2057,9 +1584,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -2073,11 +1599,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer
@@ -2108,25 +1632,18 @@ spec:
         description: GlobalForwardingRule is the Schema for the GlobalForwardingRules API. Represents a GlobalForwardingRule resource.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -2136,19 +1653,13 @@ spec:
             properties:
               deletionPolicy:
                 default: Delete
-                description: >-
+                description: |-
                   DeletionPolicy specifies what will happen to the underlying external
-
                   when this managed resource is deleted - either "Delete" or "Orphan" the
-
                   external resource.
-
                   This field is planned to be deprecated in favor of the ManagementPolicies
-
                   field in a future release. Currently, both could be set independently and
-
                   non-default values would be honored if the feature flag is enabled.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
                 enum:
                 - Orphan
@@ -2157,59 +1668,39 @@ spec:
               forProvider:
                 properties:
                   description:
-                    description: >-
+                    description: |-
                       An optional description of this resource. Provide this property when
-
                       you create the resource.
                     type: string
                   externalManagedBackendBucketMigrationState:
-                    description: >-
+                    description: |-
                       Specifies the canary migration state for the backend buckets attached to this forwarding rule.
-
                       Possible values are PREPARE, TEST_BY_PERCENTAGE, and TEST_ALL_TRAFFIC.
-
                       To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to
-
                       PREPARE. The state must be changed to TEST_ALL_TRAFFIC before the loadBalancingScheme can be
-
                       changed to EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate
-
                       traffic to backend buckets attached to this forwarding rule by percentage using
-
                       externalManagedBackendBucketMigrationTestingPercentage.
-
                       Rolling back a migration requires the states to be set in reverse order. So changing the
-
                       scheme from EXTERNAL_MANAGED to EXTERNAL requires the state to be set to TEST_ALL_TRAFFIC at
-
                       the same time. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate some traffic
-
                       back to EXTERNAL or PREPARE can be used to migrate all traffic back to EXTERNAL.
-
                       Possible values are: PREPARE, TEST_BY_PERCENTAGE, TEST_ALL_TRAFFIC.
                     type: string
                   externalManagedBackendBucketMigrationTestingPercentage:
-                    description: >-
+                    description: |-
                       Determines the fraction of requests to backend buckets that should be processed by the Global
-
                       external Application Load Balancer.
-
                       The value of this field must be in the range [0, 100].
-
                       This value can only be set if the loadBalancingScheme in the forwarding rule is set to
-
                       EXTERNAL (when using the Classic ALB) and the migration state is TEST_BY_PERCENTAGE.
                     type: number
                   ipAddress:
-                    description: >-
+                    description: |-
                       IP address for which this forwarding rule accepts traffic. When a client
-
                       sends traffic to this IP address, the forwarding rule directs the traffic
-
                       to the referenced target.
-
                       While creating a forwarding rule, specifying an IPAddress is
-
                       required under the following circumstances:
                     type: string
                   ipAddressRef:
@@ -2223,26 +1714,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -2256,9 +1741,8 @@ spec:
                     description: Selector for a GlobalAddress in compute to populate ipAddress.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -2271,26 +1755,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -2299,29 +1777,20 @@ spec:
                         type: object
                     type: object
                   ipProtocol:
-                    description: >-
+                    description: |-
                       The IP protocol to which this rule applies.
-
                       For protocol forwarding, valid
-
                       options are TCP, UDP, ESP,
-
                       AH, SCTP, ICMP and
-
                       L3_DEFAULT.
-
                       The valid IP protocols are different for different load balancing products
-
                       as described in Load balancing
-
                       features.
-
                       Possible values are: TCP, UDP, ESP, AH, SCTP, ICMP.
                     type: string
                   ipVersion:
-                    description: >-
+                    description: |-
                       The IP Version that will be used by this global forwarding rule.
-
                       Possible values are: IPV4, IPV6.
                     type: string
                   labels:
@@ -2331,127 +1800,82 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   loadBalancingScheme:
-                    description: >-
+                    description: |-
                       Specifies the forwarding rule type.
-
                       For more information about forwarding rules, refer to
-
                       Forwarding rule concepts.
-
                       Default value is EXTERNAL.
-
                       Possible values are: EXTERNAL, EXTERNAL_MANAGED, INTERNAL_MANAGED, INTERNAL_SELF_MANAGED.
                     type: string
                   metadataFilters:
-                    description: >-
+                    description: |-
                       Opaque filter criteria used by Loadbalancer to restrict routing
-
                       configuration to a limited set xDS compliant clients. In their xDS
-
                       requests to Loadbalancer, xDS clients present node metadata. If a
-
                       match takes place, the relevant routing configuration is made available
-
                       to those proxies.
-
                       For each metadataFilter in this list, if its filterMatchCriteria is set
-
                       to MATCH_ANY, at least one of the filterLabels must match the
-
                       corresponding label provided in the metadata. If its filterMatchCriteria
-
                       is set to MATCH_ALL, then all of its filterLabels must match with
-
                       corresponding labels in the provided metadata.
-
                       metadataFilters specified here can be overridden by those specified in
-
                       the UrlMap that this ForwardingRule references.
-
                       metadataFilters only applies to Loadbalancers that have their
-
                       loadBalancingScheme set to INTERNAL_SELF_MANAGED.
-
                       Structure is documented below.
                     items:
                       properties:
                         filterLabels:
-                          description: >-
+                          description: |-
                             The list of label value pairs that must match labels in the
-
                             provided metadata based on filterMatchCriteria
-
                             This list must not be empty and can have at the most 64 entries.
-
                             Structure is documented below.
                           items:
                             properties:
                               name:
-                                description: >-
+                                description: |-
                                   Name of the resource; provided by the client when the resource is created.
-
                                   The name must be 1-63 characters long, and comply with
-
                                   RFC1035.
-
                                   Specifically, the name must be 1-63 characters long and match the regular
-
                                   expression [a-z]([-a-z0-9]*[a-z0-9])? which means the first
-
                                   character must be a lowercase letter, and all following characters must
-
                                   be a dash, lowercase letter, or digit, except the last character, which
-
                                   cannot be a dash.
-
                                   For Private Service Connect forwarding rules that forward traffic to Google
-
                                   APIs, the forwarding rule name must be a 1-20 characters string with
-
                                   lowercase letters and numbers and must start with a letter.
                                 type: string
                               value:
-                                description: >-
+                                description: |-
                                   The value that the label must match. The value has a maximum
-
                                   length of 1024 characters.
                                 type: string
                             type: object
                           type: array
                         filterMatchCriteria:
-                          description: >-
+                          description: |-
                             Specifies how individual filterLabel matches within the list of
-
                             filterLabels contribute towards the overall metadataFilter match.
-
                             MATCH_ANY - At least one of the filterLabels must have a matching
-
                             label in the provided metadata.
-
                             MATCH_ALL - All filterLabels must have matching labels in the
-
                             provided metadata.
-
                             Possible values are: MATCH_ANY, MATCH_ALL.
                           type: string
                       type: object
                     type: array
                   network:
-                    description: >-
+                    description: |-
                       This field is not used for external load balancing.
-
                       For Internal TCP/UDP Load Balancing, this field identifies the network that
-
                       the load balanced IP should belong to for this Forwarding Rule.
-
                       If the subnetwork is specified, the network of the subnetwork will be used.
-
                       If neither subnetwork nor this field is specified, the default network will
-
                       be used.
-
                       For Private Service Connect forwarding rules that forward traffic to Google
-
                       APIs, a network must be provided.
                     type: string
                   networkRef:
@@ -2465,26 +1889,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -2498,9 +1916,8 @@ spec:
                     description: Selector for a Network in compute to populate network.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -2513,26 +1930,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -2541,25 +1952,16 @@ spec:
                         type: object
                     type: object
                   networkTier:
-                    description: >-
+                    description: |-
                       This signifies the networking tier used for configuring
-
                       this load balancer and can only take the following values:
-
                       PREMIUM, STANDARD.
-
                       For regional ForwardingRule, the valid values are PREMIUM and
-
                       STANDARD. For GlobalForwardingRule, the valid value is
-
                       PREMIUM.
-
                       If this field is not specified, it is assumed to be PREMIUM.
-
                       If IPAddress is specified, this value must be equal to the
-
                       networkTier of the Address.
-
                       Possible values are: PREMIUM, STANDARD.
                     type: string
                   noAutomateDnsZone:
@@ -2569,9 +1971,8 @@ spec:
                     description: 'The portRange field has the following limitations:'
                     type: string
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   projectRef:
@@ -2585,26 +1986,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -2618,9 +2013,8 @@ spec:
                     description: Selector for a Network in compute to populate project.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -2633,26 +2027,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -2661,24 +2049,19 @@ spec:
                         type: object
                     type: object
                   serviceDirectoryRegistrations:
-                    description: >-
+                    description: |-
                       Service Directory resources to register this forwarding rule with.
-
                       Currently, only supports a single Service Directory resource.
-
                       Structure is documented below.
                     properties:
                       namespace:
                         description: Service Directory namespace to register the forwarding rule under.
                         type: string
                       serviceDirectoryRegion:
-                        description: >-
+                        description: |-
                           [Optional] Service Directory region to register this global forwarding rule under.
-
                           Default to "us-central1". Only used for PSC for Google APIs. All PSC for
-
                           Google APIs Forwarding Rules on the same network should use the same Service
-
                           Directory region.
                         type: string
                     type: object
@@ -2688,17 +2071,12 @@ spec:
                       type: string
                     type: array
                   subnetwork:
-                    description: >-
+                    description: |-
                       This field identifies the subnetwork that the load balanced IP should
-
                       belong to for this Forwarding Rule, used in internal load balancing and
-
                       network load balancing with IPv6.
-
                       If the network specified is in auto subnet mode, this field is optional.
-
                       However, a subnetwork must be specified if the network is in custom subnet
-
                       mode or when creating external forwarding rule with IPv6.
                     type: string
                   subnetworkRef:
@@ -2712,26 +2090,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -2745,9 +2117,8 @@ spec:
                     description: Selector for a Subnetwork in compute to populate subnetwork.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -2760,26 +2131,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -2788,15 +2153,11 @@ spec:
                         type: object
                     type: object
                   target:
-                    description: >-
+                    description: |-
                       The URL of the target resource to receive the matched traffic.  For
-
                       regional forwarding rules, this target must be in the same region as the
-
                       forwarding rule. For global forwarding rules, this target must be a global
-
                       load balancing resource.
-
                       The forwarded traffic must be of a type appropriate to the target object.
                     type: string
                   targetRef:
@@ -2810,26 +2171,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -2843,9 +2198,8 @@ spec:
                     description: Selector for a TargetSSLProxy in compute to populate target.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -2858,26 +2212,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -2887,81 +2235,52 @@ spec:
                     type: object
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   description:
-                    description: >-
+                    description: |-
                       An optional description of this resource. Provide this property when
-
                       you create the resource.
                     type: string
                   externalManagedBackendBucketMigrationState:
-                    description: >-
+                    description: |-
                       Specifies the canary migration state for the backend buckets attached to this forwarding rule.
-
                       Possible values are PREPARE, TEST_BY_PERCENTAGE, and TEST_ALL_TRAFFIC.
-
                       To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to
-
                       PREPARE. The state must be changed to TEST_ALL_TRAFFIC before the loadBalancingScheme can be
-
                       changed to EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate
-
                       traffic to backend buckets attached to this forwarding rule by percentage using
-
                       externalManagedBackendBucketMigrationTestingPercentage.
-
                       Rolling back a migration requires the states to be set in reverse order. So changing the
-
                       scheme from EXTERNAL_MANAGED to EXTERNAL requires the state to be set to TEST_ALL_TRAFFIC at
-
                       the same time. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate some traffic
-
                       back to EXTERNAL or PREPARE can be used to migrate all traffic back to EXTERNAL.
-
                       Possible values are: PREPARE, TEST_BY_PERCENTAGE, TEST_ALL_TRAFFIC.
                     type: string
                   externalManagedBackendBucketMigrationTestingPercentage:
-                    description: >-
+                    description: |-
                       Determines the fraction of requests to backend buckets that should be processed by the Global
-
                       external Application Load Balancer.
-
                       The value of this field must be in the range [0, 100].
-
                       This value can only be set if the loadBalancingScheme in the forwarding rule is set to
-
                       EXTERNAL (when using the Classic ALB) and the migration state is TEST_BY_PERCENTAGE.
                     type: number
                   ipAddress:
-                    description: >-
+                    description: |-
                       IP address for which this forwarding rule accepts traffic. When a client
-
                       sends traffic to this IP address, the forwarding rule directs the traffic
-
                       to the referenced target.
-
                       While creating a forwarding rule, specifying an IPAddress is
-
                       required under the following circumstances:
                     type: string
                   ipAddressRef:
@@ -2975,26 +2294,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -3008,9 +2321,8 @@ spec:
                     description: Selector for a GlobalAddress in compute to populate ipAddress.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -3023,26 +2335,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -3051,29 +2357,20 @@ spec:
                         type: object
                     type: object
                   ipProtocol:
-                    description: >-
+                    description: |-
                       The IP protocol to which this rule applies.
-
                       For protocol forwarding, valid
-
                       options are TCP, UDP, ESP,
-
                       AH, SCTP, ICMP and
-
                       L3_DEFAULT.
-
                       The valid IP protocols are different for different load balancing products
-
                       as described in Load balancing
-
                       features.
-
                       Possible values are: TCP, UDP, ESP, AH, SCTP, ICMP.
                     type: string
                   ipVersion:
-                    description: >-
+                    description: |-
                       The IP Version that will be used by this global forwarding rule.
-
                       Possible values are: IPV4, IPV6.
                     type: string
                   labels:
@@ -3083,127 +2380,82 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   loadBalancingScheme:
-                    description: >-
+                    description: |-
                       Specifies the forwarding rule type.
-
                       For more information about forwarding rules, refer to
-
                       Forwarding rule concepts.
-
                       Default value is EXTERNAL.
-
                       Possible values are: EXTERNAL, EXTERNAL_MANAGED, INTERNAL_MANAGED, INTERNAL_SELF_MANAGED.
                     type: string
                   metadataFilters:
-                    description: >-
+                    description: |-
                       Opaque filter criteria used by Loadbalancer to restrict routing
-
                       configuration to a limited set xDS compliant clients. In their xDS
-
                       requests to Loadbalancer, xDS clients present node metadata. If a
-
                       match takes place, the relevant routing configuration is made available
-
                       to those proxies.
-
                       For each metadataFilter in this list, if its filterMatchCriteria is set
-
                       to MATCH_ANY, at least one of the filterLabels must match the
-
                       corresponding label provided in the metadata. If its filterMatchCriteria
-
                       is set to MATCH_ALL, then all of its filterLabels must match with
-
                       corresponding labels in the provided metadata.
-
                       metadataFilters specified here can be overridden by those specified in
-
                       the UrlMap that this ForwardingRule references.
-
                       metadataFilters only applies to Loadbalancers that have their
-
                       loadBalancingScheme set to INTERNAL_SELF_MANAGED.
-
                       Structure is documented below.
                     items:
                       properties:
                         filterLabels:
-                          description: >-
+                          description: |-
                             The list of label value pairs that must match labels in the
-
                             provided metadata based on filterMatchCriteria
-
                             This list must not be empty and can have at the most 64 entries.
-
                             Structure is documented below.
                           items:
                             properties:
                               name:
-                                description: >-
+                                description: |-
                                   Name of the resource; provided by the client when the resource is created.
-
                                   The name must be 1-63 characters long, and comply with
-
                                   RFC1035.
-
                                   Specifically, the name must be 1-63 characters long and match the regular
-
                                   expression [a-z]([-a-z0-9]*[a-z0-9])? which means the first
-
                                   character must be a lowercase letter, and all following characters must
-
                                   be a dash, lowercase letter, or digit, except the last character, which
-
                                   cannot be a dash.
-
                                   For Private Service Connect forwarding rules that forward traffic to Google
-
                                   APIs, the forwarding rule name must be a 1-20 characters string with
-
                                   lowercase letters and numbers and must start with a letter.
                                 type: string
                               value:
-                                description: >-
+                                description: |-
                                   The value that the label must match. The value has a maximum
-
                                   length of 1024 characters.
                                 type: string
                             type: object
                           type: array
                         filterMatchCriteria:
-                          description: >-
+                          description: |-
                             Specifies how individual filterLabel matches within the list of
-
                             filterLabels contribute towards the overall metadataFilter match.
-
                             MATCH_ANY - At least one of the filterLabels must have a matching
-
                             label in the provided metadata.
-
                             MATCH_ALL - All filterLabels must have matching labels in the
-
                             provided metadata.
-
                             Possible values are: MATCH_ANY, MATCH_ALL.
                           type: string
                       type: object
                     type: array
                   network:
-                    description: >-
+                    description: |-
                       This field is not used for external load balancing.
-
                       For Internal TCP/UDP Load Balancing, this field identifies the network that
-
                       the load balanced IP should belong to for this Forwarding Rule.
-
                       If the subnetwork is specified, the network of the subnetwork will be used.
-
                       If neither subnetwork nor this field is specified, the default network will
-
                       be used.
-
                       For Private Service Connect forwarding rules that forward traffic to Google
-
                       APIs, a network must be provided.
                     type: string
                   networkRef:
@@ -3217,26 +2469,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -3250,9 +2496,8 @@ spec:
                     description: Selector for a Network in compute to populate network.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -3265,26 +2510,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -3293,25 +2532,16 @@ spec:
                         type: object
                     type: object
                   networkTier:
-                    description: >-
+                    description: |-
                       This signifies the networking tier used for configuring
-
                       this load balancer and can only take the following values:
-
                       PREMIUM, STANDARD.
-
                       For regional ForwardingRule, the valid values are PREMIUM and
-
                       STANDARD. For GlobalForwardingRule, the valid value is
-
                       PREMIUM.
-
                       If this field is not specified, it is assumed to be PREMIUM.
-
                       If IPAddress is specified, this value must be equal to the
-
                       networkTier of the Address.
-
                       Possible values are: PREMIUM, STANDARD.
                     type: string
                   noAutomateDnsZone:
@@ -3321,9 +2551,8 @@ spec:
                     description: 'The portRange field has the following limitations:'
                     type: string
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   projectRef:
@@ -3337,26 +2566,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -3370,9 +2593,8 @@ spec:
                     description: Selector for a Network in compute to populate project.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -3385,26 +2607,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -3413,24 +2629,19 @@ spec:
                         type: object
                     type: object
                   serviceDirectoryRegistrations:
-                    description: >-
+                    description: |-
                       Service Directory resources to register this forwarding rule with.
-
                       Currently, only supports a single Service Directory resource.
-
                       Structure is documented below.
                     properties:
                       namespace:
                         description: Service Directory namespace to register the forwarding rule under.
                         type: string
                       serviceDirectoryRegion:
-                        description: >-
+                        description: |-
                           [Optional] Service Directory region to register this global forwarding rule under.
-
                           Default to "us-central1". Only used for PSC for Google APIs. All PSC for
-
                           Google APIs Forwarding Rules on the same network should use the same Service
-
                           Directory region.
                         type: string
                     type: object
@@ -3440,17 +2651,12 @@ spec:
                       type: string
                     type: array
                   subnetwork:
-                    description: >-
+                    description: |-
                       This field identifies the subnetwork that the load balanced IP should
-
                       belong to for this Forwarding Rule, used in internal load balancing and
-
                       network load balancing with IPv6.
-
                       If the network specified is in auto subnet mode, this field is optional.
-
                       However, a subnetwork must be specified if the network is in custom subnet
-
                       mode or when creating external forwarding rule with IPv6.
                     type: string
                   subnetworkRef:
@@ -3464,26 +2670,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -3497,9 +2697,8 @@ spec:
                     description: Selector for a Subnetwork in compute to populate subnetwork.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -3512,26 +2711,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -3540,15 +2733,11 @@ spec:
                         type: object
                     type: object
                   target:
-                    description: >-
+                    description: |-
                       The URL of the target resource to receive the matched traffic.  For
-
                       regional forwarding rules, this target must be in the same region as the
-
                       forwarding rule. For global forwarding rules, this target must be a global
-
                       load balancing resource.
-
                       The forwarded traffic must be of a type appropriate to the target object.
                     type: string
                   targetRef:
@@ -3562,26 +2751,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -3595,9 +2778,8 @@ spec:
                     description: Selector for a TargetSSLProxy in compute to populate target.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -3610,26 +2792,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -3641,30 +2817,20 @@ spec:
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   This field is planned to replace the DeletionPolicy field in a future
-
                   release. Currently, both could be set independently and non-default
-
                   values would be honored if the feature flag is enabled. If both are
-
                   custom, the DeletionPolicy field will be ignored.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -3678,11 +2844,9 @@ spec:
               providerConfigRef:
                 default:
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   name:
@@ -3693,26 +2857,20 @@ spec:
                     properties:
                       resolution:
                         default: Required
-                        description: >-
+                        description: |-
                           Resolution specifies whether resolution of this reference is required.
-
                           The default is 'Required', which means the reconcile will fail if the
-
                           reference cannot be resolved. 'Optional' means this reference will be
-
                           a no-op if it cannot be resolved.
                         enum:
                         - Required
                         - Optional
                         type: string
                       resolve:
-                        description: >-
+                        description: |-
                           Resolve specifies when this reference should be resolved. The default
-
                           is 'IfNotPresent', which will attempt to resolve the reference only when
-
                           the corresponding field is not present. Use 'Always' to resolve the
-
                           reference on every reconcile.
                         enum:
                         - Always
@@ -3723,13 +2881,10 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   name:
@@ -3754,9 +2909,8 @@ spec:
                     description: '[Output Only] The URL for the corresponding base Forwarding Rule. By base Forwarding Rule, we mean the Forwarding Rule that has the same IP address, protocol, and port settings with the current Forwarding Rule, but without sourceIPRanges specified. Always empty if the current Forwarding Rule does not have sourceIPRanges specified.'
                     type: string
                   description:
-                    description: >-
+                    description: |-
                       An optional description of this resource. Provide this property when
-
                       you create the resource.
                     type: string
                   effectiveLabels:
@@ -3766,41 +2920,26 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   externalManagedBackendBucketMigrationState:
-                    description: >-
+                    description: |-
                       Specifies the canary migration state for the backend buckets attached to this forwarding rule.
-
                       Possible values are PREPARE, TEST_BY_PERCENTAGE, and TEST_ALL_TRAFFIC.
-
                       To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to
-
                       PREPARE. The state must be changed to TEST_ALL_TRAFFIC before the loadBalancingScheme can be
-
                       changed to EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate
-
                       traffic to backend buckets attached to this forwarding rule by percentage using
-
                       externalManagedBackendBucketMigrationTestingPercentage.
-
                       Rolling back a migration requires the states to be set in reverse order. So changing the
-
                       scheme from EXTERNAL_MANAGED to EXTERNAL requires the state to be set to TEST_ALL_TRAFFIC at
-
                       the same time. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate some traffic
-
                       back to EXTERNAL or PREPARE can be used to migrate all traffic back to EXTERNAL.
-
                       Possible values are: PREPARE, TEST_BY_PERCENTAGE, TEST_ALL_TRAFFIC.
                     type: string
                   externalManagedBackendBucketMigrationTestingPercentage:
-                    description: >-
+                    description: |-
                       Determines the fraction of requests to backend buckets that should be processed by the Global
-
                       external Application Load Balancer.
-
                       The value of this field must be in the range [0, 100].
-
                       This value can only be set if the loadBalancingScheme in the forwarding rule is set to
-
                       EXTERNAL (when using the Classic ALB) and the migration state is TEST_BY_PERCENTAGE.
                     type: number
                   forwardingRuleId:
@@ -3810,47 +2949,33 @@ spec:
                     description: an identifier for the resource with format projects/{{project}}/global/forwardingRules/{{name}}
                     type: string
                   ipAddress:
-                    description: >-
+                    description: |-
                       IP address for which this forwarding rule accepts traffic. When a client
-
                       sends traffic to this IP address, the forwarding rule directs the traffic
-
                       to the referenced target.
-
                       While creating a forwarding rule, specifying an IPAddress is
-
                       required under the following circumstances:
                     type: string
                   ipProtocol:
-                    description: >-
+                    description: |-
                       The IP protocol to which this rule applies.
-
                       For protocol forwarding, valid
-
                       options are TCP, UDP, ESP,
-
                       AH, SCTP, ICMP and
-
                       L3_DEFAULT.
-
                       The valid IP protocols are different for different load balancing products
-
                       as described in Load balancing
-
                       features.
-
                       Possible values are: TCP, UDP, ESP, AH, SCTP, ICMP.
                     type: string
                   ipVersion:
-                    description: >-
+                    description: |-
                       The IP Version that will be used by this global forwarding rule.
-
                       Possible values are: IPV4, IPV6.
                     type: string
                   labelFingerprint:
-                    description: >-
+                    description: |-
                       The fingerprint used for optimistic locking of this resource.  Used
-
                       internally during updates.
                     type: string
                   labels:
@@ -3860,149 +2985,95 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   loadBalancingScheme:
-                    description: >-
+                    description: |-
                       Specifies the forwarding rule type.
-
                       For more information about forwarding rules, refer to
-
                       Forwarding rule concepts.
-
                       Default value is EXTERNAL.
-
                       Possible values are: EXTERNAL, EXTERNAL_MANAGED, INTERNAL_MANAGED, INTERNAL_SELF_MANAGED.
                     type: string
                   metadataFilters:
-                    description: >-
+                    description: |-
                       Opaque filter criteria used by Loadbalancer to restrict routing
-
                       configuration to a limited set xDS compliant clients. In their xDS
-
                       requests to Loadbalancer, xDS clients present node metadata. If a
-
                       match takes place, the relevant routing configuration is made available
-
                       to those proxies.
-
                       For each metadataFilter in this list, if its filterMatchCriteria is set
-
                       to MATCH_ANY, at least one of the filterLabels must match the
-
                       corresponding label provided in the metadata. If its filterMatchCriteria
-
                       is set to MATCH_ALL, then all of its filterLabels must match with
-
                       corresponding labels in the provided metadata.
-
                       metadataFilters specified here can be overridden by those specified in
-
                       the UrlMap that this ForwardingRule references.
-
                       metadataFilters only applies to Loadbalancers that have their
-
                       loadBalancingScheme set to INTERNAL_SELF_MANAGED.
-
                       Structure is documented below.
                     items:
                       properties:
                         filterLabels:
-                          description: >-
+                          description: |-
                             The list of label value pairs that must match labels in the
-
                             provided metadata based on filterMatchCriteria
-
                             This list must not be empty and can have at the most 64 entries.
-
                             Structure is documented below.
                           items:
                             properties:
                               name:
-                                description: >-
+                                description: |-
                                   Name of the resource; provided by the client when the resource is created.
-
                                   The name must be 1-63 characters long, and comply with
-
                                   RFC1035.
-
                                   Specifically, the name must be 1-63 characters long and match the regular
-
                                   expression [a-z]([-a-z0-9]*[a-z0-9])? which means the first
-
                                   character must be a lowercase letter, and all following characters must
-
                                   be a dash, lowercase letter, or digit, except the last character, which
-
                                   cannot be a dash.
-
                                   For Private Service Connect forwarding rules that forward traffic to Google
-
                                   APIs, the forwarding rule name must be a 1-20 characters string with
-
                                   lowercase letters and numbers and must start with a letter.
                                 type: string
                               value:
-                                description: >-
+                                description: |-
                                   The value that the label must match. The value has a maximum
-
                                   length of 1024 characters.
                                 type: string
                             type: object
                           type: array
                         filterMatchCriteria:
-                          description: >-
+                          description: |-
                             Specifies how individual filterLabel matches within the list of
-
                             filterLabels contribute towards the overall metadataFilter match.
-
                             MATCH_ANY - At least one of the filterLabels must have a matching
-
                             label in the provided metadata.
-
                             MATCH_ALL - All filterLabels must have matching labels in the
-
                             provided metadata.
-
                             Possible values are: MATCH_ANY, MATCH_ALL.
                           type: string
                       type: object
                     type: array
                   network:
-                    description: >-
+                    description: |-
                       This field is not used for external load balancing.
-
                       For Internal TCP/UDP Load Balancing, this field identifies the network that
-
                       the load balanced IP should belong to for this Forwarding Rule.
-
                       If the subnetwork is specified, the network of the subnetwork will be used.
-
                       If neither subnetwork nor this field is specified, the default network will
-
                       be used.
-
                       For Private Service Connect forwarding rules that forward traffic to Google
-
                       APIs, a network must be provided.
                     type: string
                   networkTier:
-                    description: >-
+                    description: |-
                       This signifies the networking tier used for configuring
-
                       this load balancer and can only take the following values:
-
                       PREMIUM, STANDARD.
-
                       For regional ForwardingRule, the valid values are PREMIUM and
-
                       STANDARD. For GlobalForwardingRule, the valid value is
-
                       PREMIUM.
-
                       If this field is not specified, it is assumed to be PREMIUM.
-
                       If IPAddress is specified, this value must be equal to the
-
                       networkTier of the Address.
-
                       Possible values are: PREMIUM, STANDARD.
                     type: string
                   noAutomateDnsZone:
@@ -4012,9 +3083,8 @@ spec:
                     description: 'The portRange field has the following limitations:'
                     type: string
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   pscConnectionId:
@@ -4027,24 +3097,19 @@ spec:
                     description: The URI of the created resource.
                     type: string
                   serviceDirectoryRegistrations:
-                    description: >-
+                    description: |-
                       Service Directory resources to register this forwarding rule with.
-
                       Currently, only supports a single Service Directory resource.
-
                       Structure is documented below.
                     properties:
                       namespace:
                         description: Service Directory namespace to register the forwarding rule under.
                         type: string
                       serviceDirectoryRegion:
-                        description: >-
+                        description: |-
                           [Optional] Service Directory region to register this global forwarding rule under.
-
                           Default to "us-central1". Only used for PSC for Google APIs. All PSC for
-
                           Google APIs Forwarding Rules on the same network should use the same Service
-
                           Directory region.
                         type: string
                     type: object
@@ -4054,37 +3119,27 @@ spec:
                       type: string
                     type: array
                   subnetwork:
-                    description: >-
+                    description: |-
                       This field identifies the subnetwork that the load balanced IP should
-
                       belong to for this Forwarding Rule, used in internal load balancing and
-
                       network load balancing with IPv6.
-
                       If the network specified is in auto subnet mode, this field is optional.
-
                       However, a subnetwork must be specified if the network is in custom subnet
-
                       mode or when creating external forwarding rule with IPv6.
                     type: string
                   target:
-                    description: >-
+                    description: |-
                       The URL of the target resource to receive the matched traffic.  For
-
                       regional forwarding rules, this target must be in the same region as the
-
                       forwarding rule. For global forwarding rules, this target must be a global
-
                       load balancing resource.
-
                       The forwarded traffic must be of a type appropriate to the target object.
                     type: string
                   terraformLabels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       The combination of labels configured directly on the resource
-
                       and default labels configured on the provider.
                     type: object
                     x-kubernetes-map-type: granular
@@ -4095,24 +3150,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -4123,9 +3174,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -4139,11 +3189,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer

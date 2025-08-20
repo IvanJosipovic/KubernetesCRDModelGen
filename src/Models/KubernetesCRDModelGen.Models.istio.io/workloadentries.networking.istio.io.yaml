@@ -83,8 +83,8 @@ spec:
                 type: string
               weight:
                 description: The load balancing weight associated with the endpoint.
-                maximum: 4294967295
-                minimum: 0
+                maximum: 4294967295.0
+                minimum: 0.0
                 type: integer
             type: object
             x-kubernetes-validations:
@@ -139,9 +139,8 @@ spec:
                       description: A url pointing to the Istio documentation for this specific error type.
                       type: string
                     level:
-                      description: >-
+                      description: |-
                         Represents how severe a message is.
-
 
                         Valid Options: UNKNOWN, ERROR, WARNING, INFO
                       enum:
@@ -229,8 +228,8 @@ spec:
                 type: string
               weight:
                 description: The load balancing weight associated with the endpoint.
-                maximum: 4294967295
-                minimum: 0
+                maximum: 4294967295.0
+                minimum: 0.0
                 type: integer
             type: object
             x-kubernetes-validations:
@@ -285,9 +284,8 @@ spec:
                       description: A url pointing to the Istio documentation for this specific error type.
                       type: string
                     level:
-                      description: >-
+                      description: |-
                         Represents how severe a message is.
-
 
                         Valid Options: UNKNOWN, ERROR, WARNING, INFO
                       enum:
@@ -375,8 +373,8 @@ spec:
                 type: string
               weight:
                 description: The load balancing weight associated with the endpoint.
-                maximum: 4294967295
-                minimum: 0
+                maximum: 4294967295.0
+                minimum: 0.0
                 type: integer
             type: object
             x-kubernetes-validations:
@@ -431,9 +429,8 @@ spec:
                       description: A url pointing to the Istio documentation for this specific error type.
                       type: string
                     level:
-                      description: >-
+                      description: |-
                         Represents how severe a message is.
-
 
                         Valid Options: UNKNOWN, ERROR, WARNING, INFO
                       enum:

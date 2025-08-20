@@ -16,31 +16,23 @@ spec:
   - name: v1alpha1
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           MiddlewareTCP is the CRD implementation of a Traefik TCP middleware.
-
           More info: https://doc.traefik.io/traefik/v3.5/middlewares/overview/
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -52,20 +44,17 @@ spec:
                 description: InFlightConn defines the InFlightConn middleware configuration.
                 properties:
                   amount:
-                    description: >-
+                    description: |-
                       Amount defines the maximum amount of allowed simultaneous connections.
-
                       The middleware closes the connection if there are already amount connections opened.
                     format: int64
-                    minimum: 0
+                    minimum: 0.0
                     type: integer
                 type: object
               ipAllowList:
-                description: >-
+                description: |-
                   IPAllowList defines the IPAllowList middleware configuration.
-
                   This middleware accepts/refuses connections based on the client IP.
-
                   More info: https://doc.traefik.io/traefik/v3.5/middlewares/tcp/ipallowlist/
                 properties:
                   sourceRange:
@@ -75,13 +64,10 @@ spec:
                     type: array
                 type: object
               ipWhiteList:
-                description: >-
+                description: |-
                   IPWhiteList defines the IPWhiteList middleware configuration.
-
                   This middleware accepts/refuses connections based on the client IP.
-
                   Deprecated: please use IPAllowList instead.
-
                   More info: https://doc.traefik.io/traefik/v3.5/middlewares/tcp/ipwhitelist/
                 properties:
                   sourceRange:

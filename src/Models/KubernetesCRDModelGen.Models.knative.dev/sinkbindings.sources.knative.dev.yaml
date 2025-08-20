@@ -2,44 +2,59 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   labels:
-    eventing.knative.dev/source: true
-    duck.knative.dev/source: true
-    duck.knative.dev/binding: true
-    knative.dev/crd-install: true
+    eventing.knative.dev/source: "true"
+    duck.knative.dev/source: "true"
+    duck.knative.dev/binding: "true"
+    knative.dev/crd-install: "true"
     app.kubernetes.io/version: 1.19.1
     app.kubernetes.io/name: knative-eventing
   name: sinkbindings.sources.knative.dev
 spec:
   group: sources.knative.dev
+  names:
+    categories:
+    - all
+    - knative
+    - sources
+    - bindings
+    kind: SinkBinding
+    plural: sinkbindings
+    singular: sinkbinding
+  scope: Namespaced
   versions:
-  - name: v1
-    served: true
-    storage: true
-    subresources:
-      status: {}
+  - additionalPrinterColumns:
+    - jsonPath: .status.sinkUri
+      name: Sink
+      type: string
+    - jsonPath: .metadata.creationTimestamp
+      name: Age
+      type: date
+    - jsonPath: .status.conditions[?(@.type=='Ready')].status
+      name: Ready
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].reason
+      name: Reason
+      type: string
+    name: v1
     schema:
       openAPIV3Schema:
         description: SinkBinding describes a Binding that is also a Source. The `sink` (from the Source duck) is resolved to a URL and then projected into the `subject` by augmenting the runtime contract of the referenced containers to have a `K_SINK` environment variable holding the endpoint to which to send cloud events.
-        type: object
         properties:
           spec:
-            type: object
             properties:
               ceOverrides:
                 description: CloudEventOverrides defines overrides to control the output format and modifications of the event sent to the sink.
-                type: object
                 properties:
                   extensions:
                     description: Extensions specify what attribute are added or overridden on the outbound event. Each `Extensions` key-value pair are set on the event as an attribute extension independently.
                     type: object
                     x-kubernetes-preserve-unknown-fields: true
+                type: object
               sink:
                 description: Sink is a reference to an object that will resolve to a uri to use as the sink.
-                type: object
                 properties:
                   ref:
                     description: Ref points to an Addressable.
-                    type: object
                     properties:
                       apiVersion:
                         description: API version of the referent.
@@ -53,6 +68,7 @@ spec:
                       namespace:
                         description: 'Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/ This is optional field, it gets defaulted to the object holding it if left out.'
                         type: string
+                    type: object
                   uri:
                     description: URI can be an absolute URL(non-empty scheme and non-empty host) pointing to the target or a relative URI. Relative URIs will be resolved using the base URI retrieved from Ref.
                     type: string
@@ -62,9 +78,9 @@ spec:
                   audience:
                     description: Audience is the OIDC audience. This only needs to be set if the target is not an Addressable and thus the Audience can't be received from the target itself. If specified, it takes precedence over the target's Audience.
                     type: string
+                type: object
               subject:
                 description: Subject references the resource(s) whose "runtime contract" should be augmented by Binding implementations.
-                type: object
                 properties:
                   apiVersion:
                     description: API version of the referent.
@@ -80,11 +96,9 @@ spec:
                     type: string
                   selector:
                     description: Selector of the referents. Mutually exclusive with Name.
-                    type: object
                     properties:
                       matchExpressions:
                         description: matchExpressions is a list of label selector requirements. The requirements are ANDed.
-                        type: array
                         items:
                           type: object
                           properties:
@@ -99,12 +113,15 @@ spec:
                               type: array
                               items:
                                 type: string
+                        type: array
                       matchLabels:
                         description: matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.
                         type: object
                         x-kubernetes-preserve-unknown-fields: true
-          status:
+                    type: object
+                type: object
             type: object
+          status:
             properties:
               annotations:
                 description: Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.
@@ -112,19 +129,18 @@ spec:
                 x-kubernetes-preserve-unknown-fields: true
               auth:
                 description: Auth provides the relevant information for OIDC authentication.
-                type: object
                 properties:
                   serviceAccountName:
                     description: ServiceAccountName is the name of the generated service account used for this components OIDC authentication.
                     type: string
                   serviceAccountNames:
                     description: ServiceAccountNames is the list of names of the generated service accounts used for this components OIDC authentication.
-                    type: array
                     items:
                       type: string
+                    type: array
+                type: object
               ceAttributes:
                 description: CloudEventAttributes are the specific attributes that the Source uses as part of its CloudEvents.
-                type: array
                 items:
                   type: object
                   properties:
@@ -134,9 +150,9 @@ spec:
                     type:
                       description: Type refers to the CloudEvent type attribute.
                       type: string
+                type: array
               conditions:
                 description: Conditions the latest available observations of a resource's current state.
-                type: array
                 items:
                   type: object
                   required:
@@ -161,10 +177,11 @@ spec:
                     type:
                       description: Type of condition.
                       type: string
+                type: array
               observedGeneration:
                 description: ObservedGeneration is the 'Generation' of the Service that was last processed by the controller.
-                type: integer
                 format: int64
+                type: integer
               sinkUri:
                 description: SinkURI is the current active sink URI that has been configured for the Source.
                 type: string
@@ -177,26 +194,9 @@ spec:
               oidcTokenSecretName:
                 description: Name of the secret with the OIDC token for the sink.
                 type: string
-    additionalPrinterColumns:
-    - name: Sink
-      type: string
-      jsonPath: .status.sinkUri
-    - name: Age
-      type: date
-      jsonPath: .metadata.creationTimestamp
-    - name: Ready
-      type: string
-      jsonPath: .status.conditions[?(@.type=='Ready')].status
-    - name: Reason
-      type: string
-      jsonPath: .status.conditions[?(@.type=='Ready')].reason
-  names:
-    categories:
-    - all
-    - knative
-    - sources
-    - bindings
-    kind: SinkBinding
-    plural: sinkbindings
-    singular: sinkbinding
-  scope: Namespaced
+            type: object
+        type: object
+    served: true
+    storage: true
+    subresources:
+      status: {}

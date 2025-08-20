@@ -45,33 +45,24 @@ spec:
     name: v1api20220615
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /monitor/resource-manager/Microsoft.Insights/stable/2022-06-15/scheduledQueryRule_API.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/scheduledQueryRules/{ruleName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -87,11 +78,9 @@ spec:
                       description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                       properties:
                         armId:
-                          description: >-
+                          description: |-
                             ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                             The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                             ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                           pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                           type: string
@@ -113,22 +102,19 @@ spec:
                     type: object
                 type: object
               autoMitigate:
-                description: >-
+                description: |-
                   AutoMitigate: The flag that indicates whether the alert should be automatically resolved or not. The default is true.
-
                   Relevant only for rules of the kind LogAlert.
                 type: boolean
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 pattern: ^[^#<>%&:\?/{}*]{1,260}$
                 type: string
               checkWorkspaceAlertsStorageConfigured:
-                description: >-
+                description: |-
                   CheckWorkspaceAlertsStorageConfigured: The flag which indicates whether this scheduled query rule should be stored in
-
                   the customer's storage. The default is false. Relevant only for rules of the kind LogAlert.
                 type: boolean
               criteria:
@@ -165,21 +151,18 @@ spec:
                             type: object
                           type: array
                         failingPeriods:
-                          description: >-
+                          description: |-
                             FailingPeriods: The minimum number of violations required within the selected lookback time window required to raise an
-
                             alert. Relevant only for rules of the kind LogAlert.
                           properties:
                             minFailingPeriodsToAlert:
-                              description: >-
+                              description: |-
                                 MinFailingPeriodsToAlert: The number of violations to trigger an alert. Should be smaller or equal to
-
                                 numberOfEvaluationPeriods. Default value is 1
                               type: integer
                             numberOfEvaluationPeriods:
-                              description: >-
+                              description: |-
                                 NumberOfEvaluationPeriods: The number of aggregated lookback points. The lookback time window is calculated based on the
-
                                 aggregation granularity (windowSize) and the selected number of aggregated points. Default value is 1
                               type: integer
                           type: object
@@ -202,17 +185,14 @@ spec:
                           description: 'Query: Log query alert'
                           type: string
                         resourceIdColumnReference:
-                          description: >-
+                          description: |-
                             ResourceIdColumnReference: The column containing the resource id. The content of the column must be a uri formatted as
-
                             resource id. Relevant only for rules of the kind LogAlert.
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -227,9 +207,8 @@ spec:
                               type: string
                           type: object
                         threshold:
-                          description: >-
+                          description: |-
                             Threshold: the criteria threshold value that activates the alert. Relevant and required only for rules of the kind
-
                             LogAlert.
                           type: number
                         timeAggregation:
@@ -254,9 +233,8 @@ spec:
                 description: 'Enabled: The flag which indicates whether this scheduled query rule is enabled. Value should be true or false'
                 type: boolean
               evaluationFrequency:
-                description: >-
+                description: |-
                   EvaluationFrequency: How often the scheduled query rule is evaluated represented in ISO 8601 duration format. Relevant
-
                   and required only for rules of the kind LogAlert.
                 type: string
               kind:
@@ -269,47 +247,38 @@ spec:
                 description: 'Location: The geo-location where the resource lives'
                 type: string
               muteActionsDuration:
-                description: >-
+                description: |-
                   MuteActionsDuration: Mute actions for the chosen period of time (in ISO 8601 duration format) after the alert is fired.
-
                   Relevant only for rules of the kind LogAlert.
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -320,33 +289,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -356,17 +318,14 @@ spec:
                     type: array
                 type: object
               overrideQueryTimeRange:
-                description: >-
+                description: |-
                   OverrideQueryTimeRange: If specified then overrides the query time range (default is
-
                   WindowSize*NumberOfEvaluationPeriods). Relevant only for rules of the kind LogAlert.
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -382,11 +341,9 @@ spec:
                   description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                   properties:
                     armId:
-                      description: >-
+                      description: |-
                         ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                         The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                         ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                       pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                       type: string
@@ -402,9 +359,8 @@ spec:
                   type: object
                 type: array
               severity:
-                description: >-
+                description: |-
                   Severity: Severity of the alert. Should be an integer between [0-4]. Value of 0 is severest. Relevant and required only
-
                   for rules of the kind LogAlert.
                 enum:
                 - 0
@@ -414,9 +370,8 @@ spec:
                 - 4
                 type: integer
               skipQueryValidation:
-                description: >-
+                description: |-
                   SkipQueryValidation: The flag which indicates whether the provided query should be validated or not. The default is
-
                   false. Relevant only for rules of the kind LogAlert.
                 type: boolean
               tags:
@@ -425,21 +380,17 @@ spec:
                 description: 'Tags: Resource tags.'
                 type: object
               targetResourceTypes:
-                description: >-
+                description: |-
                   TargetResourceTypes: List of resource type of the target resource(s) on which the alert is created/updated. For example
-
                   if the scope is a resource group and targetResourceTypes is Microsoft.Compute/virtualMachines, then a different alert
-
                   will be fired for each virtual machine in the resource group which meet the alert criteria. Relevant only for rules of
-
                   the kind LogAlert
                 items:
                   type: string
                 type: array
               windowSize:
-                description: >-
+                description: |-
                   WindowSize: The period of time (in ISO 8601 duration format) on which the Alert query will be executed (bin size).
-
                   Relevant and required only for rules of the kind LogAlert.
                 type: string
             required:
@@ -463,15 +414,13 @@ spec:
                     type: object
                 type: object
               autoMitigate:
-                description: >-
+                description: |-
                   AutoMitigate: The flag that indicates whether the alert should be automatically resolved or not. The default is true.
-
                   Relevant only for rules of the kind LogAlert.
                 type: boolean
               checkWorkspaceAlertsStorageConfigured:
-                description: >-
+                description: |-
                   CheckWorkspaceAlertsStorageConfigured: The flag which indicates whether this scheduled query rule should be stored in
-
                   the customer's storage. The default is false. Relevant only for rules of the kind LogAlert.
                 type: boolean
               conditions:
@@ -487,28 +436,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -554,21 +497,18 @@ spec:
                             type: object
                           type: array
                         failingPeriods:
-                          description: >-
+                          description: |-
                             FailingPeriods: The minimum number of violations required within the selected lookback time window required to raise an
-
                             alert. Relevant only for rules of the kind LogAlert.
                           properties:
                             minFailingPeriodsToAlert:
-                              description: >-
+                              description: |-
                                 MinFailingPeriodsToAlert: The number of violations to trigger an alert. Should be smaller or equal to
-
                                 numberOfEvaluationPeriods. Default value is 1
                               type: integer
                             numberOfEvaluationPeriods:
-                              description: >-
+                              description: |-
                                 NumberOfEvaluationPeriods: The number of aggregated lookback points. The lookback time window is calculated based on the
-
                                 aggregation granularity (windowSize) and the selected number of aggregated points. Default value is 1
                               type: integer
                           type: object
@@ -585,15 +525,13 @@ spec:
                           description: 'Query: Log query alert'
                           type: string
                         resourceIdColumn:
-                          description: >-
+                          description: |-
                             ResourceIdColumn: The column containing the resource id. The content of the column must be a uri formatted as resource
-
                             id. Relevant only for rules of the kind LogAlert.
                           type: string
                         threshold:
-                          description: >-
+                          description: |-
                             Threshold: the criteria threshold value that activates the alert. Relevant and required only for rules of the kind
-
                             LogAlert.
                           type: number
                         timeAggregation:
@@ -612,34 +550,28 @@ spec:
                 description: 'Enabled: The flag which indicates whether this scheduled query rule is enabled. Value should be true or false'
                 type: boolean
               etag:
-                description: >-
+                description: |-
                   Etag: The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per
-
                   the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource.
-
                   HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and
-
                   If-Range (section 14.27) header fields.
                 type: string
               evaluationFrequency:
-                description: >-
+                description: |-
                   EvaluationFrequency: How often the scheduled query rule is evaluated represented in ISO 8601 duration format. Relevant
-
                   and required only for rules of the kind LogAlert.
                 type: string
               id:
-                description: >-
+                description: |-
                   Id: Fully qualified resource ID for the resource. Ex -
-
                   /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                 type: string
               isLegacyLogAnalyticsRule:
                 description: 'IsLegacyLogAnalyticsRule: True if alert rule is legacy Log Analytic rule'
                 type: boolean
               isWorkspaceAlertsStorageConfigured:
-                description: >-
+                description: |-
                   IsWorkspaceAlertsStorageConfigured: The flag which indicates whether this scheduled query rule has been configured to be
-
                   stored in the customer's storage. The default is false.
                 type: boolean
               kind:
@@ -649,18 +581,16 @@ spec:
                 description: 'Location: The geo-location where the resource lives'
                 type: string
               muteActionsDuration:
-                description: >-
+                description: |-
                   MuteActionsDuration: Mute actions for the chosen period of time (in ISO 8601 duration format) after the alert is fired.
-
                   Relevant only for rules of the kind LogAlert.
                 type: string
               name:
                 description: 'Name: The name of the resource'
                 type: string
               overrideQueryTimeRange:
-                description: >-
+                description: |-
                   OverrideQueryTimeRange: If specified then overrides the query time range (default is
-
                   WindowSize*NumberOfEvaluationPeriods). Relevant only for rules of the kind LogAlert.
                 type: string
               scopes:
@@ -669,15 +599,13 @@ spec:
                   type: string
                 type: array
               severity:
-                description: >-
+                description: |-
                   Severity: Severity of the alert. Should be an integer between [0-4]. Value of 0 is severest. Relevant and required only
-
                   for rules of the kind LogAlert.
                 type: integer
               skipQueryValidation:
-                description: >-
+                description: |-
                   SkipQueryValidation: The flag which indicates whether the provided query should be validated or not. The default is
-
                   false. Relevant only for rules of the kind LogAlert.
                 type: boolean
               systemData:
@@ -708,13 +636,10 @@ spec:
                 description: 'Tags: Resource tags.'
                 type: object
               targetResourceTypes:
-                description: >-
+                description: |-
                   TargetResourceTypes: List of resource type of the target resource(s) on which the alert is created/updated. For example
-
                   if the scope is a resource group and targetResourceTypes is Microsoft.Compute/virtualMachines, then a different alert
-
                   will be fired for each virtual machine in the resource group which meet the alert criteria. Relevant only for rules of
-
                   the kind LogAlert
                 items:
                   type: string
@@ -723,9 +648,8 @@ spec:
                 description: 'Type: The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"'
                 type: string
               windowSize:
-                description: >-
+                description: |-
                   WindowSize: The period of time (in ISO 8601 duration format) on which the Alert query will be executed (bin size).
-
                   Relevant and required only for rules of the kind LogAlert.
                 type: string
             type: object
@@ -750,35 +674,25 @@ spec:
     name: v1api20220615storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20220615.ScheduledQueryRule
-
           Generator information:
-
           - Generated from: /monitor/resource-manager/Microsoft.Insights/stable/2022-06-15/scheduledQueryRule_API.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/scheduledQueryRules/{ruleName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -789,23 +703,20 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               actions:
-                description: >-
+                description: |-
                   Storage version of v1api20220615.Actions
-
                   Actions to invoke when the alert fires.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   actionGroupsReferences:
@@ -813,11 +724,9 @@ spec:
                       description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                       properties:
                         armId:
-                          description: >-
+                          description: |-
                             ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                             The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                             ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                           pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                           type: string
@@ -840,55 +749,48 @@ spec:
               autoMitigate:
                 type: boolean
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               checkWorkspaceAlertsStorageConfigured:
                 type: boolean
               criteria:
-                description: >-
+                description: |-
                   Storage version of v1api20220615.ScheduledQueryRuleCriteria
-
                   The rule criteria that defines the conditions of the scheduled query rule.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   allOf:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20220615.Condition
-
                         A condition of the scheduled query rule.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         dimensions:
                           items:
-                            description: >-
+                            description: |-
                               Storage version of v1api20220615.Dimension
-
                               Dimension splitting and filtering definition
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               name:
@@ -907,9 +809,8 @@ spec:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             minFailingPeriodsToAlert:
@@ -926,17 +827,14 @@ spec:
                         query:
                           type: string
                         resourceIdColumnReference:
-                          description: >-
+                          description: |-
                             ResourceIdColumnReference: The column containing the resource id. The content of the column must be a uri formatted as
-
                             resource id. Relevant only for rules of the kind LogAlert.
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -972,48 +870,39 @@ spec:
               muteActionsDuration:
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20220615.ScheduledQueryRuleOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1023,33 +912,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1063,11 +945,9 @@ spec:
               overrideQueryTimeRange:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -1082,11 +962,9 @@ spec:
                   description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                   properties:
                     armId:
-                      description: >-
+                      description: |-
                         ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                         The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                         ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                       pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                       type: string
@@ -1124,23 +1002,20 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               actions:
-                description: >-
+                description: |-
                   Storage version of v1api20220615.Actions_STATUS
-
                   Actions to invoke when the alert fires.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   actionGroups:
@@ -1168,28 +1043,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -1208,47 +1077,41 @@ spec:
               createdWithApiVersion:
                 type: string
               criteria:
-                description: >-
+                description: |-
                   Storage version of v1api20220615.ScheduledQueryRuleCriteria_STATUS
-
                   The rule criteria that defines the conditions of the scheduled query rule.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   allOf:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20220615.Condition_STATUS
-
                         A condition of the scheduled query rule.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         dimensions:
                           items:
-                            description: >-
+                            description: |-
                               Storage version of v1api20220615.Dimension_STATUS
-
                               Dimension splitting and filtering definition
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               name:
@@ -1267,9 +1130,8 @@ spec:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             minFailingPeriodsToAlert:
@@ -1329,17 +1191,15 @@ spec:
               skipQueryValidation:
                 type: boolean
               systemData:
-                description: >-
+                description: |-
                   Storage version of v1api20220615.SystemData_STATUS
-
                   Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   createdAt:
@@ -1389,33 +1249,24 @@ spec:
     name: v1api20240101preview
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /monitor/resource-manager/Microsoft.Insights/preview/2024-01-01-preview/scheduledQueryRule_API.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/scheduledQueryRules/{ruleName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -1431,11 +1282,9 @@ spec:
                       description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                       properties:
                         armId:
-                          description: >-
+                          description: |-
                             ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                             The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                             ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                           pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                           type: string
@@ -1462,22 +1311,19 @@ spec:
                     type: object
                 type: object
               autoMitigate:
-                description: >-
+                description: |-
                   AutoMitigate: The flag that indicates whether the alert should be automatically resolved or not. The default is true.
-
                   Relevant only for rules of the kind LogAlert.
                 type: boolean
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 pattern: ^[^#<>%&:\?/{}*]{1,260}$
                 type: string
               checkWorkspaceAlertsStorageConfigured:
-                description: >-
+                description: |-
                   CheckWorkspaceAlertsStorageConfigured: The flag which indicates whether this scheduled query rule should be stored in
-
                   the customer's storage. The default is false. Relevant only for rules of the kind LogAlert.
                 type: boolean
               criteria:
@@ -1489,11 +1335,9 @@ spec:
                       description: A condition of the scheduled query rule.
                       properties:
                         alertSensitivity:
-                          description: >-
+                          description: |-
                             AlertSensitivity: The extent of deviation required to trigger an alert. Allowed values are 'Low', 'Medium' and 'High'.
-
                             This will affect how tight the threshold is to the metric series pattern. Relevant and required only for dynamic
-
                             threshold rules of the kind LogAlert.
                           type: string
                         criterionType:
@@ -1528,28 +1372,24 @@ spec:
                             type: object
                           type: array
                         failingPeriods:
-                          description: >-
+                          description: |-
                             FailingPeriods: The minimum number of violations required within the selected lookback time window required to raise an
-
                             alert. Relevant only for rules of the kind LogAlert.
                           properties:
                             minFailingPeriodsToAlert:
-                              description: >-
+                              description: |-
                                 MinFailingPeriodsToAlert: The number of violations to trigger an alert. Should be smaller or equal to
-
                                 numberOfEvaluationPeriods. Default value is 1
                               type: integer
                             numberOfEvaluationPeriods:
-                              description: >-
+                              description: |-
                                 NumberOfEvaluationPeriods: The number of aggregated lookback points. The lookback time window is calculated based on the
-
                                 aggregation granularity (windowSize) and the selected number of aggregated points. Default value is 1
                               type: integer
                           type: object
                         ignoreDataBefore:
-                          description: >-
+                          description: |-
                             IgnoreDataBefore: Use this option to set the date from which to start learning the metric historical data and calculate
-
                             the dynamic thresholds (in ISO8601 format). Relevant only for dynamic threshold rules of the kind LogAlert.
                           type: string
                         metricMeasureColumn:
@@ -1572,17 +1412,14 @@ spec:
                           description: 'Query: Log query alert'
                           type: string
                         resourceIdColumnReference:
-                          description: >-
+                          description: |-
                             ResourceIdColumnReference: The column containing the resource id. The content of the column must be a uri formatted as
-
                             resource id. Relevant only for rules of the kind LogAlert.
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -1597,9 +1434,8 @@ spec:
                               type: string
                           type: object
                         threshold:
-                          description: >-
+                          description: |-
                             Threshold: the criteria threshold value that activates the alert. Relevant and required only for static threshold rules
-
                             of the kind LogAlert.
                           type: number
                         timeAggregation:
@@ -1624,9 +1460,8 @@ spec:
                 description: 'Enabled: The flag which indicates whether this scheduled query rule is enabled. Value should be true or false'
                 type: boolean
               evaluationFrequency:
-                description: >-
+                description: |-
                   EvaluationFrequency: How often the scheduled query rule is evaluated represented in ISO 8601 duration format. Relevant
-
                   and required only for rules of the kind LogAlert.
                 type: string
               identity:
@@ -1640,11 +1475,9 @@ spec:
                     - UserAssigned
                     type: string
                   userAssignedIdentities:
-                    description: >-
+                    description: |-
                       UserAssignedIdentities: The list of user identities associated with the resource. The user identity dictionary key
-
                       references will be ARM resource ids in the form:
-
                       '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
                     items:
                       description: Information about the user assigned identity for the resource
@@ -1653,11 +1486,9 @@ spec:
                           description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -1687,47 +1518,38 @@ spec:
                 description: 'Location: The geo-location where the resource lives'
                 type: string
               muteActionsDuration:
-                description: >-
+                description: |-
                   MuteActionsDuration: Mute actions for the chosen period of time (in ISO 8601 duration format) after the alert is fired.
-
                   Relevant only for rules of the kind LogAlert.
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1738,33 +1560,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1774,17 +1589,14 @@ spec:
                     type: array
                 type: object
               overrideQueryTimeRange:
-                description: >-
+                description: |-
                   OverrideQueryTimeRange: If specified then overrides the query time range (default is
-
                   WindowSize*NumberOfEvaluationPeriods). Relevant only for rules of the kind LogAlert.
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -1801,9 +1613,8 @@ spec:
                     description: 'AutoResolved: The flag that indicates whether or not to auto resolve a fired alert.'
                     type: boolean
                   timeToResolve:
-                    description: >-
+                    description: |-
                       TimeToResolve: The duration a rule must evaluate as healthy before the fired alert is automatically resolved represented
-
                       in ISO 8601 duration format.
                     type: string
                 type: object
@@ -1813,11 +1624,9 @@ spec:
                   description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                   properties:
                     armId:
-                      description: >-
+                      description: |-
                         ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                         The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                         ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                       pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                       type: string
@@ -1833,9 +1642,8 @@ spec:
                   type: object
                 type: array
               severity:
-                description: >-
+                description: |-
                   Severity: Severity of the alert. Should be an integer between [0-4]. Value of 0 is severest. Relevant and required only
-
                   for rules of the kind LogAlert.
                 enum:
                 - 0
@@ -1845,9 +1653,8 @@ spec:
                 - 4
                 type: integer
               skipQueryValidation:
-                description: >-
+                description: |-
                   SkipQueryValidation: The flag which indicates whether the provided query should be validated or not. The default is
-
                   false. Relevant only for rules of the kind LogAlert.
                 type: boolean
               tags:
@@ -1856,21 +1663,17 @@ spec:
                 description: 'Tags: Resource tags.'
                 type: object
               targetResourceTypes:
-                description: >-
+                description: |-
                   TargetResourceTypes: List of resource type of the target resource(s) on which the alert is created/updated. For example
-
                   if the scope is a resource group and targetResourceTypes is Microsoft.Compute/virtualMachines, then a different alert
-
                   will be fired for each virtual machine in the resource group which meet the alert criteria. Relevant only for rules of
-
                   the kind LogAlert
                 items:
                   type: string
                 type: array
               windowSize:
-                description: >-
+                description: |-
                   WindowSize: The period of time (in ISO 8601 duration format) on which the Alert query will be executed (bin size).
-
                   Relevant and required only for rules of the kind LogAlert.
                 type: string
             required:
@@ -1899,15 +1702,13 @@ spec:
                     type: object
                 type: object
               autoMitigate:
-                description: >-
+                description: |-
                   AutoMitigate: The flag that indicates whether the alert should be automatically resolved or not. The default is true.
-
                   Relevant only for rules of the kind LogAlert.
                 type: boolean
               checkWorkspaceAlertsStorageConfigured:
-                description: >-
+                description: |-
                   CheckWorkspaceAlertsStorageConfigured: The flag which indicates whether this scheduled query rule should be stored in
-
                   the customer's storage. The default is false. Relevant only for rules of the kind LogAlert.
                 type: boolean
               conditions:
@@ -1923,28 +1724,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -1972,11 +1767,9 @@ spec:
                       description: A condition of the scheduled query rule.
                       properties:
                         alertSensitivity:
-                          description: >-
+                          description: |-
                             AlertSensitivity: The extent of deviation required to trigger an alert. Allowed values are 'Low', 'Medium' and 'High'.
-
                             This will affect how tight the threshold is to the metric series pattern. Relevant and required only for dynamic
-
                             threshold rules of the kind LogAlert.
                           type: string
                         criterionType:
@@ -2001,28 +1794,24 @@ spec:
                             type: object
                           type: array
                         failingPeriods:
-                          description: >-
+                          description: |-
                             FailingPeriods: The minimum number of violations required within the selected lookback time window required to raise an
-
                             alert. Relevant only for rules of the kind LogAlert.
                           properties:
                             minFailingPeriodsToAlert:
-                              description: >-
+                              description: |-
                                 MinFailingPeriodsToAlert: The number of violations to trigger an alert. Should be smaller or equal to
-
                                 numberOfEvaluationPeriods. Default value is 1
                               type: integer
                             numberOfEvaluationPeriods:
-                              description: >-
+                              description: |-
                                 NumberOfEvaluationPeriods: The number of aggregated lookback points. The lookback time window is calculated based on the
-
                                 aggregation granularity (windowSize) and the selected number of aggregated points. Default value is 1
                               type: integer
                           type: object
                         ignoreDataBefore:
-                          description: >-
+                          description: |-
                             IgnoreDataBefore: Use this option to set the date from which to start learning the metric historical data and calculate
-
                             the dynamic thresholds (in ISO8601 format). Relevant only for dynamic threshold rules of the kind LogAlert.
                           type: string
                         metricMeasureColumn:
@@ -2038,15 +1827,13 @@ spec:
                           description: 'Query: Log query alert'
                           type: string
                         resourceIdColumn:
-                          description: >-
+                          description: |-
                             ResourceIdColumn: The column containing the resource id. The content of the column must be a uri formatted as resource
-
                             id. Relevant only for rules of the kind LogAlert.
                           type: string
                         threshold:
-                          description: >-
+                          description: |-
                             Threshold: the criteria threshold value that activates the alert. Relevant and required only for static threshold rules
-
                             of the kind LogAlert.
                           type: number
                         timeAggregation:
@@ -2065,25 +1852,20 @@ spec:
                 description: 'Enabled: The flag which indicates whether this scheduled query rule is enabled. Value should be true or false'
                 type: boolean
               etag:
-                description: >-
+                description: |-
                   Etag: The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per
-
                   the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource.
-
                   HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and
-
                   If-Range (section 14.27) header fields.
                 type: string
               evaluationFrequency:
-                description: >-
+                description: |-
                   EvaluationFrequency: How often the scheduled query rule is evaluated represented in ISO 8601 duration format. Relevant
-
                   and required only for rules of the kind LogAlert.
                 type: string
               id:
-                description: >-
+                description: |-
                   Id: Fully qualified resource ID for the resource. Ex -
-
                   /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                 type: string
               identity:
@@ -2109,11 +1891,9 @@ spec:
                           description: 'PrincipalId: The principal id of user assigned identity.'
                           type: string
                       type: object
-                    description: >-
+                    description: |-
                       UserAssignedIdentities: The list of user identities associated with the resource. The user identity dictionary key
-
                       references will be ARM resource ids in the form:
-
                       '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
                     type: object
                 type: object
@@ -2121,9 +1901,8 @@ spec:
                 description: 'IsLegacyLogAnalyticsRule: True if alert rule is legacy Log Analytic rule'
                 type: boolean
               isWorkspaceAlertsStorageConfigured:
-                description: >-
+                description: |-
                   IsWorkspaceAlertsStorageConfigured: The flag which indicates whether this scheduled query rule has been configured to be
-
                   stored in the customer's storage. The default is false.
                 type: boolean
               kind:
@@ -2133,18 +1912,16 @@ spec:
                 description: 'Location: The geo-location where the resource lives'
                 type: string
               muteActionsDuration:
-                description: >-
+                description: |-
                   MuteActionsDuration: Mute actions for the chosen period of time (in ISO 8601 duration format) after the alert is fired.
-
                   Relevant only for rules of the kind LogAlert.
                 type: string
               name:
                 description: 'Name: The name of the resource'
                 type: string
               overrideQueryTimeRange:
-                description: >-
+                description: |-
                   OverrideQueryTimeRange: If specified then overrides the query time range (default is
-
                   WindowSize*NumberOfEvaluationPeriods). Relevant only for rules of the kind LogAlert.
                 type: string
               resolveConfiguration:
@@ -2154,9 +1931,8 @@ spec:
                     description: 'AutoResolved: The flag that indicates whether or not to auto resolve a fired alert.'
                     type: boolean
                   timeToResolve:
-                    description: >-
+                    description: |-
                       TimeToResolve: The duration a rule must evaluate as healthy before the fired alert is automatically resolved represented
-
                       in ISO 8601 duration format.
                     type: string
                 type: object
@@ -2166,15 +1942,13 @@ spec:
                   type: string
                 type: array
               severity:
-                description: >-
+                description: |-
                   Severity: Severity of the alert. Should be an integer between [0-4]. Value of 0 is severest. Relevant and required only
-
                   for rules of the kind LogAlert.
                 type: integer
               skipQueryValidation:
-                description: >-
+                description: |-
                   SkipQueryValidation: The flag which indicates whether the provided query should be validated or not. The default is
-
                   false. Relevant only for rules of the kind LogAlert.
                 type: boolean
               systemData:
@@ -2205,13 +1979,10 @@ spec:
                 description: 'Tags: Resource tags.'
                 type: object
               targetResourceTypes:
-                description: >-
+                description: |-
                   TargetResourceTypes: List of resource type of the target resource(s) on which the alert is created/updated. For example
-
                   if the scope is a resource group and targetResourceTypes is Microsoft.Compute/virtualMachines, then a different alert
-
                   will be fired for each virtual machine in the resource group which meet the alert criteria. Relevant only for rules of
-
                   the kind LogAlert
                 items:
                   type: string
@@ -2220,9 +1991,8 @@ spec:
                 description: 'Type: The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"'
                 type: string
               windowSize:
-                description: >-
+                description: |-
                   WindowSize: The period of time (in ISO 8601 duration format) on which the Alert query will be executed (bin size).
-
                   Relevant and required only for rules of the kind LogAlert.
                 type: string
             type: object
@@ -2247,35 +2017,25 @@ spec:
     name: v1api20240101previewstorage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20240101preview.ScheduledQueryRule
-
           Generator information:
-
           - Generated from: /monitor/resource-manager/Microsoft.Insights/preview/2024-01-01-preview/scheduledQueryRule_API.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/scheduledQueryRules/{ruleName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -2286,23 +2046,20 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               actions:
-                description: >-
+                description: |-
                   Storage version of v1api20240101preview.Actions
-
                   Actions to invoke when the alert fires.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   actionGroupsReferences:
@@ -2310,11 +2067,9 @@ spec:
                       description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                       properties:
                         armId:
-                          description: >-
+                          description: |-
                             ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                             The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                             ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                           pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                           type: string
@@ -2341,40 +2096,35 @@ spec:
               autoMitigate:
                 type: boolean
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               checkWorkspaceAlertsStorageConfigured:
                 type: boolean
               criteria:
-                description: >-
+                description: |-
                   Storage version of v1api20240101preview.ScheduledQueryRuleCriteria
-
                   The rule criteria that defines the conditions of the scheduled query rule.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   allOf:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240101preview.Condition
-
                         A condition of the scheduled query rule.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         alertSensitivity:
@@ -2383,17 +2133,15 @@ spec:
                           type: string
                         dimensions:
                           items:
-                            description: >-
+                            description: |-
                               Storage version of v1api20240101preview.Dimension
-
                               Dimension splitting and filtering definition
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               name:
@@ -2412,9 +2160,8 @@ spec:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             minFailingPeriodsToAlert:
@@ -2433,17 +2180,14 @@ spec:
                         query:
                           type: string
                         resourceIdColumnReference:
-                          description: >-
+                          description: |-
                             ResourceIdColumnReference: The column containing the resource id. The content of the column must be a uri formatted as
-
                             resource id. Relevant only for rules of the kind LogAlert.
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -2473,45 +2217,39 @@ spec:
               evaluationFrequency:
                 type: string
               identity:
-                description: >-
+                description: |-
                   Storage version of v1api20240101preview.Identity
-
                   Identity for the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   type:
                     type: string
                   userAssignedIdentities:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240101preview.UserAssignedIdentityDetails
-
                         Information about the user assigned identity for the resource
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
                           description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -2535,48 +2273,39 @@ spec:
               muteActionsDuration:
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20240101preview.ScheduledQueryRuleOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -2586,33 +2315,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -2626,11 +2348,9 @@ spec:
               overrideQueryTimeRange:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -2641,17 +2361,15 @@ spec:
                     type: string
                 type: object
               resolveConfiguration:
-                description: >-
+                description: |-
                   Storage version of v1api20240101preview.RuleResolveConfiguration
-
                   TBD. Relevant only for rules of the kind LogAlert.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   autoResolved:
@@ -2664,11 +2382,9 @@ spec:
                   description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                   properties:
                     armId:
-                      description: >-
+                      description: |-
                         ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                         The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                         ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                       pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                       type: string
@@ -2706,23 +2422,20 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               actions:
-                description: >-
+                description: |-
                   Storage version of v1api20240101preview.Actions_STATUS
-
                   Actions to invoke when the alert fires.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   actionGroups:
@@ -2754,28 +2467,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -2794,32 +2501,28 @@ spec:
               createdWithApiVersion:
                 type: string
               criteria:
-                description: >-
+                description: |-
                   Storage version of v1api20240101preview.ScheduledQueryRuleCriteria_STATUS
-
                   The rule criteria that defines the conditions of the scheduled query rule.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   allOf:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240101preview.Condition_STATUS
-
                         A condition of the scheduled query rule.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         alertSensitivity:
@@ -2828,17 +2531,15 @@ spec:
                           type: string
                         dimensions:
                           items:
-                            description: >-
+                            description: |-
                               Storage version of v1api20240101preview.Dimension_STATUS
-
                               Dimension splitting and filtering definition
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               name:
@@ -2857,9 +2558,8 @@ spec:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             minFailingPeriodsToAlert:
@@ -2899,17 +2599,15 @@ spec:
               id:
                 type: string
               identity:
-                description: >-
+                description: |-
                   Storage version of v1api20240101preview.Identity_STATUS
-
                   Identity for the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   principalId:
@@ -2920,17 +2618,15 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240101preview.UserIdentityProperties_STATUS
-
                         User assigned identity properties.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         clientId:
@@ -2955,17 +2651,15 @@ spec:
               overrideQueryTimeRange:
                 type: string
               resolveConfiguration:
-                description: >-
+                description: |-
                   Storage version of v1api20240101preview.RuleResolveConfiguration_STATUS
-
                   TBD. Relevant only for rules of the kind LogAlert.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   autoResolved:
@@ -2982,17 +2676,15 @@ spec:
               skipQueryValidation:
                 type: boolean
               systemData:
-                description: >-
+                description: |-
                   Storage version of v1api20240101preview.SystemData_STATUS
-
                   Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   createdAt:

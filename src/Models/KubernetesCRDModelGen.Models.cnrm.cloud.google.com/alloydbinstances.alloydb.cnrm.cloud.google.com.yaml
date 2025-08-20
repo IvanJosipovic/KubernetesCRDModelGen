@@ -3,11 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/system: "true"
   name: alloydbinstances.alloydb.cnrm.cloud.google.com
 spec:
   group: alloydb.cnrm.cloud.google.com
@@ -61,16 +60,12 @@ spec:
                 description: Annotations to allow client tools to store small amount of arbitrary data. This is distinct from labels.
                 type: object
               availabilityType:
-                description: >-
+                description: |-
                   Availability type of an Instance. If empty, defaults to REGIONAL for primary instances.
 
-
                   For read pools, availabilityType is always UNSPECIFIED. Instances in the
-
                   read pools are evenly distributed across available zones within the region
-
                   (i.e. read pools with more than one node will have a node in at least two zones).
-
                   Possible values: ["AVAILABILITY_TYPE_UNSPECIFIED", "ZONAL", "REGIONAL"].
                 type: string
               clusterRef:
@@ -115,30 +110,21 @@ spec:
                 description: 'Not recommended. We recommend that you use `instanceTypeRef` instead. The type of the instance. Possible values: [PRIMARY, READ_POOL, SECONDARY]'
                 type: string
               instanceTypeRef:
-                description: >-
+                description: |-
                   The type of instance.
-
                   Possible values: ["PRIMARY", "READ_POOL", "SECONDARY"]
 
-
                   For PRIMARY and SECONDARY instances, set the value to refer to the name of the associated cluster.
-
                   This is recommended because the instance type of primary and secondary instances is tied to the cluster type of the associated cluster.
-
                   If the secondary cluster is promoted to primary cluster, then the associated secondary instance also becomes primary instance.
-
                   Example:
-
                   instanceTypeRef:
                     name: clusterName
                   For instances of type READ_POOL, set the value using external keyword.
-
                   Example:
-
                   instanceTypeRef:
                     external: READ_POOL
                   If the instance type is SECONDARY, the delete instance operation does not delete the secondary instance but abandons it instead.
-
                   Use deletionPolicy = "FORCE" in the associated secondary cluster and delete the cluster forcefully to delete the secondary cluster as well its associated secondary instance.
                 oneOf:
                 - not:
@@ -312,16 +298,12 @@ spec:
                 description: Annotations to allow client tools to store small amount of arbitrary data. This is distinct from labels.
                 type: object
               availabilityType:
-                description: >-
+                description: |-
                   Availability type of an Instance. If empty, defaults to REGIONAL for primary instances.
 
-
                   For read pools, availabilityType is always UNSPECIFIED. Instances in the
-
                   read pools are evenly distributed across available zones within the region
-
                   (i.e. read pools with more than one node will have a node in at least two zones).
-
                   Possible values: ["AVAILABILITY_TYPE_UNSPECIFIED", "ZONAL", "REGIONAL"].
                 type: string
               clusterRef:
@@ -366,30 +348,21 @@ spec:
                 description: 'Not recommended. We recommend that you use `instanceTypeRef` instead. The type of the instance. Possible values: [PRIMARY, READ_POOL, SECONDARY]'
                 type: string
               instanceTypeRef:
-                description: >-
+                description: |-
                   The type of instance.
-
                   Possible values: ["PRIMARY", "READ_POOL", "SECONDARY"]
 
-
                   For PRIMARY and SECONDARY instances, set the value to refer to the name of the associated cluster.
-
                   This is recommended because the instance type of primary and secondary instances is tied to the cluster type of the associated cluster.
-
                   If the secondary cluster is promoted to primary cluster, then the associated secondary instance also becomes primary instance.
-
                   Example:
-
                   instanceTypeRef:
                     name: clusterName
                   For instances of type READ_POOL, set the value using external keyword.
-
                   Example:
-
                   instanceTypeRef:
                     external: READ_POOL
                   If the instance type is SECONDARY, the delete instance operation does not delete the secondary instance but abandons it instead.
-
                   Use deletionPolicy = "FORCE" in the associated secondary cluster and delete the cluster forcefully to delete the secondary cluster as well its associated secondary instance.
                 oneOf:
                 - not:
@@ -527,7 +500,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

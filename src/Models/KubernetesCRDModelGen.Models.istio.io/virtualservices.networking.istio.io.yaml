@@ -124,9 +124,8 @@ spec:
                           - message: must be a valid duration greater than 1ms
                             rule: duration(self) >= duration('1ms')
                         unmatchedPreflights:
-                          description: >-
+                          description: |-
                             Indicates whether preflight requests not matching the configured allowed origin shouldn't be forwarded to the upstream.
-
 
                             Valid Options: FORWARD, IGNORE
                           enum:
@@ -600,9 +599,8 @@ spec:
                           description: On a redirect, overwrite the Authority/Host portion of the URL with this value.
                           type: string
                         derivePort:
-                          description: >-
+                          description: |-
                             On a redirect, dynamically set the port: * FROM_PROTOCOL_DEFAULT: automatically set to 80 for HTTP and 443 for HTTPS.
-
 
                             Valid Options: FROM_PROTOCOL_DEFAULT, FROM_REQUEST_PORT
                           enum:
@@ -943,9 +941,8 @@ spec:
                       description: A url pointing to the Istio documentation for this specific error type.
                       type: string
                     level:
-                      description: >-
+                      description: |-
                         Represents how severe a message is.
-
 
                         Valid Options: UNKNOWN, ERROR, WARNING, INFO
                       enum:
@@ -1072,9 +1069,8 @@ spec:
                           - message: must be a valid duration greater than 1ms
                             rule: duration(self) >= duration('1ms')
                         unmatchedPreflights:
-                          description: >-
+                          description: |-
                             Indicates whether preflight requests not matching the configured allowed origin shouldn't be forwarded to the upstream.
-
 
                             Valid Options: FORWARD, IGNORE
                           enum:
@@ -1548,9 +1544,8 @@ spec:
                           description: On a redirect, overwrite the Authority/Host portion of the URL with this value.
                           type: string
                         derivePort:
-                          description: >-
+                          description: |-
                             On a redirect, dynamically set the port: * FROM_PROTOCOL_DEFAULT: automatically set to 80 for HTTP and 443 for HTTPS.
-
 
                             Valid Options: FROM_PROTOCOL_DEFAULT, FROM_REQUEST_PORT
                           enum:
@@ -1891,9 +1886,8 @@ spec:
                       description: A url pointing to the Istio documentation for this specific error type.
                       type: string
                     level:
-                      description: >-
+                      description: |-
                         Represents how severe a message is.
-
 
                         Valid Options: UNKNOWN, ERROR, WARNING, INFO
                       enum:
@@ -2020,9 +2014,8 @@ spec:
                           - message: must be a valid duration greater than 1ms
                             rule: duration(self) >= duration('1ms')
                         unmatchedPreflights:
-                          description: >-
+                          description: |-
                             Indicates whether preflight requests not matching the configured allowed origin shouldn't be forwarded to the upstream.
-
 
                             Valid Options: FORWARD, IGNORE
                           enum:
@@ -2496,9 +2489,8 @@ spec:
                           description: On a redirect, overwrite the Authority/Host portion of the URL with this value.
                           type: string
                         derivePort:
-                          description: >-
+                          description: |-
                             On a redirect, dynamically set the port: * FROM_PROTOCOL_DEFAULT: automatically set to 80 for HTTP and 443 for HTTPS.
-
 
                             Valid Options: FROM_PROTOCOL_DEFAULT, FROM_REQUEST_PORT
                           enum:
@@ -2839,9 +2831,8 @@ spec:
                       description: A url pointing to the Istio documentation for this specific error type.
                       type: string
                     level:
-                      description: >-
+                      description: |-
                         Represents how severe a message is.
-
 
                         Valid Options: UNKNOWN, ERROR, WARNING, INFO
                       enum:

@@ -257,9 +257,8 @@ spec:
                       description: A url pointing to the Istio documentation for this specific error type.
                       type: string
                     level:
-                      description: >-
+                      description: |-
                         Represents how severe a message is.
-
 
                         Valid Options: UNKNOWN, ERROR, WARNING, INFO
                       enum:
@@ -519,9 +518,8 @@ spec:
                       description: A url pointing to the Istio documentation for this specific error type.
                       type: string
                     level:
-                      description: >-
+                      description: |-
                         Represents how severe a message is.
-
 
                         Valid Options: UNKNOWN, ERROR, WARNING, INFO
                       enum:

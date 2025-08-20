@@ -37,64 +37,50 @@ spec:
         description: GitRepository is the Schema for the gitrepositories API.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
           spec:
-            description: >-
+            description: |-
               GitRepositorySpec specifies the required configuration to produce an
-
               Artifact for a Git repository.
             properties:
               ignore:
-                description: >-
+                description: |-
                   Ignore overrides the set of excluded patterns in the .sourceignore format
-
                   (which is the same as .gitignore). If not provided, a default will be used,
-
                   consult the documentation for your version to find out what those are.
                 type: string
               include:
-                description: >-
+                description: |-
                   Include specifies a list of GitRepository resources which Artifacts
-
                   should be included in the Artifact produced for this GitRepository.
                 items:
-                  description: >-
+                  description: |-
                     GitRepositoryInclude specifies a local reference to a GitRepository which
-
                     Artifact (sub-)contents must be included, and where they should be placed.
                   properties:
                     fromPath:
-                      description: >-
+                      description: |-
                         FromPath specifies the path to copy contents from, defaults to the root
-
                         of the Artifact.
                       type: string
                     repository:
-                      description: >-
+                      description: |-
                         GitRepositoryRef specifies the GitRepository which Artifact contents
-
                         must be included.
                       properties:
                         name:
@@ -104,9 +90,8 @@ spec:
                       - name
                       type: object
                     toPath:
-                      description: >-
+                      description: |-
                         ToPath specifies the path to copy contents to, defaults to the name of
-
                         the GitRepositoryRef.
                       type: string
                   required:
@@ -114,18 +99,15 @@ spec:
                   type: object
                 type: array
               interval:
-                description: >-
+                description: |-
                   Interval at which the GitRepository URL is checked for updates.
-
                   This interval is approximate and may be subject to jitter to ensure
-
                   efficient use of resources.
                 pattern: ^([0-9]+(\.[0-9]+)?(ms|s|m|h))+$
                 type: string
               provider:
-                description: >-
+                description: |-
                   Provider used for authentication, can be 'azure', 'github', 'generic'.
-
                   When not specified, defaults to 'generic'.
                 enum:
                 - generic
@@ -133,9 +115,8 @@ spec:
                 - github
                 type: string
               proxySecretRef:
-                description: >-
+                description: |-
                   ProxySecretRef specifies the Secret containing the proxy configuration
-
                   to use while communicating with the Git server.
                 properties:
                   name:
@@ -145,36 +126,30 @@ spec:
                 - name
                 type: object
               recurseSubmodules:
-                description: >-
+                description: |-
                   RecurseSubmodules enables the initialization of all submodules within
-
                   the GitRepository as cloned from the URL, using their default settings.
                 type: boolean
               ref:
-                description: >-
+                description: |-
                   Reference specifies the Git reference to resolve and monitor for
-
                   changes, defaults to the 'master' branch.
                 properties:
                   branch:
                     description: Branch to check out, defaults to 'master' if no other field is defined.
                     type: string
                   commit:
-                    description: >-
+                    description: |-
                       Commit SHA to check out, takes precedence over all reference fields.
 
-
                       This can be combined with Branch to shallow clone the branch, in which
-
                       the commit is expected to exist.
                     type: string
                   name:
-                    description: >-
+                    description: |-
                       Name of the reference to check out; takes precedence over Branch, Tag and SemVer.
 
-
                       It must be a valid Git reference: https://git-scm.com/docs/git-check-ref-format#_description
-
                       Examples: "refs/heads/main", "refs/tags/v0.1.0", "refs/pull/420/head", "refs/merge-requests/1/head"
                     type: string
                   semver:
@@ -185,17 +160,12 @@ spec:
                     type: string
                 type: object
               secretRef:
-                description: >-
+                description: |-
                   SecretRef specifies the Secret containing authentication credentials for
-
                   the GitRepository.
-
                   For HTTPS repositories the Secret must contain 'username' and 'password'
-
                   fields for basic auth or 'bearerToken' field for token auth.
-
                   For SSH repositories the Secret must contain 'identity'
-
                   and 'known_hosts' fields.
                 properties:
                   name:
@@ -205,19 +175,16 @@ spec:
                 - name
                 type: object
               sparseCheckout:
-                description: >-
+                description: |-
                   SparseCheckout specifies a list of directories to checkout when cloning
-
                   the repository. If specified, only these directories are included in the
-
                   Artifact produced for this GitRepository.
                 items:
                   type: string
                 type: array
               suspend:
-                description: >-
+                description: |-
                   Suspend tells the controller to suspend the reconciliation of this
-
                   GitRepository.
                 type: boolean
               timeout:
@@ -230,21 +197,17 @@ spec:
                 pattern: ^(http|https|ssh)://.*$
                 type: string
               verify:
-                description: >-
+                description: |-
                   Verification specifies the configuration to verify the Git commit
-
                   signature(s).
                 properties:
                   mode:
                     default: HEAD
-                    description: >-
+                    description: |-
                       Mode specifies which Git object(s) should be verified.
 
-
                       The variants "head" and "HEAD" both imply the same thing, i.e. verify
-
                       the commit that the HEAD of the Git repository points to. The variant
-
                       "head" solely exists to ensure backwards compatibility.
                     enum:
                     - head
@@ -253,9 +216,8 @@ spec:
                     - TagAndHEAD
                     type: string
                   secretRef:
-                    description: >-
+                    description: |-
                       SecretRef specifies the Secret containing the public keys of trusted Git
-
                       authors.
                     properties:
                       name:
@@ -284,9 +246,8 @@ spec:
                     pattern: ^[a-z0-9]+(?:[.+_-][a-z0-9]+)*:[a-zA-Z0-9=_-]+$
                     type: string
                   lastUpdateTime:
-                    description: >-
+                    description: |-
                       LastUpdateTime is the timestamp corresponding to the last update of the
-
                       Artifact.
                     format: date-time
                     type: string
@@ -296,17 +257,14 @@ spec:
                     description: Metadata holds upstream information such as OCI annotations.
                     type: object
                   path:
-                    description: >-
+                    description: |-
                       Path is the relative file path of the Artifact. It can be used to locate
-
                       the file in the root of the Artifact storage on the local file system of
-
                       the controller managing the Source.
                     type: string
                   revision:
-                    description: >-
+                    description: |-
                       Revision is a human-readable identifier traceable in the origin source
-
                       system. It can be a Git commit SHA, Git tag, a Helm chart version, etc.
                     type: string
                   size:
@@ -314,11 +272,9 @@ spec:
                     format: int64
                     type: integer
                   url:
-                    description: >-
+                    description: |-
                       URL is the HTTP address of the Artifact as exposed by the controller
-
                       managing the Source. It can be used to retrieve the Artifact for
-
                       consumption, e.g. by another controller applying the Artifact contents.
                     type: string
                 required:
@@ -333,39 +289,31 @@ spec:
                   description: Condition contains details for one aspect of the current state of this API Resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         lastTransitionTime is the last time the condition transitioned from one status to another.
-
                         This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         message is a human readable message indicating details about the transition.
-
                         This may be an empty string.
                       maxLength: 32768
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         observedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       minimum: 0
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         reason contains a programmatic identifier indicating the reason for the condition's last transition.
-
                         Producers of specific condition types may define expected values and meanings for this field,
-
                         and whether the values are considered a guaranteed API.
-
                         The value should be a CamelCase string.
-
                         This field may not be empty.
                       maxLength: 1024
                       minLength: 1
@@ -374,8 +322,8 @@ spec:
                     status:
                       description: status of the condition, one of True, False, Unknown.
                       enum:
-                      - True
-                      - False
+                      - "True"
+                      - "False"
                       - Unknown
                       type: string
                     type:
@@ -392,9 +340,8 @@ spec:
                   type: object
                 type: array
               includedArtifacts:
-                description: >-
+                description: |-
                   IncludedArtifacts contains a list of the last successfully included
-
                   Artifacts as instructed by GitRepositorySpec.Include.
                 items:
                   description: Artifact represents the output of a Source reconciliation.
@@ -404,9 +351,8 @@ spec:
                       pattern: ^[a-z0-9]+(?:[.+_-][a-z0-9]+)*:[a-zA-Z0-9=_-]+$
                       type: string
                     lastUpdateTime:
-                      description: >-
+                      description: |-
                         LastUpdateTime is the timestamp corresponding to the last update of the
-
                         Artifact.
                       format: date-time
                       type: string
@@ -416,17 +362,14 @@ spec:
                       description: Metadata holds upstream information such as OCI annotations.
                       type: object
                     path:
-                      description: >-
+                      description: |-
                         Path is the relative file path of the Artifact. It can be used to locate
-
                         the file in the root of the Artifact storage on the local file system of
-
                         the controller managing the Source.
                       type: string
                     revision:
-                      description: >-
+                      description: |-
                         Revision is a human-readable identifier traceable in the origin source
-
                         system. It can be a Git commit SHA, Git tag, a Helm chart version, etc.
                       type: string
                     size:
@@ -434,11 +377,9 @@ spec:
                       format: int64
                       type: integer
                     url:
-                      description: >-
+                      description: |-
                         URL is the HTTP address of the Artifact as exposed by the controller
-
                         managing the Source. It can be used to retrieve the Artifact for
-
                         consumption, e.g. by another controller applying the Artifact contents.
                       type: string
                   required:
@@ -449,47 +390,39 @@ spec:
                   type: object
                 type: array
               lastHandledReconcileAt:
-                description: >-
+                description: |-
                   LastHandledReconcileAt holds the value of the most recent
-
                   reconcile request value, so a change of the annotation value
-
                   can be detected.
                 type: string
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the last observed generation of the GitRepository
-
                   object.
                 format: int64
                 type: integer
               observedIgnore:
-                description: >-
+                description: |-
                   ObservedIgnore is the observed exclusion patterns used for constructing
-
                   the source artifact.
                 type: string
               observedInclude:
-                description: >-
+                description: |-
                   ObservedInclude is the observed list of GitRepository resources used to
-
                   produce the current Artifact.
                 items:
-                  description: >-
+                  description: |-
                     GitRepositoryInclude specifies a local reference to a GitRepository which
-
                     Artifact (sub-)contents must be included, and where they should be placed.
                   properties:
                     fromPath:
-                      description: >-
+                      description: |-
                         FromPath specifies the path to copy contents from, defaults to the root
-
                         of the Artifact.
                       type: string
                     repository:
-                      description: >-
+                      description: |-
                         GitRepositoryRef specifies the GitRepository which Artifact contents
-
                         must be included.
                       properties:
                         name:
@@ -499,9 +432,8 @@ spec:
                       - name
                       type: object
                     toPath:
-                      description: >-
+                      description: |-
                         ToPath specifies the path to copy contents to, defaults to the name of
-
                         the GitRepositoryRef.
                       type: string
                   required:
@@ -509,23 +441,20 @@ spec:
                   type: object
                 type: array
               observedRecurseSubmodules:
-                description: >-
+                description: |-
                   ObservedRecurseSubmodules is the observed resource submodules
-
                   configuration used to produce the current Artifact.
                 type: boolean
               observedSparseCheckout:
-                description: >-
+                description: |-
                   ObservedSparseCheckout is the observed list of directories used to
-
                   produce the current Artifact.
                 items:
                   type: string
                 type: array
               sourceVerificationMode:
-                description: >-
+                description: |-
                   SourceVerificationMode is the last used verification mode indicating
-
                   which Git object(s) have been verified.
                 type: string
             type: object
@@ -555,25 +484,18 @@ spec:
         description: GitRepository is the Schema for the gitrepositories API
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -585,24 +507,20 @@ spec:
                 description: AccessFrom defines an Access Control List for allowing cross-namespace references to this object.
                 properties:
                   namespaceSelectors:
-                    description: >-
+                    description: |-
                       NamespaceSelectors is the list of namespace selectors to which this ACL applies.
-
                       Items in this list are evaluated using a logical OR operation.
                     items:
-                      description: >-
+                      description: |-
                         NamespaceSelector selects the namespaces to which this ACL applies.
-
                         An empty map of MatchLabels matches all namespaces in a cluster.
                       properties:
                         matchLabels:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             MatchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels
-
                             map is equivalent to an element of matchExpressions, whose key field is "key", the
-
                             operator is "In", and the values array contains only "value". The requirements are ANDed.
                           type: object
                       type: object
@@ -612,20 +530,17 @@ spec:
                 type: object
               gitImplementation:
                 default: go-git
-                description: >-
+                description: |-
                   Determines which git client library to use.
-
                   Defaults to go-git, valid values are ('go-git', 'libgit2').
                 enum:
                 - go-git
                 - libgit2
                 type: string
               ignore:
-                description: >-
+                description: |-
                   Ignore overrides the set of excluded patterns in the .sourceignore format
-
                   (which is the same as .gitignore). If not provided, a default will be used,
-
                   consult the documentation for your version to find out what those are.
                 type: string
               include:
@@ -656,17 +571,14 @@ spec:
                 description: The interval at which to check for repository updates.
                 type: string
               recurseSubmodules:
-                description: >-
+                description: |-
                   When enabled, after the clone is created, initializes all submodules within,
-
                   using their default settings.
-
                   This option is available only when using the 'go-git' GitImplementation.
                 type: boolean
               ref:
-                description: >-
+                description: |-
                   The Git reference to checkout and monitor for changes, defaults to
-
                   master branch.
                 properties:
                   branch:
@@ -683,15 +595,11 @@ spec:
                     type: string
                 type: object
               secretRef:
-                description: >-
+                description: |-
                   The secret name containing the Git credentials.
-
                   For HTTPS repositories the secret must contain username and password
-
                   fields.
-
                   For SSH repositories the secret must contain identity and known_hosts
-
                   fields.
                 properties:
                   name:
@@ -747,9 +655,8 @@ spec:
                     description: Checksum is the SHA256 checksum of the artifact.
                     type: string
                   lastUpdateTime:
-                    description: >-
+                    description: |-
                       LastUpdateTime is the timestamp corresponding to the last update of this
-
                       artifact.
                     format: date-time
                     type: string
@@ -757,11 +664,9 @@ spec:
                     description: Path is the relative file path of this artifact.
                     type: string
                   revision:
-                    description: >-
+                    description: |-
                       Revision is a human readable identifier traceable in the origin source
-
                       system. It can be a Git commit SHA, Git tag, a Helm index timestamp, a Helm
-
                       chart version, etc.
                     type: string
                   url:
@@ -778,39 +683,31 @@ spec:
                   description: Condition contains details for one aspect of the current state of this API Resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         lastTransitionTime is the last time the condition transitioned from one status to another.
-
                         This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         message is a human readable message indicating details about the transition.
-
                         This may be an empty string.
                       maxLength: 32768
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         observedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       minimum: 0
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         reason contains a programmatic identifier indicating the reason for the condition's last transition.
-
                         Producers of specific condition types may define expected values and meanings for this field,
-
                         and whether the values are considered a guaranteed API.
-
                         The value should be a CamelCase string.
-
                         This field may not be empty.
                       maxLength: 1024
                       minLength: 1
@@ -819,8 +716,8 @@ spec:
                     status:
                       description: status of the condition, one of True, False, Unknown.
                       enum:
-                      - True
-                      - False
+                      - "True"
+                      - "False"
                       - Unknown
                       type: string
                     type:
@@ -845,9 +742,8 @@ spec:
                       description: Checksum is the SHA256 checksum of the artifact.
                       type: string
                     lastUpdateTime:
-                      description: >-
+                      description: |-
                         LastUpdateTime is the timestamp corresponding to the last update of this
-
                         artifact.
                       format: date-time
                       type: string
@@ -855,11 +751,9 @@ spec:
                       description: Path is the relative file path of this artifact.
                       type: string
                     revision:
-                      description: >-
+                      description: |-
                         Revision is a human readable identifier traceable in the origin source
-
                         system. It can be a Git commit SHA, Git tag, a Helm index timestamp, a Helm
-
                         chart version, etc.
                       type: string
                     url:
@@ -872,11 +766,9 @@ spec:
                   type: object
                 type: array
               lastHandledReconcileAt:
-                description: >-
+                description: |-
                   LastHandledReconcileAt holds the value of the most recent
-
                   reconcile request value, so a change of the annotation value
-
                   can be detected.
                 type: string
               observedGeneration:
@@ -884,9 +776,8 @@ spec:
                 format: int64
                 type: integer
               url:
-                description: >-
+                description: |-
                   URL is the download link for the artifact output of the last repository
-
                   sync.
                 type: string
             type: object
@@ -916,62 +807,48 @@ spec:
         description: GitRepository is the Schema for the gitrepositories API.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
           spec:
-            description: >-
+            description: |-
               GitRepositorySpec specifies the required configuration to produce an
-
               Artifact for a Git repository.
             properties:
               accessFrom:
-                description: >-
+                description: |-
                   AccessFrom specifies an Access Control List for allowing cross-namespace
-
                   references to this object.
-
                   NOTE: Not implemented, provisional as of https://github.com/fluxcd/flux2/pull/2092
                 properties:
                   namespaceSelectors:
-                    description: >-
+                    description: |-
                       NamespaceSelectors is the list of namespace selectors to which this ACL applies.
-
                       Items in this list are evaluated using a logical OR operation.
                     items:
-                      description: >-
+                      description: |-
                         NamespaceSelector selects the namespaces to which this ACL applies.
-
                         An empty map of MatchLabels matches all namespaces in a cluster.
                       properties:
                         matchLabels:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             MatchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels
-
                             map is equivalent to an element of matchExpressions, whose key field is "key", the
-
                             operator is "In", and the values array contains only "value". The requirements are ANDed.
                           type: object
                       type: object
@@ -981,47 +858,38 @@ spec:
                 type: object
               gitImplementation:
                 default: go-git
-                description: >-
+                description: |-
                   GitImplementation specifies which Git client library implementation to
-
                   use. Defaults to 'go-git', valid values are ('go-git', 'libgit2').
-
                   Deprecated: gitImplementation is deprecated now that 'go-git' is the
-
                   only supported implementation.
                 enum:
                 - go-git
                 - libgit2
                 type: string
               ignore:
-                description: >-
+                description: |-
                   Ignore overrides the set of excluded patterns in the .sourceignore format
-
                   (which is the same as .gitignore). If not provided, a default will be used,
-
                   consult the documentation for your version to find out what those are.
                 type: string
               include:
-                description: >-
+                description: |-
                   Include specifies a list of GitRepository resources which Artifacts
-
                   should be included in the Artifact produced for this GitRepository.
                 items:
-                  description: >-
+                  description: |-
                     GitRepositoryInclude specifies a local reference to a GitRepository which
-
                     Artifact (sub-)contents must be included, and where they should be placed.
                   properties:
                     fromPath:
-                      description: >-
+                      description: |-
                         FromPath specifies the path to copy contents from, defaults to the root
-
                         of the Artifact.
                       type: string
                     repository:
-                      description: >-
+                      description: |-
                         GitRepositoryRef specifies the GitRepository which Artifact contents
-
                         must be included.
                       properties:
                         name:
@@ -1031,9 +899,8 @@ spec:
                       - name
                       type: object
                     toPath:
-                      description: >-
+                      description: |-
                         ToPath specifies the path to copy contents to, defaults to the name of
-
                         the GitRepositoryRef.
                       type: string
                   required:
@@ -1045,36 +912,30 @@ spec:
                 pattern: ^([0-9]+(\.[0-9]+)?(ms|s|m|h))+$
                 type: string
               recurseSubmodules:
-                description: >-
+                description: |-
                   RecurseSubmodules enables the initialization of all submodules within
-
                   the GitRepository as cloned from the URL, using their default settings.
                 type: boolean
               ref:
-                description: >-
+                description: |-
                   Reference specifies the Git reference to resolve and monitor for
-
                   changes, defaults to the 'master' branch.
                 properties:
                   branch:
                     description: Branch to check out, defaults to 'master' if no other field is defined.
                     type: string
                   commit:
-                    description: >-
+                    description: |-
                       Commit SHA to check out, takes precedence over all reference fields.
 
-
                       This can be combined with Branch to shallow clone the branch, in which
-
                       the commit is expected to exist.
                     type: string
                   name:
-                    description: >-
+                    description: |-
                       Name of the reference to check out; takes precedence over Branch, Tag and SemVer.
 
-
                       It must be a valid Git reference: https://git-scm.com/docs/git-check-ref-format#_description
-
                       Examples: "refs/heads/main", "refs/tags/v0.1.0", "refs/pull/420/head", "refs/merge-requests/1/head"
                     type: string
                   semver:
@@ -1085,17 +946,12 @@ spec:
                     type: string
                 type: object
               secretRef:
-                description: >-
+                description: |-
                   SecretRef specifies the Secret containing authentication credentials for
-
                   the GitRepository.
-
                   For HTTPS repositories the Secret must contain 'username' and 'password'
-
                   fields for basic auth or 'bearerToken' field for token auth.
-
                   For SSH repositories the Secret must contain 'identity'
-
                   and 'known_hosts' fields.
                 properties:
                   name:
@@ -1105,9 +961,8 @@ spec:
                 - name
                 type: object
               suspend:
-                description: >-
+                description: |-
                   Suspend tells the controller to suspend the reconciliation of this
-
                   GitRepository.
                 type: boolean
               timeout:
@@ -1120,9 +975,8 @@ spec:
                 pattern: ^(http|https|ssh)://.*$
                 type: string
               verify:
-                description: >-
+                description: |-
                   Verification specifies the configuration to verify the Git commit
-
                   signature(s).
                 properties:
                   mode:
@@ -1131,9 +985,8 @@ spec:
                     - head
                     type: string
                   secretRef:
-                    description: >-
+                    description: |-
                       SecretRef specifies the Secret containing the public keys of trusted Git
-
                       authors.
                     properties:
                       name:
@@ -1163,9 +1016,8 @@ spec:
                     pattern: ^[a-z0-9]+(?:[.+_-][a-z0-9]+)*:[a-zA-Z0-9=_-]+$
                     type: string
                   lastUpdateTime:
-                    description: >-
+                    description: |-
                       LastUpdateTime is the timestamp corresponding to the last update of the
-
                       Artifact.
                     format: date-time
                     type: string
@@ -1175,17 +1027,14 @@ spec:
                     description: Metadata holds upstream information such as OCI annotations.
                     type: object
                   path:
-                    description: >-
+                    description: |-
                       Path is the relative file path of the Artifact. It can be used to locate
-
                       the file in the root of the Artifact storage on the local file system of
-
                       the controller managing the Source.
                     type: string
                   revision:
-                    description: >-
+                    description: |-
                       Revision is a human-readable identifier traceable in the origin source
-
                       system. It can be a Git commit SHA, Git tag, a Helm chart version, etc.
                     type: string
                   size:
@@ -1193,11 +1042,9 @@ spec:
                     format: int64
                     type: integer
                   url:
-                    description: >-
+                    description: |-
                       URL is the HTTP address of the Artifact as exposed by the controller
-
                       managing the Source. It can be used to retrieve the Artifact for
-
                       consumption, e.g. by another controller applying the Artifact contents.
                     type: string
                 required:
@@ -1212,39 +1059,31 @@ spec:
                   description: Condition contains details for one aspect of the current state of this API Resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         lastTransitionTime is the last time the condition transitioned from one status to another.
-
                         This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         message is a human readable message indicating details about the transition.
-
                         This may be an empty string.
                       maxLength: 32768
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         observedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       minimum: 0
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         reason contains a programmatic identifier indicating the reason for the condition's last transition.
-
                         Producers of specific condition types may define expected values and meanings for this field,
-
                         and whether the values are considered a guaranteed API.
-
                         The value should be a CamelCase string.
-
                         This field may not be empty.
                       maxLength: 1024
                       minLength: 1
@@ -1253,8 +1092,8 @@ spec:
                     status:
                       description: status of the condition, one of True, False, Unknown.
                       enum:
-                      - True
-                      - False
+                      - "True"
+                      - "False"
                       - Unknown
                       type: string
                     type:
@@ -1271,30 +1110,23 @@ spec:
                   type: object
                 type: array
               contentConfigChecksum:
-                description: >-
+                description: |-
                   ContentConfigChecksum is a checksum of all the configurations related to
-
                   the content of the source artifact:
                    - .spec.ignore
                    - .spec.recurseSubmodules
                    - .spec.included and the checksum of the included artifacts
                   observed in .status.observedGeneration version of the object. This can
-
                   be used to determine if the content of the included repository has
-
                   changed.
-
                   It has the format of `<algo>:<checksum>`, for example: `sha256:<checksum>`.
 
-
                   Deprecated: Replaced with explicit fields for observed artifact content
-
                   config in the status.
                 type: string
               includedArtifacts:
-                description: >-
+                description: |-
                   IncludedArtifacts contains a list of the last successfully included
-
                   Artifacts as instructed by GitRepositorySpec.Include.
                 items:
                   description: Artifact represents the output of a Source reconciliation.
@@ -1304,9 +1136,8 @@ spec:
                       pattern: ^[a-z0-9]+(?:[.+_-][a-z0-9]+)*:[a-zA-Z0-9=_-]+$
                       type: string
                     lastUpdateTime:
-                      description: >-
+                      description: |-
                         LastUpdateTime is the timestamp corresponding to the last update of the
-
                         Artifact.
                       format: date-time
                       type: string
@@ -1316,17 +1147,14 @@ spec:
                       description: Metadata holds upstream information such as OCI annotations.
                       type: object
                     path:
-                      description: >-
+                      description: |-
                         Path is the relative file path of the Artifact. It can be used to locate
-
                         the file in the root of the Artifact storage on the local file system of
-
                         the controller managing the Source.
                       type: string
                     revision:
-                      description: >-
+                      description: |-
                         Revision is a human-readable identifier traceable in the origin source
-
                         system. It can be a Git commit SHA, Git tag, a Helm chart version, etc.
                       type: string
                     size:
@@ -1334,11 +1162,9 @@ spec:
                       format: int64
                       type: integer
                     url:
-                      description: >-
+                      description: |-
                         URL is the HTTP address of the Artifact as exposed by the controller
-
                         managing the Source. It can be used to retrieve the Artifact for
-
                         consumption, e.g. by another controller applying the Artifact contents.
                       type: string
                   required:
@@ -1349,47 +1175,39 @@ spec:
                   type: object
                 type: array
               lastHandledReconcileAt:
-                description: >-
+                description: |-
                   LastHandledReconcileAt holds the value of the most recent
-
                   reconcile request value, so a change of the annotation value
-
                   can be detected.
                 type: string
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the last observed generation of the GitRepository
-
                   object.
                 format: int64
                 type: integer
               observedIgnore:
-                description: >-
+                description: |-
                   ObservedIgnore is the observed exclusion patterns used for constructing
-
                   the source artifact.
                 type: string
               observedInclude:
-                description: >-
+                description: |-
                   ObservedInclude is the observed list of GitRepository resources used to
-
                   to produce the current Artifact.
                 items:
-                  description: >-
+                  description: |-
                     GitRepositoryInclude specifies a local reference to a GitRepository which
-
                     Artifact (sub-)contents must be included, and where they should be placed.
                   properties:
                     fromPath:
-                      description: >-
+                      description: |-
                         FromPath specifies the path to copy contents from, defaults to the root
-
                         of the Artifact.
                       type: string
                     repository:
-                      description: >-
+                      description: |-
                         GitRepositoryRef specifies the GitRepository which Artifact contents
-
                         must be included.
                       properties:
                         name:
@@ -1399,9 +1217,8 @@ spec:
                       - name
                       type: object
                     toPath:
-                      description: >-
+                      description: |-
                         ToPath specifies the path to copy contents to, defaults to the name of
-
                         the GitRepositoryRef.
                       type: string
                   required:
@@ -1409,17 +1226,14 @@ spec:
                   type: object
                 type: array
               observedRecurseSubmodules:
-                description: >-
+                description: |-
                   ObservedRecurseSubmodules is the observed resource submodules
-
                   configuration used to produce the current Artifact.
                 type: boolean
               url:
-                description: >-
+                description: |-
                   URL is the dynamic fetch link for the latest Artifact.
-
                   It is provided on a "best effort" basis, and using the precise
-
                   GitRepositoryStatus.Artifact data is recommended.
                 type: string
             type: object

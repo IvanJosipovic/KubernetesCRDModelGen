@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: computesharedvpcserviceprojects.compute.cnrm.cloud.google.com
 spec:
   group: compute.cnrm.cloud.google.com
@@ -54,7 +53,7 @@ spec:
           spec:
             properties:
               deletionPolicy:
-                description: >-
+                description: |-
                   The deletion policy for the shared VPC service. Setting ABANDON allows the resource
                   				to be abandoned rather than deleted. Possible values are: "ABANDON".
                 type: string
@@ -123,7 +122,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

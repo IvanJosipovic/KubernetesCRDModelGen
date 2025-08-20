@@ -47,36 +47,26 @@ spec:
     name: v1
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           A FunctionRevision represents a revision of a Function. Crossplane
-
           creates new revisions when there are changes to the Function.
 
-
           Crossplane creates and manages FunctionRevisions. Don't directly edit
-
           FunctionRevisions.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -87,13 +77,10 @@ spec:
               commonLabels:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   Map of string keys and values that can be used to organize and categorize
-
                   (scope and select) objects. May match selectors of replication controllers
-
                   and services.
-
                   More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
                 type: object
               desiredState:
@@ -101,11 +88,9 @@ spec:
                 type: string
               ignoreCrossplaneConstraints:
                 default: false
-                description: >-
+                description: |-
                   IgnoreCrossplaneConstraints indicates to the package manager whether to
-
                   honor Crossplane version constrains specified by the package.
-
                   Default is false.
                 type: boolean
               image:
@@ -113,57 +98,45 @@ spec:
                 type: string
               packagePullPolicy:
                 default: IfNotPresent
-                description: >-
+                description: |-
                   PackagePullPolicy defines the pull policy for the package. It is also
-
                   applied to any images pulled for the package, such as a provider's
-
                   controller image.
-
                   Default is IfNotPresent.
                 type: string
               packagePullSecrets:
-                description: >-
+                description: |-
                   PackagePullSecrets are named secrets in the same namespace that can be
-
                   used to fetch packages from private registries. They are also applied to
-
                   any images pulled for the package, such as a provider's controller image.
                 items:
-                  description: >-
+                  description: |-
                     LocalObjectReference contains enough information to let you locate the
-
                     referenced object inside the same namespace.
                   properties:
                     name:
-                      default: ''
-                      description: >-
+                      default: ""
+                      description: |-
                         Name of the referent.
-
                         This field is effectively required, but due to backwards compatibility is
-
                         allowed to be empty. Instances of this type with an empty value here are
-
                         almost certainly wrong.
-
                         More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
                       type: string
                   type: object
                   x-kubernetes-map-type: atomic
                 type: array
               revision:
-                description: >-
+                description: |-
                   Revision number. Indicates when the revision will be garbage collected
-
                   based on the parent's RevisionHistoryLimit.
                 format: int64
                 type: integer
               runtimeConfigRef:
                 default:
                   name: default
-                description: >-
+                description: |-
                   RuntimeConfigRef references a RuntimeConfig resource that will be used
-
                   to configure the package runtime.
                 properties:
                   apiVersion:
@@ -182,25 +155,20 @@ spec:
                 type: object
               skipDependencyResolution:
                 default: false
-                description: >-
+                description: |-
                   SkipDependencyResolution indicates to the package manager whether to skip
-
                   resolving dependencies for a package. Setting this value to true may have
-
                   unintended consequences.
-
                   Default is false.
                 type: boolean
               tlsClientSecretName:
-                description: >-
+                description: |-
                   TLSClientSecretName is the name of the TLS Secret that stores client
-
                   certificates of the Provider.
                 type: string
               tlsServerSecretName:
-                description: >-
+                description: |-
                   TLSServerSecretName is the name of the TLS Secret that stores server
-
                   certificates of the Provider.
                 type: string
             required:
@@ -212,14 +180,12 @@ spec:
             description: FunctionRevisionStatus represents the observed state of a FunctionRevision.
             properties:
               appliedImageConfigRefs:
-                description: >-
+                description: |-
                   AppliedImageConfigRefs records any image configs that were applied in
-
                   reconciling this revision, and what they were used for.
                 items:
-                  description: >-
+                  description: |-
                     ImageConfigRef is a reference to an image config that indicates how the
-
                     referenced image config was used by the package manager.
                   properties:
                     name:
@@ -234,9 +200,8 @@ spec:
                   type: object
                 type: array
               capabilities:
-                description: >-
+                description: |-
                   Capabilities of this package. Capabilities are opaque strings that
-
                   may be meaningful to package consumers.
                 items:
                   type: string
@@ -247,24 +212,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -275,9 +236,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -291,9 +251,8 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               endpoint:
-                description: >-
+                description: |-
                   Endpoint is the gRPC endpoint where Crossplane will send
-
                   RunFunctionRequests.
                 type: string
               foundDependencies:
@@ -309,11 +268,9 @@ spec:
               objectRefs:
                 description: References to objects owned by PackageRevision.
                 items:
-                  description: >-
+                  description: |-
                     A TypedReference refers to an object by Name, Kind, and APIVersion. It is
-
                     commonly used to reference cluster-scoped objects or objects where the
-
                     namespace is already known.
                   properties:
                     apiVersion:
@@ -335,23 +292,19 @@ spec:
                   type: object
                 type: array
               resolvedImage:
-                description: >-
+                description: |-
                   ResolvedPackage is the name of the package that was installed. It may be
-
                   different from spec.image if the package path was rewritten using an
-
                   image config.
                 type: string
               tlsClientSecretName:
-                description: >-
+                description: |-
                   TLSClientSecretName is the name of the TLS Secret that stores client
-
                   certificates of the Provider.
                 type: string
               tlsServerSecretName:
-                description: >-
+                description: |-
                   TLSServerSecretName is the name of the TLS Secret that stores server
-
                   certificates of the Provider.
                 type: string
             type: object
@@ -391,36 +344,26 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           A FunctionRevision represents a revision of a Function. Crossplane
-
           creates new revisions when there are changes to the Function.
 
-
           Crossplane creates and manages FunctionRevisions. Don't directly edit
-
           FunctionRevisions.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -431,13 +374,10 @@ spec:
               commonLabels:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   Map of string keys and values that can be used to organize and categorize
-
                   (scope and select) objects. May match selectors of replication controllers
-
                   and services.
-
                   More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
                 type: object
               desiredState:
@@ -445,11 +385,9 @@ spec:
                 type: string
               ignoreCrossplaneConstraints:
                 default: false
-                description: >-
+                description: |-
                   IgnoreCrossplaneConstraints indicates to the package manager whether to
-
                   honor Crossplane version constrains specified by the package.
-
                   Default is false.
                 type: boolean
               image:
@@ -457,57 +395,45 @@ spec:
                 type: string
               packagePullPolicy:
                 default: IfNotPresent
-                description: >-
+                description: |-
                   PackagePullPolicy defines the pull policy for the package. It is also
-
                   applied to any images pulled for the package, such as a provider's
-
                   controller image.
-
                   Default is IfNotPresent.
                 type: string
               packagePullSecrets:
-                description: >-
+                description: |-
                   PackagePullSecrets are named secrets in the same namespace that can be
-
                   used to fetch packages from private registries. They are also applied to
-
                   any images pulled for the package, such as a provider's controller image.
                 items:
-                  description: >-
+                  description: |-
                     LocalObjectReference contains enough information to let you locate the
-
                     referenced object inside the same namespace.
                   properties:
                     name:
-                      default: ''
-                      description: >-
+                      default: ""
+                      description: |-
                         Name of the referent.
-
                         This field is effectively required, but due to backwards compatibility is
-
                         allowed to be empty. Instances of this type with an empty value here are
-
                         almost certainly wrong.
-
                         More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
                       type: string
                   type: object
                   x-kubernetes-map-type: atomic
                 type: array
               revision:
-                description: >-
+                description: |-
                   Revision number. Indicates when the revision will be garbage collected
-
                   based on the parent's RevisionHistoryLimit.
                 format: int64
                 type: integer
               runtimeConfigRef:
                 default:
                   name: default
-                description: >-
+                description: |-
                   RuntimeConfigRef references a RuntimeConfig resource that will be used
-
                   to configure the package runtime.
                 properties:
                   apiVersion:
@@ -526,25 +452,20 @@ spec:
                 type: object
               skipDependencyResolution:
                 default: false
-                description: >-
+                description: |-
                   SkipDependencyResolution indicates to the package manager whether to skip
-
                   resolving dependencies for a package. Setting this value to true may have
-
                   unintended consequences.
-
                   Default is false.
                 type: boolean
               tlsClientSecretName:
-                description: >-
+                description: |-
                   TLSClientSecretName is the name of the TLS Secret that stores client
-
                   certificates of the Provider.
                 type: string
               tlsServerSecretName:
-                description: >-
+                description: |-
                   TLSServerSecretName is the name of the TLS Secret that stores server
-
                   certificates of the Provider.
                 type: string
             required:
@@ -556,14 +477,12 @@ spec:
             description: FunctionRevisionStatus represents the observed state of a FunctionRevision.
             properties:
               appliedImageConfigRefs:
-                description: >-
+                description: |-
                   AppliedImageConfigRefs records any image configs that were applied in
-
                   reconciling this revision, and what they were used for.
                 items:
-                  description: >-
+                  description: |-
                     ImageConfigRef is a reference to an image config that indicates how the
-
                     referenced image config was used by the package manager.
                   properties:
                     name:
@@ -578,9 +497,8 @@ spec:
                   type: object
                 type: array
               capabilities:
-                description: >-
+                description: |-
                   Capabilities of this package. Capabilities are opaque strings that
-
                   may be meaningful to package consumers.
                 items:
                   type: string
@@ -591,24 +509,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -619,9 +533,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -635,9 +548,8 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               endpoint:
-                description: >-
+                description: |-
                   Endpoint is the gRPC endpoint where Crossplane will send
-
                   RunFunctionRequests.
                 type: string
               foundDependencies:
@@ -653,11 +565,9 @@ spec:
               objectRefs:
                 description: References to objects owned by PackageRevision.
                 items:
-                  description: >-
+                  description: |-
                     A TypedReference refers to an object by Name, Kind, and APIVersion. It is
-
                     commonly used to reference cluster-scoped objects or objects where the
-
                     namespace is already known.
                   properties:
                     apiVersion:
@@ -679,23 +589,19 @@ spec:
                   type: object
                 type: array
               resolvedImage:
-                description: >-
+                description: |-
                   ResolvedPackage is the name of the package that was installed. It may be
-
                   different from spec.image if the package path was rewritten using an
-
                   image config.
                 type: string
               tlsClientSecretName:
-                description: >-
+                description: |-
                   TLSClientSecretName is the name of the TLS Secret that stores client
-
                   certificates of the Provider.
                 type: string
               tlsServerSecretName:
-                description: >-
+                description: |-
                   TLSServerSecretName is the name of the TLS Secret that stores server
-
                   certificates of the Provider.
                 type: string
             type: object

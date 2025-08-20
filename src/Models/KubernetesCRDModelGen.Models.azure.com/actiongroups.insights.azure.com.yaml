@@ -45,33 +45,24 @@ spec:
     name: v1api20230101
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /monitor/resource-manager/Microsoft.Insights/stable/2023-01-01/actionGroups_API.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/actionGroups/{actionGroupName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -79,9 +70,8 @@ spec:
           spec:
             properties:
               armRoleReceivers:
-                description: >-
+                description: |-
                   ArmRoleReceivers: The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only
-
                   built-in roles are supported.
                 items:
                   description: An arm role receiver.
@@ -127,11 +117,9 @@ spec:
                       description: 'WebhookResourceReference: The resource id for webhook linked to this runbook.'
                       properties:
                         armId:
-                          description: >-
+                          description: |-
                             ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                             The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                             ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                           pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                           type: string
@@ -177,11 +165,9 @@ spec:
                       description: 'FunctionAppResourceReference: The azure resource id of the function app.'
                       properties:
                         armId:
-                          description: >-
+                          description: |-
                             ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                             The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                             ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                           pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                           type: string
@@ -215,9 +201,8 @@ spec:
                   type: object
                 type: array
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               emailReceivers:
@@ -240,9 +225,8 @@ spec:
                   type: object
                 type: array
               enabled:
-                description: >-
+                description: |-
                   Enabled: Indicates whether this action group is enabled. If an action group is not enabled, then none of its receivers
-
                   will receive communications.
                 type: boolean
               eventHubReceivers:
@@ -291,15 +275,13 @@ spec:
                       description: 'Name: The name of the Itsm receiver. Names must be unique across all receivers within an action group.'
                       type: string
                     region:
-                      description: >-
+                      description: |-
                         Region: Region in which workspace resides. Supported
-
                         values:'centralindia','japaneast','southeastasia','australiasoutheast','uksouth','westcentralus','canadacentral','eastus','westeurope'
                       type: string
                     ticketConfiguration:
-                      description: >-
+                      description: |-
                         TicketConfiguration: JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of
-
                         this blob as well.
                       type: string
                     workspaceId:
@@ -331,11 +313,9 @@ spec:
                       description: 'ResourceReference: The azure resource id of the logic app receiver.'
                       properties:
                         armId:
-                          description: >-
+                          description: |-
                             ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                             The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                             ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                           pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                           type: string
@@ -359,41 +339,33 @@ spec:
                   type: object
                 type: array
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -404,33 +376,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -440,11 +405,9 @@ spec:
                     type: array
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -540,9 +503,8 @@ spec:
             description: An action group resource.
             properties:
               armRoleReceivers:
-                description: >-
+                description: |-
                   ArmRoleReceivers: The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only
-
                   built-in roles are supported.
                 items:
                   description: An arm role receiver.
@@ -634,28 +596,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -691,9 +647,8 @@ spec:
                   type: object
                 type: array
               enabled:
-                description: >-
+                description: |-
                   Enabled: Indicates whether this action group is enabled. If an action group is not enabled, then none of its receivers
-
                   will receive communications.
                 type: boolean
               eventHubReceivers:
@@ -739,15 +694,13 @@ spec:
                       description: 'Name: The name of the Itsm receiver. Names must be unique across all receivers within an action group.'
                       type: string
                     region:
-                      description: >-
+                      description: |-
                         Region: Region in which workspace resides. Supported
-
                         values:'centralindia','japaneast','southeastasia','australiasoutheast','uksouth','westcentralus','canadacentral','eastus','westeurope'
                       type: string
                     ticketConfiguration:
-                      description: >-
+                      description: |-
                         TicketConfiguration: JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of
-
                         this blob as well.
                       type: string
                     workspaceId:
@@ -873,35 +826,25 @@ spec:
     name: v1api20230101storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20230101.ActionGroup
-
           Generator information:
-
           - Generated from: /monitor/resource-manager/Microsoft.Insights/stable/2023-01-01/actionGroups_API.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/actionGroups/{actionGroupName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -912,24 +855,21 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               armRoleReceivers:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230101.ArmRoleReceiver
-
                     An arm role receiver.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     name:
@@ -942,17 +882,15 @@ spec:
                 type: array
               automationRunbookReceivers:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230101.AutomationRunbookReceiver
-
                     The Azure Automation Runbook notification receiver.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     automationAccountId:
@@ -971,11 +909,9 @@ spec:
                       description: 'WebhookResourceReference: The resource id for webhook linked to this runbook.'
                       properties:
                         armId:
-                          description: >-
+                          description: |-
                             ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                             The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                             ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                           pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                           type: string
@@ -995,17 +931,15 @@ spec:
                 type: array
               azureAppPushReceivers:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230101.AzureAppPushReceiver
-
                     The Azure mobile App push notification receiver.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     emailAddress:
@@ -1016,28 +950,24 @@ spec:
                 type: array
               azureFunctionReceivers:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230101.AzureFunctionReceiver
-
                     An azure function receiver.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     functionAppResourceReference:
                       description: 'FunctionAppResourceReference: The azure resource id of the function app.'
                       properties:
                         armId:
-                          description: >-
+                          description: |-
                             ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                             The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                             ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                           pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                           type: string
@@ -1064,24 +994,21 @@ spec:
                   type: object
                 type: array
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               emailReceivers:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230101.EmailReceiver
-
                     An email receiver.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     emailAddress:
@@ -1096,17 +1023,15 @@ spec:
                 type: boolean
               eventHubReceivers:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230101.EventHubReceiver
-
                     An Event hub receiver.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     eventHubName:
@@ -1127,17 +1052,15 @@ spec:
                 type: string
               itsmReceivers:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230101.ItsmReceiver
-
                     An Itsm receiver.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     connectionId:
@@ -1156,17 +1079,15 @@ spec:
                 type: string
               logicAppReceivers:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230101.LogicAppReceiver
-
                     A logic app receiver.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     callbackUrl:
@@ -1177,11 +1098,9 @@ spec:
                       description: 'ResourceReference: The azure resource id of the logic app receiver.'
                       properties:
                         armId:
-                          description: >-
+                          description: |-
                             ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                             The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                             ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                           pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                           type: string
@@ -1202,48 +1121,39 @@ spec:
                   type: object
                 type: array
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20230101.ActionGroupOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1253,33 +1163,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1291,11 +1194,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -1307,17 +1208,15 @@ spec:
                 type: object
               smsReceivers:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230101.SmsReceiver
-
                     An SMS receiver.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     countryCode:
@@ -1334,17 +1233,15 @@ spec:
                 type: object
               voiceReceivers:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230101.VoiceReceiver
-
                     A voice receiver.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     countryCode:
@@ -1357,17 +1254,15 @@ spec:
                 type: array
               webhookReceivers:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230101.WebhookReceiver
-
                     A webhook receiver.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     identifierUri:
@@ -1390,32 +1285,28 @@ spec:
             - owner
             type: object
           status:
-            description: >-
+            description: |-
               Storage version of v1api20230101.ActionGroupResource_STATUS
-
               An action group resource.
             properties:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               armRoleReceivers:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230101.ArmRoleReceiver_STATUS
-
                     An arm role receiver.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     name:
@@ -1428,17 +1319,15 @@ spec:
                 type: array
               automationRunbookReceivers:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230101.AutomationRunbookReceiver_STATUS
-
                     The Azure Automation Runbook notification receiver.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     automationAccountId:
@@ -1459,17 +1348,15 @@ spec:
                 type: array
               azureAppPushReceivers:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230101.AzureAppPushReceiver_STATUS
-
                     The Azure mobile App push notification receiver.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     emailAddress:
@@ -1480,17 +1367,15 @@ spec:
                 type: array
               azureFunctionReceivers:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230101.AzureFunctionReceiver_STATUS
-
                     An azure function receiver.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     functionAppResourceId:
@@ -1517,28 +1402,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -1556,17 +1435,15 @@ spec:
                 type: array
               emailReceivers:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230101.EmailReceiver_STATUS
-
                     An email receiver.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     emailAddress:
@@ -1583,17 +1460,15 @@ spec:
                 type: boolean
               eventHubReceivers:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230101.EventHubReceiver_STATUS
-
                     An Event hub receiver.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     eventHubName:
@@ -1616,17 +1491,15 @@ spec:
                 type: string
               itsmReceivers:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230101.ItsmReceiver_STATUS
-
                     An Itsm receiver.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     connectionId:
@@ -1645,17 +1518,15 @@ spec:
                 type: string
               logicAppReceivers:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230101.LogicAppReceiver_STATUS
-
                     A logic app receiver.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     callbackUrl:
@@ -1672,17 +1543,15 @@ spec:
                 type: string
               smsReceivers:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230101.SmsReceiver_STATUS
-
                     An SMS receiver.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     countryCode:
@@ -1703,17 +1572,15 @@ spec:
                 type: string
               voiceReceivers:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230101.VoiceReceiver_STATUS
-
                     A voice receiver.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     countryCode:
@@ -1726,17 +1593,15 @@ spec:
                 type: array
               webhookReceivers:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230101.WebhookReceiver_STATUS
-
                     A webhook receiver.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     identifierUri:

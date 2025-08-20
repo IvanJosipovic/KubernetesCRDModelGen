@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: alpha
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: bigquerydatasetaccesses.bigquery.cnrm.cloud.google.com
 spec:
   group: bigquery.cnrm.cloud.google.com
@@ -70,9 +69,8 @@ spec:
                     - projectId
                     type: object
                   targetTypes:
-                    description: >-
+                    description: |-
                       Immutable. Which resources in the dataset this entry applies to. Currently, only views are supported,
-
                       but additional target types may be added in the future. Possible values: VIEWS.
                     items:
                       type: string
@@ -82,26 +80,22 @@ spec:
                 - targetTypes
                 type: object
               datasetId:
-                description: >-
+                description: |-
                   Immutable. A unique ID for this dataset, without the project name. The ID
-
                   must contain only letters (a-z, A-Z), numbers (0-9), or
-
                   underscores (_). The maximum length is 1,024 characters.
                 type: string
               domain:
-                description: >-
+                description: |-
                   Immutable. A domain to grant access to. Any users signed in with the
-
                   domain specified will be granted the specified access.
                 type: string
               groupByEmail:
                 description: Immutable. An email address of a Google Group to grant access to.
                 type: string
               iamMember:
-                description: >-
+                description: |-
                   Immutable. Some other type of member that appears in the IAM Policy but isn't a user,
-
                   group, domain, or special group. For example: 'allUsers'.
                 type: string
               projectRef:
@@ -135,55 +129,41 @@ spec:
                 description: Immutable. Optional. The routine of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.
                 type: string
               role:
-                description: >-
+                description: |-
                   Immutable. Describes the rights granted to the user specified by the other
-
                   member of the access object. Basic, predefined, and custom roles are
-
                   supported. Predefined roles that have equivalent basic roles are
-
                   swapped by the API to their basic counterparts, and will show a diff
-
                   post-create. See
-
                   [official docs](https://cloud.google.com/bigquery/docs/access-control).
                 type: string
               specialGroup:
-                description: >-
+                description: |-
                   Immutable. A special group to grant access to. Possible values include:
-
 
 
                   * 'projectOwners': Owners of the enclosing project.
 
 
-
                   * 'projectReaders': Readers of the enclosing project.
-
 
 
                   * 'projectWriters': Writers of the enclosing project.
 
 
-
                   * 'allAuthenticatedUsers': All authenticated BigQuery users.
                 type: string
               userByEmail:
-                description: >-
+                description: |-
                   Immutable. An email address of a user to grant access to. For example:
-
                   fred@example.com.
                 type: string
               view:
-                description: >-
+                description: |-
                   Immutable. A view from a different dataset to grant access to. Queries
-
                   executed against that view will have read access to tables in
-
                   this dataset. The role field is not required when this field is
-
                   set. If that view is updated by any user, access to the view
-
                   needs to be granted again via an update operation.
                 properties:
                   datasetId:
@@ -193,11 +173,9 @@ spec:
                     description: Immutable. The ID of the project containing this table.
                     type: string
                   tableId:
-                    description: >-
+                    description: |-
                       Immutable. The ID of the table. The ID must contain only letters (a-z,
-
                       A-Z), numbers (0-9), or underscores (_). The maximum length
-
                       is 1,024 characters.
                     type: string
                 required:
@@ -248,7 +226,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

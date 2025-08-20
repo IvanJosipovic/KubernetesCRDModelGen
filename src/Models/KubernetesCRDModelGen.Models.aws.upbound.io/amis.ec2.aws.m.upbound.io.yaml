@@ -36,25 +36,18 @@ spec:
         description: AMI is the Schema for the AMIs API. Creates and manages a custom Amazon Machine Image (AMI).
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -77,16 +70,14 @@ spec:
                     description: Longer, human-readable description for the AMI.
                     type: string
                   ebsBlockDevice:
-                    description: >-
+                    description: |-
                       Nested block describing an EBS block device that should be
-
                       attached to created instances. The structure of this block is described below.
                     items:
                       properties:
                         deleteOnTermination:
-                          description: >-
+                          description: |-
                             Boolean controlling whether the EBS volumes created to
-
                             support each created instance will be deleted once that instance is terminated.
                           type: boolean
                         deviceName:
@@ -96,20 +87,17 @@ spec:
                           description: Boolean controlling whether the created EBS volumes will be encrypted. Can't be used with snapshot_id.
                           type: boolean
                         iops:
-                          description: >-
+                          description: |-
                             Number of I/O operations per second the
-
                             created volumes will support.
                           type: number
                         outpostArn:
                           description: ARN of the Outpost on which the snapshot is stored.
                           type: string
                         snapshotId:
-                          description: >-
+                          description: |-
                             ID of an EBS snapshot that will be used to initialize the created
-
                             EBS volumes. If set, the volume_size attribute must be at least as large as the referenced
-
                             snapshot.
                           type: string
                         snapshotIdRef:
@@ -126,26 +114,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -159,9 +141,8 @@ spec:
                           description: Selector for a EBSSnapshot in ec2 to populate snapshotId.
                           properties:
                             matchControllerRef:
-                              description: >-
+                              description: |-
                                 MatchControllerRef ensures an object with the same controller reference
-
                                 as the selecting object is selected.
                               type: boolean
                             matchLabels:
@@ -177,26 +158,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -208,11 +183,9 @@ spec:
                           description: Throughput that the EBS volume supports, in MiB/s. Only valid for volume_type of gp3.
                           type: number
                         volumeSize:
-                          description: >-
+                          description: |-
                             Size of created volumes in GiB.
-
                             If snapshot_id is set and volume_size is omitted then the volume will have the same size
-
                             as the selected snapshot.
                           type: number
                         volumeType:
@@ -224,9 +197,8 @@ spec:
                     description: Whether enhanced networking with ENA is enabled. Defaults to false.
                     type: boolean
                   ephemeralBlockDevice:
-                    description: >-
+                    description: |-
                       Nested block describing an ephemeral block device that
-
                       should be attached to created instances. The structure of this block is described below.
                     items:
                       properties:
@@ -234,50 +206,44 @@ spec:
                           description: Path at which the device is exposed to created instances.
                           type: string
                         virtualName:
-                          description: >-
+                          description: |-
                             Name for the ephemeral device, of the form "ephemeralN" where
-
                             N is a volume number starting from zero.
                           type: string
                       type: object
                     type: array
                   imageLocation:
-                    description: >-
+                    description: |-
                       Path to an S3 object containing an image manifest, e.g., created
-
                       by the ec2-upload-bundle command in the EC2 command line tools.
                     type: string
                   imdsSupport:
                     description: If EC2 instances started from this image should require the use of the Instance Metadata Service V2 (IMDSv2), set this argument to v2.0. For more information, see Configure instance metadata options for new instances.
                     type: string
                   kernelId:
-                    description: >-
+                    description: |-
                       ID of the kernel image (AKI) that will be used as the paravirtual
-
                       kernel in created instances.
                     type: string
                   name:
                     description: Region-unique name for the AMI.
                     type: string
                   ramdiskId:
-                    description: >-
+                    description: |-
                       ID of an initrd image (ARI) that will be used when booting the
-
                       created instances.
                     type: string
                   region:
-                    description: >-
+                    description: |-
                       Region where this resource will be managed. Defaults to the Region set in the provider configuration.
-
                       Region is the region you'd like your resource to be created in.
                     type: string
                   rootDeviceName:
                     description: Name of the root device (for example, /dev/sda1, or /dev/xvda).
                     type: string
                   sriovNetSupport:
-                    description: >-
+                    description: |-
                       When set to "simple" (the default), enables enhanced networking
-
                       for created instances. No other value is supported at this time.
                     type: string
                   tags:
@@ -293,36 +259,25 @@ spec:
                     description: Base64 representation of the non-volatile UEFI variable store.
                     type: string
                   virtualizationType:
-                    description: >-
+                    description: |-
                       Keyword to choose what virtualization mode created instances
-
                       will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
-
                       changes the set of further arguments that are required, as described below.
                     type: string
                 required:
                 - region
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   architecture:
@@ -338,16 +293,14 @@ spec:
                     description: Longer, human-readable description for the AMI.
                     type: string
                   ebsBlockDevice:
-                    description: >-
+                    description: |-
                       Nested block describing an EBS block device that should be
-
                       attached to created instances. The structure of this block is described below.
                     items:
                       properties:
                         deleteOnTermination:
-                          description: >-
+                          description: |-
                             Boolean controlling whether the EBS volumes created to
-
                             support each created instance will be deleted once that instance is terminated.
                           type: boolean
                         deviceName:
@@ -357,20 +310,17 @@ spec:
                           description: Boolean controlling whether the created EBS volumes will be encrypted. Can't be used with snapshot_id.
                           type: boolean
                         iops:
-                          description: >-
+                          description: |-
                             Number of I/O operations per second the
-
                             created volumes will support.
                           type: number
                         outpostArn:
                           description: ARN of the Outpost on which the snapshot is stored.
                           type: string
                         snapshotId:
-                          description: >-
+                          description: |-
                             ID of an EBS snapshot that will be used to initialize the created
-
                             EBS volumes. If set, the volume_size attribute must be at least as large as the referenced
-
                             snapshot.
                           type: string
                         snapshotIdRef:
@@ -387,26 +337,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -420,9 +364,8 @@ spec:
                           description: Selector for a EBSSnapshot in ec2 to populate snapshotId.
                           properties:
                             matchControllerRef:
-                              description: >-
+                              description: |-
                                 MatchControllerRef ensures an object with the same controller reference
-
                                 as the selecting object is selected.
                               type: boolean
                             matchLabels:
@@ -438,26 +381,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -469,11 +406,9 @@ spec:
                           description: Throughput that the EBS volume supports, in MiB/s. Only valid for volume_type of gp3.
                           type: number
                         volumeSize:
-                          description: >-
+                          description: |-
                             Size of created volumes in GiB.
-
                             If snapshot_id is set and volume_size is omitted then the volume will have the same size
-
                             as the selected snapshot.
                           type: number
                         volumeType:
@@ -485,9 +420,8 @@ spec:
                     description: Whether enhanced networking with ENA is enabled. Defaults to false.
                     type: boolean
                   ephemeralBlockDevice:
-                    description: >-
+                    description: |-
                       Nested block describing an ephemeral block device that
-
                       should be attached to created instances. The structure of this block is described below.
                     items:
                       properties:
@@ -495,44 +429,39 @@ spec:
                           description: Path at which the device is exposed to created instances.
                           type: string
                         virtualName:
-                          description: >-
+                          description: |-
                             Name for the ephemeral device, of the form "ephemeralN" where
-
                             N is a volume number starting from zero.
                           type: string
                       type: object
                     type: array
                   imageLocation:
-                    description: >-
+                    description: |-
                       Path to an S3 object containing an image manifest, e.g., created
-
                       by the ec2-upload-bundle command in the EC2 command line tools.
                     type: string
                   imdsSupport:
                     description: If EC2 instances started from this image should require the use of the Instance Metadata Service V2 (IMDSv2), set this argument to v2.0. For more information, see Configure instance metadata options for new instances.
                     type: string
                   kernelId:
-                    description: >-
+                    description: |-
                       ID of the kernel image (AKI) that will be used as the paravirtual
-
                       kernel in created instances.
                     type: string
                   name:
                     description: Region-unique name for the AMI.
                     type: string
                   ramdiskId:
-                    description: >-
+                    description: |-
                       ID of an initrd image (ARI) that will be used when booting the
-
                       created instances.
                     type: string
                   rootDeviceName:
                     description: Name of the root device (for example, /dev/sda1, or /dev/xvda).
                     type: string
                   sriovNetSupport:
-                    description: >-
+                    description: |-
                       When set to "simple" (the default), enables enhanced networking
-
                       for created instances. No other value is supported at this time.
                     type: string
                   tags:
@@ -548,33 +477,25 @@ spec:
                     description: Base64 representation of the non-volatile UEFI variable store.
                     type: string
                   virtualizationType:
-                    description: >-
+                    description: |-
                       Keyword to choose what virtualization mode created instances
-
                       will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
-
                       changes the set of further arguments that are required, as described below.
                     type: string
                 type: object
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -589,11 +510,9 @@ spec:
                 default:
                   kind: ClusterProviderConfig
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   kind:
@@ -607,13 +526,10 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   name:
@@ -649,16 +565,14 @@ spec:
                     description: Longer, human-readable description for the AMI.
                     type: string
                   ebsBlockDevice:
-                    description: >-
+                    description: |-
                       Nested block describing an EBS block device that should be
-
                       attached to created instances. The structure of this block is described below.
                     items:
                       properties:
                         deleteOnTermination:
-                          description: >-
+                          description: |-
                             Boolean controlling whether the EBS volumes created to
-
                             support each created instance will be deleted once that instance is terminated.
                           type: boolean
                         deviceName:
@@ -668,31 +582,26 @@ spec:
                           description: Boolean controlling whether the created EBS volumes will be encrypted. Can't be used with snapshot_id.
                           type: boolean
                         iops:
-                          description: >-
+                          description: |-
                             Number of I/O operations per second the
-
                             created volumes will support.
                           type: number
                         outpostArn:
                           description: ARN of the Outpost on which the snapshot is stored.
                           type: string
                         snapshotId:
-                          description: >-
+                          description: |-
                             ID of an EBS snapshot that will be used to initialize the created
-
                             EBS volumes. If set, the volume_size attribute must be at least as large as the referenced
-
                             snapshot.
                           type: string
                         throughput:
                           description: Throughput that the EBS volume supports, in MiB/s. Only valid for volume_type of gp3.
                           type: number
                         volumeSize:
-                          description: >-
+                          description: |-
                             Size of created volumes in GiB.
-
                             If snapshot_id is set and volume_size is omitted then the volume will have the same size
-
                             as the selected snapshot.
                           type: number
                         volumeType:
@@ -704,9 +613,8 @@ spec:
                     description: Whether enhanced networking with ENA is enabled. Defaults to false.
                     type: boolean
                   ephemeralBlockDevice:
-                    description: >-
+                    description: |-
                       Nested block describing an ephemeral block device that
-
                       should be attached to created instances. The structure of this block is described below.
                     items:
                       properties:
@@ -714,9 +622,8 @@ spec:
                           description: Path at which the device is exposed to created instances.
                           type: string
                         virtualName:
-                          description: >-
+                          description: |-
                             Name for the ephemeral device, of the form "ephemeralN" where
-
                             N is a volume number starting from zero.
                           type: string
                       type: object
@@ -728,9 +635,8 @@ spec:
                     description: ID of the created AMI.
                     type: string
                   imageLocation:
-                    description: >-
+                    description: |-
                       Path to an S3 object containing an image manifest, e.g., created
-
                       by the ec2-upload-bundle command in the EC2 command line tools.
                     type: string
                   imageOwnerAlias:
@@ -743,9 +649,8 @@ spec:
                     description: If EC2 instances started from this image should require the use of the Instance Metadata Service V2 (IMDSv2), set this argument to v2.0. For more information, see Configure instance metadata options for new instances.
                     type: string
                   kernelId:
-                    description: >-
+                    description: |-
                       ID of the kernel image (AKI) that will be used as the paravirtual
-
                       kernel in created instances.
                     type: string
                   lastLaunchedTime:
@@ -769,15 +674,13 @@ spec:
                     description: Whether the image has public launch permissions.
                     type: boolean
                   ramdiskId:
-                    description: >-
+                    description: |-
                       ID of an initrd image (ARI) that will be used when booting the
-
                       created instances.
                     type: string
                   region:
-                    description: >-
+                    description: |-
                       Region where this resource will be managed. Defaults to the Region set in the provider configuration.
-
                       Region is the region you'd like your resource to be created in.
                     type: string
                   rootDeviceName:
@@ -787,9 +690,8 @@ spec:
                     description: Snapshot ID for the root volume (for EBS-backed AMIs)
                     type: string
                   sriovNetSupport:
-                    description: >-
+                    description: |-
                       When set to "simple" (the default), enables enhanced networking
-
                       for created instances. No other value is supported at this time.
                     type: string
                   tags:
@@ -814,11 +716,9 @@ spec:
                     description: Operation of the Amazon EC2 instance and the billing code that is associated with the AMI.
                     type: string
                   virtualizationType:
-                    description: >-
+                    description: |-
                       Keyword to choose what virtualization mode created instances
-
                       will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
-
                       changes the set of further arguments that are required, as described below.
                     type: string
                 type: object
@@ -828,24 +728,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -856,9 +752,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -872,11 +767,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer

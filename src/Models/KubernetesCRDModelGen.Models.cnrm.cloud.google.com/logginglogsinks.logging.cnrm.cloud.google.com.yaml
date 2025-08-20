@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: logginglogsinks.logging.cnrm.cloud.google.com
 spec:
   group: logging.cnrm.cloud.google.com
@@ -210,9 +209,8 @@ spec:
                 description: The filter to apply when exporting logs. Only log entries that match the filter are exported.
                 type: string
               folderRef:
-                description: >-
+                description: |-
                   The folder in which to create the sink. Only one of projectRef,
-
                   folderRef, or organizationRef may be specified.
                 oneOf:
                 - not:
@@ -243,9 +241,8 @@ spec:
                 description: Immutable. Whether or not to include children organizations in the sink export. If true, logs associated with child projects are also exported; otherwise only logs relating to the provided organization are included.
                 type: boolean
               organizationRef:
-                description: >-
+                description: |-
                   The organization in which to create the sink. Only one of projectRef,
-
                   folderRef, or organizationRef may be specified.
                 oneOf:
                 - not:
@@ -273,9 +270,8 @@ spec:
                     type: string
                 type: object
               projectRef:
-                description: >-
+                description: |-
                   The project in which to create the sink. Only one of projectRef,
-
                   folderRef, or organizationRef may be specified.
                 oneOf:
                 - not:
@@ -350,7 +346,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

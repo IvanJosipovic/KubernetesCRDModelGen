@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: iamaccessboundarypolicies.iam.cnrm.cloud.google.com
 spec:
   group: iam.cnrm.cloud.google.com
@@ -96,24 +95,21 @@ spec:
                           description: The availability condition further constrains the access allowed by the access boundary rule.
                           properties:
                             description:
-                              description: >-
+                              description: |-
                                 Description of the expression. This is a longer text which describes the expression,
-
                                 e.g. when hovered over it in a UI.
                               type: string
                             expression:
                               description: Textual representation of an expression in Common Expression Language syntax.
                               type: string
                             location:
-                              description: >-
+                              description: |-
                                 String indicating the location of the expression for error reporting,
-
                                 e.g. a file name and a position in the file.
                               type: string
                             title:
-                              description: >-
+                              description: |-
                                 Title for the expression, i.e. a short string describing its purpose.
-
                                 This can be used e.g. in UIs which allow to enter the expression.
                               type: string
                           required:
@@ -176,7 +172,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

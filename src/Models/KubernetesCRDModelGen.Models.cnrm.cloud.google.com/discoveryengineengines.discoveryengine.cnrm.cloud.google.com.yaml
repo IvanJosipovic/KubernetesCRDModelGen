@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: discoveryengineengines.discoveryengine.cnrm.cloud.google.com
 spec:
   group: discoveryengine.cnrm.cloud.google.com
@@ -58,7 +57,7 @@ spec:
                 description: Configurations for the Chat Engine. Only applicable if solution_type is SOLUTION_TYPE_CHAT.
                 properties:
                   agentCreationConfig:
-                    description: >-
+                    description: |-
                       The configurationt generate the Dialogflow agent that is associated to
                        this Engine.
 
@@ -83,7 +82,7 @@ spec:
                         type: string
                     type: object
                   dialogflowAgentToLink:
-                    description: >-
+                    description: |-
                       The resource name of an exist Dialogflow agent to link to this Chat
                        Engine. Customers can either provide `agent_creation_config` to create
                        agent or provide an agent name that links the agent with the Chat engine.
@@ -195,7 +194,7 @@ spec:
                       type: string
                     type: array
                   searchTier:
-                    description: >-
+                    description: |-
                       The search feature tier of this engine.
 
                        Different tiers might have different
@@ -260,7 +259,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

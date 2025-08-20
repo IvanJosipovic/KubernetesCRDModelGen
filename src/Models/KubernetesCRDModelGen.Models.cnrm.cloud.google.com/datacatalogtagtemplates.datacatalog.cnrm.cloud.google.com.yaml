@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: datacatalogtagtemplates.datacatalog.cnrm.cloud.google.com
 spec:
   group: datacatalog.cnrm.cloud.google.com
@@ -55,7 +54,7 @@ spec:
             description: DataCatalogTagTemplateSpec defines the desired state of DataCatalogTagTemplate
             properties:
               displayName:
-                description: >-
+                description: |-
                   Display name for this template. Defaults to an empty string.
 
                    The name must contain only Unicode letters, numbers (0-9), underscores (_),
@@ -69,7 +68,7 @@ spec:
                       description: The description for this field. Defaults to an empty string.
                       type: string
                     displayName:
-                      description: >-
+                      description: |-
                         The display name for this field. Defaults to an empty string.
 
                          The name must contain only Unicode letters, numbers (0-9), underscores (_),
@@ -80,7 +79,7 @@ spec:
                       description: If true, this field is required. Defaults to false.
                       type: boolean
                     name:
-                      description: >-
+                      description: |-
                         Identifier. The resource name of the tag template field in URL format.
 
                          Note: The tag template field itself might not be stored in the location
@@ -91,7 +90,7 @@ spec:
                          The maximum length is 64 characters.
                       type: string
                     order:
-                      description: >-
+                      description: |-
                         The order of this field with respect to other fields in this tag
                          template.
 
@@ -107,7 +106,7 @@ spec:
                           description: An enum type.
                           properties:
                             allowedValues:
-                              description: >-
+                              description: |-
                                 The set of allowed values for this enum.
 
                                  This set must not be empty and can include up to 100 allowed values.
@@ -120,7 +119,7 @@ spec:
                               items:
                                 properties:
                                   displayName:
-                                    description: >-
+                                    description: |-
                                       Required. The display name of the enum value. Must not be an empty
                                        string.
 
@@ -143,7 +142,7 @@ spec:
                 description: Fields used to create a Tag
                 type: object
               isPubliclyReadable:
-                description: >-
+                description: |-
                   Indicates whether tags created with this template are public. Public tags
                    do not require tag template access to appear in
                    [ListTags][google.cloud.datacatalog.v1.DataCatalog.ListTags] API response.
@@ -238,7 +237,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

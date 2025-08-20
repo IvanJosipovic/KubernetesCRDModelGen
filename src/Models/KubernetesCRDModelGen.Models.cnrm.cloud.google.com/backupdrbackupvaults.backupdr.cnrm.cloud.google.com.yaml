@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: backupdrbackupvaults.backupdr.cnrm.cloud.google.com
 spec:
   group: backupdr.cnrm.cloud.google.com
@@ -55,7 +54,7 @@ spec:
             description: BackupDRBackupVaultSpec defines the desired state of BackupDRBackupVault
             properties:
               accessRestriction:
-                description: >-
+                description: |-
                   Optional. Note: This field is added for future use case and will not be
                    supported in the current release.
 
@@ -202,7 +201,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

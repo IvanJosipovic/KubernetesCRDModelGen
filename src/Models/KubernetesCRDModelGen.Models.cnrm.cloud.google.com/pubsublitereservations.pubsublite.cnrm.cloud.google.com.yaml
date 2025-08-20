@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: pubsublitereservations.pubsublite.cnrm.cloud.google.com
 spec:
   group: pubsublite.cnrm.cloud.google.com
@@ -87,11 +86,9 @@ spec:
                 description: Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.
                 type: string
               throughputCapacity:
-                description: >-
+                description: |-
                   The reserved throughput capacity. Every unit of throughput capacity is
-
                   equivalent to 1 MiB/s of published messages or 2 MiB/s of subscribed
-
                   messages.
                 type: integer
             required:
@@ -135,7 +132,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

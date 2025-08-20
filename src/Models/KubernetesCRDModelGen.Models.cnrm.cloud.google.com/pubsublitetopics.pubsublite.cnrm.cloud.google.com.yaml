@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: alpha
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: pubsublitetopics.pubsublite.cnrm.cloud.google.com
 spec:
   group: pubsublite.cnrm.cloud.google.com
@@ -119,21 +118,16 @@ spec:
                 description: The settings for a topic's message retention.
                 properties:
                   perPartitionBytes:
-                    description: >-
+                    description: |-
                       The provisioned storage, in bytes, per partition. If the number of bytes stored
-
                       in any of the topic's partitions grows beyond this value, older messages will be
-
                       dropped to make room for newer ones, regardless of the value of period.
                     type: string
                   period:
-                    description: >-
+                    description: |-
                       How long a published message is retained. If unset, messages will be retained as
-
                       long as the bytes retained for each partition is below perPartitionBytes. A
-
                       duration in seconds with up to nine fractional digits, terminated by 's'.
-
                       Example: "3.5s".
                     type: string
                 required:
@@ -182,7 +176,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

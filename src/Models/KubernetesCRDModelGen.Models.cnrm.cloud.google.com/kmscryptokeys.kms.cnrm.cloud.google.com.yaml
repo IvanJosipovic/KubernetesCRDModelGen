@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: kmscryptokeys.kms.cnrm.cloud.google.com
 spec:
   group: kms.cnrm.cloud.google.com
@@ -54,9 +53,8 @@ spec:
           spec:
             properties:
               destroyScheduledDuration:
-                description: >-
+                description: |-
                   Immutable. The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED.
-
                   If not specified at creation time, the default duration is 24 hours.
                 type: string
               importOnly:
@@ -90,41 +88,33 @@ spec:
                     type: string
                 type: object
               purpose:
-                description: >-
+                description: |-
                   Immutable. The immutable purpose of this CryptoKey. See the
-
                   [purpose reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)
-
                   for possible inputs.
-
                   Default value is "ENCRYPT_DECRYPT".
                 type: string
               resourceID:
                 description: Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.
                 type: string
               rotationPeriod:
-                description: >-
+                description: |-
                   Every time this period passes, generate a new CryptoKeyVersion and set it as the primary.
-
                   The first rotation will take place after the specified period. The rotation period has
-
                   the format of a decimal number with up to 9 fractional digits, followed by the
-
                   letter 's' (seconds). It must be greater than a day (ie, 86400).
                 type: string
               skipInitialVersionCreation:
-                description: >-
+                description: |-
                   Immutable. If set to true, the request will create a CryptoKey without any CryptoKeyVersions.
-
                   You must use the 'google_kms_key_ring_import_job' resource to import the CryptoKeyVersion.
                 type: boolean
               versionTemplate:
                 description: A template describing settings for new crypto key versions.
                 properties:
                   algorithm:
-                    description: >-
+                    description: |-
                       The algorithm to use when creating a version based on this template.
-
                       See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v1/CryptoKeyVersionAlgorithm) for possible inputs.
                     type: string
                   protectionLevel:
@@ -175,7 +165,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

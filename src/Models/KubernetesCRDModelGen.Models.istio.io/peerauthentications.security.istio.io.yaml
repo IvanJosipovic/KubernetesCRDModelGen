@@ -44,9 +44,8 @@ spec:
                 description: Mutual TLS settings for workload.
                 properties:
                   mode:
-                    description: >-
+                    description: |-
                       Defines the mTLS mode used for peer authentication.
-
 
                       Valid Options: DISABLE, PERMISSIVE, STRICT
                     enum:
@@ -60,9 +59,8 @@ spec:
                 additionalProperties:
                   properties:
                     mode:
-                      description: >-
+                      description: |-
                         Defines the mTLS mode used for peer authentication.
-
 
                         Valid Options: DISABLE, PERMISSIVE, STRICT
                       enum:
@@ -148,9 +146,8 @@ spec:
                       description: A url pointing to the Istio documentation for this specific error type.
                       type: string
                     level:
-                      description: >-
+                      description: |-
                         Represents how severe a message is.
-
 
                         Valid Options: UNKNOWN, ERROR, WARNING, INFO
                       enum:
@@ -197,9 +194,8 @@ spec:
                 description: Mutual TLS settings for workload.
                 properties:
                   mode:
-                    description: >-
+                    description: |-
                       Defines the mTLS mode used for peer authentication.
-
 
                       Valid Options: DISABLE, PERMISSIVE, STRICT
                     enum:
@@ -213,9 +209,8 @@ spec:
                 additionalProperties:
                   properties:
                     mode:
-                      description: >-
+                      description: |-
                         Defines the mTLS mode used for peer authentication.
-
 
                         Valid Options: DISABLE, PERMISSIVE, STRICT
                       enum:
@@ -301,9 +296,8 @@ spec:
                       description: A url pointing to the Istio documentation for this specific error type.
                       type: string
                     level:
-                      description: >-
+                      description: |-
                         Represents how severe a message is.
-
 
                         Valid Options: UNKNOWN, ERROR, WARNING, INFO
                       enum:

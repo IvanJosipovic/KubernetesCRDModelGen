@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: edgenetworknetworks.edgenetwork.cnrm.cloud.google.com
 spec:
   group: edgenetwork.cnrm.cloud.google.com
@@ -124,28 +123,23 @@ spec:
                   type: object
                 type: array
               createTime:
-                description: >-
+                description: |-
                   The time when the subnet was created.
-
                   A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine
-
                   fractional digits. Examples: '2014-10-02T15:01:23Z' and '2014-10-02T15:01:23.045123456Z'.
                 type: string
               name:
-                description: >-
+                description: |-
                   The canonical name of this resource, with format
-
                   'projects/{{project}}/locations/{{location}}/zones/{{zone}}/networks/{{network_id}}'.
                 type: string
               observedGeneration:
                 description: ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.
                 type: integer
               updateTime:
-                description: >-
+                description: |-
                   The time when the subnet was last updated.
-
                   A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine
-
                   fractional digits. Examples: '2014-10-02T15:01:23Z' and '2014-10-02T15:01:23.045123456Z'.
                 type: string
             type: object
@@ -158,7 +152,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

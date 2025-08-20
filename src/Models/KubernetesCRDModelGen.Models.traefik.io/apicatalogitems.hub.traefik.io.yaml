@@ -19,25 +19,18 @@ spec:
         description: APICatalogItem defines APIs that will be part of the API catalog on the portal.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -46,9 +39,8 @@ spec:
             description: The desired behavior of this APICatalogItem.
             properties:
               apiBundles:
-                description: >-
+                description: |-
                   APIBundles defines a set of APIBundle that will be visible to the configured audience.
-
                   Multiple APICatalogItem can select the same APIBundles.
                 items:
                   description: APIBundleReference references an APIBundle.
@@ -66,11 +58,9 @@ spec:
                 - message: duplicated apiBundles
                   rule: self.all(x, self.exists_one(y, x.name == y.name))
               apiPlan:
-                description: >-
+                description: |-
                   APIPlan defines which APIPlan will be available.
-
                   If multiple APICatalogItem specify the same API with different APIPlan, the API consumer will be able to pick
-
                   a plan from this list.
                 properties:
                   name:
@@ -81,40 +71,32 @@ spec:
                 - name
                 type: object
               apiSelector:
-                description: >-
+                description: |-
                   APISelector selects the APIs that will be visible to the configured audience.
-
                   Multiple APICatalogItem can select the same set of APIs.
-
                   This field is optional and follows standard label selector semantics.
-
                   An empty APISelector matches any API.
                 properties:
                   matchExpressions:
                     description: matchExpressions is a list of label selector requirements. The requirements are ANDed.
                     items:
-                      description: >-
+                      description: |-
                         A label selector requirement is a selector that contains values, a key, and an operator that
-
                         relates the key and values.
                       properties:
                         key:
                           description: key is the label key that the selector applies to.
                           type: string
                         operator:
-                          description: >-
+                          description: |-
                             operator represents a key's relationship to a set of values.
-
                             Valid operators are In, NotIn, Exists and DoesNotExist.
                           type: string
                         values:
-                          description: >-
+                          description: |-
                             values is an array of string values. If the operator is In or NotIn,
-
                             the values array must be non-empty. If the operator is Exists or DoesNotExist,
-
                             the values array must be empty. This array is replaced during a strategic
-
                             merge patch.
                           items:
                             type: string
@@ -129,21 +111,17 @@ spec:
                   matchLabels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels
-
                       map is equivalent to an element of matchExpressions, whose key field is "key", the
-
                       operator is "In", and the values array contains only "value". The requirements are ANDed.
                     type: object
                 type: object
                 x-kubernetes-map-type: atomic
               apis:
-                description: >-
+                description: |-
                   APIs defines a set of APIs that will be visible to the configured audience.
-
                   Multiple APICatalogItem can select the same APIs.
-
                   When combined with APISelector, this set of APIs is appended to the matching APIs.
                 items:
                   description: APIReference references an API.
@@ -169,11 +147,9 @@ spec:
                   type: string
                 type: array
               operationFilter:
-                description: >-
+                description: |-
                   OperationFilter specifies the visible operations on APIs and APIVersions.
-
                   If not set, all operations are available.
-
                   An empty OperationFilter prohibits all operations.
                 properties:
                   include:

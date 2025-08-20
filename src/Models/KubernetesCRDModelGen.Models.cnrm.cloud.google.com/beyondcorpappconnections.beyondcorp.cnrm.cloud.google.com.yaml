@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: alpha
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: beyondcorpappconnections.beyondcorp.cnrm.cloud.google.com
 spec:
   group: beyondcorp.cnrm.cloud.google.com
@@ -84,11 +83,9 @@ spec:
                     description: Ingress port reserved on the gateways for this AppConnection, if not specified or zero, the default port is 19443.
                     type: integer
                   type:
-                    description: >-
+                    description: |-
                       The type of hosting used by the gateway. Refer to
-
                       https://cloud.google.com/beyondcorp/docs/reference/rest/v1/projects.locations.appConnections#Type_1
-
                       for a list of possible values.
                     type: string
                   uri:
@@ -131,11 +128,9 @@ spec:
                 description: Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.
                 type: string
               type:
-                description: >-
+                description: |-
                   Immutable. The type of network connectivity used by the AppConnection. Refer to
-
                   https://cloud.google.com/beyondcorp/docs/reference/rest/v1/projects.locations.appConnections#type
-
                   for a list of possible values.
                 type: string
             required:
@@ -179,7 +174,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

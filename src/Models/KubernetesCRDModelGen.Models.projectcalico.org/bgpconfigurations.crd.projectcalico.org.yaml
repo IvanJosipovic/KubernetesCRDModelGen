@@ -46,8 +46,8 @@ spec:
                   type: string
                 type: array
               listenPort:
-                maximum: 65535
-                minimum: 1
+                maximum: 65535.0
+                minimum: 1.0
                 type: integer
               localWorkloadPeeringIPV4:
                 type: string
@@ -64,7 +64,7 @@ spec:
                       key:
                         type: string
                       name:
-                        default: ''
+                        default: ""
                         type: string
                       optional:
                         type: boolean

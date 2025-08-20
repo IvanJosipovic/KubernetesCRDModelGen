@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: bigqueryreservationreservations.bigqueryreservation.cnrm.cloud.google.com
 spec:
   group: bigqueryreservation.cnrm.cloud.google.com
@@ -73,22 +72,15 @@ spec:
                 description: Optional. This field is only set for reservations using the managed disaster recovery feature. Users can set this to create a failover reservation.
                 properties:
                   secondaryLocation:
-                    description: >-
+                    description: |-
                       Users can update this field to convert a non-failover reservation to a
-
                       failover reservation (by setting a specific region value) or convert a
-
                       failover reservation to a non-failover reservation (by removing spec.failover).
-
                       However, changes from one region to another region will be ignored by the
-
                       controller. Additionally, if the value of this field changes during manual failover
-
                       by the API, the controller will not attempt to revert these changes.
 
-
                       Note: This field is only available for ENTERPRISE_PLUS edition reservations.
-
                       Immutable.
                     type: string
                     x-kubernetes-validations:
@@ -140,7 +132,7 @@ spec:
                 description: 'Immutable. Optional. The BigQuery Reservation ID used for resource creation or acquisition. It must only contain lower case alphanumeric characters or dashes. It must start with a letter and must not end with a dash. Its maximum length is 64 characters. For creation: If specified, this value is used as the Reservation ID. If not provided, a UUID will be generated and assigned as the Reservation ID. For acquisition: This field must be provided to identify the Reservation resource to acquire.'
                 type: string
               slotCapacity:
-                description: >-
+                description: |-
                   Optional. Baseline slots available to this reservation. A slot is a unit of
                    computational power in BigQuery, and serves as the unit of parallelism.
 
@@ -216,7 +208,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

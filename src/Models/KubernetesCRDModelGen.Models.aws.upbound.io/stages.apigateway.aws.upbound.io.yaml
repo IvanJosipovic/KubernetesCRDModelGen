@@ -36,25 +36,18 @@ spec:
         description: Stage is the Schema for the Stages API. Manages an API Gateway Stage.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -64,19 +57,13 @@ spec:
             properties:
               deletionPolicy:
                 default: Delete
-                description: >-
+                description: |-
                   DeletionPolicy specifies what will happen to the underlying external
-
                   when this managed resource is deleted - either "Delete" or "Orphan" the
-
                   external resource.
-
                   This field is planned to be deprecated in favor of the ManagementPolicies
-
                   field in a future release. Currently, both could be set independently and
-
                   non-default values would be honored if the feature flag is enabled.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
                 enum:
                 - Orphan
@@ -92,9 +79,8 @@ spec:
                           description: ARN of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with amazon-apigateway-. Automatically removes trailing :* if present.
                           type: string
                         format:
-                          description: >-
+                          description: |-
                             Formatting and values recorded in the logs.
-
                             For more information on configuring the log format rules visit the AWS documentation
                           type: string
                       type: object
@@ -143,26 +129,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -176,9 +156,8 @@ spec:
                     description: Selector for a Deployment in apigateway to populate deploymentId.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -191,26 +170,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -225,9 +198,8 @@ spec:
                     description: Version of the associated API documentation.
                     type: string
                   region:
-                    description: >-
+                    description: |-
                       Region where this resource will be managed. Defaults to the Region set in the provider configuration.
-
                       Region is the region you'd like your resource to be created in.
                     type: string
                   restApiId:
@@ -244,26 +216,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -277,9 +243,8 @@ spec:
                     description: Selector for a RestAPI in apigateway to populate restApiId.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -292,26 +257,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -341,25 +300,16 @@ spec:
                 - region
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   accessLogSettings:
@@ -370,9 +320,8 @@ spec:
                           description: ARN of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with amazon-apigateway-. Automatically removes trailing :* if present.
                           type: string
                         format:
-                          description: >-
+                          description: |-
                             Formatting and values recorded in the logs.
-
                             For more information on configuring the log format rules visit the AWS documentation
                           type: string
                       type: object
@@ -421,26 +370,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -454,9 +397,8 @@ spec:
                     description: Selector for a Deployment in apigateway to populate deploymentId.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -469,26 +411,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -516,26 +452,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -549,9 +479,8 @@ spec:
                     description: Selector for a RestAPI in apigateway to populate restApiId.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -564,26 +493,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -613,30 +536,20 @@ spec:
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   This field is planned to replace the DeletionPolicy field in a future
-
                   release. Currently, both could be set independently and non-default
-
                   values would be honored if the feature flag is enabled. If both are
-
                   custom, the DeletionPolicy field will be ignored.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -650,11 +563,9 @@ spec:
               providerConfigRef:
                 default:
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   name:
@@ -665,26 +576,20 @@ spec:
                     properties:
                       resolution:
                         default: Required
-                        description: >-
+                        description: |-
                           Resolution specifies whether resolution of this reference is required.
-
                           The default is 'Required', which means the reconcile will fail if the
-
                           reference cannot be resolved. 'Optional' means this reference will be
-
                           a no-op if it cannot be resolved.
                         enum:
                         - Required
                         - Optional
                         type: string
                       resolve:
-                        description: >-
+                        description: |-
                           Resolve specifies when this reference should be resolved. The default
-
                           is 'IfNotPresent', which will attempt to resolve the reference only when
-
                           the corresponding field is not present. Use 'Always' to resolve the
-
                           reference on every reconcile.
                         enum:
                         - Always
@@ -695,13 +600,10 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   name:
@@ -733,9 +635,8 @@ spec:
                           description: ARN of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with amazon-apigateway-. Automatically removes trailing :* if present.
                           type: string
                         format:
-                          description: >-
+                          description: |-
                             Formatting and values recorded in the logs.
-
                             For more information on configuring the log format rules visit the AWS documentation
                           type: string
                       type: object
@@ -783,26 +684,22 @@ spec:
                     description: Version of the associated API documentation.
                     type: string
                   executionArn:
-                    description: >-
+                    description: |-
                       Execution ARN to be used in lambda_permission's source_arn
-
                       when allowing API Gateway to invoke a Lambda function,
-
                       e.g., arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod
                     type: string
                   id:
                     description: ID of the stage
                     type: string
                   invokeUrl:
-                    description: >-
+                    description: |-
                       URL to invoke the API pointing to the stage,
-
                       e.g., https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod
                     type: string
                   region:
-                    description: >-
+                    description: |-
                       Region where this resource will be managed. Defaults to the Region set in the provider configuration.
-
                       Region is the region you'd like your resource to be created in.
                     type: string
                   restApiId:
@@ -842,24 +739,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -870,9 +763,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -886,11 +778,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer
@@ -921,25 +811,18 @@ spec:
         description: Stage is the Schema for the Stages API. Manages an API Gateway Stage.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -949,19 +832,13 @@ spec:
             properties:
               deletionPolicy:
                 default: Delete
-                description: >-
+                description: |-
                   DeletionPolicy specifies what will happen to the underlying external
-
                   when this managed resource is deleted - either "Delete" or "Orphan" the
-
                   external resource.
-
                   This field is planned to be deprecated in favor of the ManagementPolicies
-
                   field in a future release. Currently, both could be set independently and
-
                   non-default values would be honored if the feature flag is enabled.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
                 enum:
                 - Orphan
@@ -976,9 +853,8 @@ spec:
                         description: ARN of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with amazon-apigateway-. Automatically removes trailing :* if present.
                         type: string
                       format:
-                        description: >-
+                        description: |-
                           Formatting and values recorded in the logs.
-
                           For more information on configuring the log format rules visit the AWS documentation
                         type: string
                     type: object
@@ -1024,26 +900,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1057,9 +927,8 @@ spec:
                     description: Selector for a Deployment in apigateway to populate deploymentId.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -1072,26 +941,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1106,9 +969,8 @@ spec:
                     description: Version of the associated API documentation.
                     type: string
                   region:
-                    description: >-
+                    description: |-
                       Region where this resource will be managed. Defaults to the Region set in the provider configuration.
-
                       Region is the region you'd like your resource to be created in.
                     type: string
                   restApiId:
@@ -1125,26 +987,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1158,9 +1014,8 @@ spec:
                     description: Selector for a RestAPI in apigateway to populate restApiId.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -1173,26 +1028,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1222,25 +1071,16 @@ spec:
                 - region
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   accessLogSettings:
@@ -1250,9 +1090,8 @@ spec:
                         description: ARN of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with amazon-apigateway-. Automatically removes trailing :* if present.
                         type: string
                       format:
-                        description: >-
+                        description: |-
                           Formatting and values recorded in the logs.
-
                           For more information on configuring the log format rules visit the AWS documentation
                         type: string
                     type: object
@@ -1298,26 +1137,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1331,9 +1164,8 @@ spec:
                     description: Selector for a Deployment in apigateway to populate deploymentId.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -1346,26 +1178,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1393,26 +1219,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1426,9 +1246,8 @@ spec:
                     description: Selector for a RestAPI in apigateway to populate restApiId.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -1441,26 +1260,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1490,30 +1303,20 @@ spec:
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   This field is planned to replace the DeletionPolicy field in a future
-
                   release. Currently, both could be set independently and non-default
-
                   values would be honored if the feature flag is enabled. If both are
-
                   custom, the DeletionPolicy field will be ignored.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -1527,11 +1330,9 @@ spec:
               providerConfigRef:
                 default:
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   name:
@@ -1542,26 +1343,20 @@ spec:
                     properties:
                       resolution:
                         default: Required
-                        description: >-
+                        description: |-
                           Resolution specifies whether resolution of this reference is required.
-
                           The default is 'Required', which means the reconcile will fail if the
-
                           reference cannot be resolved. 'Optional' means this reference will be
-
                           a no-op if it cannot be resolved.
                         enum:
                         - Required
                         - Optional
                         type: string
                       resolve:
-                        description: >-
+                        description: |-
                           Resolve specifies when this reference should be resolved. The default
-
                           is 'IfNotPresent', which will attempt to resolve the reference only when
-
                           the corresponding field is not present. Use 'Always' to resolve the
-
                           reference on every reconcile.
                         enum:
                         - Always
@@ -1572,13 +1367,10 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   name:
@@ -1609,9 +1401,8 @@ spec:
                         description: ARN of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with amazon-apigateway-. Automatically removes trailing :* if present.
                         type: string
                       format:
-                        description: >-
+                        description: |-
                           Formatting and values recorded in the logs.
-
                           For more information on configuring the log format rules visit the AWS documentation
                         type: string
                     type: object
@@ -1656,26 +1447,22 @@ spec:
                     description: Version of the associated API documentation.
                     type: string
                   executionArn:
-                    description: >-
+                    description: |-
                       Execution ARN to be used in lambda_permission's source_arn
-
                       when allowing API Gateway to invoke a Lambda function,
-
                       e.g., arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod
                     type: string
                   id:
                     description: ID of the stage
                     type: string
                   invokeUrl:
-                    description: >-
+                    description: |-
                       URL to invoke the API pointing to the stage,
-
                       e.g., https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod
                     type: string
                   region:
-                    description: >-
+                    description: |-
                       Region where this resource will be managed. Defaults to the Region set in the provider configuration.
-
                       Region is the region you'd like your resource to be created in.
                     type: string
                   restApiId:
@@ -1715,24 +1502,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -1743,9 +1526,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -1759,11 +1541,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer

@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: certificatemanagercertificates.certificatemanager.cnrm.cloud.google.com
 spec:
   group: certificatemanager.cnrm.cloud.google.com
@@ -60,26 +59,21 @@ spec:
                 description: Immutable. The Certificate Manager location. If not specified, "global" is used.
                 type: string
               managed:
-                description: >-
+                description: |-
                   Immutable. Configuration and state of a Managed Certificate.
-
                   Certificate Manager provisions and renews Managed Certificates
-
                   automatically, for as long as it's authorized to do so.
                 properties:
                   authorizationAttemptInfo:
-                    description: >-
+                    description: |-
                       Detailed state of the latest authorization attempt for each domain
-
                       specified for this Managed Certificate.
                     items:
                       properties:
                         details:
-                          description: >-
+                          description: |-
                             Human readable explanation for reaching the state. Provided to help
-
                             address the configuration issues.
-
                             Not guaranteed to be stable. For programmatic access use 'failure_reason' field.
                           type: string
                         domain:
@@ -123,22 +117,18 @@ spec:
                       type: object
                     type: array
                   domains:
-                    description: >-
+                    description: |-
                       Immutable. The domains for which a managed SSL certificate will be generated.
-
                       Wildcard domains are only supported with DNS challenge resolution.
                     items:
                       type: string
                     type: array
                   issuanceConfigRef:
-                    description: >-
+                    description: |-
                       Only the `external` field is supported to configure the reference.
 
-
                       Immutable. The resource name for a CertificateIssuanceConfig used to configure private PKI certificates in the format projects/*/locations/*/certificateIssuanceConfigs/*.
-
                       If this field is not set, the certificates will instead be publicly signed as documented at https://cloud.google.com/load-balancing/docs/ssl-certificates/google-managed-certs#caa.
-
                       Either issuanceConfig or dnsAuthorizations should be specified, but not both.
                     oneOf:
                     - not:
@@ -170,11 +160,9 @@ spec:
                     items:
                       properties:
                         details:
-                          description: >-
+                          description: |-
                             Human readable explanation about the issue. Provided to help address
-
                             the configuration issues.
-
                             Not guaranteed to be stable. For programmatic access use 'reason' field.
                           type: string
                         reason:
@@ -217,36 +205,27 @@ spec:
                 description: Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.
                 type: string
               scope:
-                description: >-
+                description: |-
                   Immutable. The scope of the certificate.
 
-
                   DEFAULT: Certificates with default scope are served from core Google data centers.
-
                   If unsure, choose this option.
 
-
                   EDGE_CACHE: Certificates with scope EDGE_CACHE are special-purposed certificates,
-
                   served from non-core Google data centers.
 
-
                   ALL_REGIONS: Certificates with ALL_REGIONS scope are served from all GCP regions (You can only use ALL_REGIONS with global certs).
-
                   see https://cloud.google.com/compute/docs/regions-zones.
                 type: string
               selfManaged:
-                description: >-
+                description: |-
                   Immutable. Certificate data for a SelfManaged Certificate.
-
                   SelfManaged Certificates are uploaded by the user. Updating such
-
                   certificates before they expire remains the user's responsibility.
                 properties:
                   certificatePem:
-                    description: >-
+                    description: |-
                       DEPRECATED. `certificate_pem` is deprecated. Use `pem_certificate` instead. Immutable. The certificate chain in PEM-encoded form.
-
 
                       Leaf certificate comes first, followed by intermediate ones if any.
                     oneOf:
@@ -283,9 +262,8 @@ spec:
                         type: object
                     type: object
                   pemCertificate:
-                    description: >-
+                    description: |-
                       Immutable. The certificate chain in PEM-encoded form.
-
 
                       Leaf certificate comes first, followed by intermediate ones if any.
                     type: string
@@ -435,26 +413,21 @@ spec:
                 description: Immutable. The Certificate Manager location. If not specified, "global" is used.
                 type: string
               managed:
-                description: >-
+                description: |-
                   Immutable. Configuration and state of a Managed Certificate.
-
                   Certificate Manager provisions and renews Managed Certificates
-
                   automatically, for as long as it's authorized to do so.
                 properties:
                   authorizationAttemptInfo:
-                    description: >-
+                    description: |-
                       Detailed state of the latest authorization attempt for each domain
-
                       specified for this Managed Certificate.
                     items:
                       properties:
                         details:
-                          description: >-
+                          description: |-
                             Human readable explanation for reaching the state. Provided to help
-
                             address the configuration issues.
-
                             Not guaranteed to be stable. For programmatic access use 'failure_reason' field.
                           type: string
                         domain:
@@ -498,22 +471,18 @@ spec:
                       type: object
                     type: array
                   domains:
-                    description: >-
+                    description: |-
                       Immutable. The domains for which a managed SSL certificate will be generated.
-
                       Wildcard domains are only supported with DNS challenge resolution.
                     items:
                       type: string
                     type: array
                   issuanceConfigRef:
-                    description: >-
+                    description: |-
                       Only the `external` field is supported to configure the reference.
 
-
                       Immutable. The resource name for a CertificateIssuanceConfig used to configure private PKI certificates in the format projects/*/locations/*/certificateIssuanceConfigs/*.
-
                       If this field is not set, the certificates will instead be publicly signed as documented at https://cloud.google.com/load-balancing/docs/ssl-certificates/google-managed-certs#caa.
-
                       Either issuanceConfig or dnsAuthorizations should be specified, but not both.
                     oneOf:
                     - not:
@@ -545,11 +514,9 @@ spec:
                     items:
                       properties:
                         details:
-                          description: >-
+                          description: |-
                             Human readable explanation about the issue. Provided to help address
-
                             the configuration issues.
-
                             Not guaranteed to be stable. For programmatic access use 'reason' field.
                           type: string
                         reason:
@@ -592,36 +559,27 @@ spec:
                 description: Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.
                 type: string
               scope:
-                description: >-
+                description: |-
                   Immutable. The scope of the certificate.
 
-
                   DEFAULT: Certificates with default scope are served from core Google data centers.
-
                   If unsure, choose this option.
 
-
                   EDGE_CACHE: Certificates with scope EDGE_CACHE are special-purposed certificates,
-
                   served from non-core Google data centers.
 
-
                   ALL_REGIONS: Certificates with ALL_REGIONS scope are served from all GCP regions (You can only use ALL_REGIONS with global certs).
-
                   see https://cloud.google.com/compute/docs/regions-zones.
                 type: string
               selfManaged:
-                description: >-
+                description: |-
                   Immutable. Certificate data for a SelfManaged Certificate.
-
                   SelfManaged Certificates are uploaded by the user. Updating such
-
                   certificates before they expire remains the user's responsibility.
                 properties:
                   certificatePem:
-                    description: >-
+                    description: |-
                       DEPRECATED. `certificate_pem` is deprecated. Use `pem_certificate` instead. Immutable. The certificate chain in PEM-encoded form.
-
 
                       Leaf certificate comes first, followed by intermediate ones if any.
                     oneOf:
@@ -658,9 +616,8 @@ spec:
                         type: object
                     type: object
                   pemCertificate:
-                    description: >-
+                    description: |-
                       Immutable. The certificate chain in PEM-encoded form.
-
 
                       Leaf certificate comes first, followed by intermediate ones if any.
                     type: string
@@ -775,7 +732,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: tpuvirtualmachines.tpu.cnrm.cloud.google.com
 spec:
   group: tpu.cnrm.cloud.google.com
@@ -423,7 +422,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

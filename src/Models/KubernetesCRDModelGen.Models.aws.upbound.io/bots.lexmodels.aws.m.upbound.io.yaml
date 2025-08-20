@@ -36,25 +36,18 @@ spec:
         description: Bot is the Schema for the Bots API. Provides an Amazon Lex bot resource.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -68,11 +61,9 @@ spec:
                     description: The message that Amazon Lex uses to abort a conversation. Attributes are documented under statement.
                     properties:
                       message:
-                        description: >-
+                        description: |-
                           A set of messages, each of which provides a message string and its type.
-
                           You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                           Attributes are documented under message.
                         items:
                           properties:
@@ -83,19 +74,16 @@ spec:
                               description: The content type of the message string.
                               type: string
                             groupNumber:
-                              description: >-
+                              description: |-
                                 Identifies the message group that the message belongs to. When a group
-
                                 is assigned to a message, Amazon Lex returns one message from each group in the response.
                               type: number
                           type: object
                         type: array
                       responseCard:
-                        description: >-
+                        description: |-
                           The response card. Amazon Lex will substitute session attributes and
-
                           slot values into the response card. For more information, see
-
                           Example: Using a Response Card.
                         type: string
                     type: object
@@ -109,11 +97,9 @@ spec:
                         description: The number of times to prompt the user for information.
                         type: number
                       message:
-                        description: >-
+                        description: |-
                           A set of messages, each of which provides a message string and its type.
-
                           You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                           Attributes are documented under message.
                         items:
                           properties:
@@ -124,19 +110,16 @@ spec:
                               description: The content type of the message string.
                               type: string
                             groupNumber:
-                              description: >-
+                              description: |-
                                 Identifies the message group that the message belongs to. When a group
-
                                 is assigned to a message, Amazon Lex returns one message from each group in the response.
                               type: number
                           type: object
                         type: array
                       responseCard:
-                        description: >-
+                        description: |-
                           The response card. Amazon Lex will substitute session attributes and
-
                           slot values into the response card. For more information, see
-
                           Example: Using a Response Card.
                         type: string
                     type: object
@@ -177,9 +160,8 @@ spec:
                     description: If you set the process_behavior element to BUILD, Amazon Lex builds the bot so that it can be run. If you set the element to SAVE Amazon Lex saves the bot, but doesn't build it. Default is SAVE.
                     type: string
                   region:
-                    description: >-
+                    description: |-
                       Region where this resource will be managed. Defaults to the Region set in the provider configuration.
-
                       Region is the region you'd like your resource to be created in.
                     type: string
                   voiceId:
@@ -189,36 +171,25 @@ spec:
                 - region
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   abortStatement:
                     description: The message that Amazon Lex uses to abort a conversation. Attributes are documented under statement.
                     properties:
                       message:
-                        description: >-
+                        description: |-
                           A set of messages, each of which provides a message string and its type.
-
                           You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                           Attributes are documented under message.
                         items:
                           properties:
@@ -229,19 +200,16 @@ spec:
                               description: The content type of the message string.
                               type: string
                             groupNumber:
-                              description: >-
+                              description: |-
                                 Identifies the message group that the message belongs to. When a group
-
                                 is assigned to a message, Amazon Lex returns one message from each group in the response.
                               type: number
                           type: object
                         type: array
                       responseCard:
-                        description: >-
+                        description: |-
                           The response card. Amazon Lex will substitute session attributes and
-
                           slot values into the response card. For more information, see
-
                           Example: Using a Response Card.
                         type: string
                     type: object
@@ -255,11 +223,9 @@ spec:
                         description: The number of times to prompt the user for information.
                         type: number
                       message:
-                        description: >-
+                        description: |-
                           A set of messages, each of which provides a message string and its type.
-
                           You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                           Attributes are documented under message.
                         items:
                           properties:
@@ -270,19 +236,16 @@ spec:
                               description: The content type of the message string.
                               type: string
                             groupNumber:
-                              description: >-
+                              description: |-
                                 Identifies the message group that the message belongs to. When a group
-
                                 is assigned to a message, Amazon Lex returns one message from each group in the response.
                               type: number
                           type: object
                         type: array
                       responseCard:
-                        description: >-
+                        description: |-
                           The response card. Amazon Lex will substitute session attributes and
-
                           slot values into the response card. For more information, see
-
                           Example: Using a Response Card.
                         type: string
                     type: object
@@ -329,22 +292,16 @@ spec:
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -359,11 +316,9 @@ spec:
                 default:
                   kind: ClusterProviderConfig
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   kind:
@@ -377,13 +332,10 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   name:
@@ -411,11 +363,9 @@ spec:
                     description: The message that Amazon Lex uses to abort a conversation. Attributes are documented under statement.
                     properties:
                       message:
-                        description: >-
+                        description: |-
                           A set of messages, each of which provides a message string and its type.
-
                           You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                           Attributes are documented under message.
                         items:
                           properties:
@@ -426,28 +376,24 @@ spec:
                               description: The content type of the message string.
                               type: string
                             groupNumber:
-                              description: >-
+                              description: |-
                                 Identifies the message group that the message belongs to. When a group
-
                                 is assigned to a message, Amazon Lex returns one message from each group in the response.
                               type: number
                           type: object
                         type: array
                       responseCard:
-                        description: >-
+                        description: |-
                           The response card. Amazon Lex will substitute session attributes and
-
                           slot values into the response card. For more information, see
-
                           Example: Using a Response Card.
                         type: string
                     type: object
                   arn:
                     type: string
                   checksum:
-                    description: >-
+                    description: |-
                       Checksum identifying the version of the bot that was created. The checksum is not
-
                       included as an argument because the resource will add it automatically when updating the bot.
                     type: string
                   childDirected:
@@ -460,11 +406,9 @@ spec:
                         description: The number of times to prompt the user for information.
                         type: number
                       message:
-                        description: >-
+                        description: |-
                           A set of messages, each of which provides a message string and its type.
-
                           You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                           Attributes are documented under message.
                         items:
                           properties:
@@ -475,19 +419,16 @@ spec:
                               description: The content type of the message string.
                               type: string
                             groupNumber:
-                              description: >-
+                              description: |-
                                 Identifies the message group that the message belongs to. When a group
-
                                 is assigned to a message, Amazon Lex returns one message from each group in the response.
                               type: number
                           type: object
                         type: array
                       responseCard:
-                        description: >-
+                        description: |-
                           The response card. Amazon Lex will substitute session attributes and
-
                           slot values into the response card. For more information, see
-
                           Example: Using a Response Card.
                         type: string
                     type: object
@@ -539,19 +480,15 @@ spec:
                     description: If you set the process_behavior element to BUILD, Amazon Lex builds the bot so that it can be run. If you set the element to SAVE Amazon Lex saves the bot, but doesn't build it. Default is SAVE.
                     type: string
                   region:
-                    description: >-
+                    description: |-
                       Region where this resource will be managed. Defaults to the Region set in the provider configuration.
-
                       Region is the region you'd like your resource to be created in.
                     type: string
                   status:
-                    description: >-
+                    description: |-
                       When you send a request to create or update a bot, Amazon Lex sets the status response
-
                       element to BUILDING. After Amazon Lex builds the bot, it sets status to READY. If Amazon Lex can't
-
                       build the bot, it sets status to FAILED. Amazon Lex returns the reason for the failure in the
-
                       failure_reason response element.
                     type: string
                   version:
@@ -567,24 +504,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -595,9 +528,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -611,11 +543,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer

@@ -67,7 +67,7 @@ spec:
                       key:
                         type: string
                       name:
-                        default: ''
+                        default: ""
                         type: string
                       optional:
                         type: boolean

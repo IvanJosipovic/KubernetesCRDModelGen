@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: batchtasks.batch.cnrm.cloud.google.com
 spec:
   group: batch.cnrm.cloud.google.com
@@ -151,7 +150,7 @@ spec:
                               description: Task Execution. This field is only defined for task-level status events where the task fails.
                               properties:
                                 exitCode:
-                                  description: >-
+                                  description: |-
                                     The exit code of a finished task.
 
                                      If the task succeeded, the exit code will be 0. If the task failed but not
@@ -186,7 +185,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

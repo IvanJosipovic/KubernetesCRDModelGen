@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: servicedirectorynamespaces.servicedirectory.cnrm.cloud.google.com
 spec:
   group: servicedirectory.cnrm.cloud.google.com
@@ -54,11 +53,9 @@ spec:
           spec:
             properties:
               location:
-                description: >-
+                description: |-
                   Immutable. The location for the Namespace.
-
                   A full list of valid locations can be found by running
-
                   'gcloud beta service-directory locations list'.
                 type: string
               projectRef:
@@ -119,9 +116,8 @@ spec:
                   type: object
                 type: array
               name:
-                description: >-
+                description: |-
                   The resource name for the namespace
-
                   in the format 'projects/*/locations/*/namespaces/*'.
                 type: string
               observedGeneration:
@@ -137,7 +133,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

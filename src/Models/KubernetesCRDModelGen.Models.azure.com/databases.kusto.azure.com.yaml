@@ -45,33 +45,24 @@ spec:
     name: v1api20230815
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /azure-kusto/resource-manager/Microsoft.Kusto/stable/2023-08-15/kusto.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Kusto/clusters/{clusterName}/databases/{databaseName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -79,48 +70,39 @@ spec:
           spec:
             properties:
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 pattern: ^.*$
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -131,33 +113,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -167,11 +142,9 @@ spec:
                     type: array
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a kusto.azure.com/Cluster resource
                 properties:
                   armId:
@@ -203,11 +176,9 @@ spec:
                         description: 'UserIdentityReference: The user assigned identity (ARM resource id) that has access to the key.'
                         properties:
                           armId:
-                            description: >-
+                            description: |-
                               ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                               The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                               ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                             pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                             type: string
@@ -254,28 +225,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -301,9 +266,8 @@ spec:
                     description: 'HotCachePeriod: The time the data should be kept in cache for fast queries in TimeSpan.'
                     type: string
                   id:
-                    description: >-
+                    description: |-
                       Id: Fully qualified resource ID for the resource. Ex -
-
                       /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                     type: string
                   isFollowed:
@@ -345,9 +309,8 @@ spec:
                         type: number
                     type: object
                   suspensionDetails:
-                    description: >-
+                    description: |-
                       SuspensionDetails: The database suspension details. If the database is suspended, this object contains information
-
                       related to the database's suspension state.
                     properties:
                       suspensionStartDate:
@@ -380,35 +343,25 @@ spec:
     name: v1api20230815storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20230815.Database
-
           Generator information:
-
           - Generated from: /azure-kusto/resource-manager/Microsoft.Kusto/stable/2023-08-15/kusto.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Kusto/clusters/{clusterName}/databases/{databaseName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -419,60 +372,49 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20230815.DatabaseOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -482,33 +424,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -520,11 +455,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a kusto.azure.com/Cluster resource
                 properties:
                   armId:
@@ -540,25 +473,22 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   hotCachePeriod:
                     type: string
                   keyVaultProperties:
-                    description: >-
+                    description: |-
                       Storage version of v1api20230815.KeyVaultProperties
-
                       Properties of the key vault.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       keyName:
@@ -571,11 +501,9 @@ spec:
                         description: 'UserIdentityReference: The user assigned identity (ARM resource id) that has access to the key.'
                         properties:
                           armId:
-                            description: >-
+                            description: |-
                               ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                               The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                               ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                             pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                             type: string
@@ -606,9 +534,8 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               conditions:
@@ -623,28 +550,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -668,9 +589,8 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   hotCachePeriod:
@@ -680,17 +600,15 @@ spec:
                   isFollowed:
                     type: boolean
                   keyVaultProperties:
-                    description: >-
+                    description: |-
                       Storage version of v1api20230815.KeyVaultProperties_STATUS
-
                       Properties of the key vault.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       keyName:
@@ -711,36 +629,31 @@ spec:
                   softDeletePeriod:
                     type: string
                   statistics:
-                    description: >-
+                    description: |-
                       Storage version of v1api20230815.DatabaseStatistics_STATUS
-
                       A class that contains database statistics information.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       size:
                         type: number
                     type: object
                   suspensionDetails:
-                    description: >-
+                    description: |-
                       Storage version of v1api20230815.SuspensionDetails_STATUS
-
                       The database suspension details. If the database is suspended, this object contains information related to the
-
                       database's suspension state.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       suspensionStartDate:

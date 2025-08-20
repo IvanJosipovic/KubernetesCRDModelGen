@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: batchjobs.batch.cnrm.cloud.google.com
 spec:
   group: batch.cnrm.cloud.google.com
@@ -62,7 +61,7 @@ spec:
                     items:
                       properties:
                         blockProjectSSHKeys:
-                          description: >-
+                          description: |-
                             Optional. Set this field to `true` if you want Batch to block
                              project-level SSH keys from accessing this job's VMs.  Alternatively, you
                              can configure the job to specify a VM instance template that blocks
@@ -80,7 +79,7 @@ spec:
                              https://cloud.google.com/compute/docs/connect/restrict-ssh-keys#block-keys
                           type: boolean
                         installGpuDrivers:
-                          description: >-
+                          description: |-
                             Set this field true if you want Batch to help fetch drivers from a third
                              party location and install them for GPUs specified in
                              `policy.accelerators` or `instance_template` on your behalf. Default is
@@ -96,7 +95,7 @@ spec:
                           description: Optional. Set this field true if you want Batch to install Ops Agent on your behalf. Default is false.
                           type: boolean
                         instanceTemplate:
-                          description: >-
+                          description: |-
                             Name of an instance template used to create VMs.
                              Named the field as 'instance_template' instead of 'template' to avoid
                              C++ keyword conflict.
@@ -117,7 +116,7 @@ spec:
                                     format: int64
                                     type: integer
                                   driverVersion:
-                                    description: >-
+                                    description: |-
                                       Optional. The NVIDIA GPU driver version that should be installed for this
                                        type.
 
@@ -141,7 +140,7 @@ spec:
                                   description: Local SSDs are available through both "SCSI" and "NVMe" interfaces. If not indicated, "NVMe" will be the default one for local ssds. This field is ignored for persistent disks as the interface is chosen automatically. See https://cloud.google.com/compute/docs/disks/persistent-disks#choose_an_interface.
                                   type: string
                                 imageRef:
-                                  description: >-
+                                  description: |-
                                     URL for a VM image to use as the data source for this disk.
                                      For example, the following are all valid URLs:
 
@@ -188,7 +187,7 @@ spec:
                                       type: string
                                   type: object
                                 sizeGB:
-                                  description: >-
+                                  description: |-
                                     Disk size in GB.
 
                                      **Non-Boot Disk**:
@@ -233,7 +232,7 @@ spec:
                                         description: Local SSDs are available through both "SCSI" and "NVMe" interfaces. If not indicated, "NVMe" will be the default one for local ssds. This field is ignored for persistent disks as the interface is chosen automatically. See https://cloud.google.com/compute/docs/disks/persistent-disks#choose_an_interface.
                                         type: string
                                       imageRef:
-                                        description: >-
+                                        description: |-
                                           URL for a VM image to use as the data source for this disk.
                                            For example, the following are all valid URLs:
 
@@ -280,7 +279,7 @@ spec:
                                             type: string
                                         type: object
                                       sizeGB:
-                                        description: >-
+                                        description: |-
                                           Disk size in GB.
 
                                            **Non-Boot Disk**:
@@ -329,7 +328,7 @@ spec:
                   labels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Custom labels to apply to the job and all the Compute Engine resources
                        that both are created by this allocation policy and support labels.
 
@@ -346,7 +345,7 @@ spec:
                     description: Location where compute resources should be allocated for the Job.
                     properties:
                       allowedLocations:
-                        description: >-
+                        description: |-
                           A list of allowed location names represented by internal URLs.
 
                            Each location can be a region or a zone.
@@ -366,7 +365,7 @@ spec:
                         type: array
                     type: object
                   network:
-                    description: >-
+                    description: |-
                       The network policy.
 
                        If you define an instance template in the `InstancePolicyOrTemplate` field,
@@ -378,7 +377,7 @@ spec:
                         items:
                           properties:
                             networkRef:
-                              description: >-
+                              description: |-
                                 The URL of an existing network resource.
                                  You can specify the network as a full or partial URL.
 
@@ -416,7 +415,7 @@ spec:
                               description: Default is false (with an external IP address). Required if no external public IP address is attached to the VM. If no external public IP address, additional configuration is required to allow the VM to access Google Services. See https://cloud.google.com/vpc/docs/configure-private-google-access and https://cloud.google.com/nat/docs/gce-example#create-nat for more information.
                               type: boolean
                             subnetworkRef:
-                              description: >-
+                              description: |-
                                 The URL of an existing subnetwork resource in the network.
                                  You can specify the subnetwork as a full or partial URL.
 
@@ -465,7 +464,7 @@ spec:
                         type: integer
                     type: object
                   serviceAccount:
-                    description: >-
+                    description: |-
                       Defines the service account for Batch-created VMs. If omitted, the [default
                        Compute Engine service
                        account](https://cloud.google.com/compute/docs/access/service-accounts#default_service_account)
@@ -503,7 +502,7 @@ spec:
                         type: string
                     type: object
                   tags:
-                    description: >-
+                    description: |-
                       Optional. Tags applied to the VM instances.
 
                        The tags identify valid sources or targets for network firewalls.
@@ -516,7 +515,7 @@ spec:
               labels:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   Custom labels to apply to the job and any Cloud Logging
                    [LogEntry](https://cloud.google.com/logging/docs/reference/v2/rest/v2/LogEntry)
                    that it generates.
@@ -568,7 +567,7 @@ spec:
                           type: string
                       type: object
                     pubsubTopicRef:
-                      description: >-
+                      description: |-
                         The Pub/Sub topic where notifications for the job, like state
                          changes, will be published. If undefined, no Pub/Sub notifications
                          are sent for this job.
@@ -675,7 +674,7 @@ spec:
                       format: int64
                       type: integer
                     taskEnvironments:
-                      description: >-
+                      description: |-
                         An array of environment variable mappings, which are passed to Tasks with
                          matching indices. If task_environments is used then task_count should
                          not be specified in the request (and will be ignored). Task count will be
@@ -744,7 +743,7 @@ spec:
                               format: int64
                               type: integer
                             cpuMilli:
-                              description: >-
+                              description: |-
                                 The milliCPU count.
 
                                  `cpuMilli` defines the amount of CPU resources per task in milliCPU units.
@@ -766,7 +765,7 @@ spec:
                               format: int64
                               type: integer
                             memoryMiB:
-                              description: >-
+                              description: |-
                                 Memory in MiB.
 
                                  `memoryMib` defines the amount of memory per task in MiB units.
@@ -866,7 +865,7 @@ spec:
                           description: Maximum duration the task should run before being automatically retried (if enabled) or automatically failed. Format the value of this field as a time limit in seconds followed by `s`&mdash;for example, `3600s` for 1 hour. The field accepts any value between 0 and the maximum listed for the `Duration` field type at https://protobuf.dev/reference/protobuf/google.protobuf/#duration; however, the actual maximum run time for a job will be limited to the maximum run time for a job listed at https://cloud.google.com/batch/quotas#max-job-duration.
                           type: string
                         runnables:
-                          description: >-
+                          description: |-
                             Required. The sequence of one or more runnables (executable scripts,
                              executable containers, and/or barriers) for each task in this task group to
                              run. Each task runs this list of runnables in order. For a task to succeed,
@@ -877,7 +876,7 @@ spec:
                           items:
                             properties:
                               alwaysRun:
-                                description: >-
+                                description: |-
                                   By default, after a Runnable fails, no further Runnable are executed. This
                                    flag indicates that this Runnable must be run even if the Task has already
                                    failed. This is useful for Runnables that copy output files off of the VM
@@ -888,7 +887,7 @@ spec:
                                    not even always_run Runnables.
                                 type: boolean
                               background:
-                                description: >-
+                                description: |-
                                   Normally, a runnable that doesn't exit causes its task to fail. However,
                                    you can set this field to `true` to configure a background runnable.
                                    Background runnables are allowed continue running in the background while
@@ -921,7 +920,7 @@ spec:
                                       type: string
                                     type: array
                                   enableImageStreaming:
-                                    description: >-
+                                    description: |-
                                       Optional. If set to true, this container runnable uses Image streaming.
 
                                        Use Image streaming to allow the runnable to initialize without
@@ -950,7 +949,7 @@ spec:
                                     description: Required for some container images. Arbitrary additional options to include in the `docker run` command when running this container&mdash;for example, `--network host`. For the `--volume` option, use the `volumes` field for the container.
                                     type: string
                                   username:
-                                    description: >-
+                                    description: |-
                                       Required if the container image is from a private Docker registry. The
                                        username to login to the Docker registry that contains the image.
 
@@ -969,7 +968,7 @@ spec:
                                        Batch](https://cloud.google.com/batch/docs/create-run-job-secret-manager).
                                     type: string
                                   volumes:
-                                    description: >-
+                                    description: |-
                                       Volumes to mount (bind mount) from the host machine files or directories
                                        into the container, formatted to match `--volume` option for the
                                        `docker run` command&mdash;for example, `/foo:/bar` or `/foo:/bar:ro`.
@@ -1048,7 +1047,7 @@ spec:
                                 description: Script runnable.
                                 properties:
                                   path:
-                                    description: >-
+                                    description: |-
                                       The path to a script file that is accessible from the host VM(s).
 
                                        Unless the script file supports the default `#!/bin/sh` shell
@@ -1060,7 +1059,7 @@ spec:
                                        as the first line of the file.
                                     type: string
                                   text:
-                                    description: >-
+                                    description: |-
                                       The text for a script.
 
                                        Unless the script text supports the default `#!/bin/sh` shell
@@ -1092,7 +1091,7 @@ spec:
                                     type: string
                                 type: object
                               mountOptions:
-                                description: >-
+                                description: |-
                                   Mount options vary based on the type of storage volume:
 
                                    * For a Cloud Storage bucket, all the mount options provided
@@ -1194,7 +1193,7 @@ spec:
                               description: Task Execution. This field is only defined for task-level status events where the task fails.
                               properties:
                                 exitCode:
-                                  description: >-
+                                  description: |-
                                     The exit code of a finished task.
 
                                      If the task succeeded, the exit code will be 0. If the task failed but not
@@ -1244,7 +1243,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

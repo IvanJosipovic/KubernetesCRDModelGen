@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/dcl2crd: true
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/dcl2crd: "true"
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/system: "true"
   name: cloudschedulerjobs.cloudscheduler.cnrm.cloud.google.com
 spec:
   group: cloudscheduler.cnrm.cloud.google.com
@@ -127,9 +126,8 @@ spec:
                           - external
                         properties:
                           external:
-                            description: >-
+                            description: |-
                               [Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for generating OAuth token. The service account must be within the same project as the job. The caller must have iam.serviceAccounts.actAs permission for the service account.
-
 
                               Allowed value: The `email` field of an `IAMServiceAccount` resource.
                             type: string
@@ -164,9 +162,8 @@ spec:
                           - external
                         properties:
                           external:
-                            description: >-
+                            description: |-
                               [Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for generating OIDC token. The service account must be within the same project as the job. The caller must have iam.serviceAccounts.actAs permission for the service account.
-
 
                               Allowed value: The `email` field of an `IAMServiceAccount` resource.
                             type: string
@@ -215,9 +212,8 @@ spec:
                       - external
                     properties:
                       external:
-                        description: >-
+                        description: |-
                           Required. The name of the Cloud Pub/Sub topic to which messages will be published when a job is delivered. The topic name must be in the same format as required by Pub/Sub's [PublishRequest.name](https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#publishrequest), for example `projects/PROJECT_ID/topics/TOPIC_ID`. The topic must be in the same project as the Cloud Scheduler job.
-
 
                           Allowed value: The Google Cloud resource name of a `PubSubTopic` resource (format: `projects/{{project}}/topics/{{name}}`).
                         type: string
@@ -347,7 +343,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

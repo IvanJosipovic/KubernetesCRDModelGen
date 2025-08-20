@@ -19,25 +19,18 @@ spec:
         description: IngressRouteTCP is the CRD implementation of a Traefik TCP Router.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -46,13 +39,10 @@ spec:
             description: IngressRouteTCPSpec defines the desired state of IngressRouteTCP.
             properties:
               entryPoints:
-                description: >-
+                description: |-
                   EntryPoints defines the list of entry point names to bind to.
-
                   Entry points have to be configured in the static configuration.
-
                   More info: https://doc.traefik.io/traefik/v3.5/routing/entrypoints/
-
                   Default: all.
                 items:
                   type: string
@@ -63,9 +53,8 @@ spec:
                   description: RouteTCP holds the TCP route configuration.
                   properties:
                     match:
-                      description: >-
+                      description: |-
                         Match defines the router's rule.
-
                         More info: https://doc.traefik.io/traefik/v3.5/routing/routers/#rule_1
                       type: string
                     middlewares:
@@ -84,9 +73,8 @@ spec:
                         type: object
                       type: array
                     priority:
-                      description: >-
+                      description: |-
                         Priority defines the router's priority.
-
                         More info: https://doc.traefik.io/traefik/v3.5/routing/routers/#priority_1
                       maximum: 9223372036854775000
                       type: integer
@@ -102,38 +90,30 @@ spec:
                             description: Namespace defines the namespace of the referenced Kubernetes Service.
                             type: string
                           nativeLB:
-                            description: >-
+                            description: |-
                               NativeLB controls, when creating the load-balancer,
-
                               whether the LB's children are directly the pods IPs or if the only child is the Kubernetes Service clusterIP.
-
                               The Kubernetes Service itself does load-balance to the pods.
-
                               By default, NativeLB is false.
                             type: boolean
                           nodePortLB:
-                            description: >-
+                            description: |-
                               NodePortLB controls, when creating the load-balancer,
-
                               whether the LB's children are directly the nodes internal IPs using the nodePort when the service type is NodePort.
-
                               It allows services to be reachable when Traefik runs externally from the Kubernetes cluster but within the same network of the nodes.
-
                               By default, NodePortLB is false.
                             type: boolean
                           port:
                             anyOf:
                             - type: integer
                             - type: string
-                            description: >-
+                            description: |-
                               Port defines the port of a Kubernetes Service.
-
                               This can be a reference to a named port.
                             x-kubernetes-int-or-string: true
                           proxyProtocol:
-                            description: >-
+                            description: |-
                               ProxyProtocol defines the PROXY protocol configuration.
-
                               More info: https://doc.traefik.io/traefik/v3.5/routing/services/#proxy-protocol
                             properties:
                               version:
@@ -143,25 +123,18 @@ spec:
                                 type: integer
                             type: object
                           serversTransport:
-                            description: >-
+                            description: |-
                               ServersTransport defines the name of ServersTransportTCP resource to use.
-
                               It allows to configure the transport between Traefik and your servers.
-
                               Can only be used on a Kubernetes Service.
                             type: string
                           terminationDelay:
-                            description: >-
+                            description: |-
                               TerminationDelay defines the deadline that the proxy sets, after one of its connected peers indicates
-
                               it has closed the writing capability of its connection, to close the reading capability as well,
-
                               hence fully terminating the connection.
-
                               It is a duration in milliseconds, defaulting to 100.
-
                               A negative value means an infinite deadline (i.e. the reading capability is never closed).
-
                               Deprecated: TerminationDelay will not be supported in future APIVersions, please use ServersTransport to configure the TerminationDelay instead.
                             type: integer
                           tls:
@@ -177,11 +150,9 @@ spec:
                         type: object
                       type: array
                     syntax:
-                      description: >-
+                      description: |-
                         Syntax defines the router's rule syntax.
-
                         More info: https://doc.traefik.io/traefik/v3.5/routing/routers/#rulesyntax_1
-
                         Deprecated: Please do not use this field and rewrite the router rules to use the v3 syntax.
                       enum:
                       - v3
@@ -192,23 +163,19 @@ spec:
                   type: object
                 type: array
               tls:
-                description: >-
+                description: |-
                   TLS defines the TLS configuration on a layer 4 / TCP Route.
-
                   More info: https://doc.traefik.io/traefik/v3.5/routing/routers/#tls_1
                 properties:
                   certResolver:
-                    description: >-
+                    description: |-
                       CertResolver defines the name of the certificate resolver to use.
-
                       Cert resolvers have to be configured in the static configuration.
-
                       More info: https://doc.traefik.io/traefik/v3.5/https/acme/#certificate-resolvers
                     type: string
                   domains:
-                    description: >-
+                    description: |-
                       Domains defines the list of domains that will be used to issue certificates.
-
                       More info: https://doc.traefik.io/traefik/v3.5/routing/routers/#domains
                     items:
                       description: Domain holds a domain name with SANs.
@@ -224,11 +191,9 @@ spec:
                       type: object
                     type: array
                   options:
-                    description: >-
+                    description: |-
                       Options defines the reference to a TLSOption, that specifies the parameters of the TLS connection.
-
                       If not defined, the `default` TLSOption is used.
-
                       More info: https://doc.traefik.io/traefik/v3.5/https/tls/#tls-options
                     properties:
                       name:
@@ -247,9 +212,8 @@ spec:
                     description: SecretName is the name of the referenced Kubernetes Secret to specify the certificate details.
                     type: string
                   store:
-                    description: >-
+                    description: |-
                       Store defines the reference to the TLSStore, that will be used to store certificates.
-
                       Please note that only `default` TLSStore can be used.
                     properties:
                       name:

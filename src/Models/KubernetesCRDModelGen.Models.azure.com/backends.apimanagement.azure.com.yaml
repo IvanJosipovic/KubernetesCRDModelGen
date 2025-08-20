@@ -45,33 +45,24 @@ spec:
     name: v1api20220801
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/stable/2022-08-01/apimbackends.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/backends/{backendId}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -79,9 +70,8 @@ spec:
           spec:
             properties:
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 maxLength: 80
                 minLength: 1
@@ -139,41 +129,33 @@ spec:
                 minLength: 1
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -184,33 +166,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -220,11 +195,9 @@ spec:
                     type: array
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a apimanagement.azure.com/Service resource
                 properties:
                   armId:
@@ -244,9 +217,8 @@ spec:
                         description: 'ClientCertificateId: The client certificate id for the management endpoint.'
                         type: string
                       clientCertificatethumbprint:
-                        description: >-
+                        description: |-
                           ClientCertificatethumbprint: The client certificate thumbprint for the management endpoint. Will be ignored if
-
                           certificatesIds are provided
                         type: string
                       managementEndpoints:
@@ -295,9 +267,8 @@ spec:
                         description: Key is the key in the Kubernetes secret being referenced
                         type: string
                       name:
-                        description: >-
+                        description: |-
                           Name is the name of the Kubernetes secret being referenced.
-
                           The secret must be in the same namespace as the resource
                         type: string
                     required:
@@ -305,9 +276,8 @@ spec:
                     - name
                     type: object
                   url:
-                    description: >-
+                    description: |-
                       Url: WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all
-
                       fragments and query strings.
                     maxLength: 2000
                     minLength: 1
@@ -319,17 +289,14 @@ spec:
                 - url
                 type: object
               resourceReference:
-                description: >-
+                description: |-
                   ResourceReference: Management Uri of the Resource in External System. This URL can be the Arm Resource Id of Logic Apps,
-
                   Function Apps or API Apps.
                 properties:
                   armId:
-                    description: >-
+                    description: |-
                       ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                       The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                       ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
@@ -352,15 +319,13 @@ spec:
                 description: 'Tls: Backend TLS Properties'
                 properties:
                   validateCertificateChain:
-                    description: >-
+                    description: |-
                       ValidateCertificateChain: Flag indicating whether SSL certificate chain validation should be done when using self-signed
-
                       certificates for this backend host.
                     type: boolean
                   validateCertificateName:
-                    description: >-
+                    description: |-
                       ValidateCertificateName: Flag indicating whether SSL certificate name validation should be done when using self-signed
-
                       certificates for this backend host.
                     type: boolean
                 type: object
@@ -389,28 +354,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -468,9 +427,8 @@ spec:
                 description: 'Description: Backend Description.'
                 type: string
               id:
-                description: >-
+                description: |-
                   Id: Fully qualified resource ID for the resource. Ex -
-
                   /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                 type: string
               name:
@@ -486,9 +444,8 @@ spec:
                         description: 'ClientCertificateId: The client certificate id for the management endpoint.'
                         type: string
                       clientCertificatethumbprint:
-                        description: >-
+                        description: |-
                           ClientCertificatethumbprint: The client certificate thumbprint for the management endpoint. Will be ignored if
-
                           certificatesIds are provided
                         type: string
                       managementEndpoints:
@@ -526,9 +483,8 @@ spec:
                 description: 'Proxy: Backend gateway Contract Properties'
                 properties:
                   url:
-                    description: >-
+                    description: |-
                       Url: WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all
-
                       fragments and query strings.
                     type: string
                   username:
@@ -536,9 +492,8 @@ spec:
                     type: string
                 type: object
               resourceId:
-                description: >-
+                description: |-
                   ResourceId: Management Uri of the Resource in External System. This URL can be the Arm Resource Id of Logic Apps,
-
                   Function Apps or API Apps.
                 type: string
               title:
@@ -548,15 +503,13 @@ spec:
                 description: 'Tls: Backend TLS Properties'
                 properties:
                   validateCertificateChain:
-                    description: >-
+                    description: |-
                       ValidateCertificateChain: Flag indicating whether SSL certificate chain validation should be done when using self-signed
-
                       certificates for this backend host.
                     type: boolean
                   validateCertificateName:
-                    description: >-
+                    description: |-
                       ValidateCertificateName: Flag indicating whether SSL certificate name validation should be done when using self-signed
-
                       certificates for this backend host.
                     type: boolean
                 type: object
@@ -588,35 +541,25 @@ spec:
     name: v1api20220801storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20220801.Backend
-
           Generator information:
-
           - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/stable/2022-08-01/apimbackends.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/backends/{backendId}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -627,43 +570,37 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               credentials:
-                description: >-
+                description: |-
                   Storage version of v1api20220801.BackendCredentialsContract
-
                   Details of the Credentials used to connect to Backend.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   authorization:
-                    description: >-
+                    description: |-
                       Storage version of v1api20220801.BackendAuthorizationHeaderCredentials
-
                       Authorization header information.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       parameter:
@@ -695,48 +632,39 @@ spec:
               description:
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20220801.BackendOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -746,33 +674,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -784,11 +705,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a apimanagement.azure.com/Service resource
                 properties:
                   armId:
@@ -799,31 +718,27 @@ spec:
                     type: string
                 type: object
               properties:
-                description: >-
+                description: |-
                   Storage version of v1api20220801.BackendProperties
-
                   Properties specific to the Backend Type.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   serviceFabricCluster:
-                    description: >-
+                    description: |-
                       Storage version of v1api20220801.BackendServiceFabricClusterProperties
-
                       Properties of the Service Fabric Type Backend.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       clientCertificateId:
@@ -842,17 +757,15 @@ spec:
                         type: array
                       serverX509Names:
                         items:
-                          description: >-
+                          description: |-
                             Storage version of v1api20220801.X509CertificateName
-
                             Properties of server X509Names.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             issuerCertificateThumbprint:
@@ -866,32 +779,28 @@ spec:
               protocol:
                 type: string
               proxy:
-                description: >-
+                description: |-
                   Storage version of v1api20220801.BackendProxyContract
-
                   Details of the Backend WebProxy Server to use in the Request to Backend.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   password:
-                    description: >-
+                    description: |-
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                       the resource it is on.
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
                         type: string
                       name:
-                        description: >-
+                        description: |-
                           Name is the name of the Kubernetes secret being referenced.
-
                           The secret must be in the same namespace as the resource
                         type: string
                     required:
@@ -904,17 +813,14 @@ spec:
                     type: string
                 type: object
               resourceReference:
-                description: >-
+                description: |-
                   ResourceReference: Management Uri of the Resource in External System. This URL can be the Arm Resource Id of Logic Apps,
-
                   Function Apps or API Apps.
                 properties:
                   armId:
-                    description: >-
+                    description: |-
                       ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                       The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                       ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
@@ -931,17 +837,15 @@ spec:
               title:
                 type: string
               tls:
-                description: >-
+                description: |-
                   Storage version of v1api20220801.BackendTlsProperties
-
                   Properties controlling TLS Certificate Validation.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   validateCertificateChain:
@@ -960,9 +864,8 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               conditions:
@@ -977,28 +880,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -1015,31 +912,27 @@ spec:
                   type: object
                 type: array
               credentials:
-                description: >-
+                description: |-
                   Storage version of v1api20220801.BackendCredentialsContract_STATUS
-
                   Details of the Credentials used to connect to Backend.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   authorization:
-                    description: >-
+                    description: |-
                       Storage version of v1api20220801.BackendAuthorizationHeaderCredentials_STATUS
-
                       Authorization header information.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       parameter:
@@ -1075,31 +968,27 @@ spec:
               name:
                 type: string
               properties:
-                description: >-
+                description: |-
                   Storage version of v1api20220801.BackendProperties_STATUS
-
                   Properties specific to the Backend Type.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   serviceFabricCluster:
-                    description: >-
+                    description: |-
                       Storage version of v1api20220801.BackendServiceFabricClusterProperties_STATUS
-
                       Properties of the Service Fabric Type Backend.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       clientCertificateId:
@@ -1118,17 +1007,15 @@ spec:
                         type: array
                       serverX509Names:
                         items:
-                          description: >-
+                          description: |-
                             Storage version of v1api20220801.X509CertificateName_STATUS
-
                             Properties of server X509Names.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             issuerCertificateThumbprint:
@@ -1142,17 +1029,15 @@ spec:
               protocol:
                 type: string
               proxy:
-                description: >-
+                description: |-
                   Storage version of v1api20220801.BackendProxyContract_STATUS
-
                   Details of the Backend WebProxy Server to use in the Request to Backend.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   url:
@@ -1165,17 +1050,15 @@ spec:
               title:
                 type: string
               tls:
-                description: >-
+                description: |-
                   Storage version of v1api20220801.BackendTlsProperties_STATUS
-
                   Properties controlling TLS Certificate Validation.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   validateCertificateChain:
@@ -1209,33 +1092,24 @@ spec:
     name: v1api20230501preview
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/preview/2023-05-01-preview/apimbackends.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/backends/{backendId}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -1243,9 +1117,8 @@ spec:
           spec:
             properties:
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 maxLength: 80
                 minLength: 1
@@ -1359,41 +1232,33 @@ spec:
                 minLength: 1
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1404,33 +1269,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1440,11 +1298,9 @@ spec:
                     type: array
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a apimanagement.azure.com/Service resource
                 properties:
                   armId:
@@ -1466,11 +1322,9 @@ spec:
                           description: 'Reference: The unique ARM id of the backend entity. The ARM id should refer to an already existing backend entity.'
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -1500,9 +1354,8 @@ spec:
                         description: 'ClientCertificateId: The client certificate id for the management endpoint.'
                         type: string
                       clientCertificatethumbprint:
-                        description: >-
+                        description: |-
                           ClientCertificatethumbprint: The client certificate thumbprint for the management endpoint. Will be ignored if
-
                           certificatesIds are provided
                         type: string
                       managementEndpoints:
@@ -1551,9 +1404,8 @@ spec:
                         description: Key is the key in the Kubernetes secret being referenced
                         type: string
                       name:
-                        description: >-
+                        description: |-
                           Name is the name of the Kubernetes secret being referenced.
-
                           The secret must be in the same namespace as the resource
                         type: string
                     required:
@@ -1561,9 +1413,8 @@ spec:
                     - name
                     type: object
                   url:
-                    description: >-
+                    description: |-
                       Url: WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all
-
                       fragments and query strings.
                     maxLength: 2000
                     minLength: 1
@@ -1575,17 +1426,14 @@ spec:
                 - url
                 type: object
               resourceReference:
-                description: >-
+                description: |-
                   ResourceReference: Management Uri of the Resource in External System. This URL can be the Arm Resource Id of Logic Apps,
-
                   Function Apps or API Apps.
                 properties:
                   armId:
-                    description: >-
+                    description: |-
                       ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                       The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                       ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
@@ -1608,15 +1456,13 @@ spec:
                 description: 'Tls: Backend TLS Properties'
                 properties:
                   validateCertificateChain:
-                    description: >-
+                    description: |-
                       ValidateCertificateChain: Flag indicating whether SSL certificate chain validation should be done when using self-signed
-
                       certificates for this backend host.
                     type: boolean
                   validateCertificateName:
-                    description: >-
+                    description: |-
                       ValidateCertificateName: Flag indicating whether SSL certificate name validation should be done when using self-signed
-
                       certificates for this backend host.
                     type: boolean
                 type: object
@@ -1706,28 +1552,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -1785,9 +1625,8 @@ spec:
                 description: 'Description: Backend Description.'
                 type: string
               id:
-                description: >-
+                description: |-
                   Id: Fully qualified resource ID for the resource. Ex -
-
                   /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                 type: string
               name:
@@ -1819,9 +1658,8 @@ spec:
                         description: 'ClientCertificateId: The client certificate id for the management endpoint.'
                         type: string
                       clientCertificatethumbprint:
-                        description: >-
+                        description: |-
                           ClientCertificatethumbprint: The client certificate thumbprint for the management endpoint. Will be ignored if
-
                           certificatesIds are provided
                         type: string
                       managementEndpoints:
@@ -1862,9 +1700,8 @@ spec:
                 description: 'Proxy: Backend gateway Contract Properties'
                 properties:
                   url:
-                    description: >-
+                    description: |-
                       Url: WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all
-
                       fragments and query strings.
                     type: string
                   username:
@@ -1872,9 +1709,8 @@ spec:
                     type: string
                 type: object
               resourceId:
-                description: >-
+                description: |-
                   ResourceId: Management Uri of the Resource in External System. This URL can be the Arm Resource Id of Logic Apps,
-
                   Function Apps or API Apps.
                 type: string
               title:
@@ -1884,15 +1720,13 @@ spec:
                 description: 'Tls: Backend TLS Properties'
                 properties:
                   validateCertificateChain:
-                    description: >-
+                    description: |-
                       ValidateCertificateChain: Flag indicating whether SSL certificate chain validation should be done when using self-signed
-
                       certificates for this backend host.
                     type: boolean
                   validateCertificateName:
-                    description: >-
+                    description: |-
                       ValidateCertificateName: Flag indicating whether SSL certificate name validation should be done when using self-signed
-
                       certificates for this backend host.
                     type: boolean
                 type: object
@@ -1924,35 +1758,25 @@ spec:
     name: v1api20230501previewstorage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20230501preview.Backend
-
           Generator information:
-
           - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/preview/2023-05-01-preview/apimbackends.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/backends/{backendId}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -1963,58 +1787,50 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               circuitBreaker:
-                description: >-
+                description: |-
                   Storage version of v1api20230501preview.BackendCircuitBreaker
-
                   The configuration of the backend circuit breaker
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   rules:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20230501preview.CircuitBreakerRule
-
                         Rule configuration to trip the backend.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         failureCondition:
-                          description: >-
+                          description: |-
                             Storage version of v1api20230501preview.CircuitBreakerFailureCondition
-
                             The trip conditions of the circuit breaker
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             count:
@@ -2029,17 +1845,15 @@ spec:
                               type: integer
                             statusCodeRanges:
                               items:
-                                description: >-
+                                description: |-
                                   Storage version of v1api20230501preview.FailureStatusCodeRange
-
                                   The failure http status code range
                                 properties:
                                   $propertyBag:
                                     additionalProperties:
                                       type: string
-                                    description: >-
+                                    description: |-
                                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                       resources, allowing for full fidelity round trip conversions
                                     type: object
                                   max:
@@ -2057,31 +1871,27 @@ spec:
                     type: array
                 type: object
               credentials:
-                description: >-
+                description: |-
                   Storage version of v1api20230501preview.BackendCredentialsContract
-
                   Details of the Credentials used to connect to Backend.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   authorization:
-                    description: >-
+                    description: |-
                       Storage version of v1api20230501preview.BackendAuthorizationHeaderCredentials
-
                       Authorization header information.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       parameter:
@@ -2113,48 +1923,39 @@ spec:
               description:
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20230501preview.BackendOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -2164,33 +1965,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -2202,11 +1996,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a apimanagement.azure.com/Service resource
                 properties:
                   armId:
@@ -2217,43 +2009,37 @@ spec:
                     type: string
                 type: object
               pool:
-                description: >-
+                description: |-
                   Storage version of v1api20230501preview.BackendPool
-
                   Backend pool information
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   services:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20230501preview.BackendPoolItem
-
                         Backend pool service information
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
                           description: 'Reference: The unique ARM id of the backend entity. The ARM id should refer to an already existing backend entity.'
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -2273,31 +2059,27 @@ spec:
                     type: array
                 type: object
               properties:
-                description: >-
+                description: |-
                   Storage version of v1api20230501preview.BackendProperties
-
                   Properties specific to the Backend Type.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   serviceFabricCluster:
-                    description: >-
+                    description: |-
                       Storage version of v1api20230501preview.BackendServiceFabricClusterProperties
-
                       Properties of the Service Fabric Type Backend.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       clientCertificateId:
@@ -2316,17 +2098,15 @@ spec:
                         type: array
                       serverX509Names:
                         items:
-                          description: >-
+                          description: |-
                             Storage version of v1api20230501preview.X509CertificateName
-
                             Properties of server X509Names.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             issuerCertificateThumbprint:
@@ -2340,32 +2120,28 @@ spec:
               protocol:
                 type: string
               proxy:
-                description: >-
+                description: |-
                   Storage version of v1api20230501preview.BackendProxyContract
-
                   Details of the Backend WebProxy Server to use in the Request to Backend.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   password:
-                    description: >-
+                    description: |-
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                       the resource it is on.
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
                         type: string
                       name:
-                        description: >-
+                        description: |-
                           Name is the name of the Kubernetes secret being referenced.
-
                           The secret must be in the same namespace as the resource
                         type: string
                     required:
@@ -2378,17 +2154,14 @@ spec:
                     type: string
                 type: object
               resourceReference:
-                description: >-
+                description: |-
                   ResourceReference: Management Uri of the Resource in External System. This URL can be the Arm Resource Id of Logic Apps,
-
                   Function Apps or API Apps.
                 properties:
                   armId:
-                    description: >-
+                    description: |-
                       ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                       The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                       ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
@@ -2405,17 +2178,15 @@ spec:
               title:
                 type: string
               tls:
-                description: >-
+                description: |-
                   Storage version of v1api20230501preview.BackendTlsProperties
-
                   Properties controlling TLS Certificate Validation.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   validateCertificateChain:
@@ -2436,52 +2207,45 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               circuitBreaker:
-                description: >-
+                description: |-
                   Storage version of v1api20230501preview.BackendCircuitBreaker_STATUS
-
                   The configuration of the backend circuit breaker
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   rules:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20230501preview.CircuitBreakerRule_STATUS
-
                         Rule configuration to trip the backend.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         failureCondition:
-                          description: >-
+                          description: |-
                             Storage version of v1api20230501preview.CircuitBreakerFailureCondition_STATUS
-
                             The trip conditions of the circuit breaker
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             count:
@@ -2496,17 +2260,15 @@ spec:
                               type: integer
                             statusCodeRanges:
                               items:
-                                description: >-
+                                description: |-
                                   Storage version of v1api20230501preview.FailureStatusCodeRange_STATUS
-
                                   The failure http status code range
                                 properties:
                                   $propertyBag:
                                     additionalProperties:
                                       type: string
-                                    description: >-
+                                    description: |-
                                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                       resources, allowing for full fidelity round trip conversions
                                     type: object
                                   max:
@@ -2535,28 +2297,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -2573,31 +2329,27 @@ spec:
                   type: object
                 type: array
               credentials:
-                description: >-
+                description: |-
                   Storage version of v1api20230501preview.BackendCredentialsContract_STATUS
-
                   Details of the Credentials used to connect to Backend.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   authorization:
-                    description: >-
+                    description: |-
                       Storage version of v1api20230501preview.BackendAuthorizationHeaderCredentials_STATUS
-
                       Authorization header information.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       parameter:
@@ -2633,32 +2385,28 @@ spec:
               name:
                 type: string
               pool:
-                description: >-
+                description: |-
                   Storage version of v1api20230501preview.BackendPool_STATUS
-
                   Backend pool information
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   services:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20230501preview.BackendPoolItem_STATUS
-
                         Backend pool service information
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         id:
@@ -2667,31 +2415,27 @@ spec:
                     type: array
                 type: object
               properties:
-                description: >-
+                description: |-
                   Storage version of v1api20230501preview.BackendProperties_STATUS
-
                   Properties specific to the Backend Type.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   serviceFabricCluster:
-                    description: >-
+                    description: |-
                       Storage version of v1api20230501preview.BackendServiceFabricClusterProperties_STATUS
-
                       Properties of the Service Fabric Type Backend.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       clientCertificateId:
@@ -2710,17 +2454,15 @@ spec:
                         type: array
                       serverX509Names:
                         items:
-                          description: >-
+                          description: |-
                             Storage version of v1api20230501preview.X509CertificateName_STATUS
-
                             Properties of server X509Names.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             issuerCertificateThumbprint:
@@ -2736,17 +2478,15 @@ spec:
               protocol:
                 type: string
               proxy:
-                description: >-
+                description: |-
                   Storage version of v1api20230501preview.BackendProxyContract_STATUS
-
                   Details of the Backend WebProxy Server to use in the Request to Backend.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   url:
@@ -2759,17 +2499,15 @@ spec:
               title:
                 type: string
               tls:
-                description: >-
+                description: |-
                   Storage version of v1api20230501preview.BackendTlsProperties_STATUS
-
                   Properties controlling TLS Certificate Validation.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   validateCertificateChain:

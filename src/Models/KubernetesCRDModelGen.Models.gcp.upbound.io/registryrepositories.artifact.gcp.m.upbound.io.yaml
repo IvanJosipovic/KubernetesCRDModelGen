@@ -36,25 +36,18 @@ spec:
         description: RegistryRepository is the Schema for the RegistryRepositorys API. A repository for storing artifacts
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -65,28 +58,22 @@ spec:
               forProvider:
                 properties:
                   cleanupPolicies:
-                    description: >-
+                    description: |-
                       Cleanup policies for this repository. Cleanup policies indicate when
-
                       certain package versions can be automatically deleted.
-
                       Map keys are policy IDs supplied by users during policy creation. They must
-
                       unique within a repository and be under 128 characters in length.
-
                       Structure is documented below.
                     items:
                       properties:
                         action:
-                          description: >-
+                          description: |-
                             Policy action.
-
                             Possible values are: DELETE, KEEP.
                           type: string
                         condition:
-                          description: >-
+                          description: |-
                             Policy condition for matching versions.
-
                             Structure is documented below.
                           properties:
                             newerThan:
@@ -106,11 +93,9 @@ spec:
                                 type: string
                               type: array
                             tagState:
-                              description: >-
+                              description: |-
                                 Match versions by tag status.
-
                                 Default value is ANY.
-
                                 Possible values are: TAGGED, UNTAGGED, ANY.
                               type: string
                             versionNamePrefixes:
@@ -123,11 +108,9 @@ spec:
                           description: The identifier for this object. Format specified above.
                           type: string
                         mostRecentVersions:
-                          description: >-
+                          description: |-
                             Policy condition for retaining a minimum number of versions. May only be
-
                             specified with a Keep action.
-
                             Structure is documented below.
                           properties:
                             keepCount:
@@ -142,18 +125,16 @@ spec:
                       type: object
                     type: array
                   cleanupPolicyDryRun:
-                    description: >-
+                    description: |-
                       If true, the cleanup pipeline is prevented from deleting versions in this
-
                       repository.
                     type: boolean
                   description:
                     description: The user-provided description of the repository.
                     type: string
                   dockerConfig:
-                    description: >-
+                    description: |-
                       Docker repository config contains repository level configuration for the repositories of docker type.
-
                       Structure is documented below.
                     properties:
                       immutableTags:
@@ -161,115 +142,87 @@ spec:
                         type: boolean
                     type: object
                   format:
-                    description: >-
+                    description: |-
                       The format of packages that are stored in the repository. Supported formats
-
                       can be found here.
-
                       You can only create alpha formats if you are a member of the
-
                       alpha user group.
                     type: string
                   kmsKeyName:
-                    description: >-
+                    description: |-
                       The Cloud KMS resource name of the customer managed encryption key that’s
-
                       used to encrypt the contents of the Repository. Has the form:
-
                       projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key.
-
                       This value may not be changed after the Repository has been created.
                     type: string
                   labels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Labels with user-defined metadata.
-
                       This field may contain up to 64 entries. Label keys and values may be no
-
                       longer than 63 characters. Label keys must begin with a lowercase letter
-
                       and may only contain lowercase letters, numeric characters, underscores,
-
                       and dashes.
                     type: object
                     x-kubernetes-map-type: granular
                   location:
-                    description: >-
+                    description: |-
                       The name of the repository's location. In addition to specific regions,
-
                       special values for multi-region locations are asia, europe, and us.
-
                       See here,
-
                       or use the
-
                       google_artifact_registry_locations
-
                       data source for possible values.
                     type: string
                   mavenConfig:
-                    description: >-
+                    description: |-
                       MavenRepositoryConfig is maven related repository details.
-
                       Provides additional configuration details for repositories of the maven
-
                       format type.
-
                       Structure is documented below.
                     properties:
                       allowSnapshotOverwrites:
-                        description: >-
+                        description: |-
                           The repository with this flag will allow publishing the same
-
                           snapshot versions.
                         type: boolean
                       versionPolicy:
-                        description: >-
+                        description: |-
                           Version policy defines the versions that the registry will accept.
-
                           Default value is VERSION_POLICY_UNSPECIFIED.
-
                           Possible values are: VERSION_POLICY_UNSPECIFIED, RELEASE, SNAPSHOT.
                         type: string
                     type: object
                   mode:
-                    description: >-
+                    description: |-
                       The mode configures the repository to serve artifacts from different sources.
-
                       Default value is STANDARD_REPOSITORY.
-
                       Possible values are: STANDARD_REPOSITORY, VIRTUAL_REPOSITORY, REMOTE_REPOSITORY.
                     type: string
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   remoteRepositoryConfig:
-                    description: >-
+                    description: |-
                       Configuration specific for a Remote Repository.
-
                       Structure is documented below.
                     properties:
                       aptRepository:
-                        description: >-
+                        description: |-
                           Specific settings for an Apt remote repository.
-
                           Structure is documented below.
                         properties:
                           publicRepository:
-                            description: >-
+                            description: |-
                               One of the publicly available Yum repositories supported by Artifact Registry.
-
                               Structure is documented below.
                             properties:
                               repositoryBase:
-                                description: >-
+                                description: |-
                                   A common public repository base for Yum.
-
                                   Possible values are: CENTOS, CENTOS_DEBUG, CENTOS_VAULT, CENTOS_STREAM, ROCKY, EPEL.
                                 type: string
                               repositoryPath:
@@ -278,9 +231,8 @@ spec:
                             type: object
                         type: object
                       commonRepository:
-                        description: >-
+                        description: |-
                           Specific settings for an Artifact Registory remote repository.
-
                           Structure is documented below.
                         properties:
                           uri:
@@ -300,26 +252,20 @@ spec:
                                 properties:
                                   resolution:
                                     default: Required
-                                    description: >-
+                                    description: |-
                                       Resolution specifies whether resolution of this reference is required.
-
                                       The default is 'Required', which means the reconcile will fail if the
-
                                       reference cannot be resolved. 'Optional' means this reference will be
-
                                       a no-op if it cannot be resolved.
                                     enum:
                                     - Required
                                     - Optional
                                     type: string
                                   resolve:
-                                    description: >-
+                                    description: |-
                                       Resolve specifies when this reference should be resolved. The default
-
                                       is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                       the corresponding field is not present. Use 'Always' to resolve the
-
                                       reference on every reconcile.
                                     enum:
                                     - Always
@@ -333,9 +279,8 @@ spec:
                             description: Selector for a RegistryRepository in artifact to populate uri.
                             properties:
                               matchControllerRef:
-                                description: >-
+                                description: |-
                                   MatchControllerRef ensures an object with the same controller reference
-
                                   as the selecting object is selected.
                                 type: boolean
                               matchLabels:
@@ -351,26 +296,20 @@ spec:
                                 properties:
                                   resolution:
                                     default: Required
-                                    description: >-
+                                    description: |-
                                       Resolution specifies whether resolution of this reference is required.
-
                                       The default is 'Required', which means the reconcile will fail if the
-
                                       reference cannot be resolved. 'Optional' means this reference will be
-
                                       a no-op if it cannot be resolved.
                                     enum:
                                     - Required
                                     - Optional
                                     type: string
                                   resolve:
-                                    description: >-
+                                    description: |-
                                       Resolve specifies when this reference should be resolved. The default
-
                                       is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                       the corresponding field is not present. Use 'Always' to resolve the
-
                                       reference on every reconcile.
                                     enum:
                                     - Always
@@ -383,21 +322,18 @@ spec:
                         description: The description of the remote source.
                         type: string
                       disableUpstreamValidation:
-                        description: >-
+                        description: |-
                           If true, the remote repository upstream and upstream credentials will
-
                           not be validated.
                         type: boolean
                       dockerRepository:
-                        description: >-
+                        description: |-
                           Specific settings for a Docker remote repository.
-
                           Structure is documented below.
                         properties:
                           customRepository:
-                            description: >-
+                            description: |-
                               [Deprecated, please use commonRepository instead] Settings for a remote repository with a custom uri.
-
                               Structure is documented below.
                             properties:
                               uri:
@@ -405,22 +341,19 @@ spec:
                                 type: string
                             type: object
                           publicRepository:
-                            description: >-
+                            description: |-
                               One of the publicly available Yum repositories supported by Artifact Registry.
-
                               Structure is documented below.
                             type: string
                         type: object
                       mavenRepository:
-                        description: >-
+                        description: |-
                           Specific settings for a Maven remote repository.
-
                           Structure is documented below.
                         properties:
                           customRepository:
-                            description: >-
+                            description: |-
                               [Deprecated, please use commonRepository instead] Settings for a remote repository with a custom uri.
-
                               Structure is documented below.
                             properties:
                               uri:
@@ -428,22 +361,19 @@ spec:
                                 type: string
                             type: object
                           publicRepository:
-                            description: >-
+                            description: |-
                               One of the publicly available Yum repositories supported by Artifact Registry.
-
                               Structure is documented below.
                             type: string
                         type: object
                       npmRepository:
-                        description: >-
+                        description: |-
                           Specific settings for an Npm remote repository.
-
                           Structure is documented below.
                         properties:
                           customRepository:
-                            description: >-
+                            description: |-
                               [Deprecated, please use commonRepository instead] Settings for a remote repository with a custom uri.
-
                               Structure is documented below.
                             properties:
                               uri:
@@ -451,22 +381,19 @@ spec:
                                 type: string
                             type: object
                           publicRepository:
-                            description: >-
+                            description: |-
                               One of the publicly available Yum repositories supported by Artifact Registry.
-
                               Structure is documented below.
                             type: string
                         type: object
                       pythonRepository:
-                        description: >-
+                        description: |-
                           Specific settings for a Python remote repository.
-
                           Structure is documented below.
                         properties:
                           customRepository:
-                            description: >-
+                            description: |-
                               [Deprecated, please use commonRepository instead] Settings for a remote repository with a custom uri.
-
                               Structure is documented below.
                             properties:
                               uri:
@@ -474,30 +401,25 @@ spec:
                                 type: string
                             type: object
                           publicRepository:
-                            description: >-
+                            description: |-
                               One of the publicly available Yum repositories supported by Artifact Registry.
-
                               Structure is documented below.
                             type: string
                         type: object
                       upstreamCredentials:
-                        description: >-
+                        description: |-
                           The credentials used to access the remote repository.
-
                           Structure is documented below.
                         properties:
                           usernamePasswordCredentials:
-                            description: >-
+                            description: |-
                               Use username and password to access the remote repository.
-
                               Structure is documented below.
                             properties:
                               passwordSecretVersion:
-                                description: >-
+                                description: |-
                                   The Secret Manager key version that holds the password to access the
-
                                   remote repository. Must be in the format of
-
                                   projects/{project}/secrets/{secret}/versions/{version}.
                                 type: string
                               passwordSecretVersionRef:
@@ -514,26 +436,20 @@ spec:
                                     properties:
                                       resolution:
                                         default: Required
-                                        description: >-
+                                        description: |-
                                           Resolution specifies whether resolution of this reference is required.
-
                                           The default is 'Required', which means the reconcile will fail if the
-
                                           reference cannot be resolved. 'Optional' means this reference will be
-
                                           a no-op if it cannot be resolved.
                                         enum:
                                         - Required
                                         - Optional
                                         type: string
                                       resolve:
-                                        description: >-
+                                        description: |-
                                           Resolve specifies when this reference should be resolved. The default
-
                                           is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                           the corresponding field is not present. Use 'Always' to resolve the
-
                                           reference on every reconcile.
                                         enum:
                                         - Always
@@ -547,9 +463,8 @@ spec:
                                 description: Selector for a SecretVersion in secretmanager to populate passwordSecretVersion.
                                 properties:
                                   matchControllerRef:
-                                    description: >-
+                                    description: |-
                                       MatchControllerRef ensures an object with the same controller reference
-
                                       as the selecting object is selected.
                                     type: boolean
                                   matchLabels:
@@ -565,26 +480,20 @@ spec:
                                     properties:
                                       resolution:
                                         default: Required
-                                        description: >-
+                                        description: |-
                                           Resolution specifies whether resolution of this reference is required.
-
                                           The default is 'Required', which means the reconcile will fail if the
-
                                           reference cannot be resolved. 'Optional' means this reference will be
-
                                           a no-op if it cannot be resolved.
                                         enum:
                                         - Required
                                         - Optional
                                         type: string
                                       resolve:
-                                        description: >-
+                                        description: |-
                                           Resolve specifies when this reference should be resolved. The default
-
                                           is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                           the corresponding field is not present. Use 'Always' to resolve the
-
                                           reference on every reconcile.
                                         enum:
                                         - Always
@@ -598,21 +507,18 @@ spec:
                             type: object
                         type: object
                       yumRepository:
-                        description: >-
+                        description: |-
                           Specific settings for an Yum remote repository.
-
                           Structure is documented below.
                         properties:
                           publicRepository:
-                            description: >-
+                            description: |-
                               One of the publicly available Yum repositories supported by Artifact Registry.
-
                               Structure is documented below.
                             properties:
                               repositoryBase:
-                                description: >-
+                                description: |-
                                   A common public repository base for Yum.
-
                                   Possible values are: CENTOS, CENTOS_DEBUG, CENTOS_VAULT, CENTOS_STREAM, ROCKY, EPEL.
                                 type: string
                               repositoryPath:
@@ -622,17 +528,14 @@ spec:
                         type: object
                     type: object
                   virtualRepositoryConfig:
-                    description: >-
+                    description: |-
                       Configuration specific for a Virtual Repository.
-
                       Structure is documented below.
                     properties:
                       upstreamPolicies:
-                        description: >-
+                        description: |-
                           Policies that configure the upstream artifacts distributed by the Virtual
-
                           Repository. Upstream policies cannot be set on a standard repository.
-
                           Structure is documented below.
                         items:
                           properties:
@@ -643,9 +546,8 @@ spec:
                               description: Entries with a greater priority value take precedence in the pull order.
                               type: number
                             repository:
-                              description: >-
+                              description: |-
                                 A reference to the repository resource, for example:
-
                                 "projects/p1/locations/us-central1/repository/repo1".
                               type: string
                             repositoryRef:
@@ -662,26 +564,20 @@ spec:
                                   properties:
                                     resolution:
                                       default: Required
-                                      description: >-
+                                      description: |-
                                         Resolution specifies whether resolution of this reference is required.
-
                                         The default is 'Required', which means the reconcile will fail if the
-
                                         reference cannot be resolved. 'Optional' means this reference will be
-
                                         a no-op if it cannot be resolved.
                                       enum:
                                       - Required
                                       - Optional
                                       type: string
                                     resolve:
-                                      description: >-
+                                      description: |-
                                         Resolve specifies when this reference should be resolved. The default
-
                                         is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                         the corresponding field is not present. Use 'Always' to resolve the
-
                                         reference on every reconcile.
                                       enum:
                                       - Always
@@ -695,9 +591,8 @@ spec:
                               description: Selector for a RegistryRepository in artifact to populate repository.
                               properties:
                                 matchControllerRef:
-                                  description: >-
+                                  description: |-
                                     MatchControllerRef ensures an object with the same controller reference
-
                                     as the selecting object is selected.
                                   type: boolean
                                 matchLabels:
@@ -713,26 +608,20 @@ spec:
                                   properties:
                                     resolution:
                                       default: Required
-                                      description: >-
+                                      description: |-
                                         Resolution specifies whether resolution of this reference is required.
-
                                         The default is 'Required', which means the reconcile will fail if the
-
                                         reference cannot be resolved. 'Optional' means this reference will be
-
                                         a no-op if it cannot be resolved.
                                       enum:
                                       - Required
                                       - Optional
                                       type: string
                                     resolve:
-                                      description: >-
+                                      description: |-
                                         Resolve specifies when this reference should be resolved. The default
-
                                         is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                         the corresponding field is not present. Use 'Always' to resolve the
-
                                         reference on every reconcile.
                                       enum:
                                       - Always
@@ -744,64 +633,47 @@ spec:
                         type: array
                     type: object
                   vulnerabilityScanningConfig:
-                    description: >-
+                    description: |-
                       Configuration for vulnerability scanning of artifacts stored in this repository.
-
                       Structure is documented below.
                     properties:
                       enablementConfig:
-                        description: >-
+                        description: |-
                           This configures whether vulnerability scanning is automatically performed for artifacts pushed to this repository.
-
                           Possible values are: INHERITED, DISABLED.
                         type: string
                     type: object
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   cleanupPolicies:
-                    description: >-
+                    description: |-
                       Cleanup policies for this repository. Cleanup policies indicate when
-
                       certain package versions can be automatically deleted.
-
                       Map keys are policy IDs supplied by users during policy creation. They must
-
                       unique within a repository and be under 128 characters in length.
-
                       Structure is documented below.
                     items:
                       properties:
                         action:
-                          description: >-
+                          description: |-
                             Policy action.
-
                             Possible values are: DELETE, KEEP.
                           type: string
                         condition:
-                          description: >-
+                          description: |-
                             Policy condition for matching versions.
-
                             Structure is documented below.
                           properties:
                             newerThan:
@@ -821,11 +693,9 @@ spec:
                                 type: string
                               type: array
                             tagState:
-                              description: >-
+                              description: |-
                                 Match versions by tag status.
-
                                 Default value is ANY.
-
                                 Possible values are: TAGGED, UNTAGGED, ANY.
                               type: string
                             versionNamePrefixes:
@@ -838,11 +708,9 @@ spec:
                           description: The identifier for this object. Format specified above.
                           type: string
                         mostRecentVersions:
-                          description: >-
+                          description: |-
                             Policy condition for retaining a minimum number of versions. May only be
-
                             specified with a Keep action.
-
                             Structure is documented below.
                           properties:
                             keepCount:
@@ -857,18 +725,16 @@ spec:
                       type: object
                     type: array
                   cleanupPolicyDryRun:
-                    description: >-
+                    description: |-
                       If true, the cleanup pipeline is prevented from deleting versions in this
-
                       repository.
                     type: boolean
                   description:
                     description: The user-provided description of the repository.
                     type: string
                   dockerConfig:
-                    description: >-
+                    description: |-
                       Docker repository config contains repository level configuration for the repositories of docker type.
-
                       Structure is documented below.
                     properties:
                       immutableTags:
@@ -876,101 +742,78 @@ spec:
                         type: boolean
                     type: object
                   format:
-                    description: >-
+                    description: |-
                       The format of packages that are stored in the repository. Supported formats
-
                       can be found here.
-
                       You can only create alpha formats if you are a member of the
-
                       alpha user group.
                     type: string
                   kmsKeyName:
-                    description: >-
+                    description: |-
                       The Cloud KMS resource name of the customer managed encryption key that’s
-
                       used to encrypt the contents of the Repository. Has the form:
-
                       projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key.
-
                       This value may not be changed after the Repository has been created.
                     type: string
                   labels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Labels with user-defined metadata.
-
                       This field may contain up to 64 entries. Label keys and values may be no
-
                       longer than 63 characters. Label keys must begin with a lowercase letter
-
                       and may only contain lowercase letters, numeric characters, underscores,
-
                       and dashes.
                     type: object
                     x-kubernetes-map-type: granular
                   mavenConfig:
-                    description: >-
+                    description: |-
                       MavenRepositoryConfig is maven related repository details.
-
                       Provides additional configuration details for repositories of the maven
-
                       format type.
-
                       Structure is documented below.
                     properties:
                       allowSnapshotOverwrites:
-                        description: >-
+                        description: |-
                           The repository with this flag will allow publishing the same
-
                           snapshot versions.
                         type: boolean
                       versionPolicy:
-                        description: >-
+                        description: |-
                           Version policy defines the versions that the registry will accept.
-
                           Default value is VERSION_POLICY_UNSPECIFIED.
-
                           Possible values are: VERSION_POLICY_UNSPECIFIED, RELEASE, SNAPSHOT.
                         type: string
                     type: object
                   mode:
-                    description: >-
+                    description: |-
                       The mode configures the repository to serve artifacts from different sources.
-
                       Default value is STANDARD_REPOSITORY.
-
                       Possible values are: STANDARD_REPOSITORY, VIRTUAL_REPOSITORY, REMOTE_REPOSITORY.
                     type: string
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   remoteRepositoryConfig:
-                    description: >-
+                    description: |-
                       Configuration specific for a Remote Repository.
-
                       Structure is documented below.
                     properties:
                       aptRepository:
-                        description: >-
+                        description: |-
                           Specific settings for an Apt remote repository.
-
                           Structure is documented below.
                         properties:
                           publicRepository:
-                            description: >-
+                            description: |-
                               One of the publicly available Yum repositories supported by Artifact Registry.
-
                               Structure is documented below.
                             properties:
                               repositoryBase:
-                                description: >-
+                                description: |-
                                   A common public repository base for Yum.
-
                                   Possible values are: CENTOS, CENTOS_DEBUG, CENTOS_VAULT, CENTOS_STREAM, ROCKY, EPEL.
                                 type: string
                               repositoryPath:
@@ -979,9 +822,8 @@ spec:
                             type: object
                         type: object
                       commonRepository:
-                        description: >-
+                        description: |-
                           Specific settings for an Artifact Registory remote repository.
-
                           Structure is documented below.
                         properties:
                           uri:
@@ -1001,26 +843,20 @@ spec:
                                 properties:
                                   resolution:
                                     default: Required
-                                    description: >-
+                                    description: |-
                                       Resolution specifies whether resolution of this reference is required.
-
                                       The default is 'Required', which means the reconcile will fail if the
-
                                       reference cannot be resolved. 'Optional' means this reference will be
-
                                       a no-op if it cannot be resolved.
                                     enum:
                                     - Required
                                     - Optional
                                     type: string
                                   resolve:
-                                    description: >-
+                                    description: |-
                                       Resolve specifies when this reference should be resolved. The default
-
                                       is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                       the corresponding field is not present. Use 'Always' to resolve the
-
                                       reference on every reconcile.
                                     enum:
                                     - Always
@@ -1034,9 +870,8 @@ spec:
                             description: Selector for a RegistryRepository in artifact to populate uri.
                             properties:
                               matchControllerRef:
-                                description: >-
+                                description: |-
                                   MatchControllerRef ensures an object with the same controller reference
-
                                   as the selecting object is selected.
                                 type: boolean
                               matchLabels:
@@ -1052,26 +887,20 @@ spec:
                                 properties:
                                   resolution:
                                     default: Required
-                                    description: >-
+                                    description: |-
                                       Resolution specifies whether resolution of this reference is required.
-
                                       The default is 'Required', which means the reconcile will fail if the
-
                                       reference cannot be resolved. 'Optional' means this reference will be
-
                                       a no-op if it cannot be resolved.
                                     enum:
                                     - Required
                                     - Optional
                                     type: string
                                   resolve:
-                                    description: >-
+                                    description: |-
                                       Resolve specifies when this reference should be resolved. The default
-
                                       is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                       the corresponding field is not present. Use 'Always' to resolve the
-
                                       reference on every reconcile.
                                     enum:
                                     - Always
@@ -1084,21 +913,18 @@ spec:
                         description: The description of the remote source.
                         type: string
                       disableUpstreamValidation:
-                        description: >-
+                        description: |-
                           If true, the remote repository upstream and upstream credentials will
-
                           not be validated.
                         type: boolean
                       dockerRepository:
-                        description: >-
+                        description: |-
                           Specific settings for a Docker remote repository.
-
                           Structure is documented below.
                         properties:
                           customRepository:
-                            description: >-
+                            description: |-
                               [Deprecated, please use commonRepository instead] Settings for a remote repository with a custom uri.
-
                               Structure is documented below.
                             properties:
                               uri:
@@ -1106,22 +932,19 @@ spec:
                                 type: string
                             type: object
                           publicRepository:
-                            description: >-
+                            description: |-
                               One of the publicly available Yum repositories supported by Artifact Registry.
-
                               Structure is documented below.
                             type: string
                         type: object
                       mavenRepository:
-                        description: >-
+                        description: |-
                           Specific settings for a Maven remote repository.
-
                           Structure is documented below.
                         properties:
                           customRepository:
-                            description: >-
+                            description: |-
                               [Deprecated, please use commonRepository instead] Settings for a remote repository with a custom uri.
-
                               Structure is documented below.
                             properties:
                               uri:
@@ -1129,22 +952,19 @@ spec:
                                 type: string
                             type: object
                           publicRepository:
-                            description: >-
+                            description: |-
                               One of the publicly available Yum repositories supported by Artifact Registry.
-
                               Structure is documented below.
                             type: string
                         type: object
                       npmRepository:
-                        description: >-
+                        description: |-
                           Specific settings for an Npm remote repository.
-
                           Structure is documented below.
                         properties:
                           customRepository:
-                            description: >-
+                            description: |-
                               [Deprecated, please use commonRepository instead] Settings for a remote repository with a custom uri.
-
                               Structure is documented below.
                             properties:
                               uri:
@@ -1152,22 +972,19 @@ spec:
                                 type: string
                             type: object
                           publicRepository:
-                            description: >-
+                            description: |-
                               One of the publicly available Yum repositories supported by Artifact Registry.
-
                               Structure is documented below.
                             type: string
                         type: object
                       pythonRepository:
-                        description: >-
+                        description: |-
                           Specific settings for a Python remote repository.
-
                           Structure is documented below.
                         properties:
                           customRepository:
-                            description: >-
+                            description: |-
                               [Deprecated, please use commonRepository instead] Settings for a remote repository with a custom uri.
-
                               Structure is documented below.
                             properties:
                               uri:
@@ -1175,30 +992,25 @@ spec:
                                 type: string
                             type: object
                           publicRepository:
-                            description: >-
+                            description: |-
                               One of the publicly available Yum repositories supported by Artifact Registry.
-
                               Structure is documented below.
                             type: string
                         type: object
                       upstreamCredentials:
-                        description: >-
+                        description: |-
                           The credentials used to access the remote repository.
-
                           Structure is documented below.
                         properties:
                           usernamePasswordCredentials:
-                            description: >-
+                            description: |-
                               Use username and password to access the remote repository.
-
                               Structure is documented below.
                             properties:
                               passwordSecretVersion:
-                                description: >-
+                                description: |-
                                   The Secret Manager key version that holds the password to access the
-
                                   remote repository. Must be in the format of
-
                                   projects/{project}/secrets/{secret}/versions/{version}.
                                 type: string
                               passwordSecretVersionRef:
@@ -1215,26 +1027,20 @@ spec:
                                     properties:
                                       resolution:
                                         default: Required
-                                        description: >-
+                                        description: |-
                                           Resolution specifies whether resolution of this reference is required.
-
                                           The default is 'Required', which means the reconcile will fail if the
-
                                           reference cannot be resolved. 'Optional' means this reference will be
-
                                           a no-op if it cannot be resolved.
                                         enum:
                                         - Required
                                         - Optional
                                         type: string
                                       resolve:
-                                        description: >-
+                                        description: |-
                                           Resolve specifies when this reference should be resolved. The default
-
                                           is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                           the corresponding field is not present. Use 'Always' to resolve the
-
                                           reference on every reconcile.
                                         enum:
                                         - Always
@@ -1248,9 +1054,8 @@ spec:
                                 description: Selector for a SecretVersion in secretmanager to populate passwordSecretVersion.
                                 properties:
                                   matchControllerRef:
-                                    description: >-
+                                    description: |-
                                       MatchControllerRef ensures an object with the same controller reference
-
                                       as the selecting object is selected.
                                     type: boolean
                                   matchLabels:
@@ -1266,26 +1071,20 @@ spec:
                                     properties:
                                       resolution:
                                         default: Required
-                                        description: >-
+                                        description: |-
                                           Resolution specifies whether resolution of this reference is required.
-
                                           The default is 'Required', which means the reconcile will fail if the
-
                                           reference cannot be resolved. 'Optional' means this reference will be
-
                                           a no-op if it cannot be resolved.
                                         enum:
                                         - Required
                                         - Optional
                                         type: string
                                       resolve:
-                                        description: >-
+                                        description: |-
                                           Resolve specifies when this reference should be resolved. The default
-
                                           is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                           the corresponding field is not present. Use 'Always' to resolve the
-
                                           reference on every reconcile.
                                         enum:
                                         - Always
@@ -1299,21 +1098,18 @@ spec:
                             type: object
                         type: object
                       yumRepository:
-                        description: >-
+                        description: |-
                           Specific settings for an Yum remote repository.
-
                           Structure is documented below.
                         properties:
                           publicRepository:
-                            description: >-
+                            description: |-
                               One of the publicly available Yum repositories supported by Artifact Registry.
-
                               Structure is documented below.
                             properties:
                               repositoryBase:
-                                description: >-
+                                description: |-
                                   A common public repository base for Yum.
-
                                   Possible values are: CENTOS, CENTOS_DEBUG, CENTOS_VAULT, CENTOS_STREAM, ROCKY, EPEL.
                                 type: string
                               repositoryPath:
@@ -1323,17 +1119,14 @@ spec:
                         type: object
                     type: object
                   virtualRepositoryConfig:
-                    description: >-
+                    description: |-
                       Configuration specific for a Virtual Repository.
-
                       Structure is documented below.
                     properties:
                       upstreamPolicies:
-                        description: >-
+                        description: |-
                           Policies that configure the upstream artifacts distributed by the Virtual
-
                           Repository. Upstream policies cannot be set on a standard repository.
-
                           Structure is documented below.
                         items:
                           properties:
@@ -1344,9 +1137,8 @@ spec:
                               description: Entries with a greater priority value take precedence in the pull order.
                               type: number
                             repository:
-                              description: >-
+                              description: |-
                                 A reference to the repository resource, for example:
-
                                 "projects/p1/locations/us-central1/repository/repo1".
                               type: string
                             repositoryRef:
@@ -1363,26 +1155,20 @@ spec:
                                   properties:
                                     resolution:
                                       default: Required
-                                      description: >-
+                                      description: |-
                                         Resolution specifies whether resolution of this reference is required.
-
                                         The default is 'Required', which means the reconcile will fail if the
-
                                         reference cannot be resolved. 'Optional' means this reference will be
-
                                         a no-op if it cannot be resolved.
                                       enum:
                                       - Required
                                       - Optional
                                       type: string
                                     resolve:
-                                      description: >-
+                                      description: |-
                                         Resolve specifies when this reference should be resolved. The default
-
                                         is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                         the corresponding field is not present. Use 'Always' to resolve the
-
                                         reference on every reconcile.
                                       enum:
                                       - Always
@@ -1396,9 +1182,8 @@ spec:
                               description: Selector for a RegistryRepository in artifact to populate repository.
                               properties:
                                 matchControllerRef:
-                                  description: >-
+                                  description: |-
                                     MatchControllerRef ensures an object with the same controller reference
-
                                     as the selecting object is selected.
                                   type: boolean
                                 matchLabels:
@@ -1414,26 +1199,20 @@ spec:
                                   properties:
                                     resolution:
                                       default: Required
-                                      description: >-
+                                      description: |-
                                         Resolution specifies whether resolution of this reference is required.
-
                                         The default is 'Required', which means the reconcile will fail if the
-
                                         reference cannot be resolved. 'Optional' means this reference will be
-
                                         a no-op if it cannot be resolved.
                                       enum:
                                       - Required
                                       - Optional
                                       type: string
                                     resolve:
-                                      description: >-
+                                      description: |-
                                         Resolve specifies when this reference should be resolved. The default
-
                                         is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                         the corresponding field is not present. Use 'Always' to resolve the
-
                                         reference on every reconcile.
                                       enum:
                                       - Always
@@ -1445,15 +1224,13 @@ spec:
                         type: array
                     type: object
                   vulnerabilityScanningConfig:
-                    description: >-
+                    description: |-
                       Configuration for vulnerability scanning of artifacts stored in this repository.
-
                       Structure is documented below.
                     properties:
                       enablementConfig:
-                        description: >-
+                        description: |-
                           This configures whether vulnerability scanning is automatically performed for artifacts pushed to this repository.
-
                           Possible values are: INHERITED, DISABLED.
                         type: string
                     type: object
@@ -1461,22 +1238,16 @@ spec:
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -1491,11 +1262,9 @@ spec:
                 default:
                   kind: ClusterProviderConfig
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   kind:
@@ -1509,13 +1278,10 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   name:
@@ -1536,28 +1302,22 @@ spec:
               atProvider:
                 properties:
                   cleanupPolicies:
-                    description: >-
+                    description: |-
                       Cleanup policies for this repository. Cleanup policies indicate when
-
                       certain package versions can be automatically deleted.
-
                       Map keys are policy IDs supplied by users during policy creation. They must
-
                       unique within a repository and be under 128 characters in length.
-
                       Structure is documented below.
                     items:
                       properties:
                         action:
-                          description: >-
+                          description: |-
                             Policy action.
-
                             Possible values are: DELETE, KEEP.
                           type: string
                         condition:
-                          description: >-
+                          description: |-
                             Policy condition for matching versions.
-
                             Structure is documented below.
                           properties:
                             newerThan:
@@ -1577,11 +1337,9 @@ spec:
                                 type: string
                               type: array
                             tagState:
-                              description: >-
+                              description: |-
                                 Match versions by tag status.
-
                                 Default value is ANY.
-
                                 Possible values are: TAGGED, UNTAGGED, ANY.
                               type: string
                             versionNamePrefixes:
@@ -1594,11 +1352,9 @@ spec:
                           description: The identifier for this object. Format specified above.
                           type: string
                         mostRecentVersions:
-                          description: >-
+                          description: |-
                             Policy condition for retaining a minimum number of versions. May only be
-
                             specified with a Keep action.
-
                             Structure is documented below.
                           properties:
                             keepCount:
@@ -1613,9 +1369,8 @@ spec:
                       type: object
                     type: array
                   cleanupPolicyDryRun:
-                    description: >-
+                    description: |-
                       If true, the cleanup pipeline is prevented from deleting versions in this
-
                       repository.
                     type: boolean
                   createTime:
@@ -1625,9 +1380,8 @@ spec:
                     description: The user-provided description of the repository.
                     type: string
                   dockerConfig:
-                    description: >-
+                    description: |-
                       Docker repository config contains repository level configuration for the repositories of docker type.
-
                       Structure is documented below.
                     properties:
                       immutableTags:
@@ -1641,124 +1395,95 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   format:
-                    description: >-
+                    description: |-
                       The format of packages that are stored in the repository. Supported formats
-
                       can be found here.
-
                       You can only create alpha formats if you are a member of the
-
                       alpha user group.
                     type: string
                   id:
                     description: an identifier for the resource with format projects/{{project}}/locations/{{location}}/repositories/{{repository_id}}
                     type: string
                   kmsKeyName:
-                    description: >-
+                    description: |-
                       The Cloud KMS resource name of the customer managed encryption key that’s
-
                       used to encrypt the contents of the Repository. Has the form:
-
                       projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key.
-
                       This value may not be changed after the Repository has been created.
                     type: string
                   labels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Labels with user-defined metadata.
-
                       This field may contain up to 64 entries. Label keys and values may be no
-
                       longer than 63 characters. Label keys must begin with a lowercase letter
-
                       and may only contain lowercase letters, numeric characters, underscores,
-
                       and dashes.
                     type: object
                     x-kubernetes-map-type: granular
                   location:
-                    description: >-
+                    description: |-
                       The name of the repository's location. In addition to specific regions,
-
                       special values for multi-region locations are asia, europe, and us.
-
                       See here,
-
                       or use the
-
                       google_artifact_registry_locations
-
                       data source for possible values.
                     type: string
                   mavenConfig:
-                    description: >-
+                    description: |-
                       MavenRepositoryConfig is maven related repository details.
-
                       Provides additional configuration details for repositories of the maven
-
                       format type.
-
                       Structure is documented below.
                     properties:
                       allowSnapshotOverwrites:
-                        description: >-
+                        description: |-
                           The repository with this flag will allow publishing the same
-
                           snapshot versions.
                         type: boolean
                       versionPolicy:
-                        description: >-
+                        description: |-
                           Version policy defines the versions that the registry will accept.
-
                           Default value is VERSION_POLICY_UNSPECIFIED.
-
                           Possible values are: VERSION_POLICY_UNSPECIFIED, RELEASE, SNAPSHOT.
                         type: string
                     type: object
                   mode:
-                    description: >-
+                    description: |-
                       The mode configures the repository to serve artifacts from different sources.
-
                       Default value is STANDARD_REPOSITORY.
-
                       Possible values are: STANDARD_REPOSITORY, VIRTUAL_REPOSITORY, REMOTE_REPOSITORY.
                     type: string
                   name:
-                    description: >-
+                    description: |-
                       The name of the repository, for example:
-
                       "repo1"
                     type: string
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   remoteRepositoryConfig:
-                    description: >-
+                    description: |-
                       Configuration specific for a Remote Repository.
-
                       Structure is documented below.
                     properties:
                       aptRepository:
-                        description: >-
+                        description: |-
                           Specific settings for an Apt remote repository.
-
                           Structure is documented below.
                         properties:
                           publicRepository:
-                            description: >-
+                            description: |-
                               One of the publicly available Yum repositories supported by Artifact Registry.
-
                               Structure is documented below.
                             properties:
                               repositoryBase:
-                                description: >-
+                                description: |-
                                   A common public repository base for Yum.
-
                                   Possible values are: CENTOS, CENTOS_DEBUG, CENTOS_VAULT, CENTOS_STREAM, ROCKY, EPEL.
                                 type: string
                               repositoryPath:
@@ -1767,9 +1492,8 @@ spec:
                             type: object
                         type: object
                       commonRepository:
-                        description: >-
+                        description: |-
                           Specific settings for an Artifact Registory remote repository.
-
                           Structure is documented below.
                         properties:
                           uri:
@@ -1780,21 +1504,18 @@ spec:
                         description: The description of the remote source.
                         type: string
                       disableUpstreamValidation:
-                        description: >-
+                        description: |-
                           If true, the remote repository upstream and upstream credentials will
-
                           not be validated.
                         type: boolean
                       dockerRepository:
-                        description: >-
+                        description: |-
                           Specific settings for a Docker remote repository.
-
                           Structure is documented below.
                         properties:
                           customRepository:
-                            description: >-
+                            description: |-
                               [Deprecated, please use commonRepository instead] Settings for a remote repository with a custom uri.
-
                               Structure is documented below.
                             properties:
                               uri:
@@ -1802,22 +1523,19 @@ spec:
                                 type: string
                             type: object
                           publicRepository:
-                            description: >-
+                            description: |-
                               One of the publicly available Yum repositories supported by Artifact Registry.
-
                               Structure is documented below.
                             type: string
                         type: object
                       mavenRepository:
-                        description: >-
+                        description: |-
                           Specific settings for a Maven remote repository.
-
                           Structure is documented below.
                         properties:
                           customRepository:
-                            description: >-
+                            description: |-
                               [Deprecated, please use commonRepository instead] Settings for a remote repository with a custom uri.
-
                               Structure is documented below.
                             properties:
                               uri:
@@ -1825,22 +1543,19 @@ spec:
                                 type: string
                             type: object
                           publicRepository:
-                            description: >-
+                            description: |-
                               One of the publicly available Yum repositories supported by Artifact Registry.
-
                               Structure is documented below.
                             type: string
                         type: object
                       npmRepository:
-                        description: >-
+                        description: |-
                           Specific settings for an Npm remote repository.
-
                           Structure is documented below.
                         properties:
                           customRepository:
-                            description: >-
+                            description: |-
                               [Deprecated, please use commonRepository instead] Settings for a remote repository with a custom uri.
-
                               Structure is documented below.
                             properties:
                               uri:
@@ -1848,22 +1563,19 @@ spec:
                                 type: string
                             type: object
                           publicRepository:
-                            description: >-
+                            description: |-
                               One of the publicly available Yum repositories supported by Artifact Registry.
-
                               Structure is documented below.
                             type: string
                         type: object
                       pythonRepository:
-                        description: >-
+                        description: |-
                           Specific settings for a Python remote repository.
-
                           Structure is documented below.
                         properties:
                           customRepository:
-                            description: >-
+                            description: |-
                               [Deprecated, please use commonRepository instead] Settings for a remote repository with a custom uri.
-
                               Structure is documented below.
                             properties:
                               uri:
@@ -1871,30 +1583,25 @@ spec:
                                 type: string
                             type: object
                           publicRepository:
-                            description: >-
+                            description: |-
                               One of the publicly available Yum repositories supported by Artifact Registry.
-
                               Structure is documented below.
                             type: string
                         type: object
                       upstreamCredentials:
-                        description: >-
+                        description: |-
                           The credentials used to access the remote repository.
-
                           Structure is documented below.
                         properties:
                           usernamePasswordCredentials:
-                            description: >-
+                            description: |-
                               Use username and password to access the remote repository.
-
                               Structure is documented below.
                             properties:
                               passwordSecretVersion:
-                                description: >-
+                                description: |-
                                   The Secret Manager key version that holds the password to access the
-
                                   remote repository. Must be in the format of
-
                                   projects/{project}/secrets/{secret}/versions/{version}.
                                 type: string
                               username:
@@ -1903,21 +1610,18 @@ spec:
                             type: object
                         type: object
                       yumRepository:
-                        description: >-
+                        description: |-
                           Specific settings for an Yum remote repository.
-
                           Structure is documented below.
                         properties:
                           publicRepository:
-                            description: >-
+                            description: |-
                               One of the publicly available Yum repositories supported by Artifact Registry.
-
                               Structure is documented below.
                             properties:
                               repositoryBase:
-                                description: >-
+                                description: |-
                                   A common public repository base for Yum.
-
                                   Possible values are: CENTOS, CENTOS_DEBUG, CENTOS_VAULT, CENTOS_STREAM, ROCKY, EPEL.
                                 type: string
                               repositoryPath:
@@ -1929,9 +1633,8 @@ spec:
                   terraformLabels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       The combination of labels configured directly on the resource
-
                       and default labels configured on the provider.
                     type: object
                     x-kubernetes-map-type: granular
@@ -1939,17 +1642,14 @@ spec:
                     description: The time when the repository was last updated.
                     type: string
                   virtualRepositoryConfig:
-                    description: >-
+                    description: |-
                       Configuration specific for a Virtual Repository.
-
                       Structure is documented below.
                     properties:
                       upstreamPolicies:
-                        description: >-
+                        description: |-
                           Policies that configure the upstream artifacts distributed by the Virtual
-
                           Repository. Upstream policies cannot be set on a standard repository.
-
                           Structure is documented below.
                         items:
                           properties:
@@ -1960,36 +1660,31 @@ spec:
                               description: Entries with a greater priority value take precedence in the pull order.
                               type: number
                             repository:
-                              description: >-
+                              description: |-
                                 A reference to the repository resource, for example:
-
                                 "projects/p1/locations/us-central1/repository/repo1".
                               type: string
                           type: object
                         type: array
                     type: object
                   vulnerabilityScanningConfig:
-                    description: >-
+                    description: |-
                       Configuration for vulnerability scanning of artifacts stored in this repository.
-
                       Structure is documented below.
                     properties:
                       enablementConfig:
-                        description: >-
+                        description: |-
                           This configures whether vulnerability scanning is automatically performed for artifacts pushed to this repository.
-
                           Possible values are: INHERITED, DISABLED.
                         type: string
                       enablementState:
-                        description: >-
+                        description: |-
                           (Output)
-
                           This field returns whether scanning is active for this repository.
                         type: string
                       enablementStateReason:
-                        description: >-
+                        description: |-
                           (Output)
-
                           This provides an explanation for the state of scanning on this repository.
                         type: string
                     type: object
@@ -2000,24 +1695,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -2028,9 +1719,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -2044,11 +1734,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer

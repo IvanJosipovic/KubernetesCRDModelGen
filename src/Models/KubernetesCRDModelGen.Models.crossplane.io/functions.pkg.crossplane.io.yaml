@@ -32,36 +32,26 @@ spec:
     name: v1
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           A Function installs an OCI compatible Crossplane package, extending
-
           Crossplane with support for a new kind of composition function.
 
-
           Read the Crossplane documentation for
-
           [more information about Functions](https://docs.crossplane.io/latest/concepts/composition-functions).
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -72,30 +62,23 @@ spec:
               commonLabels:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   Map of string keys and values that can be used to organize and categorize
-
                   (scope and select) objects. May match selectors of replication controllers
-
                   and services.
-
                   More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
                 type: object
               ignoreCrossplaneConstraints:
                 default: false
-                description: >-
+                description: |-
                   IgnoreCrossplaneConstraints indicates to the package manager whether to
-
                   honor Crossplane version constrains specified by the package.
-
                   Default is false.
                 type: boolean
               package:
-                description: >-
+                description: |-
                   Package is the name of the package that is being requested.
-
                   must be a fully qualified image name, including the registry,
-
                   repository, and tag. for example, "registry.example.com/repo/package:tag".
                 type: string
                 x-kubernetes-validations:
@@ -103,33 +86,26 @@ spec:
                   rule: self.matches('^[^\\.\\/]+(\\.[^\\.\\/]+)+(\\/[^\\/:@]+)+(:[^:@]+(@sha256.+)?|@sha256.+)$')
               packagePullPolicy:
                 default: IfNotPresent
-                description: >-
+                description: |-
                   PackagePullPolicy defines the pull policy for the package.
-
                   Default is IfNotPresent.
                 type: string
               packagePullSecrets:
-                description: >-
+                description: |-
                   PackagePullSecrets are named secrets in the same namespace that can be used
-
                   to fetch packages from private registries.
                 items:
-                  description: >-
+                  description: |-
                     LocalObjectReference contains enough information to let you locate the
-
                     referenced object inside the same namespace.
                   properties:
                     name:
-                      default: ''
-                      description: >-
+                      default: ""
+                      description: |-
                         Name of the referent.
-
                         This field is effectively required, but due to backwards compatibility is
-
                         allowed to be empty. Instances of this type with an empty value here are
-
                         almost certainly wrong.
-
                         More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
                       type: string
                   type: object
@@ -137,29 +113,24 @@ spec:
                 type: array
               revisionActivationPolicy:
                 default: Automatic
-                description: >-
+                description: |-
                   RevisionActivationPolicy specifies how the package controller should
-
                   update from one revision to the next. Options are Automatic or Manual.
-
                   Default is Automatic.
                 type: string
               revisionHistoryLimit:
                 default: 1
-                description: >-
+                description: |-
                   RevisionHistoryLimit dictates how the package controller cleans up old
-
                   inactive package revisions.
-
                   Defaults to 1. Can be disabled by explicitly setting to 0.
                 format: int64
                 type: integer
               runtimeConfigRef:
                 default:
                   name: default
-                description: >-
+                description: |-
                   RuntimeConfigRef references a RuntimeConfig resource that will be used
-
                   to configure the package runtime.
                 properties:
                   apiVersion:
@@ -178,13 +149,10 @@ spec:
                 type: object
               skipDependencyResolution:
                 default: false
-                description: >-
+                description: |-
                   SkipDependencyResolution indicates to the package manager whether to skip
-
                   resolving dependencies for a package. Setting this value to true may have
-
                   unintended consequences.
-
                   Default is false.
                 type: boolean
             required:
@@ -194,14 +162,12 @@ spec:
             description: FunctionStatus represents the observed state of a Function.
             properties:
               appliedImageConfigRefs:
-                description: >-
+                description: |-
                   AppliedImageConfigRefs records any image configs that were applied in
-
                   reconciling this package, and what they were used for.
                 items:
-                  description: >-
+                  description: |-
                     ImageConfigRef is a reference to an image config that indicates how the
-
                     referenced image config was used by the package manager.
                   properties:
                     name:
@@ -221,24 +187,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -249,9 +211,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -265,33 +226,24 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               currentIdentifier:
-                description: >-
+                description: |-
                   CurrentIdentifier is the most recent package source that was used to
-
                   produce a revision. The package manager uses this field to determine
-
                   whether to check for package updates for a given source when
-
                   packagePullPolicy is set to IfNotPresent. Manually removing this field
-
                   will cause the package manager to check that the current revision is
-
                   correct for the given package source.
                 type: string
               currentRevision:
-                description: >-
+                description: |-
                   CurrentRevision is the name of the current package revision. It will
-
                   reflect the most up to date revision, whether it has been activated or
-
                   not.
                 type: string
               resolvedPackage:
-                description: >-
+                description: |-
                   ResolvedPackage is the name of the package that was used for version
-
                   resolution. It may be different from spec.package if the package path was
-
                   rewritten using an image config.
                 type: string
             type: object
@@ -316,36 +268,26 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           A Function installs an OCI compatible Crossplane package, extending
-
           Crossplane with support for a new kind of composition function.
 
-
           Read the Crossplane documentation for
-
           [more information about Functions](https://docs.crossplane.io/latest/concepts/composition-functions).
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -356,30 +298,23 @@ spec:
               commonLabels:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   Map of string keys and values that can be used to organize and categorize
-
                   (scope and select) objects. May match selectors of replication controllers
-
                   and services.
-
                   More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
                 type: object
               ignoreCrossplaneConstraints:
                 default: false
-                description: >-
+                description: |-
                   IgnoreCrossplaneConstraints indicates to the package manager whether to
-
                   honor Crossplane version constrains specified by the package.
-
                   Default is false.
                 type: boolean
               package:
-                description: >-
+                description: |-
                   Package is the name of the package that is being requested.
-
                   must be a fully qualified image name, including the registry,
-
                   repository, and tag. for example, "registry.example.com/repo/package:tag".
                 type: string
                 x-kubernetes-validations:
@@ -387,33 +322,26 @@ spec:
                   rule: self.matches('^[^\\.\\/]+(\\.[^\\.\\/]+)+(\\/[^\\/:@]+)+(:[^:@]+(@sha256.+)?|@sha256.+)$')
               packagePullPolicy:
                 default: IfNotPresent
-                description: >-
+                description: |-
                   PackagePullPolicy defines the pull policy for the package.
-
                   Default is IfNotPresent.
                 type: string
               packagePullSecrets:
-                description: >-
+                description: |-
                   PackagePullSecrets are named secrets in the same namespace that can be used
-
                   to fetch packages from private registries.
                 items:
-                  description: >-
+                  description: |-
                     LocalObjectReference contains enough information to let you locate the
-
                     referenced object inside the same namespace.
                   properties:
                     name:
-                      default: ''
-                      description: >-
+                      default: ""
+                      description: |-
                         Name of the referent.
-
                         This field is effectively required, but due to backwards compatibility is
-
                         allowed to be empty. Instances of this type with an empty value here are
-
                         almost certainly wrong.
-
                         More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
                       type: string
                   type: object
@@ -421,29 +349,24 @@ spec:
                 type: array
               revisionActivationPolicy:
                 default: Automatic
-                description: >-
+                description: |-
                   RevisionActivationPolicy specifies how the package controller should
-
                   update from one revision to the next. Options are Automatic or Manual.
-
                   Default is Automatic.
                 type: string
               revisionHistoryLimit:
                 default: 1
-                description: >-
+                description: |-
                   RevisionHistoryLimit dictates how the package controller cleans up old
-
                   inactive package revisions.
-
                   Defaults to 1. Can be disabled by explicitly setting to 0.
                 format: int64
                 type: integer
               runtimeConfigRef:
                 default:
                   name: default
-                description: >-
+                description: |-
                   RuntimeConfigRef references a RuntimeConfig resource that will be used
-
                   to configure the package runtime.
                 properties:
                   apiVersion:
@@ -462,13 +385,10 @@ spec:
                 type: object
               skipDependencyResolution:
                 default: false
-                description: >-
+                description: |-
                   SkipDependencyResolution indicates to the package manager whether to skip
-
                   resolving dependencies for a package. Setting this value to true may have
-
                   unintended consequences.
-
                   Default is false.
                 type: boolean
             required:
@@ -478,14 +398,12 @@ spec:
             description: FunctionStatus represents the observed state of a Function.
             properties:
               appliedImageConfigRefs:
-                description: >-
+                description: |-
                   AppliedImageConfigRefs records any image configs that were applied in
-
                   reconciling this package, and what they were used for.
                 items:
-                  description: >-
+                  description: |-
                     ImageConfigRef is a reference to an image config that indicates how the
-
                     referenced image config was used by the package manager.
                   properties:
                     name:
@@ -505,24 +423,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -533,9 +447,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -549,33 +462,24 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               currentIdentifier:
-                description: >-
+                description: |-
                   CurrentIdentifier is the most recent package source that was used to
-
                   produce a revision. The package manager uses this field to determine
-
                   whether to check for package updates for a given source when
-
                   packagePullPolicy is set to IfNotPresent. Manually removing this field
-
                   will cause the package manager to check that the current revision is
-
                   correct for the given package source.
                 type: string
               currentRevision:
-                description: >-
+                description: |-
                   CurrentRevision is the name of the current package revision. It will
-
                   reflect the most up to date revision, whether it has been activated or
-
                   not.
                 type: string
               resolvedPackage:
-                description: >-
+                description: |-
                   ResolvedPackage is the name of the package that was used for version
-
                   resolution. It may be different from spec.package if the package path was
-
                   rewritten using an image config.
                 type: string
             type: object

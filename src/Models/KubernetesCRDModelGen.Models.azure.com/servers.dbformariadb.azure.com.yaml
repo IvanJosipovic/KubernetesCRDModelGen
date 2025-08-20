@@ -45,33 +45,24 @@ spec:
     name: v1api20180601
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMariaDB/servers/{serverName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -79,50 +70,41 @@ spec:
           spec:
             properties:
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               location:
                 description: 'Location: The location the resource resides in.'
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -133,33 +115,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -171,18 +146,16 @@ spec:
                     description: 'Secrets: configures where to place Azure generated secrets.'
                     properties:
                       fullyQualifiedDomainName:
-                        description: >-
+                        description: |-
                           FullyQualifiedDomainName: indicates where the FullyQualifiedDomainName secret should be placed. If omitted, the secret
-
                           will not be retrieved from Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -192,11 +165,9 @@ spec:
                     type: object
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -213,9 +184,8 @@ spec:
                     description: 'Default: Mutually exclusive with all other properties'
                     properties:
                       administratorLogin:
-                        description: >-
+                        description: |-
                           AdministratorLogin: The administrator's login name of a server. Can only be specified when the server is being created
-
                           (and is required for creation).
                         type: string
                       administratorLoginPassword:
@@ -225,9 +195,8 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret being referenced.
-
                               The secret must be in the same namespace as the resource
                             type: string
                         required:
@@ -248,9 +217,8 @@ spec:
                         - TLSEnforcementDisabled
                         type: string
                       publicNetworkAccess:
-                        description: >-
+                        description: |-
                           PublicNetworkAccess: Whether or not public network access is allowed for this server. Value is optional but if passed
-
                           in, must be 'Enabled' or 'Disabled'
                         enum:
                         - Disabled
@@ -287,8 +255,8 @@ spec:
                       version:
                         description: 'Version: Server version.'
                         enum:
-                        - 10.2
-                        - 10.3
+                        - "10.2"
+                        - "10.3"
                         type: string
                     required:
                     - administratorLogin
@@ -312,9 +280,8 @@ spec:
                         - TLSEnforcementDisabled
                         type: string
                       publicNetworkAccess:
-                        description: >-
+                        description: |-
                           PublicNetworkAccess: Whether or not public network access is allowed for this server. Value is optional but if passed
-
                           in, must be 'Enabled' or 'Disabled'
                         enum:
                         - Disabled
@@ -354,8 +321,8 @@ spec:
                       version:
                         description: 'Version: Server version.'
                         enum:
-                        - 10.2
-                        - 10.3
+                        - "10.2"
+                        - "10.3"
                         type: string
                     required:
                     - createMode
@@ -378,9 +345,8 @@ spec:
                         - TLSEnforcementDisabled
                         type: string
                       publicNetworkAccess:
-                        description: >-
+                        description: |-
                           PublicNetworkAccess: Whether or not public network access is allowed for this server. Value is optional but if passed
-
                           in, must be 'Enabled' or 'Disabled'
                         enum:
                         - Disabled
@@ -423,8 +389,8 @@ spec:
                       version:
                         description: 'Version: Server version.'
                         enum:
-                        - 10.2
-                        - 10.3
+                        - "10.2"
+                        - "10.3"
                         type: string
                     required:
                     - createMode
@@ -448,9 +414,8 @@ spec:
                         - TLSEnforcementDisabled
                         type: string
                       publicNetworkAccess:
-                        description: >-
+                        description: |-
                           PublicNetworkAccess: Whether or not public network access is allowed for this server. Value is optional but if passed
-
                           in, must be 'Enabled' or 'Disabled'
                         enum:
                         - Disabled
@@ -490,8 +455,8 @@ spec:
                       version:
                         description: 'Version: Server version.'
                         enum:
-                        - 10.2
-                        - 10.3
+                        - "10.2"
+                        - "10.3"
                         type: string
                     required:
                     - createMode
@@ -503,7 +468,7 @@ spec:
                 properties:
                   capacity:
                     description: "Capacity: The scale up/out capacity, representing server's compute units."
-                    minimum: 0
+                    minimum: 0.0
                     type: integer
                   family:
                     description: 'Family: The family of hardware.'
@@ -538,9 +503,8 @@ spec:
             description: Represents a server.
             properties:
               administratorLogin:
-                description: >-
+                description: |-
                   AdministratorLogin: The administrator's login name of a server. Can only be specified when the server is being created
-
                   (and is required for creation).
                 type: string
               conditions:
@@ -556,28 +520,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -600,9 +558,8 @@ spec:
                 description: 'FullyQualifiedDomainName: The fully qualified domain name of a server.'
                 type: string
               id:
-                description: >-
+                description: |-
                   Id: Fully qualified resource ID for the resource. Ex -
-
                   /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                 type: string
               location:
@@ -655,9 +612,8 @@ spec:
                   type: object
                 type: array
               publicNetworkAccess:
-                description: >-
+                description: |-
                   PublicNetworkAccess: Whether or not public network access is allowed for this server. Value is optional but if passed
-
                   in, must be 'Enabled' or 'Disabled'
                 type: string
               replicaCapacity:
@@ -740,35 +696,25 @@ spec:
     name: v1api20180601storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20180601.Server
-
           Generator information:
-
           - Generated from: /mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMariaDB/servers/{serverName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -779,62 +725,51 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               location:
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20180601.ServerOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -844,33 +779,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -884,26 +812,22 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       fullyQualifiedDomainName:
-                        description: >-
+                        description: |-
                           SecretDestination describes the location to store a single secret value.
-
                           Note: This is similar to: ConfigMapDestination in configmaps.go.
-
                           Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -915,11 +839,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -935,9 +857,8 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   default:
@@ -946,26 +867,23 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       administratorLogin:
                         type: string
                       administratorLoginPassword:
-                        description: >-
+                        description: |-
                           SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                           the resource it is on.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret being referenced.
-
                               The secret must be in the same namespace as the resource
                             type: string
                         required:
@@ -981,17 +899,15 @@ spec:
                       sslEnforcement:
                         type: string
                       storageProfile:
-                        description: >-
+                        description: |-
                           Storage version of v1api20180601.StorageProfile
-
                           Storage Profile properties of a server
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           backupRetentionDays:
@@ -1012,9 +928,8 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       createMode:
@@ -1028,17 +943,15 @@ spec:
                       sslEnforcement:
                         type: string
                       storageProfile:
-                        description: >-
+                        description: |-
                           Storage version of v1api20180601.StorageProfile
-
                           Storage Profile properties of a server
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           backupRetentionDays:
@@ -1059,9 +972,8 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       createMode:
@@ -1077,17 +989,15 @@ spec:
                       sslEnforcement:
                         type: string
                       storageProfile:
-                        description: >-
+                        description: |-
                           Storage version of v1api20180601.StorageProfile
-
                           Storage Profile properties of a server
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           backupRetentionDays:
@@ -1108,9 +1018,8 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       createMode:
@@ -1124,17 +1033,15 @@ spec:
                       sslEnforcement:
                         type: string
                       storageProfile:
-                        description: >-
+                        description: |-
                           Storage version of v1api20180601.StorageProfile
-
                           Storage Profile properties of a server
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           backupRetentionDays:
@@ -1151,17 +1058,15 @@ spec:
                     type: object
                 type: object
               sku:
-                description: >-
+                description: |-
                   Storage version of v1api20180601.Sku
-
                   Billing information related properties of a server.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   capacity:
@@ -1183,17 +1088,15 @@ spec:
             - owner
             type: object
           status:
-            description: >-
+            description: |-
               Storage version of v1api20180601.Server_STATUS
-
               Represents a server.
             properties:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               administratorLogin:
@@ -1210,28 +1113,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -1263,33 +1160,29 @@ spec:
                 type: string
               privateEndpointConnections:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20180601.ServerPrivateEndpointConnection_STATUS
-
                     A private endpoint connection under a server
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     id:
                       type: string
                     properties:
-                      description: >-
+                      description: |-
                         Storage version of v1api20180601.ServerPrivateEndpointConnectionProperties_STATUS
-
                         Properties of a private endpoint connection.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         privateEndpoint:
@@ -1298,9 +1191,8 @@ spec:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             id:
@@ -1312,9 +1204,8 @@ spec:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             actionsRequired:
@@ -1336,17 +1227,15 @@ spec:
               replicationRole:
                 type: string
               sku:
-                description: >-
+                description: |-
                   Storage version of v1api20180601.Sku_STATUS
-
                   Billing information related properties of a server.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   capacity:
@@ -1363,17 +1252,15 @@ spec:
               sslEnforcement:
                 type: string
               storageProfile:
-                description: >-
+                description: |-
                   Storage version of v1api20180601.StorageProfile_STATUS
-
                   Storage Profile properties of a server
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   backupRetentionDays:

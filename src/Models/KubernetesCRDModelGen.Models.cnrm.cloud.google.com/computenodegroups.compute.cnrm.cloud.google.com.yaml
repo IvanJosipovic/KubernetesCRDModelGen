@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: computenodegroups.compute.cnrm.cloud.google.com
 spec:
   group: compute.cnrm.cloud.google.com
@@ -54,25 +53,22 @@ spec:
           spec:
             properties:
               autoscalingPolicy:
-                description: >-
+                description: |-
                   Immutable. If you use sole-tenant nodes for your workloads, you can use the node
-
                   group autoscaler to automatically manage the sizes of your node groups.
                 properties:
                   maxNodes:
-                    description: >-
+                    description: |-
                       Immutable. Maximum size of the node group. Set to a value less than or equal
-
                       to 100 and greater than or equal to min-nodes.
                     type: integer
                   minNodes:
-                    description: >-
+                    description: |-
                       Immutable. Minimum size of the node group. Must be less
-
                       than or equal to max-nodes. The default value is 0.
                     type: integer
                   mode:
-                    description: >-
+                    description: |-
                       Immutable. The autoscaling mode. Set to one of the following:
                         - OFF: Disables the autoscaler.
                         - ON: Enables scaling in and scaling out.
@@ -164,9 +160,8 @@ spec:
                               type: string
                           type: object
                         projectIdRef:
-                          description: >-
+                          description: |-
                             The project id/number should be the same as the key of this project
-
                             config in the project map.
                           oneOf:
                           - not:
@@ -255,7 +250,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

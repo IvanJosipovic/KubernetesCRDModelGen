@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: orgpolicypolicies.orgpolicy.cnrm.cloud.google.com
 spec:
   group: orgpolicy.cnrm.cloud.google.com
@@ -58,7 +57,7 @@ spec:
                 description: Dry-run policy. Audit-only policy, can be used to monitor how the policy would have impacted the existing and future resources if it's enforced.
                 properties:
                   etag:
-                    description: >-
+                    description: |-
                       An opaque tag indicating the current version of the policySpec, used for
                        concurrency control.
 
@@ -72,7 +71,7 @@ spec:
                        `etag` will be unset.
                     type: string
                   inheritFromParent:
-                    description: >-
+                    description: |-
                       Determines the inheritance behavior for this policy.
 
                        If `inherit_from_parent` is true, policy rules set higher up in the
@@ -85,7 +84,7 @@ spec:
                     description: Ignores policies set above this resource and restores the `constraint_default` enforcement behavior of the specific constraint at this resource. This field can be set in policies for either list or boolean constraints. If set, `rules` must be empty and `inherit_from_parent` must be set to false.
                     type: boolean
                   rules:
-                    description: >-
+                    description: |-
                       In policies for boolean constraints, the following requirements apply:
 
                          - There must be one and only one policy rule where condition is unset.
@@ -213,7 +212,7 @@ spec:
                 description: Basic information about the Organization Policy.
                 properties:
                   etag:
-                    description: >-
+                    description: |-
                       An opaque tag indicating the current version of the policySpec, used for
                        concurrency control.
 
@@ -227,7 +226,7 @@ spec:
                        `etag` will be unset.
                     type: string
                   inheritFromParent:
-                    description: >-
+                    description: |-
                       Determines the inheritance behavior for this policy.
 
                        If `inherit_from_parent` is true, policy rules set higher up in the
@@ -240,7 +239,7 @@ spec:
                     description: Ignores policies set above this resource and restores the `constraint_default` enforcement behavior of the specific constraint at this resource. This field can be set in policies for either list or boolean constraints. If set, `rules` must be empty and `inherit_from_parent` must be set to false.
                     type: boolean
                   rules:
-                    description: >-
+                    description: |-
                       In policies for boolean constraints, the following requirements apply:
 
                          - There must be one and only one policy rule where condition is unset.
@@ -352,7 +351,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

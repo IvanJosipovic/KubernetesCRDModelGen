@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: alpha
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: documentaiprocessordefaultversions.documentai.cnrm.cloud.google.com
 spec:
   group: documentai.cnrm.cloud.google.com
@@ -57,9 +56,8 @@ spec:
                 description: Immutable. Optional. The processor of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.
                 type: string
               version:
-                description: >-
+                description: |-
                   Immutable. The version to set. Using 'stable' or 'rc' will cause the API to return the latest version in that release channel.
-
                   Apply 'lifecycle.ignore_changes' to the 'version' field to suppress this diff.
                 type: string
             required:
@@ -101,7 +99,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

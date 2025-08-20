@@ -33,31 +33,23 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           A ProviderConfigUsage indicates that a resource is using a ProviderConfig.
-
           Please replace `PROVIDER-NAME` with your actual provider name, like `aws`, `azure`, `gcp`, `alibaba`
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -73,26 +65,20 @@ spec:
                 properties:
                   resolution:
                     default: Required
-                    description: >-
+                    description: |-
                       Resolution specifies whether resolution of this reference is required.
-
                       The default is 'Required', which means the reconcile will fail if the
-
                       reference cannot be resolved. 'Optional' means this reference will be
-
                       a no-op if it cannot be resolved.
                     enum:
                     - Required
                     - Optional
                     type: string
                   resolve:
-                    description: >-
+                    description: |-
                       Resolve specifies when this reference should be resolved. The default
-
                       is 'IfNotPresent', which will attempt to resolve the reference only when
-
                       the corresponding field is not present. Use 'Always' to resolve the
-
                       reference on every reconcile.
                     enum:
                     - Always

@@ -45,33 +45,24 @@ spec:
     name: v1api20180501preview
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /applicationinsights/resource-manager/Microsoft.Insights/preview/2018-05-01-preview/webTests_API.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/webtests/{webTestName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -103,9 +94,8 @@ spec:
                 - standard
                 type: string
               Locations:
-                description: >-
+                description: |-
                   Locations: A list of where to physically run the tests from to give global coverage for accessibility of your
-
                   application.
                 items:
                   description: Geo-physical location to run a WebTest from. You must specify one or more locations for the test to run from.
@@ -172,9 +162,8 @@ spec:
                         description: 'IgnoreCase: When set, this value makes the ContentMatch validation case insensitive.'
                         type: boolean
                       PassIfTextFound:
-                        description: >-
+                        description: |-
                           PassIfTextFound: When true, validation will pass if there is a match for the ContentMatch string.  If false, validation
-
                           will fail if there is a match
                         type: boolean
                     type: object
@@ -185,9 +174,8 @@ spec:
                     description: 'IgnoreHttpsStatusCode: When set, validation will ignore the status code.'
                     type: boolean
                   SSLCertRemainingLifetimeCheck:
-                    description: >-
+                    description: |-
                       SSLCertRemainingLifetimeCheck: A number of days to check still remain before the the existing SSL cert expires.  Value
-
                       must be positive and the SSLCheck must be set to true.
                     type: integer
                   SSLCheck:
@@ -195,50 +183,41 @@ spec:
                     type: boolean
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               location:
                 description: 'Location: Resource location'
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -249,33 +228,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -285,11 +257,9 @@ spec:
                     type: array
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -334,9 +304,8 @@ spec:
                 description: 'Kind: The kind of web test this is, valid choices are ping, multistep, basic, and standard.'
                 type: string
               Locations:
-                description: >-
+                description: |-
                   Locations: A list of where to physically run the tests from to give global coverage for accessibility of your
-
                   application.
                 items:
                   description: Geo-physical location to run a WebTest from. You must specify one or more locations for the test to run from.
@@ -400,9 +369,8 @@ spec:
                         description: 'IgnoreCase: When set, this value makes the ContentMatch validation case insensitive.'
                         type: boolean
                       PassIfTextFound:
-                        description: >-
+                        description: |-
                           PassIfTextFound: When true, validation will pass if there is a match for the ContentMatch string.  If false, validation
-
                           will fail if there is a match
                         type: boolean
                     type: object
@@ -413,9 +381,8 @@ spec:
                     description: 'IgnoreHttpsStatusCode: When set, validation will ignore the status code.'
                     type: boolean
                   SSLCertRemainingLifetimeCheck:
-                    description: >-
+                    description: |-
                       SSLCertRemainingLifetimeCheck: A number of days to check still remain before the the existing SSL cert expires.  Value
-
                       must be positive and the SSLCheck must be set to true.
                     type: integer
                   SSLCheck:
@@ -435,28 +402,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -485,11 +446,9 @@ spec:
                 description: 'PropertiesName: User defined name if this WebTest.'
                 type: string
               provisioningState:
-                description: >-
+                description: |-
                   ProvisioningState: Current state of this component, whether or not is has been provisioned within the resource group it
-
                   is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying,
-
                   Canceled, and Failed.
                 type: string
               tags:
@@ -522,35 +481,25 @@ spec:
     name: v1api20180501previewstorage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20180501preview.Webtest
-
           Generator information:
-
           - Generated from: /applicationinsights/resource-manager/Microsoft.Insights/preview/2018-05-01-preview/webTests_API.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/webtests/{webTestName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -561,9 +510,8 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               Configuration:
@@ -572,9 +520,8 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   WebTest:
@@ -590,17 +537,15 @@ spec:
                 type: string
               Locations:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20180501preview.WebTestGeolocation
-
                     Geo-physical location to run a WebTest from. You must specify one or more locations for the test to run from.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     Id:
@@ -615,26 +560,23 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   FollowRedirects:
                     type: boolean
                   Headers:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20180501preview.HeaderField
-
                         A header to add to the WebTest.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         key:
@@ -664,9 +606,8 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   ContentValidation:
@@ -675,9 +616,8 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       ContentMatch:
@@ -697,56 +637,46 @@ spec:
                     type: boolean
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               location:
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20180501preview.WebtestOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -756,33 +686,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -794,11 +717,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -821,9 +742,8 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               Configuration:
@@ -832,9 +752,8 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   WebTest:
@@ -850,17 +769,15 @@ spec:
                 type: string
               Locations:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20180501preview.WebTestGeolocation_STATUS
-
                     Geo-physical location to run a WebTest from. You must specify one or more locations for the test to run from.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     Id:
@@ -873,26 +790,23 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   FollowRedirects:
                     type: boolean
                   Headers:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20180501preview.HeaderField_STATUS
-
                         A header to add to the WebTest.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         key:
@@ -922,9 +836,8 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   ContentValidation:
@@ -933,9 +846,8 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       ContentMatch:
@@ -966,28 +878,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -1041,33 +947,24 @@ spec:
     name: v1api20220615
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /applicationinsights/resource-manager/Microsoft.Insights/stable/2022-06-15/webTests_API.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/webtests/{webTestName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -1098,9 +995,8 @@ spec:
                 - standard
                 type: string
               Locations:
-                description: >-
+                description: |-
                   Locations: A list of where to physically run the tests from to give global coverage for accessibility of your
-
                   application.
                 items:
                   description: Geo-physical location to run a WebTest from. You must specify one or more locations for the test to run from.
@@ -1167,9 +1063,8 @@ spec:
                         description: 'IgnoreCase: When set, this value makes the ContentMatch validation case insensitive.'
                         type: boolean
                       PassIfTextFound:
-                        description: >-
+                        description: |-
                           PassIfTextFound: When true, validation will pass if there is a match for the ContentMatch string.  If false, validation
-
                           will fail if there is a match
                         type: boolean
                     type: object
@@ -1180,9 +1075,8 @@ spec:
                     description: 'IgnoreHttpStatusCode: When set, validation will ignore the status code.'
                     type: boolean
                   SSLCertRemainingLifetimeCheck:
-                    description: >-
+                    description: |-
                       SSLCertRemainingLifetimeCheck: A number of days to check still remain before the the existing SSL cert expires.  Value
-
                       must be positive and the SSLCheck must be set to true.
                     type: integer
                   SSLCheck:
@@ -1190,50 +1084,41 @@ spec:
                     type: boolean
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               location:
                 description: 'Location: Resource location'
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1244,33 +1129,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1280,11 +1158,9 @@ spec:
                     type: array
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -1329,9 +1205,8 @@ spec:
                 description: 'Kind: The kind of web test this is, valid choices are ping, multistep and standard.'
                 type: string
               Locations:
-                description: >-
+                description: |-
                   Locations: A list of where to physically run the tests from to give global coverage for accessibility of your
-
                   application.
                 items:
                   description: Geo-physical location to run a WebTest from. You must specify one or more locations for the test to run from.
@@ -1395,9 +1270,8 @@ spec:
                         description: 'IgnoreCase: When set, this value makes the ContentMatch validation case insensitive.'
                         type: boolean
                       PassIfTextFound:
-                        description: >-
+                        description: |-
                           PassIfTextFound: When true, validation will pass if there is a match for the ContentMatch string.  If false, validation
-
                           will fail if there is a match
                         type: boolean
                     type: object
@@ -1408,9 +1282,8 @@ spec:
                     description: 'IgnoreHttpStatusCode: When set, validation will ignore the status code.'
                     type: boolean
                   SSLCertRemainingLifetimeCheck:
-                    description: >-
+                    description: |-
                       SSLCertRemainingLifetimeCheck: A number of days to check still remain before the the existing SSL cert expires.  Value
-
                       must be positive and the SSLCheck must be set to true.
                     type: integer
                   SSLCheck:
@@ -1430,28 +1303,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -1480,11 +1347,9 @@ spec:
                 description: 'PropertiesName: User defined name if this WebTest.'
                 type: string
               provisioningState:
-                description: >-
+                description: |-
                   ProvisioningState: Current state of this component, whether or not is has been provisioned within the resource group it
-
                   is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying,
-
                   Canceled, and Failed.
                 type: string
               tags:
@@ -1517,35 +1382,25 @@ spec:
     name: v1api20220615storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20220615.Webtest
-
           Generator information:
-
           - Generated from: /applicationinsights/resource-manager/Microsoft.Insights/stable/2022-06-15/webTests_API.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/webtests/{webTestName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -1556,9 +1411,8 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               Configuration:
@@ -1567,9 +1421,8 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   WebTest:
@@ -1585,17 +1438,15 @@ spec:
                 type: string
               Locations:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20220615.WebTestGeolocation
-
                     Geo-physical location to run a WebTest from. You must specify one or more locations for the test to run from.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     Id:
@@ -1610,26 +1461,23 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   FollowRedirects:
                     type: boolean
                   Headers:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20220615.HeaderField
-
                         A header to add to the WebTest.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         key:
@@ -1659,9 +1507,8 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   ContentValidation:
@@ -1670,9 +1517,8 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       ContentMatch:
@@ -1692,56 +1538,46 @@ spec:
                     type: boolean
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               location:
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20220615.WebtestOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1751,33 +1587,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1789,11 +1618,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -1816,9 +1643,8 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               Configuration:
@@ -1827,9 +1653,8 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   WebTest:
@@ -1845,17 +1670,15 @@ spec:
                 type: string
               Locations:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20220615.WebTestGeolocation_STATUS
-
                     Geo-physical location to run a WebTest from. You must specify one or more locations for the test to run from.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     Id:
@@ -1868,26 +1691,23 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   FollowRedirects:
                     type: boolean
                   Headers:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20220615.HeaderField_STATUS
-
                         A header to add to the WebTest.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         key:
@@ -1917,9 +1737,8 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   ContentValidation:
@@ -1928,9 +1747,8 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       ContentMatch:
@@ -1961,28 +1779,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:

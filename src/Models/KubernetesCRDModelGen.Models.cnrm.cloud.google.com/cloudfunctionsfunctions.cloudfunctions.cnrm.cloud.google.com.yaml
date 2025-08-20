@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/dcl2crd: true
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/dcl2crd: "true"
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/system: "true"
   name: cloudfunctionsfunctions.cloudfunctions.cnrm.cloud.google.com
 spec:
   group: cloudfunctions.cnrm.cloud.google.com
@@ -61,17 +60,12 @@ spec:
                 description: User-provided description of a function.
                 type: string
               entryPoint:
-                description: >-
+                description: |-
                   Immutable. The name of the function (as defined in source code) that will be
-
                   executed. Defaults to the resource name suffix, if not specified. For
-
                   backward compatibility, if function with given name is not found, then the
-
                   system will try to use function named "function".
-
                   For Node.js this is name of a function exported by the module specified
-
                   in `source_location`.
                 type: string
               environmentVariables:
@@ -83,18 +77,13 @@ spec:
                 description: Immutable. A source that fires events in response to a condition in another service.
                 properties:
                   eventType:
-                    description: >-
+                    description: |-
                       Immutable. Required. The type of event to observe. For example:
-
                       `providers/cloud.storage/eventTypes/object.change` and
-
                       `providers/cloud.pubsub/eventTypes/topic.publish`.
 
-
                       Event types match pattern `providers/*/eventTypes/*.*`.
-
                       The pattern contains:
-
 
                       1. namespace: For example, `cloud.storage` and
                          `google.firebase.analytics`.
@@ -128,16 +117,12 @@ spec:
                       - external
                     properties:
                       external:
-                        description: >-
+                        description: |-
                           Required. The resource(s) from which to observe events, for example,
-
                           `projects/_/buckets/myBucket`.
 
-
                           Not all syntactically correct values are accepted by all services. For
-
                           example:
-
 
                           1. The authorization model must support it. Google Cloud Functions
                              only allows EventTriggers to be deployed that observe resources in the
@@ -148,19 +133,13 @@ spec:
                              that matches Google Cloud Pub/Sub topics.
 
                           Additionally, some services may support short names when creating an
-
                           `EventTrigger`. These will always be returned in the normalized "long"
-
                           format.
-
 
                           See each *service's* documentation for supported formats.
 
-
                           Allowed values:
-
                           * The Google Cloud resource name of a `StorageBucket` resource (format: `{{name}}`).
-
                           * The Google Cloud resource name of a `PubSubTopic` resource (format: `projects/{{project}}/topics/{{name}}`).
                         type: string
                       kind:
@@ -174,14 +153,11 @@ spec:
                         type: string
                     type: object
                   service:
-                    description: >-
+                    description: |-
                       Immutable. The hostname of the service that should be observed.
 
-
                       If no string is provided, the default service implementing the API will
-
                       be used. For example, `storage.googleapis.com` is the default for all
-
                       event types in the `google.storage` namespace.
                     type: string
                 required:
@@ -196,15 +172,13 @@ spec:
                     type: string
                 type: object
               ingressSettings:
-                description: >-
+                description: |-
                   The ingress settings for the function, controlling what traffic can reach
-
                   it. Possible values: INGRESS_SETTINGS_UNSPECIFIED, ALLOW_ALL, ALLOW_INTERNAL_ONLY, ALLOW_INTERNAL_AND_GCLB
                 type: string
               maxInstances:
-                description: >-
+                description: |-
                   The limit on the maximum number of function instances that may coexist at a
-
                   given time.
                 format: int64
                 type: integer
@@ -226,9 +200,8 @@ spec:
                   - external
                 properties:
                   external:
-                    description: >-
+                    description: |-
                       The project id of the function.
-
 
                       Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).
                     type: string
@@ -246,15 +219,11 @@ spec:
                 description: Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.
                 type: string
               runtime:
-                description: >
+                description: |
                   The runtime in which to run the function. Required when deploying a new
-
                   function, optional when updating an existing function. For a complete
-
                   list of possible choices, see the
-
                   [`gcloud` command
-
                   reference](/sdk/gcloud/reference/functions/deploy#--runtime).
                 type: string
               serviceAccountRef:
@@ -275,11 +244,9 @@ spec:
                   - external
                 properties:
                   external:
-                    description: >-
+                    description: |-
                       The email of the function's service account. If empty, defaults to
-
                       `{project_id}@appspot.gserviceaccount.com`.
-
 
                       Allowed value: The `email` field of an `IAMServiceAccount` resource.
                     type: string
@@ -297,28 +264,18 @@ spec:
                 description: Immutable. Represents parameters related to source repository where a function is hosted.
                 properties:
                   url:
-                    description: >-
+                    description: |-
                       Immutable. The URL pointing to the hosted repository where the function is defined.
-
                       There are supported Cloud Source Repository URLs in the following
-
                       formats:
 
-
                       To refer to a specific commit:
-
                       `https://source.developers.google.com/projects/*/repos/*/revisions/*/paths/*`
-
                       To refer to a moveable alias (branch):
-
                       `https://source.developers.google.com/projects/*/repos/*/moveable-aliases/*/paths/*`
-
                       In particular, to refer to HEAD use `master` moveable alias.
-
                       To refer to a specific fixed alias (tag):
-
                       `https://source.developers.google.com/projects/*/repos/*/fixed-aliases/*/paths/*`
-
 
                       You may omit `paths/*` if you want to use the main directory.
                     type: string
@@ -326,17 +283,14 @@ spec:
                 - url
                 type: object
               timeout:
-                description: >-
+                description: |-
                   The function execution timeout. Execution is considered failed and
-
                   can be terminated if the function is not completed at the end of the
-
                   timeout period. Defaults to 60 seconds.
                 type: string
               vpcConnectorEgressSettings:
-                description: >-
+                description: |-
                   The egress settings for the connector, controlling what traffic is diverted
-
                   through it. Possible values: VPC_CONNECTOR_EGRESS_SETTINGS_UNSPECIFIED, PRIVATE_RANGES_ONLY, ALL_TRAFFIC
                 type: string
               vpcConnectorRef:
@@ -356,15 +310,11 @@ spec:
                   - external
                 properties:
                   external:
-                    description: >-
+                    description: |-
                       The VPC Network Connector that this cloud function can connect to. It can
-
                       be either the fully-qualified URI, or the short name of the network
-
                       connector resource. The format of this field is
-
                       `projects/*/locations/*/connectors/*`
-
 
                       Allowed value: The Google Cloud resource name of a `VPCAccessConnector` resource (format: `projects/{{project}}/locations/{{location}}/connectors/{{name}}`).
                     type: string
@@ -415,11 +365,9 @@ spec:
               sourceRepository:
                 properties:
                   deployedUrl:
-                    description: >-
+                    description: |-
                       Output only. The URL pointing to the hosted repository where the function
-
                       were defined at the time of deployment. It always points to a specific
-
                       commit in the format described above.
                     type: string
                 type: object
@@ -430,9 +378,8 @@ spec:
                 description: Output only. The last update timestamp of a Cloud Function in RFC3339 UTC 'Zulu' format, with nanosecond resolution and up to nine fractional digits.
                 type: string
               versionId:
-                description: >-
+                description: |-
                   Output only. The version identifier of the Cloud Function. Each deployment attempt
-
                   results in a new version of a function being created.
                 format: int64
                 type: integer
@@ -446,7 +393,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

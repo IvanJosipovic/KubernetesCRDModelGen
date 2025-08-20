@@ -36,25 +36,18 @@ spec:
         description: Topic is the Schema for the Topics API. A named resource to which messages are sent by publishers.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -64,19 +57,13 @@ spec:
             properties:
               deletionPolicy:
                 default: Delete
-                description: >-
+                description: |-
                   DeletionPolicy specifies what will happen to the underlying external
-
                   when this managed resource is deleted - either "Delete" or "Orphan" the
-
                   external resource.
-
                   This field is planned to be deprecated in favor of the ManagementPolicies
-
                   field in a future release. Currently, both could be set independently and
-
                   non-default values would be honored if the feature flag is enabled.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
                 enum:
                 - Orphan
@@ -85,39 +72,32 @@ spec:
               forProvider:
                 properties:
                   ingestionDataSourceSettings:
-                    description: >-
+                    description: |-
                       Settings for ingestion from a data source into this topic.
-
                       Structure is documented below.
                     items:
                       properties:
                         awsKinesis:
-                          description: >-
+                          description: |-
                             Settings for ingestion from Amazon Kinesis Data Streams.
-
                             Structure is documented below.
                           items:
                             properties:
                               awsRoleArn:
-                                description: >-
+                                description: |-
                                   AWS role ARN to be used for Federated Identity authentication with
-
                                   MSK. Check the Pub/Sub docs for how to set up this role and the
-
                                   required permissions that need to be attached to it.
                                 type: string
                               consumerArn:
-                                description: >-
+                                description: |-
                                   The Kinesis consumer ARN to used for ingestion in
-
                                   Enhanced Fan-Out mode. The consumer must be already
-
                                   created and ready to be used.
                                 type: string
                               gcpServiceAccount:
-                                description: >-
+                                description: |-
                                   The GCP service account to be used for Federated Identity authentication
-
                                   with Confluent Cloud.
                                 type: string
                               streamArn:
@@ -126,27 +106,23 @@ spec:
                             type: object
                           type: array
                         awsMsk:
-                          description: >-
+                          description: |-
                             Settings for ingestion from Amazon Managed Streaming for Apache Kafka.
-
                             Structure is documented below.
                           items:
                             properties:
                               awsRoleArn:
-                                description: >-
+                                description: |-
                                   AWS role ARN to be used for Federated Identity authentication with
-
                                   MSK. Check the Pub/Sub docs for how to set up this role and the
-
                                   required permissions that need to be attached to it.
                                 type: string
                               clusterArn:
                                 description: ARN that uniquely identifies the MSK cluster.
                                 type: string
                               gcpServiceAccount:
-                                description: >-
+                                description: |-
                                   The GCP service account to be used for Federated Identity authentication
-
                                   with Confluent Cloud.
                                 type: string
                               topic:
@@ -155,9 +131,8 @@ spec:
                             type: object
                           type: array
                         azureEventHubs:
-                          description: >-
+                          description: |-
                             Settings for ingestion from Azure Event Hubs.
-
                             Structure is documented below.
                           items:
                             properties:
@@ -168,9 +143,8 @@ spec:
                                 description: The Azure event hub to ingest data from.
                                 type: string
                               gcpServiceAccount:
-                                description: >-
+                                description: |-
                                   The GCP service account to be used for Federated Identity authentication
-
                                   with Confluent Cloud.
                                 type: string
                               namespace:
@@ -188,73 +162,57 @@ spec:
                             type: object
                           type: array
                         cloudStorage:
-                          description: >-
+                          description: |-
                             Settings for ingestion from Cloud Storage.
-
                             Structure is documented below.
                           items:
                             properties:
                               avroFormat:
-                                description: >-
+                                description: |-
                                   Configuration for reading Cloud Storage data in Avro binary format. The
-
                                   bytes of each object will be set to the data field of a Pub/Sub message.
                                 items:
                                   type: object
                                 type: array
                               bucket:
-                                description: >-
+                                description: |-
                                   Cloud Storage bucket. The bucket name must be without any
-
                                   prefix like "gs://". See the bucket naming requirements:
-
                                   https://cloud.google.com/storage/docs/buckets#naming.
                                 type: string
                               matchGlob:
-                                description: >-
+                                description: |-
                                   Glob pattern used to match objects that will be ingested. If unset, all
-
                                   objects will be ingested. See the supported patterns:
-
                                   https://cloud.google.com/storage/docs/json_api/v1/objects/list#list-objects-and-prefixes-using-glob
                                 type: string
                               minimumObjectCreateTime:
-                                description: >-
+                                description: |-
                                   The timestamp set in RFC3339 text format. If set, only objects with a
-
                                   larger or equal timestamp will be ingested. Unset by default, meaning
-
                                   all objects will be ingested.
                                 type: string
                               pubsubAvroFormat:
-                                description: >-
+                                description: |-
                                   Configuration for reading Cloud Storage data written via Cloud Storage
-
                                   subscriptions(See https://cloud.google.com/pubsub/docs/cloudstorage). The
-
                                   data and attributes fields of the originally exported Pub/Sub message
-
                                   will be restored when publishing.
                                 items:
                                   type: object
                                 type: array
                               textFormat:
-                                description: >-
+                                description: |-
                                   Configuration for reading Cloud Storage data in text format. Each line of
-
                                   text as specified by the delimiter will be set to the data field of a
-
                                   Pub/Sub message.
-
                                   Structure is documented below.
                                 items:
                                   properties:
                                     delimiter:
-                                      description: >-
+                                      description: |-
                                         The delimiter to use when using the 'text' format. Each line of text as
-
                                         specified by the delimiter will be set to the 'data' field of a Pub/Sub
-
                                         message. When unset, '\n' is used.
                                       type: string
                                   type: object
@@ -262,9 +220,8 @@ spec:
                             type: object
                           type: array
                         confluentCloud:
-                          description: >-
+                          description: |-
                             Settings for ingestion from Confluent Cloud.
-
                             Structure is documented below.
                           items:
                             properties:
@@ -275,9 +232,8 @@ spec:
                                 description: The Confluent Cloud cluster ID.
                                 type: string
                               gcpServiceAccount:
-                                description: >-
+                                description: |-
                                   The GCP service account to be used for Federated Identity authentication
-
                                   with Confluent Cloud.
                                 type: string
                               identityPoolId:
@@ -289,22 +245,17 @@ spec:
                             type: object
                           type: array
                         platformLogsSettings:
-                          description: >-
+                          description: |-
                             Settings for Platform Logs regarding ingestion to Pub/Sub. If unset,
-
                             no Platform Logs will be generated.'
-
                             Structure is documented below.
                           items:
                             properties:
                               severity:
-                                description: >-
+                                description: |-
                                   The minimum severity level of Platform Logs that will be written. If unspecified,
-
                                   no Platform Logs will be written.
-
                                   Default value is SEVERITY_UNSPECIFIED.
-
                                   Possible values are: SEVERITY_UNSPECIFIED, DISABLED, DEBUG, INFO, WARNING, ERROR.
                                 type: string
                             type: object
@@ -312,15 +263,11 @@ spec:
                       type: object
                     type: array
                   kmsKeyName:
-                    description: >-
+                    description: |-
                       The resource name of the Cloud KMS CryptoKey to be used to protect access
-
                       to messages published on this topic. Your project's PubSub service account
-
                       (service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
-
                       roles/cloudkms.cryptoKeyEncrypterDecrypter to use this feature.
-
                       The expected format is projects/*/locations/*/keyRings/*/cryptoKeys/*
                     type: string
                   kmsKeyNameRef:
@@ -334,26 +281,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -367,9 +308,8 @@ spec:
                     description: Selector for a CryptoKey in kms to populate kmsKeyName.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -382,26 +322,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -416,91 +350,67 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   messageRetentionDuration:
-                    description: >-
+                    description: |-
                       Indicates the minimum duration to retain a message after it is published
-
                       to the topic. If this field is set, messages published to the topic in
-
                       the last messageRetentionDuration are always available to subscribers.
-
                       For instance, it allows any attached subscription to seek to a timestamp
-
                       that is up to messageRetentionDuration in the past. If this field is not
-
                       set, message retention is controlled by settings on individual subscriptions.
-
                       The rotation period has the format of a decimal number, followed by the
-
                       letter s (seconds). Cannot be more than 31 days or less than 10 minutes.
                     type: string
                   messageStoragePolicy:
-                    description: >-
+                    description: |-
                       Policy constraining the set of Google Cloud Platform regions where
-
                       messages published to the topic may be stored. If not present, then no
-
                       constraints are in effect.
-
                       Structure is documented below.
                     items:
                       properties:
                         allowedPersistenceRegions:
-                          description: >-
+                          description: |-
                             A list of IDs of GCP regions where messages that are published to
-
                             the topic may be persisted in storage. Messages published by
-
                             publishers running in non-allowed GCP regions (or running outside
-
                             of GCP altogether) will be routed for storage in one of the
-
                             allowed regions. An empty list means that no regions are allowed,
-
                             and is not a valid configuration.
                           items:
                             type: string
                           type: array
                           x-kubernetes-list-type: set
                         enforceInTransit:
-                          description: >-
+                          description: |-
                             If true, allowedPersistenceRegions is also used to enforce in-transit
-
                             guarantees for messages. That is, Pub/Sub will fail topics.publish
-
                             operations on this topic and subscribe operations on any subscription
-
                             attached to this topic in any region that is not in allowedPersistenceRegions.
                           type: boolean
                       type: object
                     type: array
                   messageTransforms:
-                    description: >-
+                    description: |-
                       Transforms to be applied to messages published to the topic. Transforms are applied in the
-
                       order specified.
-
                       Structure is documented below.
                     items:
                       properties:
                         disabled:
-                          description: >-
+                          description: |-
                             Controls whether or not to use this transform. If not set or false,
-
                             the transform will be applied to messages. Default: true.
                           type: boolean
                         javascriptUdf:
-                          description: >-
+                          description: |-
                             Javascript User Defined Function. If multiple Javascript UDFs are specified on a resource,
-
                             each one must have a unique function_name.
-
                             Structure is documented below.
                           items:
                             properties:
                               code:
-                                description: >-
+                                description: |-
                                   JavaScript code that contains a function function_name with the
-
                                   following signature:
                                 type: string
                               functionName:
@@ -511,95 +421,72 @@ spec:
                       type: object
                     type: array
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   schemaSettings:
-                    description: >-
+                    description: |-
                       Settings for validating messages published against a schema.
-
                       Structure is documented below.
                     items:
                       properties:
                         encoding:
-                          description: >-
+                          description: |-
                             The encoding of messages validated against schema.
-
                             Default value is ENCODING_UNSPECIFIED.
-
                             Possible values are: ENCODING_UNSPECIFIED, JSON, BINARY.
                           type: string
                         schema:
-                          description: >-
+                          description: |-
                             The name of the schema that messages published should be
-
                             validated against. Format is projects/{project}/schemas/{schema}.
-
                             The value of this field will be deleted-schema
-
                             if the schema has been deleted.
                           type: string
                       type: object
                     type: array
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   ingestionDataSourceSettings:
-                    description: >-
+                    description: |-
                       Settings for ingestion from a data source into this topic.
-
                       Structure is documented below.
                     items:
                       properties:
                         awsKinesis:
-                          description: >-
+                          description: |-
                             Settings for ingestion from Amazon Kinesis Data Streams.
-
                             Structure is documented below.
                           items:
                             properties:
                               awsRoleArn:
-                                description: >-
+                                description: |-
                                   AWS role ARN to be used for Federated Identity authentication with
-
                                   MSK. Check the Pub/Sub docs for how to set up this role and the
-
                                   required permissions that need to be attached to it.
                                 type: string
                               consumerArn:
-                                description: >-
+                                description: |-
                                   The Kinesis consumer ARN to used for ingestion in
-
                                   Enhanced Fan-Out mode. The consumer must be already
-
                                   created and ready to be used.
                                 type: string
                               gcpServiceAccount:
-                                description: >-
+                                description: |-
                                   The GCP service account to be used for Federated Identity authentication
-
                                   with Confluent Cloud.
                                 type: string
                               streamArn:
@@ -608,27 +495,23 @@ spec:
                             type: object
                           type: array
                         awsMsk:
-                          description: >-
+                          description: |-
                             Settings for ingestion from Amazon Managed Streaming for Apache Kafka.
-
                             Structure is documented below.
                           items:
                             properties:
                               awsRoleArn:
-                                description: >-
+                                description: |-
                                   AWS role ARN to be used for Federated Identity authentication with
-
                                   MSK. Check the Pub/Sub docs for how to set up this role and the
-
                                   required permissions that need to be attached to it.
                                 type: string
                               clusterArn:
                                 description: ARN that uniquely identifies the MSK cluster.
                                 type: string
                               gcpServiceAccount:
-                                description: >-
+                                description: |-
                                   The GCP service account to be used for Federated Identity authentication
-
                                   with Confluent Cloud.
                                 type: string
                               topic:
@@ -637,9 +520,8 @@ spec:
                             type: object
                           type: array
                         azureEventHubs:
-                          description: >-
+                          description: |-
                             Settings for ingestion from Azure Event Hubs.
-
                             Structure is documented below.
                           items:
                             properties:
@@ -650,9 +532,8 @@ spec:
                                 description: The Azure event hub to ingest data from.
                                 type: string
                               gcpServiceAccount:
-                                description: >-
+                                description: |-
                                   The GCP service account to be used for Federated Identity authentication
-
                                   with Confluent Cloud.
                                 type: string
                               namespace:
@@ -670,73 +551,57 @@ spec:
                             type: object
                           type: array
                         cloudStorage:
-                          description: >-
+                          description: |-
                             Settings for ingestion from Cloud Storage.
-
                             Structure is documented below.
                           items:
                             properties:
                               avroFormat:
-                                description: >-
+                                description: |-
                                   Configuration for reading Cloud Storage data in Avro binary format. The
-
                                   bytes of each object will be set to the data field of a Pub/Sub message.
                                 items:
                                   type: object
                                 type: array
                               bucket:
-                                description: >-
+                                description: |-
                                   Cloud Storage bucket. The bucket name must be without any
-
                                   prefix like "gs://". See the bucket naming requirements:
-
                                   https://cloud.google.com/storage/docs/buckets#naming.
                                 type: string
                               matchGlob:
-                                description: >-
+                                description: |-
                                   Glob pattern used to match objects that will be ingested. If unset, all
-
                                   objects will be ingested. See the supported patterns:
-
                                   https://cloud.google.com/storage/docs/json_api/v1/objects/list#list-objects-and-prefixes-using-glob
                                 type: string
                               minimumObjectCreateTime:
-                                description: >-
+                                description: |-
                                   The timestamp set in RFC3339 text format. If set, only objects with a
-
                                   larger or equal timestamp will be ingested. Unset by default, meaning
-
                                   all objects will be ingested.
                                 type: string
                               pubsubAvroFormat:
-                                description: >-
+                                description: |-
                                   Configuration for reading Cloud Storage data written via Cloud Storage
-
                                   subscriptions(See https://cloud.google.com/pubsub/docs/cloudstorage). The
-
                                   data and attributes fields of the originally exported Pub/Sub message
-
                                   will be restored when publishing.
                                 items:
                                   type: object
                                 type: array
                               textFormat:
-                                description: >-
+                                description: |-
                                   Configuration for reading Cloud Storage data in text format. Each line of
-
                                   text as specified by the delimiter will be set to the data field of a
-
                                   Pub/Sub message.
-
                                   Structure is documented below.
                                 items:
                                   properties:
                                     delimiter:
-                                      description: >-
+                                      description: |-
                                         The delimiter to use when using the 'text' format. Each line of text as
-
                                         specified by the delimiter will be set to the 'data' field of a Pub/Sub
-
                                         message. When unset, '\n' is used.
                                       type: string
                                   type: object
@@ -744,9 +609,8 @@ spec:
                             type: object
                           type: array
                         confluentCloud:
-                          description: >-
+                          description: |-
                             Settings for ingestion from Confluent Cloud.
-
                             Structure is documented below.
                           items:
                             properties:
@@ -757,9 +621,8 @@ spec:
                                 description: The Confluent Cloud cluster ID.
                                 type: string
                               gcpServiceAccount:
-                                description: >-
+                                description: |-
                                   The GCP service account to be used for Federated Identity authentication
-
                                   with Confluent Cloud.
                                 type: string
                               identityPoolId:
@@ -771,22 +634,17 @@ spec:
                             type: object
                           type: array
                         platformLogsSettings:
-                          description: >-
+                          description: |-
                             Settings for Platform Logs regarding ingestion to Pub/Sub. If unset,
-
                             no Platform Logs will be generated.'
-
                             Structure is documented below.
                           items:
                             properties:
                               severity:
-                                description: >-
+                                description: |-
                                   The minimum severity level of Platform Logs that will be written. If unspecified,
-
                                   no Platform Logs will be written.
-
                                   Default value is SEVERITY_UNSPECIFIED.
-
                                   Possible values are: SEVERITY_UNSPECIFIED, DISABLED, DEBUG, INFO, WARNING, ERROR.
                                 type: string
                             type: object
@@ -794,15 +652,11 @@ spec:
                       type: object
                     type: array
                   kmsKeyName:
-                    description: >-
+                    description: |-
                       The resource name of the Cloud KMS CryptoKey to be used to protect access
-
                       to messages published on this topic. Your project's PubSub service account
-
                       (service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
-
                       roles/cloudkms.cryptoKeyEncrypterDecrypter to use this feature.
-
                       The expected format is projects/*/locations/*/keyRings/*/cryptoKeys/*
                     type: string
                   kmsKeyNameRef:
@@ -816,26 +670,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -849,9 +697,8 @@ spec:
                     description: Selector for a CryptoKey in kms to populate kmsKeyName.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -864,26 +711,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -898,91 +739,67 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   messageRetentionDuration:
-                    description: >-
+                    description: |-
                       Indicates the minimum duration to retain a message after it is published
-
                       to the topic. If this field is set, messages published to the topic in
-
                       the last messageRetentionDuration are always available to subscribers.
-
                       For instance, it allows any attached subscription to seek to a timestamp
-
                       that is up to messageRetentionDuration in the past. If this field is not
-
                       set, message retention is controlled by settings on individual subscriptions.
-
                       The rotation period has the format of a decimal number, followed by the
-
                       letter s (seconds). Cannot be more than 31 days or less than 10 minutes.
                     type: string
                   messageStoragePolicy:
-                    description: >-
+                    description: |-
                       Policy constraining the set of Google Cloud Platform regions where
-
                       messages published to the topic may be stored. If not present, then no
-
                       constraints are in effect.
-
                       Structure is documented below.
                     items:
                       properties:
                         allowedPersistenceRegions:
-                          description: >-
+                          description: |-
                             A list of IDs of GCP regions where messages that are published to
-
                             the topic may be persisted in storage. Messages published by
-
                             publishers running in non-allowed GCP regions (or running outside
-
                             of GCP altogether) will be routed for storage in one of the
-
                             allowed regions. An empty list means that no regions are allowed,
-
                             and is not a valid configuration.
                           items:
                             type: string
                           type: array
                           x-kubernetes-list-type: set
                         enforceInTransit:
-                          description: >-
+                          description: |-
                             If true, allowedPersistenceRegions is also used to enforce in-transit
-
                             guarantees for messages. That is, Pub/Sub will fail topics.publish
-
                             operations on this topic and subscribe operations on any subscription
-
                             attached to this topic in any region that is not in allowedPersistenceRegions.
                           type: boolean
                       type: object
                     type: array
                   messageTransforms:
-                    description: >-
+                    description: |-
                       Transforms to be applied to messages published to the topic. Transforms are applied in the
-
                       order specified.
-
                       Structure is documented below.
                     items:
                       properties:
                         disabled:
-                          description: >-
+                          description: |-
                             Controls whether or not to use this transform. If not set or false,
-
                             the transform will be applied to messages. Default: true.
                           type: boolean
                         javascriptUdf:
-                          description: >-
+                          description: |-
                             Javascript User Defined Function. If multiple Javascript UDFs are specified on a resource,
-
                             each one must have a unique function_name.
-
                             Structure is documented below.
                           items:
                             properties:
                               code:
-                                description: >-
+                                description: |-
                                   JavaScript code that contains a function function_name with the
-
                                   following signature:
                                 type: string
                               functionName:
@@ -993,34 +810,27 @@ spec:
                       type: object
                     type: array
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   schemaSettings:
-                    description: >-
+                    description: |-
                       Settings for validating messages published against a schema.
-
                       Structure is documented below.
                     items:
                       properties:
                         encoding:
-                          description: >-
+                          description: |-
                             The encoding of messages validated against schema.
-
                             Default value is ENCODING_UNSPECIFIED.
-
                             Possible values are: ENCODING_UNSPECIFIED, JSON, BINARY.
                           type: string
                         schema:
-                          description: >-
+                          description: |-
                             The name of the schema that messages published should be
-
                             validated against. Format is projects/{project}/schemas/{schema}.
-
                             The value of this field will be deleted-schema
-
                             if the schema has been deleted.
                           type: string
                       type: object
@@ -1029,30 +839,20 @@ spec:
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   This field is planned to replace the DeletionPolicy field in a future
-
                   release. Currently, both could be set independently and non-default
-
                   values would be honored if the feature flag is enabled. If both are
-
                   custom, the DeletionPolicy field will be ignored.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -1066,11 +866,9 @@ spec:
               providerConfigRef:
                 default:
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   name:
@@ -1081,26 +879,20 @@ spec:
                     properties:
                       resolution:
                         default: Required
-                        description: >-
+                        description: |-
                           Resolution specifies whether resolution of this reference is required.
-
                           The default is 'Required', which means the reconcile will fail if the
-
                           reference cannot be resolved. 'Optional' means this reference will be
-
                           a no-op if it cannot be resolved.
                         enum:
                         - Required
                         - Optional
                         type: string
                       resolve:
-                        description: >-
+                        description: |-
                           Resolve specifies when this reference should be resolved. The default
-
                           is 'IfNotPresent', which will attempt to resolve the reference only when
-
                           the corresponding field is not present. Use 'Always' to resolve the
-
                           reference on every reconcile.
                         enum:
                         - Always
@@ -1111,13 +903,10 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   name:
@@ -1148,39 +937,32 @@ spec:
                     description: an identifier for the resource with format projects/{{project}}/topics/{{name}}
                     type: string
                   ingestionDataSourceSettings:
-                    description: >-
+                    description: |-
                       Settings for ingestion from a data source into this topic.
-
                       Structure is documented below.
                     items:
                       properties:
                         awsKinesis:
-                          description: >-
+                          description: |-
                             Settings for ingestion from Amazon Kinesis Data Streams.
-
                             Structure is documented below.
                           items:
                             properties:
                               awsRoleArn:
-                                description: >-
+                                description: |-
                                   AWS role ARN to be used for Federated Identity authentication with
-
                                   MSK. Check the Pub/Sub docs for how to set up this role and the
-
                                   required permissions that need to be attached to it.
                                 type: string
                               consumerArn:
-                                description: >-
+                                description: |-
                                   The Kinesis consumer ARN to used for ingestion in
-
                                   Enhanced Fan-Out mode. The consumer must be already
-
                                   created and ready to be used.
                                 type: string
                               gcpServiceAccount:
-                                description: >-
+                                description: |-
                                   The GCP service account to be used for Federated Identity authentication
-
                                   with Confluent Cloud.
                                 type: string
                               streamArn:
@@ -1189,27 +971,23 @@ spec:
                             type: object
                           type: array
                         awsMsk:
-                          description: >-
+                          description: |-
                             Settings for ingestion from Amazon Managed Streaming for Apache Kafka.
-
                             Structure is documented below.
                           items:
                             properties:
                               awsRoleArn:
-                                description: >-
+                                description: |-
                                   AWS role ARN to be used for Federated Identity authentication with
-
                                   MSK. Check the Pub/Sub docs for how to set up this role and the
-
                                   required permissions that need to be attached to it.
                                 type: string
                               clusterArn:
                                 description: ARN that uniquely identifies the MSK cluster.
                                 type: string
                               gcpServiceAccount:
-                                description: >-
+                                description: |-
                                   The GCP service account to be used for Federated Identity authentication
-
                                   with Confluent Cloud.
                                 type: string
                               topic:
@@ -1218,9 +996,8 @@ spec:
                             type: object
                           type: array
                         azureEventHubs:
-                          description: >-
+                          description: |-
                             Settings for ingestion from Azure Event Hubs.
-
                             Structure is documented below.
                           items:
                             properties:
@@ -1231,9 +1008,8 @@ spec:
                                 description: The Azure event hub to ingest data from.
                                 type: string
                               gcpServiceAccount:
-                                description: >-
+                                description: |-
                                   The GCP service account to be used for Federated Identity authentication
-
                                   with Confluent Cloud.
                                 type: string
                               namespace:
@@ -1251,73 +1027,57 @@ spec:
                             type: object
                           type: array
                         cloudStorage:
-                          description: >-
+                          description: |-
                             Settings for ingestion from Cloud Storage.
-
                             Structure is documented below.
                           items:
                             properties:
                               avroFormat:
-                                description: >-
+                                description: |-
                                   Configuration for reading Cloud Storage data in Avro binary format. The
-
                                   bytes of each object will be set to the data field of a Pub/Sub message.
                                 items:
                                   type: object
                                 type: array
                               bucket:
-                                description: >-
+                                description: |-
                                   Cloud Storage bucket. The bucket name must be without any
-
                                   prefix like "gs://". See the bucket naming requirements:
-
                                   https://cloud.google.com/storage/docs/buckets#naming.
                                 type: string
                               matchGlob:
-                                description: >-
+                                description: |-
                                   Glob pattern used to match objects that will be ingested. If unset, all
-
                                   objects will be ingested. See the supported patterns:
-
                                   https://cloud.google.com/storage/docs/json_api/v1/objects/list#list-objects-and-prefixes-using-glob
                                 type: string
                               minimumObjectCreateTime:
-                                description: >-
+                                description: |-
                                   The timestamp set in RFC3339 text format. If set, only objects with a
-
                                   larger or equal timestamp will be ingested. Unset by default, meaning
-
                                   all objects will be ingested.
                                 type: string
                               pubsubAvroFormat:
-                                description: >-
+                                description: |-
                                   Configuration for reading Cloud Storage data written via Cloud Storage
-
                                   subscriptions(See https://cloud.google.com/pubsub/docs/cloudstorage). The
-
                                   data and attributes fields of the originally exported Pub/Sub message
-
                                   will be restored when publishing.
                                 items:
                                   type: object
                                 type: array
                               textFormat:
-                                description: >-
+                                description: |-
                                   Configuration for reading Cloud Storage data in text format. Each line of
-
                                   text as specified by the delimiter will be set to the data field of a
-
                                   Pub/Sub message.
-
                                   Structure is documented below.
                                 items:
                                   properties:
                                     delimiter:
-                                      description: >-
+                                      description: |-
                                         The delimiter to use when using the 'text' format. Each line of text as
-
                                         specified by the delimiter will be set to the 'data' field of a Pub/Sub
-
                                         message. When unset, '\n' is used.
                                       type: string
                                   type: object
@@ -1325,9 +1085,8 @@ spec:
                             type: object
                           type: array
                         confluentCloud:
-                          description: >-
+                          description: |-
                             Settings for ingestion from Confluent Cloud.
-
                             Structure is documented below.
                           items:
                             properties:
@@ -1338,9 +1097,8 @@ spec:
                                 description: The Confluent Cloud cluster ID.
                                 type: string
                               gcpServiceAccount:
-                                description: >-
+                                description: |-
                                   The GCP service account to be used for Federated Identity authentication
-
                                   with Confluent Cloud.
                                 type: string
                               identityPoolId:
@@ -1352,22 +1110,17 @@ spec:
                             type: object
                           type: array
                         platformLogsSettings:
-                          description: >-
+                          description: |-
                             Settings for Platform Logs regarding ingestion to Pub/Sub. If unset,
-
                             no Platform Logs will be generated.'
-
                             Structure is documented below.
                           items:
                             properties:
                               severity:
-                                description: >-
+                                description: |-
                                   The minimum severity level of Platform Logs that will be written. If unspecified,
-
                                   no Platform Logs will be written.
-
                                   Default value is SEVERITY_UNSPECIFIED.
-
                                   Possible values are: SEVERITY_UNSPECIFIED, DISABLED, DEBUG, INFO, WARNING, ERROR.
                                 type: string
                             type: object
@@ -1375,15 +1128,11 @@ spec:
                       type: object
                     type: array
                   kmsKeyName:
-                    description: >-
+                    description: |-
                       The resource name of the Cloud KMS CryptoKey to be used to protect access
-
                       to messages published on this topic. Your project's PubSub service account
-
                       (service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
-
                       roles/cloudkms.cryptoKeyEncrypterDecrypter to use this feature.
-
                       The expected format is projects/*/locations/*/keyRings/*/cryptoKeys/*
                     type: string
                   labels:
@@ -1393,91 +1142,67 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   messageRetentionDuration:
-                    description: >-
+                    description: |-
                       Indicates the minimum duration to retain a message after it is published
-
                       to the topic. If this field is set, messages published to the topic in
-
                       the last messageRetentionDuration are always available to subscribers.
-
                       For instance, it allows any attached subscription to seek to a timestamp
-
                       that is up to messageRetentionDuration in the past. If this field is not
-
                       set, message retention is controlled by settings on individual subscriptions.
-
                       The rotation period has the format of a decimal number, followed by the
-
                       letter s (seconds). Cannot be more than 31 days or less than 10 minutes.
                     type: string
                   messageStoragePolicy:
-                    description: >-
+                    description: |-
                       Policy constraining the set of Google Cloud Platform regions where
-
                       messages published to the topic may be stored. If not present, then no
-
                       constraints are in effect.
-
                       Structure is documented below.
                     items:
                       properties:
                         allowedPersistenceRegions:
-                          description: >-
+                          description: |-
                             A list of IDs of GCP regions where messages that are published to
-
                             the topic may be persisted in storage. Messages published by
-
                             publishers running in non-allowed GCP regions (or running outside
-
                             of GCP altogether) will be routed for storage in one of the
-
                             allowed regions. An empty list means that no regions are allowed,
-
                             and is not a valid configuration.
                           items:
                             type: string
                           type: array
                           x-kubernetes-list-type: set
                         enforceInTransit:
-                          description: >-
+                          description: |-
                             If true, allowedPersistenceRegions is also used to enforce in-transit
-
                             guarantees for messages. That is, Pub/Sub will fail topics.publish
-
                             operations on this topic and subscribe operations on any subscription
-
                             attached to this topic in any region that is not in allowedPersistenceRegions.
                           type: boolean
                       type: object
                     type: array
                   messageTransforms:
-                    description: >-
+                    description: |-
                       Transforms to be applied to messages published to the topic. Transforms are applied in the
-
                       order specified.
-
                       Structure is documented below.
                     items:
                       properties:
                         disabled:
-                          description: >-
+                          description: |-
                             Controls whether or not to use this transform. If not set or false,
-
                             the transform will be applied to messages. Default: true.
                           type: boolean
                         javascriptUdf:
-                          description: >-
+                          description: |-
                             Javascript User Defined Function. If multiple Javascript UDFs are specified on a resource,
-
                             each one must have a unique function_name.
-
                             Structure is documented below.
                           items:
                             properties:
                               code:
-                                description: >-
+                                description: |-
                                   JavaScript code that contains a function function_name with the
-
                                   following signature:
                                 type: string
                               functionName:
@@ -1488,34 +1213,27 @@ spec:
                       type: object
                     type: array
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   schemaSettings:
-                    description: >-
+                    description: |-
                       Settings for validating messages published against a schema.
-
                       Structure is documented below.
                     items:
                       properties:
                         encoding:
-                          description: >-
+                          description: |-
                             The encoding of messages validated against schema.
-
                             Default value is ENCODING_UNSPECIFIED.
-
                             Possible values are: ENCODING_UNSPECIFIED, JSON, BINARY.
                           type: string
                         schema:
-                          description: >-
+                          description: |-
                             The name of the schema that messages published should be
-
                             validated against. Format is projects/{project}/schemas/{schema}.
-
                             The value of this field will be deleted-schema
-
                             if the schema has been deleted.
                           type: string
                       type: object
@@ -1523,9 +1241,8 @@ spec:
                   terraformLabels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       The combination of labels configured directly on the resource
-
                       and default labels configured on the provider.
                     type: object
                     x-kubernetes-map-type: granular
@@ -1536,24 +1253,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -1564,9 +1277,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -1580,11 +1292,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer
@@ -1615,25 +1325,18 @@ spec:
         description: Topic is the Schema for the Topics API. A named resource to which messages are sent by publishers.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -1643,19 +1346,13 @@ spec:
             properties:
               deletionPolicy:
                 default: Delete
-                description: >-
+                description: |-
                   DeletionPolicy specifies what will happen to the underlying external
-
                   when this managed resource is deleted - either "Delete" or "Orphan" the
-
                   external resource.
-
                   This field is planned to be deprecated in favor of the ManagementPolicies
-
                   field in a future release. Currently, both could be set independently and
-
                   non-default values would be honored if the feature flag is enabled.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
                 enum:
                 - Orphan
@@ -1664,37 +1361,30 @@ spec:
               forProvider:
                 properties:
                   ingestionDataSourceSettings:
-                    description: >-
+                    description: |-
                       Settings for ingestion from a data source into this topic.
-
                       Structure is documented below.
                     properties:
                       awsKinesis:
-                        description: >-
+                        description: |-
                           Settings for ingestion from Amazon Kinesis Data Streams.
-
                           Structure is documented below.
                         properties:
                           awsRoleArn:
-                            description: >-
+                            description: |-
                               AWS role ARN to be used for Federated Identity authentication with
-
                               MSK. Check the Pub/Sub docs for how to set up this role and the
-
                               required permissions that need to be attached to it.
                             type: string
                           consumerArn:
-                            description: >-
+                            description: |-
                               The Kinesis consumer ARN to used for ingestion in
-
                               Enhanced Fan-Out mode. The consumer must be already
-
                               created and ready to be used.
                             type: string
                           gcpServiceAccount:
-                            description: >-
+                            description: |-
                               The GCP service account to be used for Federated Identity authentication
-
                               with Confluent Cloud.
                             type: string
                           streamArn:
@@ -1702,26 +1392,22 @@ spec:
                             type: string
                         type: object
                       awsMsk:
-                        description: >-
+                        description: |-
                           Settings for ingestion from Amazon Managed Streaming for Apache Kafka.
-
                           Structure is documented below.
                         properties:
                           awsRoleArn:
-                            description: >-
+                            description: |-
                               AWS role ARN to be used for Federated Identity authentication with
-
                               MSK. Check the Pub/Sub docs for how to set up this role and the
-
                               required permissions that need to be attached to it.
                             type: string
                           clusterArn:
                             description: ARN that uniquely identifies the MSK cluster.
                             type: string
                           gcpServiceAccount:
-                            description: >-
+                            description: |-
                               The GCP service account to be used for Federated Identity authentication
-
                               with Confluent Cloud.
                             type: string
                           topic:
@@ -1729,9 +1415,8 @@ spec:
                             type: string
                         type: object
                       azureEventHubs:
-                        description: >-
+                        description: |-
                           Settings for ingestion from Azure Event Hubs.
-
                           Structure is documented below.
                         properties:
                           clientId:
@@ -1741,9 +1426,8 @@ spec:
                             description: The Azure event hub to ingest data from.
                             type: string
                           gcpServiceAccount:
-                            description: >-
+                            description: |-
                               The GCP service account to be used for Federated Identity authentication
-
                               with Confluent Cloud.
                             type: string
                           namespace:
@@ -1760,75 +1444,58 @@ spec:
                             type: string
                         type: object
                       cloudStorage:
-                        description: >-
+                        description: |-
                           Settings for ingestion from Cloud Storage.
-
                           Structure is documented below.
                         properties:
                           avroFormat:
-                            description: >-
+                            description: |-
                               Configuration for reading Cloud Storage data in Avro binary format. The
-
                               bytes of each object will be set to the data field of a Pub/Sub message.
                             type: object
                           bucket:
-                            description: >-
+                            description: |-
                               Cloud Storage bucket. The bucket name must be without any
-
                               prefix like "gs://". See the bucket naming requirements:
-
                               https://cloud.google.com/storage/docs/buckets#naming.
                             type: string
                           matchGlob:
-                            description: >-
+                            description: |-
                               Glob pattern used to match objects that will be ingested. If unset, all
-
                               objects will be ingested. See the supported patterns:
-
                               https://cloud.google.com/storage/docs/json_api/v1/objects/list#list-objects-and-prefixes-using-glob
                             type: string
                           minimumObjectCreateTime:
-                            description: >-
+                            description: |-
                               The timestamp set in RFC3339 text format. If set, only objects with a
-
                               larger or equal timestamp will be ingested. Unset by default, meaning
-
                               all objects will be ingested.
                             type: string
                           pubsubAvroFormat:
-                            description: >-
+                            description: |-
                               Configuration for reading Cloud Storage data written via Cloud Storage
-
                               subscriptions(See https://cloud.google.com/pubsub/docs/cloudstorage). The
-
                               data and attributes fields of the originally exported Pub/Sub message
-
                               will be restored when publishing.
                             type: object
                           textFormat:
-                            description: >-
+                            description: |-
                               Configuration for reading Cloud Storage data in text format. Each line of
-
                               text as specified by the delimiter will be set to the data field of a
-
                               Pub/Sub message.
-
                               Structure is documented below.
                             properties:
                               delimiter:
-                                description: >-
+                                description: |-
                                   The delimiter to use when using the 'text' format. Each line of text as
-
                                   specified by the delimiter will be set to the 'data' field of a Pub/Sub
-
                                   message. When unset, '\n' is used.
                                 type: string
                             type: object
                         type: object
                       confluentCloud:
-                        description: >-
+                        description: |-
                           Settings for ingestion from Confluent Cloud.
-
                           Structure is documented below.
                         properties:
                           bootstrapServer:
@@ -1838,9 +1505,8 @@ spec:
                             description: The Confluent Cloud cluster ID.
                             type: string
                           gcpServiceAccount:
-                            description: >-
+                            description: |-
                               The GCP service account to be used for Federated Identity authentication
-
                               with Confluent Cloud.
                             type: string
                           identityPoolId:
@@ -1851,35 +1517,26 @@ spec:
                             type: string
                         type: object
                       platformLogsSettings:
-                        description: >-
+                        description: |-
                           Settings for Platform Logs regarding ingestion to Pub/Sub. If unset,
-
                           no Platform Logs will be generated.'
-
                           Structure is documented below.
                         properties:
                           severity:
-                            description: >-
+                            description: |-
                               The minimum severity level of Platform Logs that will be written. If unspecified,
-
                               no Platform Logs will be written.
-
                               Default value is SEVERITY_UNSPECIFIED.
-
                               Possible values are: SEVERITY_UNSPECIFIED, DISABLED, DEBUG, INFO, WARNING, ERROR.
                             type: string
                         type: object
                     type: object
                   kmsKeyName:
-                    description: >-
+                    description: |-
                       The resource name of the Cloud KMS CryptoKey to be used to protect access
-
                       to messages published on this topic. Your project's PubSub service account
-
                       (service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
-
                       roles/cloudkms.cryptoKeyEncrypterDecrypter to use this feature.
-
                       The expected format is projects/*/locations/*/keyRings/*/cryptoKeys/*
                     type: string
                   kmsKeyNameRef:
@@ -1893,26 +1550,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1926,9 +1577,8 @@ spec:
                     description: Selector for a CryptoKey in kms to populate kmsKeyName.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -1941,26 +1591,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1975,88 +1619,64 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   messageRetentionDuration:
-                    description: >-
+                    description: |-
                       Indicates the minimum duration to retain a message after it is published
-
                       to the topic. If this field is set, messages published to the topic in
-
                       the last messageRetentionDuration are always available to subscribers.
-
                       For instance, it allows any attached subscription to seek to a timestamp
-
                       that is up to messageRetentionDuration in the past. If this field is not
-
                       set, message retention is controlled by settings on individual subscriptions.
-
                       The rotation period has the format of a decimal number, followed by the
-
                       letter s (seconds). Cannot be more than 31 days or less than 10 minutes.
                     type: string
                   messageStoragePolicy:
-                    description: >-
+                    description: |-
                       Policy constraining the set of Google Cloud Platform regions where
-
                       messages published to the topic may be stored. If not present, then no
-
                       constraints are in effect.
-
                       Structure is documented below.
                     properties:
                       allowedPersistenceRegions:
-                        description: >-
+                        description: |-
                           A list of IDs of GCP regions where messages that are published to
-
                           the topic may be persisted in storage. Messages published by
-
                           publishers running in non-allowed GCP regions (or running outside
-
                           of GCP altogether) will be routed for storage in one of the
-
                           allowed regions. An empty list means that no regions are allowed,
-
                           and is not a valid configuration.
                         items:
                           type: string
                         type: array
                         x-kubernetes-list-type: set
                       enforceInTransit:
-                        description: >-
+                        description: |-
                           If true, allowedPersistenceRegions is also used to enforce in-transit
-
                           guarantees for messages. That is, Pub/Sub will fail topics.publish
-
                           operations on this topic and subscribe operations on any subscription
-
                           attached to this topic in any region that is not in allowedPersistenceRegions.
                         type: boolean
                     type: object
                   messageTransforms:
-                    description: >-
+                    description: |-
                       Transforms to be applied to messages published to the topic. Transforms are applied in the
-
                       order specified.
-
                       Structure is documented below.
                     items:
                       properties:
                         disabled:
-                          description: >-
+                          description: |-
                             Controls whether or not to use this transform. If not set or false,
-
                             the transform will be applied to messages. Default: true.
                           type: boolean
                         javascriptUdf:
-                          description: >-
+                          description: |-
                             Javascript User Defined Function. If multiple Javascript UDFs are specified on a resource,
-
                             each one must have a unique function_name.
-
                             Structure is documented below.
                           properties:
                             code:
-                              description: >-
+                              description: |-
                                 JavaScript code that contains a function function_name with the
-
                                 following signature:
                               type: string
                             functionName:
@@ -2066,91 +1686,68 @@ spec:
                       type: object
                     type: array
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   schemaSettings:
-                    description: >-
+                    description: |-
                       Settings for validating messages published against a schema.
-
                       Structure is documented below.
                     properties:
                       encoding:
-                        description: >-
+                        description: |-
                           The encoding of messages validated against schema.
-
                           Default value is ENCODING_UNSPECIFIED.
-
                           Possible values are: ENCODING_UNSPECIFIED, JSON, BINARY.
                         type: string
                       schema:
-                        description: >-
+                        description: |-
                           The name of the schema that messages published should be
-
                           validated against. Format is projects/{project}/schemas/{schema}.
-
                           The value of this field will be deleted-schema
-
                           if the schema has been deleted.
                         type: string
                     type: object
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   ingestionDataSourceSettings:
-                    description: >-
+                    description: |-
                       Settings for ingestion from a data source into this topic.
-
                       Structure is documented below.
                     properties:
                       awsKinesis:
-                        description: >-
+                        description: |-
                           Settings for ingestion from Amazon Kinesis Data Streams.
-
                           Structure is documented below.
                         properties:
                           awsRoleArn:
-                            description: >-
+                            description: |-
                               AWS role ARN to be used for Federated Identity authentication with
-
                               MSK. Check the Pub/Sub docs for how to set up this role and the
-
                               required permissions that need to be attached to it.
                             type: string
                           consumerArn:
-                            description: >-
+                            description: |-
                               The Kinesis consumer ARN to used for ingestion in
-
                               Enhanced Fan-Out mode. The consumer must be already
-
                               created and ready to be used.
                             type: string
                           gcpServiceAccount:
-                            description: >-
+                            description: |-
                               The GCP service account to be used for Federated Identity authentication
-
                               with Confluent Cloud.
                             type: string
                           streamArn:
@@ -2158,26 +1755,22 @@ spec:
                             type: string
                         type: object
                       awsMsk:
-                        description: >-
+                        description: |-
                           Settings for ingestion from Amazon Managed Streaming for Apache Kafka.
-
                           Structure is documented below.
                         properties:
                           awsRoleArn:
-                            description: >-
+                            description: |-
                               AWS role ARN to be used for Federated Identity authentication with
-
                               MSK. Check the Pub/Sub docs for how to set up this role and the
-
                               required permissions that need to be attached to it.
                             type: string
                           clusterArn:
                             description: ARN that uniquely identifies the MSK cluster.
                             type: string
                           gcpServiceAccount:
-                            description: >-
+                            description: |-
                               The GCP service account to be used for Federated Identity authentication
-
                               with Confluent Cloud.
                             type: string
                           topic:
@@ -2185,9 +1778,8 @@ spec:
                             type: string
                         type: object
                       azureEventHubs:
-                        description: >-
+                        description: |-
                           Settings for ingestion from Azure Event Hubs.
-
                           Structure is documented below.
                         properties:
                           clientId:
@@ -2197,9 +1789,8 @@ spec:
                             description: The Azure event hub to ingest data from.
                             type: string
                           gcpServiceAccount:
-                            description: >-
+                            description: |-
                               The GCP service account to be used for Federated Identity authentication
-
                               with Confluent Cloud.
                             type: string
                           namespace:
@@ -2216,75 +1807,58 @@ spec:
                             type: string
                         type: object
                       cloudStorage:
-                        description: >-
+                        description: |-
                           Settings for ingestion from Cloud Storage.
-
                           Structure is documented below.
                         properties:
                           avroFormat:
-                            description: >-
+                            description: |-
                               Configuration for reading Cloud Storage data in Avro binary format. The
-
                               bytes of each object will be set to the data field of a Pub/Sub message.
                             type: object
                           bucket:
-                            description: >-
+                            description: |-
                               Cloud Storage bucket. The bucket name must be without any
-
                               prefix like "gs://". See the bucket naming requirements:
-
                               https://cloud.google.com/storage/docs/buckets#naming.
                             type: string
                           matchGlob:
-                            description: >-
+                            description: |-
                               Glob pattern used to match objects that will be ingested. If unset, all
-
                               objects will be ingested. See the supported patterns:
-
                               https://cloud.google.com/storage/docs/json_api/v1/objects/list#list-objects-and-prefixes-using-glob
                             type: string
                           minimumObjectCreateTime:
-                            description: >-
+                            description: |-
                               The timestamp set in RFC3339 text format. If set, only objects with a
-
                               larger or equal timestamp will be ingested. Unset by default, meaning
-
                               all objects will be ingested.
                             type: string
                           pubsubAvroFormat:
-                            description: >-
+                            description: |-
                               Configuration for reading Cloud Storage data written via Cloud Storage
-
                               subscriptions(See https://cloud.google.com/pubsub/docs/cloudstorage). The
-
                               data and attributes fields of the originally exported Pub/Sub message
-
                               will be restored when publishing.
                             type: object
                           textFormat:
-                            description: >-
+                            description: |-
                               Configuration for reading Cloud Storage data in text format. Each line of
-
                               text as specified by the delimiter will be set to the data field of a
-
                               Pub/Sub message.
-
                               Structure is documented below.
                             properties:
                               delimiter:
-                                description: >-
+                                description: |-
                                   The delimiter to use when using the 'text' format. Each line of text as
-
                                   specified by the delimiter will be set to the 'data' field of a Pub/Sub
-
                                   message. When unset, '\n' is used.
                                 type: string
                             type: object
                         type: object
                       confluentCloud:
-                        description: >-
+                        description: |-
                           Settings for ingestion from Confluent Cloud.
-
                           Structure is documented below.
                         properties:
                           bootstrapServer:
@@ -2294,9 +1868,8 @@ spec:
                             description: The Confluent Cloud cluster ID.
                             type: string
                           gcpServiceAccount:
-                            description: >-
+                            description: |-
                               The GCP service account to be used for Federated Identity authentication
-
                               with Confluent Cloud.
                             type: string
                           identityPoolId:
@@ -2307,35 +1880,26 @@ spec:
                             type: string
                         type: object
                       platformLogsSettings:
-                        description: >-
+                        description: |-
                           Settings for Platform Logs regarding ingestion to Pub/Sub. If unset,
-
                           no Platform Logs will be generated.'
-
                           Structure is documented below.
                         properties:
                           severity:
-                            description: >-
+                            description: |-
                               The minimum severity level of Platform Logs that will be written. If unspecified,
-
                               no Platform Logs will be written.
-
                               Default value is SEVERITY_UNSPECIFIED.
-
                               Possible values are: SEVERITY_UNSPECIFIED, DISABLED, DEBUG, INFO, WARNING, ERROR.
                             type: string
                         type: object
                     type: object
                   kmsKeyName:
-                    description: >-
+                    description: |-
                       The resource name of the Cloud KMS CryptoKey to be used to protect access
-
                       to messages published on this topic. Your project's PubSub service account
-
                       (service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
-
                       roles/cloudkms.cryptoKeyEncrypterDecrypter to use this feature.
-
                       The expected format is projects/*/locations/*/keyRings/*/cryptoKeys/*
                     type: string
                   kmsKeyNameRef:
@@ -2349,26 +1913,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -2382,9 +1940,8 @@ spec:
                     description: Selector for a CryptoKey in kms to populate kmsKeyName.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -2397,26 +1954,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -2431,88 +1982,64 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   messageRetentionDuration:
-                    description: >-
+                    description: |-
                       Indicates the minimum duration to retain a message after it is published
-
                       to the topic. If this field is set, messages published to the topic in
-
                       the last messageRetentionDuration are always available to subscribers.
-
                       For instance, it allows any attached subscription to seek to a timestamp
-
                       that is up to messageRetentionDuration in the past. If this field is not
-
                       set, message retention is controlled by settings on individual subscriptions.
-
                       The rotation period has the format of a decimal number, followed by the
-
                       letter s (seconds). Cannot be more than 31 days or less than 10 minutes.
                     type: string
                   messageStoragePolicy:
-                    description: >-
+                    description: |-
                       Policy constraining the set of Google Cloud Platform regions where
-
                       messages published to the topic may be stored. If not present, then no
-
                       constraints are in effect.
-
                       Structure is documented below.
                     properties:
                       allowedPersistenceRegions:
-                        description: >-
+                        description: |-
                           A list of IDs of GCP regions where messages that are published to
-
                           the topic may be persisted in storage. Messages published by
-
                           publishers running in non-allowed GCP regions (or running outside
-
                           of GCP altogether) will be routed for storage in one of the
-
                           allowed regions. An empty list means that no regions are allowed,
-
                           and is not a valid configuration.
                         items:
                           type: string
                         type: array
                         x-kubernetes-list-type: set
                       enforceInTransit:
-                        description: >-
+                        description: |-
                           If true, allowedPersistenceRegions is also used to enforce in-transit
-
                           guarantees for messages. That is, Pub/Sub will fail topics.publish
-
                           operations on this topic and subscribe operations on any subscription
-
                           attached to this topic in any region that is not in allowedPersistenceRegions.
                         type: boolean
                     type: object
                   messageTransforms:
-                    description: >-
+                    description: |-
                       Transforms to be applied to messages published to the topic. Transforms are applied in the
-
                       order specified.
-
                       Structure is documented below.
                     items:
                       properties:
                         disabled:
-                          description: >-
+                          description: |-
                             Controls whether or not to use this transform. If not set or false,
-
                             the transform will be applied to messages. Default: true.
                           type: boolean
                         javascriptUdf:
-                          description: >-
+                          description: |-
                             Javascript User Defined Function. If multiple Javascript UDFs are specified on a resource,
-
                             each one must have a unique function_name.
-
                             Structure is documented below.
                           properties:
                             code:
-                              description: >-
+                              description: |-
                                 JavaScript code that contains a function function_name with the
-
                                 following signature:
                               type: string
                             functionName:
@@ -2522,33 +2049,26 @@ spec:
                       type: object
                     type: array
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   schemaSettings:
-                    description: >-
+                    description: |-
                       Settings for validating messages published against a schema.
-
                       Structure is documented below.
                     properties:
                       encoding:
-                        description: >-
+                        description: |-
                           The encoding of messages validated against schema.
-
                           Default value is ENCODING_UNSPECIFIED.
-
                           Possible values are: ENCODING_UNSPECIFIED, JSON, BINARY.
                         type: string
                       schema:
-                        description: >-
+                        description: |-
                           The name of the schema that messages published should be
-
                           validated against. Format is projects/{project}/schemas/{schema}.
-
                           The value of this field will be deleted-schema
-
                           if the schema has been deleted.
                         type: string
                     type: object
@@ -2556,30 +2076,20 @@ spec:
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   This field is planned to replace the DeletionPolicy field in a future
-
                   release. Currently, both could be set independently and non-default
-
                   values would be honored if the feature flag is enabled. If both are
-
                   custom, the DeletionPolicy field will be ignored.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -2593,11 +2103,9 @@ spec:
               providerConfigRef:
                 default:
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   name:
@@ -2608,26 +2116,20 @@ spec:
                     properties:
                       resolution:
                         default: Required
-                        description: >-
+                        description: |-
                           Resolution specifies whether resolution of this reference is required.
-
                           The default is 'Required', which means the reconcile will fail if the
-
                           reference cannot be resolved. 'Optional' means this reference will be
-
                           a no-op if it cannot be resolved.
                         enum:
                         - Required
                         - Optional
                         type: string
                       resolve:
-                        description: >-
+                        description: |-
                           Resolve specifies when this reference should be resolved. The default
-
                           is 'IfNotPresent', which will attempt to resolve the reference only when
-
                           the corresponding field is not present. Use 'Always' to resolve the
-
                           reference on every reconcile.
                         enum:
                         - Always
@@ -2638,13 +2140,10 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   name:
@@ -2675,37 +2174,30 @@ spec:
                     description: an identifier for the resource with format projects/{{project}}/topics/{{name}}
                     type: string
                   ingestionDataSourceSettings:
-                    description: >-
+                    description: |-
                       Settings for ingestion from a data source into this topic.
-
                       Structure is documented below.
                     properties:
                       awsKinesis:
-                        description: >-
+                        description: |-
                           Settings for ingestion from Amazon Kinesis Data Streams.
-
                           Structure is documented below.
                         properties:
                           awsRoleArn:
-                            description: >-
+                            description: |-
                               AWS role ARN to be used for Federated Identity authentication with
-
                               MSK. Check the Pub/Sub docs for how to set up this role and the
-
                               required permissions that need to be attached to it.
                             type: string
                           consumerArn:
-                            description: >-
+                            description: |-
                               The Kinesis consumer ARN to used for ingestion in
-
                               Enhanced Fan-Out mode. The consumer must be already
-
                               created and ready to be used.
                             type: string
                           gcpServiceAccount:
-                            description: >-
+                            description: |-
                               The GCP service account to be used for Federated Identity authentication
-
                               with Confluent Cloud.
                             type: string
                           streamArn:
@@ -2713,26 +2205,22 @@ spec:
                             type: string
                         type: object
                       awsMsk:
-                        description: >-
+                        description: |-
                           Settings for ingestion from Amazon Managed Streaming for Apache Kafka.
-
                           Structure is documented below.
                         properties:
                           awsRoleArn:
-                            description: >-
+                            description: |-
                               AWS role ARN to be used for Federated Identity authentication with
-
                               MSK. Check the Pub/Sub docs for how to set up this role and the
-
                               required permissions that need to be attached to it.
                             type: string
                           clusterArn:
                             description: ARN that uniquely identifies the MSK cluster.
                             type: string
                           gcpServiceAccount:
-                            description: >-
+                            description: |-
                               The GCP service account to be used for Federated Identity authentication
-
                               with Confluent Cloud.
                             type: string
                           topic:
@@ -2740,9 +2228,8 @@ spec:
                             type: string
                         type: object
                       azureEventHubs:
-                        description: >-
+                        description: |-
                           Settings for ingestion from Azure Event Hubs.
-
                           Structure is documented below.
                         properties:
                           clientId:
@@ -2752,9 +2239,8 @@ spec:
                             description: The Azure event hub to ingest data from.
                             type: string
                           gcpServiceAccount:
-                            description: >-
+                            description: |-
                               The GCP service account to be used for Federated Identity authentication
-
                               with Confluent Cloud.
                             type: string
                           namespace:
@@ -2771,75 +2257,58 @@ spec:
                             type: string
                         type: object
                       cloudStorage:
-                        description: >-
+                        description: |-
                           Settings for ingestion from Cloud Storage.
-
                           Structure is documented below.
                         properties:
                           avroFormat:
-                            description: >-
+                            description: |-
                               Configuration for reading Cloud Storage data in Avro binary format. The
-
                               bytes of each object will be set to the data field of a Pub/Sub message.
                             type: object
                           bucket:
-                            description: >-
+                            description: |-
                               Cloud Storage bucket. The bucket name must be without any
-
                               prefix like "gs://". See the bucket naming requirements:
-
                               https://cloud.google.com/storage/docs/buckets#naming.
                             type: string
                           matchGlob:
-                            description: >-
+                            description: |-
                               Glob pattern used to match objects that will be ingested. If unset, all
-
                               objects will be ingested. See the supported patterns:
-
                               https://cloud.google.com/storage/docs/json_api/v1/objects/list#list-objects-and-prefixes-using-glob
                             type: string
                           minimumObjectCreateTime:
-                            description: >-
+                            description: |-
                               The timestamp set in RFC3339 text format. If set, only objects with a
-
                               larger or equal timestamp will be ingested. Unset by default, meaning
-
                               all objects will be ingested.
                             type: string
                           pubsubAvroFormat:
-                            description: >-
+                            description: |-
                               Configuration for reading Cloud Storage data written via Cloud Storage
-
                               subscriptions(See https://cloud.google.com/pubsub/docs/cloudstorage). The
-
                               data and attributes fields of the originally exported Pub/Sub message
-
                               will be restored when publishing.
                             type: object
                           textFormat:
-                            description: >-
+                            description: |-
                               Configuration for reading Cloud Storage data in text format. Each line of
-
                               text as specified by the delimiter will be set to the data field of a
-
                               Pub/Sub message.
-
                               Structure is documented below.
                             properties:
                               delimiter:
-                                description: >-
+                                description: |-
                                   The delimiter to use when using the 'text' format. Each line of text as
-
                                   specified by the delimiter will be set to the 'data' field of a Pub/Sub
-
                                   message. When unset, '\n' is used.
                                 type: string
                             type: object
                         type: object
                       confluentCloud:
-                        description: >-
+                        description: |-
                           Settings for ingestion from Confluent Cloud.
-
                           Structure is documented below.
                         properties:
                           bootstrapServer:
@@ -2849,9 +2318,8 @@ spec:
                             description: The Confluent Cloud cluster ID.
                             type: string
                           gcpServiceAccount:
-                            description: >-
+                            description: |-
                               The GCP service account to be used for Federated Identity authentication
-
                               with Confluent Cloud.
                             type: string
                           identityPoolId:
@@ -2862,35 +2330,26 @@ spec:
                             type: string
                         type: object
                       platformLogsSettings:
-                        description: >-
+                        description: |-
                           Settings for Platform Logs regarding ingestion to Pub/Sub. If unset,
-
                           no Platform Logs will be generated.'
-
                           Structure is documented below.
                         properties:
                           severity:
-                            description: >-
+                            description: |-
                               The minimum severity level of Platform Logs that will be written. If unspecified,
-
                               no Platform Logs will be written.
-
                               Default value is SEVERITY_UNSPECIFIED.
-
                               Possible values are: SEVERITY_UNSPECIFIED, DISABLED, DEBUG, INFO, WARNING, ERROR.
                             type: string
                         type: object
                     type: object
                   kmsKeyName:
-                    description: >-
+                    description: |-
                       The resource name of the Cloud KMS CryptoKey to be used to protect access
-
                       to messages published on this topic. Your project's PubSub service account
-
                       (service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
-
                       roles/cloudkms.cryptoKeyEncrypterDecrypter to use this feature.
-
                       The expected format is projects/*/locations/*/keyRings/*/cryptoKeys/*
                     type: string
                   labels:
@@ -2900,88 +2359,64 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   messageRetentionDuration:
-                    description: >-
+                    description: |-
                       Indicates the minimum duration to retain a message after it is published
-
                       to the topic. If this field is set, messages published to the topic in
-
                       the last messageRetentionDuration are always available to subscribers.
-
                       For instance, it allows any attached subscription to seek to a timestamp
-
                       that is up to messageRetentionDuration in the past. If this field is not
-
                       set, message retention is controlled by settings on individual subscriptions.
-
                       The rotation period has the format of a decimal number, followed by the
-
                       letter s (seconds). Cannot be more than 31 days or less than 10 minutes.
                     type: string
                   messageStoragePolicy:
-                    description: >-
+                    description: |-
                       Policy constraining the set of Google Cloud Platform regions where
-
                       messages published to the topic may be stored. If not present, then no
-
                       constraints are in effect.
-
                       Structure is documented below.
                     properties:
                       allowedPersistenceRegions:
-                        description: >-
+                        description: |-
                           A list of IDs of GCP regions where messages that are published to
-
                           the topic may be persisted in storage. Messages published by
-
                           publishers running in non-allowed GCP regions (or running outside
-
                           of GCP altogether) will be routed for storage in one of the
-
                           allowed regions. An empty list means that no regions are allowed,
-
                           and is not a valid configuration.
                         items:
                           type: string
                         type: array
                         x-kubernetes-list-type: set
                       enforceInTransit:
-                        description: >-
+                        description: |-
                           If true, allowedPersistenceRegions is also used to enforce in-transit
-
                           guarantees for messages. That is, Pub/Sub will fail topics.publish
-
                           operations on this topic and subscribe operations on any subscription
-
                           attached to this topic in any region that is not in allowedPersistenceRegions.
                         type: boolean
                     type: object
                   messageTransforms:
-                    description: >-
+                    description: |-
                       Transforms to be applied to messages published to the topic. Transforms are applied in the
-
                       order specified.
-
                       Structure is documented below.
                     items:
                       properties:
                         disabled:
-                          description: >-
+                          description: |-
                             Controls whether or not to use this transform. If not set or false,
-
                             the transform will be applied to messages. Default: true.
                           type: boolean
                         javascriptUdf:
-                          description: >-
+                          description: |-
                             Javascript User Defined Function. If multiple Javascript UDFs are specified on a resource,
-
                             each one must have a unique function_name.
-
                             Structure is documented below.
                           properties:
                             code:
-                              description: >-
+                              description: |-
                                 JavaScript code that contains a function function_name with the
-
                                 following signature:
                               type: string
                             functionName:
@@ -2991,42 +2426,34 @@ spec:
                       type: object
                     type: array
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   schemaSettings:
-                    description: >-
+                    description: |-
                       Settings for validating messages published against a schema.
-
                       Structure is documented below.
                     properties:
                       encoding:
-                        description: >-
+                        description: |-
                           The encoding of messages validated against schema.
-
                           Default value is ENCODING_UNSPECIFIED.
-
                           Possible values are: ENCODING_UNSPECIFIED, JSON, BINARY.
                         type: string
                       schema:
-                        description: >-
+                        description: |-
                           The name of the schema that messages published should be
-
                           validated against. Format is projects/{project}/schemas/{schema}.
-
                           The value of this field will be deleted-schema
-
                           if the schema has been deleted.
                         type: string
                     type: object
                   terraformLabels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       The combination of labels configured directly on the resource
-
                       and default labels configured on the provider.
                     type: object
                     x-kubernetes-map-type: granular
@@ -3037,24 +2464,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -3065,9 +2488,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -3081,11 +2503,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer

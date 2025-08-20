@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: alpha
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: firebasehostingchannels.firebasehosting.cnrm.cloud.google.com
 spec:
   group: firebasehosting.cnrm.cloud.google.com
@@ -54,31 +53,26 @@ spec:
           spec:
             properties:
               expireTime:
-                description: >-
+                description: |-
                   The time at which the channel will be automatically deleted. If null, the channel
-
                   will not be automatically deleted. This field is present in the output whether it's
-
                   set directly or via the 'ttl' field.
                 type: string
               resourceID:
                 description: Immutable. Optional. The channelId of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.
                 type: string
               retainedReleaseCount:
-                description: >-
+                description: |-
                   The number of previous releases to retain on the channel for rollback or other
-
                   purposes. Must be a number between 1-100. Defaults to 10 for new channels.
                 type: integer
               siteId:
                 description: Immutable. Required. The ID of the site in which to create this channel.
                 type: string
               ttl:
-                description: >-
+                description: |-
                   Immutable. Input only. A time-to-live for this channel. Sets 'expire_time' to the provided
-
                   duration past the time of the request. A duration in seconds with up to nine fractional
-
                   digits, terminated by 's'. Example: "86400s" (one day).
                 type: string
             required:
@@ -108,9 +102,8 @@ spec:
                   type: object
                 type: array
               name:
-                description: >-
+                description: |-
                   The fully-qualified resource name for the channel, in the format:
-
                   sites/SITE_ID/channels/CHANNEL_ID.
                 type: string
               observedGeneration:
@@ -126,7 +119,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

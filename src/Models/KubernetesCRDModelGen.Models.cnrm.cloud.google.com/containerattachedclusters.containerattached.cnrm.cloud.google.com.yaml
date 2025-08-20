@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: containerattachedclusters.containerattached.cnrm.cloud.google.com
 spec:
   group: containerattached.cnrm.cloud.google.com
@@ -59,7 +58,7 @@ spec:
               annotations:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   Optional. Annotations on the cluster.
 
                    This field has the same restrictions as Kubernetes annotations.
@@ -74,7 +73,7 @@ spec:
                 description: Optional. Configuration related to the cluster RBAC settings.
                 properties:
                   adminUsers:
-                    description: >-
+                    description: |-
                       Optional. Users that can perform operations as a cluster admin. A managed
                        ClusterRoleBinding will be created to grant the `cluster-admin` ClusterRole
                        to the users. Up to ten admin users can be provided.
@@ -99,7 +98,7 @@ spec:
                 description: Optional. A human readable description of this Attached cluster. Cannot be longer than 255 UTF-8 encoded bytes.
                 type: string
               distribution:
-                description: >-
+                description: |-
                   Immutable. The Kubernetes distribution of the underlying attached cluster.
 
                    Supported values: ["eks", "aks", "generic"].
@@ -111,7 +110,7 @@ spec:
                 description: Required. Fleet configuration.
                 properties:
                   membership:
-                    description: >-
+                    description: |-
                       Output only. The name of the managed Hub Membership resource associated to
                        this cluster.
 
@@ -179,23 +178,16 @@ spec:
                     type: object
                 type: object
               oidcConfig:
-                description: >-
+                description: |-
                   Required. OpenID Connect (OIDC) discovery information of the target cluster.
 
-
                   Kubernetes Service Account (KSA) tokens are JWT tokens signed by the cluster
-
                   API server. This field indicates how GCP services	validate KSA tokens in order
-
                   to allow system workloads (such as GKE Connect and telemetry agents) to
-
                   authenticate back to GCP.
 
-
                   Both clusters with public and private issuer URLs are supported.
-
                   Clusters with public issuers only need to specify the 'issuerUrl' field
-
                   while clusters with private issuers need to provide both 'issuerUrl' and 'jwks'.
                 properties:
                   issuerUrl:
@@ -205,7 +197,7 @@ spec:
                     - message: IssuerURL field is immutable
                       rule: self == oldSelf
                   jwks:
-                    description: >-
+                    description: |-
                       Immutable, Optional. OIDC verification keys in JWKS format (RFC 7517).
                        It contains a list of OIDC verification keys that can be used to verify
                        OIDC JWTs.
@@ -272,7 +264,7 @@ spec:
             description: ContainerAttachedClusterStatus defines the config connector machine state of ContainerAttachedCluster
             properties:
               clusterRegion:
-                description: >-
+                description: |-
                   The region where this cluster runs.
 
                    For EKS clusters, this is an AWS region. For AKS clusters,
@@ -322,7 +314,7 @@ spec:
                 description: ObservedState is the state of the resource as most recently observed in GCP.
                 properties:
                   fleetMembership:
-                    description: >-
+                    description: |-
                       Output only. The name of the managed Hub Membership resource associated to
                        this cluster.
 
@@ -368,7 +360,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

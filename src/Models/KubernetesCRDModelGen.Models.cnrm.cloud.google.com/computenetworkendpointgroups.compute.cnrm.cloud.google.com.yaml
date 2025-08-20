@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: computenetworkendpointgroups.compute.cnrm.cloud.google.com
 spec:
   group: compute.cnrm.cloud.google.com
@@ -54,43 +53,33 @@ spec:
           spec:
             properties:
               defaultPort:
-                description: >-
+                description: |-
                   Immutable. The default port used if the port number is not specified in the
-
                   network endpoint.
                 type: integer
               description:
-                description: >-
+                description: |-
                   Immutable. An optional description of this resource. Provide this property when
-
                   you create the resource.
                 type: string
               location:
                 description: 'Location represents the geographical location of the ComputeNetworkEndpointGroup. Specify a zone name. Reference: GCP definition of regions/zones (https://cloud.google.com/compute/docs/regions-zones/)'
                 type: string
               networkEndpointType:
-                description: >-
+                description: |-
                   Immutable. Type of network endpoints in this network endpoint group.
-
                   NON_GCP_PRIVATE_IP_PORT is used for hybrid connectivity network
-
                   endpoint groups (see https://cloud.google.com/load-balancing/docs/hybrid).
-
                   Note that NON_GCP_PRIVATE_IP_PORT can only be used with Backend Services
-
                   that 1) have the following load balancing schemes: EXTERNAL, EXTERNAL_MANAGED,
-
                   INTERNAL_MANAGED, and INTERNAL_SELF_MANAGED and 2) support the RATE or
-
                   CONNECTION balancing modes.
-
 
                   Possible values include: GCE_VM_IP, GCE_VM_IP_PORT, and NON_GCP_PRIVATE_IP_PORT. Default value: "GCE_VM_IP_PORT" Possible values: ["GCE_VM_IP", "GCE_VM_IP_PORT", "NON_GCP_PRIVATE_IP_PORT"].
                 type: string
               networkRef:
-                description: >-
+                description: |-
                   The network to which all network endpoints in the NEG belong. Uses
-
                   "default" project network if unspecified.
                 oneOf:
                 - not:
@@ -192,7 +181,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

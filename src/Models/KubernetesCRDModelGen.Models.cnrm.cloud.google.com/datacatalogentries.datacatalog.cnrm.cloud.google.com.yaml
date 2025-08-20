@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: datacatalogentries.datacatalog.cnrm.cloud.google.com
 spec:
   group: datacatalog.cnrm.cloud.google.com
@@ -77,7 +76,7 @@ spec:
                     description: Entry overview fields for rich text descriptions of entries.
                     properties:
                       overview:
-                        description: >-
+                        description: |-
                           Entry overview with support for rich text.
 
                            The overview must only contain Unicode characters, and should be
@@ -158,7 +157,7 @@ spec:
                     type: object
                 type: object
               description:
-                description: >-
+                description: |-
                   Entry description that can consist of several sentences or paragraphs
                    that describe entry contents.
 
@@ -169,7 +168,7 @@ spec:
                    Default value is an empty string.
                 type: string
               displayName:
-                description: >-
+                description: |-
                   Display name of an entry.
 
                    The maximum size is 500 bytes when encoded in UTF-8.
@@ -264,7 +263,7 @@ spec:
                 description: Specification that applies to a Cloud Storage fileset. Valid only for entries with the `FILESET` type.
                 properties:
                   filePatterns:
-                    description: >-
+                    description: |-
                       Required. Patterns to identify a set of files in Google Cloud Storage.
 
                        For more information, see [Wildcard Names]
@@ -303,7 +302,7 @@ spec:
               labels:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   Cloud labels attached to the entry.
 
                    In Data Catalog, you can create and modify labels attached only to custom
@@ -383,7 +382,7 @@ spec:
                     description: The body of the routine.
                     type: string
                   language:
-                    description: >-
+                    description: |-
                       The language the routine is written in. The exact value depends on the
                        source system. For BigQuery routines, possible values are:
 
@@ -416,7 +415,7 @@ spec:
                 description: Schema of the entry. An entry might not have any schema attached to it.
                 properties:
                   columns:
-                    description: >-
+                    description: |-
                       The unified GoogleSQL-like schema of columns.
 
                        The overall maximum number of columns and nested columns is 10,000.
@@ -424,7 +423,7 @@ spec:
                     items:
                       properties:
                         column:
-                          description: >-
+                          description: |-
                             Required. Name of the column.
 
                              Must be a UTF-8 string without dots (.).
@@ -434,7 +433,7 @@ spec:
                           description: Optional. Default value for the column.
                           type: string
                         description:
-                          description: >-
+                          description: |-
                             Optional. Description of the column. Default value is an empty string.
 
                              The description must be a UTF-8 string with the maximum size of 2000
@@ -454,7 +453,7 @@ spec:
                               type: string
                           type: object
                         mode:
-                          description: >-
+                          description: |-
                             Optional. A column's mode indicates whether values in this column are
                              required, nullable, or repeated.
 
@@ -478,7 +477,7 @@ spec:
                           description: Optional. Schema of sub-columns. A column can have zero or more sub-columns.
                           x-kubernetes-preserve-unknown-fields: true
                         type:
-                          description: >-
+                          description: |-
                             Required. Type of the column.
 
                              Must be a UTF-8 string with the maximum size of 128 bytes.
@@ -516,7 +515,7 @@ spec:
                     type: object
                 type: object
               sourceSystemTimestamps:
-                description: >-
+                description: |-
                   Timestamps from the underlying resource, not from the Data Catalog
                    entry.
 
@@ -528,7 +527,7 @@ spec:
                     description: Creation timestamp of the resource within the given system.
                     type: string
                   updateTime:
-                    description: >-
+                    description: |-
                       Timestamp of the last modification of the resource or its metadata within
                        a given system.
 
@@ -552,7 +551,7 @@ spec:
                     type: string
                 type: object
               type:
-                description: >-
+                description: |-
                   The type of the entry.
 
                    For details, see [`EntryType`](#entrytype).
@@ -569,7 +568,7 @@ spec:
                     type: string
                 type: object
               userSpecifiedSystem:
-                description: >-
+                description: |-
                   Indicates the entry's source system that Data Catalog doesn't
                    automatically integrate with.
 
@@ -581,7 +580,7 @@ spec:
                    * Must be at least 1 character and at most 64 characters long.
                 type: string
               userSpecifiedType:
-                description: >-
+                description: |-
                   Custom entry type that doesn't match any of the values allowed for input
                    and listed in the `EntryType` enum.
 
@@ -634,7 +633,7 @@ spec:
                 description: ObservedState is the state of the resource as most recently observed in GCP.
                 properties:
                   bigqueryDateShardedSpec:
-                    description: >-
+                    description: |-
                       Output only. Specification for a group of BigQuery tables with
                        the `[prefix]YYYYMMDD` name pattern.
 
@@ -642,7 +641,7 @@ spec:
                        (https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding).
                     properties:
                       dataset:
-                        description: >-
+                        description: |-
                           Output only. The Data Catalog resource name of the dataset entry the
                            current table belongs to. For example:
 
@@ -656,7 +655,7 @@ spec:
                         format: int64
                         type: integer
                       tablePrefix:
-                        description: >-
+                        description: |-
                           Output only. The table name prefix of the shards.
 
                            The name of any given shard is `[table_prefix]YYYYMMDD`.
@@ -674,7 +673,7 @@ spec:
                         description: Specification of a BigQuery table. Populated only if the `table_source_type` is `BIGQUERY_TABLE`.
                         properties:
                           groupedEntry:
-                            description: >-
+                            description: |-
                               Output only. If the table is date-sharded, that is, it matches the
                                `[prefix]YYYYMMDD` name pattern, this field is the Data Catalog resource
                                name of the date-sharded grouped entry. For example:
@@ -696,7 +695,7 @@ spec:
                     description: Output only. Physical location of the entry.
                     properties:
                       resource:
-                        description: >-
+                        description: |-
                           Full name of a resource as defined by the service. For example:
 
                            `//bigquery.googleapis.com/projects/{PROJECT_ID}/locations/{LOCATION}/datasets/{DATASET_ID}/tables/{TABLE_ID}`
@@ -711,7 +710,7 @@ spec:
                         description: Detailed properties of the underlying storage.
                         properties:
                           filePattern:
-                            description: >-
+                            description: |-
                               Patterns to identify a set of files for this fileset.
 
                                Examples of a valid `file_pattern`:
@@ -794,7 +793,7 @@ spec:
                                 type: string
                             type: object
                           externalTables:
-                            description: >-
+                            description: |-
                               List of external tables registered by Dataplex in other systems based on
                                the same underlying data.
 
@@ -846,7 +845,7 @@ spec:
                     description: Output only. Indicates the entry's source system that Data Catalog integrates with, such as BigQuery, Pub/Sub, or Dataproc Metastore.
                     type: string
                   linkedResource:
-                    description: >-
+                    description: |-
                       The resource this metadata entry refers to.
 
                        For Google Cloud Platform resources, `linked_resource` is the
@@ -887,7 +886,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

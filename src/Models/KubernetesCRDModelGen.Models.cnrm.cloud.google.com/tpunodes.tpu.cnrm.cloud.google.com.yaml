@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: alpha
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: tpunodes.tpu.cnrm.cloud.google.com
 spec:
   group: tpu.cnrm.cloud.google.com
@@ -57,35 +56,25 @@ spec:
                 description: Immutable. The type of hardware accelerators associated with this node.
                 type: string
               cidrBlock:
-                description: >-
+                description: |-
                   Immutable. The CIDR block that the TPU node will use when selecting an IP
-
                   address. This CIDR block must be a /29 block; the Compute Engine
-
                   networks API forbids a smaller block, and using a larger block would
-
                   be wasteful (a node can only consume one IP address).
 
-
                   Errors will occur if the CIDR block has already been used for a
-
                   currently existing TPU node, the CIDR block conflicts with any
-
                   subnetworks in the user's provided network, or the provided network
-
                   is peered with another network that is using that CIDR block.
                 type: string
               description:
                 description: Immutable. The user-supplied description of the TPU. Maximum of 512 characters.
                 type: string
               network:
-                description: >-
+                description: |-
                   Immutable. The name of a network to peer the TPU node to. It must be a
-
                   preexisting Compute Engine network inside of the project on which
-
                   this API has been activated. If none is provided, "default" will be
-
                   used.
                 type: string
               projectRef:
@@ -131,13 +120,10 @@ spec:
                 description: The version of Tensorflow running in the Node.
                 type: string
               useServiceNetworking:
-                description: >-
+                description: |-
                   Immutable. Whether the VPC peering for the node is set up through Service Networking API.
-
                   The VPC Peering should be set up before provisioning the node. If this field is set,
-
                   cidr_block field should not be specified. If the network that you want to peer the
-
                   TPU Node to is a Shared VPC network, the node must be created with this this field enabled.
                 type: boolean
               zone:
@@ -173,11 +159,9 @@ spec:
                   type: object
                 type: array
               networkEndpoints:
-                description: >-
+                description: |-
                   The network endpoints where TPU workers can be accessed and sent work.
-
                   It is recommended that Tensorflow clients of the node first reach out
-
                   to the first (index 0) entry.
                 items:
                   properties:
@@ -193,13 +177,10 @@ spec:
                 description: ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.
                 type: integer
               serviceAccount:
-                description: >-
+                description: |-
                   The service account used to run the tensor flow services within the
-
                   node. To share resources, including Google Cloud Storage data, with
-
                   the Tensorflow job running in the Node, this account must have
-
                   permissions to that data.
                 type: string
             type: object
@@ -212,7 +193,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

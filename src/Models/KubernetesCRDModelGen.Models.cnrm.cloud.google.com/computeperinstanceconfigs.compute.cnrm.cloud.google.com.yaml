@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: alpha
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: computeperinstanceconfigs.compute.cnrm.cloud.google.com
 spec:
   group: compute.cnrm.cloud.google.com
@@ -80,31 +79,21 @@ spec:
                     type: string
                 type: object
               minimalAction:
-                description: >-
+                description: |-
                   The minimal action to perform on the instance during an update.
-
                   Default is 'NONE'. Possible values are:
-
                   * REPLACE
-
                   * RESTART
-
                   * REFRESH
-
                   * NONE.
                 type: string
               mostDisruptiveAllowedAction:
-                description: >-
+                description: |-
                   The most disruptive action to perform on the instance during an update.
-
                   Default is 'REPLACE'. Possible values are:
-
                   * REPLACE
-
                   * RESTART
-
                   * REFRESH
-
                   * NONE.
                 type: string
               preservedState:
@@ -115,15 +104,11 @@ spec:
                     items:
                       properties:
                         deleteRule:
-                          description: >-
+                          description: |-
                             A value that prescribes what should happen to the stateful disk when the VM instance is deleted.
-
                             The available options are 'NEVER' and 'ON_PERMANENT_INSTANCE_DELETION'.
-
                             'NEVER' - detach the disk when the VM is deleted, but do not delete the disk.
-
                             'ON_PERMANENT_INSTANCE_DELETION' will delete the stateful disk when the VM is permanently
-
                             deleted from the instance group. Default value: "NEVER" Possible values: ["NEVER", "ON_PERMANENT_INSTANCE_DELETION"].
                           type: string
                         deviceName:
@@ -133,9 +118,8 @@ spec:
                           description: 'The mode of the disk. Default value: "READ_WRITE" Possible values: ["READ_ONLY", "READ_WRITE"].'
                           type: string
                         source:
-                          description: >-
+                          description: |-
                             The URI of an existing persistent disk to attach under the specified device-name in the format
-
                             'projects/project-id/zones/zone/disks/disk-name'.
                           type: string
                       required:
@@ -217,11 +201,9 @@ spec:
                     type: string
                 type: object
               removeInstanceStateOnDestroy:
-                description: >-
+                description: |-
                   When true, deleting this config will immediately remove any specified state from the underlying instance.
-
                   When false, deleting this config will *not* immediately remove any state from the underlying instance.
-
                   State will be removed on the next instance recreation or update.
                 type: boolean
               resourceID:
@@ -271,7 +253,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: alpha
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: cloudassetfolderfeeds.cloudasset.cnrm.cloud.google.com
 spec:
   group: cloudasset.cnrm.cloud.google.com
@@ -54,70 +53,54 @@ spec:
           spec:
             properties:
               assetNames:
-                description: >-
+                description: |-
                   A list of the full names of the assets to receive updates. You must specify either or both of
-
                   assetNames and assetTypes. Only asset updates matching specified assetNames and assetTypes are
-
                   exported to the feed. For example: //compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1.
-
                   See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
                 items:
                   type: string
                 type: array
               assetTypes:
-                description: >-
+                description: |-
                   A list of types of the assets to receive updates. You must specify either or both of assetNames
-
                   and assetTypes. Only asset updates matching specified assetNames and assetTypes are exported to
-
                   the feed. For example: "compute.googleapis.com/Disk"
-
                   See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a list of all
-
                   supported asset types.
                 items:
                   type: string
                 type: array
               billingProject:
-                description: >-
+                description: |-
                   Immutable. The project whose identity will be used when sending messages to the
-
                   destination pubsub topic. It also specifies the project for API
-
                   enablement check, quota, and billing.
                 type: string
               condition:
-                description: >-
+                description: |-
                   A condition which determines whether an asset update should be published. If specified, an asset
-
                   will be returned only when the expression evaluates to true. When set, expression field
-
                   must be a valid CEL expression on a TemporalAsset with name temporal_asset. Example: a Feed with
-
                   expression "temporal_asset.deleted == true" will only publish Asset deletions. Other fields of
-
                   condition are optional.
                 properties:
                   description:
-                    description: >-
+                    description: |-
                       Description of the expression. This is a longer text which describes the expression,
-
                       e.g. when hovered over it in a UI.
                     type: string
                   expression:
                     description: Textual representation of an expression in Common Expression Language syntax.
                     type: string
                   location:
-                    description: >-
+                    description: |-
                       String indicating the location of the expression for error reporting, e.g. a file
-
                       name and a position in the file.
                     type: string
                   title:
-                    description: >-
+                    description: |-
                       Title for the expression, i.e. a short string describing its purpose.
-
                       This can be used e.g. in UIs which allow to enter the expression.
                     type: string
                 required:
@@ -208,9 +191,8 @@ spec:
                   type: object
                 type: array
               folderId:
-                description: >-
+                description: |-
                   The ID of the folder where this feed has been created. Both [FOLDER_NUMBER]
-
                   and folders/[FOLDER_NUMBER] are accepted.
                 type: string
               name:
@@ -229,7 +211,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

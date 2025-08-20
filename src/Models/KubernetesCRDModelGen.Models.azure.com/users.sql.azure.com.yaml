@@ -48,25 +48,18 @@ spec:
         description: User is an Azure SQL user
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -74,21 +67,14 @@ spec:
           spec:
             properties:
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
-
                   If not specified, the default is the name of the Kubernetes object.
-
                   When creating a local user, this will be the name of the user created.
-
                   When creating an AAD user, this must have a specific format depending on the type of AAD user being created.
-
                   For managed identity: "my-managed-identity-name"
-
                   For standard AAD user: "myuser@mydomain.onmicrosoft.com"
-
                   For AAD group: "my-group"
                 type: string
               localUser:
@@ -101,9 +87,8 @@ spec:
                         description: Key is the key in the Kubernetes secret being referenced
                         type: string
                       name:
-                        description: >-
+                        description: |-
                           Name is the name of the Kubernetes secret being referenced.
-
                           The secret must be in the same namespace as the resource
                         type: string
                     required:
@@ -117,9 +102,8 @@ spec:
                         description: Key is the key in the Kubernetes secret being referenced
                         type: string
                       name:
-                        description: >-
+                        description: |-
                           Name is the name of the Kubernetes secret being referenced.
-
                           The secret must be in the same namespace as the resource
                         type: string
                     required:
@@ -127,13 +111,10 @@ spec:
                     - name
                     type: object
                   serverAdminUsername:
-                    description: >-
+                    description: |-
                       ServerAdminUsername is the username of the Server administrator. If the
-
                       administrator is a group, the ServerAdminUsername should be the group name, not the actual username of the
-
                       identity to log in with. For example if the administrator group is "admin-group" and identity "my-identity" is
-
                       a member of that group, the ServerAdminUsername should be "admin-group".
                     type: string
                 required:
@@ -142,11 +123,9 @@ spec:
                 - serverAdminUsername
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to an sql.azure.com/ServersDatabase resource
                 properties:
                   armId:
@@ -157,15 +136,11 @@ spec:
                     type: string
                 type: object
               roles:
-                description: >-
+                description: |-
                   The roles assigned to the user.
-
                   See https://learn.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-ver16#fixed-database-roles
-
                   for the fixed set of roles supported by Azure SQL.
-
                   Roles include the following: db_owner, db_securityadmin, db_accessadmin, db_backupoperator,
-
                   db_ddladmin, db_datawriter, db_datareader, db_denydatawriter, and db_denydatareader.
                 items:
                   type: string
@@ -189,28 +164,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:

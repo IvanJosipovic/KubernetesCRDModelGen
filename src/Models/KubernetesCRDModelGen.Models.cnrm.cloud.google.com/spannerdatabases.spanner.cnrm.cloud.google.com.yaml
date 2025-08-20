@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: spannerdatabases.spanner.cnrm.cloud.google.com
 spec:
   group: spanner.cnrm.cloud.google.com
@@ -54,19 +53,15 @@ spec:
           spec:
             properties:
               databaseDialect:
-                description: >-
+                description: |-
                   Immutable. The dialect of the Cloud Spanner Database.
-
                   If it is not provided, "GOOGLE_STANDARD_SQL" will be used. Possible values: ["GOOGLE_STANDARD_SQL", "POSTGRESQL"].
                 type: string
               ddl:
-                description: >-
+                description: |-
                   An optional list of DDL statements to run inside the newly created
-
                   database. Statements can create tables, indexes, etc. These statements
-
                   execute atomically with the creation of the database: if there is an
-
                   error in any statement, the database is not created.
                 items:
                   type: string
@@ -77,9 +72,8 @@ spec:
                 description: Immutable. Encryption configuration for the database.
                 properties:
                   kmsKeyRef:
-                    description: >-
+                    description: |-
                       Fully qualified name of the KMS key to use to encrypt this database. This key
-
                       must exist in the same location as the Spanner Database.
                     oneOf:
                     - not:
@@ -140,15 +134,11 @@ spec:
                 description: Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.
                 type: string
               versionRetentionPeriod:
-                description: >-
+                description: |-
                   The retention period for the database. The retention period must be between 1 hour
-
                   and 7 days, and can be specified in days, hours, minutes, or seconds. For example,
-
                   the values 1d, 24h, 1440m, and 86400s are equivalent. Default value is 1h.
-
                   If this property is used, you must avoid adding new DDL statements to 'ddl' that
-
                   update the database's version_retention_period.
                 type: string
             required:
@@ -193,7 +183,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

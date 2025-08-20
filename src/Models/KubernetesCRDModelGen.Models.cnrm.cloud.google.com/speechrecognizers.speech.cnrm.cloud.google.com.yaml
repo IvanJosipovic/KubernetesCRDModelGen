@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: speechrecognizers.speech.cnrm.cloud.google.com
 spec:
   group: speech.cnrm.cloud.google.com
@@ -63,7 +62,7 @@ spec:
                 description: Default configuration to use for requests with this Recognizer. This can be overwritten by inline configuration in the [RecognizeRequest.config][google.cloud.speech.v2.RecognizeRequest.config] field.
                 properties:
                   languageCodes:
-                    description: >-
+                    description: |-
                       Optional. The language of the supplied audio as a
                        [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag.
                        Language tags are normalized to BCP-47 before they are used eg "en-us"
@@ -79,7 +78,7 @@ spec:
                       type: string
                     type: array
                   model:
-                    description: >-
+                    description: |-
                       Optional. Which model to use for recognition requests. Select the model
                        best suited to your domain to get best results.
 
@@ -341,7 +340,7 @@ spec:
                 description: Default configuration to use for requests with this Recognizer. This can be overwritten by inline configuration in the [RecognizeRequest.config][google.cloud.speech.v2.RecognizeRequest.config] field.
                 properties:
                   languageCodes:
-                    description: >-
+                    description: |-
                       Optional. The language of the supplied audio as a
                        [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag.
                        Language tags are normalized to BCP-47 before they are used eg "en-us"
@@ -357,7 +356,7 @@ spec:
                       type: string
                     type: array
                   model:
-                    description: >-
+                    description: |-
                       Optional. Which model to use for recognition requests. Select the model
                        best suited to your domain to get best results.
 
@@ -580,7 +579,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

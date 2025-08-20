@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: gkebackupbackupplans.gkebackup.cnrm.cloud.google.com
 spec:
   group: gkebackup.cnrm.cloud.google.com
@@ -61,7 +60,7 @@ spec:
                     description: If True, include all namespaced resources
                     type: boolean
                   encryptionKey:
-                    description: >-
+                    description: |-
                       Optional. This defines a customer managed encryption key that will be
                        used to encrypt the "config" portion (the Kubernetes resources) of
                        Backups created via this plan.
@@ -97,21 +96,21 @@ spec:
                         type: object
                     type: object
                   includeSecrets:
-                    description: >-
+                    description: |-
                       Optional. This flag specifies whether Kubernetes Secret resources should
                        be included when they fall into the scope of Backups.
 
                        Default: False
                     type: boolean
                   includeVolumeData:
-                    description: >-
+                    description: |-
                       Optional. This flag specifies whether volume data should be backed up
                        when PVCs are included in the scope of a Backup.
 
                        Default: False
                     type: boolean
                   permissiveMode:
-                    description: >-
+                    description: |-
                       Optional. If false, Backups will fail when Backup for GKE detects
                        Kubernetes configuration that is non-standard or
                        requires additional setup to restore.
@@ -148,7 +147,7 @@ spec:
                 description: Optional. Defines a schedule for automatic Backup creation via this BackupPlan.
                 properties:
                   cronSchedule:
-                    description: >-
+                    description: |-
                       Optional. A standard [cron](https://wikipedia.com/wiki/cron) string that
                        defines a repeating schedule for creating Backups via this BackupPlan.
                        This is mutually exclusive with the
@@ -161,14 +160,14 @@ spec:
                        Default (empty): no automatic backup creation will occur.
                     type: string
                   paused:
-                    description: >-
+                    description: |-
                       Optional. This flag denotes whether automatic Backup creation is paused
                        for this BackupPlan.
 
                        Default: False
                     type: boolean
                   rpoConfig:
-                    description: >-
+                    description: |-
                       Optional. Defines the RPO schedule configuration for this BackupPlan.
                        This is mutually exclusive with the
                        [cron_schedule][google.cloud.gkebackup.v1.BackupPlan.Schedule.cron_schedule]
@@ -273,7 +272,7 @@ spec:
                     type: string
                 type: object
               deactivated:
-                description: >-
+                description: |-
                   Optional. This flag indicates whether this BackupPlan has been deactivated.
                    Setting this field to True locks the BackupPlan such that no further
                    updates will be allowed (except deletes), including the deactivated field
@@ -333,7 +332,7 @@ spec:
                 description: Optional. RetentionPolicy governs lifecycle of Backups created under this plan.
                 properties:
                   backupDeleteLockDays:
-                    description: >-
+                    description: |-
                       Optional. Minimum age for Backups created via this BackupPlan (in days).
                        This field MUST be an integer value between 0-90 (inclusive).
                        A Backup created under this BackupPlan will NOT be deletable until it
@@ -346,7 +345,7 @@ spec:
                     format: int32
                     type: integer
                   backupRetainDays:
-                    description: >-
+                    description: |-
                       Optional. The default maximum age of a Backup created via this
                        BackupPlan. This field MUST be an integer value >= 0 and <= 365. If
                        specified, a Backup created under this BackupPlan will be automatically
@@ -369,7 +368,7 @@ spec:
                     format: int32
                     type: integer
                   locked:
-                    description: >-
+                    description: |-
                       Optional. This flag denotes whether the retention policy of this
                        BackupPlan is locked.  If set to True, no further update is allowed on
                        this policy, including the `locked` field itself.
@@ -463,7 +462,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

@@ -30,31 +30,23 @@ spec:
     name: v1alpha1
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           An Operation defines a pipeline of functions that together constitute a day
-
           two operation.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -64,20 +56,17 @@ spec:
             properties:
               mode:
                 default: Pipeline
-                description: >-
+                description: |-
                   Mode controls what type or "mode" of operation will be used.
 
-
                   "Pipeline" indicates that an Operation specifies a pipeline of
-
                   functions, each of which is responsible for implementing its logic.
                 enum:
                 - Pipeline
                 type: string
               pipeline:
-                description: >-
+                description: |-
                   Pipeline is a list of operation function steps that will be used when
-
                   this operation runs.
                 items:
                   description: A PipelineStep in an operation function pipeline.
@@ -85,18 +74,16 @@ spec:
                     credentials:
                       description: Credentials are optional credentials that the operation function needs.
                       items:
-                        description: >-
+                        description: |-
                           FunctionCredentials are optional credentials that a function
-
                           needs to run.
                         properties:
                           name:
                             description: Name of this set of credentials.
                             type: string
                           secretRef:
-                            description: >-
+                            description: |-
                               A SecretRef is a reference to a secret containing credentials that should
-
                               be supplied to the function.
                             properties:
                               name:
@@ -124,9 +111,8 @@ spec:
                       - name
                       x-kubernetes-list-type: map
                     functionRef:
-                      description: >-
+                      description: |-
                         FunctionRef is a reference to the function this step should
-
                         execute.
                       properties:
                         name:
@@ -136,34 +122,27 @@ spec:
                       - name
                       type: object
                     input:
-                      description: >-
+                      description: |-
                         Input is an optional, arbitrary Kubernetes resource (i.e. a resource
-
                         with an apiVersion and kind) that will be passed to the unction as
-
                         the 'input' of its RunFunctionRequest.
                       type: object
                       x-kubernetes-embedded-resource: true
                       x-kubernetes-preserve-unknown-fields: true
                     requirements:
-                      description: >-
+                      description: |-
                         Requirements are resource requirements that will be satisfied before
-
                         this pipeline step is called for the first time. This allows
-
                         pre-populating required resources without requiring a function to
-
                         request them first.
                       properties:
                         requiredResources:
-                          description: >-
+                          description: |-
                             RequiredResources that will be fetched before this pipeline step
-
                             is called for the first time.
                           items:
-                            description: >-
+                            description: |-
                               RequiredResourceSelector selects resources that should be fetched before
-
                               a pipeline step runs.
                             properties:
                               apiVersion:
@@ -175,24 +154,21 @@ spec:
                               matchLabels:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   MatchLabels matches resources by label selector. Only one of Name or
-
                                   MatchLabels may be specified.
                                 type: object
                               name:
-                                description: >-
+                                description: |-
                                   Name matches a single resource by name. Only one of Name or
-
                                   MatchLabels may be specified.
                                 type: string
                               namespace:
                                 description: Namespace to search for resources. Optional for cluster-scoped resources.
                                 type: string
                               requirementName:
-                                description: >-
+                                description: |-
                                   RequirementName uniquely identifies this group of resources.
-
                                   This name will be used as the key in RunFunctionRequest.required_resources.
                                 type: string
                             required:
@@ -222,9 +198,8 @@ spec:
                 - step
                 x-kubernetes-list-type: map
               retryLimit:
-                description: >-
+                description: |-
                   RetryLimit configures how many times the operation may fail. When the
-
                   failure limit is exceeded, the operation will not be retried.
                 format: int64
                 type: integer
@@ -264,24 +239,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -292,9 +263,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -312,9 +282,8 @@ spec:
                 format: int64
                 type: integer
               pipeline:
-                description: >-
+                description: |-
                   Pipeline represents the output of the pipeline steps that this operation
-
                   ran.
                 items:
                   description: PipelineStepStatus represents the status of an individual pipeline step.

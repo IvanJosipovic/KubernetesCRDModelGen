@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: computeinstancetemplates.compute.cnrm.cloud.google.com
 spec:
   group: compute.cnrm.cloud.google.com
@@ -204,26 +203,19 @@ spec:
                           type: string
                       type: object
                     sourceImageEncryptionKey:
-                      description: >-
+                      description: |-
                         Immutable. The customer-supplied encryption key of the source
-
                         image. Required if the source image is protected by a
-
                         customer-supplied encryption key.
 
-
                         Instance templates do not store customer-supplied
-
                         encryption keys, so you cannot create disks for
-
                         instances in a managed instance group if the source
-
                         images are encrypted with your own keys.
                       properties:
                         kmsKeySelfLinkRef:
-                          description: >-
+                          description: |-
                             The self link of the encryption key that is stored in Google Cloud
-
                             KMS.
                           oneOf:
                           - not:
@@ -251,11 +243,9 @@ spec:
                               type: string
                           type: object
                         kmsKeyServiceAccountRef:
-                          description: >-
+                          description: |-
                             The service account being used for the encryption request for the
-
                             given KMS key. If absent, the Compute Engine default service account
-
                             is used.
                           oneOf:
                           - not:
@@ -315,9 +305,8 @@ spec:
                       description: Immutable. The customer-supplied encryption key of the source snapshot.
                       properties:
                         kmsKeySelfLinkRef:
-                          description: >-
+                          description: |-
                             The self link of the encryption key that is stored in Google Cloud
-
                             KMS.
                           oneOf:
                           - not:
@@ -345,11 +334,9 @@ spec:
                               type: string
                           type: object
                         kmsKeyServiceAccountRef:
-                          description: >-
+                          description: |-
                             The service account being used for the encryption request for the
-
                             given KMS key. If absent, the Compute Engine default service account
-
                             is used.
                           oneOf:
                           - not:
@@ -380,13 +367,10 @@ spec:
                       - kmsKeySelfLinkRef
                       type: object
                     sourceSnapshotRef:
-                      description: >-
+                      description: |-
                         The source snapshot to create this disk. When creating a new
-
                         instance, one of initializeParams.sourceSnapshot,
-
                         initializeParams.sourceImage, or disks.source is required except for
-
                         local SSD.
                       oneOf:
                       - not:
@@ -702,7 +686,7 @@ spec:
                     description: Immutable. Specifies the action GCE should take when SPOT VM is preempted.
                     type: string
                   localSsdRecoveryTimeout:
-                    description: >-
+                    description: |-
                       Specifies the maximum amount of time a Local Ssd Vm should wait while
                         recovery of the Local Ssd state is attempted. Its value should be in
                         between 0 and 168 hours with hour granularity and the default value being 1
@@ -710,19 +694,15 @@ spec:
                     items:
                       properties:
                         nanos:
-                          description: >-
+                          description: |-
                             Immutable. Span of time that's a fraction of a second at nanosecond
-
                             resolution. Durations less than one second are represented
-
                             with a 0 seconds field and a positive nanos field. Must
-
                             be from 0 to 999,999,999 inclusive.
                           type: integer
                         seconds:
-                          description: >-
+                          description: |-
                             Immutable. Span of time at a resolution of a second.
-
                             Must be from 0 to 315,576,000,000 inclusive.
                           type: integer
                       required:
@@ -736,19 +716,15 @@ spec:
                     description: Immutable. The timeout for new network connections to hosts.
                     properties:
                       nanos:
-                        description: >-
+                        description: |-
                           Immutable. Span of time that's a fraction of a second at nanosecond
-
                           resolution. Durations less than one second are represented
-
                           with a 0 seconds field and a positive nanos field. Must
-
                           be from 0 to 999,999,999 inclusive.
                         type: integer
                       seconds:
-                        description: >-
+                        description: |-
                           Immutable. Span of time at a resolution of a second.
-
                           Must be from 0 to 315,576,000,000 inclusive.
                         type: integer
                     required:
@@ -882,7 +858,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

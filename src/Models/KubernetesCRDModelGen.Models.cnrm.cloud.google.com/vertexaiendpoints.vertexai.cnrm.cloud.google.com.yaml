@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: vertexaiendpoints.vertexai.cnrm.cloud.google.com
 spec:
   group: vertexai.cnrm.cloud.google.com
@@ -63,11 +62,9 @@ spec:
                 description: Immutable. Customer-managed encryption key spec for an Endpoint. If set, this Endpoint and all sub-resources of this Endpoint will be secured by this key.
                 properties:
                   kmsKeyNameRef:
-                    description: >-
+                    description: |-
                       Required. The Cloud KMS resource identifier of the customer managed encryption key used to protect a resource.
-
                       Has the form: projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key.
-
                       The key needs to be in the same region as where the compute resource is created.
                     oneOf:
                     - not:
@@ -98,13 +95,10 @@ spec:
                 - kmsKeyNameRef
                 type: object
               networkRef:
-                description: >-
+                description: |-
                   Optional. The full name of the Google Compute Engine network to which the Endpoint should be peered.
-
                   Private services access must already be configured for the network. If left unspecified, the Endpoint is not peered with any network.
-
                   Only one of the fields, network or enablePrivateServiceConnect, can be set.
-
                   Format: projects/{project_id}/global/networks/{network_name}.
                 oneOf:
                 - not:
@@ -253,11 +247,9 @@ spec:
                 description: Immutable. Customer-managed encryption key spec for an Endpoint. If set, this Endpoint and all sub-resources of this Endpoint will be secured by this key.
                 properties:
                   kmsKeyNameRef:
-                    description: >-
+                    description: |-
                       Required. The Cloud KMS resource identifier of the customer managed encryption key used to protect a resource.
-
                       Has the form: projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key.
-
                       The key needs to be in the same region as where the compute resource is created.
                     oneOf:
                     - not:
@@ -288,13 +280,10 @@ spec:
                 - kmsKeyNameRef
                 type: object
               networkRef:
-                description: >-
+                description: |-
                   Optional. The full name of the Google Compute Engine network to which the Endpoint should be peered.
-
                   Private services access must already be configured for the network. If left unspecified, the Endpoint is not peered with any network.
-
                   Only one of the fields, network or enablePrivateServiceConnect, can be set.
-
                   Format: projects/{project_id}/global/networks/{network_name}.
                 oneOf:
                 - not:
@@ -405,7 +394,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

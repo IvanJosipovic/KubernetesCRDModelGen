@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: apiquotapreferences.cloudquota.cnrm.cloud.google.com
 spec:
   group: cloudquota.cnrm.cloud.google.com
@@ -54,7 +53,7 @@ spec:
           spec:
             properties:
               contactEmail:
-                description: >-
+                description: |-
                   Input only. An email address that can be used to contact the the user, in
                    case Google Cloud needs more information to make a decision before
                    additional quota can be granted.
@@ -68,7 +67,7 @@ spec:
               dimensions:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   Immutable. The dimensions that this quota preference applies to. The key of
                    the map entry is the name of a dimension, such as "region", "zone",
                    "network_id", and the value of the map entry is the dimension value.
@@ -254,7 +253,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

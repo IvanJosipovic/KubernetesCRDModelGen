@@ -36,25 +36,18 @@ spec:
         description: ReplicationGroup is the Schema for the ReplicationGroups API. Provides an ElastiCache Replication Group resource.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -68,17 +61,14 @@ spec:
                     description: Specifies whether any modifications are applied immediately, or during the next maintenance window. Default is false.
                     type: boolean
                   atRestEncryptionEnabled:
-                    description: >-
+                    description: |-
                       Whether to enable encryption at rest.
-
                       When engine is redis, default is false.
-
                       When engine is valkey, default is true.
                     type: string
                   authTokenSecretRef:
-                    description: >-
+                    description: |-
                       Password used to access a password protected server. Can be specified only if transit_encryption_enabled = true.
-
                       If you set autoGenerateAuthToken to true, the Secret referenced here will be created or updated with generated auth token if it does not already contain one.
                     properties:
                       key:
@@ -94,17 +84,14 @@ spec:
                     description: Strategy to use when updating the auth_token. Valid values are SET, ROTATE, and DELETE. Required if auth_token is set.
                     type: string
                   autoGenerateAuthToken:
-                    description: >-
+                    description: |-
                       Password used to access a password protected server. Can be specified only if transit_encryption_enabled = true.
-
                       If true, the auth token will be auto-generated and stored in the Secret referenced by the authTokenSecretRef field.
                     type: boolean
                   autoMinorVersionUpgrade:
-                    description: >-
+                    description: |-
                       Specifies whether minor version engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window.
-
                       Only supported for engine types "redis" and "valkey" and if the engine version is 6 or higher.
-
                       Defaults to true.
                     type: string
                   automaticFailoverEnabled:
@@ -120,25 +107,18 @@ spec:
                     description: User-created description for the replication group. Must not be empty.
                     type: string
                   engine:
-                    description: >-
+                    description: |-
                       Name of the cache engine to be used for the clusters in this replication group.
-
                       Valid values are redis or valkey.
-
                       Default is redis.
                     type: string
                   engineVersion:
-                    description: >-
+                    description: |-
                       Version number of the cache engine to be used for the cache clusters in this replication group.
-
                       If the version is 7 or higher, the major and minor version should be set, e.g., 7.2.
-
                       If the version is 6, the major and minor version can be set, e.g., 6.2,
-
                       or the minor version can be unspecified which will use the latest version at creation time, e.g., 6.x.
-
                       Otherwise, specify the full version desired, e.g., 5.0.6.
-
                       The actual engine version used is returned in the attribute engine_version_actual, see Attribute Reference below.
                     type: string
                   finalSnapshotIdentifier:
@@ -161,26 +141,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -194,9 +168,8 @@ spec:
                     description: Selector for a GlobalReplicationGroup in elasticache to populate globalReplicationGroupId.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -212,26 +185,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -259,26 +226,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -292,9 +253,8 @@ spec:
                     description: Selector for a Key in kms to populate kmsKeyId.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -310,26 +270,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -359,24 +313,19 @@ spec:
                     description: 'Specifies the weekly time range for when maintenance on the cache cluster is performed. The format is ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: sun:05:00-sun:09:00'
                     type: string
                   multiAzEnabled:
-                    description: >-
+                    description: |-
                       Specifies whether to enable Multi-AZ Support for the replication group.
-
                       If true, automatic_failover_enabled must also be enabled.
-
                       Defaults to false.
                     type: boolean
                   networkType:
                     description: The IP versions for cache cluster connections. Valid values are ipv4, ipv6 or dual_stack.
                     type: string
                   nodeType:
-                    description: >-
+                    description: |-
                       Instance class to be used.
-
                       See AWS documentation for information on supported node types and guidance on selecting node types.
-
                       Required unless global_replication_group_id is set.
-
                       Cannot be set if global_replication_group_id is set.
                     type: string
                   notificationTopicArn:
@@ -386,11 +335,9 @@ spec:
                     description: 00#.
                     type: number
                   numNodeGroups:
-                    description: >-
+                    description: |-
                       Number of node groups (shards) for this Redis replication group.
-
                       Changing this number will trigger a resizing operation before other settings modifications.
-
                       Conflicts with num_cache_clusters.
                     type: number
                   parameterGroupName:
@@ -405,21 +352,16 @@ spec:
                       type: string
                     type: array
                   region:
-                    description: >-
+                    description: |-
                       Region where this resource will be managed. Defaults to the Region set in the provider configuration.
-
                       Region is the region you'd like your resource to be created in.
                     type: string
                   replicasPerNodeGroup:
-                    description: >-
+                    description: |-
                       Number of replica nodes in each node group.
-
                       Changing this number will trigger a resizing operation before other settings modifications.
-
                       Valid values are 0 to 5.
-
                       Conflicts with num_cache_clusters.
-
                       Can only be set if num_node_groups is set.
                     type: number
                   securityGroupIdRefs:
@@ -438,26 +380,20 @@ spec:
                           properties:
                             resolution:
                               default: Required
-                              description: >-
+                              description: |-
                                 Resolution specifies whether resolution of this reference is required.
-
                                 The default is 'Required', which means the reconcile will fail if the
-
                                 reference cannot be resolved. 'Optional' means this reference will be
-
                                 a no-op if it cannot be resolved.
                               enum:
                               - Required
                               - Optional
                               type: string
                             resolve:
-                              description: >-
+                              description: |-
                                 Resolve specifies when this reference should be resolved. The default
-
                                 is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                 the corresponding field is not present. Use 'Always' to resolve the
-
                                 reference on every reconcile.
                               enum:
                               - Always
@@ -472,9 +408,8 @@ spec:
                     description: Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -490,26 +425,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -561,26 +490,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -594,9 +517,8 @@ spec:
                     description: Selector for a SubnetGroup in elasticache to populate subnetGroupName.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -612,26 +534,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -646,21 +562,16 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   transitEncryptionEnabled:
-                    description: >-
+                    description: |-
                       Whether to enable encryption in transit.
-
                       Changing this argument with an engine_version < 7.0.5 will force a replacement.
-
                       Engine versions prior to 7.0.5 only allow this transit encryption to be configured during creation of the replication group.
                     type: boolean
                   transitEncryptionMode:
-                    description: >-
+                    description: |-
                       A setting that enables clients to migrate to in-transit encryption with no downtime.
-
                       Valid values are preferred and required.
-
                       When enabling encryption on an existing replication group, this must first be set to preferred before setting it to required in a subsequent apply.
-
                       See the TransitEncryptionMode field in the CreateReplicationGroup API documentation for additional details.
                     type: string
                   userGroupIds:
@@ -673,42 +584,30 @@ spec:
                 - region
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   applyImmediately:
                     description: Specifies whether any modifications are applied immediately, or during the next maintenance window. Default is false.
                     type: boolean
                   atRestEncryptionEnabled:
-                    description: >-
+                    description: |-
                       Whether to enable encryption at rest.
-
                       When engine is redis, default is false.
-
                       When engine is valkey, default is true.
                     type: string
                   authTokenSecretRef:
-                    description: >-
+                    description: |-
                       Password used to access a password protected server. Can be specified only if transit_encryption_enabled = true.
-
                       If you set autoGenerateAuthToken to true, the Secret referenced here will be created or updated with generated auth token if it does not already contain one.
                     properties:
                       key:
@@ -724,11 +623,9 @@ spec:
                     description: Strategy to use when updating the auth_token. Valid values are SET, ROTATE, and DELETE. Required if auth_token is set.
                     type: string
                   autoMinorVersionUpgrade:
-                    description: >-
+                    description: |-
                       Specifies whether minor version engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window.
-
                       Only supported for engine types "redis" and "valkey" and if the engine version is 6 or higher.
-
                       Defaults to true.
                     type: string
                   automaticFailoverEnabled:
@@ -744,25 +641,18 @@ spec:
                     description: User-created description for the replication group. Must not be empty.
                     type: string
                   engine:
-                    description: >-
+                    description: |-
                       Name of the cache engine to be used for the clusters in this replication group.
-
                       Valid values are redis or valkey.
-
                       Default is redis.
                     type: string
                   engineVersion:
-                    description: >-
+                    description: |-
                       Version number of the cache engine to be used for the cache clusters in this replication group.
-
                       If the version is 7 or higher, the major and minor version should be set, e.g., 7.2.
-
                       If the version is 6, the major and minor version can be set, e.g., 6.2,
-
                       or the minor version can be unspecified which will use the latest version at creation time, e.g., 6.x.
-
                       Otherwise, specify the full version desired, e.g., 5.0.6.
-
                       The actual engine version used is returned in the attribute engine_version_actual, see Attribute Reference below.
                     type: string
                   finalSnapshotIdentifier:
@@ -785,26 +675,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -818,9 +702,8 @@ spec:
                     description: Selector for a GlobalReplicationGroup in elasticache to populate globalReplicationGroupId.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -836,26 +719,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -883,26 +760,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -916,9 +787,8 @@ spec:
                     description: Selector for a Key in kms to populate kmsKeyId.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -934,26 +804,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -983,24 +847,19 @@ spec:
                     description: 'Specifies the weekly time range for when maintenance on the cache cluster is performed. The format is ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: sun:05:00-sun:09:00'
                     type: string
                   multiAzEnabled:
-                    description: >-
+                    description: |-
                       Specifies whether to enable Multi-AZ Support for the replication group.
-
                       If true, automatic_failover_enabled must also be enabled.
-
                       Defaults to false.
                     type: boolean
                   networkType:
                     description: The IP versions for cache cluster connections. Valid values are ipv4, ipv6 or dual_stack.
                     type: string
                   nodeType:
-                    description: >-
+                    description: |-
                       Instance class to be used.
-
                       See AWS documentation for information on supported node types and guidance on selecting node types.
-
                       Required unless global_replication_group_id is set.
-
                       Cannot be set if global_replication_group_id is set.
                     type: string
                   notificationTopicArn:
@@ -1010,11 +869,9 @@ spec:
                     description: 00#.
                     type: number
                   numNodeGroups:
-                    description: >-
+                    description: |-
                       Number of node groups (shards) for this Redis replication group.
-
                       Changing this number will trigger a resizing operation before other settings modifications.
-
                       Conflicts with num_cache_clusters.
                     type: number
                   parameterGroupName:
@@ -1029,15 +886,11 @@ spec:
                       type: string
                     type: array
                   replicasPerNodeGroup:
-                    description: >-
+                    description: |-
                       Number of replica nodes in each node group.
-
                       Changing this number will trigger a resizing operation before other settings modifications.
-
                       Valid values are 0 to 5.
-
                       Conflicts with num_cache_clusters.
-
                       Can only be set if num_node_groups is set.
                     type: number
                   securityGroupIdRefs:
@@ -1056,26 +909,20 @@ spec:
                           properties:
                             resolution:
                               default: Required
-                              description: >-
+                              description: |-
                                 Resolution specifies whether resolution of this reference is required.
-
                                 The default is 'Required', which means the reconcile will fail if the
-
                                 reference cannot be resolved. 'Optional' means this reference will be
-
                                 a no-op if it cannot be resolved.
                               enum:
                               - Required
                               - Optional
                               type: string
                             resolve:
-                              description: >-
+                              description: |-
                                 Resolve specifies when this reference should be resolved. The default
-
                                 is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                 the corresponding field is not present. Use 'Always' to resolve the
-
                                 reference on every reconcile.
                               enum:
                               - Always
@@ -1090,9 +937,8 @@ spec:
                     description: Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -1108,26 +954,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1179,26 +1019,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1212,9 +1046,8 @@ spec:
                     description: Selector for a SubnetGroup in elasticache to populate subnetGroupName.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -1230,26 +1063,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1264,21 +1091,16 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   transitEncryptionEnabled:
-                    description: >-
+                    description: |-
                       Whether to enable encryption in transit.
-
                       Changing this argument with an engine_version < 7.0.5 will force a replacement.
-
                       Engine versions prior to 7.0.5 only allow this transit encryption to be configured during creation of the replication group.
                     type: boolean
                   transitEncryptionMode:
-                    description: >-
+                    description: |-
                       A setting that enables clients to migrate to in-transit encryption with no downtime.
-
                       Valid values are preferred and required.
-
                       When enabling encryption on an existing replication group, this must first be set to preferred before setting it to required in a subsequent apply.
-
                       See the TransitEncryptionMode field in the CreateReplicationGroup API documentation for additional details.
                     type: string
                   userGroupIds:
@@ -1291,22 +1113,16 @@ spec:
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -1321,11 +1137,9 @@ spec:
                 default:
                   kind: ClusterProviderConfig
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   kind:
@@ -1339,13 +1153,10 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   name:
@@ -1372,22 +1183,18 @@ spec:
                     description: ARN of the created ElastiCache Replication Group.
                     type: string
                   atRestEncryptionEnabled:
-                    description: >-
+                    description: |-
                       Whether to enable encryption at rest.
-
                       When engine is redis, default is false.
-
                       When engine is valkey, default is true.
                     type: string
                   authTokenUpdateStrategy:
                     description: Strategy to use when updating the auth_token. Valid values are SET, ROTATE, and DELETE. Required if auth_token is set.
                     type: string
                   autoMinorVersionUpgrade:
-                    description: >-
+                    description: |-
                       Specifies whether minor version engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window.
-
                       Only supported for engine types "redis" and "valkey" and if the engine version is 6 or higher.
-
                       Defaults to true.
                     type: string
                   automaticFailoverEnabled:
@@ -1409,25 +1216,18 @@ spec:
                     description: User-created description for the replication group. Must not be empty.
                     type: string
                   engine:
-                    description: >-
+                    description: |-
                       Name of the cache engine to be used for the clusters in this replication group.
-
                       Valid values are redis or valkey.
-
                       Default is redis.
                     type: string
                   engineVersion:
-                    description: >-
+                    description: |-
                       Version number of the cache engine to be used for the cache clusters in this replication group.
-
                       If the version is 7 or higher, the major and minor version should be set, e.g., 7.2.
-
                       If the version is 6, the major and minor version can be set, e.g., 6.2,
-
                       or the minor version can be unspecified which will use the latest version at creation time, e.g., 6.x.
-
                       Otherwise, specify the full version desired, e.g., 5.0.6.
-
                       The actual engine version used is returned in the attribute engine_version_actual, see Attribute Reference below.
                     type: string
                   engineVersionActual:
@@ -1476,24 +1276,19 @@ spec:
                     type: array
                     x-kubernetes-list-type: set
                   multiAzEnabled:
-                    description: >-
+                    description: |-
                       Specifies whether to enable Multi-AZ Support for the replication group.
-
                       If true, automatic_failover_enabled must also be enabled.
-
                       Defaults to false.
                     type: boolean
                   networkType:
                     description: The IP versions for cache cluster connections. Valid values are ipv4, ipv6 or dual_stack.
                     type: string
                   nodeType:
-                    description: >-
+                    description: |-
                       Instance class to be used.
-
                       See AWS documentation for information on supported node types and guidance on selecting node types.
-
                       Required unless global_replication_group_id is set.
-
                       Cannot be set if global_replication_group_id is set.
                     type: string
                   notificationTopicArn:
@@ -1503,11 +1298,9 @@ spec:
                     description: 00#.
                     type: number
                   numNodeGroups:
-                    description: >-
+                    description: |-
                       Number of node groups (shards) for this Redis replication group.
-
                       Changing this number will trigger a resizing operation before other settings modifications.
-
                       Conflicts with num_cache_clusters.
                     type: number
                   parameterGroupName:
@@ -1528,21 +1321,16 @@ spec:
                     description: (Redis only) Address of the endpoint for the reader node in the replication group, if the cluster mode is disabled.
                     type: string
                   region:
-                    description: >-
+                    description: |-
                       Region where this resource will be managed. Defaults to the Region set in the provider configuration.
-
                       Region is the region you'd like your resource to be created in.
                     type: string
                   replicasPerNodeGroup:
-                    description: >-
+                    description: |-
                       Number of replica nodes in each node group.
-
                       Changing this number will trigger a resizing operation before other settings modifications.
-
                       Valid values are 0 to 5.
-
                       Conflicts with num_cache_clusters.
-
                       Can only be set if num_node_groups is set.
                     type: number
                   securityGroupIds:
@@ -1588,21 +1376,16 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   transitEncryptionEnabled:
-                    description: >-
+                    description: |-
                       Whether to enable encryption in transit.
-
                       Changing this argument with an engine_version < 7.0.5 will force a replacement.
-
                       Engine versions prior to 7.0.5 only allow this transit encryption to be configured during creation of the replication group.
                     type: boolean
                   transitEncryptionMode:
-                    description: >-
+                    description: |-
                       A setting that enables clients to migrate to in-transit encryption with no downtime.
-
                       Valid values are preferred and required.
-
                       When enabling encryption on an existing replication group, this must first be set to preferred before setting it to required in a subsequent apply.
-
                       See the TransitEncryptionMode field in the CreateReplicationGroup API documentation for additional details.
                     type: string
                   userGroupIds:
@@ -1618,24 +1401,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -1646,9 +1425,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -1662,11 +1440,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer

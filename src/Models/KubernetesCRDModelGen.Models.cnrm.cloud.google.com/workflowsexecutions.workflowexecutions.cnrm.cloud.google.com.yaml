@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: workflowsexecutions.workflowexecutions.cnrm.cloud.google.com
 spec:
   group: workflowexecutions.cnrm.cloud.google.com
@@ -55,7 +54,7 @@ spec:
             description: WorkflowsExecutionSpec defines the desired state of WorkflowsExecution
             properties:
               argument:
-                description: >-
+                description: |-
                   Input parameters of the execution represented as a JSON string.
                    The size limit is 32KB.
 
@@ -266,7 +265,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

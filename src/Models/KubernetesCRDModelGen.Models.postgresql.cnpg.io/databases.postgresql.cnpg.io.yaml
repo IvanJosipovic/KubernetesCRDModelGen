@@ -37,49 +37,37 @@ spec:
         description: Database is the Schema for the databases API
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
           spec:
-            description: >-
+            description: |-
               Specification of the desired Database.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
             properties:
               allowConnections:
-                description: >-
+                description: |-
                   Maps to the `ALLOW_CONNECTIONS` parameter of `CREATE DATABASE` and
-
                   `ALTER DATABASE`. If false then no one can connect to this database.
                 type: boolean
               builtinLocale:
-                description: >-
+                description: |-
                   Maps to the `BUILTIN_LOCALE` parameter of `CREATE DATABASE`. This
-
                   setting cannot be changed. Specifies the locale name when the
-
                   builtin provider is used. This option requires `localeProvider` to
-
                   be set to `builtin`. Available from PostgreSQL 17.
                 type: string
                 x-kubernetes-validations:
@@ -89,35 +77,28 @@ spec:
                 description: The name of the PostgreSQL cluster hosting the database.
                 properties:
                   name:
-                    default: ''
-                    description: >-
+                    default: ""
+                    description: |-
                       Name of the referent.
-
                       This field is effectively required, but due to backwards compatibility is
-
                       allowed to be empty. Instances of this type with an empty value here are
-
                       almost certainly wrong.
-
                       More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
                     type: string
                 type: object
                 x-kubernetes-map-type: atomic
               collationVersion:
-                description: >-
+                description: |-
                   Maps to the `COLLATION_VERSION` parameter of `CREATE DATABASE`. This
-
                   setting cannot be changed.
                 type: string
                 x-kubernetes-validations:
                 - message: collationVersion is immutable
                   rule: self == oldSelf
               connectionLimit:
-                description: >-
+                description: |-
                   Maps to the `CONNECTION LIMIT` clause of `CREATE DATABASE` and
-
                   `ALTER DATABASE`. How many concurrent connections can be made to
-
                   this database. -1 (the default) means no limit.
                 type: integer
               databaseReclaimPolicy:
@@ -128,9 +109,8 @@ spec:
                 - retain
                 type: string
               encoding:
-                description: >-
+                description: |-
                   Maps to the `ENCODING` parameter of `CREATE DATABASE`. This setting
-
                   cannot be changed. Character set encoding to use in the database.
                 type: string
                 x-kubernetes-validations:
@@ -150,13 +130,10 @@ spec:
                   properties:
                     ensure:
                       default: present
-                      description: >-
+                      description: |-
                         Specifies whether an extension/schema should be present or absent in
-
                         the database. If set to `present`, the extension/schema will be
-
                         created if it does not exist. If set to `absent`, the
-
                         extension/schema will be removed if it exists.
                       enum:
                       - present
@@ -166,23 +143,17 @@ spec:
                       description: Name of the extension/schema
                       type: string
                     schema:
-                      description: >-
+                      description: |-
                         The name of the schema in which to install the extension's objects,
-
                         in case the extension allows its contents to be relocated. If not
-
                         specified (default), and the extension's control file does not
-
                         specify a schema either, the current default object creation schema
-
                         is used.
                       type: string
                     version:
-                      description: >-
+                      description: |-
                         The version of the extension to install. If empty, the operator will
-
                         install the default version (whatever is specified in the
-
                         extension's control file)
                       type: string
                   required:
@@ -190,74 +161,60 @@ spec:
                   type: object
                 type: array
               icuLocale:
-                description: >-
+                description: |-
                   Maps to the `ICU_LOCALE` parameter of `CREATE DATABASE`. This
-
                   setting cannot be changed. Specifies the ICU locale when the ICU
-
                   provider is used. This option requires `localeProvider` to be set to
-
                   `icu`. Available from PostgreSQL 15.
                 type: string
                 x-kubernetes-validations:
                 - message: icuLocale is immutable
                   rule: self == oldSelf
               icuRules:
-                description: >-
+                description: |-
                   Maps to the `ICU_RULES` parameter of `CREATE DATABASE`. This setting
-
                   cannot be changed. Specifies additional collation rules to customize
-
                   the behavior of the default collation. This option requires
-
                   `localeProvider` to be set to `icu`. Available from PostgreSQL 16.
                 type: string
                 x-kubernetes-validations:
                 - message: icuRules is immutable
                   rule: self == oldSelf
               isTemplate:
-                description: >-
+                description: |-
                   Maps to the `IS_TEMPLATE` parameter of `CREATE DATABASE` and `ALTER
-
                   DATABASE`. If true, this database is considered a template and can
-
                   be cloned by any user with `CREATEDB` privileges.
                 type: boolean
               locale:
-                description: >-
+                description: |-
                   Maps to the `LOCALE` parameter of `CREATE DATABASE`. This setting
-
                   cannot be changed. Sets the default collation order and character
-
                   classification in the new database.
                 type: string
                 x-kubernetes-validations:
                 - message: locale is immutable
                   rule: self == oldSelf
               localeCType:
-                description: >-
+                description: |-
                   Maps to the `LC_CTYPE` parameter of `CREATE DATABASE`. This setting
-
                   cannot be changed.
                 type: string
                 x-kubernetes-validations:
                 - message: localeCType is immutable
                   rule: self == oldSelf
               localeCollate:
-                description: >-
+                description: |-
                   Maps to the `LC_COLLATE` parameter of `CREATE DATABASE`. This
-
                   setting cannot be changed.
                 type: string
                 x-kubernetes-validations:
                 - message: localeCollate is immutable
                   rule: self == oldSelf
               localeProvider:
-                description: >-
+                description: |-
                   Maps to the `LOCALE_PROVIDER` parameter of `CREATE DATABASE`. This
-
                   setting cannot be changed. This option sets the locale provider for
-
                   databases created in the new cluster. Available from PostgreSQL 16.
                 type: string
                 x-kubernetes-validations:
@@ -276,11 +233,9 @@ spec:
                 - message: the name template1 is reserved
                   rule: self != 'template1'
               owner:
-                description: >-
+                description: |-
                   Maps to the `OWNER` parameter of `CREATE DATABASE`.
-
                   Maps to the `OWNER TO` command of `ALTER DATABASE`.
-
                   The role name of the user who owns the database inside PostgreSQL.
                 type: string
               schemas:
@@ -290,13 +245,10 @@ spec:
                   properties:
                     ensure:
                       default: present
-                      description: >-
+                      description: |-
                         Specifies whether an extension/schema should be present or absent in
-
                         the database. If set to `present`, the extension/schema will be
-
                         created if it does not exist. If set to `absent`, the
-
                         extension/schema will be removed if it exists.
                       enum:
                       - present
@@ -306,11 +258,9 @@ spec:
                       description: Name of the extension/schema
                       type: string
                     owner:
-                      description: >-
+                      description: |-
                         The role name of the user who owns the schema inside PostgreSQL.
-
                         It maps to the `AUTHORIZATION` parameter of `CREATE SCHEMA` and the
-
                         `OWNER TO` command of `ALTER SCHEMA`.
                       type: string
                   required:
@@ -318,23 +268,17 @@ spec:
                   type: object
                 type: array
               tablespace:
-                description: >-
+                description: |-
                   Maps to the `TABLESPACE` parameter of `CREATE DATABASE`.
-
                   Maps to the `SET TABLESPACE` command of `ALTER DATABASE`.
-
                   The name of the tablespace (in PostgreSQL) that will be associated
-
                   with the new database. This tablespace will be the default
-
                   tablespace used for objects created in this database.
                 type: string
               template:
-                description: >-
+                description: |-
                   Maps to the `TEMPLATE` parameter of `CREATE DATABASE`. This setting
-
                   cannot be changed. The name of the template from which to create
-
                   this database.
                 type: string
                 x-kubernetes-validations:
@@ -353,11 +297,9 @@ spec:
             - message: icuRules is only available when localeProvider is set to `icu`
               rule: "!has(self.icuRules) || self.localeProvider == 'icu'"
           status:
-            description: >-
+            description: |-
               Most recently observed status of the Database. This data may not be up to
-
               date. Populated by the system. Read-only.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
             properties:
               applied:
@@ -369,9 +311,8 @@ spec:
                   description: DatabaseObjectStatus is the status of the managed database objects
                   properties:
                     applied:
-                      description: >-
+                      description: |-
                         True of the object has been installed successfully in
-
                         the database
                       type: boolean
                     message:
@@ -389,9 +330,8 @@ spec:
                 description: Message is the reconciliation output message
                 type: string
               observedGeneration:
-                description: >-
+                description: |-
                   A sequence number representing the latest
-
                   desired state that was synchronized
                 format: int64
                 type: integer
@@ -401,9 +341,8 @@ spec:
                   description: DatabaseObjectStatus is the status of the managed database objects
                   properties:
                     applied:
-                      description: >-
+                      description: |-
                         True of the object has been installed successfully in
-
                         the database
                       type: boolean
                     message:

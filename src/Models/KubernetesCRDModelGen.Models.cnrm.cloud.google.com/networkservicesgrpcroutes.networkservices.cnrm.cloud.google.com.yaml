@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/dcl2crd: true
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/dcl2crd: "true"
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/system: "true"
   name: networkservicesgrpcroutes.networkservices.cnrm.cloud.google.com
 spec:
   group: networkservices.cnrm.cloud.google.com
@@ -138,9 +137,8 @@ spec:
                   - external
                 properties:
                   external:
-                    description: >-
+                    description: |-
                       The project for the resource
-
 
                       Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).
                     type: string
@@ -182,9 +180,8 @@ spec:
                                   - external
                                 properties:
                                   external:
-                                    description: >-
+                                    description: |-
                                       Required. The URL of a destination service to which to route traffic. Must refer to either a BackendService or ServiceDirectoryService.
-
 
                                       Allowed value: The Google Cloud resource name of a `ComputeBackendService` resource (format: `projects/{{project}}/global/backendServices/{{name}}`).
                                     type: string
@@ -347,7 +344,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

@@ -45,33 +45,24 @@ spec:
     name: v1api20240401
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2024-04-01/registries.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/registries/{registryName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -79,9 +70,8 @@ spec:
           spec:
             properties:
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 pattern: ^[a-zA-Z0-9][a-zA-Z0-9\-_]{2,32}$
                 type: string
@@ -107,11 +97,9 @@ spec:
                           description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -143,21 +131,16 @@ spec:
                 description: 'ManagedResourceGroup: ResourceId of the managed RG if the registry has system created resources'
                 properties:
                   resourceReference:
-                    description: >-
+                    description: |-
                       ResourceReference: Arm ResourceId is in the format
-
                       "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.Storage/storageAccounts/{StorageAccountName}"
-
                       or
-
                       "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{AcrName}"
                     properties:
                       armId:
-                        description: >-
+                        description: |-
                           ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                           The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                           ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
@@ -176,41 +159,33 @@ spec:
                 description: 'MlFlowRegistryUri: MLFlow Registry URI for the Registry'
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -228,9 +203,8 @@ spec:
                             description: Key is the key in the ConfigMap being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes ConfigMap to write to.
-
                               The ConfigMap will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -238,18 +212,16 @@ spec:
                         - name
                         type: object
                       mlFlowRegistryUri:
-                        description: >-
+                        description: |-
                           MlFlowRegistryUri: indicates where the MlFlowRegistryUri config map should be placed. If omitted, no config map will be
-
                           created.
                         properties:
                           key:
                             description: Key is the key in the ConfigMap being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes ConfigMap to write to.
-
                               The ConfigMap will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -260,33 +232,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -296,11 +261,9 @@ spec:
                     type: array
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -311,9 +274,8 @@ spec:
                     type: string
                 type: object
               publicNetworkAccess:
-                description: >-
+                description: |-
                   PublicNetworkAccess: Is the Registry accessible from the internet?
-
                   Possible values: "Enabled" or "Disabled"
                 type: string
               regionDetails:
@@ -359,23 +321,15 @@ spec:
                                 description: 'StorageAccountName: Name of the storage account'
                                 type: string
                               storageAccountType:
-                                description: >-
+                                description: |-
                                   StorageAccountType: Allowed values:
-
                                   "Standard_LRS",
-
                                   "Standard_GRS",
-
                                   "Standard_RAGRS",
-
                                   "Standard_ZRS",
-
                                   "Standard_GZRS",
-
                                   "Standard_RAGZRS",
-
                                   "Premium_LRS",
-
                                   "Premium_ZRS"
                                 type: string
                             type: object
@@ -403,11 +357,9 @@ spec:
                           description: 'SubnetArmReference: The subnetId that the private endpoint is connected to.'
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -426,19 +378,15 @@ spec:
                       description: "ProvisioningState: One of null, \"Succeeded\", \"Provisioning\", \"Failed\". While not approved, it's null."
                       type: string
                     reference:
-                      description: >-
+                      description: |-
                         Reference: This is the private endpoint connection name created on SRP
-
                         Full resource id:
-
                         /subscriptions/{subId}/resourceGroups/{rgName}/providers/Microsoft.MachineLearningServices/{resourceType}/{resourceName}/registryPrivateEndpointConnections/{peConnectionName}
                       properties:
                         armId:
-                          description: >-
+                          description: |-
                             ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                             The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                             ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                           pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                           type: string
@@ -476,9 +424,8 @@ spec:
                 description: 'Sku: Sku details required for ARM contract for Autoscaling.'
                 properties:
                   capacity:
-                    description: >-
+                    description: |-
                       Capacity: If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible
-
                       for the resource this may be omitted.
                     type: integer
                   family:
@@ -488,15 +435,13 @@ spec:
                     description: 'Name: The name of the SKU. Ex - P3. It is typically a letter+number code'
                     type: string
                   size:
-                    description: >-
+                    description: |-
                       Size: The SKU size. When the name field is the combination of tier and some other value, this would be the standalone
-
                       code.
                     type: string
                   tier:
-                    description: >-
+                    description: |-
                       Tier: This field is required to be implemented by the Resource Provider if the service has more than one tier, but is
-
                       not  required on a PUT.
                     enum:
                     - Basic
@@ -531,28 +476,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -572,24 +511,21 @@ spec:
                 description: 'DiscoveryUrl: Discovery URL for the Registry'
                 type: string
               id:
-                description: >-
+                description: |-
                   Id: Fully qualified resource ID for the resource. Ex -
-
                   /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                 type: string
               identity:
                 description: 'Identity: Managed service identity (system assigned and/or user assigned identities)'
                 properties:
                   principalId:
-                    description: >-
+                    description: |-
                       PrincipalId: The service principal ID of the system assigned identity. This property will only be provided for a system
-
                       assigned identity.
                     type: string
                   tenantId:
-                    description: >-
+                    description: |-
                       TenantId: The tenant ID of the system assigned identity. This property will only be provided for a system assigned
-
                       identity.
                     type: string
                   type:
@@ -621,13 +557,10 @@ spec:
                 description: 'ManagedResourceGroup: ResourceId of the managed RG if the registry has system created resources'
                 properties:
                   resourceId:
-                    description: >-
+                    description: |-
                       ResourceId: Arm ResourceId is in the format
-
                       "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.Storage/storageAccounts/{StorageAccountName}"
-
                       or
-
                       "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{AcrName}"
                     type: string
                 type: object
@@ -638,9 +571,8 @@ spec:
                 description: 'Name: The name of the resource'
                 type: string
               publicNetworkAccess:
-                description: >-
+                description: |-
                   PublicNetworkAccess: Is the Registry accessible from the internet?
-
                   Possible values: "Enabled" or "Disabled"
                 type: string
               regionDetails:
@@ -666,13 +598,10 @@ spec:
                                 description: 'ArmResourceId: This is populated once the ACR account is created.'
                                 properties:
                                   resourceId:
-                                    description: >-
+                                    description: |-
                                       ResourceId: Arm ResourceId is in the format
-
                                       "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.Storage/storageAccounts/{StorageAccountName}"
-
                                       or
-
                                       "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{AcrName}"
                                     type: string
                                 type: object
@@ -697,13 +626,10 @@ spec:
                                 description: 'ArmResourceId: This is populated once the storage account is created.'
                                 properties:
                                   resourceId:
-                                    description: >-
+                                    description: |-
                                       ResourceId: Arm ResourceId is in the format
-
                                       "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.Storage/storageAccounts/{StorageAccountName}"
-
                                       or
-
                                       "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{AcrName}"
                                     type: string
                                 type: object
@@ -714,23 +640,15 @@ spec:
                                 description: 'StorageAccountName: Name of the storage account'
                                 type: string
                               storageAccountType:
-                                description: >-
+                                description: |-
                                   StorageAccountType: Allowed values:
-
                                   "Standard_LRS",
-
                                   "Standard_GRS",
-
                                   "Standard_RAGRS",
-
                                   "Standard_ZRS",
-
                                   "Standard_GZRS",
-
                                   "Standard_RAGZRS",
-
                                   "Premium_LRS",
-
                                   "Premium_ZRS"
                                 type: string
                             type: object
@@ -749,11 +667,9 @@ spec:
                         type: string
                       type: array
                     id:
-                      description: >-
+                      description: |-
                         Id: This is the private endpoint connection name created on SRP
-
                         Full resource id:
-
                         /subscriptions/{subId}/resourceGroups/{rgName}/providers/Microsoft.MachineLearningServices/{resourceType}/{resourceName}/registryPrivateEndpointConnections/{peConnectionName}
                       type: string
                     location:
@@ -791,9 +707,8 @@ spec:
                 description: 'Sku: Sku details required for ARM contract for Autoscaling.'
                 properties:
                   capacity:
-                    description: >-
+                    description: |-
                       Capacity: If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible
-
                       for the resource this may be omitted.
                     type: integer
                   family:
@@ -803,15 +718,13 @@ spec:
                     description: 'Name: The name of the SKU. Ex - P3. It is typically a letter+number code'
                     type: string
                   size:
-                    description: >-
+                    description: |-
                       Size: The SKU size. When the name field is the combination of tier and some other value, this would be the standalone
-
                       code.
                     type: string
                   tier:
-                    description: >-
+                    description: |-
                       Tier: This field is required to be implemented by the Resource Provider if the service has more than one tier, but is
-
                       not  required on a PUT.
                     type: string
                 type: object
@@ -867,35 +780,25 @@ spec:
     name: v1api20240401storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20240401.Registry
-
           Generator information:
-
           - Generated from: /machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2024-04-01/registries.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/registries/{registryName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -906,59 +809,51 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               discoveryUrl:
                 type: string
               identity:
-                description: >-
+                description: |-
                   Storage version of v1api20240401.ManagedServiceIdentity
-
                   Managed service identity (system assigned and/or user assigned identities)
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   type:
                     type: string
                   userAssignedIdentities:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240401.UserAssignedIdentityDetails
-
                         Information about the user assigned identity for the resource
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
                           description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -982,35 +877,28 @@ spec:
               location:
                 type: string
               managedResourceGroup:
-                description: >-
+                description: |-
                   Storage version of v1api20240401.ArmResourceId
-
                   ARM ResourceId of a resource
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   resourceReference:
-                    description: >-
+                    description: |-
                       ResourceReference: Arm ResourceId is in the format
-
                       "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.Storage/storageAccounts/{StorageAccountName}"
-
                       or
-
                       "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{AcrName}"
                     properties:
                       armId:
-                        description: >-
+                        description: |-
                           ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                           The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                           ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
@@ -1028,48 +916,39 @@ spec:
               mlFlowRegistryUri:
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20240401.RegistryOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1083,26 +962,22 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       discoveryUrl:
-                        description: >-
+                        description: |-
                           ConfigMapDestination describes the location to store a single configmap value
-
                           Note: This is similar to: SecretDestination in secrets.go.
-
                           Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the ConfigMap being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes ConfigMap to write to.
-
                               The ConfigMap will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -1110,20 +985,17 @@ spec:
                         - name
                         type: object
                       mlFlowRegistryUri:
-                        description: >-
+                        description: |-
                           ConfigMapDestination describes the location to store a single configmap value
-
                           Note: This is similar to: SecretDestination in secrets.go.
-
                           Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the ConfigMap being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes ConfigMap to write to.
-
                               The ConfigMap will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -1133,33 +1005,26 @@ spec:
                     type: object
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1171,11 +1036,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -1189,32 +1052,28 @@ spec:
                 type: string
               regionDetails:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20240401.RegistryRegionArmDetails
-
                     Details for each region the registry is in
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     acrDetails:
                       items:
-                        description: >-
+                        description: |-
                           Storage version of v1api20240401.AcrDetails
-
                           Details of ACR account to be used for the Registry
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           systemCreatedAcrAccount:
@@ -1223,9 +1082,8 @@ spec:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               acrAccountName:
@@ -1239,17 +1097,15 @@ spec:
                       type: string
                     storageAccountDetails:
                       items:
-                        description: >-
+                        description: |-
                           Storage version of v1api20240401.StorageAccountDetails
-
                           Details of storage account to be used for the Registry
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           systemCreatedStorageAccount:
@@ -1258,9 +1114,8 @@ spec:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               allowBlobPublicAccess:
@@ -1278,17 +1133,15 @@ spec:
                 type: array
               registryPrivateEndpointConnections:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20240401.RegistryPrivateEndpointConnection
-
                     Private endpoint connection definition.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     groupIds:
@@ -1298,28 +1151,24 @@ spec:
                     location:
                       type: string
                     privateEndpoint:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240401.PrivateEndpointResource
-
                         The PE network resource that is linked to this PE connection.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         subnetArmReference:
                           description: 'SubnetArmReference: The subnetId that the private endpoint is connected to.'
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -1337,19 +1186,15 @@ spec:
                     provisioningState:
                       type: string
                     reference:
-                      description: >-
+                      description: |-
                         Reference: This is the private endpoint connection name created on SRP
-
                         Full resource id:
-
                         /subscriptions/{subId}/resourceGroups/{rgName}/providers/Microsoft.MachineLearningServices/{resourceType}/{resourceName}/registryPrivateEndpointConnections/{peConnectionName}
                       properties:
                         armId:
-                          description: >-
+                          description: |-
                             ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                             The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                             ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                           pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                           type: string
@@ -1364,17 +1209,15 @@ spec:
                           type: string
                       type: object
                     registryPrivateLinkServiceConnectionState:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240401.RegistryPrivateLinkServiceConnectionState
-
                         The connection state.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         actionsRequired:
@@ -1387,17 +1230,15 @@ spec:
                   type: object
                 type: array
               sku:
-                description: >-
+                description: |-
                   Storage version of v1api20240401.Sku
-
                   The resource model definition representing SKU
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   capacity:
@@ -1424,9 +1265,8 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               conditions:
@@ -1441,28 +1281,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -1483,17 +1317,15 @@ spec:
               id:
                 type: string
               identity:
-                description: >-
+                description: |-
                   Storage version of v1api20240401.ManagedServiceIdentity_STATUS
-
                   Managed service identity (system assigned and/or user assigned identities)
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   principalId:
@@ -1504,17 +1336,15 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240401.UserAssignedIdentity_STATUS
-
                         User assigned identity properties
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         clientId:
@@ -1531,17 +1361,15 @@ spec:
               location:
                 type: string
               managedResourceGroup:
-                description: >-
+                description: |-
                   Storage version of v1api20240401.ArmResourceId_STATUS
-
                   ARM ResourceId of a resource
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   resourceId:
@@ -1555,32 +1383,28 @@ spec:
                 type: string
               regionDetails:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20240401.RegistryRegionArmDetails_STATUS
-
                     Details for each region the registry is in
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     acrDetails:
                       items:
-                        description: >-
+                        description: |-
                           Storage version of v1api20240401.AcrDetails_STATUS
-
                           Details of ACR account to be used for the Registry
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           systemCreatedAcrAccount:
@@ -1589,9 +1413,8 @@ spec:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               acrAccountName:
@@ -1599,17 +1422,15 @@ spec:
                               acrAccountSku:
                                 type: string
                               armResourceId:
-                                description: >-
+                                description: |-
                                   Storage version of v1api20240401.ArmResourceId_STATUS
-
                                   ARM ResourceId of a resource
                                 properties:
                                   $propertyBag:
                                     additionalProperties:
                                       type: string
-                                    description: >-
+                                    description: |-
                                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                       resources, allowing for full fidelity round trip conversions
                                     type: object
                                   resourceId:
@@ -1622,17 +1443,15 @@ spec:
                       type: string
                     storageAccountDetails:
                       items:
-                        description: >-
+                        description: |-
                           Storage version of v1api20240401.StorageAccountDetails_STATUS
-
                           Details of storage account to be used for the Registry
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           systemCreatedStorageAccount:
@@ -1641,25 +1460,22 @@ spec:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               allowBlobPublicAccess:
                                 type: boolean
                               armResourceId:
-                                description: >-
+                                description: |-
                                   Storage version of v1api20240401.ArmResourceId_STATUS
-
                                   ARM ResourceId of a resource
                                 properties:
                                   $propertyBag:
                                     additionalProperties:
                                       type: string
-                                    description: >-
+                                    description: |-
                                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                       resources, allowing for full fidelity round trip conversions
                                     type: object
                                   resourceId:
@@ -1678,17 +1494,15 @@ spec:
                 type: array
               registryPrivateEndpointConnections:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20240401.RegistryPrivateEndpointConnection_STATUS
-
                     Private endpoint connection definition.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     groupIds:
@@ -1700,17 +1514,15 @@ spec:
                     location:
                       type: string
                     privateEndpoint:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240401.PrivateEndpointResource_STATUS
-
                         The PE network resource that is linked to this PE connection.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         id:
@@ -1721,17 +1533,15 @@ spec:
                     provisioningState:
                       type: string
                     registryPrivateLinkServiceConnectionState:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240401.RegistryPrivateLinkServiceConnectionState_STATUS
-
                         The connection state.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         actionsRequired:
@@ -1744,17 +1554,15 @@ spec:
                   type: object
                 type: array
               sku:
-                description: >-
+                description: |-
                   Storage version of v1api20240401.Sku_STATUS
-
                   The resource model definition representing SKU
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   capacity:
@@ -1769,17 +1577,15 @@ spec:
                     type: string
                 type: object
               systemData:
-                description: >-
+                description: |-
                   Storage version of v1api20240401.SystemData_STATUS
-
                   Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   createdAt:
