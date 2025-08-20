@@ -6,7 +6,7 @@ metadata:
     controller-gen.kubebuilder.io/version: v0.17.3
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.14.0
+    app.kubernetes.io/version: v2.15.0
   name: storageaccountsfileservicesshares.storage.azure.com
 spec:
   conversion:
@@ -22,6 +22,9 @@ spec:
       - v1
   group: storage.azure.com
   names:
+    categories:
+    - azure
+    - storage
     kind: StorageAccountsFileServicesShare
     listKind: StorageAccountsFileServicesShareList
     plural: storageaccountsfileservicesshares

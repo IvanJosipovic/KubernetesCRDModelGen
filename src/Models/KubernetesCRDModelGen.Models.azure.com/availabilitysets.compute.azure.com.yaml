@@ -1,0 +1,1027 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  annotations:
+    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
+    controller-gen.kubebuilder.io/version: v0.17.3
+  labels:
+    app.kubernetes.io/name: azure-service-operator
+    app.kubernetes.io/version: v2.15.0
+  name: availabilitysets.compute.azure.com
+spec:
+  conversion:
+    strategy: Webhook
+    webhook:
+      clientConfig:
+        service:
+          name: azureserviceoperator-webhook-service
+          namespace: azureserviceoperator-system
+          path: /convert
+          port: 443
+      conversionReviewVersions:
+      - v1
+  group: compute.azure.com
+  names:
+    categories:
+    - azure
+    - compute
+    kind: AvailabilitySet
+    listKind: AvailabilitySetList
+    plural: availabilitysets
+    singular: availabilityset
+  preserveUnknownFields: false
+  scope: Namespaced
+  versions:
+  - additionalPrinterColumns:
+    - jsonPath: .status.conditions[?(@.type=='Ready')].status
+      name: Ready
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].severity
+      name: Severity
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].reason
+      name: Reason
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].message
+      name: Message
+      type: string
+    name: v1api20241101
+    schema:
+      openAPIV3Schema:
+        description: |-
+          Generator information:
+          - Generated from: /compute/resource-manager/Microsoft.Compute/ComputeRP/stable/2024-11-01/availabilitySet.json
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/availabilitySets/{availabilitySetName}
+        properties:
+          apiVersion:
+            description: |-
+              APIVersion defines the versioned schema of this representation of an object.
+              Servers should convert recognized schemas to the latest internal value, and
+              may reject unrecognized values.
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+            type: string
+          kind:
+            description: |-
+              Kind is a string value representing the REST resource this object represents.
+              Servers may infer this from the endpoint the client submits requests to.
+              Cannot be updated.
+              In CamelCase.
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+            type: string
+          metadata:
+            type: object
+          spec:
+            properties:
+              azureName:
+                description: |-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+                  doesn't have to be.
+                type: string
+              location:
+                description: 'Location: Resource location'
+                type: string
+              operatorSpec:
+                description: |-
+                  OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
+                  passed directly to Azure
+                properties:
+                  configMapExpressions:
+                    description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
+                    items:
+                      description: |-
+                        DestinationExpression is a CEL expression and a destination to store the result in. The destination may
+                        be a secret or a configmap. The value of the expression is stored at the specified location in
+                        the destination.
+                      properties:
+                        key:
+                          description: |-
+                            Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
+                            this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
+                            Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
+                            map[string]string.
+                          type: string
+                        name:
+                          description: |-
+                            Name is the name of the Kubernetes configmap or secret to write to.
+                            The configmap or secret will be created in the same namespace as the resource.
+                          type: string
+                        value:
+                          description: |-
+                            Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
+                            on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
+                          type: string
+                      required:
+                      - name
+                      - value
+                      type: object
+                    type: array
+                  secretExpressions:
+                    description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
+                    items:
+                      description: |-
+                        DestinationExpression is a CEL expression and a destination to store the result in. The destination may
+                        be a secret or a configmap. The value of the expression is stored at the specified location in
+                        the destination.
+                      properties:
+                        key:
+                          description: |-
+                            Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
+                            this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
+                            Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
+                            map[string]string.
+                          type: string
+                        name:
+                          description: |-
+                            Name is the name of the Kubernetes configmap or secret to write to.
+                            The configmap or secret will be created in the same namespace as the resource.
+                          type: string
+                        value:
+                          description: |-
+                            Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
+                            on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
+                          type: string
+                      required:
+                      - name
+                      - value
+                      type: object
+                    type: array
+                type: object
+              owner:
+                description: |-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+                  reference to a resources.azure.com/ResourceGroup resource
+                properties:
+                  armId:
+                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                    type: string
+                  name:
+                    description: This is the name of the Kubernetes resource to reference.
+                    type: string
+                type: object
+              platformFaultDomainCount:
+                description: 'PlatformFaultDomainCount: Fault Domain count.'
+                type: integer
+              platformUpdateDomainCount:
+                description: 'PlatformUpdateDomainCount: Update Domain count.'
+                type: integer
+              proximityPlacementGroup:
+                description: |-
+                  ProximityPlacementGroup: Specifies information about the proximity placement group that the availability set should be
+                  assigned to. Minimum api-version: 2018-04-01.
+                properties:
+                  reference:
+                    description: 'Reference: Resource Id'
+                    properties:
+                      armId:
+                        description: |-
+                          ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+                          The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+                          ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                        type: string
+                      group:
+                        description: Group is the Kubernetes group of the resource.
+                        type: string
+                      kind:
+                        description: Kind is the Kubernetes kind of the resource.
+                        type: string
+                      name:
+                        description: Name is the Kubernetes name of the resource.
+                        type: string
+                    type: object
+                type: object
+              scheduledEventsPolicy:
+                description: |-
+                  ScheduledEventsPolicy: Specifies Redeploy, Reboot and ScheduledEventsAdditionalPublishingTargets Scheduled Event related
+                  configurations for the availability set.
+                properties:
+                  scheduledEventsAdditionalPublishingTargets:
+                    description: |-
+                      ScheduledEventsAdditionalPublishingTargets: The configuration parameters used while publishing
+                      scheduledEventsAdditionalPublishingTargets.
+                    properties:
+                      eventGridAndResourceGraph:
+                        description: |-
+                          EventGridAndResourceGraph: The configuration parameters used while creating eventGridAndResourceGraph Scheduled Event
+                          setting.
+                        properties:
+                          enable:
+                            description: 'Enable: Specifies if event grid and resource graph is enabled for Scheduled event related configurations.'
+                            type: boolean
+                        type: object
+                    type: object
+                  userInitiatedReboot:
+                    description: |-
+                      UserInitiatedReboot: The configuration parameters used while creating userInitiatedReboot scheduled event setting
+                      creation.
+                    properties:
+                      automaticallyApprove:
+                        description: 'AutomaticallyApprove: Specifies Reboot Scheduled Event related configurations.'
+                        type: boolean
+                    type: object
+                  userInitiatedRedeploy:
+                    description: |-
+                      UserInitiatedRedeploy: The configuration parameters used while creating userInitiatedRedeploy scheduled event setting
+                      creation.
+                    properties:
+                      automaticallyApprove:
+                        description: 'AutomaticallyApprove: Specifies Redeploy Scheduled Event related configurations.'
+                        type: boolean
+                    type: object
+                type: object
+              sku:
+                description: |-
+                  Sku: Sku of the availability set, only name is required to be set. See AvailabilitySetSkuTypes for possible set of
+                  values. Use 'Aligned' for virtual machines with managed disks and 'Classic' for virtual machines with unmanaged disks.
+                  Default value is 'Classic'.
+                properties:
+                  capacity:
+                    description: 'Capacity: Specifies the number of virtual machines in the scale set.'
+                    type: integer
+                  name:
+                    description: 'Name: The sku name.'
+                    type: string
+                  tier:
+                    description: |-
+                      Tier: Specifies the tier of virtual machines in a scale set.
+                      Possible Values:
+                      Standard
+                      Basic
+                    type: string
+                type: object
+              tags:
+                additionalProperties:
+                  type: string
+                description: 'Tags: Resource tags'
+                type: object
+            required:
+            - location
+            - owner
+            type: object
+          status:
+            description: |-
+              Specifies information about the availability set that the virtual machine should be assigned to. Virtual machines
+              specified in the same availability set are allocated to different nodes to maximize availability. For more information
+              about availability sets, see [Availability sets
+              overview](https://docs.microsoft.com/azure/virtual-machines/availability-set-overview). For more information on Azure
+              planned maintenance, see [Maintenance and updates for Virtual Machines in
+              Azure](https://docs.microsoft.com/azure/virtual-machines/maintenance-and-updates). Currently, a VM can only be added to
+              an availability set at creation time. An existing VM cannot be added to an availability set.
+            properties:
+              conditions:
+                description: 'Conditions: The observed state of the resource'
+                items:
+                  description: Condition defines an extension to status (an observation) of a resource
+                  properties:
+                    lastTransitionTime:
+                      description: LastTransitionTime is the last time the condition transitioned from one status to another.
+                      format: date-time
+                      type: string
+                    message:
+                      description: Message is a human readable message indicating details about the transition. This field may be empty.
+                      type: string
+                    observedGeneration:
+                      description: |-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+                        with respect to the current state of the instance.
+                      format: int64
+                      type: integer
+                    reason:
+                      description: |-
+                        Reason for the condition's last transition.
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      type: string
+                    severity:
+                      description: |-
+                        Severity with which to treat failures of this type of condition.
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+                        This is omitted in all cases when Status == Unknown
+                      type: string
+                    status:
+                      description: Status of the condition, one of True, False, or Unknown.
+                      type: string
+                    type:
+                      description: Type of condition.
+                      type: string
+                  required:
+                  - lastTransitionTime
+                  - reason
+                  - status
+                  - type
+                  type: object
+                type: array
+              id:
+                description: 'Id: Resource Id'
+                type: string
+              location:
+                description: 'Location: Resource location'
+                type: string
+              name:
+                description: 'Name: Resource name'
+                type: string
+              platformFaultDomainCount:
+                description: 'PlatformFaultDomainCount: Fault Domain count.'
+                type: integer
+              platformUpdateDomainCount:
+                description: 'PlatformUpdateDomainCount: Update Domain count.'
+                type: integer
+              proximityPlacementGroup:
+                description: |-
+                  ProximityPlacementGroup: Specifies information about the proximity placement group that the availability set should be
+                  assigned to. Minimum api-version: 2018-04-01.
+                properties:
+                  id:
+                    description: 'Id: Resource Id'
+                    type: string
+                type: object
+              scheduledEventsPolicy:
+                description: |-
+                  ScheduledEventsPolicy: Specifies Redeploy, Reboot and ScheduledEventsAdditionalPublishingTargets Scheduled Event related
+                  configurations for the availability set.
+                properties:
+                  scheduledEventsAdditionalPublishingTargets:
+                    description: |-
+                      ScheduledEventsAdditionalPublishingTargets: The configuration parameters used while publishing
+                      scheduledEventsAdditionalPublishingTargets.
+                    properties:
+                      eventGridAndResourceGraph:
+                        description: |-
+                          EventGridAndResourceGraph: The configuration parameters used while creating eventGridAndResourceGraph Scheduled Event
+                          setting.
+                        properties:
+                          enable:
+                            description: 'Enable: Specifies if event grid and resource graph is enabled for Scheduled event related configurations.'
+                            type: boolean
+                        type: object
+                    type: object
+                  userInitiatedReboot:
+                    description: |-
+                      UserInitiatedReboot: The configuration parameters used while creating userInitiatedReboot scheduled event setting
+                      creation.
+                    properties:
+                      automaticallyApprove:
+                        description: 'AutomaticallyApprove: Specifies Reboot Scheduled Event related configurations.'
+                        type: boolean
+                    type: object
+                  userInitiatedRedeploy:
+                    description: |-
+                      UserInitiatedRedeploy: The configuration parameters used while creating userInitiatedRedeploy scheduled event setting
+                      creation.
+                    properties:
+                      automaticallyApprove:
+                        description: 'AutomaticallyApprove: Specifies Redeploy Scheduled Event related configurations.'
+                        type: boolean
+                    type: object
+                type: object
+              sku:
+                description: |-
+                  Sku: Sku of the availability set, only name is required to be set. See AvailabilitySetSkuTypes for possible set of
+                  values. Use 'Aligned' for virtual machines with managed disks and 'Classic' for virtual machines with unmanaged disks.
+                  Default value is 'Classic'.
+                properties:
+                  capacity:
+                    description: 'Capacity: Specifies the number of virtual machines in the scale set.'
+                    type: integer
+                  name:
+                    description: 'Name: The sku name.'
+                    type: string
+                  tier:
+                    description: |-
+                      Tier: Specifies the tier of virtual machines in a scale set.
+                      Possible Values:
+                      Standard
+                      Basic
+                    type: string
+                type: object
+              statuses:
+                description: 'Statuses: The resource status information.'
+                items:
+                  description: Instance view status.
+                  properties:
+                    code:
+                      description: 'Code: The status code.'
+                      type: string
+                    displayStatus:
+                      description: 'DisplayStatus: The short localizable label for the status.'
+                      type: string
+                    level:
+                      description: 'Level: The level code.'
+                      type: string
+                    message:
+                      description: 'Message: The detailed status message, including for alerts and error messages.'
+                      type: string
+                    time:
+                      description: 'Time: The time of the status.'
+                      type: string
+                  type: object
+                type: array
+              tags:
+                additionalProperties:
+                  type: string
+                description: 'Tags: Resource tags'
+                type: object
+              type:
+                description: 'Type: Resource type'
+                type: string
+              virtualMachineScaleSetMigrationInfo:
+                description: 'VirtualMachineScaleSetMigrationInfo: Describes the migration properties on the Availability Set.'
+                properties:
+                  defaultVirtualMachineScaleSetInfo:
+                    description: |-
+                      DefaultVirtualMachineScaleSetInfo: Indicates the target Virtual Machine ScaleSet properties upon triggering a seamless
+                      migration without downtime of the VMs via the ConvertToVirtualMachineScaleSet API.
+                    properties:
+                      constrainedMaximumCapacity:
+                        description: |-
+                          ConstrainedMaximumCapacity:  Indicates if the the maximum capacity of the default migrated Virtual Machine Scale Set
+                          after its migration will be constrained to a limited number of VMs.
+                        type: boolean
+                      defaultVirtualMachineScaleSet:
+                        description: |-
+                          DefaultVirtualMachineScaleSet:  The default Virtual Machine ScaleSet Uri that the Availability Set will be moved to upon
+                          triggering a seamless migration via the ConvertToVirtualMachineScaleSet API.
+                        properties:
+                          id:
+                            description: 'Id: Resource Id'
+                            type: string
+                        type: object
+                    type: object
+                  migrateToVirtualMachineScaleSet:
+                    description: 'MigrateToVirtualMachineScaleSet: Specifies the Virtual Machine Scale Set that the Availability Set is migrated to.'
+                    properties:
+                      id:
+                        description: 'Id: Resource Id'
+                        type: string
+                    type: object
+                type: object
+              virtualMachines:
+                description: 'VirtualMachines: A list of references to all virtual machines in the availability set.'
+                items:
+                  properties:
+                    id:
+                      description: 'Id: Resource Id'
+                      type: string
+                  type: object
+                type: array
+            type: object
+        type: object
+    served: true
+    storage: false
+    subresources:
+      status: {}
+  - additionalPrinterColumns:
+    - jsonPath: .status.conditions[?(@.type=='Ready')].status
+      name: Ready
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].severity
+      name: Severity
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].reason
+      name: Reason
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].message
+      name: Message
+      type: string
+    name: v1api20241101storage
+    schema:
+      openAPIV3Schema:
+        description: |-
+          Storage version of v1api20241101.AvailabilitySet
+          Generator information:
+          - Generated from: /compute/resource-manager/Microsoft.Compute/ComputeRP/stable/2024-11-01/availabilitySet.json
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/availabilitySets/{availabilitySetName}
+        properties:
+          apiVersion:
+            description: |-
+              APIVersion defines the versioned schema of this representation of an object.
+              Servers should convert recognized schemas to the latest internal value, and
+              may reject unrecognized values.
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+            type: string
+          kind:
+            description: |-
+              Kind is a string value representing the REST resource this object represents.
+              Servers may infer this from the endpoint the client submits requests to.
+              Cannot be updated.
+              In CamelCase.
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: Storage version of v1api20241101.AvailabilitySet_Spec
+            properties:
+              $propertyBag:
+                additionalProperties:
+                  type: string
+                description: |-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+                  resources, allowing for full fidelity round trip conversions
+                type: object
+              azureName:
+                description: |-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+                  doesn't have to be.
+                type: string
+              location:
+                type: string
+              operatorSpec:
+                description: |-
+                  Storage version of v1api20241101.AvailabilitySetOperatorSpec
+                  Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: |-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+                      resources, allowing for full fidelity round trip conversions
+                    type: object
+                  configMapExpressions:
+                    items:
+                      description: |-
+                        DestinationExpression is a CEL expression and a destination to store the result in. The destination may
+                        be a secret or a configmap. The value of the expression is stored at the specified location in
+                        the destination.
+                      properties:
+                        key:
+                          description: |-
+                            Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
+                            this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
+                            Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
+                            map[string]string.
+                          type: string
+                        name:
+                          description: |-
+                            Name is the name of the Kubernetes configmap or secret to write to.
+                            The configmap or secret will be created in the same namespace as the resource.
+                          type: string
+                        value:
+                          description: |-
+                            Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
+                            on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
+                          type: string
+                      required:
+                      - name
+                      - value
+                      type: object
+                    type: array
+                  secretExpressions:
+                    items:
+                      description: |-
+                        DestinationExpression is a CEL expression and a destination to store the result in. The destination may
+                        be a secret or a configmap. The value of the expression is stored at the specified location in
+                        the destination.
+                      properties:
+                        key:
+                          description: |-
+                            Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
+                            this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
+                            Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
+                            map[string]string.
+                          type: string
+                        name:
+                          description: |-
+                            Name is the name of the Kubernetes configmap or secret to write to.
+                            The configmap or secret will be created in the same namespace as the resource.
+                          type: string
+                        value:
+                          description: |-
+                            Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
+                            on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
+                          type: string
+                      required:
+                      - name
+                      - value
+                      type: object
+                    type: array
+                type: object
+              originalVersion:
+                type: string
+              owner:
+                description: |-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+                  reference to a resources.azure.com/ResourceGroup resource
+                properties:
+                  armId:
+                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                    type: string
+                  name:
+                    description: This is the name of the Kubernetes resource to reference.
+                    type: string
+                type: object
+              platformFaultDomainCount:
+                type: integer
+              platformUpdateDomainCount:
+                type: integer
+              proximityPlacementGroup:
+                description: Storage version of v1api20241101.SubResource
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: |-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+                      resources, allowing for full fidelity round trip conversions
+                    type: object
+                  reference:
+                    description: 'Reference: Resource Id'
+                    properties:
+                      armId:
+                        description: |-
+                          ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+                          The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+                          ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                        type: string
+                      group:
+                        description: Group is the Kubernetes group of the resource.
+                        type: string
+                      kind:
+                        description: Kind is the Kubernetes kind of the resource.
+                        type: string
+                      name:
+                        description: Name is the Kubernetes name of the resource.
+                        type: string
+                    type: object
+                type: object
+              scheduledEventsPolicy:
+                description: |-
+                  Storage version of v1api20241101.ScheduledEventsPolicy
+                  Specifies Redeploy, Reboot and ScheduledEventsAdditionalPublishingTargets Scheduled Event related configurations.
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: |-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+                      resources, allowing for full fidelity round trip conversions
+                    type: object
+                  scheduledEventsAdditionalPublishingTargets:
+                    description: Storage version of v1api20241101.ScheduledEventsAdditionalPublishingTargets
+                    properties:
+                      $propertyBag:
+                        additionalProperties:
+                          type: string
+                        description: |-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+                          resources, allowing for full fidelity round trip conversions
+                        type: object
+                      eventGridAndResourceGraph:
+                        description: |-
+                          Storage version of v1api20241101.EventGridAndResourceGraph
+                          Specifies eventGridAndResourceGraph related Scheduled Event related configurations.
+                        properties:
+                          $propertyBag:
+                            additionalProperties:
+                              type: string
+                            description: |-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+                              resources, allowing for full fidelity round trip conversions
+                            type: object
+                          enable:
+                            type: boolean
+                        type: object
+                    type: object
+                  userInitiatedReboot:
+                    description: |-
+                      Storage version of v1api20241101.UserInitiatedReboot
+                      Specifies Reboot related Scheduled Event related configurations.
+                    properties:
+                      $propertyBag:
+                        additionalProperties:
+                          type: string
+                        description: |-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+                          resources, allowing for full fidelity round trip conversions
+                        type: object
+                      automaticallyApprove:
+                        type: boolean
+                    type: object
+                  userInitiatedRedeploy:
+                    description: |-
+                      Storage version of v1api20241101.UserInitiatedRedeploy
+                      Specifies Redeploy related Scheduled Event related configurations.
+                    properties:
+                      $propertyBag:
+                        additionalProperties:
+                          type: string
+                        description: |-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+                          resources, allowing for full fidelity round trip conversions
+                        type: object
+                      automaticallyApprove:
+                        type: boolean
+                    type: object
+                type: object
+              sku:
+                description: |-
+                  Storage version of v1api20241101.Sku
+                  Describes a virtual machine scale set sku. NOTE: If the new VM SKU is not supported on the hardware the scale set is
+                  currently on, you need to deallocate the VMs in the scale set before you modify the SKU name.
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: |-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+                      resources, allowing for full fidelity round trip conversions
+                    type: object
+                  capacity:
+                    type: integer
+                  name:
+                    type: string
+                  tier:
+                    type: string
+                type: object
+              tags:
+                additionalProperties:
+                  type: string
+                type: object
+            required:
+            - owner
+            type: object
+          status:
+            description: |-
+              Storage version of v1api20241101.AvailabilitySet_STATUS
+              Specifies information about the availability set that the virtual machine should be assigned to. Virtual machines
+              specified in the same availability set are allocated to different nodes to maximize availability. For more information
+              about availability sets, see [Availability sets
+              overview](https://docs.microsoft.com/azure/virtual-machines/availability-set-overview). For more information on Azure
+              planned maintenance, see [Maintenance and updates for Virtual Machines in
+              Azure](https://docs.microsoft.com/azure/virtual-machines/maintenance-and-updates). Currently, a VM can only be added to
+              an availability set at creation time. An existing VM cannot be added to an availability set.
+            properties:
+              $propertyBag:
+                additionalProperties:
+                  type: string
+                description: |-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+                  resources, allowing for full fidelity round trip conversions
+                type: object
+              conditions:
+                items:
+                  description: Condition defines an extension to status (an observation) of a resource
+                  properties:
+                    lastTransitionTime:
+                      description: LastTransitionTime is the last time the condition transitioned from one status to another.
+                      format: date-time
+                      type: string
+                    message:
+                      description: Message is a human readable message indicating details about the transition. This field may be empty.
+                      type: string
+                    observedGeneration:
+                      description: |-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+                        with respect to the current state of the instance.
+                      format: int64
+                      type: integer
+                    reason:
+                      description: |-
+                        Reason for the condition's last transition.
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      type: string
+                    severity:
+                      description: |-
+                        Severity with which to treat failures of this type of condition.
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+                        This is omitted in all cases when Status == Unknown
+                      type: string
+                    status:
+                      description: Status of the condition, one of True, False, or Unknown.
+                      type: string
+                    type:
+                      description: Type of condition.
+                      type: string
+                  required:
+                  - lastTransitionTime
+                  - reason
+                  - status
+                  - type
+                  type: object
+                type: array
+              id:
+                type: string
+              location:
+                type: string
+              name:
+                type: string
+              platformFaultDomainCount:
+                type: integer
+              platformUpdateDomainCount:
+                type: integer
+              proximityPlacementGroup:
+                description: Storage version of v1api20241101.SubResource_STATUS
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: |-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+                      resources, allowing for full fidelity round trip conversions
+                    type: object
+                  id:
+                    type: string
+                type: object
+              scheduledEventsPolicy:
+                description: |-
+                  Storage version of v1api20241101.ScheduledEventsPolicy_STATUS
+                  Specifies Redeploy, Reboot and ScheduledEventsAdditionalPublishingTargets Scheduled Event related configurations.
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: |-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+                      resources, allowing for full fidelity round trip conversions
+                    type: object
+                  scheduledEventsAdditionalPublishingTargets:
+                    description: Storage version of v1api20241101.ScheduledEventsAdditionalPublishingTargets_STATUS
+                    properties:
+                      $propertyBag:
+                        additionalProperties:
+                          type: string
+                        description: |-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+                          resources, allowing for full fidelity round trip conversions
+                        type: object
+                      eventGridAndResourceGraph:
+                        description: |-
+                          Storage version of v1api20241101.EventGridAndResourceGraph_STATUS
+                          Specifies eventGridAndResourceGraph related Scheduled Event related configurations.
+                        properties:
+                          $propertyBag:
+                            additionalProperties:
+                              type: string
+                            description: |-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+                              resources, allowing for full fidelity round trip conversions
+                            type: object
+                          enable:
+                            type: boolean
+                        type: object
+                    type: object
+                  userInitiatedReboot:
+                    description: |-
+                      Storage version of v1api20241101.UserInitiatedReboot_STATUS
+                      Specifies Reboot related Scheduled Event related configurations.
+                    properties:
+                      $propertyBag:
+                        additionalProperties:
+                          type: string
+                        description: |-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+                          resources, allowing for full fidelity round trip conversions
+                        type: object
+                      automaticallyApprove:
+                        type: boolean
+                    type: object
+                  userInitiatedRedeploy:
+                    description: |-
+                      Storage version of v1api20241101.UserInitiatedRedeploy_STATUS
+                      Specifies Redeploy related Scheduled Event related configurations.
+                    properties:
+                      $propertyBag:
+                        additionalProperties:
+                          type: string
+                        description: |-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+                          resources, allowing for full fidelity round trip conversions
+                        type: object
+                      automaticallyApprove:
+                        type: boolean
+                    type: object
+                type: object
+              sku:
+                description: |-
+                  Storage version of v1api20241101.Sku_STATUS
+                  Describes a virtual machine scale set sku. NOTE: If the new VM SKU is not supported on the hardware the scale set is
+                  currently on, you need to deallocate the VMs in the scale set before you modify the SKU name.
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: |-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+                      resources, allowing for full fidelity round trip conversions
+                    type: object
+                  capacity:
+                    type: integer
+                  name:
+                    type: string
+                  tier:
+                    type: string
+                type: object
+              statuses:
+                items:
+                  description: |-
+                    Storage version of v1api20241101.InstanceViewStatus_STATUS
+                    Instance view status.
+                  properties:
+                    $propertyBag:
+                      additionalProperties:
+                        type: string
+                      description: |-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+                        resources, allowing for full fidelity round trip conversions
+                      type: object
+                    code:
+                      type: string
+                    displayStatus:
+                      type: string
+                    level:
+                      type: string
+                    message:
+                      type: string
+                    time:
+                      type: string
+                  type: object
+                type: array
+              tags:
+                additionalProperties:
+                  type: string
+                type: object
+              type:
+                type: string
+              virtualMachineScaleSetMigrationInfo:
+                description: |-
+                  Storage version of v1api20241101.VirtualMachineScaleSetMigrationInfo_STATUS
+                  Describes the Availability Set properties related to migration to Flexible Virtual Machine Scale Set.
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: |-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+                      resources, allowing for full fidelity round trip conversions
+                    type: object
+                  defaultVirtualMachineScaleSetInfo:
+                    description: |-
+                      Storage version of v1api20241101.DefaultVirtualMachineScaleSetInfo_STATUS
+                      Indicates the target Virtual Machine ScaleSet properties upon triggering a seamless migration without downtime of the
+                      VMs via the ConvertToVirtualMachineScaleSet API.
+                    properties:
+                      $propertyBag:
+                        additionalProperties:
+                          type: string
+                        description: |-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+                          resources, allowing for full fidelity round trip conversions
+                        type: object
+                      constrainedMaximumCapacity:
+                        type: boolean
+                      defaultVirtualMachineScaleSet:
+                        description: Storage version of v1api20241101.SubResource_STATUS
+                        properties:
+                          $propertyBag:
+                            additionalProperties:
+                              type: string
+                            description: |-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+                              resources, allowing for full fidelity round trip conversions
+                            type: object
+                          id:
+                            type: string
+                        type: object
+                    type: object
+                  migrateToVirtualMachineScaleSet:
+                    description: Storage version of v1api20241101.SubResource_STATUS
+                    properties:
+                      $propertyBag:
+                        additionalProperties:
+                          type: string
+                        description: |-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+                          resources, allowing for full fidelity round trip conversions
+                        type: object
+                      id:
+                        type: string
+                    type: object
+                type: object
+              virtualMachines:
+                items:
+                  description: Storage version of v1api20241101.SubResource_STATUS
+                  properties:
+                    $propertyBag:
+                      additionalProperties:
+                        type: string
+                      description: |-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+                        resources, allowing for full fidelity round trip conversions
+                      type: object
+                    id:
+                      type: string
+                  type: object
+                type: array
+            type: object
+        type: object
+    served: true
+    storage: true
+    subresources:
+      status: {}
